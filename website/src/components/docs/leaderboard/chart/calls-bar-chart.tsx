@@ -1,5 +1,5 @@
 import { TooltipProvider } from '@/components/common/tooltip-wrapper';
-import { CollapsibleLegend } from '@/components/docs/benchmark/chart/collapsible-legend';
+import { CollapsibleLegend } from '@/components/docs/leaderboard/chart/collapsible-legend';
 import { useChartData } from '@/hooks/chart/use-chart-data';
 import { useChartPopover } from '@/hooks/chart/use-chart-popover';
 import { CallsEntry as ChartData } from '@/lib/data/generate';

@@ -7,7 +7,7 @@ import {
 } from 'lucide-react';
 
 import { Github } from '@/components/common/icons';
-import { ChartProps } from '@/components/docs/benchmark/chart/types';
+import { ChartProps } from '@/components/docs/leaderboard/chart/types';
 import { type Link } from '.';
 
 type TsxIcon = (props: any) => JSX.Element;

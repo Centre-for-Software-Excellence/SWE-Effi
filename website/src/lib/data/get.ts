@@ -1,5 +1,5 @@
-import { Performance } from '@/components/docs/benchmark/table/columns';
-import { PerformanceRVU } from '@/components/docs/benchmark/table/columns-rvu';
+import { Performance } from '@/components/docs/leaderboard/table/columns';
+import { PerformanceRVU } from '@/components/docs/leaderboard/table/columns-rvu';
 import dataRVU from '@/config/leaderboard/data-rvu.json';
 import data from '@/config/leaderboard/data.json';
 

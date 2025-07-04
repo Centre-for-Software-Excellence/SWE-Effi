@@ -4,14 +4,14 @@ import { useNavigate } from 'react-router-dom';
 import { StaggeredContent } from '@/components/common/staggered-content';
 import { Button } from '@/components/common/ui/button';
 import { Divider } from '@/components/common/ui/divider';
-import CitationCard from '@/components/docs/benchmark/citation-card';
-import Leaderboard from '@/components/docs/benchmark/leaderboard';
-import PartnersCard from '@/components/docs/benchmark/partners-card';
+import CitationCard from '@/components/docs/leaderboard/citation-card';
+import PartnersCard from '@/components/docs/leaderboard/partners-card';
+import TablesCard from '@/components/docs/leaderboard/tables-card';
 import { H1, P } from '@/components/md';
 import { getLeaderboardUIConfig } from '@/config/ui/leaderboard';
 
 const AnalyticsCard = lazy(
-  () => import('@/components/docs/benchmark/analytics-card'),
+  () => import('@/components/docs/leaderboard/analytics-card'),
 );
 
 export default function Page() {
@@ -41,7 +41,7 @@ export default function Page() {
           ))}
         </div>
         <Divider className="mt-16" />
-        <Leaderboard />
+        <TablesCard />
         <Divider className="my-18" />
         <Suspense fallback={<div className="h-96 w-full" />}>
           <AnalyticsCard />

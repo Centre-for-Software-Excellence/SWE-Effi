@@ -6,7 +6,7 @@ import { columns, Performance } from './table/columns';
 import { columns as columnsRVU, PerformanceRVU } from './table/columns-rvu';
 import { DataTable } from './table/data-table';
 
-export default function Leaderboard() {
+export default function TablesCard() {
   const data: Performance[] = getLeaderboardData();
   const dataRVU: PerformanceRVU[] = getLeaderboardDataRVU();
 

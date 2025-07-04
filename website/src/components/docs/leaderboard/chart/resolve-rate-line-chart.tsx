@@ -6,7 +6,7 @@ import {
 } from '@/components/common/tooltip-wrapper';
 import { Button } from '@/components/common/ui/button';
 import { Dialog, DialogTrigger } from '@/components/common/ui/dialog';
-import { CollapsibleLegend } from '@/components/docs/benchmark/chart/collapsible-legend';
+import { CollapsibleLegend } from '@/components/docs/leaderboard/chart/collapsible-legend';
 import { useChartData } from '@/hooks/chart/use-chart-data';
 import { useChartPopover } from '@/hooks/chart/use-chart-popover';
 import { useChartSettings } from '@/hooks/chart/use-chart-settings';
