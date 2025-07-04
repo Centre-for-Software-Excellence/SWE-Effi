@@ -7,14 +7,13 @@ import {
 } from 'lucide-react';
 
 import { Github } from '@/components/common/icons';
+import { ChartProps } from '@/components/docs/benchmark/chart/types';
 import { type Link } from '.';
 
 type TsxIcon = (props: any) => JSX.Element;
 type ButtonLink = Link & {
   icon?: LucideIcon | TsxIcon;
 };
-
-// type LucideIcon = ForwardRefExoticComponent<Omit<LucideProps, 'ref'> & RefAttributes<SVGSVGElement>>;
 
 interface LeaderboardUIConfig {
   title: string;
@@ -23,14 +22,8 @@ interface LeaderboardUIConfig {
   analytics: {
     title?: string;
     description?: string;
-    resolveRateChartTitle: string;
-    resolveRateChartDescription: string;
-    resolveRateChartOverview: string;
-    resolveRateChartInsight: string;
-    callsBarChartTitle: string;
-    callsBarChartDescription: string;
-    callsBarChartOverview: string;
-    callsBarChartInsight: string;
+    resolveRateLineChart: ChartProps;
+    numCallsBarChart: ChartProps;
   };
   citation: {
     citationTitle?: string;
@@ -69,15 +62,24 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
   analytics: {
     title: 'Analytics',
     description: 'Lead description about the analytics...',
-    resolveRateChartTitle: 'Resolve Rate',
-    resolveRateChartDescription:
-      'Lead description about the resolve rate chart...',
-    resolveRateChartOverview: 'Overview of the resolve rate chart...',
-    resolveRateChartInsight: 'Insight about the resolve rate chart...',
-    callsBarChartTitle: 'Calls Bar Chart',
-    callsBarChartDescription: 'Lead description about the calls bar chart...',
-    callsBarChartOverview: 'Overview of the calls bar chart...',
-    callsBarChartInsight: 'Insight about the calls bar chart...',
+    resolveRateLineChart: {
+      title: 'Resolve Rate Line Chart',
+      description: 'Lead description about the resolve rate line chart...',
+      overview: 'Overview of the resolve rate line chart...',
+      insight: 'Insight about the resolve rate line chart...',
+      xAxisLabel: 'Total Tokens (input tokens + output tokens) (1e6)',
+      yAxisLabel: 'Resolve Rate (Resolved Instances/500)',
+      xAxisDataKey: 'totalTokens',
+    },
+    numCallsBarChart: {
+      title: 'Number of Calls Bar Chart',
+      description: 'Lead description about the number of calls bar chart...',
+      overview: 'Overview of the number of calls bar chart...',
+      insight: 'Insight about the number of calls bar chart...',
+      xAxisLabel: 'Scaffold',
+      yAxisLabel: 'Number of Calls',
+      xAxisDataKey: 'scaffold',
+    },
   },
   citation: {
     citationTitle: 'Citation',

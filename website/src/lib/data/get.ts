@@ -45,7 +45,6 @@ export function getLeaderboardDataRVU(): PerformanceRVU[] {
     dataA: UnrankedPerformanceRVU,
     dataB: UnrankedPerformanceRVU,
   ) => {
-    console.log('Comparing:', dataA, dataB);
     return dataA['avgTotalTimeR'] - dataB['avgTotalTimeR'];
   };
 

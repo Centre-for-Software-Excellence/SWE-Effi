@@ -3,4 +3,7 @@ export interface ChartProps {
   description: string;
   overview: string;
   insight: string;
+  xAxisLabel?: string;
+  yAxisLabel?: string;
+  xAxisDataKey: string;
 }

@@ -7,6 +7,8 @@ import { ResolveRateLineChart } from './chart/resolve-rate-line-chart';
 
 export default function AnalyticsCard() {
   const ui = getLeaderboardUIConfig().analytics;
+  const resolveRateChartUI = ui.resolveRateLineChart;
+  const callsBarChartUI = ui.numCallsBarChart;
   return (
     <section className="flex flex-col space-y-4">
       {ui.title && (
@@ -14,20 +16,10 @@ export default function AnalyticsCard() {
       )}
       {ui.description && <Muted>{ui.description}</Muted>}
       <Suspense fallback={<div className="h-96 w-full" />}>
-        <ResolveRateLineChart
-          title={ui.resolveRateChartTitle}
-          description={ui.resolveRateChartDescription}
-          overview={ui.resolveRateChartOverview}
-          insight={ui.resolveRateChartInsight}
-        />
+        <ResolveRateLineChart {...resolveRateChartUI} />
       </Suspense>
       <Suspense fallback={<div className="h-96 w-full" />}>
-        <CallsBarChart
-          title={ui.callsBarChartTitle}
-          description={ui.callsBarChartDescription}
-          overview={ui.callsBarChartOverview}
-          insight={ui.callsBarChartInsight}
-        />
+        <CallsBarChart {...callsBarChartUI} />
       </Suspense>
     </section>
   );
