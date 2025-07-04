@@ -7,11 +7,8 @@ import {
   resolveDocFromSlug,
   type ResolvedDoc,
 } from '@/lib/docs/resolver';
-import Layout from './layout';
-
-import '@/styles/markdown.css';
-
 import { cn } from '@/lib/utils';
+import Layout from './layout';
 
 export default function DocsPage() {
   const location = useLocation();

@@ -2,6 +2,7 @@
 title: 'Beyond Resolve Rate: A New Leaderboard for Real-World SWE Agent Performance'
 description: Introducing SWE-Lens, a new leaderboard evaluating AI Software Engineering agents under resource constraints.
 date: 2025-03-26
+tags: ['agent scaffold blog']
 ---
 
 import { Divider } from '@/components/common/ui/divider';
@@ -146,17 +147,17 @@ Timestamp Parsing: Timestamps are expected in the format YYYY-MM-DD HH:MM:SS.fff
 
 Total Run Time: This metric is calculated as the temporal delta between the timestamp of the first line and the last line of the log file. This approach operates under the assumption that the log file's scope precisely corresponds to the start and end of the instrumented process.
 
-Equation: `TotalRunTime = Timestamp(LastLogLine) - Timestamp(FirstLogLine)`
+Equation: $TotalRunTime = Timestamp(LastLogLine) - Timestamp(FirstLogLine)$
 
 Model Inference Time: The script computes the cumulative model time by identifying and pairing specific log markers. A model inference call is defined as the duration between a log line containing "API request starts" (marking the beginning of an API call) and a subsequent line containing "API request cost info:" (marking its completion). A stateful parser (pending_start) is employed to handle one request at a time, ensuring that only valid, non-overlapping pairs contribute to the total model time. (Threat to Validity: A potential threat to the validity of our measurements arises from the handling of LLM API timeouts. In scenarios where an API call times out, the AutoCodeRover system automatically retries the request. This behavior can result in multiple, consecutive "API request starts" log entries followed by only a single "API request cost info:" entry corresponding to the successful attempt. Our current parsing logic mitigates this by pairing the first "API request starts" marker with the subsequent "API request cost info:" marker. While this approach accurately captures the total effective inference time, including retries, it may lead to an underestimation of token consumption, as the tokens used in the failed, unlogged attempts are not accounted for.)
 
-Equation: `ModelTime = Σ(Timestamp(CostInfo_i) - Timestamp(RequestStart_i))`
+Equation: $ModelTime = Σ(Timestamp(CostInfo_i) - Timestamp(RequestStart_i))$
 
 Token Consumption: Input and output token counts are extracted from the same line that marks the end of an API call ("API request cost info:"). A regular expression, r"input_tokens=(\d+), output_tokens=(\d+)", is applied to capture these integer values. The script aggregates these values over all detected API calls to compute total_input_tokens and total_output_tokens for the entire run.
 
 CPU Time: This metric is derived by subtracting the cumulative model inference time from the total run time. It represents the time spent on all other computational tasks, including data pre-processing, post-processing, and application logic.
 
-Equation: `CPUTime = TotalRunTime - ModelTime`
+Equation: $CPUTime = TotalRunTime - ModelTime$
 
 1.2 SWE-agent
 1.2.1 Data Source and Scope
@@ -168,7 +169,7 @@ Timestamp Parsing: Timestamps conform to the format YYYY-MM-DD HH:MM:SS,ffffff, 
 
 Total Run Time: To obtain a more precise measure of the task-specific execution time, the calculation of this metric excludes the one-time setup cost of the runtime environment. In our experimental setup, a single Docker image is built once and subsequently reused for processing multiple issue instances across all three models. To isolate the per-instance runtime from this shared setup phase, we define the process start time not as the first entry in the log file, but as the timestamp of the log line containing "free_port - Found free port". This marker signifies the successful initialization of the sandboxed environment immediately prior to task execution. The end time is defined as the timestamp of the last parsable entry in the log file.
 
-Equation: `TotalRunTime = Timestamp(LastLogLine) - Timestamp("free_port" line)`
+Equation: $TotalRunTime = Timestamp(LastLogLine) - Timestamp("free_port" line)$
 
 Model Inference Time: Similar to AutoCodeRover log parsing, model time is calculated by pairing start and end markers. The start is indicated by "Model Request Start", and the end is marked by "Response: ModelResponse". The time difference for each valid pair is summed to yield the total model time.
 
@@ -191,14 +192,14 @@ Timestamp Parsing: Timestamps within instance\_\*.log files follow the same form
 
 Total Run Time: The Total Run Time for each instance is calculated to precisely measure the execution duration, excluding the initial, one-time environment setup. OpenHands utilizes a shared Docker image that is built only once before processing all instances. To isolate the per-instance runtime from this setup phase, the start time is anchored to the timestamp of the log entry containing "Starting runtime with image". This marker indicates that the pre-built container is being deployed and the specific task execution is commencing. The end time is defined as the timestamp of the last parsable entry in the corresponding instance\_\*.log file.
 
-Equation: `TotalRunTime = Timestamp(LastLogLine) - Timestamp("Starting runtime" line)`
+Equation: $TotalRunTime = Timestamp(LastLogLine) - Timestamp("Starting runtime" line)$
 
 Model Inference Time: This metric is derived exclusively from the associated JSON files. Each JSON file is assumed to represent a single model inference call. The duration of each call is calculated as the difference between two Unix timestamps within the JSON structure:
 Start Time: The value of the created key within the nested response object.
 End Time: The value of the top-level timestamp key.
 The total model time for the instance is the summation of these durations across all associated JSON files.
 
-Equation: `ModelTime_instance = Σ(JSON_i["timestamp"] - JSON_i["response"]["created"])`
+Equation: $ModelTime_instance = Σ(JSON_i["timestamp"] - JSON_i["response"]["created"])$
 
 Token Consumption: Token metrics are also aggregated from the JSON files.
 total_input_tokens: Sum of prompt_tokens from the usage object in each JSON file.

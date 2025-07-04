@@ -304,9 +304,9 @@ export function SearchComponent({
                             <div className="text-sm font-medium">
                               <span className="font-semibold text-active">
                                 {(result.matchedHeadings.length > 0 &&
-                                  'Section: ' + result.matchedHeadings) ||
+                                  'Section: ' + result.matchedHeadings[0]) ||
                                   (result.matchedTags.length > 0 &&
-                                    'Tag: ' + result.matchedTags) ||
+                                    'Tag: ' + result.matchedTags[0]) ||
                                   (result.title.length > 0 &&
                                     'Article: ' + result.title)}
                               </span>

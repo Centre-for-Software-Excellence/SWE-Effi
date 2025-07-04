@@ -300,6 +300,10 @@
   code span[data-highlighted-line] {
     @apply relative inline-block w-full bg-accent/20 dark:bg-foreground/20;
   }
+
+  .katex .katex-html {
+    @apply hidden;
+  }
 }
 
 @layer components {

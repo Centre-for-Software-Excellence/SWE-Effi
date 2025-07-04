@@ -37,7 +37,7 @@ const records: DocRecord[] = files
     const isRoot = relPath === 'index.mdx';
     let [section] = isRoot ? ['Leaderboard'] : relPath.split(path.sep);
     const filename = relPath.replace(/\.mdx$/, '');
-    const slug = filename;
+    const slug = '/' + filename;
     section = section + ' / ' + slug.split('/').slice(-1)[0];
 
     const headings = Array.from(content.matchAll(/^(#{1,6})\s+(.*)$/gm), (m) =>
