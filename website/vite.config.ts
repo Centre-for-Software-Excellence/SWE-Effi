@@ -3,10 +3,12 @@ import mdx from '@mdx-js/rollup';
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react-swc';
 import type { Element } from 'hast';
+import rehypeKatex from 'rehype-katex';
 import rehypePrettyCode from 'rehype-pretty-code';
 import rehypeSlug from 'rehype-slug';
 import frontmatter from 'remark-frontmatter';
 import remarkGfm from 'remark-gfm';
+import remarkMath from 'remark-math';
 import { defineConfig } from 'vite';
 
 import {
@@ -29,11 +31,13 @@ export default defineConfig({
     mdx({
       remarkPlugins: [
         remarkGfm,
+        remarkMath,
         frontmatter,
         remarkExtractFrontmatter,
         remarkExtractTOC,
       ],
       rehypePlugins: [
+        rehypeKatex,
         rehypeSlug,
         [
           rehypePrettyCode,
