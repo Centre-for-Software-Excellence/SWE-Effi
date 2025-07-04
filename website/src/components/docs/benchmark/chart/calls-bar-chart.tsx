@@ -24,15 +24,18 @@ import { CollapsibleLegend } from '@/components/docs/benchmark/chart/collapsible
 import { CallsEntry as ChartData } from '@/lib/data/generate';
 import { cn } from '@/lib/utils';
 import { ChartExplanation } from './chart-explanation';
+import type { ChartProps } from './types';
 
-const explanationContent = {
-  overview: 'This bar chart displays ....',
-  insight: 'Some insight about the chart',
-  methodology: 'something about the methodology',
-  note: ['some notes1 ', 'some notes2 '],
-};
-
-export function CallsBarChart() {
+export function CallsBarChart({
+  title,
+  description,
+  overview,
+  insight,
+}: ChartProps) {
+  const explanationContent = {
+    overview,
+    insight,
+  };
   const [chartData, setChartData] = useState<ChartData[]>([]);
   const [chartConfig, setChartConfig] = useState<ChartConfig | null>(null);
   const [loading, setLoading] = useState(true);
@@ -97,8 +100,8 @@ export function CallsBarChart() {
         >
           <CardHeader className="flex items-center justify-between">
             <div>
-              <CardTitle># of Calls</CardTitle>
-              <CardDescription>Desription?</CardDescription>
+              <CardTitle>{title}</CardTitle>
+              <CardDescription>{description}</CardDescription>
             </div>
             <TooltipProvider>
               <div className="flex items-center gap-1 sm:justify-between sm:gap-2">

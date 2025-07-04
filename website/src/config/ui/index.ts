@@ -1,4 +1,4 @@
-type Link = {
+export type Link = {
   title: string;
   href: string;
   disabled?: boolean;

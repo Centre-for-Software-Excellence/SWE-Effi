@@ -31,11 +31,7 @@ import { CollapsibleLegend } from '@/components/docs/benchmark/chart/collapsible
 import { ResolveRateEntry as ChartData } from '@/lib/data/generate';
 import { cn } from '@/lib/utils';
 import { ChartExplanation } from './chart-explanation';
-
-interface LineChartDottedProps {
-  chartTitle: string;
-  chartDescription: string;
-}
+import { ChartProps } from './types';
 
 interface ChartSettingsProps {
   xRange: [number, number];
@@ -88,17 +84,17 @@ function ChartSettings({
 }
 
 // Explanation content
-const explanationContent = {
-  overview: 'This line chart displays ....',
-  insight: 'Some insight about the chart',
-  methodology: 'something about the methodology',
-  note: ['some notes1 ', 'some notes2 '],
-};
 
 export function ResolveRateLineChart({
-  chartTitle,
-  chartDescription,
-}: LineChartDottedProps) {
+  title,
+  description,
+  overview,
+  insight,
+}: ChartProps) {
+  const explanationContent = {
+    overview,
+    insight,
+  };
   const [chartData, setChartData] = useState<ChartData[]>([]);
   const [chartConfig, setChartConfig] = useState<ChartConfig | null>(null);
   const [loading, setLoading] = useState(true);
@@ -185,11 +181,9 @@ export function ResolveRateLineChart({
             {/* Card Header */}
             <CardHeader className="flex w-full items-start justify-between space-y-0 pb-2 sm:flex-row">
               <div>
-                <CardTitle className="text-sm md:text-lg">
-                  {chartTitle}
-                </CardTitle>
+                <CardTitle className="text-sm md:text-lg">{title}</CardTitle>
                 <CardDescription className="text-sm md:text-lg">
-                  {chartDescription}
+                  {description}
                 </CardDescription>
               </div>
               {/* Buttons */}

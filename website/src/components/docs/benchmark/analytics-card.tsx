@@ -1,26 +1,33 @@
 import { Suspense } from 'react';
 
-import { H4, H5, Muted, Small } from '@/components/md';
+import { H4, Muted } from '@/components/md';
+import { getLeaderboardUIConfig } from '@/config/ui/leaderboard';
 import { CallsBarChart } from './chart/calls-bar-chart';
 import { ResolveRateLineChart } from './chart/resolve-rate-line-chart';
 
 export default function AnalyticsCard() {
+  const ui = getLeaderboardUIConfig().analytics;
   return (
     <section className="flex flex-col space-y-4">
-      <H4 className="my-8 flex w-full items-center gap-2">Analytics</H4>
-      <Muted>Maybe some description about the analytics section</Muted>
-      <H5>Do we need a title for resolve rate chart</H5>
-      <Small>Description?</Small>
+      {ui.title && (
+        <H4 className="my-8 flex w-full items-center gap-2">{ui.title}</H4>
+      )}
+      {ui.description && <Muted>{ui.description}</Muted>}
       <Suspense fallback={<div className="h-96 w-full" />}>
         <ResolveRateLineChart
-          chartTitle="Resolve Rate vs. Total Tokens"
-          chartDescription="description about the chart"
+          title={ui.resolveRateChartTitle}
+          description={ui.resolveRateChartDescription}
+          overview={ui.resolveRateChartOverview}
+          insight={ui.resolveRateChartInsight}
         />
       </Suspense>
-      <H5>Do we need a title for num of calls chart</H5>
-      <Small>Description?</Small>
       <Suspense fallback={<div className="h-96 w-full" />}>
-        <CallsBarChart />
+        <CallsBarChart
+          title={ui.callsBarChartTitle}
+          description={ui.callsBarChartDescription}
+          overview={ui.callsBarChartOverview}
+          insight={ui.callsBarChartInsight}
+        />
       </Suspense>
     </section>
   );
