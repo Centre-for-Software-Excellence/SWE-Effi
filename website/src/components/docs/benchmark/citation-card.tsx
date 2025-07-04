@@ -1,0 +1,101 @@
+import { useState } from 'react';
+import { BookOpen, ExternalLink } from 'lucide-react';
+
+import { Button } from '@/components/common/ui/button';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/common/ui/card';
+import { H4, Muted } from '../../md';
+
+export default function CitationCard() {
+  const bibtexCitation = `@misc{xxxx2025, 
+    title={Holistic Evaluation of LLM-Based SWE Scaffolds},
+    author={xxx Team}, 
+    year={2025},
+    url={https://xxx},
+    note={Accessed: ${new Date().toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    })}}
+}`;
+  const apaCitation = `some apa citation here`;
+  const [copied, setCopied] = useState(false);
+  const copyText = async (text: string) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error('Failed to copy code:', err);
+    }
+  };
+  return (
+    <section className="space-y-4">
+      <H4>Citation</H4>
+      <Muted className="text-muted-foreground">
+        How to cite our work in academic publications
+      </Muted>
+      <div className="relative grid w-full grid-cols-1 gap-6">
+        <Card className="w-auto rounded shadow-none">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <BookOpen />
+              BibTex Citation
+            </CardTitle>
+
+            <CardDescription>For LaTex and reference managers</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="relative">
+              <pre className="overflow-x-auto rounded-lg bg-muted p-4 text-sm">
+                <code className="overflow-x-auto">{bibtexCitation}</code>
+              </pre>
+              <Button
+                variant="outline"
+                className="absolute top-2 right-2"
+                size="sm"
+                onClick={() => {
+                  copyText(bibtexCitation);
+                }}
+              >
+                {copied ? 'Copied!' : 'Copy'}
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
+        <Card className="w-auto rounded shadow-none">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <ExternalLink />
+              APA Citation
+            </CardTitle>
+
+            <CardDescription>For academic papers and reports</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="relative">
+              <pre className="overflow-x-auto rounded-lg bg-muted p-4 text-sm">
+                <p className="leading-relaxed">{apaCitation}</p>
+              </pre>
+              <Button
+                variant="outline"
+                className="absolute top-2 right-2"
+                size="sm"
+                onClick={() => {
+                  copyText(apaCitation);
+                }}
+              >
+                Copy
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+    </section>
+  );
+}

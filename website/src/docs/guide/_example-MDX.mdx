@@ -1,0 +1,77 @@
+---
+title: 'Article Title from frontmatter'
+description: 'Article description from frontmatter'
+date: '2025-06-23'
+---
+
+import { Divider } from '@/components/common/ui/divider';
+import { Caution, Important, Note, Tip, Warning } from '@/components/md/alerts';
+
+# Header 1
+
+## Header 2
+
+### Header 3
+
+#### Header 4
+
+##### Header 5
+
+###### Header 6
+
+### Blockquote Content
+
+> block content
+
+### Inline Code Example
+
+This is an `inline code example`
+
+### Code Example
+
+use syntax `{1-2, 3}` to highlight specific lines, `showLineNumbers` to show line numbers of the code block
+
+```
+def example_function():
+    print("This is an example function.")
+def another_function():
+    print("This is another example function.")
+```
+
+```python {1-2, 3} showLineNumbers noheader
+def example_function():
+    print("This is an example function.")
+def another_function():
+    print("This is another example function.")
+```
+
+### List Example
+
+- Item 1
+- Item 2
+- Item 3
+
+### Table Example
+
+| Header 1 | Header 2 |
+| -------- | -------- |
+| Row 1    | Data 1   |
+| Row 2    | Data 2   |
+
+### Link Example
+
+[Example Link](https://example.com)
+
+### Image Example
+
+![Example Image](/logos/Huawei-logo.svg)
+
+---
+
+### Use react component in mdx
+
+<Note>This is a note component rendered in MDX.</Note>
+<Tip>This is a tip component rendered in MDX</Tip>
+<Important>This is an important component rendered in MDX</Important>
+<Caution>This is a caution component rendered in MDX</Caution>
+<Warning>This is a warning component rendered in MDX</Warning>

@@ -1,0 +1,253 @@
+---
+title: 'Beyond Resolve Rate: A New Leaderboard for Real-World SWE Agent Performance'
+description: Introducing SWE-Lens, a new leaderboard evaluating AI Software Engineering agents under resource constraints.
+date: 2025-03-26
+---
+
+import { Divider } from '@/components/common/ui/divider';
+
+## Introduction
+
+Leaderboards for benchmarks like SWE-bench are a key tool for measuring progress in AI-assisted software engineering, effectively steering the community's efforts toward a common goal. Yet, the spotlight on these leaderboards shines most brightly on a single metric: the resolve rate. While other performance aspects like efficiency or cost are occasionally measured, they are rarely given the same weight, leading to a narrow view of what makes an agent truly effective.
+
+This intense focus on whether a problem can be solved often overshadows the crucial question of how. Was the solution found in minutes or hours? Did it require a few cents in API credits or a budget more suited to a research grant? By not foregrounding these practical considerations, the current evaluation landscape can inadvertently create a disconnect from the day-to-day realities of software development, where budgets, deadlines, and computational resources are finite and fundamental.
+
+We believe it's time to adjust our focus and see the full picture. Our work does not propose a new set of problems or a replacement for existing benchmarks. Instead, we introduce a new leaderboard that provides a more holistic perspective on agent performance within these established ecosystems. We call it SWE-Lens. Its purpose is to re-rank and analyze agents through a lens that is critical for real-world adoption: performance under resource constraints.
+
+#### Why a New Leaderboard? The Need for Efficiency-Aware Evaluation
+
+This shift in perspective is not just an academic nuance; it's a practical necessity driven by two key frontiers in AI-driven software development:
+
+1. Practical Deployment in Real-World Workflows:
+
+For an AI agent to graduate from a novel experiment to a dependable tool in a developer's workflow, it must be both effective and economical. This is particularly relevant when we observe a growing trend in the field: agents employing extensive test-time computation to inch ahead on leaderboards.
+
+These methods, while technically interesting, consume vast amounts of tokens and resources, often to yield only marginal gains in the final resolve rate. This raises a critical question about the law of diminishing returns: is a 1% improvement in success rate worth a 10x increase in cost and runtime?
+
+We argue that this path may not be the most promising direction for building truly scalable and accessible tools. An efficiency-aware leaderboard like SWE-Lens provides the essential data for teams to assess this practical viability and answer the crucial question: "Which agent offers the best return on investment for our specific needs?"
+
+2. Identifying Promising Foundations for Reinforcement Learning (RL):
+
+The path to creating smarter, self-improving agents often leads through Reinforcement Learning. However, the very nature of RL—learning from massive-scale trial and error—collides with the practical realities of complex SWE tasks. A single learning episode, or "rollout," can be a slow and expensive affair, involving environment setup, multi-step reasoning, code execution, and test validation.
+
+This creates a critical bottleneck. A framework's latency directly dictates the pace of innovation, while its API cost determines whether advanced research is even financially feasible. An agent that is too slow or expensive per-rollout effectively walls off the path to RL-based advancement for all but the most well-funded teams, hindering progress for the broader community.
+
+Therefore, an agent's efficiency is more than a performance metric; it is a strong indicator of its "evolvability." It helps us distinguish a static tool from a dynamic foundation for future breakthroughs. Our leaderboard makes this crucial, forward-looking distinction visible.
+
+## Our Contribution: A New Lens, Not a New Landscape
+
+To be clear, SWE-Lens is designed to complement, not replace, existing benchmarks like SWE-bench. Our primary contribution is a new evaluation methodology and a public leaderboard that applies this fresh perspective.
+
+To illustrate the value of this approach, we conducted an exploratory study. We analyzed five well-known agent frameworks paired with three different LLMs on a representative subset of SWE-bench issues. While we tracked the final resolve rate, our main focus was on capturing metrics that are often overlooked:
+
+API & Computational Cost: The number of LLM calls and total tokens consumed.
+Time Efficiency: The wall-clock time required to produce a solution.
+Solution Quality: The precision of the generated code.
+
+Our goal with this initial study is twofold. First, to provide a tangible leaderboard that offers immediate, richer insights into the trade-offs between different agent architectures and model choices. Second, and more importantly, to champion this multi-dimensional evaluation approach and start a broader community conversation.
+
+The findings we present are not intended to be a final, definitive verdict on these five scaffolds. Rather, they serve as a powerful example of the deeper understanding we can unlock by simply looking at the same problems through a different lens. We invite you to explore the results and join us in shaping a more practical, sustainable, and powerful future for AI in software engineering.
+
+## Experimental Settings: How We Built the Leaderboard: Our Methodology
+
+To ensure our leaderboard provides meaningful and fair comparisons, we designed a rigorous and transparent evaluation process. We meticulously controlled the environment and measured performance with a level of detail that goes beyond standard practice.
+
+1. The Contenders: Diverse Agents and Practical LLMs
+
+We selected five popular, actively maintained open-source agents from the top of the SWE-bench leaderboard: AutoCodeRover, Open-Hands, SWE-agent, Agentless, and Agentless-mini.
+
+We selected models that represent a practical balance of performance and cost, making them suitable for production environments where budgets are a key consideration. To analyze performance across different resource conditions, our selection covers a range of types and sizes:
+
+- GPT-4o-mini: A proprietary model from OpenAI, designed for high efficiency and speed. It serves as a baseline for performance in cost-sensitive scenarios.
+- Llama-3.3-70b: A large, open-source model from Meta. Its 70B parameter size provides strong, general-purpose capabilities and represents a high-performance option within the open-source ecosystem.
+- Qwen3-32b: A mid-sized, 32B parameter open-source model from Alibaba, noted for its reasoning abilities. We selected it specifically for its strong reasoning abilities relative to its size. This allows us to evaluate the performance of a more lightweight but capable alternative, which is an attractive profile for resource-constrained environments.
+
+To use these models, we accessed GPT-4o-mini via the OpenAI API, Llama-3.3-70b via Together.AI's inference service, and Qwen3-32b via Alibaba Cloud's API. We modified the agent frameworks where necessary to handle specific API behaviors, such as the streaming-only output of Qwen3-32b, to ensure consistent operation.
+
+2. The Arena: A Fair and Representative Testbed
+
+We evaluated all agent-model combinations on a focused subset of 50 high-quality issues drawn from the well-respected SWE-bench-Verified dataset. To ensure this subset was a fair representation of the whole, we used stratified sampling, preserving the original distribution of issues across different software projects. This approach ensures our findings are representative while keeping the experiment manageable.
+
+3. Setting the Rules: Enforcing Resource Constraints and Fairness
+
+This is where the SWE-Lens philosophy is put into practice. We configured the agents based on their official guidelines, but with crucial adjustments to simulate resource constraints:
+
+A Hard Budget: For SWE-agent, we adjusted its API budget to a strict $1 per issue. This forces the agent to operate under the same kind of financial pressure a real team would face.
+
+Isolating Core Logic: To ensure our time measurements were accurate and unbiased, we explicitly disabled any parallel processing capabilities within the agents. This allowed us to measure the true, sequential processing time of each agent's core logic, making our time-based comparisons direct and fair.
+
+Standardized Configurations: For other agents like OpenHands and Agentless, we adhered to their default iteration or generation limits to provide a baseline for "out-of-the-box" performance.
+
+4. The Measurement Tools: A High-Resolution Performance Analysis
+
+To capture the fine-grained data for our analysis, we augmented each agent's logging and added our own profiling code. We broke down the performance measurement with high precision, focusing on separating what is being done from how fast it is being done.
+
+- Distinguishing Agent Logic from Model Latency: We measured the total wall-clock time, but more importantly, we distinguished between time spent waiting for the LLM to "think" (inference latency) and time the agent spent "doing" work locally (CPU processing time), such as running tests or using tools. This allows us to understand where an agent spends its time.
+
+- A Standardized View of Cost and Workload: We recognized that raw inference time can be misleading, as it depends heavily on the service provider's hardware and current load. To create a fair, hardware-agnostic comparison of the "work" required from the LLM, we focused on two key metrics:
+  - Standardized Computational Cost (Total Tokens): We use the total number of tokens (input + output) as the primary, standardized metric for an agent's computational cost. This value represents the fundamental workload an agent places on the language model, and it is the most direct driver of financial cost, regardless of which provider is used.
+  - Request Overhead (API Call Count): In addition to the sheer volume of tokens, we also tracked the total number of API calls. An agent that makes many small requests may incur different kinds of latency and overhead compared to one that makes a few large requests.
+
+By combining this setup with our detailed measurement, we have created a leaderboard that reflects not just success, but the true cost of that success. The following sections present the data and our initial findings.
+
+<Divider hasToc={true} />
+
+## Key Findings & Initial Insights
+
+Looking at agent performance through the multi-dimensional SWE-Lens reveals a picture far richer and more nuanced than a standard leaderboard. Our initial experiments uncovered several crucial trends and trade-offs that are vital for anyone looking to build, deploy, or research AI software engineering agents. Here are our key findings:
+
+#### Finding 1: The Efficiency King and the "Early Strike" Strategy
+
+The combination of AutoCodeRover with Qwen3-32b emerged as the undisputed efficiency king. It not only achieved the highest overall resolve rate (38%) but did so with the lowest average token cost. As shown in Table 1, this pairing required an average of just 14.7 API calls and ~75k total tokens per issue, a fraction of the cost of other high-performing combinations.
+This efficiency stems from a distinct "Early Strike" characteristic. Across all models, over 85% of AutoCodeRover's successful solutions were found within the first 250,000 tokens of budget. It attempts a high-probability fix quickly and, if unsuccessful, wisely avoids costly, prolonged struggles. For teams seeking predictable performance and budget safety, this makes AutoCodeRover a powerful and reliable choice for practical applications.
+
+#### Finding 2: The Paradox of "Reasoning" Models: Fewer, Smarter Calls Win the Day
+
+Counter-intuitively, using a powerful "reasoning" model like Qwen3-32b proved to be far cheaper than using a larger, general-purpose model like Llama-3.3-70b. While a reasoning model may be more intensive per call, it enables the agent to solve problems with dramatically fewer API calls (e.g., 15 calls for Qwen vs. 38 for Llama with AutoCodeRover). This reveals a critical insight: the primary driver of an agent's total cost is the number of interactions, not the intensity of each one. A smarter model that can formulate a more concise strategy saves vast amounts of tokens and time by avoiding unnecessary back-and-forth communication. The path to economy is paved with better reasoning, not just bigger models.
+
+#### Finding 3: The "Token Snowball": A Hidden Cost That Cripples Inefficient Agents
+
+Our data exposed a fatal flaw in agents that rely on too many API calls: the "token snowball effect." Frameworks like SWE-Agent, when making hundreds of calls, can cause their input token costs to grow exponentially as conversation history accumulates. In one extreme case, an agent consumed over 8 million input tokens to get just 24,000 output tokens—a staggering 300:1 overhead. This demonstrates that intelligent context and memory management is not a feature, but a core architectural requirement for any economically viable agent. Without it, an agent is destined to drown in its own verbosity.
+
+#### Finding 4: The Cost of Failure: Not All Agents Fail Equally
+
+Our analysis of resolved (R) versus unresolved (U) issues reveals a critical trend across the board: current agents do not know when to quit. For nearly every combination, the resources spent on a problem the agent failed to solve were significantly higher than on one it successfully resolved.
+
+This "Fail Expensively" behavior is a defining characteristic of the current generation of agents. Let's look at the evidence from Table 2:
+
+- For SWE-Agent with GPT-4o-mini, a failed attempt (U) cost an astronomical 8.8 million tokens and 864 seconds. In contrast, a successful fix (R) cost a "mere" 1.8 million tokens and 206 seconds. The agent spent over 4 times the resources when it was on the wrong path.
+- This isn't unique to one agent. OpenHands with Llama-3.3-70B spent 308 seconds on failures versus 112 seconds on successes. Even the more efficient AutoCodeRover with Llama-3.3-70B spent nearly three times as long on a failed task (150 seconds) as on a successful one (55 seconds).
+  This pattern suggests a fundamental lack of "futility detection." When an agent finds a viable path, it can sometimes solve the problem relatively directly. But when it's stuck, it enters costly, unproductive loops, repeatedly trying failing strategies until an external limit (like time or budget) is hit. This is a massive hidden cost and risk in real-world deployment.
+  Finding 5: The Two Paths of Evolution: "Planners" vs. "Orchestrators"
+  When we shift our focus from what the LLM does to what the agent framework does, a clear architectural divide emerges, revealed by the agent's own internal computational overhead (CPU Time in Table 1). This metric uncovers two fundamentally different design philosophies for building agents.
+  The first path is that of the "Planners." Represented most clearly by OpenHands, these are "heavy" frameworks characterized by high CPU Time. Across all models, OpenHands consistently spent over 100 seconds (e.g., 142.8s with Llama) on internal processing. This time isn't idle; it's the framework performing significant local computation. It may be decomposing the main task into a complex tree of sub-tasks, managing an intricate internal state, or running its own analysis tools before ever calling the LLM. In this model, the agent framework is the master strategist, treating the LLM as a specialized consultant it calls upon to solve specific, well-defined problems within its grander plan.
+  The second path is that of the "Orchestrators." AutoCodeRover and SWE-Agent (with open models) are prime examples. These are "lightweight" frameworks with minimal CPU Time, often under 25 seconds. They act as thin, efficient wrappers or conduits. Their primary role is to shuttle information between the LLM and the execution environment (the file system, the test runner). They delegate the vast majority of the cognitive load—planning, reasoning, and even tool selection—to the language model itself. The framework simply "orchestrates" the execution of the LLM's commands.
+  Understanding this distinction is crucial for choosing or building an agent. A "Planner" might offer more robust, predictable behavior due to its built-in logic, but it is also more complex and rigid. An "Orchestrator" is simpler and more flexible, with its ultimate capability almost entirely defined by the intelligence of the LLM it is paired with.
+
+#### Finding 6: The Ultimate Bottleneck for a Learning Agent: Why CPU Time is the True Predictor of Evolvability
+
+While today's LLM inference latency (Model Time) is a major barrier to Reinforcement Learning, it's a "solvable" engineering problem that will improve with technology. The more stubborn, long-term bottleneck is the framework's own CPU Time.
+A "heavy" framework like OpenHands, with over 100 seconds of CPU Time per run, has a high, hard-coded latency floor that will persist even when LLMs become infinitely fast. This severely limits its potential for large-scale RL training.
+A "lightweight" framework like AutoCodeRover, with minimal CPU Time, has a much higher "evolutionary ceiling." Its training speed will directly benefit from future improvements in inference technology.
+
+## Appendix
+
+#### Appendix 1. Logging Parsing Steps
+
+1.1 AutoCodeRover
+
+1.1.1 Data Source and Scope
+The parsing script for AutoCodeRover is designed to process info.log files located at a fixed directory depth (_/_/\*/info.log) relative to a specified root path. This structure implies a hierarchical organization of experimental runs, where each log file represents a single, complete execution.
+
+1.1.2 Parsing Logic and Metric Calculation
+The core analysis is performed by the analyze_log_file function, which processes each info.log file to extract key performance indicators.
+
+Timestamp Parsing: Timestamps are expected in the format YYYY-MM-DD HH:MM:SS.ffffff, delimited by a . for microseconds. The timestamp is assumed to be the initial segment of a log line, separated from the message by a | character.
+
+Total Run Time: This metric is calculated as the temporal delta between the timestamp of the first line and the last line of the log file. This approach operates under the assumption that the log file's scope precisely corresponds to the start and end of the instrumented process.
+
+Equation: `TotalRunTime = Timestamp(LastLogLine) - Timestamp(FirstLogLine)`
+
+Model Inference Time: The script computes the cumulative model time by identifying and pairing specific log markers. A model inference call is defined as the duration between a log line containing "API request starts" (marking the beginning of an API call) and a subsequent line containing "API request cost info:" (marking its completion). A stateful parser (pending_start) is employed to handle one request at a time, ensuring that only valid, non-overlapping pairs contribute to the total model time. (Threat to Validity: A potential threat to the validity of our measurements arises from the handling of LLM API timeouts. In scenarios where an API call times out, the AutoCodeRover system automatically retries the request. This behavior can result in multiple, consecutive "API request starts" log entries followed by only a single "API request cost info:" entry corresponding to the successful attempt. Our current parsing logic mitigates this by pairing the first "API request starts" marker with the subsequent "API request cost info:" marker. While this approach accurately captures the total effective inference time, including retries, it may lead to an underestimation of token consumption, as the tokens used in the failed, unlogged attempts are not accounted for.)
+
+Equation: `ModelTime = Σ(Timestamp(CostInfo_i) - Timestamp(RequestStart_i))`
+
+Token Consumption: Input and output token counts are extracted from the same line that marks the end of an API call ("API request cost info:"). A regular expression, r"input_tokens=(\d+), output_tokens=(\d+)", is applied to capture these integer values. The script aggregates these values over all detected API calls to compute total_input_tokens and total_output_tokens for the entire run.
+
+CPU Time: This metric is derived by subtracting the cumulative model inference time from the total run time. It represents the time spent on all other computational tasks, including data pre-processing, post-processing, and application logic.
+
+Equation: `CPUTime = TotalRunTime - ModelTime`
+
+1.2 SWE-agent
+1.2.1 Data Source and Scope
+The script for SWE-agent recursively scans a root directory for all files named debug.log.
+1.2.2 Parsing Logic and Metric Calculation
+The analysis of debug.log files involves a more nuanced approach to metrics calculation due to the different log markers available.
+
+Timestamp Parsing: Timestamps conform to the format YYYY-MM-DD HH:MM:SS,ffffff, using a , as the microsecond delimiter. The timestamp is extracted by splitting the log line at the first occurrence of the " - " separator.
+
+Total Run Time: To obtain a more precise measure of the task-specific execution time, the calculation of this metric excludes the one-time setup cost of the runtime environment. In our experimental setup, a single Docker image is built once and subsequently reused for processing multiple issue instances across all three models. To isolate the per-instance runtime from this shared setup phase, we define the process start time not as the first entry in the log file, but as the timestamp of the log line containing "free_port - Found free port". This marker signifies the successful initialization of the sandboxed environment immediately prior to task execution. The end time is defined as the timestamp of the last parsable entry in the log file.
+
+Equation: `TotalRunTime = Timestamp(LastLogLine) - Timestamp("free_port" line)`
+
+Model Inference Time: Similar to AutoCodeRover log parsing, model time is calculated by pairing start and end markers. The start is indicated by "Model Request Start", and the end is marked by "Response: ModelResponse". The time difference for each valid pair is summed to yield the total model time.
+
+Token Consumption: The aggregation of token counts for Tool 2 is performed by parsing multiple, distinct log entry types, a necessity dictated by a model-specific incompatibility in logging prompt_tokens.
+Output Tokens (total_output_tokens): This is a composite metric derived from log entries containing "Response: ModelResponse". It is calculated as the sum of completion_tokens and reasoning_tokens, both of which are reliably reported in the response payload. The reasoning_tokens are extracted from the nested completion_tokens_details structure.
+Input Tokens (total_input_tokens): The prompt_token count within the "Response: ModelResponse" entry is consistently reported as zero. This is a issue stemming from an incompatibility between the Qwen-3-32B model's streaming API and the tool_use parameter passed in the agent's API requests. To circumvent this, total_input_tokens are sourced from a separate, more reliable summary log line, identified by the presence of both "input_tokens=" and "output_tokens=" markers. This decoupled approach ensures the accurate accounting of both input and output token consumption despite the logging anomaly.
+
+CPU Time: Calculated identically to AutoCodeRover as the difference between total run time and total model time.
+
+1.3 OpenHands
+1.3.1 Data Source and Scope
+The parsing methodology for OpenHands is the most complex, as it requires correlating data from two distinct sources: text-based log files (instance\_\*.log) and a directory of structured JSON files. The analysis is performed on a per-instance basis within a larger experimental run.
+
+1.3.2. Parsing Logic and Metric Calculation
+The script first identifies a "run directory" (e.g., qwen3-32b...run*1) and then iterates through each instance*\*.log file within its infer_logs/ subdirectory.
+
+Data Association: For each instance\_\*.log file, an "instance name" is extracted from the filename (e.g., django**django-13343 from instance_django**django-13343.log). This name is then used to locate a corresponding directory of JSON files at llm_completions/\<instance_name\>/, thereby linking the instance's primary log with its detailed model interaction records.
+
+Timestamp Parsing: Timestamps within instance\_\*.log files follow the same format and parsing logic as in SWE-agent (YYYY-MM-DD HH:MM:SS,ffffff separated by " - ").
+
+Total Run Time: The Total Run Time for each instance is calculated to precisely measure the execution duration, excluding the initial, one-time environment setup. OpenHands utilizes a shared Docker image that is built only once before processing all instances. To isolate the per-instance runtime from this setup phase, the start time is anchored to the timestamp of the log entry containing "Starting runtime with image". This marker indicates that the pre-built container is being deployed and the specific task execution is commencing. The end time is defined as the timestamp of the last parsable entry in the corresponding instance\_\*.log file.
+
+Equation: `TotalRunTime = Timestamp(LastLogLine) - Timestamp("Starting runtime" line)`
+
+Model Inference Time: This metric is derived exclusively from the associated JSON files. Each JSON file is assumed to represent a single model inference call. The duration of each call is calculated as the difference between two Unix timestamps within the JSON structure:
+Start Time: The value of the created key within the nested response object.
+End Time: The value of the top-level timestamp key.
+The total model time for the instance is the summation of these durations across all associated JSON files.
+
+Equation: `ModelTime_instance = Σ(JSON_i["timestamp"] - JSON_i["response"]["created"])`
+
+Token Consumption: Token metrics are also aggregated from the JSON files.
+total_input_tokens: Sum of prompt_tokens from the usage object in each JSON file.
+total_output_tokens: Sum of completion_tokens and reasoning_tokens (from completion_tokens_details) from the usage object in each JSON file.
+
+CPU Time: Calculated as TotalRunTime - ModelTime for each instance.
+
+—------------------------ backup text —--------------------
+Models
+We wanted to ensure we had mixed representation of small, larger, and reasoning type models in the study, and as such, we selected the following:
+
+gpt-4o-mini (OpenAI; closed-source; ~8B parameters\*, source: https://x.com/Yuchenj_UW/status/1874507299303379428)
+HP WIP
+Qwen2.5-32B-Instruct (Alibaba; open-source: https://huggingface.co/Qwen/Qwen2.5-32B-Instruct)
+HP WIP
+QwQ-32B (Alibaba; open-source; https://huggingface.co/Qwen/QwQ-32B)
+HP WIP
+
+Due to high compute intensity and associated costs with running the experiments, we limited ourselves only to the three models above. Nonetheless, our selection covers examples of closed- and open-source models, small and larger models (~8B\* vs. 32B), as well as reasoning and non-reasoning models (QwQ-32B being a reasoning model), giving us a good coverage of capability for more insightful evaluation of how such types of models perform with different AI scaffolds.
+Scaffolds
+
+We selected five scaffolds that are commonly found on the SWE-Bench leaderboard in the last six months; each tool versions are based on their latest GitHub commits as of March 26, 2025. These include both agentic-based scaffolds and pipeline-based scaffolds. Agentic-based scaffolds utilize one or more AI agents that can plan, communicate, use tools, and collaborate on solving a given task. On the other hand, pipeline-based scaffolds generally follow a pre-defined set of steps.
+
+\<insert_a_diagram_of_agentic_vs_pipeline_differences)
+
+For our experiments, we selected three agent-based scaffolds and two pipeline-based:
+
+AutoCodeRover (agentic)
+SWE-Agent (agentic)
+OpenHands (agentic)
+Agentless 1.5 (pipeline)
+Agentless-Mini \* (pipeline)
+
+We augmented each scaffold’s original implementation with additional code in order to enable fine-grained metric profiling and allow the use of self-hosted models (will be available on GitHub). The majority of changes were done in the Agentless code base, also including some minor bug fixes and error catching.
+
+Note about Agentless-Mini \*:
+Agentless-Mini implementation was originally taken from Meta’s SWE-RL (link here) paper which used it to evaluate their proposed approach. However, the Agentless-Mini that is described by the paper majorly differs from the publicly available implementation from the authors. In particular, Agentless-Mini implementation that we used only contained file-level localization + repair stages, as these were the only stages that were available as of May 2025, with the remainder of the pipeline being work-in-progress due to refactoring and infrastructure changes (as stated by the authors, link to SWE-RL readme). This two-stage setup is what we refer to as Agentless-Mini going forwards, and not the full version as described in the SWE-RL paper.
+Experimental Parameters
+When selecting the scaffold parameters, such as maximum token count, inference cost limits, number of generated patches, and others, we aimed to stay as close as possible to the default parameter values defined by the original authors. We provide per-scaffold specifics below:
+
+AutoCodeRover
+Default Setting
+SWE-Agent
+Cost Budget Limit = $1, LLM Request Limit = 300
+OpenHands
+Default Setting
+Agentless 1.5
+WIP
+Agentless-Mini
+WIP
+Dataset
+We evaluated the selected scaffolds on a popular benchmark SWE-bench-Verified, which is a subset of 500 verified high-quality GitHub issue instances from the larger SWE-bench dataset.

@@ -1,0 +1,32 @@
+[
+  {
+    "scaffold": "agentless-mini",
+    "gpt-4o-mini": 2,
+    "qwen72b": 2,
+    "qwq32b": 2
+  },
+  {
+    "scaffold": "agentless",
+    "ds-r1-528-qwen3-distill": 46.9,
+    "gpt-4o-mini": 14.82,
+    "qwen72b": 88.84
+  },
+  {
+    "scaffold": "autocoderover",
+    "gpt-4o-mini": 45.38,
+    "qwen72b": 59.3,
+    "qwq32b": 58.28
+  },
+  {
+    "scaffold": "openhands",
+    "gpt-4o-mini": 25.69,
+    "qwen72b": 46.03,
+    "qwq32b": 30.08
+  },
+  {
+    "scaffold": "sweagent",
+    "gpt-4o-mini": 50.52,
+    "qwen72b": 54.28,
+    "qwq32b": 55.5
+  }
+]

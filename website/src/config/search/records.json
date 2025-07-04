@@ -1,0 +1,11 @@
+[
+  {
+    "id": "leaderboard",
+    "section": "Leaderboard",
+    "title": "Holistic Evaluation of LLM-Based SWE Scaffolds",
+    "headings": ["Leaderboard", "Analytics", "Partners", "Citations"],
+    "description": "Leaderboards",
+    "slug": "/",
+    "tags": ["benchmark", "leaderboard", "LLM"]
+  }
+]

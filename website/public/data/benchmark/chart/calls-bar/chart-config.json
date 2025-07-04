@@ -1,0 +1,18 @@
+{
+  "gpt-4o-mini": {
+    "label": "gpt-4o-mini",
+    "color": "#27eedf"
+  },
+  "qwen72b": {
+    "label": "qwen72b",
+    "color": "#48aef5"
+  },
+  "qwq32b": {
+    "label": "qwq32b",
+    "color": "#f255a1"
+  },
+  "ds-r1-528-qwen3-distill": {
+    "label": "ds-r1-528-qwen3-distill",
+    "color": "#f8520e"
+  }
+}

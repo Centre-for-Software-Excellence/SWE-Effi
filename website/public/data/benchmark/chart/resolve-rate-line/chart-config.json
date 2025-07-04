@@ -1,0 +1,62 @@
+{
+  "agentless-mini/gpt-4o-mini": {
+    "label": "agentless-mini/gpt-4o-mini",
+    "color": "#f6524f"
+  },
+  "agentless-mini/qwen72b": {
+    "label": "agentless-mini/qwen72b",
+    "color": "#bafb00"
+  },
+  "agentless-mini/qwq32b": {
+    "label": "agentless-mini/qwq32b",
+    "color": "#9da0ed"
+  },
+  "agentless/ds-r1-528-qwen3-distill": {
+    "label": "agentless/ds-r1-528-qwen3-distill",
+    "color": "#ffc102"
+  },
+  "agentless/gpt-4o-mini": {
+    "label": "agentless/gpt-4o-mini",
+    "color": "#f6524f"
+  },
+  "agentless/qwen72b": {
+    "label": "agentless/qwen72b",
+    "color": "#27eedf"
+  },
+  "autocoderover/gpt-4o-mini": {
+    "label": "autocoderover/gpt-4o-mini",
+    "color": "#bafb00"
+  },
+  "autocoderover/qwen72b": {
+    "label": "autocoderover/qwen72b",
+    "color": "#48aef5"
+  },
+  "autocoderover/qwq32b": {
+    "label": "autocoderover/qwq32b",
+    "color": "#9da0ed"
+  },
+  "openhands/gpt-4o-mini": {
+    "label": "openhands/gpt-4o-mini",
+    "color": "#f255a1"
+  },
+  "openhands/qwen72b": {
+    "label": "openhands/qwen72b",
+    "color": "#ffc102"
+  },
+  "openhands/qwq32b": {
+    "label": "openhands/qwq32b",
+    "color": "#f8520e"
+  },
+  "sweagent/gpt-4o-mini": {
+    "label": "sweagent/gpt-4o-mini",
+    "color": "#f6524f"
+  },
+  "sweagent/qwen72b": {
+    "label": "sweagent/qwen72b",
+    "color": "#27eedf"
+  },
+  "sweagent/qwq32b": {
+    "label": "sweagent/qwq32b",
+    "color": "#bafb00"
+  }
+}
