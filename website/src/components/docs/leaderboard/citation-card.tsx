@@ -1,7 +1,6 @@
-import { useState } from 'react';
 import { BookOpen, ExternalLink } from 'lucide-react';
 
-import { Button } from '@/components/common/ui/button';
+import { CopyButton } from '@/components/common/copy-button';
 import {
   Card,
   CardContent,
@@ -24,16 +23,6 @@ export default function CitationCard() {
     })}}
 }`;
   const apaCitation = `some apa citation here`;
-  const [copied, setCopied] = useState(false);
-  const copyText = async (text: string) => {
-    try {
-      await navigator.clipboard.writeText(text);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    } catch (err) {
-      console.error('Failed to copy code:', err);
-    }
-  };
   return (
     <section className="space-y-4">
       <H4>Citation</H4>
@@ -55,16 +44,7 @@ export default function CitationCard() {
               <pre className="overflow-x-auto rounded-lg bg-muted p-4 text-sm">
                 <code className="overflow-x-auto">{bibtexCitation}</code>
               </pre>
-              <Button
-                variant="outline"
-                className="absolute top-2 right-2"
-                size="sm"
-                onClick={() => {
-                  copyText(bibtexCitation);
-                }}
-              >
-                {copied ? 'Copied!' : 'Copy'}
-              </Button>
+              <CopyButton text={bibtexCitation} />
             </div>
           </CardContent>
         </Card>
@@ -82,16 +62,7 @@ export default function CitationCard() {
               <pre className="overflow-x-auto rounded-lg bg-muted p-4 text-sm">
                 <p className="leading-relaxed">{apaCitation}</p>
               </pre>
-              <Button
-                variant="outline"
-                className="absolute top-2 right-2"
-                size="sm"
-                onClick={() => {
-                  copyText(apaCitation);
-                }}
-              >
-                Copy
-              </Button>
+              <CopyButton text={apaCitation} />
             </div>
           </CardContent>
         </Card>
