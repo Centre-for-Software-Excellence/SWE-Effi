@@ -8,6 +8,7 @@ import {
 
 import { Github } from '@/components/common/icons';
 import { ChartProps } from '@/components/docs/leaderboard/chart/types';
+import { Tables } from '@/components/docs/leaderboard/tables-card';
 import { type Link } from '.';
 
 type TsxIcon = (props: any) => JSX.Element;
@@ -19,6 +20,7 @@ interface LeaderboardUIConfig {
   title: string;
   description: string;
   buttonLinks: ButtonLink[];
+  tables: Tables;
   analytics: {
     title?: string;
     description?: string;
@@ -59,6 +61,45 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
       disabled: true,
     },
   ],
+  tables: {
+    leaderboard: {
+      tabTitle: 'Leaderboard',
+      filterPlaceholder: 'Filter models...',
+      columnTooltips: {
+        rank: 'Ranked by resolve rate',
+        scaffold: '',
+        model: '',
+        total: 'Total time',
+        cpuTime: 'CPU time',
+        inputToken: 'Number of Input tokens in thousands',
+        outputToken: 'Number of Output tokens in thousands',
+        calls: 'Number of inference calls to the LLM',
+        infTime: '',
+        resolveRate:
+          'Number of generated patches that correct resolved the issue',
+        precision: 'Precision of the generated patches',
+      },
+    },
+    leaderboardRVU: {
+      tabTitle: 'Leaderboard RVU',
+      filterPlaceholder: 'Filter models...',
+      columnTooltips: {
+        rank: 'Ranked by total time resolved',
+        scaffold: '',
+        model: '',
+        avgTotalTimeU: '',
+        avgTotalTimeR: '',
+        avgCPUTimeU: '',
+        avgCPUTimeR: '',
+        avgInfTimeU: '',
+        avgInfTimeR: '',
+        avgTotalTokensU: '',
+        avgTotalTokensR: '',
+        avgLLMRequestsU: '',
+        avgLLMRequestsR: '',
+      },
+    },
+  },
   analytics: {
     title: 'Analytics',
     description: 'Lead description about the analytics...',

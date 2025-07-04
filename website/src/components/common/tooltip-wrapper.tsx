@@ -14,7 +14,9 @@ export { TooltipProvider } from '@/components/common/ui/tooltip';
 
 export function TooltipWrapper(props: TooltipWrapperProps) {
   const { title, children, className } = props;
-
+  if (!title || title.trim() === '') {
+    return <>{children}</>;
+  }
   return (
     <Tooltip>
       <TooltipTrigger asChild>{children}</TooltipTrigger>

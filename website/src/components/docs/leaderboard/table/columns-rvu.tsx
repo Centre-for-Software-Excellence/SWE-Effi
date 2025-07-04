@@ -2,6 +2,7 @@ import { type ColumnDef } from '@tanstack/react-table';
 import { ArrowUpDown, Award, Crown, Medal } from 'lucide-react';
 
 import { TooltipWrapper } from '@/components/common/tooltip-wrapper';
+import { ColumnTooltips } from '../tables-card';
 
 export type PerformanceRVU = {
   rank: number;
@@ -19,12 +20,14 @@ export type PerformanceRVU = {
   avgLLMRequestsR: number;
 };
 
-export const columns: ColumnDef<PerformanceRVU>[] = [
+export const columns = (
+  tooltips: ColumnTooltips,
+): ColumnDef<PerformanceRVU>[] => [
   {
     accessorKey: 'rank',
     header: ({ column }) => {
       return (
-        <TooltipWrapper title="">
+        <TooltipWrapper title={tooltips?.rank}>
           <button
             onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
             className="flex items-center justify-start"
@@ -55,7 +58,7 @@ export const columns: ColumnDef<PerformanceRVU>[] = [
   {
     accessorKey: 'scaffold',
     header: () => (
-      <TooltipWrapper title="Name of software framework that using the LLM">
+      <TooltipWrapper title={tooltips?.scaffold}>
         <span>Scaffold</span>
       </TooltipWrapper>
     ),
@@ -71,7 +74,7 @@ export const columns: ColumnDef<PerformanceRVU>[] = [
   {
     accessorKey: 'model',
     header: () => (
-      <TooltipWrapper title="Name of Large Language Model">
+      <TooltipWrapper title={tooltips?.model}>
         <span>Base Model</span>
       </TooltipWrapper>
     ),
@@ -87,7 +90,7 @@ export const columns: ColumnDef<PerformanceRVU>[] = [
   {
     accessorKey: 'avgTotalTimeU',
     header: () => (
-      <TooltipWrapper title="">
+      <TooltipWrapper title={tooltips?.avgTotalTimeU}>
         <span>Average Total Time (U)</span>
       </TooltipWrapper>
     ),
@@ -103,7 +106,7 @@ export const columns: ColumnDef<PerformanceRVU>[] = [
   {
     accessorKey: 'avgTotalTimeR',
     header: () => (
-      <TooltipWrapper title="">
+      <TooltipWrapper title={tooltips?.avgTotalTimeR}>
         <span>Average Total Time (R)</span>
       </TooltipWrapper>
     ),
@@ -119,7 +122,7 @@ export const columns: ColumnDef<PerformanceRVU>[] = [
   {
     accessorKey: 'avgCPUTimeU',
     header: () => (
-      <TooltipWrapper title="">
+      <TooltipWrapper title={tooltips?.avgCPUTimeU}>
         <span>Average CPU Time (U)</span>
       </TooltipWrapper>
     ),
@@ -135,7 +138,7 @@ export const columns: ColumnDef<PerformanceRVU>[] = [
   {
     accessorKey: 'avgCPUTimeR',
     header: () => (
-      <TooltipWrapper title="">
+      <TooltipWrapper title={tooltips?.avgCPUTimeR}>
         <span>Average CPU Time (R)</span>
       </TooltipWrapper>
     ),
@@ -151,7 +154,7 @@ export const columns: ColumnDef<PerformanceRVU>[] = [
   {
     accessorKey: 'avgInfTimeU',
     header: () => (
-      <TooltipWrapper title="">
+      <TooltipWrapper title={tooltips?.avgInfTimeU}>
         <span>Average Inference Time (U)</span>
       </TooltipWrapper>
     ),
@@ -167,7 +170,7 @@ export const columns: ColumnDef<PerformanceRVU>[] = [
   {
     accessorKey: 'avgInfTimeR',
     header: () => (
-      <TooltipWrapper title="">
+      <TooltipWrapper title={tooltips?.avgInfTimeR}>
         <span>Average Inference Time (R)</span>
       </TooltipWrapper>
     ),
@@ -183,7 +186,7 @@ export const columns: ColumnDef<PerformanceRVU>[] = [
   {
     accessorKey: 'avgTotalTokensU',
     header: () => (
-      <TooltipWrapper title="">
+      <TooltipWrapper title={tooltips?.avgTotalTokensU}>
         <span>Average Total Tokens (U)</span>
       </TooltipWrapper>
     ),
@@ -199,7 +202,7 @@ export const columns: ColumnDef<PerformanceRVU>[] = [
   {
     accessorKey: 'avgTotalTokensR',
     header: () => (
-      <TooltipWrapper title="">
+      <TooltipWrapper title={tooltips?.avgTotalTokensR}>
         <span>Average Total Tokens (R)</span>
       </TooltipWrapper>
     ),
@@ -215,7 +218,7 @@ export const columns: ColumnDef<PerformanceRVU>[] = [
   {
     accessorKey: 'avgLLMRequestsU',
     header: () => (
-      <TooltipWrapper title="">
+      <TooltipWrapper title={tooltips?.avgLLMRequestsU}>
         <span>Average LLM Requests (U)</span>
       </TooltipWrapper>
     ),
@@ -231,7 +234,7 @@ export const columns: ColumnDef<PerformanceRVU>[] = [
   {
     accessorKey: 'avgLLMRequestsR',
     header: () => (
-      <TooltipWrapper title="">
+      <TooltipWrapper title={tooltips?.avgLLMRequestsR}>
         <span>Average LLM Requests (R)</span>
       </TooltipWrapper>
     ),

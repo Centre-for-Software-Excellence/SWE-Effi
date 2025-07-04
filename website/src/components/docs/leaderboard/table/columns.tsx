@@ -3,6 +3,7 @@ import { ArrowUpDown, Award, Crown, Medal } from 'lucide-react';
 
 import { TooltipWrapper } from '@/components/common/tooltip-wrapper';
 import { Progress } from '@/components/common/ui/progress';
+import { ColumnTooltips } from '../tables-card';
 
 export type Performance = {
   rank: number;
@@ -28,13 +29,12 @@ function formatScore(score: string | undefined): string {
   return res;
 }
 
-// TODO: tooltips
-export const columns: ColumnDef<Performance>[] = [
+export const columns = (tooltips: ColumnTooltips): ColumnDef<Performance>[] => [
   {
     accessorKey: 'rank',
     header: ({ column }) => {
       return (
-        <TooltipWrapper title="Ranked by resolve rate">
+        <TooltipWrapper title={tooltips?.rank}>
           <button
             onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
             className="flex items-center justify-start"
@@ -65,7 +65,7 @@ export const columns: ColumnDef<Performance>[] = [
   {
     accessorKey: 'scaffold',
     header: () => (
-      <TooltipWrapper title="Name of software framework that using the LLM">
+      <TooltipWrapper title={tooltips?.scaffold}>
         <span>Scaffold</span>
       </TooltipWrapper>
     ),
@@ -81,7 +81,7 @@ export const columns: ColumnDef<Performance>[] = [
   {
     accessorKey: 'model',
     header: () => (
-      <TooltipWrapper title="Name of Large Language Model">
+      <TooltipWrapper title={tooltips?.model}>
         <span>Base Model</span>
       </TooltipWrapper>
     ),
@@ -98,7 +98,7 @@ export const columns: ColumnDef<Performance>[] = [
     accessorKey: 'total',
     header: ({ column }) => {
       return (
-        <TooltipWrapper title="Total time">
+        <TooltipWrapper title={tooltips?.total}>
           <button
             onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
             className="flex items-center justify-start"
@@ -119,7 +119,7 @@ export const columns: ColumnDef<Performance>[] = [
     accessorKey: 'cpuTime',
     header: ({ column }) => {
       return (
-        <TooltipWrapper title="Total CPU Time">
+        <TooltipWrapper title={tooltips?.cpuTime}>
           <button
             onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
             className="flex items-center justify-start"
@@ -140,7 +140,7 @@ export const columns: ColumnDef<Performance>[] = [
     accessorKey: 'inputToken',
     header: ({ column }) => {
       return (
-        <TooltipWrapper title="Number of input tokens in thousands">
+        <TooltipWrapper title={tooltips?.inputToken}>
           <button
             onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
             className="flex items-center justify-start"
@@ -161,7 +161,7 @@ export const columns: ColumnDef<Performance>[] = [
     accessorKey: 'outputToken',
     header: ({ column }) => {
       return (
-        <TooltipWrapper title="Number of output tokens in thousands">
+        <TooltipWrapper title={tooltips?.outputToken}>
           <button
             onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
             className="flex items-center justify-start"
@@ -182,7 +182,7 @@ export const columns: ColumnDef<Performance>[] = [
     accessorKey: 'calls',
     header: ({ column }) => {
       return (
-        <TooltipWrapper title="Number of inference calls to the LLM">
+        <TooltipWrapper title={tooltips?.calls}>
           <button
             onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
             className="flex items-center justify-start"
@@ -203,7 +203,7 @@ export const columns: ColumnDef<Performance>[] = [
     accessorKey: 'infTime',
     header: ({ column }) => {
       return (
-        <TooltipWrapper title="Number of inference calls to the LLM">
+        <TooltipWrapper title={tooltips?.infTime}>
           <button
             onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
             className="flex items-center justify-start"
@@ -224,7 +224,7 @@ export const columns: ColumnDef<Performance>[] = [
     accessorKey: 'resolveRate',
     header: ({ column }) => {
       return (
-        <TooltipWrapper title="Number of generated patches that correct resolved the issue">
+        <TooltipWrapper title={tooltips?.resolveRate}>
           <button
             onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
             className="flex items-center justify-start"
@@ -248,7 +248,7 @@ export const columns: ColumnDef<Performance>[] = [
     accessorKey: 'precision',
     header: ({ column }) => {
       return (
-        <TooltipWrapper title="Number of correct patches out of all patches generated">
+        <TooltipWrapper title={tooltips?.precision}>
           <button
             onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
             className="flex items-center justify-start"

@@ -41,14 +41,14 @@ export default function Page() {
           ))}
         </div>
         <Divider className="mt-16" />
-        <TablesCard />
+        <TablesCard tablesUi={ui.tables} />
         <Divider className="my-18" />
         <Suspense fallback={<div className="h-96 w-full" />}>
           <AnalyticsCard />
         </Suspense>
-        <Divider className="my-16" />
+        <Divider className="mt-16" />
         <PartnersCard />
-        <Divider />
+        <Divider className="mb-16" />
         <CitationCard />
       </div>
     </StaggeredContent>
