@@ -1,18 +1,21 @@
 [
   {
     "scaffold": "agentless-mini",
-    "gpt-4o-mini": 2,
+    "gpt-4o-mini": 1.98,
+    "llama33-70b-inst-turbo": 2,
+    "qwen3-32b": 1.98,
     "qwen72b": 2,
     "qwq32b": 2
   },
   {
     "scaffold": "agentless",
-    "ds-r1-528-qwen3-distill": 46.9,
-    "gpt-4o-mini": 14.82,
+    "deepseek-r1-528-qwen3-8b-distill": 46.9,
+    "gpt-4o-mini": 82.34,
+    "qwen3-32b": 83.06,
     "qwen72b": 88.84
   },
   {
-    "scaffold": "autocoderover",
+    "scaffold": "auto-code-rover",
     "gpt-4o-mini": 45.38,
     "qwen72b": 59.3,
     "qwq32b": 58.28
@@ -24,7 +27,7 @@
     "qwq32b": 30.08
   },
   {
-    "scaffold": "sweagent",
+    "scaffold": "swe-agent",
     "gpt-4o-mini": 50.52,
     "qwen72b": 54.28,
     "qwq32b": 55.5

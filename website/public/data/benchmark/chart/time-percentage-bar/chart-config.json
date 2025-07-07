@@ -1,0 +1,10 @@
+{
+  "gpu-time": {
+    "label": "GPU Time %",
+    "color": "#f6524f"
+  },
+  "cpu-time": {
+    "label": "CPU Time %",
+    "color": "#016ab8"
+  }
+}

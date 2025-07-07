@@ -13,11 +13,13 @@ import { ChartConfig } from '@/components/common/ui/chart';
 export function CollapsibleLegend({
   keys,
   config,
+  show = false,
 }: {
   keys: string[];
   config: ChartConfig;
+  show?: boolean;
 }) {
-  const [showLegend, setShowLegend] = useState(false);
+  const [showLegend, setShowLegend] = useState(show);
   return (
     <Collapsible open={showLegend} onOpenChange={setShowLegend}>
       <CollapsibleTrigger asChild>
@@ -34,34 +36,6 @@ export function CollapsibleLegend({
 
           <div className="absolute top-10 right-0 z-10">
             <CollapsibleContent className="scrollbar-thin max-h-[20ch] space-y-1 overflow-y-auto rounded-md border bg-background/70 p-2 md:max-h-[30ch] md:space-y-2">
-              {keys.map((k) => (
-                <div
-                  key={config[k].label as string}
-                  className="flex items-center gap-2 text-[8px] md:text-sm"
-                >
-                  <div
-                    className="h-3 w-3 rounded-sm"
-                    style={{
-                      backgroundColor: config[k].color,
-                    }}
-                  />
-                  <span className="truncate">{config[k].label}</span>
-                </div>
-              ))}
-              {keys.map((k) => (
-                <div
-                  key={config[k].label as string}
-                  className="flex items-center gap-2 text-[8px] md:text-sm"
-                >
-                  <div
-                    className="h-3 w-3 rounded-sm"
-                    style={{
-                      backgroundColor: config[k].color,
-                    }}
-                  />
-                  <span className="truncate">{config[k].label}</span>
-                </div>
-              ))}
               {keys.map((k) => (
                 <div
                   key={config[k].label as string}

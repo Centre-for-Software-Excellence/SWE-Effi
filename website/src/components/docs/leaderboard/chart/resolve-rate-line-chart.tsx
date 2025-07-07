@@ -10,7 +10,6 @@ import { CollapsibleLegend } from '@/components/docs/leaderboard/chart/collapsib
 import { useChartData } from '@/hooks/chart/use-chart-data';
 import { useChartPopover } from '@/hooks/chart/use-chart-popover';
 import { useChartSettings } from '@/hooks/chart/use-chart-settings';
-import { ResolveRateEntry as ChartData } from '@/lib/data/generate';
 import { cn } from '@/lib/utils';
 import { ChartCard } from './chart-card';
 import { ChartControls } from './chart-controls';
@@ -19,6 +18,11 @@ import { ChartHeader } from './chart-header';
 import { ChartSettings } from './chart-settings';
 import { LineChartRenderer } from './line-chart-renderer';
 import { ChartProps } from './types';
+
+export interface ChartData {
+  totalTokens: number;
+  [seriesName: string]: number;
+}
 
 export function ResolveRateLineChart({
   title,

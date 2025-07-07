@@ -26,6 +26,7 @@ interface LeaderboardUIConfig {
     description?: string;
     resolveRateLineChart: ChartProps;
     numCallsBarChart: ChartProps;
+    timePercentageBarChart: ChartProps;
   };
   citation: {
     citationTitle?: string;
@@ -120,6 +121,15 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
       xAxisLabel: 'Scaffold',
       yAxisLabel: 'Number of Calls',
       xAxisDataKey: 'scaffold',
+    },
+    timePercentageBarChart: {
+      title: 'Agent Architecture Fingerprint: Where Does the Time Go? ',
+      description: '(on average non-resolved runs)',
+      overview: 'Overview of the time percentage bar chart...',
+      insight: 'Insight about the time percentage bar chart...',
+      xAxisLabel: 'Percentage of Total Runtime (Model Time %)',
+      yAxisLabel: '',
+      yAxisDataKey: 'scaffold-model',
     },
   },
   citation: {

@@ -2,7 +2,6 @@ import { TooltipProvider } from '@/components/common/tooltip-wrapper';
 import { CollapsibleLegend } from '@/components/docs/leaderboard/chart/collapsible-legend';
 import { useChartData } from '@/hooks/chart/use-chart-data';
 import { useChartPopover } from '@/hooks/chart/use-chart-popover';
-import { CallsEntry as ChartData } from '@/lib/data/generate';
 import { cn } from '@/lib/utils';
 import { BarChartRenderer } from './bar-chart-renderer';
 import { ChartCard } from './chart-card';
@@ -10,6 +9,11 @@ import { ChartControls } from './chart-controls';
 import { ChartExplanation } from './chart-explanation';
 import { ChartHeader } from './chart-header';
 import { ChartProps } from './types';
+
+export interface ChartData {
+  scaffold: string;
+  [key: string]: number | string | undefined;
+}
 
 export function CallsBarChart({
   title,

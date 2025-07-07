@@ -4,21 +4,20 @@
     "model": "GPT-4o-mini",
     "total": 280.1,
     "cpuTime": 14.7,
-    "inputToken": 375,
-    "outputToken": 16.7,
-    "calls": 45.3,
+    "inputToken": 276.6,
+    "outputToken": 14.2,
+    "calls": 39.5,
     "infTime": 265.5,
-    "resolveRate": 14.8,
-    "precision": 14.8
+    "resolveRate": 12
   },
   {
     "scaffold": "Auto Code Rover",
     "model": "Llama-3.3-70B",
     "total": 123.8,
     "cpuTime": 9.5,
-    "inputToken": 416,
-    "outputToken": 14,
-    "calls": 38,
+    "inputToken": 416.1,
+    "outputToken": 14.5,
+    "calls": 38.3,
     "infTime": 114.3,
     "resolveRate": 28
   },

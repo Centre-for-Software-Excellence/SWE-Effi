@@ -5,5 +5,6 @@ export interface ChartProps {
   insight: string;
   xAxisLabel?: string;
   yAxisLabel?: string;
-  xAxisDataKey: string;
+  xAxisDataKey?: string;
+  yAxisDataKey?: string;
 }

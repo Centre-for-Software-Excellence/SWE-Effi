@@ -23,9 +23,9 @@ export function ChartHeader({
     <CardHeader
       className={`flex w-full items-start justify-between space-y-0 pb-2 sm:flex-row ${className || ''}`}
     >
-      <div>
+      <div className="w-2/3">
         <CardTitle className="text-sm md:text-lg">{title}</CardTitle>
-        <CardDescription className="text-sm md:text-lg">
+        <CardDescription className="text-sm md:text-base">
           {description}
         </CardDescription>
       </div>

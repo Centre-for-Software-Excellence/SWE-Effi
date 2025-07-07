@@ -2,6 +2,11 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
+import { ChartConfig } from '@/components/common/ui/chart';
+import { ChartData as CallsEntry } from '@/components/docs/leaderboard/chart/calls-bar-chart';
+import { ChartData as ResolveRateEntry } from '@/components/docs/leaderboard/chart/resolve-rate-line-chart';
+import { ChartData as TimePercentageEntry } from '@/components/docs/leaderboard/chart/time-percentage-bar-chart';
+
 const DRYRUN = false;
 
 const colors = [
@@ -18,27 +23,17 @@ const colors = [
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 interface InputData {
-  input_tokens: number;
-  output_tokens: number;
-  llm_calls: number;
-  duration: number;
-  avg_call_duration: number;
-  total_call_duration: number;
-  resolved: boolean;
-}
-
-export interface ResolveRateEntry {
-  totalTokens: number;
-  [seriesName: string]: number;
-}
-
-export interface CallsEntry {
-  scaffold: string;
-  [key: string]: number | string | undefined;
-}
-
-interface ChartConfig {
-  [seriesName: string]: { label: string; color: string };
+  input_tokens?: number;
+  output_tokens?: number;
+  llm_calls?: number;
+  avg_cpu_time?: number;
+  avg_gpu_time?: number;
+  duration?: number;
+  avg_duration?: number;
+  avg_call_duration?: number;
+  total_call_duration?: number;
+  resolved?: boolean;
+  [key: string]: number | boolean | string | undefined;
 }
 
 type Accumulator = Map<
@@ -46,7 +41,10 @@ type Accumulator = Map<
   Map</* model */ string, { sum: number; count: number }>
 >;
 
-export type ChartName = 'resolve-rate-line' | 'calls-bar';
+export type ChartName =
+  | 'resolve-rate-line'
+  | 'calls-bar'
+  | 'time-percentage-bar';
 
 // color generator helper
 const nextColor = (() => {
@@ -95,7 +93,7 @@ export function buildBenchmarkCharts(opts?: {
     let resolvedSoFar = 0;
     records
       .map((r) => ({
-        totalTokens: r.input_tokens + r.output_tokens,
+        totalTokens: r?.input_tokens || 0 + (r?.output_tokens || 0),
         resolved: r.resolved,
       }))
       .sort((a, b) => a.totalTokens - b.totalTokens)
@@ -121,7 +119,7 @@ export function buildBenchmarkCharts(opts?: {
     const stats = scaffoldMap.get(model) ?? { sum: 0, count: 0 };
 
     for (const r of records) {
-      stats.sum += r.llm_calls;
+      stats.sum += r?.llm_calls || 0;
       stats.count += 1;
     }
     scaffoldMap.set(model, stats);
@@ -167,6 +165,82 @@ export function buildBenchmarkCharts(opts?: {
   }
 }
 
+export function buildSummaryCharts(opts?: {
+  rawDir?: string;
+  outDir?: string;
+}) {
+  const rawDir =
+    opts?.rawDir ??
+    path.join(__dirname, '../../../public/data/benchmark/raw/summary');
+  const outDir =
+    opts?.outDir ??
+    path.join(__dirname, '../../../public/data/benchmark/chart');
+
+  const timePercentageCfg: ChartConfig = {
+    'gpu-time': {
+      label: 'GPU Time %',
+      color: '#f6524f',
+    },
+    'cpu-time': {
+      label: 'CPU Time %',
+      color: '#016ab8',
+    },
+  };
+  const timePercentageData: TimePercentageEntry[] = [];
+  const jsonFiles = fs.readdirSync(rawDir).filter((f) => f.endsWith('.json'));
+
+  for (const file of jsonFiles) {
+    const filePath = path.join(rawDir, file);
+
+    let record: InputData;
+    try {
+      record = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+    } catch (e) {
+      console.error(`Could not parse ${file}:`, e);
+      continue;
+    }
+
+    const [scaffold, model] = path.basename(file, '.json').split('_');
+    const seriesName = `${scaffold}/${model}`;
+
+    // time percentage data: (avg_cpu_time + avg_gpu_time) / duration
+    const cpuTime = record.avg_cpu_time || 0;
+    const duration = record.avg_duration || 1;
+    const timePercentage = Number(((cpuTime / duration) * 100).toFixed(2));
+    const currentEntry = {
+      'cpu-time': timePercentage,
+      'gpu-time': Number((100 - timePercentage).toFixed(2)),
+      'scaffold-model': seriesName,
+    };
+    timePercentageData.push(currentEntry);
+  }
+
+  if (DRYRUN) {
+    console.log(
+      `Dry run: would write ${timePercentageData.length} time percentage entries.`,
+    );
+    writeJSON(
+      path.join(outDir, 'tmp/time-percentage-bar/chart-data.json'),
+      timePercentageData,
+    );
+    writeJSON(
+      path.join(outDir, 'tmp/time-percentage-bar/chart-config.json'),
+      timePercentageCfg,
+    );
+  } else {
+    const tpDirName: ChartName = 'time-percentage-bar';
+    writeJSON(
+      path.join(outDir, `${tpDirName}/chart-data.json`),
+      timePercentageData,
+    );
+    writeJSON(
+      path.join(outDir, `${tpDirName}/chart-config.json`),
+      timePercentageCfg,
+    );
+  }
+}
+
 if (import.meta.url === `file://${process.argv[1]}`) {
   buildBenchmarkCharts();
+  buildSummaryCharts();
 }

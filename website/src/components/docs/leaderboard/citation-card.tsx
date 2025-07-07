@@ -29,7 +29,7 @@ export default function CitationCard() {
       <Muted className="text-muted-foreground">
         How to cite our work in academic publications
       </Muted>
-      <div className="relative grid w-full grid-cols-1 gap-6">
+      <div className="relative grid w-full grid-cols-1 gap-6 lg:p-8">
         <Card className="w-auto rounded shadow-none">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">

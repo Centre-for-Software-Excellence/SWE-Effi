@@ -40,7 +40,7 @@ export default function Page() {
             </Button>
           ))}
         </div>
-        <Divider className="mt-16" />
+        <Divider className="my-16" />
         <TablesCard tablesUi={ui.tables} />
         <Divider className="my-18" />
         <Suspense fallback={<div className="h-96 w-full" />}>
