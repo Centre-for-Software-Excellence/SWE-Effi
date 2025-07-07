@@ -12,9 +12,10 @@ import { columns, Performance } from './table/columns';
 import { columns as columnsRVU, PerformanceRVU } from './table/columns-rvu';
 import { DataTable } from './table/data-table';
 
-export type ColumnTooltips =
-  | Record<keyof Performance, string>
-  | Record<keyof PerformanceRVU, string>;
+export type ColumnTooltips = Record<
+  Partial<keyof Performance | keyof PerformanceRVU>,
+  string
+>;
 export type Table = {
   tabTitle: string;
   filterPlaceholder?: string;
