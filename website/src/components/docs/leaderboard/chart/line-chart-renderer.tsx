@@ -1,21 +1,11 @@
 import { CartesianGrid, Label, Line, LineChart, XAxis, YAxis } from 'recharts';
 
 import {
-  ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
 } from '@/components/common/ui/chart';
-
-interface LineChartRendererProps {
-  data: any[];
-  config: ChartConfig;
-  activeKeys: string[];
-  xRange: [number, number];
-  xAxisLabel?: string;
-  yAxisLabel?: string;
-  xAxisDataKey: string;
-}
+import { ChartRendererProps } from './types';
 
 export function LineChartRenderer({
   data,
@@ -25,7 +15,7 @@ export function LineChartRenderer({
   xAxisLabel,
   yAxisLabel,
   xAxisDataKey,
-}: LineChartRendererProps) {
+}: ChartRendererProps) {
   return (
     <ChartContainer
       config={config}
@@ -53,7 +43,7 @@ export function LineChartRenderer({
           dataKey={xAxisDataKey}
           tickLine={true}
           axisLine={true}
-          domain={[xRange[0], xRange[1]]}
+          domain={xRange || [0, 'dataMax']}
           allowDataOverflow={true}
           tickFormatter={(value) => (value + '').slice(0, 3)}
           tickCount={10}

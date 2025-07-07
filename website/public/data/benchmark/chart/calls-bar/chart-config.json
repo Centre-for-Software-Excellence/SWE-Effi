@@ -1,11 +1,11 @@
 {
   "gpt-4o-mini": {
     "label": "gpt-4o-mini",
-    "color": "#27eedf"
+    "color": "#48aef5"
   },
   "llama33-70b-inst-turbo": {
     "label": "llama33-70b-inst-turbo",
-    "color": "#48aef5"
+    "color": "#9da0ed"
   },
   "qwen3-32b": {
     "label": "qwen3-32b",
@@ -17,10 +17,10 @@
   },
   "qwq32b": {
     "label": "qwq32b",
-    "color": "#27eedf"
+    "color": "#48aef5"
   },
   "deepseek-r1-528-qwen3-8b-distill": {
     "label": "deepseek-r1-528-qwen3-8b-distill",
-    "color": "#48aef5"
+    "color": "#9da0ed"
   }
 }

@@ -1,0 +1,10 @@
+{
+  "success-cost": {
+    "label": "Success Cost",
+    "color": "#48aef5"
+  },
+  "failure-cost": {
+    "label": "Failure Cost",
+    "color": "#f6524f"
+  }
+}

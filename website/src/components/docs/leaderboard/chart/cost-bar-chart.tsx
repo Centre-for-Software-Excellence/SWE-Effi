@@ -17,12 +17,12 @@ import { ChartHeader } from './chart-header';
 import { ChartProps, ChartRendererProps } from './types';
 
 export interface ChartData {
-  'gpu-time': number;
-  'cpu-time': number;
+  'failure-cost': number;
+  'success-cost': number;
   [key: string]: string | number;
 }
 
-export function TimePercentageBarChart({
+export function CostBarChart({
   title,
   description,
   overview,
@@ -42,8 +42,8 @@ export function TimePercentageBarChart({
     loading,
     error,
   } = useChartData<ChartData>(
-    '/data/benchmark/chart/time-percentage-bar/chart-data.json',
-    '/data/benchmark/chart/time-percentage-bar/chart-config.json',
+    '/data/benchmark/chart/cost-bar/chart-data.json',
+    '/data/benchmark/chart/cost-bar/chart-config.json',
   );
 
   const { isExpanded, toggleExpanded } = useChartPopover();
@@ -80,7 +80,7 @@ export function TimePercentageBarChart({
       </ChartHeader>
 
       <div className="relative px-4">
-        <StackedBarChartRenderer
+        <HorizontalBarChartRenderer
           data={chartData}
           isExpanded={isExpanded}
           config={chartConfig || {}}
@@ -93,7 +93,7 @@ export function TimePercentageBarChart({
   );
 }
 
-export function StackedBarChartRenderer({
+export function HorizontalBarChartRenderer({
   data,
   config,
   isExpanded = false,
@@ -101,7 +101,7 @@ export function StackedBarChartRenderer({
   yAxisLabel,
   yAxisDataKey,
 }: ChartRendererProps) {
-  const stackedConfigKeys = Object.keys(config);
+  const configKeys = Object.keys(config);
   return (
     <ChartContainer
       config={config}
@@ -120,7 +120,30 @@ export function StackedBarChartRenderer({
           tickLine={false}
           tickMargin={10}
           axisLine={false}
-          domain={[0, 100]}
+          domain={[10000, 'dataMax']}
+          ticks={[100000, 1000000, 10000000]}
+          tickFormatter={(value) => {
+            const exponent = Math.log10(value);
+            const superscripts = [
+              '⁰',
+              '¹',
+              '²',
+              '³',
+              '⁴',
+              '⁵',
+              '⁶',
+              '⁷',
+              '⁸',
+              '⁹',
+            ];
+            const exponentStr = exponent.toString();
+            const superscriptStr = exponentStr
+              .split('')
+              .map((digit) => superscripts[parseInt(digit)])
+              .join('');
+            return `10${superscriptStr}`;
+          }}
+          scale="log"
         >
           <Label
             value={xAxisLabel}
@@ -144,16 +167,14 @@ export function StackedBarChartRenderer({
             style={{ textAnchor: 'middle' }}
           />
         </YAxis>
-
         <ChartTooltip
           cursor={false}
           content={<ChartTooltipContent indicator="line" />}
         />
-        {stackedConfigKeys.map((key) => (
+        {configKeys.map((key) => (
           <Bar
             key={key}
             dataKey={key}
-            stackId="a"
             fill={config?.[key].color}
             barSize={isExpanded ? 30 : 15}
           />

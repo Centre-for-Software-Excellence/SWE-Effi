@@ -27,6 +27,7 @@ interface LeaderboardUIConfig {
     resolveRateLineChart: ChartProps;
     numCallsBarChart: ChartProps;
     timePercentageBarChart: ChartProps;
+    costBarChart: ChartProps;
   };
   citation: {
     citationTitle?: string;
@@ -128,6 +129,15 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
       overview: 'Overview of the time percentage bar chart...',
       insight: 'Insight about the time percentage bar chart...',
       xAxisLabel: 'Percentage of Total Runtime (Model Time %)',
+      yAxisLabel: '',
+      yAxisDataKey: 'scaffold-model',
+    },
+    costBarChart: {
+      title: 'The Cost of Success vs. The Cost of Failure',
+      description: 'Lead description about the cost bar chart...',
+      overview: 'Overview of the cost bar chart...',
+      insight: 'Insight about the cost bar chart...',
+      xAxisLabel: 'Average Token Cost (Log Scale)',
       yAxisLabel: '',
       yAxisDataKey: 'scaffold-model',
     },

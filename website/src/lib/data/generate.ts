@@ -4,6 +4,7 @@ import { fileURLToPath } from 'url';
 
 import { ChartConfig } from '@/components/common/ui/chart';
 import { ChartData as CallsEntry } from '@/components/docs/leaderboard/chart/calls-bar-chart';
+import { ChartData as CostEntry } from '@/components/docs/leaderboard/chart/cost-bar-chart';
 import { ChartData as ResolveRateEntry } from '@/components/docs/leaderboard/chart/resolve-rate-line-chart';
 import { ChartData as TimePercentageEntry } from '@/components/docs/leaderboard/chart/time-percentage-bar-chart';
 
@@ -11,10 +12,10 @@ const DRYRUN = false;
 
 const colors = [
   '#f6524f',
-  '#27eedf',
-  '#bafb00',
   '#48aef5',
+  '#bafb00',
   '#9da0ed',
+  '#27eedf',
   '#f255a1',
   '#ffc102',
   '#f8520e',
@@ -33,6 +34,10 @@ interface InputData {
   avg_call_duration?: number;
   total_call_duration?: number;
   resolved?: boolean;
+  resolved_avg_input_tokens?: number;
+  resolved_avg_output_tokens?: number;
+  unresolved_avg_input_tokens?: number;
+  unresolved_avg_output_tokens?: number;
   [key: string]: number | boolean | string | undefined;
 }
 
@@ -44,7 +49,8 @@ type Accumulator = Map<
 export type ChartName =
   | 'resolve-rate-line'
   | 'calls-bar'
-  | 'time-percentage-bar';
+  | 'time-percentage-bar'
+  | 'cost-bar';
 
 // color generator helper
 const nextColor = (() => {
@@ -177,16 +183,29 @@ export function buildSummaryCharts(opts?: {
     path.join(__dirname, '../../../public/data/benchmark/chart');
 
   const timePercentageCfg: ChartConfig = {
-    'gpu-time': {
-      label: 'GPU Time %',
-      color: '#f6524f',
-    },
     'cpu-time': {
       label: 'CPU Time %',
-      color: '#016ab8',
+      color: colors[1],
+    },
+    'gpu-time': {
+      label: 'GPU Time %',
+      color: colors[0],
     },
   };
+
   const timePercentageData: TimePercentageEntry[] = [];
+  const costCfg: ChartConfig = {
+    'success-cost': {
+      label: 'Success Cost',
+      color: colors[1],
+    },
+    'failure-cost': {
+      label: 'Failure Cost',
+      color: colors[0],
+    },
+  };
+  const costData: CostEntry[] = [];
+
   const jsonFiles = fs.readdirSync(rawDir).filter((f) => f.endsWith('.json'));
 
   for (const file of jsonFiles) {
@@ -203,7 +222,7 @@ export function buildSummaryCharts(opts?: {
     const [scaffold, model] = path.basename(file, '.json').split('_');
     const seriesName = `${scaffold}/${model}`;
 
-    // time percentage data: (avg_cpu_time + avg_gpu_time) / duration
+    // time percentage data: (avg_cpu_time) / duration
     const cpuTime = record.avg_cpu_time || 0;
     const duration = record.avg_duration || 1;
     const timePercentage = Number(((cpuTime / duration) * 100).toFixed(2));
@@ -213,11 +232,25 @@ export function buildSummaryCharts(opts?: {
       'scaffold-model': seriesName,
     };
     timePercentageData.push(currentEntry);
+
+    // cost data: (success cost: resolved_avg_input_tokens + resolved_avg_output_tokens, failure cost: unresolved_avg_input_tokens + unresolved_avg_output_tokens)
+    const successCost =
+      (record.resolved_avg_input_tokens || 0) +
+      (record.resolved_avg_output_tokens || 0);
+    const failureCost =
+      (record.unresolved_avg_input_tokens || 0) +
+      (record.unresolved_avg_output_tokens || 0);
+    const costEntry: CostEntry = {
+      'scaffold-model': seriesName,
+      'success-cost': successCost,
+      'failure-cost': failureCost,
+    };
+    costData.push(costEntry);
   }
 
   if (DRYRUN) {
     console.log(
-      `Dry run: would write ${timePercentageData.length} time percentage entries.`,
+      `Dry run: would write ${timePercentageData.length} time percentage entries and ${costData.length} cost entries.`,
     );
     writeJSON(
       path.join(outDir, 'tmp/time-percentage-bar/chart-data.json'),
@@ -227,8 +260,11 @@ export function buildSummaryCharts(opts?: {
       path.join(outDir, 'tmp/time-percentage-bar/chart-config.json'),
       timePercentageCfg,
     );
+    writeJSON(path.join(outDir, 'tmp/cost-bar/chart-data.json'), costData);
+    writeJSON(path.join(outDir, 'tmp/cost-bar/chart-config.json'), costCfg);
   } else {
     const tpDirName: ChartName = 'time-percentage-bar';
+    const costDirName: ChartName = 'cost-bar';
     writeJSON(
       path.join(outDir, `${tpDirName}/chart-data.json`),
       timePercentageData,
@@ -237,6 +273,8 @@ export function buildSummaryCharts(opts?: {
       path.join(outDir, `${tpDirName}/chart-config.json`),
       timePercentageCfg,
     );
+    writeJSON(path.join(outDir, `${costDirName}/chart-data.json`), costData);
+    writeJSON(path.join(outDir, `${costDirName}/chart-config.json`), costCfg);
   }
 }
 

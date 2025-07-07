@@ -1,20 +1,11 @@
 import { Bar, BarChart, CartesianGrid, Label, XAxis, YAxis } from 'recharts';
 
 import {
-  ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
 } from '@/components/common/ui/chart';
-
-interface LineChartRendererProps {
-  data: any[];
-  config: ChartConfig;
-  isExpanded?: boolean;
-  xAxisLabel?: string;
-  yAxisLabel?: string;
-  xAxisDataKey: string;
-}
+import { ChartRendererProps } from './types';
 
 export function BarChartRenderer({
   data,
@@ -23,7 +14,7 @@ export function BarChartRenderer({
   xAxisLabel,
   yAxisLabel,
   xAxisDataKey,
-}: LineChartRendererProps) {
+}: ChartRendererProps) {
   return (
     <ChartContainer
       config={config}
@@ -33,6 +24,8 @@ export function BarChartRenderer({
         accessibilityLayer
         data={data}
         margin={{ bottom: 20, right: 20 }}
+        barGap={0}
+        barCategoryGap={isExpanded ? '10%' : '5%'}
       >
         <CartesianGrid vertical={false} />
         <XAxis

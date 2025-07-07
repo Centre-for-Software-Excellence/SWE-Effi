@@ -1,0 +1,27 @@
+[
+  {
+    "scaffold-model": "agentless-mini/gpt-4o-mini",
+    "success-cost": 44015.3,
+    "failure-cost": 33455.774999999994
+  },
+  {
+    "scaffold-model": "agentless-mini/llama33-70b-inst-turbo",
+    "success-cost": 31568,
+    "failure-cost": 39436.958333333336
+  },
+  {
+    "scaffold-model": "agentless-mini/qwen3-32b",
+    "success-cost": 36844.28571428572,
+    "failure-cost": 45971.88888888889
+  },
+  {
+    "scaffold-model": "agentless/gpt-4o-mini",
+    "success-cost": 53454.230769230766,
+    "failure-cost": 58391.67567567568
+  },
+  {
+    "scaffold-model": "agentless/qwen3-32b",
+    "success-cost": 54372.75,
+    "failure-cost": 79322.19230769231
+  }
+]

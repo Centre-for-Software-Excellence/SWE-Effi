@@ -9,7 +9,7 @@
   },
   "agentless-mini/qwen3-32b": {
     "label": "agentless-mini/qwen3-32b",
-    "color": "#9da0ed"
+    "color": "#27eedf"
   },
   "agentless-mini/qwen72b": {
     "label": "agentless-mini/qwen72b",
@@ -25,7 +25,7 @@
   },
   "agentless/gpt-4o-mini": {
     "label": "agentless/gpt-4o-mini",
-    "color": "#9da0ed"
+    "color": "#27eedf"
   },
   "agentless/qwen3-32b": {
     "label": "agentless/qwen3-32b",
@@ -45,7 +45,7 @@
   },
   "auto-code-rover/qwq32b": {
     "label": "auto-code-rover/qwq32b",
-    "color": "#27eedf"
+    "color": "#48aef5"
   },
   "openhands/gpt-4o-mini": {
     "label": "openhands/gpt-4o-mini",
@@ -53,11 +53,11 @@
   },
   "openhands/qwen72b": {
     "label": "openhands/qwen72b",
-    "color": "#48aef5"
+    "color": "#9da0ed"
   },
   "openhands/qwq32b": {
     "label": "openhands/qwq32b",
-    "color": "#9da0ed"
+    "color": "#27eedf"
   },
   "swe-agent/gpt-4o-mini": {
     "label": "swe-agent/gpt-4o-mini",
