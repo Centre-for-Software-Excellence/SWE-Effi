@@ -53,7 +53,7 @@ export function BarChartRenderer({
         </YAxis>
         <ChartTooltip
           cursor={false}
-          content={<ChartTooltipContent indicator="dashed" />}
+          content={<ChartTooltipContent indicator="line" />}
         />
         {Object.keys(config).map((key) => (
           <Bar

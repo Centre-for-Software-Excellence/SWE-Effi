@@ -7,19 +7,10 @@ import { ChartData as CallsEntry } from '@/components/docs/leaderboard/chart/cal
 import { ChartData as CostEntry } from '@/components/docs/leaderboard/chart/cost-bar-chart';
 import { ChartData as ResolveRateEntry } from '@/components/docs/leaderboard/chart/resolve-rate-line-chart';
 import { ChartData as TimePercentageEntry } from '@/components/docs/leaderboard/chart/time-percentage-bar-chart';
+import { tokens } from '@/styles/tokens';
+import { createColorGenerator } from '../utils';
 
 const DRYRUN = false;
-
-const colors = [
-  '#f6524f',
-  '#48aef5',
-  '#bafb00',
-  '#9da0ed',
-  '#27eedf',
-  '#f255a1',
-  '#ffc102',
-  '#f8520e',
-];
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -53,10 +44,6 @@ export type ChartName =
   | 'cost-bar';
 
 // color generator helper
-const nextColor = (() => {
-  let idx = 0;
-  return () => colors[idx++ % colors.length];
-})();
 
 // write files helper
 function writeJSON(filePath: string, data: unknown) {
@@ -68,6 +55,8 @@ export function buildBenchmarkCharts(opts?: {
   rawDir?: string;
   outDir?: string;
 }) {
+  const nextColor = createColorGenerator(tokens.d3);
+  const barColorNext = createColorGenerator(tokens.chartjs);
   const rawDir =
     opts?.rawDir ?? path.join(__dirname, '../../../public/data/benchmark/raw');
   const outDir =
@@ -132,7 +121,7 @@ export function buildBenchmarkCharts(opts?: {
     callsAcc.set(scaffold, scaffoldMap);
 
     if (!callsCfg[model]) {
-      callsCfg[model] = { label: model, color: nextColor() };
+      callsCfg[model] = { label: model, color: barColorNext() };
     }
   }
 
@@ -175,6 +164,7 @@ export function buildSummaryCharts(opts?: {
   rawDir?: string;
   outDir?: string;
 }) {
+  const nextColor = createColorGenerator(tokens.chartjs);
   const rawDir =
     opts?.rawDir ??
     path.join(__dirname, '../../../public/data/benchmark/raw/summary');
@@ -182,14 +172,17 @@ export function buildSummaryCharts(opts?: {
     opts?.outDir ??
     path.join(__dirname, '../../../public/data/benchmark/chart');
 
+  const color1 = nextColor();
+  const color2 = nextColor();
+
   const timePercentageCfg: ChartConfig = {
     'cpu-time': {
       label: 'CPU Time %',
-      color: colors[1],
+      color: color1,
     },
     'gpu-time': {
       label: 'GPU Time %',
-      color: colors[0],
+      color: color2,
     },
   };
 
@@ -197,11 +190,11 @@ export function buildSummaryCharts(opts?: {
   const costCfg: ChartConfig = {
     'success-cost': {
       label: 'Success Cost',
-      color: colors[1],
+      color: color1,
     },
     'failure-cost': {
       label: 'Failure Cost',
-      color: colors[0],
+      color: color2,
     },
   };
   const costData: CostEntry[] = [];

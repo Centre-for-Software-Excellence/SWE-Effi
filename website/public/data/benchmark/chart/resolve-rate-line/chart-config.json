@@ -1,74 +1,74 @@
 {
   "agentless-mini/gpt-4o-mini": {
     "label": "agentless-mini/gpt-4o-mini",
-    "color": "#f6524f"
+    "color": "#1f77b4"
   },
   "agentless-mini/llama33-70b-inst-turbo": {
     "label": "agentless-mini/llama33-70b-inst-turbo",
-    "color": "#bafb00"
+    "color": "#ff7f0e"
   },
   "agentless-mini/qwen3-32b": {
     "label": "agentless-mini/qwen3-32b",
-    "color": "#27eedf"
+    "color": "#2ca02c"
   },
   "agentless-mini/qwen72b": {
     "label": "agentless-mini/qwen72b",
-    "color": "#ffc102"
+    "color": "#d62728"
   },
   "agentless-mini/qwq32b": {
     "label": "agentless-mini/qwq32b",
-    "color": "#f6524f"
+    "color": "#9467bd"
   },
   "agentless/deepseek-r1-528-qwen3-8b-distill": {
     "label": "agentless/deepseek-r1-528-qwen3-8b-distill",
-    "color": "#bafb00"
+    "color": "#8c564b"
   },
   "agentless/gpt-4o-mini": {
     "label": "agentless/gpt-4o-mini",
-    "color": "#27eedf"
+    "color": "#e377c2"
   },
   "agentless/qwen3-32b": {
     "label": "agentless/qwen3-32b",
-    "color": "#f255a1"
+    "color": "#7f7f7f"
   },
   "agentless/qwen72b": {
     "label": "agentless/qwen72b",
-    "color": "#ffc102"
+    "color": "#bcbd22"
   },
   "auto-code-rover/gpt-4o-mini": {
     "label": "auto-code-rover/gpt-4o-mini",
-    "color": "#f8520e"
+    "color": "#17becf"
   },
   "auto-code-rover/qwen72b": {
     "label": "auto-code-rover/qwen72b",
-    "color": "#f6524f"
+    "color": "#aec7e8"
   },
   "auto-code-rover/qwq32b": {
     "label": "auto-code-rover/qwq32b",
-    "color": "#48aef5"
+    "color": "#ffbb78"
   },
   "openhands/gpt-4o-mini": {
     "label": "openhands/gpt-4o-mini",
-    "color": "#bafb00"
+    "color": "#98df8a"
   },
   "openhands/qwen72b": {
     "label": "openhands/qwen72b",
-    "color": "#9da0ed"
+    "color": "#ff9896"
   },
   "openhands/qwq32b": {
     "label": "openhands/qwq32b",
-    "color": "#27eedf"
+    "color": "#c5b0d5"
   },
   "swe-agent/gpt-4o-mini": {
     "label": "swe-agent/gpt-4o-mini",
-    "color": "#f255a1"
+    "color": "#c49c94"
   },
   "swe-agent/qwen72b": {
     "label": "swe-agent/qwen72b",
-    "color": "#ffc102"
+    "color": "#f7b6d3"
   },
   "swe-agent/qwq32b": {
     "label": "swe-agent/qwq32b",
-    "color": "#f8520e"
+    "color": "#c7c7c7"
   }
 }

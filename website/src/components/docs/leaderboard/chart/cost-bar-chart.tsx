@@ -112,6 +112,7 @@ export function HorizontalBarChartRenderer({
         accessibilityLayer
         data={data}
         margin={{ left: 100, bottom: 20 }}
+        barGap={0}
       >
         <CartesianGrid horizontal={false} />
 
