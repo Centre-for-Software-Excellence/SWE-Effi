@@ -11,12 +11,14 @@ from pathlib import Path
 
 SRC = Path("benchmark/results/agent-scaffold-stats")
 DEST = Path("website/public/data/benchmark/raw")
+DEST_SUMMARY = Path("website/public/data/benchmark/raw/summary")
 
 
 def main() -> None:
     if not SRC.exists():
         raise SystemExit(f"Source folder not found: {SRC.resolve()}")
     DEST.mkdir(parents=True, exist_ok=True)
+    DEST_SUMMARY.mkdir(parents=True, exist_ok=True)
 
     copied = 0
     for json_file in SRC.glob("*/*-combined_stats.json"):
@@ -29,6 +31,17 @@ def main() -> None:
         copied += 1
 
     print(f"\nDone. {copied} files copied to {DEST}")
+
+    copied = 0
+    for json_file in SRC.glob("*/*-summary_stats.json"):
+        scaffold = json_file.parent.name
+        # strip the suffix "-summary_stats.json"
+        model = json_file.stem.replace("-summary_stats", "")
+        out_name = f"{scaffold}_{model}.json"
+        shutil.copyfile(json_file, DEST_SUMMARY / out_name)
+        print("✔", out_name)
+        copied += 1
+    print(f"\nDone. {copied} summary files copied to {DEST_SUMMARY}")
 
 
 if __name__ == "__main__":
