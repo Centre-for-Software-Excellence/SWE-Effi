@@ -1,5 +1,7 @@
+// import { useEffect, useState } from 'react';
 import { TooltipProvider } from '@radix-ui/react-tooltip';
 
+// import { Card, CardContent } from '@/components/common/ui/card';
 import {
   Tabs,
   TabsContent,
@@ -8,13 +10,15 @@ import {
 } from '@/components/common/ui/tabs';
 import { getLeaderboardData, getLeaderboardDataRVU } from '@/lib/data/get';
 import { cn } from '@/lib/utils';
-import { columns, Performance } from './table/columns';
-import { columns as columnsRVU, PerformanceRVU } from './table/columns-rvu';
+import { columns, RankedLeaderboardData } from './table/columns';
+import {
+  columns as columnsRVU,
+  RankedLeaderboardRVUData,
+} from './table/columns-rvu';
 import { DataTable } from './table/data-table';
 
-export type ColumnTooltips = Record<
-  Partial<keyof Performance | keyof PerformanceRVU>,
-  string
+export type ColumnTooltips = Partial<
+  Record<keyof RankedLeaderboardRVUData | keyof RankedLeaderboardData, string>
 >;
 export type Table = {
   tabTitle: string;
@@ -24,6 +28,8 @@ export type Table = {
 
 export type Tables = Record<string, Table>;
 
+export type TableData = RankedLeaderboardRVUData | RankedLeaderboardData;
+
 export default function TablesCard({
   tablesUi,
   className,
@@ -31,9 +37,54 @@ export default function TablesCard({
   tablesUi: Tables;
   className?: string;
 }) {
-  const data: Performance[] = getLeaderboardData();
-  const dataRVU: PerformanceRVU[] = getLeaderboardDataRVU();
   const { leaderboard, leaderboardRVU } = tablesUi;
+
+  // TODO: temporary mannually defined leaderboard data
+  const data: RankedLeaderboardData[] = getLeaderboardData();
+  const dataRVU: RankedLeaderboardRVUData[] = getLeaderboardDataRVU();
+
+  // const [data, setData] = useState<RankedLeaderboardData[]>([]);
+  // const [dataRVU, setDataRVU] = useState<RankedLeaderboardRVUData[]>([]);
+  // const [loading, setLoading] = useState(true);
+  // const [error, setError] = useState('');
+  // useEffect(() => {
+  //   Promise.all([
+  //     fetch('/data/benchmark/table/leaderboard/data.json').then((res) =>
+  //       res.json(),
+  //     ),
+  //     fetch('/data/benchmark/table/leaderboard/data-rvu.json').then((res) =>
+  //       res.json(),
+  //     ),
+  //   ])
+  //     .then(([data1, data2]) => {
+  //       setData(data1);
+  //       setDataRVU(data2);
+  //       setLoading(false);
+  //     })
+  //     .catch((err) => {
+  //       console.error(err.message);
+  //       setError(err.message);
+  //       setLoading(false);
+  //     });
+  // }, []);
+
+  // TODO: loading component
+  // if (loading) {
+  //   <Card>
+  //     <CardContent className="flex h-96 items-center justify-center p-8">
+  //       <div>Loading leaderboards...</div>
+  //     </CardContent>
+  //   </Card>;
+  // }
+
+  // TODO: error message
+  // if (error) {
+  //   <Card>
+  //     <CardContent className="flex h-96 items-center justify-center p-8">
+  //       <div className="text-destructive">{error}</div>
+  //     </CardContent>
+  //   </Card>;
+  // }
 
   return (
     <div

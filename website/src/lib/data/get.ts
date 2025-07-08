@@ -1,10 +1,13 @@
-import { Performance } from '@/components/docs/leaderboard/table/columns';
-import { PerformanceRVU } from '@/components/docs/leaderboard/table/columns-rvu';
-import dataRVU from '@/config/leaderboard/data-rvu.json';
-import data from '@/config/leaderboard/data.json';
-
-type UnrankedPerformance = Omit<Performance, 'rank'>;
-type UnrankedPerformanceRVU = Omit<PerformanceRVU, 'rank'>;
+import {
+  LeaderboardData,
+  RankedLeaderboardData,
+} from '@/components/docs/leaderboard/table/columns';
+import {
+  LeaderboardRVUData,
+  RankedLeaderboardRVUData,
+} from '@/components/docs/leaderboard/table/columns-rvu';
+import leaderboardRVUData from '@/config/leaderboard/data-rvu.json';
+import leaderboardData from '@/config/leaderboard/data.json';
 
 type Column =
   | 'inputToken'
@@ -13,12 +16,12 @@ type Column =
   | 'resolveRate'
   | 'precision';
 
-export function getLeaderboardData(): Performance[] {
-  const performances: UnrankedPerformance[] = data;
-
+export function rankLeaderboardData(
+  data: LeaderboardData[],
+): RankedLeaderboardData[] {
   const comparator = (
-    dataA: UnrankedPerformance,
-    dataB: UnrankedPerformance,
+    dataA: LeaderboardData,
+    dataB: LeaderboardData,
     columns: Column[] = ['resolveRate'],
   ) => {
     let diff = 0;
@@ -28,32 +31,41 @@ export function getLeaderboardData(): Performance[] {
     return diff;
   };
 
-  performances.sort((a, b) => {
+  data.sort((a, b) => {
     return comparator(a, b, ['resolveRate']);
   });
 
-  return performances.map((performance, index) => ({
+  return data.map((e, index) => ({
+    ...e,
+    rank: index + 1,
+  }));
+}
+
+export function rankLeaderboardRVUData(
+  data: LeaderboardRVUData[],
+): RankedLeaderboardRVUData[] {
+  const comparator = (dataA: LeaderboardRVUData, dataB: LeaderboardRVUData) => {
+    return dataA['avgTotalTimeR'] - dataB['avgTotalTimeR'];
+  };
+
+  data.sort((a, b) => {
+    return comparator(a, b);
+  });
+
+  return data.map((performance, index) => ({
     ...performance,
     rank: index + 1,
   }));
 }
 
-export function getLeaderboardDataRVU(): PerformanceRVU[] {
-  const performances: UnrankedPerformanceRVU[] = dataRVU;
+// TODO: delete me after using useEffect approach
+export function getLeaderboardData(): RankedLeaderboardData[] {
+  const data: LeaderboardData[] = leaderboardData;
+  return rankLeaderboardData(data);
+}
 
-  const comparator = (
-    dataA: UnrankedPerformanceRVU,
-    dataB: UnrankedPerformanceRVU,
-  ) => {
-    return dataA['avgTotalTimeR'] - dataB['avgTotalTimeR'];
-  };
-
-  performances.sort((a, b) => {
-    return comparator(a, b);
-  });
-
-  return performances.map((performance, index) => ({
-    ...performance,
-    rank: index + 1,
-  }));
+// TODO: delete me after using useEffect approach
+export function getLeaderboardDataRVU(): RankedLeaderboardRVUData[] {
+  const data: LeaderboardRVUData[] = leaderboardRVUData;
+  return rankLeaderboardRVUData(data);
 }

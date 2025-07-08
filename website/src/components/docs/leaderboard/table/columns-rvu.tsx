@@ -4,8 +4,7 @@ import { ArrowUpDown, Award, Crown, Medal } from 'lucide-react';
 import { TooltipWrapper } from '@/components/common/tooltip-wrapper';
 import { ColumnTooltips } from '../tables-card';
 
-export type PerformanceRVU = {
-  rank: number;
+export type LeaderboardRVUData = {
   scaffold: string;
   model: string;
   avgTotalTimeU: number;
@@ -20,9 +19,13 @@ export type PerformanceRVU = {
   avgLLMRequestsR: number;
 };
 
+export type RankedLeaderboardRVUData = LeaderboardRVUData & {
+  rank: number;
+};
+
 export const columns = (
   tooltips: ColumnTooltips,
-): ColumnDef<PerformanceRVU>[] => [
+): ColumnDef<RankedLeaderboardRVUData>[] => [
   {
     accessorKey: 'rank',
     header: ({ column }) => {

@@ -5,8 +5,7 @@ import { TooltipWrapper } from '@/components/common/tooltip-wrapper';
 import { Progress } from '@/components/common/ui/progress';
 import { ColumnTooltips } from '../tables-card';
 
-export type Performance = {
-  rank: number;
+export type LeaderboardData = {
   scaffold: string;
   model: string;
   total: number;
@@ -19,6 +18,8 @@ export type Performance = {
   precision?: number;
 };
 
+export type RankedLeaderboardData = LeaderboardData & { rank: number };
+
 function formatScore(score: string | undefined): string {
   const res = !score
     ? 'N/A'
@@ -29,7 +30,9 @@ function formatScore(score: string | undefined): string {
   return res;
 }
 
-export const columns = (tooltips: ColumnTooltips): ColumnDef<Performance>[] => [
+export const columns = (
+  tooltips: ColumnTooltips,
+): ColumnDef<RankedLeaderboardData>[] => [
   {
     accessorKey: 'rank',
     header: ({ column }) => {

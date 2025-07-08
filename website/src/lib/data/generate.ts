@@ -7,10 +7,14 @@ import { ChartData as CallsEntry } from '@/components/docs/leaderboard/chart/cal
 import { ChartData as CostEntry } from '@/components/docs/leaderboard/chart/cost-bar-chart';
 import { ChartData as ResolveRateEntry } from '@/components/docs/leaderboard/chart/resolve-rate-line-chart';
 import { ChartData as TimePercentageEntry } from '@/components/docs/leaderboard/chart/time-percentage-bar-chart';
+import { LeaderboardData } from '@/components/docs/leaderboard/table/columns';
+import { LeaderboardRVUData } from '@/components/docs/leaderboard/table/columns-rvu';
 import { tokens } from '@/styles/tokens';
 import { createColorGenerator } from '../utils';
+import { rankLeaderboardData, rankLeaderboardRVUData } from './get';
 
 const DRYRUN = false;
+const TOTAL_INSTANCES = 500;
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -18,18 +22,70 @@ interface InputData {
   input_tokens?: number;
   output_tokens?: number;
   llm_calls?: number;
-  avg_cpu_time?: number;
-  avg_gpu_time?: number;
   duration?: number;
-  avg_duration?: number;
-  avg_call_duration?: number;
-  total_call_duration?: number;
   resolved?: boolean;
-  resolved_avg_input_tokens?: number;
-  resolved_avg_output_tokens?: number;
-  unresolved_avg_input_tokens?: number;
-  unresolved_avg_output_tokens?: number;
+  cpu_time?: number;
+  gpu_time?: number;
+  measured_gpu_time?: number;
+  measured_duration?: number;
   [key: string]: number | boolean | string | undefined;
+}
+
+interface SummaryInputData {
+  total_projects: number;
+  total_tokens: number;
+  avg_total_tokens: number;
+  resolved: number;
+  avg_resolved: number;
+  input_tokens: number;
+  avg_input_tokens: number;
+  output_tokens: number;
+  avg_output_tokens: number;
+  llm_calls: number;
+  avg_llm_calls: number;
+  cpu_time: number;
+  avg_cpu_time: number;
+  gpu_time: number;
+  avg_gpu_time: number;
+  duration: number;
+  avg_duration: number;
+  measured_gpu_time: number;
+  avg_measured_gpu_time: number;
+  measured_duration: number;
+  avg_measured_duration: number;
+  resolved_total_input_tokens: number;
+  resolved_avg_input_tokens: number;
+  resolved_total_output_tokens: number;
+  resolved_avg_output_tokens: number;
+  resolved_total_llm_calls: number;
+  resolved_avg_llm_calls: number;
+  resolved_total_cpu_time: number;
+  resolved_avg_cpu_time: number;
+  resolved_total_gpu_time: number;
+  resolved_avg_gpu_time: number;
+  resolved_total_duration: number;
+  resolved_avg_duration: number;
+  resolved_total_measured_gpu_time: number;
+  resolved_avg_measured_gpu_time: number;
+  resolved_total_measured_duration: number;
+  resolved_avg_measured_duration: number;
+  unresolved_total_input_tokens: number;
+  unresolved_avg_input_tokens: number;
+  unresolved_total_output_tokens: number;
+  unresolved_avg_output_tokens: number;
+  unresolved_total_llm_calls: number;
+  unresolved_avg_llm_calls: number;
+  unresolved_total_cpu_time: number;
+  unresolved_avg_cpu_time: number;
+  unresolved_total_gpu_time: number;
+  unresolved_avg_gpu_time: number;
+  unresolved_total_duration: number;
+  unresolved_avg_duration: number;
+  unresolved_total_measured_gpu_time: number;
+  unresolved_avg_measured_gpu_time: number;
+  unresolved_total_measured_duration: number;
+  unresolved_avg_measured_duration: number;
+  precision: number;
 }
 
 type Accumulator = Map<
@@ -204,7 +260,7 @@ export function buildSummaryCharts(opts?: {
   for (const file of jsonFiles) {
     const filePath = path.join(rawDir, file);
 
-    let record: InputData;
+    let record: SummaryInputData;
     try {
       record = JSON.parse(fs.readFileSync(filePath, 'utf8'));
     } catch (e) {
@@ -271,7 +327,103 @@ export function buildSummaryCharts(opts?: {
   }
 }
 
+export function buildLeaderboardTables(opts?: {
+  rawDir?: string;
+  outDir?: string;
+}) {
+  const rawDir =
+    opts?.rawDir ??
+    path.join(__dirname, '../../../public/data/benchmark/raw/summary');
+  const outDir =
+    opts?.outDir ??
+    path.join(__dirname, '../../../public/data/benchmark/table');
+
+  const tableData: LeaderboardData[] = [];
+  const tableRVUData: LeaderboardRVUData[] = [];
+
+  const jsonFiles = fs.readdirSync(rawDir).filter((f) => f.endsWith('.json'));
+  for (const file of jsonFiles) {
+    const filePath = path.join(rawDir, file);
+
+    let record: SummaryInputData;
+    try {
+      record = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+    } catch (e) {
+      console.error(`Could not parse ${file}:`, e);
+      continue;
+    }
+
+    // process the scaffold model into ['Scaffold Name', 'Model Name'] format
+    const [scaffold, model] = path
+      .basename(file, '.json')
+      .split('_')
+      .map((name) =>
+        name
+          .split('-')
+          .map((sec) => sec[0].toUpperCase() + sec.slice(1))
+          .join(' '),
+      );
+
+    const leaderboardDataEntry: LeaderboardData = {
+      scaffold,
+      model,
+      total: record.duration,
+      cpuTime: record.cpu_time,
+      inputToken: record.input_tokens,
+      outputToken: record.output_tokens,
+      calls: record.llm_calls,
+      // TODO: infTime?
+      infTime: 0,
+      resolveRate: record.resolved / TOTAL_INSTANCES,
+      precision: record.precision,
+    };
+
+    const leaderboardRVUDataEntry: LeaderboardRVUData = {
+      scaffold,
+      model,
+      avgTotalTimeU: record.unresolved_avg_duration,
+      avgTotalTimeR: record.resolved_avg_duration,
+      avgCPUTimeU: record.unresolved_avg_cpu_time,
+      avgCPUTimeR: record.resolved_avg_cpu_time,
+      // TODO: inf time?
+      avgInfTimeU: 0,
+      avgInfTimeR: 0,
+      avgTotalTokensU:
+        record.unresolved_avg_input_tokens +
+        record.unresolved_avg_output_tokens,
+      avgTotalTokensR:
+        record.resolved_avg_input_tokens + record.resolved_avg_output_tokens,
+      avgLLMRequestsU: record.unresolved_avg_llm_calls,
+      avgLLMRequestsR: record.resolved_avg_llm_calls,
+    };
+
+    tableData.push(leaderboardDataEntry);
+    tableRVUData.push(leaderboardRVUDataEntry);
+  }
+
+  const rankedTableData = rankLeaderboardData(tableData);
+  const rankedTableRVUData = rankLeaderboardRVUData(tableRVUData);
+
+  if (DRYRUN) {
+    console.log(
+      `Dry run: would write ${tableData.length} leaderboard data entries and ${tableRVUData.length} leaderboard RVU data entries.`,
+    );
+    writeJSON(path.join(outDir, 'tmp/leaderboard/data.json'), rankedTableData);
+    writeJSON(
+      path.join(outDir, 'tmp/leaderboard/data-rvu.json'),
+      rankedTableRVUData,
+    );
+  } else {
+    writeJSON(path.join(outDir, `leaderboard/data.json`), rankedTableData);
+    writeJSON(
+      path.join(outDir, `leaderboard/data-rvu.json`),
+      rankedTableRVUData,
+    );
+  }
+}
+
 if (import.meta.url === `file://${process.argv[1]}`) {
   buildBenchmarkCharts();
   buildSummaryCharts();
+  buildLeaderboardTables();
 }
