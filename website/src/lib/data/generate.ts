@@ -206,6 +206,9 @@ export function buildBenchmarkCharts(opts?: {
     writeJSON(path.join(outDir, 'tmp/calls-bar/chart-data.json'), callsData);
     writeJSON(path.join(outDir, 'tmp/calls-bar/chart-config.json'), callsCfg);
   } else {
+    console.log(
+      `Writing ${resolveData.length} resolve rate entries and ${callsData.length} calls entries.`,
+    );
     const rrDirName: ChartName = 'resolve-rate-line';
     writeJSON(path.join(outDir, `${rrDirName}/chart-data.json`), resolveData);
     writeJSON(path.join(outDir, `${rrDirName}/chart-config.json`), resolveCfg);
@@ -312,6 +315,9 @@ export function buildSummaryCharts(opts?: {
     writeJSON(path.join(outDir, 'tmp/cost-bar/chart-data.json'), costData);
     writeJSON(path.join(outDir, 'tmp/cost-bar/chart-config.json'), costCfg);
   } else {
+    console.log(
+      `Writing ${timePercentageData.length} time percentage entries and ${costData.length} cost entries.`,
+    );
     const tpDirName: ChartName = 'time-percentage-bar';
     const costDirName: ChartName = 'cost-bar';
     writeJSON(
@@ -414,6 +420,9 @@ export function buildLeaderboardTables(opts?: {
       rankedTableRVUData,
     );
   } else {
+    console.log(
+      `Writing ${tableData.length} leaderboard data entries and ${tableRVUData.length} leaderboard RVU data entries.`,
+    );
     writeJSON(path.join(outDir, `leaderboard/data.json`), rankedTableData);
     writeJSON(
       path.join(outDir, `leaderboard/data-rvu.json`),
@@ -423,7 +432,9 @@ export function buildLeaderboardTables(opts?: {
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
+  console.log('Generating data for charts and leaderboard...');
   buildBenchmarkCharts();
   buildSummaryCharts();
   buildLeaderboardTables();
+  console.log('Data updated ✔️\n');
 }

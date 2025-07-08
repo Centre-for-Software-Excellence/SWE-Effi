@@ -10,7 +10,8 @@
     "format": "prettier --write ./src",
     "preview": "vite preview --port 5173 --host",
     "build-index": "tsx ./src/lib/docs/build-index.ts",
-    "generate-data": "tsx ./src/lib/data/generate.ts"
+    "generate-data": "tsx ./src/lib/data/generate.ts",
+    "pre-build": "tsx ./src/lib/data/generate.ts && tsx ./src/lib/docs/build-index.ts"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
