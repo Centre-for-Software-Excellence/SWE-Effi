@@ -1,10 +1,16 @@
 import { SlidersHorizontal } from 'lucide-react';
+import { CartesianGrid, Label, Line, LineChart, XAxis, YAxis } from 'recharts';
 
 import {
   TooltipProvider,
   TooltipWrapper,
 } from '@/components/common/tooltip-wrapper';
 import { Button } from '@/components/common/ui/button';
+import {
+  ChartContainer,
+  ChartTooltip,
+  ChartTooltipContent,
+} from '@/components/common/ui/chart';
 import { Dialog, DialogTrigger } from '@/components/common/ui/dialog';
 import { CollapsibleLegend } from '@/components/docs/leaderboard/chart/atoms/collapsible-legend';
 import { useChartData } from '@/hooks/chart/use-chart-data';
@@ -16,8 +22,7 @@ import { ChartControls } from './atoms/chart-controls';
 import { ChartExplanation } from './atoms/chart-explanation';
 import { ChartHeader } from './atoms/chart-header';
 import { ChartSettings } from './atoms/chart-settings';
-import { LineChartRenderer } from './atoms/line-chart-renderer';
-import { ChartProps } from './types';
+import { ChartProps, ChartRendererProps } from './types';
 
 export interface ChartData {
   totalTokens: number;
@@ -32,6 +37,7 @@ export function ResolveRateLineChart({
   xAxisLabel,
   yAxisLabel,
   xAxisDataKey,
+  className,
 }: ChartProps) {
   const explanationContent = {
     overview,
@@ -102,6 +108,7 @@ export function ResolveRateLineChart({
             'relative overflow-y-visible rounded shadow-none',
             isExpanded &&
               'fixed top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2',
+            className,
           )}
         >
           <ChartHeader title={title} description={description}>
@@ -129,5 +136,78 @@ export function ResolveRateLineChart({
         </ChartCard>
       </Dialog>
     </>
+  );
+}
+
+function LineChartRenderer({
+  data,
+  config,
+  activeKeys,
+  xRange,
+  xAxisLabel,
+  yAxisLabel,
+  xAxisDataKey,
+}: ChartRendererProps) {
+  return (
+    <ChartContainer
+      config={config}
+      className="min-h-[200px] w-full overflow-x-hidden"
+    >
+      <LineChart
+        accessibilityLayer
+        data={data}
+        margin={{ top: 0, right: 0, left: 22, bottom: 16 }}
+      >
+        <CartesianGrid vertical={false} />
+        <YAxis width={20} tickFormatter={(value) => (value + '').slice(0, 3)}>
+          {yAxisLabel && (
+            <Label
+              value={yAxisLabel}
+              position="inside"
+              angle={-90}
+              dx={-25}
+              className="text-[8px] md:text-sm"
+            />
+          )}
+        </YAxis>
+        <XAxis
+          type="number"
+          dataKey={xAxisDataKey}
+          tickLine={true}
+          axisLine={true}
+          domain={xRange || [0, 'dataMax']}
+          allowDataOverflow={true}
+          tickFormatter={(value) => (value + '').slice(0, 3)}
+          tickCount={10}
+          height={20}
+        >
+          {xAxisLabel && (
+            <Label
+              value="Total Tokens (input_tokens + output_tokens) (1e6)"
+              position="insideBottom"
+              offset={-15}
+              className="text-[8px] md:text-sm"
+            />
+          )}
+        </XAxis>
+        <ChartTooltip
+          animationDuration={0}
+          isAnimationActive={false}
+          cursor={false}
+          content={<ChartTooltipContent hideLabel />}
+        />
+        {activeKeys?.map((key) => (
+          <Line
+            key={key}
+            dataKey={key}
+            type="natural"
+            stroke={config?.[key]?.color}
+            strokeWidth={1}
+            dot={false}
+            isAnimationActive={false}
+          />
+        ))}
+      </LineChart>
+    </ChartContainer>
   );
 }

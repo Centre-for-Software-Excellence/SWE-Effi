@@ -24,13 +24,24 @@ export type Table = {
 
 export type Tables = Record<string, Table>;
 
-export default function TablesCard({ tablesUi }: { tablesUi: Tables }) {
+export default function TablesCard({
+  tablesUi,
+  className,
+}: {
+  tablesUi: Tables;
+  className?: string;
+}) {
   const data: Performance[] = getLeaderboardData();
   const dataRVU: PerformanceRVU[] = getLeaderboardDataRVU();
   const { leaderboard, leaderboardRVU } = tablesUi;
 
   return (
-    <div className={cn('overflow-x-auto font-sans text-foreground md:px-2')}>
+    <div
+      className={cn(
+        'overflow-x-auto font-sans text-foreground md:px-2',
+        className,
+      )}
+    >
       <TooltipProvider>
         <Tabs defaultValue="Leaderboard" className="rounded">
           <TabsList>

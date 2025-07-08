@@ -7,6 +7,7 @@ export interface ChartProps {
   yAxisLabel?: string;
   xAxisDataKey?: string;
   yAxisDataKey?: string;
+  className?: string;
 }
 
 export interface ChartData {

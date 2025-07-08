@@ -30,6 +30,7 @@ export function CostBarChart({
   xAxisLabel,
   yAxisLabel,
   yAxisDataKey,
+  className,
 }: ChartProps) {
   const explanationContent = {
     overview,
@@ -67,6 +68,7 @@ export function CostBarChart({
         'relative overflow-y-visible rounded shadow-none',
         isExpanded &&
           'fixed top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2',
+        className,
       )}
     >
       <ChartHeader title={title} description={description}>
