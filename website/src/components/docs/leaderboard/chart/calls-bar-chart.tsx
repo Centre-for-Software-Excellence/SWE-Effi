@@ -1,13 +1,13 @@
 import { TooltipProvider } from '@/components/common/tooltip-wrapper';
-import { CollapsibleLegend } from '@/components/docs/leaderboard/chart/collapsible-legend';
+import { CollapsibleLegend } from '@/components/docs/leaderboard/chart/atoms/collapsible-legend';
 import { useChartData } from '@/hooks/chart/use-chart-data';
 import { useChartPopover } from '@/hooks/chart/use-chart-popover';
 import { cn } from '@/lib/utils';
-import { BarChartRenderer } from './bar-chart-renderer';
-import { ChartCard } from './chart-card';
-import { ChartControls } from './chart-controls';
-import { ChartExplanation } from './chart-explanation';
-import { ChartHeader } from './chart-header';
+import { BarChartRenderer } from './atoms/bar-chart-renderer';
+import { ChartCard } from './atoms/chart-card';
+import { ChartControls } from './atoms/chart-controls';
+import { ChartExplanation } from './atoms/chart-explanation';
+import { ChartHeader } from './atoms/chart-header';
 import { ChartProps } from './types';
 
 export interface ChartData {

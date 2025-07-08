@@ -6,17 +6,17 @@ import {
 } from '@/components/common/tooltip-wrapper';
 import { Button } from '@/components/common/ui/button';
 import { Dialog, DialogTrigger } from '@/components/common/ui/dialog';
-import { CollapsibleLegend } from '@/components/docs/leaderboard/chart/collapsible-legend';
+import { CollapsibleLegend } from '@/components/docs/leaderboard/chart/atoms/collapsible-legend';
 import { useChartData } from '@/hooks/chart/use-chart-data';
 import { useChartPopover } from '@/hooks/chart/use-chart-popover';
 import { useChartSettings } from '@/hooks/chart/use-chart-settings';
 import { cn } from '@/lib/utils';
-import { ChartCard } from './chart-card';
-import { ChartControls } from './chart-controls';
-import { ChartExplanation } from './chart-explanation';
-import { ChartHeader } from './chart-header';
-import { ChartSettings } from './chart-settings';
-import { LineChartRenderer } from './line-chart-renderer';
+import { ChartCard } from './atoms/chart-card';
+import { ChartControls } from './atoms/chart-controls';
+import { ChartExplanation } from './atoms/chart-explanation';
+import { ChartHeader } from './atoms/chart-header';
+import { ChartSettings } from './atoms/chart-settings';
+import { LineChartRenderer } from './atoms/line-chart-renderer';
 import { ChartProps } from './types';
 
 export interface ChartData {

@@ -5,7 +5,7 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from '@/components/common/ui/chart';
-import { ChartRendererProps } from './types';
+import { ChartRendererProps } from '../types';
 
 export function LineChartRenderer({
   data,
