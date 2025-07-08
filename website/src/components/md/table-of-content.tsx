@@ -1,4 +1,4 @@
-import { memo, RefObject, useEffect, useRef } from 'react';
+import { memo, RefObject, useEffect, useRef, useState } from 'react';
 
 import { cn } from '@/lib/utils';
 import { TOCHeading, useTocStore } from '@/stores/toc';
@@ -36,36 +36,78 @@ function TOCItem({ level, active, value, id }: TOCItem) {
   );
 }
 
-const HighlightedTOCHeading = memo(({ headings }: { headings: Heading[] }) => {
-  const visibleHeadingIds = headings
-    .filter((heading) => heading.isVisible)
-    .map((heading) => heading.id);
-  const elTocItems = headings.reduce((map, s) => {
-    return {
-      ...map,
-      [s.id]: s.outlineRef?.current,
-    };
-  }, {}) as Record<string, HTMLLIElement | null | undefined>;
-  const firstVisibleHeadingIndex = Math.max(
-    0,
-    headings.findIndex((heading) => heading.id === visibleHeadingIds[0]),
-  );
+const HighlightedTOCHeading = memo(
+  ({
+    headings,
+    scrollAreaRef,
+  }: {
+    headings: Heading[];
+    scrollAreaRef: React.RefObject<HTMLDivElement | null>;
+  }) => {
+    const [scrollTop, setScrollTop] = useState(0);
 
-  const height: number | string = visibleHeadingIds.reduce(
-    (h, id) => h + (elTocItems[id]?.offsetHeight || 0),
-    0,
-  );
-  const top = headings
-    .slice(0, firstVisibleHeadingIndex)
-    .reduce((t, s) => t + (elTocItems[s.id]?.offsetHeight || 0), 0);
-  return (
-    <div
-      className="absolute left-3 w-px bg-gradient-to-t from-transparent via-foreground to-transparent transition-all duration-300"
-      style={{ height, top }}
-      aria-hidden
-    />
-  );
-});
+    useEffect(() => {
+      const scrollArea = scrollAreaRef.current;
+      if (!scrollArea) return;
+
+      // find the viewport
+      const viewport = scrollArea.querySelector(
+        '[data-radix-scroll-area-viewport]',
+      );
+      if (!viewport) return;
+
+      const handleScroll = () => {
+        setScrollTop(viewport.scrollTop);
+      };
+
+      viewport.addEventListener('scroll', handleScroll);
+      return () => viewport.removeEventListener('scroll', handleScroll);
+    }, [scrollAreaRef]);
+
+    const visibleHeadingIds = headings
+      .filter((heading) => heading.isVisible)
+      .map((heading) => heading.id);
+
+    const elTocItems = headings.reduce((map, s) => {
+      return {
+        ...map,
+        [s.id]: s.outlineRef?.current,
+      };
+    }, {}) as Record<string, HTMLLIElement | null | undefined>;
+
+    const firstVisibleHeadingIndex = Math.max(
+      0,
+      headings.findIndex((heading) => heading.id === visibleHeadingIds[0]),
+    );
+
+    const height: number | string = visibleHeadingIds.reduce(
+      (h, id) => h + (elTocItems[id]?.offsetHeight || 0),
+      0,
+    );
+
+    const rawTop = headings
+      .slice(0, firstVisibleHeadingIndex)
+      .reduce((t, s) => t + (elTocItems[s.id]?.offsetHeight || 0), 0);
+
+    const top = rawTop - scrollTop;
+
+    const containerHeight = scrollAreaRef.current?.clientHeight || 0;
+    const maxHeight = Math.max(0, containerHeight - Math.max(0, top));
+    const finalHeight = Math.min(height as number, maxHeight);
+
+    return (
+      <div
+        className="absolute left-3 w-px bg-gradient-to-t from-transparent via-foreground to-transparent transition-all duration-300"
+        style={{
+          height: finalHeight,
+          top: Math.max(0, top),
+          opacity: finalHeight > 0 ? 1 : 0,
+        }}
+        aria-hidden
+      />
+    );
+  },
+);
 
 export function TableOfContent({ className }: { className?: string }) {
   const headings = useTocStore((state) => state.headings);
@@ -82,7 +124,7 @@ export function TableOfContent({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        'relative h-full max-h-[calc(100vh-theme(spacing.64))] animate-fade-slide-in-right text-sm',
+        'relative h-full max-h-[calc(100vh-19rem)] animate-fade-slide-in-right text-sm',
         className,
       )}
     >
@@ -91,10 +133,10 @@ export function TableOfContent({ className }: { className?: string }) {
       </h2>
       <ScrollArea
         ref={toc}
-        className="relative max-h-[calc(100vh-theme(spacing.72))] [&>[data-radix-scroll-area-viewport]]:!max-h-[calc(100vh-theme(spacing.72))]"
+        className="relative max-h-[calc(100vh-theme(spacing.72))] [&>[data-radix-scroll-area-viewport]]:!max-h-[inherit]"
       >
         <span className="absolute top-0 bottom-0 left-3 w-px bg-gradient-to-t from-muted/50 via-muted to-muted/50" />
-        <HighlightedTOCHeading headings={headings || []} />
+        <HighlightedTOCHeading headings={headings || []} scrollAreaRef={toc} />
         <ul className="list-none pl-6">
           {headings &&
             headings.map((heading) => (

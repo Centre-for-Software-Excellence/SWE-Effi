@@ -22,7 +22,6 @@ const enableLogging = import.meta.env.DEV;
 
 function getActionName(args: any): string {
   if (typeof args === 'function') {
-    console.log(args);
     return 'function';
   }
   if (typeof args === 'object' && args !== null) {
