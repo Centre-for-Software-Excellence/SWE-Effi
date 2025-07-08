@@ -3,6 +3,7 @@ import { memo, RefObject, useEffect, useRef } from 'react';
 import { cn } from '@/lib/utils';
 import { TOCHeading, useTocStore } from '@/stores/toc';
 import type { Heading } from '@/stores/toc';
+import { ScrollArea } from '../common/ui/scroll-area';
 
 type TOCItem = TOCHeading & {
   active: boolean;
@@ -88,9 +89,9 @@ export function TableOfContent({ className }: { className?: string }) {
       <h2 className="mb-4 h-4 leading-4 font-[600] text-foreground/75">
         On This Page
       </h2>
-      <div
+      <ScrollArea
         ref={toc}
-        className="relative max-h-[calc(100vh-theme(spacing.72))] overflow-y-auto"
+        className="relative max-h-[calc(100vh-theme(spacing.72))] [&>[data-radix-scroll-area-viewport]]:!max-h-[calc(100vh-theme(spacing.72))]"
       >
         <span className="absolute top-0 bottom-0 left-3 w-px bg-gradient-to-t from-muted/50 via-muted to-muted/50" />
         <HighlightedTOCHeading headings={headings || []} />
@@ -105,7 +106,7 @@ export function TableOfContent({ className }: { className?: string }) {
               />
             ))}
         </ul>
-      </div>
+      </ScrollArea>
     </div>
   );
 }

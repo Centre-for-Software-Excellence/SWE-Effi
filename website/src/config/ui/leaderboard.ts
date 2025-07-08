@@ -65,7 +65,8 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
   ],
   tables: {
     leaderboard: {
-      tabTitle: 'Leaderboard',
+      tabTitle: 'Table 1',
+      tableTitle: 'Scaffold comparison on SWE-bench tasks',
       filterPlaceholder: 'Filter models...',
       columnTooltips: {
         rank: 'Ranked by resolve rate',
@@ -83,7 +84,8 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
       },
     },
     leaderboardRVU: {
-      tabTitle: 'Leaderboard RVU',
+      tabTitle: 'Table 2',
+      tableTitle: 'Token and time costs for resolved and unresolved instances',
       filterPlaceholder: 'Filter models...',
       columnTooltips: {
         rank: 'Ranked by total time resolved',

@@ -8,6 +8,7 @@ import {
   TabsList,
   TabsTrigger,
 } from '@/components/common/ui/tabs';
+import { H5, H6 } from '@/components/md';
 import { getLeaderboardData, getLeaderboardDataRVU } from '@/lib/data/get';
 import { cn } from '@/lib/utils';
 import { columns, RankedLeaderboardData } from './table/columns';
@@ -22,6 +23,7 @@ export type ColumnTooltips = Partial<
 >;
 export type Table = {
   tabTitle: string;
+  tableTitle: string;
   filterPlaceholder?: string;
   columnTooltips: ColumnTooltips;
 };
@@ -104,12 +106,14 @@ export default function TablesCard({
             </TabsTrigger>
           </TabsList>
           <TabsContent value="Leaderboard">
+            <H6 className="mb-0!">{leaderboard.tableTitle}</H6>
             <DataTable
               columns={columns(leaderboard.columnTooltips)}
               data={data}
             />
           </TabsContent>
           <TabsContent value="Leaderboard RVU">
+            <H6 className="mb-0!">{leaderboardRVU.tableTitle}</H6>
             <DataTable
               columns={columnsRVU(leaderboardRVU.columnTooltips)}
               data={dataRVU}

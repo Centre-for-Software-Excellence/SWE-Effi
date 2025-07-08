@@ -205,7 +205,7 @@ export function SearchComponent({
       {isOverlayOpen && (
         <div className="fixed inset-0 z-99" data-search-overlay>
           {/* Blur backdrop */}
-          <div className="fixed top-0 left-0 h-screen w-screen bg-black/20 backdrop-blur-lg" />
+          <div className="fixed top-0 left-0 h-screen w-full bg-black/20 backdrop-blur-lg" />
 
           {/* Search container */}
           <div className="relative z-10 animate-fade-in-top p-4">

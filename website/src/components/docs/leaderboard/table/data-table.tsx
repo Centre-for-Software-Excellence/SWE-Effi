@@ -21,6 +21,7 @@ import {
   DropdownMenuTrigger,
 } from '@/components/common/ui/dropdown-menu';
 import { Input } from '@/components/common/ui/input';
+import { ScrollArea, ScrollBar } from '@/components/common/ui/scroll-area';
 import {
   Table,
   TableBody,
@@ -120,7 +121,7 @@ export function DataTable<TData, TValue>({
           </div>
         </div>
       </div>
-      <div className="rounded-md border">
+      <ScrollArea className="rounded-md border">
         <Table>
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (
@@ -169,7 +170,8 @@ export function DataTable<TData, TValue>({
             )}
           </TableBody>
         </Table>
-      </div>
+        <ScrollBar orientation="horizontal" />
+      </ScrollArea>
     </div>
   );
 }

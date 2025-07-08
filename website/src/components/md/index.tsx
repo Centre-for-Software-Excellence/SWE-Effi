@@ -2,6 +2,7 @@ import React, { forwardRef, useState } from 'react';
 
 import { cn } from '@/lib/utils';
 import { Divider } from '../common/ui/divider';
+import { ScrollArea, ScrollBar } from '../common/ui/scroll-area';
 import { UnderlineText } from '../common/ui/underline-text';
 import { h } from './h';
 
@@ -341,7 +342,7 @@ export function Pre({ children, className, ...rest }: Props) {
   };
 
   return (
-    <div className="relative overflow-x-auto rounded-lg bg-accent!">
+    <ScrollArea className="relative overflow-x-auto rounded-lg bg-accent!">
       {/* <div className="text-ring flex items-center justify-between p-[0_1rem] py-2 text-center text-xs font-semibold"> */}
       {/*   <span>{lang}</span> */}
       {/*   <button */}
@@ -416,7 +417,8 @@ export function Pre({ children, className, ...rest }: Props) {
         </button>
         {children}
       </pre>
-    </div>
+      <ScrollBar orientation="horizontal" />
+    </ScrollArea>
   );
 }
 
