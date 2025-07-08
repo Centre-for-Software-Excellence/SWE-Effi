@@ -1,6 +1,8 @@
 import { RefObject } from 'react';
 import { create } from 'zustand';
 
+import { logger } from './logger';
+
 export type Heading = TOCHeading & {
   headingRef: RefObject<HTMLHeadingElement> | null;
   outlineRef: RefObject<HTMLLIElement> | null;
@@ -22,53 +24,62 @@ export type TOCHeading = {
   level: number;
 };
 
-export const useTocStore = create<TocState>((set, get) => ({
-  toc: null,
-  headings: [],
-  updateHeadings: (headings: TOCHeading[]) => {
-    const prevSections = get().headings;
-    const sections = headings.map((h) => {
-      const prev = prevSections.find((s) => s.id === h.id);
-      return {
-        ...h,
-        isVisible: prev ? prev.isVisible : false,
-        headingRef: prev ? prev.headingRef : null,
-        outlineRef: prev ? prev.outlineRef : null,
-      };
-    });
-    set({ headings: sections });
-  },
-  registerTOC(ref: RefObject<HTMLDivElement>) {
-    set({ toc: ref });
-  },
-  registerHeading: (id: string, ref: RefObject<HTMLHeadingElement>) => {
-    set((state) => ({
-      headings: state.headings.map((s) =>
-        s.id === id ? { ...s, headingRef: ref } : s,
-      ),
-    }));
-  },
-  registerTOCHeading: (id: string, ref: RefObject<HTMLLIElement>) => {
-    set((state) => ({
-      headings: state.headings.map((s) =>
-        s.id === id ? { ...s, outlineRef: ref } : s,
-      ),
-    }));
-  },
-  setCurrentHeadings: (ids: string[]) => {
-    if (get().toc?.current)
-      get()
-        .headings.filter((h) => ids.includes(h.id))
-        .slice(-1)[0]
-        .outlineRef?.current.scrollIntoView({
-          block: 'nearest',
-          behavior: 'smooth',
+export const useTocStore = create<TocState>(
+  logger(
+    (set, get) => ({
+      toc: null,
+      headings: [],
+      updateHeadings(headings: TOCHeading[]) {
+        const prevSections = get().headings;
+        const sections = headings.map((h) => {
+          const prev = prevSections.find((s) => s.id === h.id);
+          return {
+            ...h,
+            isVisible: prev ? prev.isVisible : false,
+            headingRef: prev ? prev.headingRef : null,
+            outlineRef: prev ? prev.outlineRef : null,
+          };
         });
-    set((state) => ({
-      headings: state.headings.map((s) => ({
-        ...s,
-        isVisible: ids.includes(s.id),
-      })),
-    }));
-  },
-}));
+        set({ headings: sections });
+      },
+      registerTOC(ref: RefObject<HTMLDivElement>) {
+        set({ toc: ref });
+      },
+      registerHeading: function registerHeading(
+        id: string,
+        ref: RefObject<HTMLHeadingElement>,
+      ) {
+        set((state) => ({
+          headings: state.headings.map((s) =>
+            s.id === id ? { ...s, headingRef: ref } : s,
+          ),
+        }));
+      },
+
+      registerTOCHeading(id: string, ref: RefObject<HTMLLIElement>) {
+        set((state) => ({
+          headings: state.headings.map((s) =>
+            s.id === id ? { ...s, outlineRef: ref } : s,
+          ),
+        }));
+      },
+      setCurrentHeadings(ids: string[]) {
+        if (get().toc?.current)
+          get()
+            .headings.filter((h) => ids.includes(h.id))
+            .slice(-1)[0]
+            .outlineRef?.current.scrollIntoView({
+              block: 'nearest',
+              behavior: 'smooth',
+            });
+        set((state) => ({
+          headings: state.headings.map((s) => ({
+            ...s,
+            isVisible: ids.includes(s.id),
+          })),
+        }));
+      },
+    }),
+    { name: 'Toc Store', showDiff: true },
+  ),
+);
