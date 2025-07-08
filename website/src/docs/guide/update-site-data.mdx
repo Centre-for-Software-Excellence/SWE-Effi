@@ -1,78 +1,62 @@
 ---
-title: Update Site Data
-description: How to update the benchmark & leaderboard data on the site
+title: Updating Site Data
+description: Procedure for refreshing benchmark & leaderboard data displayed on the site
 ---
 
 import { Note } from '@/components/md/alerts';
 
 <Note className="mb-12">
-  This guide assumes you have cloned the Github repository. All instructions
-  below apply to actions performed **inside the cloned repository**.
+  This guide assumes you have already cloned the GitHub repository. All commands
+  below are run from within that cloned repository.
 </Note>
 
-### Leaderboard
+## Overview
 
-##### Table 1
+Updating the public leaderboard involves three stages:
 
-Append new records to `website/src/config/leaderboard/data.json`, each entry should look like:
+1. **Collect raw statistics**
+2. **Copy and normalize raw data**
+3. **Generate chart- and leaderboard-ready data**
 
-```json
-{
-  "scaffold": "Agentless-mini",
-  "model": "Qwen3-32B",
-  "total": 7438,
-  "cpuTime": 0.76,
-  "inputToken": 34.1,
-  "outputToken": 9.31,
-  "calls": 2,
-  "infTime": 7437,
-  "resolveRate": 28,
-  "precision": 48.3
-}
+## 1. Collect raw statistics
+
+Place the JSON outputs produced by the benchmark run in the following locations:
+
+```
+benchmark/results/agent-scaffold-stats/<scaffold-name>/<model-name>-combined_stats.json
 ```
 
-##### Table 2
-
-Append new records to `website/src/config/leaderboard/data-rvu.json`, each entry should look like:
-
-```json
-{
-  "scaffold": "Agentless-mini",
-  "model": "Qwen3-32B",
-  "avgTotalTimeU": 7438.0,
-  "avgTotalTimeR": 7438.0,
-  "avgCPUTimeU": 0.76,
-  "avgCPUTimeR": 0.77,
-  "avgInfTimeU": 7437,
-  "avgInfTimeR": 7437,
-  "avgTotalTokensU": 46.0,
-  "avgTotalTokensR": 36.8,
-  "avgLLMRequestsU": 2.0,
-  "avgLLMRequestsR": 2.0
-}
+```
+benchmark/results/agent-scaffold-stats/<scaffold-name>/<model-name>-summary_stats.json
 ```
 
-No need to run extra scripts—the leaderboard reads this JSON directly.
+> Replace `<scaffold-name>` and `<model-name>` with the exact _scaffold_ and _model_ indentifiers used during the run
 
-### Chart pipeline
+## 2. Copy & normalize the raw data
 
-1. **Add raw stats**  
-    Move new benchmark outputs to
-   `benchmark/results/agent-scaffold-stats/<scaffold-name>/<model-name>-combined_stats.json`
-
-2. **Copy them into raw data folder** (run from repo root)
+From the repository root, execute:
 
 ```bash
-# copies & renames files into website/public/data/benchmark/raw/
 python scripts/transform_benchmark.py
 ```
 
-3. **Generarte chart-ready data**
+The script:
+
+- Copies the files listed above into `website/public/data/benchmark/raw/`
+
+- Normalizes filenames and directory structure so that the next step can locate them.
+
+## 3. Generate chart & leaderboard data
+
+Go to the `website` directory and run the build script:
 
 ```bash
 cd website
-# writes to website/public/data/chart/
 npm run generate-data
 ```
 
----
+This command processes the raw files and writes the derived datasets to:
+
+`website/public/data/chart/` and `website/public/data/table`
+
+Both the interactive charts and the leaderboard tables are regenerated automatically using the newly generated data.
