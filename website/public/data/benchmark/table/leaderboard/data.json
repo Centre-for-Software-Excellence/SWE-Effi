@@ -1,0 +1,67 @@
+[
+  {
+    "scaffold": "Agentless",
+    "model": "Qwen3 32b",
+    "total": 46556.96231900812,
+    "cpuTime": 36395.753749303825,
+    "inputToken": 1298273,
+    "outputToken": 2069050,
+    "calls": 4153,
+    "infTime": 0,
+    "resolveRate": 0.048,
+    "precision": 0.4897959183673469,
+    "rank": 1
+  },
+  {
+    "scaffold": "Agentless Mini",
+    "model": "Qwen3 32b",
+    "total": 2427.135001585761,
+    "cpuTime": 37.91798520088194,
+    "inputToken": 1705364,
+    "outputToken": 465444,
+    "calls": 99,
+    "infTime": 0,
+    "resolveRate": 0.028,
+    "precision": 0.4827586206896552,
+    "rank": 2
+  },
+  {
+    "scaffold": "Agentless",
+    "model": "Gpt 4o Mini",
+    "total": 51295.36838819803,
+    "cpuTime": 44451.05058345037,
+    "inputToken": 1470720,
+    "outputToken": 1384677,
+    "calls": 4117,
+    "infTime": 0,
+    "resolveRate": 0.026,
+    "precision": 0.2765957446808511,
+    "rank": 3
+  },
+  {
+    "scaffold": "Agentless Mini",
+    "model": "Gpt 4o Mini",
+    "total": 242.85949877630304,
+    "cpuTime": 33.48989892005918,
+    "inputToken": 1762456,
+    "outputToken": 15928,
+    "calls": 99,
+    "infTime": 0,
+    "resolveRate": 0.02,
+    "precision": 0.2564102564102564,
+    "rank": 4
+  },
+  {
+    "scaffold": "Agentless Mini",
+    "model": "Llama33 70b Inst Turbo",
+    "total": 572.8881224301981,
+    "cpuTime": 37.53201603889464,
+    "inputToken": 1873493,
+    "outputToken": 82617,
+    "calls": 100,
+    "infTime": 0,
+    "resolveRate": 0.004,
+    "precision": 0.6666666666666666,
+    "rank": 5
+  }
+]
