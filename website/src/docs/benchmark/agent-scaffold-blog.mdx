@@ -6,6 +6,10 @@ tags: ['agent scaffold blog']
 ---
 
 import { Divider } from '@/components/common/ui/divider';
+import { CostBarChart } from '@/components/docs/leaderboard/chart/cost-bar-chart';
+import { TimePercentageBarChart } from '@/components/docs/leaderboard/chart/time-percentage-bar-chart';
+import TablesCard from '@/components/docs/leaderboard/tables-card';
+import { getLeaderboardUIConfig } from '@/config/ui/leaderboard';
 
 ## Introduction
 
@@ -91,7 +95,18 @@ To capture the fine-grained data for our analysis, we augmented each agent's log
 
 By combining this setup with our detailed measurement, we have created a leaderboard that reflects not just success, but the true cost of that success. The following sections present the data and our initial findings.
 
-<Divider hasToc={true} />
+<TablesCard
+  tablesUi={getLeaderboardUIConfig().tables}
+  className="my-4 md:px-0"
+/>
+<TimePercentageBarChart
+  {...getLeaderboardUIConfig().analytics.timePercentageBarChart}
+  className="my-4 lg:p-0"
+/>
+<CostBarChart
+  className="my-4 lg:p-0"
+  {...getLeaderboardUIConfig().analytics.costBarChart}
+/>
 
 ## Key Findings & Initial Insights
 
