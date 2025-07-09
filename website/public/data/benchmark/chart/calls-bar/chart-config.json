@@ -22,5 +22,9 @@
   "deepseek-r1-528-qwen3-8b-distill": {
     "label": "deepseek-r1-528-qwen3-8b-distill",
     "color": "#ffcd56"
+  },
+  "llama33": {
+    "label": "llama33",
+    "color": "#c9cbcf"
   }
 }

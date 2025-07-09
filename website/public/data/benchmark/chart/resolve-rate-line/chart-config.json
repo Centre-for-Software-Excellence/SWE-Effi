@@ -39,36 +39,52 @@
     "label": "auto-code-rover/gpt-4o-mini",
     "color": "#17becf"
   },
+  "auto-code-rover/llama33": {
+    "label": "auto-code-rover/llama33",
+    "color": "#aec7e8"
+  },
+  "auto-code-rover/qwen3-32b": {
+    "label": "auto-code-rover/qwen3-32b",
+    "color": "#ffbb78"
+  },
   "auto-code-rover/qwen72b": {
     "label": "auto-code-rover/qwen72b",
-    "color": "#aec7e8"
+    "color": "#98df8a"
   },
   "auto-code-rover/qwq32b": {
     "label": "auto-code-rover/qwq32b",
-    "color": "#ffbb78"
+    "color": "#ff9896"
   },
   "openhands/gpt-4o-mini": {
     "label": "openhands/gpt-4o-mini",
-    "color": "#98df8a"
+    "color": "#c5b0d5"
+  },
+  "openhands/llama33": {
+    "label": "openhands/llama33",
+    "color": "#c49c94"
+  },
+  "openhands/qwen3-32b": {
+    "label": "openhands/qwen3-32b",
+    "color": "#f7b6d3"
   },
   "openhands/qwen72b": {
     "label": "openhands/qwen72b",
-    "color": "#ff9896"
+    "color": "#c7c7c7"
   },
   "openhands/qwq32b": {
     "label": "openhands/qwq32b",
-    "color": "#c5b0d5"
+    "color": "#dbdb8d"
   },
   "swe-agent/gpt-4o-mini": {
     "label": "swe-agent/gpt-4o-mini",
-    "color": "#c49c94"
+    "color": "#9edae5"
   },
   "swe-agent/qwen72b": {
     "label": "swe-agent/qwen72b",
-    "color": "#f7b6d3"
+    "color": "#b41f4c"
   },
   "swe-agent/qwq32b": {
     "label": "swe-agent/qwq32b",
-    "color": "#c7c7c7"
+    "color": "#0effc5"
   }
 }

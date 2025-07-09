@@ -23,5 +23,35 @@
     "cpu-time": 78.17,
     "gpu-time": 21.83,
     "scaffold-model": "agentless/qwen3-32b"
+  },
+  {
+    "cpu-time": 16.03,
+    "gpu-time": 83.97,
+    "scaffold-model": "auto-code-rover/gpt-4o-mini"
+  },
+  {
+    "cpu-time": 10.48,
+    "gpu-time": 89.52,
+    "scaffold-model": "auto-code-rover/llama33"
+  },
+  {
+    "cpu-time": 25.28,
+    "gpu-time": 74.72,
+    "scaffold-model": "auto-code-rover/qwen3-32b"
+  },
+  {
+    "cpu-time": 78.4,
+    "gpu-time": 21.6,
+    "scaffold-model": "openhands/gpt-4o-mini"
+  },
+  {
+    "cpu-time": 76.04,
+    "gpu-time": 23.96,
+    "scaffold-model": "openhands/llama33"
+  },
+  {
+    "cpu-time": 53.24,
+    "gpu-time": 46.76,
+    "scaffold-model": "openhands/qwen3-32b"
   }
 ]

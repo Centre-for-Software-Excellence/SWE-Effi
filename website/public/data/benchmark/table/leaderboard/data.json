@@ -13,6 +13,32 @@
     "rank": 1
   },
   {
+    "scaffold": "Auto Code Rover",
+    "model": "Qwen3 32b",
+    "total": 6816.598311580252,
+    "cpuTime": 1723.1909999999993,
+    "inputToken": 2773165,
+    "outputToken": 1018001,
+    "calls": 735,
+    "infTime": 0,
+    "resolveRate": 0.038,
+    "precision": 0.38,
+    "rank": 2
+  },
+  {
+    "scaffold": "Openhands",
+    "model": "Qwen3 32b",
+    "total": 9623.53543013599,
+    "cpuTime": 5123.395220748902,
+    "inputToken": 16769200,
+    "outputToken": 833212,
+    "calls": 973,
+    "infTime": 0,
+    "resolveRate": 0.034,
+    "precision": 0.3695652173913043,
+    "rank": 3
+  },
+  {
     "scaffold": "Agentless Mini",
     "model": "Qwen3 32b",
     "total": 2427.135001585761,
@@ -23,7 +49,20 @@
     "infTime": 0,
     "resolveRate": 0.028,
     "precision": 0.4827586206896552,
-    "rank": 2
+    "rank": 4
+  },
+  {
+    "scaffold": "Auto Code Rover",
+    "model": "Llama33",
+    "total": 4537.550972872906,
+    "cpuTime": 475.4200000000001,
+    "inputToken": 20804129,
+    "outputToken": 724916,
+    "calls": 1913,
+    "infTime": 0,
+    "resolveRate": 0.028,
+    "precision": 0.28,
+    "rank": 5
   },
   {
     "scaffold": "Agentless",
@@ -36,7 +75,7 @@
     "infTime": 0,
     "resolveRate": 0.026,
     "precision": 0.2765957446808511,
-    "rank": 3
+    "rank": 6
   },
   {
     "scaffold": "Agentless Mini",
@@ -49,7 +88,46 @@
     "infTime": 0,
     "resolveRate": 0.02,
     "precision": 0.2564102564102564,
-    "rank": 4
+    "rank": 7
+  },
+  {
+    "scaffold": "Openhands",
+    "model": "Llama33",
+    "total": 9390.505877100355,
+    "cpuTime": 7140.969314088823,
+    "inputToken": 44855298,
+    "outputToken": 243912,
+    "calls": 1540,
+    "infTime": 0,
+    "resolveRate": 0.02,
+    "precision": 0.20833333333333334,
+    "rank": 8
+  },
+  {
+    "scaffold": "Auto Code Rover",
+    "model": "Gpt 4o Mini",
+    "total": 4572.517378118221,
+    "cpuTime": 733.0620000000001,
+    "inputToken": 13832576,
+    "outputToken": 710164,
+    "calls": 1975,
+    "infTime": 0,
+    "resolveRate": 0.012,
+    "precision": 0.12,
+    "rank": 9
+  },
+  {
+    "scaffold": "Openhands",
+    "model": "Gpt 4o Mini",
+    "total": 5072.672448749138,
+    "cpuTime": 3976.751268493653,
+    "inputToken": 30968954,
+    "outputToken": 71279,
+    "calls": 1442,
+    "infTime": 0,
+    "resolveRate": 0.01,
+    "precision": 0.2631578947368421,
+    "rank": 10
   },
   {
     "scaffold": "Agentless Mini",
@@ -62,6 +140,6 @@
     "infTime": 0,
     "resolveRate": 0.004,
     "precision": 0.6666666666666666,
-    "rank": 5
+    "rank": 11
   }
 ]

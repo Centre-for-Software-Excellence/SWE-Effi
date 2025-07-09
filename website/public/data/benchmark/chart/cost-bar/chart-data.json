@@ -23,5 +23,35 @@
     "scaffold-model": "agentless/qwen3-32b",
     "success-cost": 54372.75,
     "failure-cost": 79322.19230769231
+  },
+  {
+    "scaffold-model": "auto-code-rover/gpt-4o-mini",
+    "success-cost": 25389.666666666668,
+    "failure-cost": 327054.59090909094
+  },
+  {
+    "scaffold-model": "auto-code-rover/llama33",
+    "success-cost": 147660.07142857142,
+    "failure-cost": 540605.6666666666
+  },
+  {
+    "scaffold-model": "auto-code-rover/qwen3-32b",
+    "success-cost": 51143.368421052626,
+    "failure-cost": 90949.74193548386
+  },
+  {
+    "scaffold-model": "openhands/gpt-4o-mini",
+    "success-cost": 472327.60000000003,
+    "failure-cost": 775097.1621621621
+  },
+  {
+    "scaffold-model": "openhands/llama33",
+    "success-cost": 238059.69999999998,
+    "failure-cost": 1067965.325
+  },
+  {
+    "scaffold-model": "openhands/qwen3-32b",
+    "success-cost": 211222.05882352943,
+    "failure-cost": 424595.0606060606
   }
 ]

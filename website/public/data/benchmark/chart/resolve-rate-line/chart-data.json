@@ -9000,2004 +9000,604 @@
     "agentless/qwen72b": 0.284
   },
   {
-    "totalTokens": 0,
+    "totalTokens": 0.005891,
     "auto-code-rover/gpt-4o-mini": 0
   },
   {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0,
-    "auto-code-rover/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0.005844,
+    "totalTokens": 0.009232,
     "auto-code-rover/gpt-4o-mini": 0.002
   },
   {
-    "totalTokens": 0.006225,
+    "totalTokens": 0.009603,
+    "auto-code-rover/gpt-4o-mini": 0.002
+  },
+  {
+    "totalTokens": 0.009687,
     "auto-code-rover/gpt-4o-mini": 0.004
   },
   {
-    "totalTokens": 0.006362,
+    "totalTokens": 0.012012,
     "auto-code-rover/gpt-4o-mini": 0.004
   },
   {
-    "totalTokens": 0.007184,
-    "auto-code-rover/gpt-4o-mini": 0.004
-  },
-  {
-    "totalTokens": 0.00731,
-    "auto-code-rover/gpt-4o-mini": 0.004
-  },
-  {
-    "totalTokens": 0.007568,
-    "auto-code-rover/gpt-4o-mini": 0.004
-  },
-  {
-    "totalTokens": 0.007842,
-    "auto-code-rover/gpt-4o-mini": 0.004
-  },
-  {
-    "totalTokens": 0.008118,
+    "totalTokens": 0.012623,
     "auto-code-rover/gpt-4o-mini": 0.006
   },
   {
-    "totalTokens": 0.008779,
+    "totalTokens": 0.013969,
     "auto-code-rover/gpt-4o-mini": 0.006
   },
   {
-    "totalTokens": 0.00916,
+    "totalTokens": 0.015479,
     "auto-code-rover/gpt-4o-mini": 0.008
   },
   {
-    "totalTokens": 0.009265,
+    "totalTokens": 0.017598,
+    "auto-code-rover/gpt-4o-mini": 0.008
+  },
+  {
+    "totalTokens": 0.020224,
+    "auto-code-rover/gpt-4o-mini": 0.008
+  },
+  {
+    "totalTokens": 0.020533,
+    "auto-code-rover/gpt-4o-mini": 0.008
+  },
+  {
+    "totalTokens": 0.022569,
+    "auto-code-rover/gpt-4o-mini": 0.008
+  },
+  {
+    "totalTokens": 0.027319,
+    "auto-code-rover/gpt-4o-mini": 0.008
+  },
+  {
+    "totalTokens": 0.027921,
     "auto-code-rover/gpt-4o-mini": 0.01
   },
   {
-    "totalTokens": 0.009368,
+    "totalTokens": 0.028167,
     "auto-code-rover/gpt-4o-mini": 0.01
   },
   {
-    "totalTokens": 0.009516,
+    "totalTokens": 0.029975,
+    "auto-code-rover/gpt-4o-mini": 0.01
+  },
+  {
+    "totalTokens": 0.03301,
+    "auto-code-rover/gpt-4o-mini": 0.01
+  },
+  {
+    "totalTokens": 0.040268,
+    "auto-code-rover/gpt-4o-mini": 0.01
+  },
+  {
+    "totalTokens": 0.043658,
+    "auto-code-rover/gpt-4o-mini": 0.01
+  },
+  {
+    "totalTokens": 0.046868,
+    "auto-code-rover/gpt-4o-mini": 0.01
+  },
+  {
+    "totalTokens": 0.050156,
+    "auto-code-rover/gpt-4o-mini": 0.01
+  },
+  {
+    "totalTokens": 0.058103,
     "auto-code-rover/gpt-4o-mini": 0.012
   },
   {
-    "totalTokens": 0.009614,
-    "auto-code-rover/gpt-4o-mini": 0.014
+    "totalTokens": 0.073599,
+    "auto-code-rover/gpt-4o-mini": 0.012
   },
   {
-    "totalTokens": 0.009893,
-    "auto-code-rover/gpt-4o-mini": 0.016
+    "totalTokens": 0.074522,
+    "auto-code-rover/gpt-4o-mini": 0.012
   },
   {
-    "totalTokens": 0.010147,
-    "auto-code-rover/gpt-4o-mini": 0.016
+    "totalTokens": 0.07782,
+    "auto-code-rover/gpt-4o-mini": 0.012
   },
   {
-    "totalTokens": 0.010825,
-    "auto-code-rover/gpt-4o-mini": 0.016
+    "totalTokens": 0.08598,
+    "auto-code-rover/gpt-4o-mini": 0.012
   },
   {
-    "totalTokens": 0.010975,
-    "auto-code-rover/gpt-4o-mini": 0.018
+    "totalTokens": 0.103294,
+    "auto-code-rover/gpt-4o-mini": 0.012
   },
   {
-    "totalTokens": 0.010999,
-    "auto-code-rover/gpt-4o-mini": 0.02
+    "totalTokens": 0.107914,
+    "auto-code-rover/gpt-4o-mini": 0.012
   },
   {
-    "totalTokens": 0.011127,
-    "auto-code-rover/gpt-4o-mini": 0.022
+    "totalTokens": 0.123654,
+    "auto-code-rover/gpt-4o-mini": 0.012
   },
   {
-    "totalTokens": 0.011648,
-    "auto-code-rover/gpt-4o-mini": 0.024
+    "totalTokens": 0.165152,
+    "auto-code-rover/gpt-4o-mini": 0.012
   },
   {
-    "totalTokens": 0.011668,
-    "auto-code-rover/gpt-4o-mini": 0.026
+    "totalTokens": 0.166179,
+    "auto-code-rover/gpt-4o-mini": 0.012
   },
   {
-    "totalTokens": 0.012105,
-    "auto-code-rover/gpt-4o-mini": 0.026
+    "totalTokens": 0.174419,
+    "auto-code-rover/gpt-4o-mini": 0.012
   },
   {
-    "totalTokens": 0.012258,
-    "auto-code-rover/gpt-4o-mini": 0.026
+    "totalTokens": 0.265318,
+    "auto-code-rover/gpt-4o-mini": 0.012
   },
   {
-    "totalTokens": 0.012259,
-    "auto-code-rover/gpt-4o-mini": 0.026
+    "totalTokens": 0.297375,
+    "auto-code-rover/gpt-4o-mini": 0.012
   },
   {
-    "totalTokens": 0.012442,
-    "auto-code-rover/gpt-4o-mini": 0.028
+    "totalTokens": 0.31547,
+    "auto-code-rover/gpt-4o-mini": 0.012
   },
   {
-    "totalTokens": 0.012556,
-    "auto-code-rover/gpt-4o-mini": 0.028
+    "totalTokens": 0.317961,
+    "auto-code-rover/gpt-4o-mini": 0.012
   },
   {
-    "totalTokens": 0.012724,
-    "auto-code-rover/gpt-4o-mini": 0.03
+    "totalTokens": 0.338713,
+    "auto-code-rover/gpt-4o-mini": 0.012
   },
   {
-    "totalTokens": 0.01317,
-    "auto-code-rover/gpt-4o-mini": 0.03
+    "totalTokens": 0.524944,
+    "auto-code-rover/gpt-4o-mini": 0.012
   },
   {
-    "totalTokens": 0.013495,
-    "auto-code-rover/gpt-4o-mini": 0.03
+    "totalTokens": 0.571513,
+    "auto-code-rover/gpt-4o-mini": 0.012
   },
   {
-    "totalTokens": 0.013652,
-    "auto-code-rover/gpt-4o-mini": 0.03
+    "totalTokens": 0.610916,
+    "auto-code-rover/gpt-4o-mini": 0.012
   },
   {
-    "totalTokens": 0.013731,
-    "auto-code-rover/gpt-4o-mini": 0.032
+    "totalTokens": 0.666312,
+    "auto-code-rover/gpt-4o-mini": 0.012
   },
   {
-    "totalTokens": 0.013988,
-    "auto-code-rover/gpt-4o-mini": 0.032
+    "totalTokens": 0.670464,
+    "auto-code-rover/gpt-4o-mini": 0.012
   },
   {
-    "totalTokens": 0.014005,
-    "auto-code-rover/gpt-4o-mini": 0.032
+    "totalTokens": 0.713635,
+    "auto-code-rover/gpt-4o-mini": 0.012
   },
   {
-    "totalTokens": 0.014367,
-    "auto-code-rover/gpt-4o-mini": 0.034
+    "totalTokens": 0.76111,
+    "auto-code-rover/gpt-4o-mini": 0.012
   },
   {
-    "totalTokens": 0.014442,
-    "auto-code-rover/gpt-4o-mini": 0.036
+    "totalTokens": 0.829952,
+    "auto-code-rover/gpt-4o-mini": 0.012
   },
   {
-    "totalTokens": 0.014835,
-    "auto-code-rover/gpt-4o-mini": 0.036
+    "totalTokens": 0.879492,
+    "auto-code-rover/gpt-4o-mini": 0.012
   },
   {
-    "totalTokens": 0.015245,
-    "auto-code-rover/gpt-4o-mini": 0.036
+    "totalTokens": 0.913865,
+    "auto-code-rover/gpt-4o-mini": 0.012
   },
   {
-    "totalTokens": 0.015312,
-    "auto-code-rover/gpt-4o-mini": 0.038
+    "totalTokens": 0.959038,
+    "auto-code-rover/gpt-4o-mini": 0.012
   },
   {
-    "totalTokens": 0.015486,
-    "auto-code-rover/gpt-4o-mini": 0.038
+    "totalTokens": 1.152219,
+    "auto-code-rover/gpt-4o-mini": 0.012
   },
   {
-    "totalTokens": 0.015617,
-    "auto-code-rover/gpt-4o-mini": 0.038
+    "totalTokens": 1.336881,
+    "auto-code-rover/gpt-4o-mini": 0.012
   },
   {
-    "totalTokens": 0.015706,
-    "auto-code-rover/gpt-4o-mini": 0.038
+    "totalTokens": 0.013179,
+    "auto-code-rover/llama33": 0.002
   },
   {
-    "totalTokens": 0.016128,
-    "auto-code-rover/gpt-4o-mini": 0.04
+    "totalTokens": 0.015141,
+    "auto-code-rover/llama33": 0.004
   },
   {
-    "totalTokens": 0.016315,
-    "auto-code-rover/gpt-4o-mini": 0.04
+    "totalTokens": 0.019676,
+    "auto-code-rover/llama33": 0.004
   },
   {
-    "totalTokens": 0.017347,
-    "auto-code-rover/gpt-4o-mini": 0.04
+    "totalTokens": 0.020024,
+    "auto-code-rover/llama33": 0.006
   },
   {
-    "totalTokens": 0.017435,
-    "auto-code-rover/gpt-4o-mini": 0.04
+    "totalTokens": 0.021135,
+    "auto-code-rover/llama33": 0.006
   },
   {
-    "totalTokens": 0.018019,
-    "auto-code-rover/gpt-4o-mini": 0.04
+    "totalTokens": 0.023999,
+    "auto-code-rover/llama33": 0.006
   },
   {
-    "totalTokens": 0.018486,
-    "auto-code-rover/gpt-4o-mini": 0.04
+    "totalTokens": 0.025146,
+    "auto-code-rover/llama33": 0.008
   },
   {
-    "totalTokens": 0.019666,
-    "auto-code-rover/gpt-4o-mini": 0.04
+    "totalTokens": 0.025864,
+    "auto-code-rover/llama33": 0.01
   },
   {
-    "totalTokens": 0.019803,
-    "auto-code-rover/gpt-4o-mini": 0.042
+    "totalTokens": 0.026887,
+    "auto-code-rover/llama33": 0.012
   },
   {
-    "totalTokens": 0.019807,
-    "auto-code-rover/gpt-4o-mini": 0.044
+    "totalTokens": 0.032332,
+    "auto-code-rover/llama33": 0.012
   },
   {
-    "totalTokens": 0.020138,
-    "auto-code-rover/gpt-4o-mini": 0.044
+    "totalTokens": 0.034615,
+    "auto-code-rover/llama33": 0.014
   },
   {
-    "totalTokens": 0.020692,
-    "auto-code-rover/gpt-4o-mini": 0.044
+    "totalTokens": 0.039065,
+    "auto-code-rover/llama33": 0.014
   },
   {
-    "totalTokens": 0.020751,
-    "auto-code-rover/gpt-4o-mini": 0.044
+    "totalTokens": 0.039717,
+    "auto-code-rover/llama33": 0.016
   },
   {
-    "totalTokens": 0.021073,
-    "auto-code-rover/gpt-4o-mini": 0.044
+    "totalTokens": 0.044567,
+    "auto-code-rover/llama33": 0.016
   },
   {
-    "totalTokens": 0.021786,
-    "auto-code-rover/gpt-4o-mini": 0.044
+    "totalTokens": 0.048588,
+    "auto-code-rover/llama33": 0.018
   },
   {
-    "totalTokens": 0.021946,
-    "auto-code-rover/gpt-4o-mini": 0.044
+    "totalTokens": 0.051703,
+    "auto-code-rover/llama33": 0.018
   },
   {
-    "totalTokens": 0.022055,
-    "auto-code-rover/gpt-4o-mini": 0.044
+    "totalTokens": 0.052329,
+    "auto-code-rover/llama33": 0.018
   },
   {
-    "totalTokens": 0.022562,
-    "auto-code-rover/gpt-4o-mini": 0.046
+    "totalTokens": 0.052672,
+    "auto-code-rover/llama33": 0.02
   },
   {
-    "totalTokens": 0.022832,
-    "auto-code-rover/gpt-4o-mini": 0.046
+    "totalTokens": 0.054196,
+    "auto-code-rover/llama33": 0.02
   },
   {
-    "totalTokens": 0.022933,
-    "auto-code-rover/gpt-4o-mini": 0.048
+    "totalTokens": 0.055677,
+    "auto-code-rover/llama33": 0.022
   },
   {
-    "totalTokens": 0.023465,
-    "auto-code-rover/gpt-4o-mini": 0.048
+    "totalTokens": 0.059262,
+    "auto-code-rover/llama33": 0.022
   },
   {
-    "totalTokens": 0.023472,
-    "auto-code-rover/gpt-4o-mini": 0.048
+    "totalTokens": 0.064945,
+    "auto-code-rover/llama33": 0.022
   },
   {
-    "totalTokens": 0.024147,
-    "auto-code-rover/gpt-4o-mini": 0.05
+    "totalTokens": 0.066802,
+    "auto-code-rover/llama33": 0.024
   },
   {
-    "totalTokens": 0.024323,
-    "auto-code-rover/gpt-4o-mini": 0.05
+    "totalTokens": 0.077174,
+    "auto-code-rover/llama33": 0.024
   },
   {
-    "totalTokens": 0.024485,
-    "auto-code-rover/gpt-4o-mini": 0.05
+    "totalTokens": 0.0782,
+    "auto-code-rover/llama33": 0.024
   },
   {
-    "totalTokens": 0.024541,
-    "auto-code-rover/gpt-4o-mini": 0.05
+    "totalTokens": 0.079545,
+    "auto-code-rover/llama33": 0.024
   },
   {
-    "totalTokens": 0.025176,
-    "auto-code-rover/gpt-4o-mini": 0.05
+    "totalTokens": 0.0931,
+    "auto-code-rover/llama33": 0.024
   },
   {
-    "totalTokens": 0.025534,
-    "auto-code-rover/gpt-4o-mini": 0.05
+    "totalTokens": 0.1273,
+    "auto-code-rover/llama33": 0.024
   },
   {
-    "totalTokens": 0.025786,
-    "auto-code-rover/gpt-4o-mini": 0.05
+    "totalTokens": 0.166871,
+    "auto-code-rover/llama33": 0.024
   },
   {
-    "totalTokens": 0.026002,
-    "auto-code-rover/gpt-4o-mini": 0.05
+    "totalTokens": 0.213923,
+    "auto-code-rover/llama33": 0.024
   },
   {
-    "totalTokens": 0.0266,
-    "auto-code-rover/gpt-4o-mini": 0.05
+    "totalTokens": 0.215749,
+    "auto-code-rover/llama33": 0.024
   },
   {
-    "totalTokens": 0.027413,
-    "auto-code-rover/gpt-4o-mini": 0.05
+    "totalTokens": 0.224242,
+    "auto-code-rover/llama33": 0.026
   },
   {
-    "totalTokens": 0.027626,
-    "auto-code-rover/gpt-4o-mini": 0.052
+    "totalTokens": 0.255532,
+    "auto-code-rover/llama33": 0.026
   },
   {
-    "totalTokens": 0.027985,
-    "auto-code-rover/gpt-4o-mini": 0.052
+    "totalTokens": 0.256199,
+    "auto-code-rover/llama33": 0.026
   },
   {
-    "totalTokens": 0.028096,
-    "auto-code-rover/gpt-4o-mini": 0.054
+    "totalTokens": 0.356835,
+    "auto-code-rover/llama33": 0.026
   },
   {
-    "totalTokens": 0.028253,
-    "auto-code-rover/gpt-4o-mini": 0.054
+    "totalTokens": 0.379611,
+    "auto-code-rover/llama33": 0.026
   },
   {
-    "totalTokens": 0.028525,
-    "auto-code-rover/gpt-4o-mini": 0.054
+    "totalTokens": 0.427007,
+    "auto-code-rover/llama33": 0.026
   },
   {
-    "totalTokens": 0.028668,
-    "auto-code-rover/gpt-4o-mini": 0.056
+    "totalTokens": 0.491506,
+    "auto-code-rover/llama33": 0.026
   },
   {
-    "totalTokens": 0.029153,
-    "auto-code-rover/gpt-4o-mini": 0.056
+    "totalTokens": 0.656643,
+    "auto-code-rover/llama33": 0.026
   },
   {
-    "totalTokens": 0.029521,
-    "auto-code-rover/gpt-4o-mini": 0.056
+    "totalTokens": 0.674838,
+    "auto-code-rover/llama33": 0.026
   },
   {
-    "totalTokens": 0.02954,
-    "auto-code-rover/gpt-4o-mini": 0.058
+    "totalTokens": 0.721044,
+    "auto-code-rover/llama33": 0.026
   },
   {
-    "totalTokens": 0.030339,
-    "auto-code-rover/gpt-4o-mini": 0.058
+    "totalTokens": 0.721986,
+    "auto-code-rover/llama33": 0.026
   },
   {
-    "totalTokens": 0.030504,
-    "auto-code-rover/gpt-4o-mini": 0.058
+    "totalTokens": 0.780477,
+    "auto-code-rover/llama33": 0.026
   },
   {
-    "totalTokens": 0.030594,
-    "auto-code-rover/gpt-4o-mini": 0.058
+    "totalTokens": 1.072652,
+    "auto-code-rover/llama33": 0.026
   },
   {
-    "totalTokens": 0.031473,
-    "auto-code-rover/gpt-4o-mini": 0.058
+    "totalTokens": 1.244727,
+    "auto-code-rover/llama33": 0.026
   },
   {
-    "totalTokens": 0.03191,
-    "auto-code-rover/gpt-4o-mini": 0.06
+    "totalTokens": 1.328257,
+    "auto-code-rover/llama33": 0.028
   },
   {
-    "totalTokens": 0.032005,
-    "auto-code-rover/gpt-4o-mini": 0.06
+    "totalTokens": 1.328674,
+    "auto-code-rover/llama33": 0.028
   },
   {
-    "totalTokens": 0.032195,
-    "auto-code-rover/gpt-4o-mini": 0.06
+    "totalTokens": 1.341336,
+    "auto-code-rover/llama33": 0.028
   },
   {
-    "totalTokens": 0.033187,
-    "auto-code-rover/gpt-4o-mini": 0.062
+    "totalTokens": 3.013294,
+    "auto-code-rover/llama33": 0.028
   },
   {
-    "totalTokens": 0.033193,
-    "auto-code-rover/gpt-4o-mini": 0.062
+    "totalTokens": 3.589886,
+    "auto-code-rover/llama33": 0.028
   },
   {
-    "totalTokens": 0.034332,
-    "auto-code-rover/gpt-4o-mini": 0.064
+    "totalTokens": 0.005607,
+    "auto-code-rover/qwen3-32b": 0
   },
   {
-    "totalTokens": 0.035045,
-    "auto-code-rover/gpt-4o-mini": 0.064
+    "totalTokens": 0.00717,
+    "auto-code-rover/qwen3-32b": 0
   },
   {
-    "totalTokens": 0.035995,
-    "auto-code-rover/gpt-4o-mini": 0.064
+    "totalTokens": 0.008577,
+    "auto-code-rover/qwen3-32b": 0
   },
   {
-    "totalTokens": 0.036869,
-    "auto-code-rover/gpt-4o-mini": 0.064
+    "totalTokens": 0.009023,
+    "auto-code-rover/qwen3-32b": 0.002
   },
   {
-    "totalTokens": 0.037323,
-    "auto-code-rover/gpt-4o-mini": 0.066
+    "totalTokens": 0.009363,
+    "auto-code-rover/qwen3-32b": 0.004
   },
   {
-    "totalTokens": 0.037655,
-    "auto-code-rover/gpt-4o-mini": 0.066
+    "totalTokens": 0.010358,
+    "auto-code-rover/qwen3-32b": 0.006
   },
   {
-    "totalTokens": 0.037687,
-    "auto-code-rover/gpt-4o-mini": 0.066
+    "totalTokens": 0.011543,
+    "auto-code-rover/qwen3-32b": 0.008
   },
   {
-    "totalTokens": 0.038394,
-    "auto-code-rover/gpt-4o-mini": 0.066
+    "totalTokens": 0.013848,
+    "auto-code-rover/qwen3-32b": 0.008
   },
   {
-    "totalTokens": 0.038439,
-    "auto-code-rover/gpt-4o-mini": 0.066
+    "totalTokens": 0.014149,
+    "auto-code-rover/qwen3-32b": 0.008
   },
   {
-    "totalTokens": 0.03904,
-    "auto-code-rover/gpt-4o-mini": 0.066
+    "totalTokens": 0.014154,
+    "auto-code-rover/qwen3-32b": 0.008
   },
   {
-    "totalTokens": 0.039318,
-    "auto-code-rover/gpt-4o-mini": 0.068
+    "totalTokens": 0.014517,
+    "auto-code-rover/qwen3-32b": 0.01
   },
   {
-    "totalTokens": 0.03959,
-    "auto-code-rover/gpt-4o-mini": 0.068
+    "totalTokens": 0.016024,
+    "auto-code-rover/qwen3-32b": 0.012
   },
   {
-    "totalTokens": 0.040787,
-    "auto-code-rover/gpt-4o-mini": 0.068
+    "totalTokens": 0.017701,
+    "auto-code-rover/qwen3-32b": 0.012
   },
   {
-    "totalTokens": 0.041842,
-    "auto-code-rover/gpt-4o-mini": 0.07
+    "totalTokens": 0.018607,
+    "auto-code-rover/qwen3-32b": 0.014
   },
   {
-    "totalTokens": 0.042309,
-    "auto-code-rover/gpt-4o-mini": 0.07
+    "totalTokens": 0.01907,
+    "auto-code-rover/qwen3-32b": 0.016
   },
   {
-    "totalTokens": 0.042567,
-    "auto-code-rover/gpt-4o-mini": 0.07
+    "totalTokens": 0.019864,
+    "auto-code-rover/qwen3-32b": 0.018
   },
   {
-    "totalTokens": 0.042695,
-    "auto-code-rover/gpt-4o-mini": 0.07
+    "totalTokens": 0.020326,
+    "auto-code-rover/qwen3-32b": 0.02
   },
   {
-    "totalTokens": 0.04312,
-    "auto-code-rover/gpt-4o-mini": 0.07
+    "totalTokens": 0.021791,
+    "auto-code-rover/qwen3-32b": 0.022
   },
   {
-    "totalTokens": 0.043498,
-    "auto-code-rover/gpt-4o-mini": 0.07
+    "totalTokens": 0.021818,
+    "auto-code-rover/qwen3-32b": 0.022
   },
   {
-    "totalTokens": 0.043799,
-    "auto-code-rover/gpt-4o-mini": 0.07
+    "totalTokens": 0.022527,
+    "auto-code-rover/qwen3-32b": 0.022
   },
   {
-    "totalTokens": 0.045272,
-    "auto-code-rover/gpt-4o-mini": 0.07
+    "totalTokens": 0.024887,
+    "auto-code-rover/qwen3-32b": 0.024
   },
   {
-    "totalTokens": 0.045335,
-    "auto-code-rover/gpt-4o-mini": 0.07
+    "totalTokens": 0.026199,
+    "auto-code-rover/qwen3-32b": 0.024
   },
   {
-    "totalTokens": 0.046703,
-    "auto-code-rover/gpt-4o-mini": 0.07
+    "totalTokens": 0.026205,
+    "auto-code-rover/qwen3-32b": 0.026
   },
   {
-    "totalTokens": 0.047124,
-    "auto-code-rover/gpt-4o-mini": 0.072
+    "totalTokens": 0.029159,
+    "auto-code-rover/qwen3-32b": 0.026
   },
   {
-    "totalTokens": 0.047217,
-    "auto-code-rover/gpt-4o-mini": 0.072
+    "totalTokens": 0.0317,
+    "auto-code-rover/qwen3-32b": 0.026
   },
   {
-    "totalTokens": 0.04764,
-    "auto-code-rover/gpt-4o-mini": 0.072
+    "totalTokens": 0.031791,
+    "auto-code-rover/qwen3-32b": 0.026
   },
   {
-    "totalTokens": 0.047786,
-    "auto-code-rover/gpt-4o-mini": 0.072
+    "totalTokens": 0.032351,
+    "auto-code-rover/qwen3-32b": 0.026
   },
   {
-    "totalTokens": 0.049181,
-    "auto-code-rover/gpt-4o-mini": 0.072
+    "totalTokens": 0.033289,
+    "auto-code-rover/qwen3-32b": 0.026
   },
   {
-    "totalTokens": 0.049191,
-    "auto-code-rover/gpt-4o-mini": 0.072
+    "totalTokens": 0.034408,
+    "auto-code-rover/qwen3-32b": 0.026
   },
   {
-    "totalTokens": 0.049584,
-    "auto-code-rover/gpt-4o-mini": 0.074
+    "totalTokens": 0.037087,
+    "auto-code-rover/qwen3-32b": 0.028
   },
   {
-    "totalTokens": 0.051559,
-    "auto-code-rover/gpt-4o-mini": 0.074
+    "totalTokens": 0.040228,
+    "auto-code-rover/qwen3-32b": 0.028
   },
   {
-    "totalTokens": 0.051782,
-    "auto-code-rover/gpt-4o-mini": 0.074
+    "totalTokens": 0.043917,
+    "auto-code-rover/qwen3-32b": 0.028
   },
   {
-    "totalTokens": 0.052302,
-    "auto-code-rover/gpt-4o-mini": 0.074
+    "totalTokens": 0.051912,
+    "auto-code-rover/qwen3-32b": 0.028
   },
   {
-    "totalTokens": 0.052467,
-    "auto-code-rover/gpt-4o-mini": 0.074
+    "totalTokens": 0.054434,
+    "auto-code-rover/qwen3-32b": 0.028
   },
   {
-    "totalTokens": 0.052554,
-    "auto-code-rover/gpt-4o-mini": 0.074
+    "totalTokens": 0.055381,
+    "auto-code-rover/qwen3-32b": 0.03
   },
   {
-    "totalTokens": 0.052746,
-    "auto-code-rover/gpt-4o-mini": 0.074
+    "totalTokens": 0.05743,
+    "auto-code-rover/qwen3-32b": 0.03
   },
   {
-    "totalTokens": 0.053109,
-    "auto-code-rover/gpt-4o-mini": 0.074
+    "totalTokens": 0.062207,
+    "auto-code-rover/qwen3-32b": 0.03
   },
   {
-    "totalTokens": 0.053176,
-    "auto-code-rover/gpt-4o-mini": 0.076
+    "totalTokens": 0.065709,
+    "auto-code-rover/qwen3-32b": 0.032
   },
   {
-    "totalTokens": 0.054239,
-    "auto-code-rover/gpt-4o-mini": 0.078
+    "totalTokens": 0.073288,
+    "auto-code-rover/qwen3-32b": 0.034
   },
   {
-    "totalTokens": 0.056076,
-    "auto-code-rover/gpt-4o-mini": 0.08
+    "totalTokens": 0.078002,
+    "auto-code-rover/qwen3-32b": 0.034
   },
   {
-    "totalTokens": 0.056115,
-    "auto-code-rover/gpt-4o-mini": 0.08
+    "totalTokens": 0.082352,
+    "auto-code-rover/qwen3-32b": 0.034
   },
   {
-    "totalTokens": 0.056555,
-    "auto-code-rover/gpt-4o-mini": 0.08
+    "totalTokens": 0.089938,
+    "auto-code-rover/qwen3-32b": 0.036
   },
   {
-    "totalTokens": 0.056766,
-    "auto-code-rover/gpt-4o-mini": 0.08
+    "totalTokens": 0.093922,
+    "auto-code-rover/qwen3-32b": 0.036
   },
   {
-    "totalTokens": 0.057336,
-    "auto-code-rover/gpt-4o-mini": 0.08
+    "totalTokens": 0.099804,
+    "auto-code-rover/qwen3-32b": 0.036
   },
   {
-    "totalTokens": 0.057567,
-    "auto-code-rover/gpt-4o-mini": 0.08
+    "totalTokens": 0.129283,
+    "auto-code-rover/qwen3-32b": 0.036
   },
   {
-    "totalTokens": 0.057736,
-    "auto-code-rover/gpt-4o-mini": 0.08
+    "totalTokens": 0.136424,
+    "auto-code-rover/qwen3-32b": 0.038
   },
   {
-    "totalTokens": 0.060567,
-    "auto-code-rover/gpt-4o-mini": 0.08
+    "totalTokens": 0.16257,
+    "auto-code-rover/qwen3-32b": 0.038
   },
   {
-    "totalTokens": 0.061316,
-    "auto-code-rover/gpt-4o-mini": 0.08
+    "totalTokens": 0.192978,
+    "auto-code-rover/qwen3-32b": 0.038
   },
   {
-    "totalTokens": 0.06149,
-    "auto-code-rover/gpt-4o-mini": 0.08
+    "totalTokens": 0.274544,
+    "auto-code-rover/qwen3-32b": 0.038
   },
   {
-    "totalTokens": 0.06193,
-    "auto-code-rover/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 0.062088,
-    "auto-code-rover/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 0.062952,
-    "auto-code-rover/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 0.064132,
-    "auto-code-rover/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 0.064297,
-    "auto-code-rover/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 0.064538,
-    "auto-code-rover/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 0.06523,
-    "auto-code-rover/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 0.066353,
-    "auto-code-rover/gpt-4o-mini": 0.082
-  },
-  {
-    "totalTokens": 0.067888,
-    "auto-code-rover/gpt-4o-mini": 0.084
-  },
-  {
-    "totalTokens": 0.067905,
-    "auto-code-rover/gpt-4o-mini": 0.084
-  },
-  {
-    "totalTokens": 0.068197,
-    "auto-code-rover/gpt-4o-mini": 0.086
-  },
-  {
-    "totalTokens": 0.068341,
-    "auto-code-rover/gpt-4o-mini": 0.086
-  },
-  {
-    "totalTokens": 0.068791,
-    "auto-code-rover/gpt-4o-mini": 0.086
-  },
-  {
-    "totalTokens": 0.069342,
-    "auto-code-rover/gpt-4o-mini": 0.088
-  },
-  {
-    "totalTokens": 0.07017,
-    "auto-code-rover/gpt-4o-mini": 0.088
-  },
-  {
-    "totalTokens": 0.071558,
-    "auto-code-rover/gpt-4o-mini": 0.088
-  },
-  {
-    "totalTokens": 0.071902,
-    "auto-code-rover/gpt-4o-mini": 0.088
-  },
-  {
-    "totalTokens": 0.072576,
-    "auto-code-rover/gpt-4o-mini": 0.09
-  },
-  {
-    "totalTokens": 0.074212,
-    "auto-code-rover/gpt-4o-mini": 0.09
-  },
-  {
-    "totalTokens": 0.074925,
-    "auto-code-rover/gpt-4o-mini": 0.09
-  },
-  {
-    "totalTokens": 0.075289,
-    "auto-code-rover/gpt-4o-mini": 0.09
-  },
-  {
-    "totalTokens": 0.075796,
-    "auto-code-rover/gpt-4o-mini": 0.09
-  },
-  {
-    "totalTokens": 0.076602,
-    "auto-code-rover/gpt-4o-mini": 0.092
-  },
-  {
-    "totalTokens": 0.077,
-    "auto-code-rover/gpt-4o-mini": 0.092
-  },
-  {
-    "totalTokens": 0.077765,
-    "auto-code-rover/gpt-4o-mini": 0.092
-  },
-  {
-    "totalTokens": 0.078054,
-    "auto-code-rover/gpt-4o-mini": 0.094
-  },
-  {
-    "totalTokens": 0.079215,
-    "auto-code-rover/gpt-4o-mini": 0.094
-  },
-  {
-    "totalTokens": 0.079649,
-    "auto-code-rover/gpt-4o-mini": 0.094
-  },
-  {
-    "totalTokens": 0.080824,
-    "auto-code-rover/gpt-4o-mini": 0.094
-  },
-  {
-    "totalTokens": 0.080908,
-    "auto-code-rover/gpt-4o-mini": 0.094
-  },
-  {
-    "totalTokens": 0.081198,
-    "auto-code-rover/gpt-4o-mini": 0.096
-  },
-  {
-    "totalTokens": 0.082192,
-    "auto-code-rover/gpt-4o-mini": 0.096
-  },
-  {
-    "totalTokens": 0.083966,
-    "auto-code-rover/gpt-4o-mini": 0.096
-  },
-  {
-    "totalTokens": 0.084569,
-    "auto-code-rover/gpt-4o-mini": 0.096
-  },
-  {
-    "totalTokens": 0.087276,
-    "auto-code-rover/gpt-4o-mini": 0.096
-  },
-  {
-    "totalTokens": 0.087286,
-    "auto-code-rover/gpt-4o-mini": 0.096
-  },
-  {
-    "totalTokens": 0.088678,
-    "auto-code-rover/gpt-4o-mini": 0.096
-  },
-  {
-    "totalTokens": 0.089027,
-    "auto-code-rover/gpt-4o-mini": 0.096
-  },
-  {
-    "totalTokens": 0.090031,
-    "auto-code-rover/gpt-4o-mini": 0.096
-  },
-  {
-    "totalTokens": 0.09365,
-    "auto-code-rover/gpt-4o-mini": 0.096
-  },
-  {
-    "totalTokens": 0.095367,
-    "auto-code-rover/gpt-4o-mini": 0.096
-  },
-  {
-    "totalTokens": 0.097391,
-    "auto-code-rover/gpt-4o-mini": 0.096
-  },
-  {
-    "totalTokens": 0.098241,
-    "auto-code-rover/gpt-4o-mini": 0.096
-  },
-  {
-    "totalTokens": 0.100209,
-    "auto-code-rover/gpt-4o-mini": 0.096
-  },
-  {
-    "totalTokens": 0.100748,
-    "auto-code-rover/gpt-4o-mini": 0.098
-  },
-  {
-    "totalTokens": 0.103207,
-    "auto-code-rover/gpt-4o-mini": 0.098
-  },
-  {
-    "totalTokens": 0.103981,
-    "auto-code-rover/gpt-4o-mini": 0.098
-  },
-  {
-    "totalTokens": 0.105019,
-    "auto-code-rover/gpt-4o-mini": 0.098
-  },
-  {
-    "totalTokens": 0.105227,
-    "auto-code-rover/gpt-4o-mini": 0.098
-  },
-  {
-    "totalTokens": 0.105784,
-    "auto-code-rover/gpt-4o-mini": 0.098
-  },
-  {
-    "totalTokens": 0.108175,
-    "auto-code-rover/gpt-4o-mini": 0.098
-  },
-  {
-    "totalTokens": 0.112015,
-    "auto-code-rover/gpt-4o-mini": 0.098
-  },
-  {
-    "totalTokens": 0.116274,
-    "auto-code-rover/gpt-4o-mini": 0.098
-  },
-  {
-    "totalTokens": 0.119011,
-    "auto-code-rover/gpt-4o-mini": 0.098
-  },
-  {
-    "totalTokens": 0.119909,
-    "auto-code-rover/gpt-4o-mini": 0.098
-  },
-  {
-    "totalTokens": 0.123258,
-    "auto-code-rover/gpt-4o-mini": 0.098
-  },
-  {
-    "totalTokens": 0.12702,
-    "auto-code-rover/gpt-4o-mini": 0.1
-  },
-  {
-    "totalTokens": 0.127519,
-    "auto-code-rover/gpt-4o-mini": 0.102
-  },
-  {
-    "totalTokens": 0.131329,
-    "auto-code-rover/gpt-4o-mini": 0.102
-  },
-  {
-    "totalTokens": 0.134432,
-    "auto-code-rover/gpt-4o-mini": 0.102
-  },
-  {
-    "totalTokens": 0.137604,
-    "auto-code-rover/gpt-4o-mini": 0.102
-  },
-  {
-    "totalTokens": 0.139187,
-    "auto-code-rover/gpt-4o-mini": 0.102
-  },
-  {
-    "totalTokens": 0.141038,
-    "auto-code-rover/gpt-4o-mini": 0.102
-  },
-  {
-    "totalTokens": 0.141803,
-    "auto-code-rover/gpt-4o-mini": 0.104
-  },
-  {
-    "totalTokens": 0.141967,
-    "auto-code-rover/gpt-4o-mini": 0.104
-  },
-  {
-    "totalTokens": 0.145372,
-    "auto-code-rover/gpt-4o-mini": 0.104
-  },
-  {
-    "totalTokens": 0.149998,
-    "auto-code-rover/gpt-4o-mini": 0.104
-  },
-  {
-    "totalTokens": 0.150087,
-    "auto-code-rover/gpt-4o-mini": 0.104
-  },
-  {
-    "totalTokens": 0.1512,
-    "auto-code-rover/gpt-4o-mini": 0.106
-  },
-  {
-    "totalTokens": 0.153281,
-    "auto-code-rover/gpt-4o-mini": 0.106
-  },
-  {
-    "totalTokens": 0.154753,
-    "auto-code-rover/gpt-4o-mini": 0.108
-  },
-  {
-    "totalTokens": 0.156672,
-    "auto-code-rover/gpt-4o-mini": 0.108
-  },
-  {
-    "totalTokens": 0.158456,
-    "auto-code-rover/gpt-4o-mini": 0.11
-  },
-  {
-    "totalTokens": 0.160623,
-    "auto-code-rover/gpt-4o-mini": 0.11
-  },
-  {
-    "totalTokens": 0.161616,
-    "auto-code-rover/gpt-4o-mini": 0.11
-  },
-  {
-    "totalTokens": 0.162213,
-    "auto-code-rover/gpt-4o-mini": 0.11
-  },
-  {
-    "totalTokens": 0.164011,
-    "auto-code-rover/gpt-4o-mini": 0.112
-  },
-  {
-    "totalTokens": 0.164186,
-    "auto-code-rover/gpt-4o-mini": 0.112
-  },
-  {
-    "totalTokens": 0.165119,
-    "auto-code-rover/gpt-4o-mini": 0.114
-  },
-  {
-    "totalTokens": 0.166264,
-    "auto-code-rover/gpt-4o-mini": 0.114
-  },
-  {
-    "totalTokens": 0.175634,
-    "auto-code-rover/gpt-4o-mini": 0.114
-  },
-  {
-    "totalTokens": 0.177836,
-    "auto-code-rover/gpt-4o-mini": 0.114
-  },
-  {
-    "totalTokens": 0.180148,
-    "auto-code-rover/gpt-4o-mini": 0.114
-  },
-  {
-    "totalTokens": 0.181621,
-    "auto-code-rover/gpt-4o-mini": 0.114
-  },
-  {
-    "totalTokens": 0.192629,
-    "auto-code-rover/gpt-4o-mini": 0.114
-  },
-  {
-    "totalTokens": 0.193656,
-    "auto-code-rover/gpt-4o-mini": 0.114
-  },
-  {
-    "totalTokens": 0.196253,
-    "auto-code-rover/gpt-4o-mini": 0.114
-  },
-  {
-    "totalTokens": 0.196565,
-    "auto-code-rover/gpt-4o-mini": 0.114
-  },
-  {
-    "totalTokens": 0.197082,
-    "auto-code-rover/gpt-4o-mini": 0.114
-  },
-  {
-    "totalTokens": 0.198402,
-    "auto-code-rover/gpt-4o-mini": 0.114
-  },
-  {
-    "totalTokens": 0.201798,
-    "auto-code-rover/gpt-4o-mini": 0.114
-  },
-  {
-    "totalTokens": 0.203516,
-    "auto-code-rover/gpt-4o-mini": 0.114
-  },
-  {
-    "totalTokens": 0.203638,
-    "auto-code-rover/gpt-4o-mini": 0.114
-  },
-  {
-    "totalTokens": 0.204425,
-    "auto-code-rover/gpt-4o-mini": 0.114
-  },
-  {
-    "totalTokens": 0.217392,
-    "auto-code-rover/gpt-4o-mini": 0.114
-  },
-  {
-    "totalTokens": 0.220671,
-    "auto-code-rover/gpt-4o-mini": 0.114
-  },
-  {
-    "totalTokens": 0.222991,
-    "auto-code-rover/gpt-4o-mini": 0.114
-  },
-  {
-    "totalTokens": 0.223818,
-    "auto-code-rover/gpt-4o-mini": 0.114
-  },
-  {
-    "totalTokens": 0.226132,
-    "auto-code-rover/gpt-4o-mini": 0.114
-  },
-  {
-    "totalTokens": 0.227352,
-    "auto-code-rover/gpt-4o-mini": 0.114
-  },
-  {
-    "totalTokens": 0.231182,
-    "auto-code-rover/gpt-4o-mini": 0.114
-  },
-  {
-    "totalTokens": 0.232185,
-    "auto-code-rover/gpt-4o-mini": 0.114
-  },
-  {
-    "totalTokens": 0.234258,
-    "auto-code-rover/gpt-4o-mini": 0.114
-  },
-  {
-    "totalTokens": 0.246874,
-    "auto-code-rover/gpt-4o-mini": 0.114
-  },
-  {
-    "totalTokens": 0.27805,
-    "auto-code-rover/gpt-4o-mini": 0.114
-  },
-  {
-    "totalTokens": 0.283056,
-    "auto-code-rover/gpt-4o-mini": 0.114
-  },
-  {
-    "totalTokens": 0.283824,
-    "auto-code-rover/gpt-4o-mini": 0.114
-  },
-  {
-    "totalTokens": 0.284161,
-    "auto-code-rover/gpt-4o-mini": 0.114
-  },
-  {
-    "totalTokens": 0.287861,
-    "auto-code-rover/gpt-4o-mini": 0.114
-  },
-  {
-    "totalTokens": 0.29855,
-    "auto-code-rover/gpt-4o-mini": 0.114
-  },
-  {
-    "totalTokens": 0.306809,
-    "auto-code-rover/gpt-4o-mini": 0.114
-  },
-  {
-    "totalTokens": 0.311743,
-    "auto-code-rover/gpt-4o-mini": 0.114
-  },
-  {
-    "totalTokens": 0.311935,
-    "auto-code-rover/gpt-4o-mini": 0.114
-  },
-  {
-    "totalTokens": 0.315983,
-    "auto-code-rover/gpt-4o-mini": 0.114
-  },
-  {
-    "totalTokens": 0.318569,
-    "auto-code-rover/gpt-4o-mini": 0.114
-  },
-  {
-    "totalTokens": 0.320924,
-    "auto-code-rover/gpt-4o-mini": 0.114
-  },
-  {
-    "totalTokens": 0.323659,
-    "auto-code-rover/gpt-4o-mini": 0.114
-  },
-  {
-    "totalTokens": 0.327715,
-    "auto-code-rover/gpt-4o-mini": 0.114
-  },
-  {
-    "totalTokens": 0.328437,
-    "auto-code-rover/gpt-4o-mini": 0.114
-  },
-  {
-    "totalTokens": 0.329177,
-    "auto-code-rover/gpt-4o-mini": 0.114
-  },
-  {
-    "totalTokens": 0.336001,
-    "auto-code-rover/gpt-4o-mini": 0.114
-  },
-  {
-    "totalTokens": 0.34034,
-    "auto-code-rover/gpt-4o-mini": 0.114
-  },
-  {
-    "totalTokens": 0.34201,
-    "auto-code-rover/gpt-4o-mini": 0.114
-  },
-  {
-    "totalTokens": 0.35204,
-    "auto-code-rover/gpt-4o-mini": 0.114
-  },
-  {
-    "totalTokens": 0.352455,
-    "auto-code-rover/gpt-4o-mini": 0.114
-  },
-  {
-    "totalTokens": 0.355548,
-    "auto-code-rover/gpt-4o-mini": 0.114
-  },
-  {
-    "totalTokens": 0.356412,
-    "auto-code-rover/gpt-4o-mini": 0.116
-  },
-  {
-    "totalTokens": 0.357119,
-    "auto-code-rover/gpt-4o-mini": 0.116
-  },
-  {
-    "totalTokens": 0.362884,
-    "auto-code-rover/gpt-4o-mini": 0.118
-  },
-  {
-    "totalTokens": 0.366603,
-    "auto-code-rover/gpt-4o-mini": 0.118
-  },
-  {
-    "totalTokens": 0.367157,
-    "auto-code-rover/gpt-4o-mini": 0.118
-  },
-  {
-    "totalTokens": 0.368777,
-    "auto-code-rover/gpt-4o-mini": 0.118
-  },
-  {
-    "totalTokens": 0.372401,
-    "auto-code-rover/gpt-4o-mini": 0.118
-  },
-  {
-    "totalTokens": 0.376246,
-    "auto-code-rover/gpt-4o-mini": 0.12
-  },
-  {
-    "totalTokens": 0.376278,
-    "auto-code-rover/gpt-4o-mini": 0.12
-  },
-  {
-    "totalTokens": 0.377254,
-    "auto-code-rover/gpt-4o-mini": 0.12
-  },
-  {
-    "totalTokens": 0.38498,
-    "auto-code-rover/gpt-4o-mini": 0.12
-  },
-  {
-    "totalTokens": 0.38855,
-    "auto-code-rover/gpt-4o-mini": 0.12
-  },
-  {
-    "totalTokens": 0.392406,
-    "auto-code-rover/gpt-4o-mini": 0.12
-  },
-  {
-    "totalTokens": 0.396857,
-    "auto-code-rover/gpt-4o-mini": 0.12
-  },
-  {
-    "totalTokens": 0.400089,
-    "auto-code-rover/gpt-4o-mini": 0.12
-  },
-  {
-    "totalTokens": 0.400469,
-    "auto-code-rover/gpt-4o-mini": 0.122
-  },
-  {
-    "totalTokens": 0.40195,
-    "auto-code-rover/gpt-4o-mini": 0.122
-  },
-  {
-    "totalTokens": 0.405998,
-    "auto-code-rover/gpt-4o-mini": 0.122
-  },
-  {
-    "totalTokens": 0.408553,
-    "auto-code-rover/gpt-4o-mini": 0.124
-  },
-  {
-    "totalTokens": 0.40876,
-    "auto-code-rover/gpt-4o-mini": 0.124
-  },
-  {
-    "totalTokens": 0.411951,
-    "auto-code-rover/gpt-4o-mini": 0.124
-  },
-  {
-    "totalTokens": 0.41622,
-    "auto-code-rover/gpt-4o-mini": 0.126
-  },
-  {
-    "totalTokens": 0.418003,
-    "auto-code-rover/gpt-4o-mini": 0.126
-  },
-  {
-    "totalTokens": 0.420504,
-    "auto-code-rover/gpt-4o-mini": 0.128
-  },
-  {
-    "totalTokens": 0.424593,
-    "auto-code-rover/gpt-4o-mini": 0.128
-  },
-  {
-    "totalTokens": 0.425912,
-    "auto-code-rover/gpt-4o-mini": 0.128
-  },
-  {
-    "totalTokens": 0.431286,
-    "auto-code-rover/gpt-4o-mini": 0.128
-  },
-  {
-    "totalTokens": 0.443688,
-    "auto-code-rover/gpt-4o-mini": 0.13
-  },
-  {
-    "totalTokens": 0.446175,
-    "auto-code-rover/gpt-4o-mini": 0.13
-  },
-  {
-    "totalTokens": 0.446856,
-    "auto-code-rover/gpt-4o-mini": 0.13
-  },
-  {
-    "totalTokens": 0.452462,
-    "auto-code-rover/gpt-4o-mini": 0.13
-  },
-  {
-    "totalTokens": 0.453658,
-    "auto-code-rover/gpt-4o-mini": 0.13
-  },
-  {
-    "totalTokens": 0.456331,
-    "auto-code-rover/gpt-4o-mini": 0.132
-  },
-  {
-    "totalTokens": 0.46741,
-    "auto-code-rover/gpt-4o-mini": 0.132
-  },
-  {
-    "totalTokens": 0.468045,
-    "auto-code-rover/gpt-4o-mini": 0.132
-  },
-  {
-    "totalTokens": 0.470759,
-    "auto-code-rover/gpt-4o-mini": 0.134
-  },
-  {
-    "totalTokens": 0.472734,
-    "auto-code-rover/gpt-4o-mini": 0.134
-  },
-  {
-    "totalTokens": 0.474666,
-    "auto-code-rover/gpt-4o-mini": 0.134
-  },
-  {
-    "totalTokens": 0.488277,
-    "auto-code-rover/gpt-4o-mini": 0.134
-  },
-  {
-    "totalTokens": 0.489401,
-    "auto-code-rover/gpt-4o-mini": 0.134
-  },
-  {
-    "totalTokens": 0.496194,
-    "auto-code-rover/gpt-4o-mini": 0.134
-  },
-  {
-    "totalTokens": 0.496484,
-    "auto-code-rover/gpt-4o-mini": 0.136
-  },
-  {
-    "totalTokens": 0.5014,
-    "auto-code-rover/gpt-4o-mini": 0.138
-  },
-  {
-    "totalTokens": 0.510087,
-    "auto-code-rover/gpt-4o-mini": 0.138
-  },
-  {
-    "totalTokens": 0.51149,
-    "auto-code-rover/gpt-4o-mini": 0.138
-  },
-  {
-    "totalTokens": 0.514764,
-    "auto-code-rover/gpt-4o-mini": 0.138
-  },
-  {
-    "totalTokens": 0.516543,
-    "auto-code-rover/gpt-4o-mini": 0.138
-  },
-  {
-    "totalTokens": 0.524437,
-    "auto-code-rover/gpt-4o-mini": 0.138
-  },
-  {
-    "totalTokens": 0.531607,
-    "auto-code-rover/gpt-4o-mini": 0.138
-  },
-  {
-    "totalTokens": 0.534323,
-    "auto-code-rover/gpt-4o-mini": 0.138
-  },
-  {
-    "totalTokens": 0.53702,
-    "auto-code-rover/gpt-4o-mini": 0.138
-  },
-  {
-    "totalTokens": 0.539838,
-    "auto-code-rover/gpt-4o-mini": 0.138
-  },
-  {
-    "totalTokens": 0.551066,
-    "auto-code-rover/gpt-4o-mini": 0.138
-  },
-  {
-    "totalTokens": 0.551206,
-    "auto-code-rover/gpt-4o-mini": 0.138
-  },
-  {
-    "totalTokens": 0.557878,
-    "auto-code-rover/gpt-4o-mini": 0.138
-  },
-  {
-    "totalTokens": 0.558588,
-    "auto-code-rover/gpt-4o-mini": 0.138
-  },
-  {
-    "totalTokens": 0.559755,
-    "auto-code-rover/gpt-4o-mini": 0.138
-  },
-  {
-    "totalTokens": 0.577175,
-    "auto-code-rover/gpt-4o-mini": 0.138
-  },
-  {
-    "totalTokens": 0.579241,
-    "auto-code-rover/gpt-4o-mini": 0.138
-  },
-  {
-    "totalTokens": 0.579432,
-    "auto-code-rover/gpt-4o-mini": 0.138
-  },
-  {
-    "totalTokens": 0.582598,
-    "auto-code-rover/gpt-4o-mini": 0.138
-  },
-  {
-    "totalTokens": 0.584493,
-    "auto-code-rover/gpt-4o-mini": 0.138
-  },
-  {
-    "totalTokens": 0.587783,
-    "auto-code-rover/gpt-4o-mini": 0.138
-  },
-  {
-    "totalTokens": 0.588622,
-    "auto-code-rover/gpt-4o-mini": 0.138
-  },
-  {
-    "totalTokens": 0.595747,
-    "auto-code-rover/gpt-4o-mini": 0.138
-  },
-  {
-    "totalTokens": 0.600441,
-    "auto-code-rover/gpt-4o-mini": 0.138
-  },
-  {
-    "totalTokens": 0.601293,
-    "auto-code-rover/gpt-4o-mini": 0.138
-  },
-  {
-    "totalTokens": 0.608916,
-    "auto-code-rover/gpt-4o-mini": 0.138
-  },
-  {
-    "totalTokens": 0.610799,
-    "auto-code-rover/gpt-4o-mini": 0.138
-  },
-  {
-    "totalTokens": 0.627269,
-    "auto-code-rover/gpt-4o-mini": 0.138
-  },
-  {
-    "totalTokens": 0.633219,
-    "auto-code-rover/gpt-4o-mini": 0.138
-  },
-  {
-    "totalTokens": 0.640074,
-    "auto-code-rover/gpt-4o-mini": 0.138
-  },
-  {
-    "totalTokens": 0.641531,
-    "auto-code-rover/gpt-4o-mini": 0.138
-  },
-  {
-    "totalTokens": 0.660039,
-    "auto-code-rover/gpt-4o-mini": 0.138
-  },
-  {
-    "totalTokens": 0.664664,
-    "auto-code-rover/gpt-4o-mini": 0.138
-  },
-  {
-    "totalTokens": 0.664721,
-    "auto-code-rover/gpt-4o-mini": 0.138
-  },
-  {
-    "totalTokens": 0.678532,
-    "auto-code-rover/gpt-4o-mini": 0.138
-  },
-  {
-    "totalTokens": 0.690344,
-    "auto-code-rover/gpt-4o-mini": 0.138
-  },
-  {
-    "totalTokens": 0.691066,
-    "auto-code-rover/gpt-4o-mini": 0.138
-  },
-  {
-    "totalTokens": 0.701803,
-    "auto-code-rover/gpt-4o-mini": 0.138
-  },
-  {
-    "totalTokens": 0.708416,
-    "auto-code-rover/gpt-4o-mini": 0.138
-  },
-  {
-    "totalTokens": 0.711735,
-    "auto-code-rover/gpt-4o-mini": 0.138
-  },
-  {
-    "totalTokens": 0.721254,
-    "auto-code-rover/gpt-4o-mini": 0.138
-  },
-  {
-    "totalTokens": 0.722909,
-    "auto-code-rover/gpt-4o-mini": 0.138
-  },
-  {
-    "totalTokens": 0.724458,
-    "auto-code-rover/gpt-4o-mini": 0.138
-  },
-  {
-    "totalTokens": 0.725798,
-    "auto-code-rover/gpt-4o-mini": 0.138
-  },
-  {
-    "totalTokens": 0.73502,
-    "auto-code-rover/gpt-4o-mini": 0.138
-  },
-  {
-    "totalTokens": 0.762199,
-    "auto-code-rover/gpt-4o-mini": 0.138
-  },
-  {
-    "totalTokens": 0.774014,
-    "auto-code-rover/gpt-4o-mini": 0.138
-  },
-  {
-    "totalTokens": 0.77772,
-    "auto-code-rover/gpt-4o-mini": 0.14
-  },
-  {
-    "totalTokens": 0.787581,
-    "auto-code-rover/gpt-4o-mini": 0.14
-  },
-  {
-    "totalTokens": 0.824861,
-    "auto-code-rover/gpt-4o-mini": 0.14
-  },
-  {
-    "totalTokens": 0.829132,
-    "auto-code-rover/gpt-4o-mini": 0.14
-  },
-  {
-    "totalTokens": 0.830513,
-    "auto-code-rover/gpt-4o-mini": 0.14
-  },
-  {
-    "totalTokens": 0.835184,
-    "auto-code-rover/gpt-4o-mini": 0.14
-  },
-  {
-    "totalTokens": 0.847699,
-    "auto-code-rover/gpt-4o-mini": 0.142
-  },
-  {
-    "totalTokens": 0.880796,
-    "auto-code-rover/gpt-4o-mini": 0.142
-  },
-  {
-    "totalTokens": 0.884804,
-    "auto-code-rover/gpt-4o-mini": 0.142
-  },
-  {
-    "totalTokens": 0.888471,
-    "auto-code-rover/gpt-4o-mini": 0.142
-  },
-  {
-    "totalTokens": 0.900432,
-    "auto-code-rover/gpt-4o-mini": 0.142
-  },
-  {
-    "totalTokens": 0.900812,
-    "auto-code-rover/gpt-4o-mini": 0.142
-  },
-  {
-    "totalTokens": 0.922045,
-    "auto-code-rover/gpt-4o-mini": 0.142
-  },
-  {
-    "totalTokens": 0.923051,
-    "auto-code-rover/gpt-4o-mini": 0.142
-  },
-  {
-    "totalTokens": 0.928932,
-    "auto-code-rover/gpt-4o-mini": 0.142
-  },
-  {
-    "totalTokens": 0.931438,
-    "auto-code-rover/gpt-4o-mini": 0.142
-  },
-  {
-    "totalTokens": 0.941346,
-    "auto-code-rover/gpt-4o-mini": 0.142
-  },
-  {
-    "totalTokens": 0.951467,
-    "auto-code-rover/gpt-4o-mini": 0.142
-  },
-  {
-    "totalTokens": 0.964963,
-    "auto-code-rover/gpt-4o-mini": 0.142
-  },
-  {
-    "totalTokens": 0.96773,
-    "auto-code-rover/gpt-4o-mini": 0.142
-  },
-  {
-    "totalTokens": 0.973046,
-    "auto-code-rover/gpt-4o-mini": 0.142
-  },
-  {
-    "totalTokens": 0.992562,
-    "auto-code-rover/gpt-4o-mini": 0.142
-  },
-  {
-    "totalTokens": 0.999667,
-    "auto-code-rover/gpt-4o-mini": 0.142
-  },
-  {
-    "totalTokens": 1.003753,
-    "auto-code-rover/gpt-4o-mini": 0.142
-  },
-  {
-    "totalTokens": 1.01094,
-    "auto-code-rover/gpt-4o-mini": 0.142
-  },
-  {
-    "totalTokens": 1.023056,
-    "auto-code-rover/gpt-4o-mini": 0.142
-  },
-  {
-    "totalTokens": 1.06038,
-    "auto-code-rover/gpt-4o-mini": 0.142
-  },
-  {
-    "totalTokens": 1.069621,
-    "auto-code-rover/gpt-4o-mini": 0.142
-  },
-  {
-    "totalTokens": 1.075184,
-    "auto-code-rover/gpt-4o-mini": 0.142
-  },
-  {
-    "totalTokens": 1.090273,
-    "auto-code-rover/gpt-4o-mini": 0.142
-  },
-  {
-    "totalTokens": 1.097999,
-    "auto-code-rover/gpt-4o-mini": 0.142
-  },
-  {
-    "totalTokens": 1.100988,
-    "auto-code-rover/gpt-4o-mini": 0.142
-  },
-  {
-    "totalTokens": 1.141466,
-    "auto-code-rover/gpt-4o-mini": 0.142
-  },
-  {
-    "totalTokens": 1.153787,
-    "auto-code-rover/gpt-4o-mini": 0.142
-  },
-  {
-    "totalTokens": 1.171864,
-    "auto-code-rover/gpt-4o-mini": 0.142
-  },
-  {
-    "totalTokens": 1.180522,
-    "auto-code-rover/gpt-4o-mini": 0.142
-  },
-  {
-    "totalTokens": 1.189206,
-    "auto-code-rover/gpt-4o-mini": 0.142
-  },
-  {
-    "totalTokens": 1.189892,
-    "auto-code-rover/gpt-4o-mini": 0.142
-  },
-  {
-    "totalTokens": 1.215042,
-    "auto-code-rover/gpt-4o-mini": 0.142
-  },
-  {
-    "totalTokens": 1.225443,
-    "auto-code-rover/gpt-4o-mini": 0.142
-  },
-  {
-    "totalTokens": 1.225863,
-    "auto-code-rover/gpt-4o-mini": 0.142
-  },
-  {
-    "totalTokens": 1.235025,
-    "auto-code-rover/gpt-4o-mini": 0.142
-  },
-  {
-    "totalTokens": 1.245481,
-    "auto-code-rover/gpt-4o-mini": 0.142
-  },
-  {
-    "totalTokens": 1.250575,
-    "auto-code-rover/gpt-4o-mini": 0.142
-  },
-  {
-    "totalTokens": 1.276442,
-    "auto-code-rover/gpt-4o-mini": 0.142
-  },
-  {
-    "totalTokens": 1.371163,
-    "auto-code-rover/gpt-4o-mini": 0.142
-  },
-  {
-    "totalTokens": 1.376597,
-    "auto-code-rover/gpt-4o-mini": 0.142
-  },
-  {
-    "totalTokens": 1.407245,
-    "auto-code-rover/gpt-4o-mini": 0.142
-  },
-  {
-    "totalTokens": 1.409703,
-    "auto-code-rover/gpt-4o-mini": 0.144
-  },
-  {
-    "totalTokens": 1.411886,
-    "auto-code-rover/gpt-4o-mini": 0.146
-  },
-  {
-    "totalTokens": 1.424988,
-    "auto-code-rover/gpt-4o-mini": 0.146
-  },
-  {
-    "totalTokens": 1.43307,
-    "auto-code-rover/gpt-4o-mini": 0.146
-  },
-  {
-    "totalTokens": 1.477735,
-    "auto-code-rover/gpt-4o-mini": 0.146
-  },
-  {
-    "totalTokens": 1.525467,
-    "auto-code-rover/gpt-4o-mini": 0.146
-  },
-  {
-    "totalTokens": 1.55164,
-    "auto-code-rover/gpt-4o-mini": 0.146
-  },
-  {
-    "totalTokens": 1.555633,
-    "auto-code-rover/gpt-4o-mini": 0.146
-  },
-  {
-    "totalTokens": 1.576594,
-    "auto-code-rover/gpt-4o-mini": 0.146
-  },
-  {
-    "totalTokens": 1.578282,
-    "auto-code-rover/gpt-4o-mini": 0.146
-  },
-  {
-    "totalTokens": 1.654834,
-    "auto-code-rover/gpt-4o-mini": 0.146
-  },
-  {
-    "totalTokens": 1.75665,
-    "auto-code-rover/gpt-4o-mini": 0.146
-  },
-  {
-    "totalTokens": 1.774798,
-    "auto-code-rover/gpt-4o-mini": 0.146
-  },
-  {
-    "totalTokens": 1.777732,
-    "auto-code-rover/gpt-4o-mini": 0.146
-  },
-  {
-    "totalTokens": 1.805051,
-    "auto-code-rover/gpt-4o-mini": 0.146
-  },
-  {
-    "totalTokens": 1.864479,
-    "auto-code-rover/gpt-4o-mini": 0.146
-  },
-  {
-    "totalTokens": 1.872149,
-    "auto-code-rover/gpt-4o-mini": 0.146
-  },
-  {
-    "totalTokens": 2.072261,
-    "auto-code-rover/gpt-4o-mini": 0.146
-  },
-  {
-    "totalTokens": 2.116977,
-    "auto-code-rover/gpt-4o-mini": 0.146
-  },
-  {
-    "totalTokens": 2.160145,
-    "auto-code-rover/gpt-4o-mini": 0.146
-  },
-  {
-    "totalTokens": 2.182062,
-    "auto-code-rover/gpt-4o-mini": 0.146
-  },
-  {
-    "totalTokens": 2.239799,
-    "auto-code-rover/gpt-4o-mini": 0.146
-  },
-  {
-    "totalTokens": 2.32565,
-    "auto-code-rover/gpt-4o-mini": 0.146
-  },
-  {
-    "totalTokens": 2.430005,
-    "auto-code-rover/gpt-4o-mini": 0.146
-  },
-  {
-    "totalTokens": 2.53012,
-    "auto-code-rover/gpt-4o-mini": 0.146
-  },
-  {
-    "totalTokens": 2.929378,
-    "auto-code-rover/gpt-4o-mini": 0.146
-  },
-  {
-    "totalTokens": 2.967751,
-    "auto-code-rover/gpt-4o-mini": 0.146
-  },
-  {
-    "totalTokens": 3.039203,
-    "auto-code-rover/gpt-4o-mini": 0.146
-  },
-  {
-    "totalTokens": 3.697098,
-    "auto-code-rover/gpt-4o-mini": 0.146
-  },
-  {
-    "totalTokens": 4.254674,
-    "auto-code-rover/gpt-4o-mini": 0.146
-  },
-  {
-    "totalTokens": 4.625196,
-    "auto-code-rover/gpt-4o-mini": 0.148
+    "totalTokens": 0.325729,
+    "auto-code-rover/qwen3-32b": 0.038
   },
   {
     "totalTokens": 0,
@@ -14988,2000 +13588,572 @@
     "auto-code-rover/qwq32b": 0.248
   },
   {
-    "totalTokens": 0.042986,
-    "openhands/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0.042986,
-    "openhands/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0.051203,
-    "openhands/gpt-4o-mini": 0
-  },
-  {
-    "totalTokens": 0.054816,
+    "totalTokens": 0.050096,
     "openhands/gpt-4o-mini": 0.002
   },
   {
-    "totalTokens": 0.057782,
+    "totalTokens": 0.096224,
     "openhands/gpt-4o-mini": 0.002
   },
   {
-    "totalTokens": 0.058292,
+    "totalTokens": 0.101045,
     "openhands/gpt-4o-mini": 0.002
   },
   {
-    "totalTokens": 0.065643,
+    "totalTokens": 0.118096,
     "openhands/gpt-4o-mini": 0.002
   },
   {
-    "totalTokens": 0.065651,
+    "totalTokens": 0.121552,
     "openhands/gpt-4o-mini": 0.002
   },
   {
-    "totalTokens": 0.075097,
+    "totalTokens": 0.126209,
     "openhands/gpt-4o-mini": 0.002
   },
   {
-    "totalTokens": 0.078211,
+    "totalTokens": 0.162618,
     "openhands/gpt-4o-mini": 0.002
   },
   {
-    "totalTokens": 0.078351,
+    "totalTokens": 0.166673,
     "openhands/gpt-4o-mini": 0.002
   },
   {
-    "totalTokens": 0.078455,
+    "totalTokens": 0.168496,
     "openhands/gpt-4o-mini": 0.002
   },
   {
-    "totalTokens": 0.083385,
+    "totalTokens": 0.169586,
     "openhands/gpt-4o-mini": 0.002
   },
   {
-    "totalTokens": 0.084226,
+    "totalTokens": 0.191508,
     "openhands/gpt-4o-mini": 0.002
   },
   {
-    "totalTokens": 0.085516,
+    "totalTokens": 0.194899,
     "openhands/gpt-4o-mini": 0.002
   },
   {
-    "totalTokens": 0.08794,
+    "totalTokens": 0.256076,
     "openhands/gpt-4o-mini": 0.002
   },
   {
-    "totalTokens": 0.10094,
+    "totalTokens": 0.259679,
     "openhands/gpt-4o-mini": 0.002
   },
   {
-    "totalTokens": 0.103504,
+    "totalTokens": 0.268272,
+    "openhands/gpt-4o-mini": 0.002
+  },
+  {
+    "totalTokens": 0.307687,
+    "openhands/gpt-4o-mini": 0.002
+  },
+  {
+    "totalTokens": 0.332197,
+    "openhands/gpt-4o-mini": 0.002
+  },
+  {
+    "totalTokens": 0.383202,
+    "openhands/gpt-4o-mini": 0.002
+  },
+  {
+    "totalTokens": 0.417267,
+    "openhands/gpt-4o-mini": 0.002
+  },
+  {
+    "totalTokens": 0.417373,
+    "openhands/gpt-4o-mini": 0.002
+  },
+  {
+    "totalTokens": 0.419243,
     "openhands/gpt-4o-mini": 0.004
   },
   {
-    "totalTokens": 0.106818,
-    "openhands/gpt-4o-mini": 0.004
-  },
-  {
-    "totalTokens": 0.107233,
-    "openhands/gpt-4o-mini": 0.004
-  },
-  {
-    "totalTokens": 0.11011,
-    "openhands/gpt-4o-mini": 0.004
-  },
-  {
-    "totalTokens": 0.111306,
-    "openhands/gpt-4o-mini": 0.004
-  },
-  {
-    "totalTokens": 0.116517,
-    "openhands/gpt-4o-mini": 0.004
-  },
-  {
-    "totalTokens": 0.117687,
-    "openhands/gpt-4o-mini": 0.004
-  },
-  {
-    "totalTokens": 0.118797,
-    "openhands/gpt-4o-mini": 0.004
-  },
-  {
-    "totalTokens": 0.119002,
-    "openhands/gpt-4o-mini": 0.004
-  },
-  {
-    "totalTokens": 0.124484,
+    "totalTokens": 0.431201,
     "openhands/gpt-4o-mini": 0.006
   },
   {
-    "totalTokens": 0.125333,
+    "totalTokens": 0.460498,
+    "openhands/gpt-4o-mini": 0.006
+  },
+  {
+    "totalTokens": 0.492156,
+    "openhands/gpt-4o-mini": 0.006
+  },
+  {
+    "totalTokens": 0.56732,
+    "openhands/gpt-4o-mini": 0.006
+  },
+  {
+    "totalTokens": 0.60417,
+    "openhands/gpt-4o-mini": 0.006
+  },
+  {
+    "totalTokens": 0.630343,
     "openhands/gpt-4o-mini": 0.008
   },
   {
-    "totalTokens": 0.125857,
+    "totalTokens": 0.668282,
     "openhands/gpt-4o-mini": 0.008
   },
   {
-    "totalTokens": 0.125944,
+    "totalTokens": 0.725488,
     "openhands/gpt-4o-mini": 0.008
   },
   {
-    "totalTokens": 0.126349,
+    "totalTokens": 0.803135,
     "openhands/gpt-4o-mini": 0.008
   },
   {
-    "totalTokens": 0.126683,
-    "openhands/gpt-4o-mini": 0.008
-  },
-  {
-    "totalTokens": 0.130202,
-    "openhands/gpt-4o-mini": 0.008
-  },
-  {
-    "totalTokens": 0.131488,
+    "totalTokens": 0.821938,
     "openhands/gpt-4o-mini": 0.01
   },
   {
-    "totalTokens": 0.132675,
+    "totalTokens": 0.857991,
     "openhands/gpt-4o-mini": 0.01
   },
   {
-    "totalTokens": 0.133743,
+    "totalTokens": 1.260287,
     "openhands/gpt-4o-mini": 0.01
   },
   {
-    "totalTokens": 0.134912,
+    "totalTokens": 1.271965,
     "openhands/gpt-4o-mini": 0.01
   },
   {
-    "totalTokens": 0.136476,
+    "totalTokens": 1.276413,
     "openhands/gpt-4o-mini": 0.01
   },
   {
-    "totalTokens": 0.137845,
+    "totalTokens": 1.397946,
     "openhands/gpt-4o-mini": 0.01
   },
   {
-    "totalTokens": 0.139565,
-    "openhands/gpt-4o-mini": 0.012
+    "totalTokens": 1.646902,
+    "openhands/gpt-4o-mini": 0.01
   },
   {
-    "totalTokens": 0.140193,
-    "openhands/gpt-4o-mini": 0.012
+    "totalTokens": 1.737336,
+    "openhands/gpt-4o-mini": 0.01
   },
   {
-    "totalTokens": 0.14356,
-    "openhands/gpt-4o-mini": 0.012
+    "totalTokens": 1.796991,
+    "openhands/gpt-4o-mini": 0.01
   },
   {
-    "totalTokens": 0.144149,
-    "openhands/gpt-4o-mini": 0.012
+    "totalTokens": 1.827972,
+    "openhands/gpt-4o-mini": 0.01
   },
   {
-    "totalTokens": 0.144564,
-    "openhands/gpt-4o-mini": 0.012
+    "totalTokens": 2.930488,
+    "openhands/gpt-4o-mini": 0.01
   },
   {
-    "totalTokens": 0.146186,
-    "openhands/gpt-4o-mini": 0.014
+    "totalTokens": 4.032134,
+    "openhands/gpt-4o-mini": 0.01
   },
   {
-    "totalTokens": 0.146921,
-    "openhands/gpt-4o-mini": 0.014
+    "totalTokens": 0.057695,
+    "openhands/llama33": 0
   },
   {
-    "totalTokens": 0.154697,
-    "openhands/gpt-4o-mini": 0.014
+    "totalTokens": 0.058418,
+    "openhands/llama33": 0
   },
   {
-    "totalTokens": 0.154768,
-    "openhands/gpt-4o-mini": 0.014
+    "totalTokens": 0.084012,
+    "openhands/llama33": 0
   },
   {
-    "totalTokens": 0.154821,
-    "openhands/gpt-4o-mini": 0.016
+    "totalTokens": 0.091804,
+    "openhands/llama33": 0
   },
   {
-    "totalTokens": 0.156019,
-    "openhands/gpt-4o-mini": 0.016
+    "totalTokens": 0.092107,
+    "openhands/llama33": 0.002
   },
   {
-    "totalTokens": 0.156998,
-    "openhands/gpt-4o-mini": 0.016
+    "totalTokens": 0.122686,
+    "openhands/llama33": 0.002
   },
   {
-    "totalTokens": 0.157197,
-    "openhands/gpt-4o-mini": 0.016
+    "totalTokens": 0.128535,
+    "openhands/llama33": 0.002
   },
   {
-    "totalTokens": 0.163895,
-    "openhands/gpt-4o-mini": 0.016
+    "totalTokens": 0.133033,
+    "openhands/llama33": 0.004
   },
   {
-    "totalTokens": 0.166605,
-    "openhands/gpt-4o-mini": 0.016
+    "totalTokens": 0.167042,
+    "openhands/llama33": 0.006
   },
   {
-    "totalTokens": 0.168376,
-    "openhands/gpt-4o-mini": 0.016
+    "totalTokens": 0.1807,
+    "openhands/llama33": 0.006
   },
   {
-    "totalTokens": 0.168841,
-    "openhands/gpt-4o-mini": 0.016
+    "totalTokens": 0.184362,
+    "openhands/llama33": 0.008
   },
   {
-    "totalTokens": 0.171337,
-    "openhands/gpt-4o-mini": 0.016
+    "totalTokens": 0.192901,
+    "openhands/llama33": 0.01
   },
   {
-    "totalTokens": 0.171442,
-    "openhands/gpt-4o-mini": 0.016
+    "totalTokens": 0.198302,
+    "openhands/llama33": 0.012
   },
   {
-    "totalTokens": 0.174637,
-    "openhands/gpt-4o-mini": 0.016
+    "totalTokens": 0.204095,
+    "openhands/llama33": 0.012
   },
   {
-    "totalTokens": 0.176642,
-    "openhands/gpt-4o-mini": 0.018
+    "totalTokens": 0.204499,
+    "openhands/llama33": 0.012
   },
   {
-    "totalTokens": 0.178581,
-    "openhands/gpt-4o-mini": 0.018
+    "totalTokens": 0.214548,
+    "openhands/llama33": 0.012
   },
   {
-    "totalTokens": 0.179322,
-    "openhands/gpt-4o-mini": 0.018
+    "totalTokens": 0.236006,
+    "openhands/llama33": 0.012
   },
   {
-    "totalTokens": 0.17972,
-    "openhands/gpt-4o-mini": 0.018
+    "totalTokens": 0.264675,
+    "openhands/llama33": 0.012
   },
   {
-    "totalTokens": 0.184668,
-    "openhands/gpt-4o-mini": 0.018
+    "totalTokens": 0.266166,
+    "openhands/llama33": 0.014
   },
   {
-    "totalTokens": 0.185323,
-    "openhands/gpt-4o-mini": 0.018
+    "totalTokens": 0.288184,
+    "openhands/llama33": 0.014
   },
   {
-    "totalTokens": 0.185601,
-    "openhands/gpt-4o-mini": 0.018
+    "totalTokens": 0.289582,
+    "openhands/llama33": 0.014
   },
   {
-    "totalTokens": 0.186408,
-    "openhands/gpt-4o-mini": 0.02
+    "totalTokens": 0.34065,
+    "openhands/llama33": 0.014
   },
   {
-    "totalTokens": 0.189924,
-    "openhands/gpt-4o-mini": 0.02
+    "totalTokens": 0.343467,
+    "openhands/llama33": 0.016
   },
   {
-    "totalTokens": 0.192767,
-    "openhands/gpt-4o-mini": 0.02
+    "totalTokens": 0.366707,
+    "openhands/llama33": 0.018
   },
   {
-    "totalTokens": 0.194304,
-    "openhands/gpt-4o-mini": 0.02
+    "totalTokens": 0.367592,
+    "openhands/llama33": 0.018
   },
   {
-    "totalTokens": 0.19625,
-    "openhands/gpt-4o-mini": 0.022
+    "totalTokens": 0.378257,
+    "openhands/llama33": 0.018
   },
   {
-    "totalTokens": 0.196744,
-    "openhands/gpt-4o-mini": 0.022
+    "totalTokens": 0.413436,
+    "openhands/llama33": 0.02
   },
   {
-    "totalTokens": 0.197565,
-    "openhands/gpt-4o-mini": 0.022
+    "totalTokens": 0.610152,
+    "openhands/llama33": 0.02
   },
   {
-    "totalTokens": 0.198251,
-    "openhands/gpt-4o-mini": 0.022
+    "totalTokens": 0.746138,
+    "openhands/llama33": 0.02
   },
   {
-    "totalTokens": 0.203411,
-    "openhands/gpt-4o-mini": 0.022
+    "totalTokens": 0.764218,
+    "openhands/llama33": 0.02
   },
   {
-    "totalTokens": 0.205638,
-    "openhands/gpt-4o-mini": 0.022
+    "totalTokens": 0.847989,
+    "openhands/llama33": 0.02
   },
   {
-    "totalTokens": 0.206988,
-    "openhands/gpt-4o-mini": 0.022
+    "totalTokens": 1.02445,
+    "openhands/llama33": 0.02
   },
   {
-    "totalTokens": 0.209449,
-    "openhands/gpt-4o-mini": 0.022
+    "totalTokens": 1.026609,
+    "openhands/llama33": 0.02
   },
   {
-    "totalTokens": 0.210545,
-    "openhands/gpt-4o-mini": 0.022
+    "totalTokens": 1.117209,
+    "openhands/llama33": 0.02
   },
   {
-    "totalTokens": 0.210575,
-    "openhands/gpt-4o-mini": 0.022
+    "totalTokens": 1.131623,
+    "openhands/llama33": 0.02
   },
   {
-    "totalTokens": 0.212299,
-    "openhands/gpt-4o-mini": 0.024
+    "totalTokens": 1.194558,
+    "openhands/llama33": 0.02
   },
   {
-    "totalTokens": 0.21288,
-    "openhands/gpt-4o-mini": 0.024
+    "totalTokens": 1.369918,
+    "openhands/llama33": 0.02
   },
   {
-    "totalTokens": 0.214538,
-    "openhands/gpt-4o-mini": 0.024
+    "totalTokens": 1.444452,
+    "openhands/llama33": 0.02
   },
   {
-    "totalTokens": 0.214874,
-    "openhands/gpt-4o-mini": 0.024
+    "totalTokens": 1.487986,
+    "openhands/llama33": 0.02
   },
   {
-    "totalTokens": 0.215229,
-    "openhands/gpt-4o-mini": 0.024
+    "totalTokens": 1.551529,
+    "openhands/llama33": 0.02
   },
   {
-    "totalTokens": 0.21572,
-    "openhands/gpt-4o-mini": 0.026
+    "totalTokens": 1.667928,
+    "openhands/llama33": 0.02
   },
   {
-    "totalTokens": 0.216332,
-    "openhands/gpt-4o-mini": 0.026
+    "totalTokens": 1.722317,
+    "openhands/llama33": 0.02
   },
   {
-    "totalTokens": 0.217713,
-    "openhands/gpt-4o-mini": 0.026
+    "totalTokens": 1.815669,
+    "openhands/llama33": 0.02
   },
   {
-    "totalTokens": 0.220337,
-    "openhands/gpt-4o-mini": 0.026
+    "totalTokens": 1.927237,
+    "openhands/llama33": 0.02
   },
   {
-    "totalTokens": 0.222175,
-    "openhands/gpt-4o-mini": 0.026
+    "totalTokens": 2.143293,
+    "openhands/llama33": 0.02
   },
   {
-    "totalTokens": 0.228497,
-    "openhands/gpt-4o-mini": 0.028
+    "totalTokens": 2.575293,
+    "openhands/llama33": 0.02
   },
   {
-    "totalTokens": 0.230069,
-    "openhands/gpt-4o-mini": 0.028
+    "totalTokens": 2.889054,
+    "openhands/llama33": 0.02
   },
   {
-    "totalTokens": 0.230209,
-    "openhands/gpt-4o-mini": 0.028
+    "totalTokens": 2.892124,
+    "openhands/llama33": 0.02
   },
   {
-    "totalTokens": 0.232008,
-    "openhands/gpt-4o-mini": 0.028
+    "totalTokens": 3.340177,
+    "openhands/llama33": 0.02
   },
   {
-    "totalTokens": 0.234761,
-    "openhands/gpt-4o-mini": 0.028
+    "totalTokens": 3.695914,
+    "openhands/llama33": 0.02
   },
   {
-    "totalTokens": 0.234769,
-    "openhands/gpt-4o-mini": 0.028
+    "totalTokens": 0.018494,
+    "openhands/qwen3-32b": 0.002
   },
   {
-    "totalTokens": 0.235522,
-    "openhands/gpt-4o-mini": 0.028
+    "totalTokens": 0.023639,
+    "openhands/qwen3-32b": 0.002
   },
   {
-    "totalTokens": 0.235527,
-    "openhands/gpt-4o-mini": 0.028
+    "totalTokens": 0.024353,
+    "openhands/qwen3-32b": 0.004
   },
   {
-    "totalTokens": 0.235551,
-    "openhands/gpt-4o-mini": 0.028
+    "totalTokens": 0.028123,
+    "openhands/qwen3-32b": 0.006
   },
   {
-    "totalTokens": 0.240324,
-    "openhands/gpt-4o-mini": 0.028
+    "totalTokens": 0.034647,
+    "openhands/qwen3-32b": 0.006
   },
   {
-    "totalTokens": 0.241464,
-    "openhands/gpt-4o-mini": 0.028
+    "totalTokens": 0.034974,
+    "openhands/qwen3-32b": 0.008
   },
   {
-    "totalTokens": 0.242177,
-    "openhands/gpt-4o-mini": 0.028
+    "totalTokens": 0.035429,
+    "openhands/qwen3-32b": 0.008
   },
   {
-    "totalTokens": 0.244752,
-    "openhands/gpt-4o-mini": 0.028
+    "totalTokens": 0.038067,
+    "openhands/qwen3-32b": 0.01
   },
   {
-    "totalTokens": 0.246381,
-    "openhands/gpt-4o-mini": 0.028
+    "totalTokens": 0.040645,
+    "openhands/qwen3-32b": 0.012
   },
   {
-    "totalTokens": 0.250995,
-    "openhands/gpt-4o-mini": 0.028
+    "totalTokens": 0.042705,
+    "openhands/qwen3-32b": 0.012
   },
   {
-    "totalTokens": 0.250997,
-    "openhands/gpt-4o-mini": 0.028
+    "totalTokens": 0.043005,
+    "openhands/qwen3-32b": 0.014
   },
   {
-    "totalTokens": 0.253022,
-    "openhands/gpt-4o-mini": 0.028
+    "totalTokens": 0.050878,
+    "openhands/qwen3-32b": 0.014
   },
   {
-    "totalTokens": 0.258578,
-    "openhands/gpt-4o-mini": 0.028
+    "totalTokens": 0.055246,
+    "openhands/qwen3-32b": 0.014
   },
   {
-    "totalTokens": 0.259614,
-    "openhands/gpt-4o-mini": 0.03
+    "totalTokens": 0.057361,
+    "openhands/qwen3-32b": 0.014
   },
   {
-    "totalTokens": 0.264712,
-    "openhands/gpt-4o-mini": 0.032
+    "totalTokens": 0.064125,
+    "openhands/qwen3-32b": 0.016
   },
   {
-    "totalTokens": 0.265998,
-    "openhands/gpt-4o-mini": 0.032
+    "totalTokens": 0.065752,
+    "openhands/qwen3-32b": 0.016
   },
   {
-    "totalTokens": 0.267117,
-    "openhands/gpt-4o-mini": 0.034
+    "totalTokens": 0.066292,
+    "openhands/qwen3-32b": 0.018
   },
   {
-    "totalTokens": 0.268164,
-    "openhands/gpt-4o-mini": 0.034
+    "totalTokens": 0.079493,
+    "openhands/qwen3-32b": 0.018
   },
   {
-    "totalTokens": 0.270754,
-    "openhands/gpt-4o-mini": 0.034
+    "totalTokens": 0.08977,
+    "openhands/qwen3-32b": 0.02
   },
   {
-    "totalTokens": 0.271954,
-    "openhands/gpt-4o-mini": 0.034
+    "totalTokens": 0.096,
+    "openhands/qwen3-32b": 0.02
   },
   {
-    "totalTokens": 0.27344,
-    "openhands/gpt-4o-mini": 0.034
+    "totalTokens": 0.104129,
+    "openhands/qwen3-32b": 0.022
   },
   {
-    "totalTokens": 0.278651,
-    "openhands/gpt-4o-mini": 0.034
+    "totalTokens": 0.147349,
+    "openhands/qwen3-32b": 0.022
   },
   {
-    "totalTokens": 0.2816,
-    "openhands/gpt-4o-mini": 0.034
+    "totalTokens": 0.148634,
+    "openhands/qwen3-32b": 0.024
   },
   {
-    "totalTokens": 0.281765,
-    "openhands/gpt-4o-mini": 0.034
+    "totalTokens": 0.150924,
+    "openhands/qwen3-32b": 0.026
   },
   {
-    "totalTokens": 0.283712,
-    "openhands/gpt-4o-mini": 0.034
+    "totalTokens": 0.15659,
+    "openhands/qwen3-32b": 0.026
   },
   {
-    "totalTokens": 0.284727,
-    "openhands/gpt-4o-mini": 0.034
+    "totalTokens": 0.182658,
+    "openhands/qwen3-32b": 0.026
   },
   {
-    "totalTokens": 0.28829,
-    "openhands/gpt-4o-mini": 0.034
+    "totalTokens": 0.197041,
+    "openhands/qwen3-32b": 0.026
   },
   {
-    "totalTokens": 0.289471,
-    "openhands/gpt-4o-mini": 0.034
+    "totalTokens": 0.205756,
+    "openhands/qwen3-32b": 0.026
   },
   {
-    "totalTokens": 0.291745,
-    "openhands/gpt-4o-mini": 0.034
+    "totalTokens": 0.231475,
+    "openhands/qwen3-32b": 0.026
   },
   {
-    "totalTokens": 0.292109,
-    "openhands/gpt-4o-mini": 0.034
+    "totalTokens": 0.250687,
+    "openhands/qwen3-32b": 0.028
   },
   {
-    "totalTokens": 0.292279,
-    "openhands/gpt-4o-mini": 0.034
+    "totalTokens": 0.252446,
+    "openhands/qwen3-32b": 0.03
   },
   {
-    "totalTokens": 0.298873,
-    "openhands/gpt-4o-mini": 0.034
+    "totalTokens": 0.275948,
+    "openhands/qwen3-32b": 0.03
   },
   {
-    "totalTokens": 0.299119,
-    "openhands/gpt-4o-mini": 0.034
+    "totalTokens": 0.303684,
+    "openhands/qwen3-32b": 0.03
   },
   {
-    "totalTokens": 0.302673,
-    "openhands/gpt-4o-mini": 0.034
+    "totalTokens": 0.317452,
+    "openhands/qwen3-32b": 0.03
   },
   {
-    "totalTokens": 0.306801,
-    "openhands/gpt-4o-mini": 0.034
+    "totalTokens": 0.323715,
+    "openhands/qwen3-32b": 0.03
   },
   {
-    "totalTokens": 0.307413,
-    "openhands/gpt-4o-mini": 0.034
+    "totalTokens": 0.338243,
+    "openhands/qwen3-32b": 0.03
   },
   {
-    "totalTokens": 0.314261,
-    "openhands/gpt-4o-mini": 0.034
+    "totalTokens": 0.360896,
+    "openhands/qwen3-32b": 0.03
   },
   {
-    "totalTokens": 0.314841,
-    "openhands/gpt-4o-mini": 0.034
+    "totalTokens": 0.361081,
+    "openhands/qwen3-32b": 0.03
   },
   {
-    "totalTokens": 0.318436,
-    "openhands/gpt-4o-mini": 0.034
+    "totalTokens": 0.440209,
+    "openhands/qwen3-32b": 0.03
   },
   {
-    "totalTokens": 0.318964,
-    "openhands/gpt-4o-mini": 0.034
+    "totalTokens": 0.445749,
+    "openhands/qwen3-32b": 0.03
   },
   {
-    "totalTokens": 0.322607,
-    "openhands/gpt-4o-mini": 0.034
+    "totalTokens": 0.486005,
+    "openhands/qwen3-32b": 0.03
   },
   {
-    "totalTokens": 0.326131,
-    "openhands/gpt-4o-mini": 0.034
+    "totalTokens": 0.519187,
+    "openhands/qwen3-32b": 0.03
   },
   {
-    "totalTokens": 0.329761,
-    "openhands/gpt-4o-mini": 0.036
+    "totalTokens": 0.572167,
+    "openhands/qwen3-32b": 0.03
   },
   {
-    "totalTokens": 0.332313,
-    "openhands/gpt-4o-mini": 0.036
+    "totalTokens": 0.660922,
+    "openhands/qwen3-32b": 0.03
   },
   {
-    "totalTokens": 0.332696,
-    "openhands/gpt-4o-mini": 0.038
+    "totalTokens": 0.845187,
+    "openhands/qwen3-32b": 0.032
   },
   {
-    "totalTokens": 0.333682,
-    "openhands/gpt-4o-mini": 0.038
+    "totalTokens": 1.051319,
+    "openhands/qwen3-32b": 0.032
   },
   {
-    "totalTokens": 0.334917,
-    "openhands/gpt-4o-mini": 0.038
+    "totalTokens": 1.118878,
+    "openhands/qwen3-32b": 0.032
   },
   {
-    "totalTokens": 0.348831,
-    "openhands/gpt-4o-mini": 0.038
+    "totalTokens": 1.222442,
+    "openhands/qwen3-32b": 0.034
   },
   {
-    "totalTokens": 0.349926,
-    "openhands/gpt-4o-mini": 0.038
+    "totalTokens": 1.487759,
+    "openhands/qwen3-32b": 0.034
   },
   {
-    "totalTokens": 0.353052,
-    "openhands/gpt-4o-mini": 0.038
-  },
-  {
-    "totalTokens": 0.353282,
-    "openhands/gpt-4o-mini": 0.038
-  },
-  {
-    "totalTokens": 0.355555,
-    "openhands/gpt-4o-mini": 0.038
-  },
-  {
-    "totalTokens": 0.355988,
-    "openhands/gpt-4o-mini": 0.04
-  },
-  {
-    "totalTokens": 0.357108,
-    "openhands/gpt-4o-mini": 0.04
-  },
-  {
-    "totalTokens": 0.357707,
-    "openhands/gpt-4o-mini": 0.04
-  },
-  {
-    "totalTokens": 0.360104,
-    "openhands/gpt-4o-mini": 0.04
-  },
-  {
-    "totalTokens": 0.360485,
-    "openhands/gpt-4o-mini": 0.04
-  },
-  {
-    "totalTokens": 0.361989,
-    "openhands/gpt-4o-mini": 0.04
-  },
-  {
-    "totalTokens": 0.364329,
-    "openhands/gpt-4o-mini": 0.04
-  },
-  {
-    "totalTokens": 0.365414,
-    "openhands/gpt-4o-mini": 0.04
-  },
-  {
-    "totalTokens": 0.366671,
-    "openhands/gpt-4o-mini": 0.04
-  },
-  {
-    "totalTokens": 0.367069,
-    "openhands/gpt-4o-mini": 0.04
-  },
-  {
-    "totalTokens": 0.368735,
-    "openhands/gpt-4o-mini": 0.04
-  },
-  {
-    "totalTokens": 0.373306,
-    "openhands/gpt-4o-mini": 0.04
-  },
-  {
-    "totalTokens": 0.375017,
-    "openhands/gpt-4o-mini": 0.04
-  },
-  {
-    "totalTokens": 0.377758,
-    "openhands/gpt-4o-mini": 0.04
-  },
-  {
-    "totalTokens": 0.380862,
-    "openhands/gpt-4o-mini": 0.04
-  },
-  {
-    "totalTokens": 0.381197,
-    "openhands/gpt-4o-mini": 0.04
-  },
-  {
-    "totalTokens": 0.381945,
-    "openhands/gpt-4o-mini": 0.04
-  },
-  {
-    "totalTokens": 0.382514,
-    "openhands/gpt-4o-mini": 0.04
-  },
-  {
-    "totalTokens": 0.387517,
-    "openhands/gpt-4o-mini": 0.04
-  },
-  {
-    "totalTokens": 0.388847,
-    "openhands/gpt-4o-mini": 0.04
-  },
-  {
-    "totalTokens": 0.389003,
-    "openhands/gpt-4o-mini": 0.04
-  },
-  {
-    "totalTokens": 0.391782,
-    "openhands/gpt-4o-mini": 0.042
-  },
-  {
-    "totalTokens": 0.392312,
-    "openhands/gpt-4o-mini": 0.042
-  },
-  {
-    "totalTokens": 0.394145,
-    "openhands/gpt-4o-mini": 0.044
-  },
-  {
-    "totalTokens": 0.394651,
-    "openhands/gpt-4o-mini": 0.044
-  },
-  {
-    "totalTokens": 0.395714,
-    "openhands/gpt-4o-mini": 0.044
-  },
-  {
-    "totalTokens": 0.395848,
-    "openhands/gpt-4o-mini": 0.044
-  },
-  {
-    "totalTokens": 0.396666,
-    "openhands/gpt-4o-mini": 0.044
-  },
-  {
-    "totalTokens": 0.398437,
-    "openhands/gpt-4o-mini": 0.044
-  },
-  {
-    "totalTokens": 0.399396,
-    "openhands/gpt-4o-mini": 0.044
-  },
-  {
-    "totalTokens": 0.401497,
-    "openhands/gpt-4o-mini": 0.044
-  },
-  {
-    "totalTokens": 0.402086,
-    "openhands/gpt-4o-mini": 0.044
-  },
-  {
-    "totalTokens": 0.402816,
-    "openhands/gpt-4o-mini": 0.044
-  },
-  {
-    "totalTokens": 0.403158,
-    "openhands/gpt-4o-mini": 0.044
-  },
-  {
-    "totalTokens": 0.403934,
-    "openhands/gpt-4o-mini": 0.044
-  },
-  {
-    "totalTokens": 0.403975,
-    "openhands/gpt-4o-mini": 0.044
-  },
-  {
-    "totalTokens": 0.406006,
-    "openhands/gpt-4o-mini": 0.044
-  },
-  {
-    "totalTokens": 0.406187,
-    "openhands/gpt-4o-mini": 0.044
-  },
-  {
-    "totalTokens": 0.40757,
-    "openhands/gpt-4o-mini": 0.044
-  },
-  {
-    "totalTokens": 0.408113,
-    "openhands/gpt-4o-mini": 0.046
-  },
-  {
-    "totalTokens": 0.409728,
-    "openhands/gpt-4o-mini": 0.048
-  },
-  {
-    "totalTokens": 0.410381,
-    "openhands/gpt-4o-mini": 0.048
-  },
-  {
-    "totalTokens": 0.410661,
-    "openhands/gpt-4o-mini": 0.048
-  },
-  {
-    "totalTokens": 0.41324,
-    "openhands/gpt-4o-mini": 0.048
-  },
-  {
-    "totalTokens": 0.416111,
-    "openhands/gpt-4o-mini": 0.048
-  },
-  {
-    "totalTokens": 0.41694,
-    "openhands/gpt-4o-mini": 0.048
-  },
-  {
-    "totalTokens": 0.418782,
-    "openhands/gpt-4o-mini": 0.048
-  },
-  {
-    "totalTokens": 0.420023,
-    "openhands/gpt-4o-mini": 0.05
-  },
-  {
-    "totalTokens": 0.421009,
-    "openhands/gpt-4o-mini": 0.05
-  },
-  {
-    "totalTokens": 0.421249,
-    "openhands/gpt-4o-mini": 0.05
-  },
-  {
-    "totalTokens": 0.422949,
-    "openhands/gpt-4o-mini": 0.052
-  },
-  {
-    "totalTokens": 0.423242,
-    "openhands/gpt-4o-mini": 0.054
-  },
-  {
-    "totalTokens": 0.42777,
-    "openhands/gpt-4o-mini": 0.054
-  },
-  {
-    "totalTokens": 0.428202,
-    "openhands/gpt-4o-mini": 0.054
-  },
-  {
-    "totalTokens": 0.429968,
-    "openhands/gpt-4o-mini": 0.054
-  },
-  {
-    "totalTokens": 0.43249,
-    "openhands/gpt-4o-mini": 0.054
-  },
-  {
-    "totalTokens": 0.440054,
-    "openhands/gpt-4o-mini": 0.054
-  },
-  {
-    "totalTokens": 0.440957,
-    "openhands/gpt-4o-mini": 0.054
-  },
-  {
-    "totalTokens": 0.441374,
-    "openhands/gpt-4o-mini": 0.054
-  },
-  {
-    "totalTokens": 0.443126,
-    "openhands/gpt-4o-mini": 0.054
-  },
-  {
-    "totalTokens": 0.444022,
-    "openhands/gpt-4o-mini": 0.056
-  },
-  {
-    "totalTokens": 0.44468,
-    "openhands/gpt-4o-mini": 0.056
-  },
-  {
-    "totalTokens": 0.446786,
-    "openhands/gpt-4o-mini": 0.056
-  },
-  {
-    "totalTokens": 0.449625,
-    "openhands/gpt-4o-mini": 0.056
-  },
-  {
-    "totalTokens": 0.454422,
-    "openhands/gpt-4o-mini": 0.056
-  },
-  {
-    "totalTokens": 0.455801,
-    "openhands/gpt-4o-mini": 0.056
-  },
-  {
-    "totalTokens": 0.457568,
-    "openhands/gpt-4o-mini": 0.056
-  },
-  {
-    "totalTokens": 0.458039,
-    "openhands/gpt-4o-mini": 0.056
-  },
-  {
-    "totalTokens": 0.461367,
-    "openhands/gpt-4o-mini": 0.056
-  },
-  {
-    "totalTokens": 0.461736,
-    "openhands/gpt-4o-mini": 0.056
-  },
-  {
-    "totalTokens": 0.462528,
-    "openhands/gpt-4o-mini": 0.056
-  },
-  {
-    "totalTokens": 0.462692,
-    "openhands/gpt-4o-mini": 0.056
-  },
-  {
-    "totalTokens": 0.46572,
-    "openhands/gpt-4o-mini": 0.056
-  },
-  {
-    "totalTokens": 0.468165,
-    "openhands/gpt-4o-mini": 0.056
-  },
-  {
-    "totalTokens": 0.469122,
-    "openhands/gpt-4o-mini": 0.056
-  },
-  {
-    "totalTokens": 0.471382,
-    "openhands/gpt-4o-mini": 0.056
-  },
-  {
-    "totalTokens": 0.472848,
-    "openhands/gpt-4o-mini": 0.058
-  },
-  {
-    "totalTokens": 0.476319,
-    "openhands/gpt-4o-mini": 0.058
-  },
-  {
-    "totalTokens": 0.476971,
-    "openhands/gpt-4o-mini": 0.058
-  },
-  {
-    "totalTokens": 0.478277,
-    "openhands/gpt-4o-mini": 0.058
-  },
-  {
-    "totalTokens": 0.478326,
-    "openhands/gpt-4o-mini": 0.058
-  },
-  {
-    "totalTokens": 0.478861,
-    "openhands/gpt-4o-mini": 0.058
-  },
-  {
-    "totalTokens": 0.483547,
-    "openhands/gpt-4o-mini": 0.058
-  },
-  {
-    "totalTokens": 0.483612,
-    "openhands/gpt-4o-mini": 0.058
-  },
-  {
-    "totalTokens": 0.486075,
-    "openhands/gpt-4o-mini": 0.058
-  },
-  {
-    "totalTokens": 0.495268,
-    "openhands/gpt-4o-mini": 0.058
-  },
-  {
-    "totalTokens": 0.496957,
-    "openhands/gpt-4o-mini": 0.058
-  },
-  {
-    "totalTokens": 0.497111,
-    "openhands/gpt-4o-mini": 0.058
-  },
-  {
-    "totalTokens": 0.49812,
-    "openhands/gpt-4o-mini": 0.058
-  },
-  {
-    "totalTokens": 0.498735,
-    "openhands/gpt-4o-mini": 0.058
-  },
-  {
-    "totalTokens": 0.500285,
-    "openhands/gpt-4o-mini": 0.058
-  },
-  {
-    "totalTokens": 0.502256,
-    "openhands/gpt-4o-mini": 0.058
-  },
-  {
-    "totalTokens": 0.505004,
-    "openhands/gpt-4o-mini": 0.058
-  },
-  {
-    "totalTokens": 0.505455,
-    "openhands/gpt-4o-mini": 0.058
-  },
-  {
-    "totalTokens": 0.505597,
-    "openhands/gpt-4o-mini": 0.058
-  },
-  {
-    "totalTokens": 0.507736,
-    "openhands/gpt-4o-mini": 0.058
-  },
-  {
-    "totalTokens": 0.509485,
-    "openhands/gpt-4o-mini": 0.058
-  },
-  {
-    "totalTokens": 0.510212,
-    "openhands/gpt-4o-mini": 0.058
-  },
-  {
-    "totalTokens": 0.511107,
-    "openhands/gpt-4o-mini": 0.058
-  },
-  {
-    "totalTokens": 0.511271,
-    "openhands/gpt-4o-mini": 0.058
-  },
-  {
-    "totalTokens": 0.514459,
-    "openhands/gpt-4o-mini": 0.06
-  },
-  {
-    "totalTokens": 0.515685,
-    "openhands/gpt-4o-mini": 0.06
-  },
-  {
-    "totalTokens": 0.51572,
-    "openhands/gpt-4o-mini": 0.06
-  },
-  {
-    "totalTokens": 0.518871,
-    "openhands/gpt-4o-mini": 0.06
-  },
-  {
-    "totalTokens": 0.521019,
-    "openhands/gpt-4o-mini": 0.06
-  },
-  {
-    "totalTokens": 0.529502,
-    "openhands/gpt-4o-mini": 0.06
-  },
-  {
-    "totalTokens": 0.530981,
-    "openhands/gpt-4o-mini": 0.06
-  },
-  {
-    "totalTokens": 0.531554,
-    "openhands/gpt-4o-mini": 0.06
-  },
-  {
-    "totalTokens": 0.53188,
-    "openhands/gpt-4o-mini": 0.06
-  },
-  {
-    "totalTokens": 0.531927,
-    "openhands/gpt-4o-mini": 0.06
-  },
-  {
-    "totalTokens": 0.53567,
-    "openhands/gpt-4o-mini": 0.06
-  },
-  {
-    "totalTokens": 0.536113,
-    "openhands/gpt-4o-mini": 0.06
-  },
-  {
-    "totalTokens": 0.536147,
-    "openhands/gpt-4o-mini": 0.06
-  },
-  {
-    "totalTokens": 0.536343,
-    "openhands/gpt-4o-mini": 0.06
-  },
-  {
-    "totalTokens": 0.538785,
-    "openhands/gpt-4o-mini": 0.06
-  },
-  {
-    "totalTokens": 0.539004,
-    "openhands/gpt-4o-mini": 0.06
-  },
-  {
-    "totalTokens": 0.5395,
-    "openhands/gpt-4o-mini": 0.06
-  },
-  {
-    "totalTokens": 0.542708,
-    "openhands/gpt-4o-mini": 0.06
-  },
-  {
-    "totalTokens": 0.543943,
-    "openhands/gpt-4o-mini": 0.06
-  },
-  {
-    "totalTokens": 0.547335,
-    "openhands/gpt-4o-mini": 0.06
-  },
-  {
-    "totalTokens": 0.547635,
-    "openhands/gpt-4o-mini": 0.06
-  },
-  {
-    "totalTokens": 0.547879,
-    "openhands/gpt-4o-mini": 0.06
-  },
-  {
-    "totalTokens": 0.54952,
-    "openhands/gpt-4o-mini": 0.06
-  },
-  {
-    "totalTokens": 0.551281,
-    "openhands/gpt-4o-mini": 0.06
-  },
-  {
-    "totalTokens": 0.553601,
-    "openhands/gpt-4o-mini": 0.06
-  },
-  {
-    "totalTokens": 0.554109,
-    "openhands/gpt-4o-mini": 0.06
-  },
-  {
-    "totalTokens": 0.559501,
-    "openhands/gpt-4o-mini": 0.06
-  },
-  {
-    "totalTokens": 0.562838,
-    "openhands/gpt-4o-mini": 0.06
-  },
-  {
-    "totalTokens": 0.563081,
-    "openhands/gpt-4o-mini": 0.06
-  },
-  {
-    "totalTokens": 0.564955,
-    "openhands/gpt-4o-mini": 0.06
-  },
-  {
-    "totalTokens": 0.565379,
-    "openhands/gpt-4o-mini": 0.06
-  },
-  {
-    "totalTokens": 0.566708,
-    "openhands/gpt-4o-mini": 0.06
-  },
-  {
-    "totalTokens": 0.568391,
-    "openhands/gpt-4o-mini": 0.06
-  },
-  {
-    "totalTokens": 0.572493,
-    "openhands/gpt-4o-mini": 0.06
-  },
-  {
-    "totalTokens": 0.574613,
-    "openhands/gpt-4o-mini": 0.06
-  },
-  {
-    "totalTokens": 0.576275,
-    "openhands/gpt-4o-mini": 0.06
-  },
-  {
-    "totalTokens": 0.579681,
-    "openhands/gpt-4o-mini": 0.062
-  },
-  {
-    "totalTokens": 0.582523,
-    "openhands/gpt-4o-mini": 0.062
-  },
-  {
-    "totalTokens": 0.592063,
-    "openhands/gpt-4o-mini": 0.062
-  },
-  {
-    "totalTokens": 0.592952,
-    "openhands/gpt-4o-mini": 0.062
-  },
-  {
-    "totalTokens": 0.593131,
-    "openhands/gpt-4o-mini": 0.062
-  },
-  {
-    "totalTokens": 0.595896,
-    "openhands/gpt-4o-mini": 0.062
-  },
-  {
-    "totalTokens": 0.59607,
-    "openhands/gpt-4o-mini": 0.062
-  },
-  {
-    "totalTokens": 0.596583,
-    "openhands/gpt-4o-mini": 0.062
-  },
-  {
-    "totalTokens": 0.599751,
-    "openhands/gpt-4o-mini": 0.062
-  },
-  {
-    "totalTokens": 0.599763,
-    "openhands/gpt-4o-mini": 0.062
-  },
-  {
-    "totalTokens": 0.601803,
-    "openhands/gpt-4o-mini": 0.062
-  },
-  {
-    "totalTokens": 0.604837,
-    "openhands/gpt-4o-mini": 0.062
-  },
-  {
-    "totalTokens": 0.606072,
-    "openhands/gpt-4o-mini": 0.062
-  },
-  {
-    "totalTokens": 0.607108,
-    "openhands/gpt-4o-mini": 0.062
-  },
-  {
-    "totalTokens": 0.607448,
-    "openhands/gpt-4o-mini": 0.062
-  },
-  {
-    "totalTokens": 0.609981,
-    "openhands/gpt-4o-mini": 0.064
-  },
-  {
-    "totalTokens": 0.610475,
-    "openhands/gpt-4o-mini": 0.064
-  },
-  {
-    "totalTokens": 0.611464,
-    "openhands/gpt-4o-mini": 0.064
-  },
-  {
-    "totalTokens": 0.612063,
-    "openhands/gpt-4o-mini": 0.064
-  },
-  {
-    "totalTokens": 0.618485,
-    "openhands/gpt-4o-mini": 0.064
-  },
-  {
-    "totalTokens": 0.618807,
-    "openhands/gpt-4o-mini": 0.064
-  },
-  {
-    "totalTokens": 0.620313,
-    "openhands/gpt-4o-mini": 0.064
-  },
-  {
-    "totalTokens": 0.621668,
-    "openhands/gpt-4o-mini": 0.064
-  },
-  {
-    "totalTokens": 0.623477,
-    "openhands/gpt-4o-mini": 0.064
-  },
-  {
-    "totalTokens": 0.623843,
-    "openhands/gpt-4o-mini": 0.064
-  },
-  {
-    "totalTokens": 0.628052,
-    "openhands/gpt-4o-mini": 0.064
-  },
-  {
-    "totalTokens": 0.631784,
-    "openhands/gpt-4o-mini": 0.064
-  },
-  {
-    "totalTokens": 0.632059,
-    "openhands/gpt-4o-mini": 0.064
-  },
-  {
-    "totalTokens": 0.635839,
-    "openhands/gpt-4o-mini": 0.064
-  },
-  {
-    "totalTokens": 0.636379,
-    "openhands/gpt-4o-mini": 0.064
-  },
-  {
-    "totalTokens": 0.638167,
-    "openhands/gpt-4o-mini": 0.064
-  },
-  {
-    "totalTokens": 0.640308,
-    "openhands/gpt-4o-mini": 0.066
-  },
-  {
-    "totalTokens": 0.643298,
-    "openhands/gpt-4o-mini": 0.066
-  },
-  {
-    "totalTokens": 0.648755,
-    "openhands/gpt-4o-mini": 0.068
-  },
-  {
-    "totalTokens": 0.654004,
-    "openhands/gpt-4o-mini": 0.068
-  },
-  {
-    "totalTokens": 0.658207,
-    "openhands/gpt-4o-mini": 0.068
-  },
-  {
-    "totalTokens": 0.666937,
-    "openhands/gpt-4o-mini": 0.068
-  },
-  {
-    "totalTokens": 0.667513,
-    "openhands/gpt-4o-mini": 0.068
-  },
-  {
-    "totalTokens": 0.66894,
-    "openhands/gpt-4o-mini": 0.068
-  },
-  {
-    "totalTokens": 0.676445,
-    "openhands/gpt-4o-mini": 0.068
-  },
-  {
-    "totalTokens": 0.676604,
-    "openhands/gpt-4o-mini": 0.068
-  },
-  {
-    "totalTokens": 0.678697,
-    "openhands/gpt-4o-mini": 0.068
-  },
-  {
-    "totalTokens": 0.678871,
-    "openhands/gpt-4o-mini": 0.068
-  },
-  {
-    "totalTokens": 0.681608,
-    "openhands/gpt-4o-mini": 0.068
-  },
-  {
-    "totalTokens": 0.684798,
-    "openhands/gpt-4o-mini": 0.068
-  },
-  {
-    "totalTokens": 0.685254,
-    "openhands/gpt-4o-mini": 0.068
-  },
-  {
-    "totalTokens": 0.691445,
-    "openhands/gpt-4o-mini": 0.07
-  },
-  {
-    "totalTokens": 0.698311,
-    "openhands/gpt-4o-mini": 0.07
-  },
-  {
-    "totalTokens": 0.700025,
-    "openhands/gpt-4o-mini": 0.07
-  },
-  {
-    "totalTokens": 0.701279,
-    "openhands/gpt-4o-mini": 0.07
-  },
-  {
-    "totalTokens": 0.702142,
-    "openhands/gpt-4o-mini": 0.07
-  },
-  {
-    "totalTokens": 0.702656,
-    "openhands/gpt-4o-mini": 0.07
-  },
-  {
-    "totalTokens": 0.703121,
-    "openhands/gpt-4o-mini": 0.07
-  },
-  {
-    "totalTokens": 0.707669,
-    "openhands/gpt-4o-mini": 0.07
-  },
-  {
-    "totalTokens": 0.715062,
-    "openhands/gpt-4o-mini": 0.072
-  },
-  {
-    "totalTokens": 0.723243,
-    "openhands/gpt-4o-mini": 0.072
-  },
-  {
-    "totalTokens": 0.731247,
-    "openhands/gpt-4o-mini": 0.072
-  },
-  {
-    "totalTokens": 0.734027,
-    "openhands/gpt-4o-mini": 0.074
-  },
-  {
-    "totalTokens": 0.734967,
-    "openhands/gpt-4o-mini": 0.074
-  },
-  {
-    "totalTokens": 0.735649,
-    "openhands/gpt-4o-mini": 0.074
-  },
-  {
-    "totalTokens": 0.741932,
-    "openhands/gpt-4o-mini": 0.074
-  },
-  {
-    "totalTokens": 0.746287,
-    "openhands/gpt-4o-mini": 0.074
-  },
-  {
-    "totalTokens": 0.7535,
-    "openhands/gpt-4o-mini": 0.074
-  },
-  {
-    "totalTokens": 0.754257,
-    "openhands/gpt-4o-mini": 0.074
-  },
-  {
-    "totalTokens": 0.754966,
-    "openhands/gpt-4o-mini": 0.074
-  },
-  {
-    "totalTokens": 0.758871,
-    "openhands/gpt-4o-mini": 0.074
-  },
-  {
-    "totalTokens": 0.760399,
-    "openhands/gpt-4o-mini": 0.074
-  },
-  {
-    "totalTokens": 0.766248,
-    "openhands/gpt-4o-mini": 0.074
-  },
-  {
-    "totalTokens": 0.768913,
-    "openhands/gpt-4o-mini": 0.074
-  },
-  {
-    "totalTokens": 0.769779,
-    "openhands/gpt-4o-mini": 0.074
-  },
-  {
-    "totalTokens": 0.773066,
-    "openhands/gpt-4o-mini": 0.074
-  },
-  {
-    "totalTokens": 0.773081,
-    "openhands/gpt-4o-mini": 0.074
-  },
-  {
-    "totalTokens": 0.776587,
-    "openhands/gpt-4o-mini": 0.074
-  },
-  {
-    "totalTokens": 0.777281,
-    "openhands/gpt-4o-mini": 0.074
-  },
-  {
-    "totalTokens": 0.777858,
-    "openhands/gpt-4o-mini": 0.074
-  },
-  {
-    "totalTokens": 0.778261,
-    "openhands/gpt-4o-mini": 0.074
-  },
-  {
-    "totalTokens": 0.783303,
-    "openhands/gpt-4o-mini": 0.074
-  },
-  {
-    "totalTokens": 0.793518,
-    "openhands/gpt-4o-mini": 0.074
-  },
-  {
-    "totalTokens": 0.803191,
-    "openhands/gpt-4o-mini": 0.074
-  },
-  {
-    "totalTokens": 0.803809,
-    "openhands/gpt-4o-mini": 0.074
-  },
-  {
-    "totalTokens": 0.809381,
-    "openhands/gpt-4o-mini": 0.074
-  },
-  {
-    "totalTokens": 0.80977,
-    "openhands/gpt-4o-mini": 0.074
-  },
-  {
-    "totalTokens": 0.810523,
-    "openhands/gpt-4o-mini": 0.074
-  },
-  {
-    "totalTokens": 0.812612,
-    "openhands/gpt-4o-mini": 0.074
-  },
-  {
-    "totalTokens": 0.815517,
-    "openhands/gpt-4o-mini": 0.074
-  },
-  {
-    "totalTokens": 0.815718,
-    "openhands/gpt-4o-mini": 0.074
-  },
-  {
-    "totalTokens": 0.816024,
-    "openhands/gpt-4o-mini": 0.074
-  },
-  {
-    "totalTokens": 0.81679,
-    "openhands/gpt-4o-mini": 0.074
-  },
-  {
-    "totalTokens": 0.817921,
-    "openhands/gpt-4o-mini": 0.074
-  },
-  {
-    "totalTokens": 0.818968,
-    "openhands/gpt-4o-mini": 0.074
-  },
-  {
-    "totalTokens": 0.819771,
-    "openhands/gpt-4o-mini": 0.074
-  },
-  {
-    "totalTokens": 0.820204,
-    "openhands/gpt-4o-mini": 0.074
-  },
-  {
-    "totalTokens": 0.821399,
-    "openhands/gpt-4o-mini": 0.074
-  },
-  {
-    "totalTokens": 0.826967,
-    "openhands/gpt-4o-mini": 0.074
-  },
-  {
-    "totalTokens": 0.828004,
-    "openhands/gpt-4o-mini": 0.074
-  },
-  {
-    "totalTokens": 0.831005,
-    "openhands/gpt-4o-mini": 0.074
-  },
-  {
-    "totalTokens": 0.832769,
-    "openhands/gpt-4o-mini": 0.074
-  },
-  {
-    "totalTokens": 0.83369,
-    "openhands/gpt-4o-mini": 0.074
-  },
-  {
-    "totalTokens": 0.839286,
-    "openhands/gpt-4o-mini": 0.074
-  },
-  {
-    "totalTokens": 0.840483,
-    "openhands/gpt-4o-mini": 0.074
-  },
-  {
-    "totalTokens": 0.8432,
-    "openhands/gpt-4o-mini": 0.074
-  },
-  {
-    "totalTokens": 0.845845,
-    "openhands/gpt-4o-mini": 0.074
-  },
-  {
-    "totalTokens": 0.846796,
-    "openhands/gpt-4o-mini": 0.076
-  },
-  {
-    "totalTokens": 0.848892,
-    "openhands/gpt-4o-mini": 0.076
-  },
-  {
-    "totalTokens": 0.853812,
-    "openhands/gpt-4o-mini": 0.076
-  },
-  {
-    "totalTokens": 0.854831,
-    "openhands/gpt-4o-mini": 0.076
-  },
-  {
-    "totalTokens": 0.857032,
-    "openhands/gpt-4o-mini": 0.076
-  },
-  {
-    "totalTokens": 0.860776,
-    "openhands/gpt-4o-mini": 0.076
-  },
-  {
-    "totalTokens": 0.872749,
-    "openhands/gpt-4o-mini": 0.078
-  },
-  {
-    "totalTokens": 0.87484,
-    "openhands/gpt-4o-mini": 0.078
-  },
-  {
-    "totalTokens": 0.877429,
-    "openhands/gpt-4o-mini": 0.078
-  },
-  {
-    "totalTokens": 0.881612,
-    "openhands/gpt-4o-mini": 0.078
-  },
-  {
-    "totalTokens": 0.883031,
-    "openhands/gpt-4o-mini": 0.078
-  },
-  {
-    "totalTokens": 0.884409,
-    "openhands/gpt-4o-mini": 0.078
-  },
-  {
-    "totalTokens": 0.903669,
-    "openhands/gpt-4o-mini": 0.078
-  },
-  {
-    "totalTokens": 0.911824,
-    "openhands/gpt-4o-mini": 0.078
-  },
-  {
-    "totalTokens": 0.912779,
-    "openhands/gpt-4o-mini": 0.078
-  },
-  {
-    "totalTokens": 0.912971,
-    "openhands/gpt-4o-mini": 0.078
-  },
-  {
-    "totalTokens": 0.920678,
-    "openhands/gpt-4o-mini": 0.078
-  },
-  {
-    "totalTokens": 0.921852,
-    "openhands/gpt-4o-mini": 0.078
-  },
-  {
-    "totalTokens": 0.927647,
-    "openhands/gpt-4o-mini": 0.078
-  },
-  {
-    "totalTokens": 0.928482,
-    "openhands/gpt-4o-mini": 0.078
-  },
-  {
-    "totalTokens": 0.930134,
-    "openhands/gpt-4o-mini": 0.078
-  },
-  {
-    "totalTokens": 0.930863,
-    "openhands/gpt-4o-mini": 0.078
-  },
-  {
-    "totalTokens": 0.935275,
-    "openhands/gpt-4o-mini": 0.078
-  },
-  {
-    "totalTokens": 0.943859,
-    "openhands/gpt-4o-mini": 0.078
-  },
-  {
-    "totalTokens": 0.947288,
-    "openhands/gpt-4o-mini": 0.078
-  },
-  {
-    "totalTokens": 0.947532,
-    "openhands/gpt-4o-mini": 0.078
-  },
-  {
-    "totalTokens": 0.949297,
-    "openhands/gpt-4o-mini": 0.078
-  },
-  {
-    "totalTokens": 0.949506,
-    "openhands/gpt-4o-mini": 0.078
-  },
-  {
-    "totalTokens": 0.953019,
-    "openhands/gpt-4o-mini": 0.078
-  },
-  {
-    "totalTokens": 0.954339,
-    "openhands/gpt-4o-mini": 0.078
-  },
-  {
-    "totalTokens": 0.960028,
-    "openhands/gpt-4o-mini": 0.078
-  },
-  {
-    "totalTokens": 0.964786,
-    "openhands/gpt-4o-mini": 0.078
-  },
-  {
-    "totalTokens": 0.968238,
-    "openhands/gpt-4o-mini": 0.078
-  },
-  {
-    "totalTokens": 0.969503,
-    "openhands/gpt-4o-mini": 0.078
-  },
-  {
-    "totalTokens": 0.973028,
-    "openhands/gpt-4o-mini": 0.078
-  },
-  {
-    "totalTokens": 0.975559,
-    "openhands/gpt-4o-mini": 0.078
-  },
-  {
-    "totalTokens": 0.97568,
-    "openhands/gpt-4o-mini": 0.078
-  },
-  {
-    "totalTokens": 0.978598,
-    "openhands/gpt-4o-mini": 0.078
-  },
-  {
-    "totalTokens": 0.983762,
-    "openhands/gpt-4o-mini": 0.078
-  },
-  {
-    "totalTokens": 0.98545,
-    "openhands/gpt-4o-mini": 0.078
-  },
-  {
-    "totalTokens": 0.98689,
-    "openhands/gpt-4o-mini": 0.078
-  },
-  {
-    "totalTokens": 0.987017,
-    "openhands/gpt-4o-mini": 0.078
-  },
-  {
-    "totalTokens": 0.989251,
-    "openhands/gpt-4o-mini": 0.078
-  },
-  {
-    "totalTokens": 0.993649,
-    "openhands/gpt-4o-mini": 0.078
-  },
-  {
-    "totalTokens": 0.998133,
-    "openhands/gpt-4o-mini": 0.078
-  },
-  {
-    "totalTokens": 0.999463,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.004884,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.042812,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.04606,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.047881,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.062897,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.068081,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.06876,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.069263,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.071349,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.082956,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.095146,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.106506,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.121332,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.131293,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.13719,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.138194,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.14067,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.162633,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.177076,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.179096,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.18173,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.203053,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.204647,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.214613,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.222337,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.228225,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.228485,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.234005,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.268316,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.268337,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.309081,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.327859,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.331615,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.337253,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.343317,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.354216,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.360685,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.361303,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.375113,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.376962,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.398742,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.415866,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.42568,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.426333,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.442031,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.484181,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.497825,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.505668,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.547287,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.56837,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.599415,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.612315,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.639674,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.688576,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.69637,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.706858,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.751116,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.774206,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.78921,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.87191,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.913352,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.925362,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 1.95599,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 2.004313,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 2.008203,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 2.065348,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 2.096982,
-    "openhands/gpt-4o-mini": 0.08
-  },
-  {
-    "totalTokens": 2.537746,
-    "openhands/gpt-4o-mini": 0.08
+    "totalTokens": 2.62167,
+    "openhands/qwen3-32b": 0.034
   },
   {
     "totalTokens": 0,

@@ -45,6 +45,96 @@
     "rank": 3
   },
   {
+    "scaffold": "Auto Code Rover",
+    "model": "Gpt 4o Mini",
+    "avgTotalTimeU": 101.07177965185706,
+    "avgTotalTimeR": 20.893178906085257,
+    "avgCPUTimeU": 16.260545454545458,
+    "avgCPUTimeR": 2.933,
+    "avgInfTimeU": 0,
+    "avgInfTimeR": 0,
+    "avgTotalTokensU": 327054.59090909094,
+    "avgTotalTokensR": 25389.666666666668,
+    "avgLLMRequestsU": 43.52272727272727,
+    "avgLLMRequestsR": 10,
+    "rank": 4
+  },
+  {
+    "scaffold": "Auto Code Rover",
+    "model": "Llama33",
+    "avgTotalTimeU": 109.54786527011748,
+    "avgTotalTimeR": 42.41627308204839,
+    "avgCPUTimeU": 10.819388888888888,
+    "avgCPUTimeR": 6.1372857142857145,
+    "avgInfTimeU": 0,
+    "avgInfTimeR": 0,
+    "avgTotalTokensU": 540605.6666666666,
+    "avgTotalTokensR": 147660.07142857142,
+    "avgLLMRequestsU": 45.02777777777778,
+    "avgLLMRequestsR": 20.857142857142858,
+    "rank": 5
+  },
+  {
+    "scaffold": "Openhands",
+    "model": "Llama33",
+    "avgTotalTimeU": 216.21796423540985,
+    "avgTotalTimeR": 74.17873076839625,
+    "avgCPUTimeU": 164.52529809279446,
+    "avgCPUTimeR": 55.99573903770447,
+    "avgInfTimeU": 0,
+    "avgInfTimeR": 0,
+    "avgTotalTokensU": 1067965.325,
+    "avgTotalTokensR": 238059.69999999998,
+    "avgLLMRequestsU": 34.925,
+    "avgLLMRequestsR": 14.3,
+    "rank": 6
+  },
+  {
+    "scaffold": "Openhands",
+    "model": "Gpt 4o Mini",
+    "avgTotalTimeU": 126.79674412409612,
+    "avgTotalTimeR": 76.2385832315163,
+    "avgCPUTimeU": 99.9654492793212,
+    "avgCPUTimeR": 55.60592903175355,
+    "avgInfTimeU": 0,
+    "avgInfTimeR": 0,
+    "avgTotalTokensU": 775097.1621621621,
+    "avgTotalTokensR": 472327.60000000003,
+    "avgLLMRequestsU": 34.21621621621622,
+    "avgLLMRequestsR": 35.2,
+    "rank": 7
+  },
+  {
+    "scaffold": "Auto Code Rover",
+    "model": "Qwen3 32b",
+    "avgTotalTimeU": 169.12015301422855,
+    "avgTotalTimeR": 82.83545095469302,
+    "avgCPUTimeU": 52.19590322580644,
+    "avgCPUTimeR": 5.5325263157894735,
+    "avgInfTimeU": 0,
+    "avgInfTimeR": 0,
+    "avgTotalTokensU": 90949.74193548386,
+    "avgTotalTokensR": 51143.368421052626,
+    "avgLLMRequestsU": 16.096774193548388,
+    "avgLLMRequestsR": 12.421052631578947,
+    "rank": 8
+  },
+  {
+    "scaffold": "Openhands",
+    "model": "Qwen3 32b",
+    "avgTotalTimeU": 226.42580083984467,
+    "avgTotalTimeR": 126.55788249535983,
+    "avgCPUTimeU": 118.0446557121855,
+    "avgCPUTimeR": 72.23068130863416,
+    "avgInfTimeU": 0,
+    "avgInfTimeR": 0,
+    "avgTotalTokensU": 424595.0606060606,
+    "avgTotalTokensR": 211222.05882352943,
+    "avgLLMRequestsU": 22.484848484848484,
+    "avgLLMRequestsR": 13.588235294117647,
+    "rank": 9
+  },
+  {
     "scaffold": "Agentless",
     "model": "Qwen3 32b",
     "avgTotalTimeU": 1029.5208568276748,
@@ -57,7 +147,7 @@
     "avgTotalTokensR": 54372.75,
     "avgLLMRequestsU": 82.61538461538461,
     "avgLLMRequestsR": 83.54166666666667,
-    "rank": 4
+    "rank": 10
   },
   {
     "scaffold": "Agentless",
@@ -72,6 +162,6 @@
     "avgTotalTokensR": 53454.230769230766,
     "avgLLMRequestsU": 81.78378378378379,
     "avgLLMRequestsR": 83.92307692307692,
-    "rank": 5
+    "rank": 11
   }
 ]

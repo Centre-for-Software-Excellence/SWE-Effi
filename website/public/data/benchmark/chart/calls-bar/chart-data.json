@@ -16,13 +16,17 @@
   },
   {
     "scaffold": "auto-code-rover",
-    "gpt-4o-mini": 45.38,
+    "gpt-4o-mini": 39.5,
+    "llama33": 38.26,
+    "qwen3-32b": 14.7,
     "qwen72b": 59.3,
     "qwq32b": 58.28
   },
   {
     "scaffold": "openhands",
-    "gpt-4o-mini": 25.69,
+    "gpt-4o-mini": 34.33,
+    "llama33": 30.8,
+    "qwen3-32b": 19.46,
     "qwen72b": 46.03,
     "qwq32b": 30.08
   },
