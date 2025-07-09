@@ -2,6 +2,7 @@ import { type ColumnDef } from '@tanstack/react-table';
 import { ArrowUpDown, Award, Crown, Medal } from 'lucide-react';
 
 import { TooltipWrapper } from '@/components/common/tooltip-wrapper';
+import { formatScore } from '@/lib/utils';
 import { ColumnTooltips } from '../tables-card';
 
 export type LeaderboardRVUData = {
@@ -98,12 +99,8 @@ export const columns = (
       </TooltipWrapper>
     ),
     cell: ({ row }) => {
-      const attu: string = row.getValue('avgTotalTimeU');
-      return (
-        <div className="font-medium">
-          {attu.length > 30 ? `${attu.slice(0, 30)}...` : attu}
-        </div>
-      );
+      const value: string = row.getValue('avgTotalTimeU');
+      return <div className="font-medium">{formatScore(value)}</div>;
     },
   },
   {
@@ -114,12 +111,8 @@ export const columns = (
       </TooltipWrapper>
     ),
     cell: ({ row }) => {
-      const attu: string = row.getValue('avgTotalTimeR');
-      return (
-        <div className="font-medium">
-          {attu.length > 30 ? `${attu.slice(0, 30)}...` : attu}
-        </div>
-      );
+      const value: string = row.getValue('avgTotalTimeR');
+      return <div className="font-medium">{formatScore(value)}</div>;
     },
   },
   {
@@ -131,11 +124,7 @@ export const columns = (
     ),
     cell: ({ row }) => {
       const value: string = row.getValue('avgCPUTimeU');
-      return (
-        <div className="font-medium">
-          {value.length > 30 ? `${value.slice(0, 30)}...` : value}
-        </div>
-      );
+      return <div className="font-medium">{formatScore(value)}</div>;
     },
   },
   {
@@ -147,11 +136,7 @@ export const columns = (
     ),
     cell: ({ row }) => {
       const value: string = row.getValue('avgCPUTimeR');
-      return (
-        <div className="font-medium">
-          {value.length > 30 ? `${value.slice(0, 30)}...` : value}
-        </div>
-      );
+      return <div className="font-medium">{formatScore(value)}</div>;
     },
   },
   {
@@ -163,11 +148,7 @@ export const columns = (
     ),
     cell: ({ row }) => {
       const value: string = row.getValue('avgInfTimeU');
-      return (
-        <div className="font-medium">
-          {value.length > 30 ? `${value.slice(0, 30)}...` : value}
-        </div>
-      );
+      return <div className="font-medium">{formatScore(value)}</div>;
     },
   },
   {
@@ -179,11 +160,7 @@ export const columns = (
     ),
     cell: ({ row }) => {
       const value: string = row.getValue('avgInfTimeR');
-      return (
-        <div className="font-medium">
-          {value.length > 30 ? `${value.slice(0, 30)}...` : value}
-        </div>
-      );
+      return <div className="font-medium">{formatScore(value)}</div>;
     },
   },
   {
@@ -195,11 +172,7 @@ export const columns = (
     ),
     cell: ({ row }) => {
       const value: string = row.getValue('avgTotalTokensU');
-      return (
-        <div className="font-medium">
-          {value.length > 30 ? `${value.slice(0, 30)}...` : value}
-        </div>
-      );
+      return <div className="font-medium">{formatScore(value)}</div>;
     },
   },
   {
@@ -211,11 +184,7 @@ export const columns = (
     ),
     cell: ({ row }) => {
       const value: string = row.getValue('avgTotalTokensR');
-      return (
-        <div className="font-medium">
-          {value.length > 30 ? `${value.slice(0, 30)}...` : value}
-        </div>
-      );
+      return <div className="font-medium">{formatScore(value)}</div>;
     },
   },
   {
@@ -227,11 +196,7 @@ export const columns = (
     ),
     cell: ({ row }) => {
       const value: string = row.getValue('avgLLMRequestsU');
-      return (
-        <div className="font-medium">
-          {value.length > 30 ? `${value.slice(0, 30)}...` : value}
-        </div>
-      );
+      return <div className="font-medium">{formatScore(value)}</div>;
     },
   },
   {
@@ -243,11 +208,7 @@ export const columns = (
     ),
     cell: ({ row }) => {
       const value: string = row.getValue('avgLLMRequestsR');
-      return (
-        <div className="font-medium">
-          {value.length > 30 ? `${value.slice(0, 30)}...` : value}
-        </div>
-      );
+      return <div className="font-medium">{formatScore(value)}</div>;
     },
   },
 ];

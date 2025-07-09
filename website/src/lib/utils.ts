@@ -81,3 +81,13 @@ export function createColorGenerator(baseHex?: string[]) {
     return hslToHex({ h: newHue, s, l });
   };
 }
+
+export function formatScore(score: string | undefined): string {
+  const res = !score
+    ? 'N/A'
+    : parseFloat(score).toLocaleString('en-US', {
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 2,
+      });
+  return res;
+}

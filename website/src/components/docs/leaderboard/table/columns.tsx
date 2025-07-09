@@ -3,6 +3,7 @@ import { ArrowUpDown, Award, Crown, Medal } from 'lucide-react';
 
 import { TooltipWrapper } from '@/components/common/tooltip-wrapper';
 import { Progress } from '@/components/common/ui/progress';
+import { formatScore } from '@/lib/utils';
 import { ColumnTooltips } from '../tables-card';
 
 export type LeaderboardData = {
@@ -19,16 +20,6 @@ export type LeaderboardData = {
 };
 
 export type RankedLeaderboardData = LeaderboardData & { rank: number };
-
-function formatScore(score: string | undefined): string {
-  const res = !score
-    ? 'N/A'
-    : parseFloat(score).toLocaleString('en-US', {
-        minimumFractionDigits: 0,
-        maximumFractionDigits: 2,
-      });
-  return res;
-}
 
 export const columns = (
   tooltips: ColumnTooltips,
