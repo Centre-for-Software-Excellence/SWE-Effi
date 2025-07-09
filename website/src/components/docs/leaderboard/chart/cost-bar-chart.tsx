@@ -177,10 +177,10 @@ export function HorizontalBarChartRenderer({
             <CartesianGrid horizontal={false} />
 
             <XAxis
-              type="number"
               hide
+              type="number"
               domain={[10000, 'dataMax']}
-              ticks={[10000, 100000, 1000000, 'dataMax']}
+              ticks={[10000, 100000, 1000000, 10000000, 'dataMax']}
               scale="log"
             />
 
@@ -242,7 +242,8 @@ export function HorizontalBarChartRenderer({
               tickMargin={10}
               axisLine={true}
               domain={[10000, 'dataMax']}
-              ticks={[10000, 100000, 1000000, 'dataMax']}
+              // TODO: make sure use correct ticks based on the data
+              ticks={[10000, 100000, 1000000, 10000000, 'dataMax']}
               tickFormatter={(value) => {
                 const exponent = Math.log10(value);
                 const superscripts = [
