@@ -65,6 +65,19 @@
     "rank": 5
   },
   {
+    "scaffold": "Swe Agent",
+    "model": "Qwen3 32b",
+    "total": 11639.284268222147,
+    "cpuTime": 1120.9750000000006,
+    "inputToken": 22009193,
+    "outputToken": 2050135,
+    "calls": 1774,
+    "infTime": 0,
+    "resolveRate": 0.028,
+    "precision": 0.28,
+    "rank": 6
+  },
+  {
     "scaffold": "Agentless",
     "model": "Gpt 4o Mini",
     "total": 51295.36838819803,
@@ -75,7 +88,7 @@
     "infTime": 0,
     "resolveRate": 0.026,
     "precision": 0.2765957446808511,
-    "rank": 6
+    "rank": 7
   },
   {
     "scaffold": "Agentless Mini",
@@ -88,7 +101,7 @@
     "infTime": 0,
     "resolveRate": 0.02,
     "precision": 0.2564102564102564,
-    "rank": 7
+    "rank": 8
   },
   {
     "scaffold": "Openhands",
@@ -101,7 +114,7 @@
     "infTime": 0,
     "resolveRate": 0.02,
     "precision": 0.20833333333333334,
-    "rank": 8
+    "rank": 9
   },
   {
     "scaffold": "Auto Code Rover",
@@ -114,7 +127,20 @@
     "infTime": 0,
     "resolveRate": 0.012,
     "precision": 0.12,
-    "rank": 9
+    "rank": 10
+  },
+  {
+    "scaffold": "Swe Agent",
+    "model": "Llama33",
+    "total": 1837.9568142480186,
+    "cpuTime": 747.981,
+    "inputToken": 9687437,
+    "outputToken": 162019,
+    "calls": 1456,
+    "infTime": 0,
+    "resolveRate": 0.012,
+    "precision": 0.14285714285714285,
+    "rank": 11
   },
   {
     "scaffold": "Openhands",
@@ -127,11 +153,24 @@
     "infTime": 0,
     "resolveRate": 0.01,
     "precision": 0.2631578947368421,
-    "rank": 10
+    "rank": 12
+  },
+  {
+    "scaffold": "Swe Agent",
+    "model": "Gpt 4o Mini",
+    "total": 21742.433105019572,
+    "cpuTime": 6906.802000000001,
+    "inputToken": 407141353,
+    "outputToken": 1219597,
+    "calls": 9048,
+    "infTime": 0,
+    "resolveRate": 0.01,
+    "precision": 0.10204081632653061,
+    "rank": 13
   },
   {
     "scaffold": "Agentless Mini",
-    "model": "Llama33 70b Inst Turbo",
+    "model": "Llama33",
     "total": 572.8881224301981,
     "cpuTime": 37.53201603889464,
     "inputToken": 1873493,
@@ -140,6 +179,6 @@
     "infTime": 0,
     "resolveRate": 0.004,
     "precision": 0.6666666666666666,
-    "rank": 11
+    "rank": 14
   }
 ]

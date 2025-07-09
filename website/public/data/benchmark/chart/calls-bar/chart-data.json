@@ -1,39 +1,31 @@
 [
   {
     "scaffold": "agentless-mini",
-    "gpt-4o-mini": 1.98,
-    "llama33-70b-inst-turbo": 2,
-    "qwen3-32b": 1.98,
-    "qwen72b": 2,
-    "qwq32b": 2
+    "gpt-4o-mini": 99,
+    "llama33": 100,
+    "qwen3-32b": 99
   },
   {
     "scaffold": "agentless",
-    "deepseek-r1-528-qwen3-8b-distill": 46.9,
-    "gpt-4o-mini": 82.34,
-    "qwen3-32b": 83.06,
-    "qwen72b": 88.84
+    "gpt-4o-mini": 4117,
+    "qwen3-32b": 4153
   },
   {
     "scaffold": "auto-code-rover",
-    "gpt-4o-mini": 39.5,
-    "llama33": 38.26,
-    "qwen3-32b": 14.7,
-    "qwen72b": 59.3,
-    "qwq32b": 58.28
+    "gpt-4o-mini": 1975,
+    "llama33": 1913,
+    "qwen3-32b": 735
   },
   {
     "scaffold": "openhands",
-    "gpt-4o-mini": 34.33,
-    "llama33": 30.8,
-    "qwen3-32b": 19.46,
-    "qwen72b": 46.03,
-    "qwq32b": 30.08
+    "gpt-4o-mini": 1442,
+    "llama33": 1540,
+    "qwen3-32b": 973
   },
   {
     "scaffold": "swe-agent",
-    "gpt-4o-mini": 50.52,
-    "qwen72b": 54.28,
-    "qwq32b": 55.5
+    "gpt-4o-mini": 9048,
+    "llama33": 1456,
+    "qwen3-32b": 1774
   }
 ]

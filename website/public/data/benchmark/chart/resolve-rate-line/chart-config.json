@@ -3,8 +3,8 @@
     "label": "agentless-mini/gpt-4o-mini",
     "color": "#1f77b4"
   },
-  "agentless-mini/llama33-70b-inst-turbo": {
-    "label": "agentless-mini/llama33-70b-inst-turbo",
+  "agentless-mini/llama33": {
+    "label": "agentless-mini/llama33",
     "color": "#ff7f0e"
   },
   "agentless-mini/qwen3-32b": {
@@ -19,8 +19,8 @@
     "label": "agentless-mini/qwq32b",
     "color": "#9467bd"
   },
-  "agentless/deepseek-r1-528-qwen3-8b-distill": {
-    "label": "agentless/deepseek-r1-528-qwen3-8b-distill",
+  "agentless/deepseek-r1": {
+    "label": "agentless/deepseek-r1",
     "color": "#8c564b"
   },
   "agentless/gpt-4o-mini": {
@@ -79,12 +79,20 @@
     "label": "swe-agent/gpt-4o-mini",
     "color": "#9edae5"
   },
+  "swe-agent/llama33": {
+    "label": "swe-agent/llama33",
+    "color": "#b41f4c"
+  },
+  "swe-agent/qwen3-32b": {
+    "label": "swe-agent/qwen3-32b",
+    "color": "#0effc5"
+  },
   "swe-agent/qwen72b": {
     "label": "swe-agent/qwen72b",
-    "color": "#b41f4c"
+    "color": "#4e2ca0"
   },
   "swe-agent/qwq32b": {
     "label": "swe-agent/qwq32b",
-    "color": "#0effc5"
+    "color": "#27d659"
   }
 }

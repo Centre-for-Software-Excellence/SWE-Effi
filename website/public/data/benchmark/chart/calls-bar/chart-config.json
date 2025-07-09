@@ -3,28 +3,12 @@
     "label": "gpt-4o-mini",
     "color": "#36a2eb"
   },
-  "llama33-70b-inst-turbo": {
-    "label": "llama33-70b-inst-turbo",
+  "llama33": {
+    "label": "llama33",
     "color": "#ff6384"
   },
   "qwen3-32b": {
     "label": "qwen3-32b",
     "color": "#4bc0c0"
-  },
-  "qwen72b": {
-    "label": "qwen72b",
-    "color": "#ff9f40"
-  },
-  "qwq32b": {
-    "label": "qwq32b",
-    "color": "#9966ff"
-  },
-  "deepseek-r1-528-qwen3-8b-distill": {
-    "label": "deepseek-r1-528-qwen3-8b-distill",
-    "color": "#ffcd56"
-  },
-  "llama33": {
-    "label": "llama33",
-    "color": "#c9cbcf"
   }
 }

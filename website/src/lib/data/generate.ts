@@ -107,12 +107,11 @@ function writeJSON(filePath: string, data: unknown) {
   fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
 }
 
-export function buildBenchmarkCharts(opts?: {
+export function buildResolveRateLineChart(opts?: {
   rawDir?: string;
   outDir?: string;
 }) {
   const nextColor = createColorGenerator(tokens.d3);
-  const barColorNext = createColorGenerator(tokens.chartjs);
   const rawDir =
     opts?.rawDir ?? path.join(__dirname, '../../../public/data/benchmark/raw');
   const outDir =
@@ -120,9 +119,7 @@ export function buildBenchmarkCharts(opts?: {
     path.join(__dirname, '../../../public/data/benchmark/chart');
 
   const resolveCfg: ChartConfig = {};
-  const callsCfg: ChartConfig = {};
   const resolveData: ResolveRateEntry[] = [];
-  const callsAcc: Accumulator = new Map();
 
   const jsonFiles = fs.readdirSync(rawDir).filter((f) => f.endsWith('.json'));
 
@@ -162,38 +159,11 @@ export function buildBenchmarkCharts(opts?: {
         color: nextColor(),
       };
     }
-
-    // # of calls data
-    const scaffoldMap =
-      callsAcc.get(scaffold) ??
-      new Map<string, { sum: number; count: number }>();
-    const stats = scaffoldMap.get(model) ?? { sum: 0, count: 0 };
-
-    for (const r of records) {
-      stats.sum += r?.llm_calls || 0;
-      stats.count += 1;
-    }
-    scaffoldMap.set(model, stats);
-    callsAcc.set(scaffold, scaffoldMap);
-
-    if (!callsCfg[model]) {
-      callsCfg[model] = { label: model, color: barColorNext() };
-    }
-  }
-
-  // calls chart finalization
-  const callsData: CallsEntry[] = [];
-  for (const [scaffold, modelMap] of callsAcc) {
-    const row: CallsEntry = { scaffold };
-    for (const [model, { sum, count }] of modelMap) {
-      row[model] = +(sum / count).toFixed(2);
-    }
-    callsData.push(row);
   }
 
   if (DRYRUN) {
     console.log(
-      `Dry run: would write ${resolveData.length} resolve rate entries and ${callsData.length} calls entries.`,
+      `Dry run: would write ${resolveData.length} resolve rate entries`,
     );
     writeJSON(
       path.join(outDir, 'tmp/resolve-rate-line/chart-data.json'),
@@ -203,16 +173,63 @@ export function buildBenchmarkCharts(opts?: {
       path.join(outDir, 'tmp/resolve-rate-line/chart-config.json'),
       resolveCfg,
     );
-    writeJSON(path.join(outDir, 'tmp/calls-bar/chart-data.json'), callsData);
-    writeJSON(path.join(outDir, 'tmp/calls-bar/chart-config.json'), callsCfg);
   } else {
-    console.log(
-      `Writing ${resolveData.length} resolve rate entries and ${callsData.length} calls entries.`,
-    );
+    console.log(`Writing ${resolveData.length} resolve rate entries`);
     const rrDirName: ChartName = 'resolve-rate-line';
     writeJSON(path.join(outDir, `${rrDirName}/chart-data.json`), resolveData);
     writeJSON(path.join(outDir, `${rrDirName}/chart-config.json`), resolveCfg);
+  }
+}
 
+export function buildCallsBarChart(opts?: {
+  rawDir?: string;
+  outDir?: string;
+}) {
+  const barColorNext = createColorGenerator(tokens.chartjs);
+  const rawDir =
+    opts?.rawDir ??
+    path.join(__dirname, '../../../public/data/benchmark/raw/summary');
+  const outDir =
+    opts?.outDir ??
+    path.join(__dirname, '../../../public/data/benchmark/chart');
+
+  const callsCfg: ChartConfig = {};
+  let callsData: CallsEntry[] = [];
+
+  const jsonFiles = fs.readdirSync(rawDir).filter((f) => f.endsWith('.json'));
+
+  for (const file of jsonFiles) {
+    const filePath = path.join(rawDir, file);
+
+    let record: SummaryInputData;
+    try {
+      record = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+    } catch (e) {
+      console.error(`Could not parse ${file}:`, e);
+      continue;
+    }
+
+    const [scaffold, model] = path.basename(file, '.json').split('_');
+
+    const entry: CallsEntry = callsData.find(
+      (e) => e.scaffold === scaffold,
+    ) || {
+      scaffold,
+    };
+    entry[model] = record.llm_calls || 0;
+    callsData = [...callsData.filter((e) => e.scaffold !== scaffold), entry];
+
+    if (!callsCfg[model]) {
+      callsCfg[model] = { label: model, color: barColorNext() };
+    }
+  }
+
+  if (DRYRUN) {
+    console.log(`Dry run: would write ${callsData.length} calls entries.`);
+    writeJSON(path.join(outDir, 'tmp/calls-bar/chart-data.json'), callsData);
+    writeJSON(path.join(outDir, 'tmp/calls-bar/chart-config.json'), callsCfg);
+  } else {
+    console.log(`Writing ${callsData.length} calls entries.`);
     const callsDirName: ChartName = 'calls-bar';
     writeJSON(path.join(outDir, `${callsDirName}/chart-data.json`), callsData);
     writeJSON(path.join(outDir, `${callsDirName}/chart-config.json`), callsCfg);
@@ -433,7 +450,8 @@ export function buildLeaderboardTables(opts?: {
 
 if (import.meta.url === `file://${process.argv[1]}`) {
   console.log('Generating data for charts and leaderboard...');
-  buildBenchmarkCharts();
+  buildResolveRateLineChart();
+  buildCallsBarChart();
   buildSummaryCharts();
   buildLeaderboardTables();
   console.log('Data updated ✔️\n');

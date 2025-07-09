@@ -1,7 +1,7 @@
 [
   {
     "scaffold": "Agentless Mini",
-    "model": "Llama33 70b Inst Turbo",
+    "model": "Llama33",
     "avgTotalTimeU": 11.766268921764748,
     "avgTotalTimeR": 4.053607092745086,
     "avgCPUTimeU": 0.7593128035465874,
@@ -45,6 +45,21 @@
     "rank": 3
   },
   {
+    "scaffold": "Swe Agent",
+    "model": "Llama33",
+    "avgTotalTimeU": 39.22699557738364,
+    "avgTotalTimeR": 18.661501473856433,
+    "avgCPUTimeU": 15.849227272727273,
+    "avgCPUTimeR": 8.435833333333333,
+    "avgInfTimeU": 0,
+    "avgInfTimeR": 0,
+    "avgTotalTokensU": 220035.95454545456,
+    "avgTotalTokensR": 27979,
+    "avgLLMRequestsU": 31.363636363636363,
+    "avgLLMRequestsR": 12.666666666666666,
+    "rank": 4
+  },
+  {
     "scaffold": "Auto Code Rover",
     "model": "Gpt 4o Mini",
     "avgTotalTimeU": 101.07177965185706,
@@ -57,7 +72,7 @@
     "avgTotalTokensR": 25389.666666666668,
     "avgLLMRequestsU": 43.52272727272727,
     "avgLLMRequestsR": 10,
-    "rank": 4
+    "rank": 5
   },
   {
     "scaffold": "Auto Code Rover",
@@ -72,7 +87,7 @@
     "avgTotalTokensR": 147660.07142857142,
     "avgLLMRequestsU": 45.02777777777778,
     "avgLLMRequestsR": 20.857142857142858,
-    "rank": 5
+    "rank": 6
   },
   {
     "scaffold": "Openhands",
@@ -87,7 +102,7 @@
     "avgTotalTokensR": 238059.69999999998,
     "avgLLMRequestsU": 34.925,
     "avgLLMRequestsR": 14.3,
-    "rank": 6
+    "rank": 7
   },
   {
     "scaffold": "Openhands",
@@ -102,7 +117,7 @@
     "avgTotalTokensR": 472327.60000000003,
     "avgLLMRequestsU": 34.21621621621622,
     "avgLLMRequestsR": 35.2,
-    "rank": 7
+    "rank": 8
   },
   {
     "scaffold": "Auto Code Rover",
@@ -117,7 +132,7 @@
     "avgTotalTokensR": 51143.368421052626,
     "avgLLMRequestsU": 16.096774193548388,
     "avgLLMRequestsR": 12.421052631578947,
-    "rank": 8
+    "rank": 9
   },
   {
     "scaffold": "Openhands",
@@ -132,7 +147,37 @@
     "avgTotalTokensR": 211222.05882352943,
     "avgLLMRequestsU": 22.484848484848484,
     "avgLLMRequestsR": 13.588235294117647,
-    "rank": 9
+    "rank": 10
+  },
+  {
+    "scaffold": "Swe Agent",
+    "model": "Gpt 4o Mini",
+    "avgTotalTimeU": 468.9601775679756,
+    "avgTotalTimeR": 127.84502289213427,
+    "avgCPUTimeU": 146.82608888888888,
+    "avgCPUTimeR": 59.92559999999999,
+    "avgInfTimeU": 0,
+    "avgInfTimeR": 0,
+    "avgTotalTokensU": 8867434.822222224,
+    "avgTotalTokensR": 1865276.6,
+    "avgLLMRequestsU": 192,
+    "avgLLMRequestsR": 81.6,
+    "rank": 11
+  },
+  {
+    "scaffold": "Swe Agent",
+    "model": "Qwen3 32b",
+    "avgTotalTimeU": 258.50120612274543,
+    "avgTotalTimeR": 166.66006055737944,
+    "avgCPUTimeU": 22.82236111111112,
+    "avgCPUTimeR": 21.38357142857144,
+    "avgInfTimeU": 0,
+    "avgInfTimeR": 0,
+    "avgTotalTokensU": 519120.22222222225,
+    "avgTotalTokensR": 383642.85714285716,
+    "avgLLMRequestsU": 37.44444444444444,
+    "avgLLMRequestsR": 30.428571428571427,
+    "rank": 12
   },
   {
     "scaffold": "Agentless",
@@ -147,7 +192,7 @@
     "avgTotalTokensR": 54372.75,
     "avgLLMRequestsU": 82.61538461538461,
     "avgLLMRequestsR": 83.54166666666667,
-    "rank": 10
+    "rank": 13
   },
   {
     "scaffold": "Agentless",
@@ -162,6 +207,6 @@
     "avgTotalTokensR": 53454.230769230766,
     "avgLLMRequestsU": 81.78378378378379,
     "avgLLMRequestsR": 83.92307692307692,
-    "rank": 11
+    "rank": 14
   }
 ]

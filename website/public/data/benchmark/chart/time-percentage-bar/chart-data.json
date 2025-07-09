@@ -7,7 +7,7 @@
   {
     "cpu-time": 6.55,
     "gpu-time": 93.45,
-    "scaffold-model": "agentless-mini/llama33-70b-inst-turbo"
+    "scaffold-model": "agentless-mini/llama33"
   },
   {
     "cpu-time": 1.56,
@@ -53,5 +53,20 @@
     "cpu-time": 53.24,
     "gpu-time": 46.76,
     "scaffold-model": "openhands/qwen3-32b"
+  },
+  {
+    "cpu-time": 31.77,
+    "gpu-time": 68.23,
+    "scaffold-model": "swe-agent/gpt-4o-mini"
+  },
+  {
+    "cpu-time": 40.7,
+    "gpu-time": 59.3,
+    "scaffold-model": "swe-agent/llama33"
+  },
+  {
+    "cpu-time": 9.63,
+    "gpu-time": 90.37,
+    "scaffold-model": "swe-agent/qwen3-32b"
   }
 ]
