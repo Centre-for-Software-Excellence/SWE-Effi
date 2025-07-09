@@ -1,15 +1,14 @@
-// import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { TooltipProvider } from '@radix-ui/react-tooltip';
 
-// import { Card, CardContent } from '@/components/common/ui/card';
+import { Card, CardContent } from '@/components/common/ui/card';
 import {
   Tabs,
   TabsContent,
   TabsList,
   TabsTrigger,
 } from '@/components/common/ui/tabs';
-import { H5, H6 } from '@/components/md';
-import { getLeaderboardData, getLeaderboardDataRVU } from '@/lib/data/get';
+import { H6 } from '@/components/md';
 import { cn } from '@/lib/utils';
 import { columns, RankedLeaderboardData } from './table/columns';
 import {
@@ -42,51 +41,51 @@ export default function TablesCard({
   const { leaderboard, leaderboardRVU } = tablesUi;
 
   // TODO: temporary mannually defined leaderboard data
-  const data: RankedLeaderboardData[] = getLeaderboardData();
-  const dataRVU: RankedLeaderboardRVUData[] = getLeaderboardDataRVU();
+  // const data: RankedLeaderboardData[] = getLeaderboardData();
+  // const dataRVU: RankedLeaderboardRVUData[] = getLeaderboardDataRVU();
 
-  // const [data, setData] = useState<RankedLeaderboardData[]>([]);
-  // const [dataRVU, setDataRVU] = useState<RankedLeaderboardRVUData[]>([]);
-  // const [loading, setLoading] = useState(true);
-  // const [error, setError] = useState('');
-  // useEffect(() => {
-  //   Promise.all([
-  //     fetch('/data/benchmark/table/leaderboard/data.json').then((res) =>
-  //       res.json(),
-  //     ),
-  //     fetch('/data/benchmark/table/leaderboard/data-rvu.json').then((res) =>
-  //       res.json(),
-  //     ),
-  //   ])
-  //     .then(([data1, data2]) => {
-  //       setData(data1);
-  //       setDataRVU(data2);
-  //       setLoading(false);
-  //     })
-  //     .catch((err) => {
-  //       console.error(err.message);
-  //       setError(err.message);
-  //       setLoading(false);
-  //     });
-  // }, []);
+  const [data, setData] = useState<RankedLeaderboardData[]>([]);
+  const [dataRVU, setDataRVU] = useState<RankedLeaderboardRVUData[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState('');
+  useEffect(() => {
+    Promise.all([
+      fetch('/data/benchmark/table/leaderboard/data.json').then((res) =>
+        res.json(),
+      ),
+      fetch('/data/benchmark/table/leaderboard/data-rvu.json').then((res) =>
+        res.json(),
+      ),
+    ])
+      .then(([data1, data2]) => {
+        setData(data1);
+        setDataRVU(data2);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error(err.message);
+        setError(err.message);
+        setLoading(false);
+      });
+  }, []);
 
   // TODO: loading component
-  // if (loading) {
-  //   <Card>
-  //     <CardContent className="flex h-96 items-center justify-center p-8">
-  //       <div>Loading leaderboards...</div>
-  //     </CardContent>
-  //   </Card>;
-  // }
+  if (loading) {
+    <Card>
+      <CardContent className="flex h-96 items-center justify-center p-8">
+        <div>Loading leaderboards...</div>
+      </CardContent>
+    </Card>;
+  }
 
   // TODO: error message
-  // if (error) {
-  //   <Card>
-  //     <CardContent className="flex h-96 items-center justify-center p-8">
-  //       <div className="text-destructive">{error}</div>
-  //     </CardContent>
-  //   </Card>;
-  // }
+  if (error) {
+    <Card>
+      <CardContent className="flex h-96 items-center justify-center p-8">
+        <div className="text-destructive">{error}</div>
+      </CardContent>
+    </Card>;
+  }
 
   return (
     <div
