@@ -1,17 +1,12 @@
-import { SlidersHorizontal } from 'lucide-react';
 import { CartesianGrid, Label, Line, LineChart, XAxis, YAxis } from 'recharts';
 
-import {
-  TooltipProvider,
-  TooltipWrapper,
-} from '@/components/common/tooltip-wrapper';
-import { Button } from '@/components/common/ui/button';
+import { TooltipProvider } from '@/components/common/tooltip-wrapper';
 import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
 } from '@/components/common/ui/chart';
-import { Dialog, DialogTrigger } from '@/components/common/ui/dialog';
+import { Dialog } from '@/components/common/ui/dialog';
 import { CollapsibleLegend } from '@/components/docs/leaderboard/chart/atoms/collapsible-legend';
 import { useChartData } from '@/hooks/chart/use-chart-data';
 import { useChartPopover } from '@/hooks/chart/use-chart-popover';
@@ -21,7 +16,7 @@ import { ChartCard } from './atoms/chart-card';
 import { ChartControls } from './atoms/chart-controls';
 import { ChartExplanation } from './atoms/chart-explanation';
 import { ChartHeader } from './atoms/chart-header';
-import { ChartSettings } from './atoms/chart-settings';
+import { ChartSettings, ChartSettingsButton } from './atoms/chart-settings';
 import { ChartProps, ChartRendererProps } from './types';
 
 export interface ChartData {
@@ -64,21 +59,15 @@ export function ResolveRateLineChart({
     maxTokens,
     xRange,
     setXRange,
-  } = useChartSettings({ chartData, chartConfig });
+  } = useChartSettings({
+    chartData,
+    chartConfig,
+    xKey: 'totalTokens',
+    defaultDomain: [0, 6.2],
+  });
 
   const settingsButton = (
-    <TooltipWrapper title="Settings">
-      <DialogTrigger asChild>
-        <Button
-          variant="outline"
-          size="icon"
-          className="flex items-center gap-2 bg-accent text-foreground hover:bg-background hover:text-foreground"
-          onClick={() => setOpenSettings(!openSettings)}
-        >
-          <SlidersHorizontal />
-        </Button>
-      </DialogTrigger>
-    </TooltipWrapper>
+    <ChartSettingsButton onClickAction={() => setOpenSettings(!openSettings)} />
   );
 
   const legend = (
@@ -98,6 +87,7 @@ export function ResolveRateLineChart({
           maxX={maxTokens}
           setXRange={setXRange}
           onClose={() => setOpenSettings(false)}
+          title="Resolve Rate Line Chart Settings"
         />
 
         <ChartCard
@@ -148,6 +138,7 @@ function LineChartRenderer({
   yAxisLabel,
   xAxisDataKey,
 }: ChartRendererProps) {
+  const configKeys = activeKeys || Object.keys(config);
   return (
     <ChartContainer
       config={config}
@@ -196,7 +187,7 @@ function LineChartRenderer({
           cursor={false}
           content={<ChartTooltipContent hideLabel />}
         />
-        {activeKeys?.map((key) => (
+        {configKeys?.map((key) => (
           <Line
             key={key}
             dataKey={key}
