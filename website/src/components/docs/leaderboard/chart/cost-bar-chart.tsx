@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from 'react';
 import { Bar, BarChart, CartesianGrid, Label, XAxis, YAxis } from 'recharts';
 
 import { TooltipProvider } from '@/components/common/tooltip-wrapper';
@@ -85,7 +86,7 @@ export function CostBarChart({
           data={chartData}
           setFilteredData={setFilteredData}
           onClose={() => setOpenSettings(false)}
-          title="Cost Bar Chart Setting"
+          title="Setting"
           field="scaffold-model"
         />
         <ChartCard
@@ -130,22 +131,40 @@ export function CostBarChart({
 export function HorizontalBarChartRenderer({
   data,
   config,
-  isExpanded = false,
   xAxisLabel,
   yAxisLabel,
   yAxisDataKey,
   activeKeys,
 }: ChartRendererProps) {
   const configKeys = activeKeys || Object.keys(config);
-  console.log('data: ', data);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [containerWidth, setContainerWidth] = useState(0);
+  useEffect(() => {
+    if (!containerRef.current) return;
+
+    const resizeObserver = new ResizeObserver((entries) => {
+      for (const entry of entries) {
+        setContainerWidth(entry.contentRect.width);
+      }
+    });
+
+    resizeObserver.observe(containerRef.current);
+
+    setContainerWidth(containerRef.current.offsetWidth);
+
+    return () => {
+      resizeObserver.disconnect();
+    };
+  }, []);
+
   return (
-    <div className="">
+    <div className="w-full" ref={containerRef}>
       <ScrollArea type="always" scrollHideDelay={0} className={cn('h-[400px]')}>
         <ChartContainer
           config={config}
-          className="w-full"
           style={{
             height: Math.max(400, data.length * 40),
+            width: containerWidth || '100%',
           }}
         >
           <BarChart
@@ -157,8 +176,13 @@ export function HorizontalBarChartRenderer({
           >
             <CartesianGrid horizontal={false} />
 
-            {/* hidden just for positioning */}
-            <XAxis type="number" hide domain={[10000, 'dataMax']} scale="log" />
+            <XAxis
+              type="number"
+              hide
+              domain={[10000, 'dataMax']}
+              ticks={[10000, 100000, 1000000, 'dataMax']}
+              scale="log"
+            />
 
             <YAxis
               type="category"
@@ -186,23 +210,39 @@ export function HorizontalBarChartRenderer({
                 key={key}
                 dataKey={key}
                 fill={config?.[key].color}
-                barSize={isExpanded ? 20 : 15}
+                barSize={15}
               />
             ))}
           </BarChart>
         </ChartContainer>
       </ScrollArea>
       {/* dummy chart for displaying fixed x-axis */}
-      <div className="h-[60px] w-full">
-        <ChartContainer config={config} className="h-full w-full">
-          <BarChart layout="vertical" data={[]} margin={{ bottom: 20 }}>
-            <XAxis
-              type="number"
+      <div className="flex h-[50px] justify-end">
+        <ChartContainer
+          config={config}
+          style={{
+            width: containerWidth || '100%',
+          }}
+        >
+          <BarChart
+            layout="vertical"
+            data={data}
+            margin={{ left: 100, bottom: 20 }}
+          >
+            <YAxis
+              type="category"
               tickLine={false}
               tickMargin={10}
               axisLine={false}
+              tickFormatter={(_value) => ``}
+            />
+            <XAxis
+              type="number"
+              tickLine={true}
+              tickMargin={10}
+              axisLine={true}
               domain={[10000, 'dataMax']}
-              ticks={[100000, 1000000, 10000000]}
+              ticks={[10000, 100000, 1000000, 'dataMax']}
               tickFormatter={(value) => {
                 const exponent = Math.log10(value);
                 const superscripts = [

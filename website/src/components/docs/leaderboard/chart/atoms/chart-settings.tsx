@@ -26,7 +26,7 @@ interface ChartSettingsProps {
   onClose: () => void;
   data?: any[];
   setFilteredData?: (data: any[]) => void;
-  field: string;
+  field?: string;
 }
 
 export function ChartSettingsButton({

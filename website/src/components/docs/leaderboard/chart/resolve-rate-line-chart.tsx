@@ -87,7 +87,7 @@ export function ResolveRateLineChart({
           maxX={maxTokens}
           setXRange={setXRange}
           onClose={() => setOpenSettings(false)}
-          title="Resolve Rate Line Chart Settings"
+          title="Settings"
         />
 
         <ChartCard
