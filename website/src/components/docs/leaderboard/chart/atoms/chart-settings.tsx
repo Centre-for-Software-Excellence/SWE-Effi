@@ -1,7 +1,7 @@
 import { useCallback, useMemo } from 'react';
 import { DialogTitle } from '@radix-ui/react-dialog';
 import debounce from 'lodash/debounce';
-import { SlidersHorizontal } from 'lucide-react';
+import { Settings } from 'lucide-react';
 
 import { TooltipWrapper } from '@/components/common/tooltip-wrapper';
 import { Button } from '@/components/common/ui/button';
@@ -17,9 +17,11 @@ import {
 } from '@/components/common/ui/tabs';
 
 interface ChartSettingsProps {
-  xRange?: [number, number];
-  maxX?: number;
-  setXRange?: (range: [number, number]) => void;
+  domain?: [number, number];
+  min?: number;
+  max?: number;
+  setDomain?: (range: [number, number]) => void;
+  step?: number;
   setActiveKeys: (keys: string[]) => void;
   keys: string[];
   title?: string;
@@ -27,6 +29,7 @@ interface ChartSettingsProps {
   data?: any[];
   setFilteredData?: (data: any[]) => void;
   field?: string;
+  log?: boolean;
 }
 
 export function ChartSettingsButton({
@@ -38,12 +41,12 @@ export function ChartSettingsButton({
     <TooltipWrapper title="Settings">
       <DialogTrigger asChild>
         <Button
-          variant="outline"
-          size="icon"
-          className="flex items-center gap-2 bg-accent text-foreground hover:bg-background hover:text-foreground"
+          variant="ghost"
+          size="sm"
+          className="flex items-center text-foreground hover:bg-accent"
           onClick={onClickAction}
         >
-          <SlidersHorizontal />
+          <Settings />
         </Button>
       </DialogTrigger>
     </TooltipWrapper>
@@ -51,16 +54,79 @@ export function ChartSettingsButton({
 }
 
 export function ChartSettings({
-  xRange,
-  maxX,
-  setXRange,
+  domain,
+  min,
+  max,
+  setDomain,
+  step = 1,
   keys,
   setActiveKeys,
   title = 'Settings',
   data,
   setFilteredData,
   field,
+  log = false,
 }: ChartSettingsProps) {
+  const logToLinear = (value: number) => {
+    const index = getPowerOfTenValues.findIndex((v) => v === value);
+    return index;
+  };
+
+  const linearToLog = (index: number) => {
+    return getPowerOfTenValues[index] || getPowerOfTenValues[0];
+  };
+
+  const getPowerOfTenValues = useMemo(() => {
+    const values: number[] = [];
+    const startPower = Math.ceil(Math.log10(min || 1));
+    const endPower = Math.ceil(Math.log10(max || 1));
+
+    for (let power = startPower; power <= endPower; power++) {
+      values.push(Math.pow(10, power));
+    }
+    return values;
+  }, [min, max]);
+
+  const handleSliderChange = (values: [number, number]) => {
+    if (!setDomain) return;
+    if (log) {
+      const [minIndex, maxIndex] = values;
+      const logMin = linearToLog(minIndex);
+      const logMax = linearToLog(maxIndex);
+
+      // Ensure max is greater than min
+      if (logMax <= logMin) {
+        const correctedMaxIndex = Math.min(
+          maxIndex + 1,
+          getPowerOfTenValues.length - 1,
+        );
+        const correctedMax = linearToLog(correctedMaxIndex);
+        setDomain([logMin, correctedMax]);
+      } else {
+        setDomain([logMin, logMax]);
+      }
+    } else {
+      setDomain(values);
+    }
+  };
+
+  const formatValue = (value: number) => {
+    const log = Math.log10(value);
+    const isPowerOf10 = Math.abs(log - Math.round(log)) < 0.0001;
+
+    if (isPowerOf10) {
+      const exponent = Math.round(log);
+      const superscripts = ['⁰', '¹', '²', '³', '⁴', '⁵', '⁶', '⁷', '⁸', '⁹'];
+      const exponentStr = exponent.toString();
+      const superscriptStr = exponentStr
+        .split('')
+        .map((digit) => superscripts[parseInt(digit)])
+        .join('');
+      return `10${superscriptStr}`;
+    }
+    return value.toLocaleString();
+  };
+
   const filterKeys = useCallback(
     (value: string) => {
       if (!value.trim()) {
@@ -77,7 +143,7 @@ export function ChartSettings({
   );
   const filterField = useCallback(
     (value: string) => {
-      if (!data || !setFilteredData) return;
+      if (!data || !setFilteredData || !field) return;
       if (!value.trim()) {
         setFilteredData(data);
         return;
@@ -105,24 +171,6 @@ export function ChartSettings({
     <DialogContent className="z-99 mx-auto flex max-w-sm flex-col items-center justify-center">
       <DialogTitle className="mb-4">{title}</DialogTitle>
       <div className="z-99 flex flex-col items-start space-y-4 px-4 pb-4">
-        {xRange && maxX && setXRange && (
-          <div className="flex flex-col items-start space-y-4">
-            <h1 className="text-muted-foreground">X Range</h1>
-            <div className="w-xs max-w-sm sm:w-sm">
-              <Slider
-                value={xRange}
-                onValueChange={(val) => setXRange(val as [number, number])}
-                min={0}
-                max={maxX}
-                step={maxX / 100}
-              />
-              <div className="mt-1 flex justify-between text-xs">
-                <span>{xRange[0].toFixed(0)}</span>
-                <span>{xRange[1].toFixed(0)}</span>
-              </div>
-            </div>
-          </div>
-        )}
         <Tabs defaultValue="filter-keys">
           {field && (
             <TabsList className="w-xs max-w-sm sm:w-sm">
@@ -138,6 +186,7 @@ export function ChartSettings({
               <Input
                 type="text"
                 id="filter-keys"
+                placeholder={'E.g. ' + keys.join(', ')}
                 onChange={(e) => {
                   const input = e.target.value;
                   debouncedFilterKeys(input);
@@ -156,6 +205,7 @@ export function ChartSettings({
               <Input
                 type="text"
                 id="filter-field"
+                placeholder={`E.g. ${data && data.length > 1 ? data[0][field] : field}`}
                 onChange={(e) => {
                   const input = e.target.value;
                   debouncedFilterField(input);
@@ -164,6 +214,56 @@ export function ChartSettings({
             </TabsContent>
           )}
         </Tabs>
+        {domain && max && setDomain && step && (
+          <div className="flex flex-col items-start space-y-4">
+            <h1 className="text-foreground">
+              Domain {log ? '(Log Scale)' : ''}
+            </h1>
+            <div className="w-xs max-w-sm sm:w-sm">
+              <Slider
+                value={
+                  log
+                    ? [logToLinear(domain[0]), logToLinear(domain[1])]
+                    : domain
+                }
+                onValueChange={handleSliderChange}
+                min={log ? 0 : min || 0}
+                max={log ? getPowerOfTenValues.length - 1 : max}
+                step={log ? 1 : step}
+              />
+              <div className="mt-2 flex justify-between text-xs">
+                <span>{log ? formatValue(domain[0]) : domain[0]}</span>
+                <span>
+                  {log ? formatValue(domain[1]) : domain[1].toPrecision(4)}
+                </span>
+              </div>
+            </div>
+          </div>
+        )}
+        <Button
+          variant="default"
+          onClick={() => {
+            if (setDomain) {
+              if (log) {
+                setDomain([
+                  linearToLog(0),
+                  linearToLog(getPowerOfTenValues.length - 1),
+                ]);
+              } else {
+                setDomain([min || 0, max || 100]);
+              }
+            }
+            if (setActiveKeys) {
+              setActiveKeys(keys);
+            }
+            if (setFilteredData && data) {
+              setFilteredData(data);
+            }
+          }}
+          className="w-full"
+        >
+          Reset Chart
+        </Button>
       </div>
     </DialogContent>
   );

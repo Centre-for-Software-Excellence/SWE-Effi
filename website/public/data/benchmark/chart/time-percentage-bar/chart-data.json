@@ -1,72 +1,77 @@
 [
   {
-    "cpu-time": 13.79,
-    "gpu-time": 86.21,
-    "scaffold-model": "agentless-mini/gpt-4o-mini"
+    "cpu-time": 6.22,
+    "gpu-time": 93.78,
+    "scaffold-model": "agentless-mini/Llama-3.3-70B-Instruct-FP8"
   },
   {
-    "cpu-time": 6.55,
-    "gpu-time": 93.45,
-    "scaffold-model": "agentless-mini/llama33"
+    "cpu-time": 12.82,
+    "gpu-time": 87.18,
+    "scaffold-model": "agentless-mini/gpt-4o-mini-2024-07-18"
   },
   {
-    "cpu-time": 1.56,
-    "gpu-time": 98.44,
-    "scaffold-model": "agentless-mini/qwen3-32b"
+    "cpu-time": 1.51,
+    "gpu-time": 98.49,
+    "scaffold-model": "agentless-mini/qwen3-32B"
   },
   {
-    "cpu-time": 86.66,
-    "gpu-time": 13.34,
-    "scaffold-model": "agentless/gpt-4o-mini"
+    "cpu-time": 73.24,
+    "gpu-time": 26.76,
+    "scaffold-model": "agentless/Llama-3.3-70B-Instruct-FP8"
   },
   {
-    "cpu-time": 78.17,
-    "gpu-time": 21.83,
-    "scaffold-model": "agentless/qwen3-32b"
+    "cpu-time": 86.3,
+    "gpu-time": 13.7,
+    "scaffold-model": "agentless/gpt-4o-mini-2024-07-18"
   },
   {
-    "cpu-time": 16.03,
-    "gpu-time": 83.97,
-    "scaffold-model": "auto-code-rover/gpt-4o-mini"
+    "cpu-time": 77.66,
+    "gpu-time": 22.34,
+    "scaffold-model": "agentless/qwen3-32B"
   },
   {
-    "cpu-time": 10.48,
-    "gpu-time": 89.52,
-    "scaffold-model": "auto-code-rover/llama33"
+    "cpu-time": 9.4,
+    "gpu-time": 90.6,
+    "scaffold-model": "auto-code-rover/Llama-3.3-70B-Instruct-FP8"
   },
   {
-    "cpu-time": 25.28,
-    "gpu-time": 74.72,
-    "scaffold-model": "auto-code-rover/qwen3-32b"
+    "cpu-time": 14.82,
+    "gpu-time": 85.18,
+    "scaffold-model": "auto-code-rover/gpt-4o-mini-2024-07-18"
   },
   {
-    "cpu-time": 78.4,
-    "gpu-time": 21.6,
-    "scaffold-model": "openhands/gpt-4o-mini"
+    "cpu-time": 24.61,
+    "gpu-time": 75.39,
+    "scaffold-model": "auto-code-rover/qwen3-32B"
   },
   {
-    "cpu-time": 76.04,
-    "gpu-time": 23.96,
-    "scaffold-model": "openhands/llama33"
+    "cpu-time": 69.02,
+    "gpu-time": 30.98,
+    "scaffold-model": "openhands/Llama-3.3-70B-Instruct-FP8"
   },
   {
-    "cpu-time": 53.24,
-    "gpu-time": 46.76,
-    "scaffold-model": "openhands/qwen3-32b"
+    "cpu-time": 69.58,
+    "gpu-time": 30.42,
+    "scaffold-model": "openhands/gpt-4o-mini-2024-07-18"
   },
   {
-    "cpu-time": 31.77,
-    "gpu-time": 68.23,
-    "scaffold-model": "swe-agent/gpt-4o-mini"
+    "cpu-time": 50.84,
+    "gpu-time": 49.16,
+    "scaffold-model": "openhands/qwen3-32B"
   },
   {
-    "cpu-time": 40.7,
-    "gpu-time": 59.3,
-    "scaffold-model": "swe-agent/llama33"
+    "cpu-time": 36.59,
+    "gpu-time": 63.41,
+    "scaffold-model": "swe-agent/Llama-3.3-70B-Instruct-FP8"
   },
   {
-    "cpu-time": 9.63,
-    "gpu-time": 90.37,
-    "scaffold-model": "swe-agent/qwen3-32b"
+    "cpu-time": 22.69,
+    "gpu-time": 77.31,
+    "scaffold-model": "swe-agent/gpt-4o-mini-2024-07-18"
+  },
+  {
+    "cpu-time": 9.05,
+    "gpu-time": 90.95,
+    "scaffold-model": "swe-agent/qwen3-32B"
   }
 ]

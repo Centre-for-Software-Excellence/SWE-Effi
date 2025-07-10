@@ -40,10 +40,6 @@ export default function TablesCard({
 }) {
   const { leaderboard, leaderboardRVU } = tablesUi;
 
-  // TODO: temporary mannually defined leaderboard data
-  // const data: RankedLeaderboardData[] = getLeaderboardData();
-  // const dataRVU: RankedLeaderboardRVUData[] = getLeaderboardDataRVU();
-
   const [data, setData] = useState<RankedLeaderboardData[]>([]);
   const [dataRVU, setDataRVU] = useState<RankedLeaderboardRVUData[]>([]);
   const [loading, setLoading] = useState(true);

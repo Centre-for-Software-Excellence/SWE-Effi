@@ -5,6 +5,7 @@ import { fileURLToPath } from 'url';
 import { ChartConfig } from '@/components/common/ui/chart';
 import { ChartData as CallsEntry } from '@/components/docs/leaderboard/chart/calls-bar-chart';
 import { ChartData as CostEntry } from '@/components/docs/leaderboard/chart/cost-bar-chart';
+import { ChartData as MetricEntry } from '@/components/docs/leaderboard/chart/metrics-radar-chart';
 import { ChartData as ResolveRateEntry } from '@/components/docs/leaderboard/chart/resolve-rate-line-chart';
 import { ChartData as TimePercentageEntry } from '@/components/docs/leaderboard/chart/time-percentage-bar-chart';
 import { LeaderboardData } from '@/components/docs/leaderboard/table/columns';
@@ -14,8 +15,6 @@ import { createColorGenerator } from '../utils';
 import { rankLeaderboardData, rankLeaderboardRVUData } from './get';
 
 const DRYRUN = false;
-const TOTAL_INSTANCES = 500;
-
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 interface InputData {
@@ -88,16 +87,12 @@ interface SummaryInputData {
   precision: number;
 }
 
-type Accumulator = Map<
-  /* scaffold */ string,
-  Map</* model */ string, { sum: number; count: number }>
->;
-
 export type ChartName =
   | 'resolve-rate-line'
   | 'calls-bar'
   | 'time-percentage-bar'
-  | 'cost-bar';
+  | 'cost-bar'
+  | 'metrics-radar';
 
 // color generator helper
 
@@ -149,7 +144,7 @@ export function buildResolveRateLineChart(opts?: {
         if (resolved) resolvedSoFar++;
         resolveData.push({
           totalTokens: totalTokens / 1e6,
-          [seriesName]: resolvedSoFar / 500,
+          [seriesName]: resolvedSoFar / records.length,
         });
       });
 
@@ -275,6 +270,25 @@ export function buildSummaryCharts(opts?: {
   };
   const costData: CostEntry[] = [];
 
+  const metricsCfg: ChartConfig = {};
+  const metricsData: MetricEntry[] = [
+    {
+      metric: 'resolve_rate',
+    },
+    {
+      metric: 'token_efficiency',
+    },
+    {
+      metric: 'cost_efficiency',
+    },
+    {
+      metric: 'cpu_efficiency',
+    },
+    {
+      metric: 'inference_efficiency',
+    },
+  ];
+
   const jsonFiles = fs.readdirSync(rawDir).filter((f) => f.endsWith('.json'));
 
   for (const file of jsonFiles) {
@@ -315,11 +329,65 @@ export function buildSummaryCharts(opts?: {
       'failure-cost': failureCost,
     };
     costData.push(costEntry);
+
+    // metrics data: (resolve_rage, token_efficiency, cost_efficiency, cpu_efficiency, inference_efficiency)
+    for (const metric of metricsData) {
+      switch (metric.metric) {
+        case 'resolve_rate':
+          metric[seriesName] = (record.resolved / record.total_projects) * 100;
+          break;
+        case 'token_efficiency':
+          metric[seriesName] =
+            ((record.avg_input_tokens + record.avg_output_tokens) /
+              record.avg_llm_calls) *
+            100;
+          break;
+        case 'cost_efficiency':
+          metric[seriesName] =
+            (successCost / (successCost + failureCost || 1)) * 100;
+          break;
+        case 'cpu_efficiency':
+          metric[seriesName] = (cpuTime / duration) * 100;
+          break;
+        case 'inference_efficiency':
+          metric[seriesName] =
+            ((record.avg_measured_gpu_time || 0) / (record.avg_duration || 1)) *
+            100;
+          break;
+      }
+      if (!metricsCfg[seriesName]) {
+        metricsCfg[seriesName] = {
+          label: seriesName,
+          color: nextColor(),
+        };
+      }
+    }
   }
+  // normalize the metrics data to 1 - 100
+  metricsData.forEach((metric) => {
+    const values = Object.values(metric).filter(
+      (v) => typeof v === 'number',
+    ) as number[];
+    const max = Math.max(...values);
+    const min = Math.min(...values);
+    if (max > min) {
+      values.forEach((value, index) => {
+        if (Object.keys(metric)[index] === 'metric') return;
+        metric[Object.keys(metric)[index]] =
+          ((value - min) / (max - min)) * 100;
+      });
+    } else {
+      // if all values are the same, set them to 100
+      Object.keys(metric).forEach((key) => {
+        if (key === 'metric') return;
+        metric[key] = 100;
+      });
+    }
+  });
 
   if (DRYRUN) {
     console.log(
-      `Dry run: would write ${timePercentageData.length} time percentage entries and ${costData.length} cost entries.`,
+      `Dry run: would write ${timePercentageData.length} time percentage entries, ${costData.length} cost entries and ${metricsData.length} metrics entries.`,
     );
     writeJSON(
       path.join(outDir, 'tmp/time-percentage-bar/chart-data.json'),
@@ -331,12 +399,21 @@ export function buildSummaryCharts(opts?: {
     );
     writeJSON(path.join(outDir, 'tmp/cost-bar/chart-data.json'), costData);
     writeJSON(path.join(outDir, 'tmp/cost-bar/chart-config.json'), costCfg);
+    writeJSON(
+      path.join(outDir, 'tmp/metrics-radar/chart-data.json'),
+      metricsData,
+    );
+    writeJSON(
+      path.join(outDir, 'tmp/metrics-radar/chart-config.json'),
+      metricsCfg,
+    );
   } else {
     console.log(
       `Writing ${timePercentageData.length} time percentage entries and ${costData.length} cost entries.`,
     );
     const tpDirName: ChartName = 'time-percentage-bar';
     const costDirName: ChartName = 'cost-bar';
+    const metricsDirName: ChartName = 'metrics-radar';
     writeJSON(
       path.join(outDir, `${tpDirName}/chart-data.json`),
       timePercentageData,
@@ -347,6 +424,14 @@ export function buildSummaryCharts(opts?: {
     );
     writeJSON(path.join(outDir, `${costDirName}/chart-data.json`), costData);
     writeJSON(path.join(outDir, `${costDirName}/chart-config.json`), costCfg);
+    writeJSON(
+      path.join(outDir, `${metricsDirName}/chart-data.json`),
+      metricsData,
+    );
+    writeJSON(
+      path.join(outDir, `${metricsDirName}/chart-config.json`),
+      metricsCfg,
+    );
   }
 }
 
@@ -390,15 +475,14 @@ export function buildLeaderboardTables(opts?: {
     const leaderboardDataEntry: LeaderboardData = {
       scaffold,
       model,
-      total: record.duration,
-      cpuTime: record.cpu_time,
-      inputToken: record.input_tokens,
-      outputToken: record.output_tokens,
-      calls: record.llm_calls,
-      // TODO: infTime?
-      infTime: 0,
-      resolveRate: record.resolved / TOTAL_INSTANCES,
-      precision: record.precision,
+      total: record.avg_duration,
+      cpuTime: record.avg_cpu_time,
+      inputToken: record.avg_input_tokens / 1000,
+      outputToken: record.avg_output_tokens / 1000,
+      calls: record.avg_llm_calls,
+      infTime: record.avg_measured_gpu_time,
+      resolveRate: (record.resolved / record.total_projects) * 100,
+      precision: record.precision * 100,
     };
 
     const leaderboardRVUDataEntry: LeaderboardRVUData = {
@@ -408,14 +492,15 @@ export function buildLeaderboardTables(opts?: {
       avgTotalTimeR: record.resolved_avg_duration,
       avgCPUTimeU: record.unresolved_avg_cpu_time,
       avgCPUTimeR: record.resolved_avg_cpu_time,
-      // TODO: inf time?
-      avgInfTimeU: 0,
-      avgInfTimeR: 0,
+      avgInfTimeU: record.unresolved_avg_measured_gpu_time,
+      avgInfTimeR: record.resolved_avg_measured_gpu_time,
       avgTotalTokensU:
-        record.unresolved_avg_input_tokens +
-        record.unresolved_avg_output_tokens,
+        (record.unresolved_avg_input_tokens +
+          record.unresolved_avg_output_tokens) /
+        1000,
       avgTotalTokensR:
-        record.resolved_avg_input_tokens + record.resolved_avg_output_tokens,
+        (record.resolved_avg_input_tokens + record.resolved_avg_output_tokens) /
+        1000,
       avgLLMRequestsU: record.unresolved_avg_llm_calls,
       avgLLMRequestsR: record.resolved_avg_llm_calls,
     };

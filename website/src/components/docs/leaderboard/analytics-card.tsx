@@ -4,6 +4,7 @@ import { H4, Lead } from '@/components/md';
 import { getLeaderboardUIConfig } from '@/config/ui/leaderboard';
 import { CallsBarChart } from './chart/calls-bar-chart';
 import { CostBarChart } from './chart/cost-bar-chart';
+import { MetricsRadarChart } from './chart/metrics-radar-chart';
 import { ResolveRateLineChart } from './chart/resolve-rate-line-chart';
 import { TimePercentageBarChart } from './chart/time-percentage-bar-chart';
 
@@ -30,6 +31,9 @@ export default function AnalyticsCard() {
       </Suspense>
       <Suspense fallback={<div className="h-96 w-full" />}>
         <CostBarChart {...costBarChartUI} />
+      </Suspense>
+      <Suspense fallback={<div className="h-96 w-full" />}>
+        <MetricsRadarChart {...costBarChartUI} />
       </Suspense>
     </section>
   );

@@ -5,14 +5,14 @@ import { ChartConfig } from '@/components/common/ui/chart';
 interface UseChartSettingsProps {
   chartData: any[];
   chartConfig: ChartConfig | null;
-  xKey?: string;
+  xKeys?: string[];
   defaultDomain?: [number, number];
 }
 
 export function useChartSettings({
   chartData,
   chartConfig,
-  xKey,
+  xKeys,
   defaultDomain,
 }: UseChartSettingsProps) {
   const [openSettings, setOpenSettings] = useState(false);
@@ -21,13 +21,18 @@ export function useChartSettings({
     () => chartData || [],
   );
 
-  const maxTokens = useMemo(
-    () => Math.max(...chartData.map((d) => (xKey ? d[xKey] : Infinity))),
-    [chartData, xKey],
+  const max = useMemo(
+    () =>
+      Math.max(
+        ...(xKeys?.map((key) => Math.max(...chartData.map((d) => d[key]))) || [
+          Infinity,
+        ]),
+      ),
+    [chartData, xKeys],
   );
 
-  const [xRange, setXRange] = useState<[number, number]>(
-    defaultDomain || [0, maxTokens],
+  const [domain, setDomain] = useState<[number, number]>(
+    defaultDomain || [0, max],
   );
 
   useEffect(() => {
@@ -49,8 +54,8 @@ export function useChartSettings({
     setOpenSettings,
     activeKeys,
     setActiveKeys,
-    maxTokens,
-    xRange,
-    setXRange,
+    max,
+    domain,
+    setDomain,
   };
 }

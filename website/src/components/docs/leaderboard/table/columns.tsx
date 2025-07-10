@@ -255,7 +255,10 @@ export const columns = (
     },
     cell: ({ row }) => (
       <div className="text-left font-medium">
-        {formatScore(row.getValue('precision'))}
+        <span className="font-bold">
+          {formatScore(row.getValue('precision'))}
+        </span>
+        <Progress value={row.getValue('precision')} className="h-2 w-16" />
       </div>
     ),
   },

@@ -21,12 +21,12 @@ export function ChartExplanation({
     <>
       <TooltipWrapper title={content.tooltip || 'Chart Expanation'}>
         <Button
-          variant="outline"
-          size="icon"
+          variant="ghost"
+          size="sm"
           onClick={() => {
             setShowExplanation(true);
           }}
-          className="flex items-center gap-2 bg-accent text-xs text-foreground hover:bg-background hover:text-foreground sm:text-base"
+          className="flex items-center text-foreground hover:bg-accent"
         >
           <Info className="h-4 w-4" />
         </Button>

@@ -18,6 +18,6 @@ export type ChartRendererProps = Partial<ChartProps> & {
   data: ChartData[];
   config: ChartConfig;
   isExpanded?: boolean;
-  xRange?: [number, number];
+  domain?: [number, number];
   activeKeys?: string[];
 };

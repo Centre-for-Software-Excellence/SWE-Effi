@@ -11,7 +11,7 @@ export function LineChartRenderer({
   data,
   config,
   activeKeys,
-  xRange,
+  domain,
   xAxisLabel,
   yAxisLabel,
   xAxisDataKey,
@@ -43,7 +43,7 @@ export function LineChartRenderer({
           dataKey={xAxisDataKey}
           tickLine={true}
           axisLine={true}
-          domain={xRange || [0, 'dataMax']}
+          domain={domain || [0, 'dataMax']}
           allowDataOverflow={true}
           tickFormatter={(value) => (value + '').slice(0, 3)}
           tickCount={10}

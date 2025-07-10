@@ -87,7 +87,7 @@ export function formatScore(score: string | undefined): string {
     ? 'N/A'
     : parseFloat(score).toLocaleString('en-US', {
         minimumFractionDigits: 0,
-        maximumFractionDigits: 2,
+        maximumFractionDigits: 1,
       });
   return res;
 }

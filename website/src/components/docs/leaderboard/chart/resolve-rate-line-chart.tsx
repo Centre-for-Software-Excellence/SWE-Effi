@@ -7,7 +7,7 @@ import {
   ChartTooltipContent,
 } from '@/components/common/ui/chart';
 import { Dialog } from '@/components/common/ui/dialog';
-import { CollapsibleLegend } from '@/components/docs/leaderboard/chart/atoms/collapsible-legend';
+import { HoverableLegend } from '@/components/docs/leaderboard/chart/atoms/chart-legend';
 import { useChartData } from '@/hooks/chart/use-chart-data';
 import { useChartPopover } from '@/hooks/chart/use-chart-popover';
 import { useChartSettings } from '@/hooks/chart/use-chart-settings';
@@ -56,14 +56,14 @@ export function ResolveRateLineChart({
     setOpenSettings,
     activeKeys,
     setActiveKeys,
-    maxTokens,
-    xRange,
-    setXRange,
+    max,
+    domain,
+    setDomain,
   } = useChartSettings({
     chartData,
     chartConfig,
-    xKey: 'totalTokens',
-    defaultDomain: [0, 6.2],
+    xKeys: ['totalTokens'],
+    defaultDomain: [0, 2.2],
   });
 
   const settingsButton = (
@@ -71,7 +71,7 @@ export function ResolveRateLineChart({
   );
 
   const legend = (
-    <CollapsibleLegend keys={activeKeys || []} config={chartConfig || {}} />
+    <HoverableLegend keys={activeKeys || []} config={chartConfig || {}} />
   );
 
   const explanation = <ChartExplanation content={explanationContent} />;
@@ -81,11 +81,12 @@ export function ResolveRateLineChart({
       <Dialog open={openSettings} onOpenChange={setOpenSettings}>
         {/* Dialog content */}
         <ChartSettings
-          xRange={xRange}
+          domain={domain}
+          setDomain={setDomain}
+          max={max}
+          step={0.01}
           setActiveKeys={setActiveKeys}
           keys={Object.keys(chartConfig || {})}
-          maxX={maxTokens}
-          setXRange={setXRange}
           onClose={() => setOpenSettings(false)}
           title="Settings"
         />
@@ -105,7 +106,6 @@ export function ResolveRateLineChart({
             <TooltipProvider>
               <ChartControls
                 explanation={explanation}
-                legend={legend}
                 expandButton={{ isExpanded, onToggle: toggleExpanded }}
                 settingsButton={settingsButton}
               />
@@ -117,11 +117,12 @@ export function ResolveRateLineChart({
               data={chartData}
               config={chartConfig || {}}
               activeKeys={activeKeys}
-              xRange={xRange}
+              domain={domain}
               xAxisLabel={xAxisLabel}
               yAxisLabel={yAxisLabel}
               xAxisDataKey={xAxisDataKey}
             />
+            {legend}
           </div>
         </ChartCard>
       </Dialog>
@@ -133,17 +134,14 @@ function LineChartRenderer({
   data,
   config,
   activeKeys,
-  xRange,
+  domain,
   xAxisLabel,
   yAxisLabel,
   xAxisDataKey,
 }: ChartRendererProps) {
   const configKeys = activeKeys || Object.keys(config);
   return (
-    <ChartContainer
-      config={config}
-      className="min-h-[200px] w-full overflow-x-hidden"
-    >
+    <ChartContainer config={config} className="h-[300px] w-full md:h-[400px]">
       <LineChart
         accessibilityLayer
         data={data}
@@ -151,34 +149,21 @@ function LineChartRenderer({
       >
         <CartesianGrid vertical={false} />
         <YAxis width={20} tickFormatter={(value) => (value + '').slice(0, 3)}>
-          {yAxisLabel && (
-            <Label
-              value={yAxisLabel}
-              position="inside"
-              angle={-90}
-              dx={-25}
-              className="text-[8px] md:text-sm"
-            />
-          )}
+          <Label value={yAxisLabel} position="inside" angle={-90} dx={-25} />
         </YAxis>
         <XAxis
           type="number"
           dataKey={xAxisDataKey}
           tickLine={true}
           axisLine={true}
-          domain={xRange || [0, 'dataMax']}
+          domain={domain}
           allowDataOverflow={true}
           tickFormatter={(value) => (value + '').slice(0, 3)}
           tickCount={10}
           height={20}
         >
           {xAxisLabel && (
-            <Label
-              value="Total Tokens (input_tokens + output_tokens) (1e6)"
-              position="insideBottom"
-              offset={-15}
-              className="text-[8px] md:text-sm"
-            />
+            <Label value={xAxisLabel} position="insideBottom" offset={-15} />
           )}
         </XAxis>
         <ChartTooltip
@@ -191,11 +176,11 @@ function LineChartRenderer({
           <Line
             key={key}
             dataKey={key}
-            type="natural"
+            type="linear"
             stroke={config?.[key]?.color}
             strokeWidth={1}
             dot={false}
-            isAnimationActive={false}
+            isAnimationActive={true}
           />
         ))}
       </LineChart>

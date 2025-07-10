@@ -5,6 +5,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/common/ui/card';
+import { cn } from '@/lib/utils';
 
 interface ChartHeaderProps {
   title: string;
@@ -20,20 +21,20 @@ export function ChartHeader({
   className,
 }: ChartHeaderProps) {
   return (
-    <CardHeader
-      className={`flex w-full items-start justify-between space-y-0 pb-2 sm:flex-row ${className || ''}`}
-    >
-      <div className="w-2/3">
-        <CardTitle className="text-sm md:text-lg">{title}</CardTitle>
-        <CardDescription className="text-sm md:text-base">
-          {description}
-        </CardDescription>
-      </div>
-      {children && (
-        <div className="flex items-center gap-1 sm:justify-between sm:gap-2">
+    <div>
+      <CardHeader
+        className={cn('flex w-full flex-col space-y-2 pb-4', className)}
+      >
+        <div className="flex w-full flex-row items-start justify-between">
+          <div>
+            <CardTitle className="text-sm md:text-lg">{title}</CardTitle>
+            <CardDescription className="text-sm md:text-base">
+              {description}
+            </CardDescription>
+          </div>
           {children}
         </div>
-      )}
-    </CardHeader>
+      </CardHeader>
+    </div>
   );
 }

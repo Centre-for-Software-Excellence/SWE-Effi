@@ -54,6 +54,11 @@ export function DataTable<TData, TValue>({
     onColumnFiltersChange: setColumnFilters,
     getFilteredRowModel: getFilteredRowModel(),
     onColumnVisibilityChange: setColumnVisibility,
+    initialState: {
+      pagination: {
+        pageSize: 15,
+      },
+    },
     state: {
       sorting,
       columnFilters,
@@ -100,7 +105,7 @@ export function DataTable<TData, TValue>({
 
               <DropdownMenuContent align="end">
                 {table
-                  .getAllColumns()
+                  .getVisibleLeafColumns()
                   .filter((column) => column.getCanHide())
                   .map((column) => {
                     return (
@@ -108,6 +113,7 @@ export function DataTable<TData, TValue>({
                         key={column.id}
                         className="capitalize"
                         checked={column.getIsVisible()}
+                        disabled={!column.getCanHide()}
                         onCheckedChange={(value) =>
                           column.toggleVisibility(!!value)
                         }
@@ -128,7 +134,11 @@ export function DataTable<TData, TValue>({
               <TableRow key={headerGroup.id}>
                 {headerGroup.headers.map((header) => {
                   return (
-                    <TableHead key={header.id}>
+                    <TableHead
+                      key={header.id}
+                      colSpan={header.colSpan}
+                      className="pr-4"
+                    >
                       {header.isPlaceholder
                         ? null
                         : flexRender(

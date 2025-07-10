@@ -8,8 +8,8 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from '@/components/common/ui/chart';
-import { ScrollArea, ScrollBar } from '@/components/common/ui/scroll-area';
-import { CollapsibleLegend } from '@/components/docs/leaderboard/chart/atoms/collapsible-legend';
+import { ScrollArea } from '@/components/common/ui/scroll-area';
+import { StackedLegend } from '@/components/docs/leaderboard/chart/atoms/chart-legend';
 import { useChartData } from '@/hooks/chart/use-chart-data';
 import { useChartPopover } from '@/hooks/chart/use-chart-popover';
 import { useChartSettings } from '@/hooks/chart/use-chart-settings';
@@ -68,10 +68,10 @@ export function TimePercentageBarChart({
   );
 
   const legend = (
-    <CollapsibleLegend
+    <StackedLegend
       keys={Object.keys(chartConfig || {})}
       config={chartConfig || {}}
-      show={true}
+      setActiveKeys={setActiveKeys}
     />
   );
 
@@ -100,16 +100,15 @@ export function TimePercentageBarChart({
             className,
           )}
         >
-          <ChartHeader title={title} description={description}>
-            <TooltipProvider>
+          <TooltipProvider>
+            <ChartHeader title={title} description={description}>
               <ChartControls
                 explanation={explanation}
-                legend={legend}
                 expandButton={{ isExpanded, onToggle: toggleExpanded }}
                 settingsButton={settingsButton}
               />
-            </TooltipProvider>
-          </ChartHeader>
+            </ChartHeader>
+          </TooltipProvider>
 
           <div className="relative px-4">
             <StackedBarChartRenderer
@@ -122,7 +121,8 @@ export function TimePercentageBarChart({
               yAxisDataKey={yAxisDataKey}
             />
           </div>
-        </ChartCard>{' '}
+          {legend}
+        </ChartCard>
       </Dialog>
     </>
   );
@@ -159,12 +159,17 @@ export function StackedBarChartRenderer({
     };
   }, []);
   return (
-    <div className="w-full" ref={containerRef}>
-      <ScrollArea type="always" scrollHideDelay={0} className={cn('h-[400px]')}>
+    <div ref={containerRef}>
+      {/* main chart */}
+      <ScrollArea
+        type="always"
+        scrollHideDelay={0}
+        className="h-[300px] md:h-[400px]"
+      >
         <ChartContainer
           config={config}
           style={{
-            height: Math.max(400, data.length * 40),
+            height: data.length * 40,
             width: containerWidth || '100%',
           }}
         >
@@ -223,10 +228,9 @@ export function StackedBarChartRenderer({
             ))}
           </BarChart>
         </ChartContainer>
-        <ScrollBar orientation="horizontal" />
       </ScrollArea>
       {/* dummy chart for displaying fixed x-axis */}
-      <div className="flex h-[50px] justify-end">
+      <div className="flex h-12 justify-end">
         <ChartContainer
           config={config}
           style={{
@@ -236,8 +240,7 @@ export function StackedBarChartRenderer({
           <BarChart
             layout="vertical"
             accessibilityLayer
-            data={data}
-            margin={{ left: 100, bottom: 20 }}
+            margin={{ left: 100, bottom: 15 }}
           >
             <XAxis
               orientation="bottom"
@@ -251,16 +254,10 @@ export function StackedBarChartRenderer({
                 value={xAxisLabel}
                 position="insideBottom"
                 offset={-15}
-                className="-translate-x-12 sm:-translate-x-0"
+                className="-translate-x-[50px] sm:-translate-x-0"
               />
             </XAxis>
-            <YAxis
-              type="category"
-              tickLine={false}
-              tickMargin={10}
-              axisLine={false}
-              tickFormatter={(_value) => ``}
-            />
+            <YAxis type="category" />
           </BarChart>
         </ChartContainer>
       </div>

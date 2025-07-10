@@ -6,8 +6,6 @@ import {
   LeaderboardRVUData,
   RankedLeaderboardRVUData,
 } from '@/components/docs/leaderboard/table/columns-rvu';
-import leaderboardRVUData from '@/config/leaderboard/data-rvu.json';
-import leaderboardData from '@/config/leaderboard/data.json';
 
 type Column =
   | 'inputToken'
@@ -56,16 +54,4 @@ export function rankLeaderboardRVUData(
     ...performance,
     rank: index + 1,
   }));
-}
-
-// TODO: delete me after using useEffect approach
-export function getLeaderboardData(): RankedLeaderboardData[] {
-  const data: LeaderboardData[] = leaderboardData;
-  return rankLeaderboardData(data);
-}
-
-// TODO: delete me after using useEffect approach
-export function getLeaderboardDataRVU(): RankedLeaderboardRVUData[] {
-  const data: LeaderboardRVUData[] = leaderboardRVUData;
-  return rankLeaderboardRVUData(data);
 }

@@ -1,14 +1,14 @@
 {
-  "gpt-4o-mini": {
-    "label": "gpt-4o-mini",
+  "Llama-3.3-70B-Instruct-FP8": {
+    "label": "Llama-3.3-70B-Instruct-FP8",
     "color": "#36a2eb"
   },
-  "llama33": {
-    "label": "llama33",
+  "gpt-4o-mini-2024-07-18": {
+    "label": "gpt-4o-mini-2024-07-18",
     "color": "#ff6384"
   },
-  "qwen3-32b": {
-    "label": "qwen3-32b",
+  "qwen3-32B": {
+    "label": "qwen3-32B",
     "color": "#4bc0c0"
   }
 }

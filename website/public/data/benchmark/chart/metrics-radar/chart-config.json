@@ -1,0 +1,62 @@
+{
+  "agentless-mini/Llama-3.3-70B-Instruct-FP8": {
+    "label": "agentless-mini/Llama-3.3-70B-Instruct-FP8",
+    "color": "#4bc0c0"
+  },
+  "agentless-mini/gpt-4o-mini-2024-07-18": {
+    "label": "agentless-mini/gpt-4o-mini-2024-07-18",
+    "color": "#ff9f40"
+  },
+  "agentless-mini/qwen3-32B": {
+    "label": "agentless-mini/qwen3-32B",
+    "color": "#9966ff"
+  },
+  "agentless/Llama-3.3-70B-Instruct-FP8": {
+    "label": "agentless/Llama-3.3-70B-Instruct-FP8",
+    "color": "#ffcd56"
+  },
+  "agentless/gpt-4o-mini-2024-07-18": {
+    "label": "agentless/gpt-4o-mini-2024-07-18",
+    "color": "#c9cbcf"
+  },
+  "agentless/qwen3-32B": {
+    "label": "agentless/qwen3-32B",
+    "color": "#eb366d"
+  },
+  "auto-code-rover/Llama-3.3-70B-Instruct-FP8": {
+    "label": "auto-code-rover/Llama-3.3-70B-Instruct-FP8",
+    "color": "#63ff70"
+  },
+  "auto-code-rover/gpt-4o-mini-2024-07-18": {
+    "label": "auto-code-rover/gpt-4o-mini-2024-07-18",
+    "color": "#c04b9e"
+  },
+  "auto-code-rover/qwen3-32B": {
+    "label": "auto-code-rover/qwen3-32B",
+    "color": "#40ffd7"
+  },
+  "openhands/Llama-3.3-70B-Instruct-FP8": {
+    "label": "openhands/Llama-3.3-70B-Instruct-FP8",
+    "color": "#ffc666"
+  },
+  "openhands/gpt-4o-mini-2024-07-18": {
+    "label": "openhands/gpt-4o-mini-2024-07-18",
+    "color": "#56fffe"
+  },
+  "openhands/qwen3-32B": {
+    "label": "openhands/qwen3-32B",
+    "color": "#cfc9c9"
+  },
+  "swe-agent/Llama-3.3-70B-Instruct-FP8": {
+    "label": "swe-agent/Llama-3.3-70B-Instruct-FP8",
+    "color": "#38eb36"
+  },
+  "swe-agent/gpt-4o-mini-2024-07-18": {
+    "label": "swe-agent/gpt-4o-mini-2024-07-18",
+    "color": "#9d63ff"
+  },
+  "swe-agent/qwen3-32B": {
+    "label": "swe-agent/qwen3-32B",
+    "color": "#7cc04b"
+  }
+}

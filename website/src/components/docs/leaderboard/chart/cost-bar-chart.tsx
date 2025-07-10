@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { scaleLog } from 'd3-scale';
 import { Bar, BarChart, CartesianGrid, Label, XAxis, YAxis } from 'recharts';
 
 import { TooltipProvider } from '@/components/common/tooltip-wrapper';
@@ -9,7 +10,7 @@ import {
 } from '@/components/common/ui/chart';
 import { Dialog } from '@/components/common/ui/dialog';
 import { ScrollArea } from '@/components/common/ui/scroll-area';
-import { CollapsibleLegend } from '@/components/docs/leaderboard/chart/atoms/collapsible-legend';
+import { StackedLegend } from '@/components/docs/leaderboard/chart/atoms/chart-legend';
 import { useChartData } from '@/hooks/chart/use-chart-data';
 import { useChartPopover } from '@/hooks/chart/use-chart-popover';
 import { useChartSettings } from '@/hooks/chart/use-chart-settings';
@@ -61,17 +62,24 @@ export function CostBarChart({
     setActiveKeys,
     filteredData,
     setFilteredData,
-  } = useChartSettings({ chartData, chartConfig });
+    max,
+    domain,
+    setDomain,
+  } = useChartSettings({
+    chartData,
+    chartConfig,
+    defaultDomain: [10000, 10000000],
+    xKeys: ['failure-cost', 'success-cost'],
+  });
 
   const settingsButton = (
     <ChartSettingsButton onClickAction={() => setOpenSettings(!openSettings)} />
   );
 
   const legend = (
-    <CollapsibleLegend
+    <StackedLegend
       keys={Object.keys(chartConfig || {})}
       config={chartConfig || {}}
-      show={true}
     />
   );
 
@@ -81,12 +89,17 @@ export function CostBarChart({
     <>
       <Dialog open={openSettings} onOpenChange={setOpenSettings}>
         <ChartSettings
+          domain={domain}
+          setDomain={setDomain}
+          min={10000}
+          log={true}
+          max={max}
           setActiveKeys={setActiveKeys}
           keys={Object.keys(chartConfig || {})}
           data={chartData}
           setFilteredData={setFilteredData}
           onClose={() => setOpenSettings(false)}
-          title="Setting"
+          title="Settings"
           field="scaffold-model"
         />
         <ChartCard
@@ -104,7 +117,6 @@ export function CostBarChart({
             <TooltipProvider>
               <ChartControls
                 explanation={explanation}
-                legend={legend}
                 expandButton={{ isExpanded, onToggle: toggleExpanded }}
                 settingsButton={settingsButton}
               />
@@ -117,11 +129,13 @@ export function CostBarChart({
               isExpanded={isExpanded}
               config={chartConfig}
               activeKeys={activeKeys}
+              domain={domain}
               xAxisLabel={xAxisLabel}
               yAxisLabel={yAxisLabel}
               yAxisDataKey={yAxisDataKey}
             />
           </div>
+          {legend}
         </ChartCard>
       </Dialog>
     </>
@@ -134,11 +148,13 @@ export function HorizontalBarChartRenderer({
   xAxisLabel,
   yAxisLabel,
   yAxisDataKey,
+  domain,
   activeKeys,
 }: ChartRendererProps) {
   const configKeys = activeKeys || Object.keys(config);
   const containerRef = useRef<HTMLDivElement>(null);
   const [containerWidth, setContainerWidth] = useState(0);
+  const scale = scaleLog(domain || [], [0, containerWidth]);
   useEffect(() => {
     if (!containerRef.current) return;
 
@@ -158,8 +174,12 @@ export function HorizontalBarChartRenderer({
   }, []);
 
   return (
-    <div className="w-full" ref={containerRef}>
-      <ScrollArea type="always" scrollHideDelay={0} className={cn('h-[400px]')}>
+    <div ref={containerRef}>
+      <ScrollArea
+        type="always"
+        scrollHideDelay={0}
+        className="h-[300px] md:h-[400px]"
+      >
         <ChartContainer
           config={config}
           style={{
@@ -179,9 +199,17 @@ export function HorizontalBarChartRenderer({
             <XAxis
               hide
               type="number"
-              domain={[10000, 'dataMax']}
-              ticks={[10000, 100000, 1000000, 10000000, 'dataMax']}
-              scale="log"
+              tickLine={true}
+              tickMargin={10}
+              axisLine={true}
+              domain={domain}
+              scale={scale}
+              ticks={scale.ticks().filter((tick) => Math.log10(tick) % 1 === 0)}
+              allowDataOverflow={true}
+              // add this to make sure render corresponding vertical tick lines
+              tickFormatter={(_) => {
+                return '';
+              }}
             />
 
             <YAxis
@@ -220,32 +248,23 @@ export function HorizontalBarChartRenderer({
       <div className="flex h-[50px] justify-end">
         <ChartContainer
           config={config}
-          style={{
-            width: containerWidth || '100%',
-          }}
+          style={{ width: containerWidth || '100%' }}
         >
-          <BarChart
-            layout="vertical"
-            data={data}
-            margin={{ left: 100, bottom: 20 }}
-          >
-            <YAxis
-              type="category"
-              tickLine={false}
-              tickMargin={10}
-              axisLine={false}
-              tickFormatter={(_value) => ``}
-            />
+          <BarChart layout="vertical" margin={{ left: 100, bottom: 20 }}>
+            <CartesianGrid horizontal={false} />
+            {/* dummay placeholder for xaxis to position correctly*/}
+            <YAxis aria-hidden />
             <XAxis
               type="number"
-              tickLine={true}
-              tickMargin={10}
-              axisLine={true}
-              domain={[10000, 'dataMax']}
-              // TODO: make sure use correct ticks based on the data
-              ticks={[10000, 100000, 1000000, 10000000, 'dataMax']}
-              tickFormatter={(value) => {
-                const exponent = Math.log10(value);
+              domain={domain}
+              scale={scale}
+              ticks={scale.ticks().filter((tick) => Math.log10(tick) % 1 === 0)}
+              tickFormatter={(d) => {
+                const exponent = Math.log10(d);
+                const isPowerOfTen = exponent % 1 === 0;
+                if (!isPowerOfTen) {
+                  return '';
+                }
                 const superscripts = [
                   '⁰',
                   '¹',
@@ -265,13 +284,12 @@ export function HorizontalBarChartRenderer({
                   .join('');
                 return `10${superscriptStr}`;
               }}
-              scale="log"
             >
               <Label
                 value={xAxisLabel}
                 position="insideBottom"
                 offset={-15}
-                className="-translate-x-12 sm:-translate-x-0"
+                className="-translate-x-[50px] sm:-translate-x-0"
               />
             </XAxis>
           </BarChart>

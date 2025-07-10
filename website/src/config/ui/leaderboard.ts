@@ -113,7 +113,7 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
       overview: 'Overview of the resolve rate line chart...',
       insight: 'Insight about the resolve rate line chart...',
       xAxisLabel: 'Total Tokens (input tokens + output tokens) (1e6)',
-      yAxisLabel: 'Resolve Rate (Resolved Instances/500)',
+      yAxisLabel: 'Resolve Rate',
       xAxisDataKey: 'totalTokens',
     },
     numCallsBarChart: {
