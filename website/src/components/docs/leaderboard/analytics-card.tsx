@@ -14,6 +14,7 @@ export default function AnalyticsCard() {
   const callsBarChartUI = ui.numCallsBarChart;
   const timePercentageBarChartUI = ui.timePercentageBarChart;
   const costBarChartUI = ui.costBarChart;
+  const metricRadarChartUI = ui.metricsRadarChart;
   return (
     <section className="flex flex-col space-y-4">
       {ui.title && (
@@ -33,7 +34,7 @@ export default function AnalyticsCard() {
         <CostBarChart {...costBarChartUI} />
       </Suspense>
       <Suspense fallback={<div className="h-96 w-full" />}>
-        <MetricsRadarChart {...costBarChartUI} />
+        <MetricsRadarChart {...metricRadarChartUI} />
       </Suspense>
     </section>
   );

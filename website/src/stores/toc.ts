@@ -80,6 +80,6 @@ export const useTocStore = create<TocState>(
         }));
       },
     }),
-    { name: 'Toc Store', showDiff: true },
+    { name: 'Toc Store', showDiff: true, enabled: import.meta.env.DEV },
   ),
 );

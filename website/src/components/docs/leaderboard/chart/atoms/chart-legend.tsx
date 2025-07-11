@@ -6,7 +6,6 @@ import { ScrollArea } from '@/components/common/ui/scroll-area';
 import { cn } from '@/lib/utils';
 
 function LegendItem({
-  key,
   color,
   label,
   legendStyle = 'default',
@@ -17,7 +16,7 @@ function LegendItem({
   legendStyle?: 'default' | 'cube';
 }) {
   return (
-    <div key={key} className="flex items-center gap-2 text-xs md:text-sm">
+    <div className="flex items-center gap-2 text-xs md:text-sm">
       <div
         className={cn('opacity relative', {
           'h-3 w-3 rounded-none': legendStyle === 'cube',
@@ -52,6 +51,7 @@ export function StackedLegend({
     <div className="flex w-full flex-wrap items-center justify-center gap-2 p-2">
       {keys.map((k) => (
         <Button
+          key={k}
           variant="ghost"
           className="cursor-default"
           onClick={() => setActiveKeys?.([k])}

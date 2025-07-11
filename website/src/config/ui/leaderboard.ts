@@ -28,6 +28,7 @@ interface LeaderboardUIConfig {
     numCallsBarChart: ChartProps;
     timePercentageBarChart: ChartProps;
     costBarChart: ChartProps;
+    metricsRadarChart: ChartProps;
   };
   citation: {
     citationTitle?: string;
@@ -43,17 +44,18 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
   buttonLinks: [
     {
       title: 'About',
-      href: '/docs/benchmark/agent-scaffold-blog',
+      href: '/benchmark/agent-scaffold-blog',
       icon: Newspaper,
     },
     {
       title: 'Github',
       href: 'https://github.com/Center-for-Software-Excellence/SWE-Lens',
+      external: true,
       icon: Github,
     },
     {
       title: 'Submit',
-      href: '/docs/guide/update-site-data',
+      href: '/guide/update-site-data',
       icon: ExternalLink,
     },
     {
@@ -142,6 +144,13 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
       xAxisLabel: 'Average Token Cost (Log Scale)',
       yAxisLabel: '',
       yAxisDataKey: 'scaffold-model',
+    },
+    metricsRadarChart: {
+      title: 'Metrics Radar Chart',
+      description: 'Lead description about the metrics radar chart...',
+      overview: 'Overview of the metrics radar chart...',
+      insight: 'Insight about the metrics radar chart...',
+      polarAngleAxisDataKey: 'metric',
     },
   },
   citation: {

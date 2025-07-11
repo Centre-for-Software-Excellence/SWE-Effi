@@ -29,6 +29,7 @@ export function MetricsRadarChart({
   overview,
   insight,
   className,
+  polarAngleAxisDataKey,
 }: ChartProps) {
   const explanationContent = {
     overview,
@@ -90,6 +91,7 @@ export function MetricsRadarChart({
               isExpanded={isExpanded}
               config={chartConfig}
               activeKeys={activeKeys}
+              polarAngleAxisDataKey={polarAngleAxisDataKey}
             />
           </div>
 
@@ -100,7 +102,12 @@ export function MetricsRadarChart({
   );
 }
 
-function RadarChartRenderer({ data, config, activeKeys }: ChartRendererProps) {
+function RadarChartRenderer({
+  data,
+  config,
+  activeKeys,
+  polarAngleAxisDataKey,
+}: ChartRendererProps) {
   const configKeys = activeKeys || Object.keys(config || {});
   return (
     <ChartContainer config={config} className="h-[300px] w-full md:h-[400px]">
@@ -115,7 +122,7 @@ function RadarChartRenderer({ data, config, activeKeys }: ChartRendererProps) {
           cursor={false}
           content={<ChartTooltipContent indicator="line" />}
         />
-        <PolarAngleAxis dataKey="metric" />
+        <PolarAngleAxis dataKey={polarAngleAxisDataKey} />
         <PolarGrid />
         <Radar
           key={configKeys[0]}

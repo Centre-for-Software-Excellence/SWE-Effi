@@ -7,6 +7,7 @@ tags: ['agent scaffold blog']
 
 import { Divider } from '@/components/common/ui/divider';
 import { CostBarChart } from '@/components/docs/leaderboard/chart/cost-bar-chart';
+import { MetricsRadarChart } from '@/components/docs/leaderboard/chart/metrics-radar-chart';
 import { TimePercentageBarChart } from '@/components/docs/leaderboard/chart/time-percentage-bar-chart';
 import TablesCard from '@/components/docs/leaderboard/tables-card';
 import { getLeaderboardUIConfig } from '@/config/ui/leaderboard';
@@ -102,6 +103,11 @@ By combining this setup with our detailed measurement, we have created a leaderb
 <br />
 <TimePercentageBarChart
   {...getLeaderboardUIConfig().analytics.timePercentageBarChart}
+  className="lg:p-0"
+/>
+<br />
+<MetricsRadarChart
+  {...getLeaderboardUIConfig().analytics.metricsRadarChart}
   className="lg:p-0"
 />
 

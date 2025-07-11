@@ -80,6 +80,7 @@ export function CostBarChart({
     <StackedLegend
       keys={Object.keys(chartConfig || {})}
       config={chartConfig || {}}
+      setActiveKeys={setActiveKeys}
     />
   );
 

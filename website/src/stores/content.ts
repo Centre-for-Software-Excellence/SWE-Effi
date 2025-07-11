@@ -51,6 +51,10 @@ export const useContentStore = create<ContentState>(
         }
       },
     }),
-    { name: 'Markdown Content Sotre', showDiff: false },
+    {
+      name: 'Markdown Content Sotre',
+      showDiff: false,
+      enabled: import.meta.env.DEV,
+    },
   ),
 );

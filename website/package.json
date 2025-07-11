@@ -1,5 +1,5 @@
 {
-  "name": "efficient-benchmark-website",
+  "name": "swe-lens",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -15,7 +15,6 @@
     "pre-build": "tsx ./src/lib/data/generate.ts && tsx ./src/lib/docs/build-index.ts"
   },
   "dependencies": {
-    "@gsap/react": "^2.1.2",
     "@mdx-js/react": "^3.1.0",
     "@mdx-js/rollup": "^3.1.0",
     "@radix-ui/react-collapsible": "^1.1.11",

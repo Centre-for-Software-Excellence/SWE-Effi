@@ -58,7 +58,7 @@
     }
   }
 
-  --animate-expand-x: expand-x 0.7s ease-in-out;
+  --animate-expand-x: expand-x 0.7s ease-in-out forwards;
   @keyframes expand-x {
     0% {
       transform: scaleX(0);
@@ -67,7 +67,7 @@
       transform: scaleX(1);
     }
   }
-  --animate-expand-y: expand-y 0.7s ease-in-out;
+  --animate-expand-y: expand-y 0.7s ease-in-out forwards;
   @keyframes expand-y {
     0% {
       transform: scaleY(0);
@@ -90,7 +90,7 @@
     }
   }
 
-  --animate-fade-in-top: fade-in-top 0.2s ease-in-out;
+  --animate-fade-in-top: fade-in-top 0.2s ease-in-out forwards;
   @keyframes fade-in-top {
     0% {
       opacity: 0;
@@ -102,7 +102,7 @@
     }
   }
 
-  --animate-fade-in: fade-in 0.3s ease-in-out;
+  --animate-fade-in: fade-in 0.3s ease-in-out farwards;
   @keyframes fade-in {
     0% {
       opacity: 0;

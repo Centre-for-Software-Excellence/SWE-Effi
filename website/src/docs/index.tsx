@@ -25,20 +25,26 @@ export default function Page() {
         </H1>
         <P className="text-center">{ui.description}</P>
         <div className="mb-0 flex w-full flex-wrap justify-center gap-4 px-4 py-2 sm:px-2 md:gap-8">
-          {ui.buttonLinks?.map(({ title, href: link, icon: Icon }, idx) => (
-            <Button
-              key={title + idx}
-              variant="default"
-              size="lg"
-              className="h-12 w-full rounded-full bg-foreground text-xl text-background transition-all duration-300 hover:scale-110 hover:border hover:border-foreground hover:bg-background hover:text-foreground xs:w-36"
-              onClick={() => {
-                navigate(link);
-              }}
-            >
-              {Icon && <Icon className="h-4 w-4" />}
-              {title}
-            </Button>
-          ))}
+          {ui.buttonLinks?.map(
+            ({ title, href: link, external, icon: Icon }, idx) => (
+              <Button
+                key={title + idx}
+                variant="default"
+                size="lg"
+                className="h-12 w-full rounded-full bg-foreground text-xl text-background transition-all duration-300 hover:scale-110 hover:border hover:border-foreground hover:bg-background hover:text-foreground xs:w-36"
+                onClick={() => {
+                  if (external) {
+                    window.open(link, '_blank', 'noopener,noreferrer');
+                    return;
+                  }
+                  navigate(link);
+                }}
+              >
+                {Icon && <Icon className="h-4 w-4" />}
+                {title}
+              </Button>
+            ),
+          )}
         </div>
         <Divider className="my-16" />
         <TablesCard tablesUi={ui.tables} />
@@ -46,10 +52,10 @@ export default function Page() {
         <Suspense fallback={<div className="h-96 w-full" />}>
           <AnalyticsCard />
         </Suspense>
-        <Divider className="mt-16" />
-        <PartnersCard />
         <Divider className="mb-16" />
         <CitationCard />
+        <Divider className="mt-16" />
+        <PartnersCard />
       </div>
     </StaggeredContent>
   );
