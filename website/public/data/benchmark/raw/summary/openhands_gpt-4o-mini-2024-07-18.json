@@ -52,5 +52,9 @@
   "unresolved_avg_measured_gpu_time": 60.47130747743555,
   "unresolved_total_measured_duration": 5936.160000000001,
   "unresolved_avg_measured_duration": 160.43675675675678,
-  "precision": 0.2631578947368421
+  "precision": 0.2631578947368421,
+  "token_efficiency_auc": 127463853.5,
+  "cost_efficiency_auc": 95.40946837499999,
+  "cpu_efficiency_auc": 15561.748186118126,
+  "gpu_efficiency_auc": 6842.895655795706
 }

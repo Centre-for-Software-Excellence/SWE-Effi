@@ -41,10 +41,12 @@ function LegendItem({
 export function StackedLegend({
   keys,
   config,
+  activeKeys,
   setActiveKeys,
 }: {
   keys: string[];
   config: ChartConfig;
+  activeKeys?: string[];
   setActiveKeys?: (keys: string[]) => void;
 }) {
   return (
@@ -53,7 +55,7 @@ export function StackedLegend({
         <Button
           key={k}
           variant="ghost"
-          className="cursor-default"
+          className={cn('cursor-default', activeKeys?.[0] === k && 'bg-muted')}
           onClick={() => setActiveKeys?.([k])}
         >
           <LegendItem

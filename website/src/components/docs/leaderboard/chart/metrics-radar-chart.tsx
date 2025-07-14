@@ -56,6 +56,7 @@ export function MetricsRadarChart({
     <StackedLegend
       keys={Object.keys(chartConfig || {})}
       config={chartConfig || {}}
+      activeKeys={activeKeys}
       setActiveKeys={setActiveKeys}
     />
   );

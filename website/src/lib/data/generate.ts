@@ -85,6 +85,10 @@ interface SummaryInputData {
   unresolved_total_measured_duration: number;
   unresolved_avg_measured_duration: number;
   precision: number;
+  token_efficiency_auc: number;
+  cost_efficiency_auc: number;
+  cpu_efficiency_auc: number;
+  gpu_efficiency_auc: number;
 }
 
 export type ChartName =
@@ -337,22 +341,16 @@ export function buildSummaryCharts(opts?: {
           metric[seriesName] = (record.resolved / record.total_projects) * 100;
           break;
         case 'token_efficiency':
-          metric[seriesName] =
-            ((record.avg_input_tokens + record.avg_output_tokens) /
-              record.avg_llm_calls) *
-            100;
+          metric[seriesName] = record.token_efficiency_auc;
           break;
         case 'cost_efficiency':
-          metric[seriesName] =
-            (successCost / (successCost + failureCost || 1)) * 100;
+          metric[seriesName] = record.cost_efficiency_auc;
           break;
         case 'cpu_efficiency':
-          metric[seriesName] = (cpuTime / duration) * 100;
+          metric[seriesName] = record.cpu_efficiency_auc;
           break;
         case 'inference_efficiency':
-          metric[seriesName] =
-            ((record.avg_measured_gpu_time || 0) / (record.avg_duration || 1)) *
-            100;
+          metric[seriesName] = record.gpu_efficiency_auc;
           break;
       }
       if (!metricsCfg[seriesName]) {
@@ -363,18 +361,20 @@ export function buildSummaryCharts(opts?: {
       }
     }
   }
-  // normalize the metrics data to 1 - 100
+  // TODO: temporarily normalize the metrics data to 1 - 100 using min-max scaling
   metricsData.forEach((metric) => {
-    const values = Object.values(metric).filter(
-      (v) => typeof v === 'number',
-    ) as number[];
+    const values = Object.entries(metric)
+      .filter(([key, value]) => key !== 'metric' && typeof value === 'number')
+      .map(([, value]) => value as number);
+
     const max = Math.max(...values);
     const min = Math.min(...values);
+
     if (max > min) {
-      values.forEach((value, index) => {
-        if (Object.keys(metric)[index] === 'metric') return;
-        metric[Object.keys(metric)[index]] =
-          ((value - min) / (max - min)) * 100;
+      Object.keys(metric).forEach((key) => {
+        if (key === 'metric') return;
+        const value = metric[key] as number;
+        metric[key] = ((value - min) / (max - min)) * 100;
       });
     } else {
       // if all values are the same, set them to 100
