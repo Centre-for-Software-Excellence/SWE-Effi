@@ -4,3 +4,7 @@
 - in the `website` directory, run `npm install` to install the dependencies
 - run `npm run dev` to start the development server
 - open your browser and go to `http://localhost:5173` to view the website
+
+## If modified/added docs
+
+- run `npm run build-index` to enable the doc search feature
