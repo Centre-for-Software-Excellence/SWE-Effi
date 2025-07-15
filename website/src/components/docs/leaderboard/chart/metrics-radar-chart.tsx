@@ -50,6 +50,7 @@ export function MetricsRadarChart({
   const { activeKeys, setActiveKeys } = useChartSettings({
     chartData,
     chartConfig,
+    takeAllKeys: false,
   });
 
   const legend = (
@@ -125,13 +126,15 @@ function RadarChartRenderer({
         />
         <PolarAngleAxis dataKey={polarAngleAxisDataKey} />
         <PolarGrid />
-        <Radar
-          key={configKeys[0]}
-          dataKey={configKeys[0]}
-          stroke={config[configKeys[0]]?.color}
-          fill={config[configKeys[0]]?.color}
-          fillOpacity={0.6}
-        />
+        {configKeys.map((key) => (
+          <Radar
+            key={key}
+            dataKey={key}
+            stroke={config[key]?.color}
+            fill={config[key]?.color}
+            fillOpacity={0.6}
+          />
+        ))}
         <Radar
           key={'Max'}
           dataKey={'Max'}

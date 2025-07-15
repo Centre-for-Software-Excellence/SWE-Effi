@@ -7,6 +7,7 @@ interface UseChartSettingsProps {
   chartConfig: ChartConfig | null;
   xKeys?: string[];
   defaultDomain?: [number, number];
+  takeAllKeys?: boolean;
 }
 
 export function useChartSettings({
@@ -14,6 +15,7 @@ export function useChartSettings({
   chartConfig,
   xKeys,
   defaultDomain,
+  takeAllKeys = true,
 }: UseChartSettingsProps) {
   const [openSettings, setOpenSettings] = useState(false);
   const [activeKeys, setActiveKeys] = useState<string[]>([]);
@@ -37,9 +39,10 @@ export function useChartSettings({
 
   useEffect(() => {
     if (chartConfig) {
-      setActiveKeys(Object.keys(chartConfig));
+      const keys = Object.keys(chartConfig);
+      setActiveKeys(takeAllKeys ? keys : [keys[0]]);
     }
-  }, [chartConfig]);
+  }, [chartConfig, takeAllKeys]);
 
   useEffect(() => {
     if (chartData) {

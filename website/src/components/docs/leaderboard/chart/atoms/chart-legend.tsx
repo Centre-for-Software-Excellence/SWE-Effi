@@ -49,14 +49,24 @@ export function StackedLegend({
   activeKeys?: string[];
   setActiveKeys?: (keys: string[]) => void;
 }) {
+  const toggleKey = (key: string) => {
+    if (activeKeys?.includes(key)) {
+      setActiveKeys?.(activeKeys.filter((k) => k !== key));
+    } else {
+      setActiveKeys?.([...(activeKeys || []), key]);
+    }
+  };
   return (
     <div className="flex w-full flex-wrap items-center justify-center gap-2 p-2">
       {keys.map((k) => (
         <Button
           key={k}
           variant="ghost"
-          className={cn('cursor-default', activeKeys?.[0] === k && 'bg-muted')}
-          onClick={() => setActiveKeys?.([k])}
+          className={cn(
+            'cursor-default',
+            activeKeys?.includes(k) && 'bg-muted',
+          )}
+          onClick={() => toggleKey(k)}
         >
           <LegendItem
             legendStyle="cube"
