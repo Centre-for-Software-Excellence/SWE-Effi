@@ -39,8 +39,9 @@ interface LeaderboardUIConfig {
 }
 
 export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
-  title: 'Holistic Evaluation of LLM-Based SWE Scaffolds',
-  description: 'Lead description of the leaderboard...',
+  title: 'Holistic Evaluation of LLM-Based SWE Scaffolds', // main title
+  description: 'Lead description of the leaderboard...', // main description
+  // links for the buttons in the header
   buttonLinks: [
     {
       title: 'About',
@@ -65,17 +66,19 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
       disabled: true,
     },
   ],
+  // leaderboard tables configuration
   tables: {
     leaderboard: {
       tabTitle: 'Table 1',
       tableTitle: 'Scaffold comparison on SWE-bench tasks',
       filterPlaceholder: 'Filter models...',
+      // if the tooltips is "" or not defined, the tooltip will not be shown
       columnTooltips: {
         rank: 'Ranked by resolve rate',
         scaffold: '',
         model: '',
-        total: 'Total time',
-        cpuTime: 'CPU time',
+        total: '',
+        cpuTime: '',
         inputToken: 'Number of Input tokens in thousands',
         outputToken: 'Number of Output tokens in thousands',
         calls: 'Number of inference calls to the LLM',
@@ -89,6 +92,7 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
       tabTitle: 'Table 2',
       tableTitle: 'Token and time costs for resolved and unresolved instances',
       filterPlaceholder: 'Filter models...',
+      // if the tooltips is "" or not defined, the tooltip will not be shown
       columnTooltips: {
         rank: 'Ranked by total time resolved',
         scaffold: '',
@@ -116,6 +120,7 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
       insight: 'Insight about the resolve rate line chart...',
       xAxisLabel: 'Total Tokens (input tokens + output tokens) (1e6)',
       yAxisLabel: 'Resolve Rate',
+      // ignore this
       xAxisDataKey: 'totalTokens',
     },
     numCallsBarChart: {
@@ -125,6 +130,7 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
       insight: 'Insight about the number of calls bar chart...',
       xAxisLabel: 'Scaffold',
       yAxisLabel: 'Number of Calls',
+      // ignore this
       xAxisDataKey: 'scaffold',
     },
     timePercentageBarChart: {
@@ -134,6 +140,7 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
       insight: 'Insight about the time percentage bar chart...',
       xAxisLabel: 'Percentage of Total Runtime (Model Time %)',
       yAxisLabel: '',
+      // ignore this
       yAxisDataKey: 'scaffold-model',
     },
     costBarChart: {
@@ -143,6 +150,7 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
       insight: 'Insight about the cost bar chart...',
       xAxisLabel: 'Average Token Cost (Log Scale)',
       yAxisLabel: '',
+      // ignore this
       yAxisDataKey: 'scaffold-model',
     },
     metricsRadarChart: {
@@ -150,6 +158,7 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
       description: 'Lead description about the metrics radar chart...',
       overview: 'Overview of the metrics radar chart...',
       insight: 'Insight about the metrics radar chart...',
+      // ignore this
       polarAngleAxisDataKey: 'metric',
     },
   },

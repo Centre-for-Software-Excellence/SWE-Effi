@@ -122,33 +122,42 @@ export function TableOfContent({ className }: { className?: string }) {
   );
 
   return (
-    <div
-      className={cn(
-        'relative h-full max-h-[calc(100vh-19rem)] animate-fade-slide-in-right text-sm',
-        className,
-      )}
-    >
-      <h2 className="mb-4 h-4 leading-4 font-[600] text-foreground/75">
-        On This Page
-      </h2>
-      <ScrollArea
-        ref={toc}
-        className="relative max-h-[calc(100vh-theme(spacing.72))] [&>[data-radix-scroll-area-viewport]]:!max-h-[inherit]"
-      >
-        <span className="absolute top-0 bottom-0 left-3 w-px bg-gradient-to-t from-muted/50 via-muted to-muted/50" />
-        <HighlightedTOCHeading headings={headings || []} scrollAreaRef={toc} />
-        <ul className="list-none pl-6">
-          {headings &&
-            headings.map((heading) => (
-              <TOCItem
-                key={heading.id}
-                {...heading}
-                level={heading.level - minimumLevel}
-                active={heading.isVisible}
+    headings.length > 0 && (
+      <aside className="relative order-last ml-0 hidden shrink-0 grow-0 basis-0 md:basis-56 lg:block xl:basis-64">
+        <nav className="sticky top-32 max-h-[calc(100vh-theme(spacing.64))] w-56 overflow-visible">
+          <div
+            className={cn(
+              'relative h-full max-h-[calc(100vh-19rem)] animate-fade-slide-in-right text-sm',
+              className,
+            )}
+          >
+            <h2 className="mb-4 h-4 leading-4 font-[600] text-foreground/75">
+              On This Page
+            </h2>
+            <ScrollArea
+              ref={toc}
+              className="relative max-h-[calc(100vh-theme(spacing.72))] [&>[data-radix-scroll-area-viewport]]:!max-h-[inherit]"
+            >
+              <span className="absolute top-0 bottom-0 left-3 w-px bg-gradient-to-t from-muted/50 via-muted to-muted/50" />
+              <HighlightedTOCHeading
+                headings={headings || []}
+                scrollAreaRef={toc}
               />
-            ))}
-        </ul>
-      </ScrollArea>
-    </div>
+              <ul className="list-none pl-6">
+                {headings &&
+                  headings.map((heading) => (
+                    <TOCItem
+                      key={heading.id}
+                      {...heading}
+                      level={heading.level - minimumLevel}
+                      active={heading.isVisible}
+                    />
+                  ))}
+              </ul>
+            </ScrollArea>
+          </div>
+        </nav>
+      </aside>
+    )
   );
 }

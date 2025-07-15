@@ -12,6 +12,11 @@ export async function resolveDocFromSlug(
 ): Promise<ResolvedDoc | null> {
   const slugPath = slug.length === 0 ? 'index' : slug.join('/');
 
+  // disabled docs
+  if (slugPath.split('/').slice(-1)[0].startsWith('-')) {
+    return null;
+  }
+
   // mdx files
   const mdxPath = `/src/docs/${slugPath}.mdx`;
   if (mdxModules[mdxPath]) {

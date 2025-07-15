@@ -94,11 +94,7 @@ export const columns = (
   // Grouped column for Avg Total Time
   {
     id: 'avgTotalTime',
-    header: () => (
-      <TooltipWrapper title="Average Total Time">
-        <span>Avg Total Time</span>
-      </TooltipWrapper>
-    ),
+    header: () => <span>Avg Total Time</span>,
     columns: [
       {
         accessorKey: 'avgTotalTimeU',
@@ -129,11 +125,7 @@ export const columns = (
   // Grouped column for Avg CPU Time
   {
     id: 'avgCPUTime',
-    header: () => (
-      <TooltipWrapper title="Average CPU Time">
-        <span>Avg CPU Time</span>
-      </TooltipWrapper>
-    ),
+    header: () => <span>Avg CPU Time</span>,
     columns: [
       {
         accessorKey: 'avgCPUTimeU',
@@ -164,11 +156,7 @@ export const columns = (
   // Grouped column for Avg Inference Time
   {
     id: 'avgInfTime',
-    header: () => (
-      <TooltipWrapper title="Average Inference Time">
-        <span>Avg Inference Time</span>
-      </TooltipWrapper>
-    ),
+    header: () => <span>Avg Inference Time</span>,
     columns: [
       {
         accessorKey: 'avgInfTimeU',
@@ -199,11 +187,7 @@ export const columns = (
   // Grouped column for Avg Total Tokens
   {
     id: 'avgTotalTokens',
-    header: () => (
-      <TooltipWrapper title="Average Total Tokens">
-        <span>Avg Total Tokens</span>
-      </TooltipWrapper>
-    ),
+    header: () => <span>Avg Total Tokens</span>,
     columns: [
       {
         accessorKey: 'avgTotalTokensU',
@@ -234,11 +218,7 @@ export const columns = (
   // Grouped column for Avg LLM Requests
   {
     id: 'avgLLMRequests',
-    header: () => (
-      <TooltipWrapper title="Average LLM Requests">
-        <span>Avg LLM Requests</span>
-      </TooltipWrapper>
-    ),
+    header: () => <span>Avg LLM Requests</span>,
     columns: [
       {
         accessorKey: 'avgLLMRequestsU',

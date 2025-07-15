@@ -13,7 +13,7 @@ export function UnderlineText({
   className,
   position = 'left',
   gradient = true,
-  lineStyle = 'bold',
+  lineStyle = 'thin',
 }: UnderlineTextProps) {
   return (
     <span>

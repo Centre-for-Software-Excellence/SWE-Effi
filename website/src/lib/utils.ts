@@ -66,7 +66,6 @@ export function createColorGenerator(baseHex?: string[]) {
     baseHex = Object.values(tokens).flat();
   }
   const baseHsl = baseHex.map(hexToHsl);
-  const φ = 137.508;
   let index = 0;
 
   return function nextColor(): string {
@@ -77,8 +76,29 @@ export function createColorGenerator(baseHex?: string[]) {
     if (cycle === 0) return baseHex[pos];
 
     const { h, s, l } = baseHsl[pos];
-    const newHue = (h + cycle * φ) % 360;
-    return hslToHex({ h: newHue, s, l });
+    let newHue: number;
+    let newSaturation = s;
+    let newLightness = l;
+
+    switch (cycle % 4) {
+      case 1: // Complementary
+        newHue = (h + 180) % 360;
+        break;
+      case 2: // Triadic 1
+        newHue = (h + 120) % 360;
+        newSaturation = Math.max(s * 0.8, 40);
+        break;
+      case 3: // Triadic 2
+        newHue = (h + 240) % 360;
+        newLightness = Math.max(Math.min(l * 1.3, 80), 30);
+        break;
+      default: // Analogous with high contrast
+        newHue = (h + 60) % 360;
+        newSaturation = Math.min(s * 1.2, 90);
+        break;
+    }
+
+    return hslToHex({ h: newHue, s: newSaturation, l: newLightness });
   };
 }
 

@@ -240,6 +240,7 @@ export function buildSummaryCharts(opts?: {
   outDir?: string;
 }) {
   const nextColor = createColorGenerator(tokens.chartjs);
+  const nextRadarColor = createColorGenerator(tokens.chartjs);
   const rawDir =
     opts?.rawDir ??
     path.join(__dirname, '../../../public/data/benchmark/raw/summary');
@@ -277,19 +278,19 @@ export function buildSummaryCharts(opts?: {
   const metricsCfg: ChartConfig = {};
   const metricsData: MetricEntry[] = [
     {
-      metric: 'resolve_rate',
+      metric: 'Resolve Rate',
     },
     {
-      metric: 'token_efficiency',
+      metric: 'Token Efficiency',
     },
     {
-      metric: 'cost_efficiency',
+      metric: 'Cost Efficiency',
     },
     {
-      metric: 'cpu_efficiency',
+      metric: 'Cpu Efficiency',
     },
     {
-      metric: 'inference_efficiency',
+      metric: 'Inference Efficiency',
     },
   ];
 
@@ -337,26 +338,26 @@ export function buildSummaryCharts(opts?: {
     // metrics data: (resolve_rage, token_efficiency, cost_efficiency, cpu_efficiency, inference_efficiency)
     for (const metric of metricsData) {
       switch (metric.metric) {
-        case 'resolve_rate':
+        case 'Resolve Rate':
           metric[seriesName] = (record.resolved / record.total_projects) * 100;
           break;
-        case 'token_efficiency':
+        case 'Token Efficiency':
           metric[seriesName] = record.token_efficiency_auc;
           break;
-        case 'cost_efficiency':
+        case 'Cost Efficiency':
           metric[seriesName] = record.cost_efficiency_auc;
           break;
-        case 'cpu_efficiency':
+        case 'Cpu Efficiency':
           metric[seriesName] = record.cpu_efficiency_auc;
           break;
-        case 'inference_efficiency':
+        case 'Inference Efficiency':
           metric[seriesName] = record.gpu_efficiency_auc;
           break;
       }
       if (!metricsCfg[seriesName]) {
         metricsCfg[seriesName] = {
           label: seriesName,
-          color: nextColor(),
+          color: nextRadarColor(),
         };
       }
     }
@@ -383,6 +384,10 @@ export function buildSummaryCharts(opts?: {
         metric[key] = 100;
       });
     }
+
+    // add min, max to the data
+    metric['Min'] = 0;
+    metric['Max'] = 100;
   });
 
   if (DRYRUN) {

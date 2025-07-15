@@ -28,7 +28,12 @@ export function getDocsStructure(): DocSection[] {
     const filename = pathParts[pathParts.length - 1];
 
     // Skip index files for section creation and hide files starting with '_'
-    if (filename === 'index.tsx' || filename.startsWith('_')) return;
+    if (
+      filename === 'index.tsx' ||
+      filename.startsWith('_') ||
+      filename.startsWith('-')
+    )
+      return;
 
     const sectionSlug = pathParts.length > 1 ? pathParts[0] : 'general';
     const sectionTitle =
@@ -60,7 +65,12 @@ export function getDocsStructure(): DocSection[] {
     const filename = pathParts[pathParts.length - 1];
 
     // Skip index files for section creation and hide files starting with '_'
-    if (filename === 'index.mdx' || filename.startsWith('_')) return;
+    if (
+      filename === 'index.tsx' ||
+      filename.startsWith('_') ||
+      filename.startsWith('-')
+    )
+      return;
 
     const sectionSlug = pathParts.length > 1 ? pathParts[0] : 'general';
     const sectionTitle =

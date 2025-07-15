@@ -132,6 +132,20 @@ function RadarChartRenderer({
           fill={config[configKeys[0]]?.color}
           fillOpacity={0.6}
         />
+        <Radar
+          key={'Max'}
+          dataKey={'Max'}
+          fillOpacity={0}
+          stroke="none"
+          fill="transparent"
+        />
+        <Radar
+          key={'Min'}
+          dataKey={'Min'}
+          fillOpacity={0}
+          stroke="none"
+          fill="transparent"
+        />
       </RadarChart>
     </ChartContainer>
   );

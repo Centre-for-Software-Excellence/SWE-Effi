@@ -32,13 +32,7 @@ export default function Layout({
         {/* article */}
         {children}
         {/* Right Sidebar - Table of Contents of current markdown doc*/}
-        {isArticle && (
-          <aside className="relative order-last ml-0 hidden shrink-0 grow-0 basis-0 md:basis-56 lg:block xl:basis-64">
-            <nav className="sticky top-32 max-h-[calc(100vh-theme(spacing.64))] w-56 overflow-visible">
-              <TableOfContent className="w-full" />
-            </nav>
-          </aside>
-        )}
+        {isArticle && <TableOfContent className="w-full" />}
       </div>
       <Footer />
     </div>
