@@ -339,19 +339,26 @@ export function buildSummaryCharts(opts?: {
     for (const metric of metricsData) {
       switch (metric.metric) {
         case 'Resolve Rate':
-          metric[seriesName] = (record.resolved / record.total_projects) * 100;
+          metric[seriesName] = (
+            (record.resolved / record.total_projects) *
+            100
+          ).toPrecision(2);
           break;
         case 'Token Efficiency':
-          metric[seriesName] = record.token_efficiency_auc;
+          metric[seriesName] = (record.token_efficiency_auc * 100).toPrecision(
+            2,
+          );
           break;
         case 'Cost Efficiency':
-          metric[seriesName] = record.cost_efficiency_auc;
+          metric[seriesName] = (record.cost_efficiency_auc * 100).toPrecision(
+            2,
+          );
           break;
         case 'Cpu Efficiency':
-          metric[seriesName] = record.cpu_efficiency_auc;
+          metric[seriesName] = (record.cpu_efficiency_auc * 100).toPrecision(2);
           break;
         case 'Inference Efficiency':
-          metric[seriesName] = record.gpu_efficiency_auc;
+          metric[seriesName] = (record.gpu_efficiency_auc * 100).toPrecision(2);
           break;
       }
       if (!metricsCfg[seriesName]) {
@@ -362,30 +369,8 @@ export function buildSummaryCharts(opts?: {
       }
     }
   }
-  // TODO: temporarily normalize the metrics data to 1 - 100 using min-max scaling
   metricsData.forEach((metric) => {
-    const values = Object.entries(metric)
-      .filter(([key, value]) => key !== 'metric' && typeof value === 'number')
-      .map(([, value]) => value as number);
-
-    const max = Math.max(...values);
-    const min = Math.min(...values);
-
-    if (max > min) {
-      Object.keys(metric).forEach((key) => {
-        if (key === 'metric') return;
-        const value = metric[key] as number;
-        metric[key] = ((value - min) / (max - min)) * 100;
-      });
-    } else {
-      // if all values are the same, set them to 100
-      Object.keys(metric).forEach((key) => {
-        if (key === 'metric') return;
-        metric[key] = 100;
-      });
-    }
-
-    // add min, max to the data
+    // add min, max to the data as reference for the radar chart
     metric['Min'] = 0;
     metric['Max'] = 100;
   });
