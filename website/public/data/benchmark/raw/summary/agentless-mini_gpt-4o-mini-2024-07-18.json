@@ -53,8 +53,8 @@
   "unresolved_total_measured_duration": 2978.2796001434326,
   "unresolved_avg_measured_duration": 74.45699000358582,
   "precision": 0.2564102564102564,
-  "token_efficiency_auc": 0.0009412022113443185,
-  "cost_efficiency_auc": 0.0009304713249471046,
-  "cpu_efficiency_auc": 0.00019703680992800735,
-  "gpu_efficiency_auc": 0.00212387206332959
+  "token_efficiency_auc": 0.19567715,
+  "cost_efficiency_auc": 0.19352519,
+  "cpu_efficiency_auc": 0.1999155534386635,
+  "gpu_efficiency_auc": 0.19849157499130857
 }
