@@ -23,58 +23,30 @@ interface FooterUIConfig {
   links: Link[];
 }
 
+const mainLinks = [
+  // {
+  //   title: 'Home',
+  //   href: '/',
+  // },
+  // {
+  //   title: 'Research',
+  //   href: '/docs/research',
+  // },
+  // {
+  //   title: 'Blog',
+  //   href: '/docs/blog',
+  // },
+];
+
 const getSidebarUIConfig = (): SidebarUIConfig => ({
   indexTitle: 'Leaderboard',
-  // sections are generated from lib/structure.ts so not defined here
-  mobileBottomLinks: [
-    {
-      title: 'Home',
-      href: '#',
-      disabled: true,
-    },
-    {
-      title: 'Research',
-      href: '#',
-      disabled: true,
-    },
-    {
-      title: 'News',
-      href: '#',
-      disabled: true,
-    },
-    {
-      title: 'Blogs',
-      href: '#',
-      disabled: true,
-    },
-  ],
+  mobileBottomLinks: mainLinks,
 });
 
 const getTopbarUIConfig = (): TopbarUIConfig => ({
   title: 'SWE Lens',
   searchEnabled: true,
-  links: [
-    {
-      title: 'Home',
-      href: '#',
-      disabled: true,
-    },
-    {
-      title: 'Research',
-      href: '#',
-      disabled: true,
-    },
-    {
-      title: 'News',
-      href: '#',
-      disabled: true,
-    },
-    {
-      title: 'Blog',
-      href: '#',
-      disabled: true,
-    },
-  ],
+  links: mainLinks,
 });
 
 const getFooterUIConfig = (): FooterUIConfig => ({
@@ -85,7 +57,6 @@ const getFooterUIConfig = (): FooterUIConfig => ({
     {
       href: 'https://github.com/Center-for-Software-Excellence/SWE-Lens',
       title: 'Github',
-      disabled: false,
     },
     {
       href: '#',
@@ -95,7 +66,6 @@ const getFooterUIConfig = (): FooterUIConfig => ({
     {
       href: '#',
       title: 'Contact',
-      disabled: true,
     },
   ],
 });

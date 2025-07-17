@@ -173,23 +173,32 @@ export function SearchComponent({
   return (
     <>
       {/* Desktop Search - Placeholder input */}
-      <div className={cn('relative hidden max-w-[65ch] md:block', className)}>
+      <div className={cn('relative hidden md:block', className)}>
         <div className="relative">
-          <Search className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-          <Input
-            ref={inputRef}
-            type="text"
-            placeholder={placeholder}
-            value=""
+          <Search
+            className="h-4 w-4 text-muted-foreground"
             onClick={openSearchOverlay}
-            readOnly
-            className="dark:shadown-none cursor-pointer rounded-none border-none bg-transparent pr-10 pl-10 shadow-none focus-visible:border-none! focus-visible:ring-0 dark:bg-transparent"
           />
-          <div className="absolute top-1/2 right-3 -translate-y-1/2 text-xs text-muted-foreground">
-            Ctrl K
-          </div>
         </div>
       </div>
+      {/* TODO: if we need show input area, uncomment this and remove the above code */}
+      {/* <div className={cn('relative hidden max-w-[65ch] md:block', className)}> */}
+      {/*   <div className="relative"> */}
+      {/*     <Search className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-muted-foreground" /> */}
+      {/*     <Input */}
+      {/*       ref={inputRef} */}
+      {/*       type="text" */}
+      {/*       placeholder={placeholder} */}
+      {/*       value="" */}
+      {/*       onClick={openSearchOverlay} */}
+      {/*       readOnly */}
+      {/*       className="dark:shadown-none cursor-pointer rounded-none border-none bg-transparent pr-10 pl-10 shadow-none focus-visible:border-none! focus-visible:ring-0 dark:bg-transparent" */}
+      {/*     /> */}
+      {/*     <div className="absolute top-1/2 right-3 -translate-y-1/2 text-xs text-muted-foreground"> */}
+      {/*       Ctrl K */}
+      {/*     </div> */}
+      {/*   </div> */}
+      {/* </div> */}
 
       {/* Mobile Search Icon */}
       <Button

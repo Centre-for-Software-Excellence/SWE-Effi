@@ -1,7 +1,6 @@
 import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-import { ModeToggle } from '@/components/common/mode-toggle';
 import { Button } from '@/components/common/ui/button';
 import { UnderlineLink } from '@/components/common/underline-link';
 import { getTopbarUIConfig } from '@/config/ui';
@@ -38,15 +37,6 @@ export const TopBar = ({
       />
       <div className="flex h-12 w-full items-center justify-between text-sm md:text-lg">
         <div className="md:justify-none relative flex flex-1 items-center justify-between gap-2 px-2 md:flex-none">
-          {/* Placeholder Icon */}
-          {/* If we need sidebar toggling, we can add onclick here */}
-          <span
-            className="hidden w-4 cursor-default items-center justify-center gap-1 transition-all duration-300 ease-in-out md:flex"
-            aria-hidden
-          >
-            <span className="h-6 w-px bg-[linear-gradient(to_top,transparent_0%,var(--foreground)_50%,transparent_100%)]" />
-            <span className="h-10 w-px bg-[linear-gradient(to_top,transparent_0%,var(--foreground)_50%,transparent_100%)]" />
-          </span>
           <Link
             to="/"
             className="group relative block transition-all duration-300"
@@ -55,9 +45,9 @@ export const TopBar = ({
               {ui.title}
             </div>
           </Link>
-          {menuOpen ? <ModeToggle /> : ui.searchEnabled && <SearchComponent />}
         </div>
         {/* Mobile Menu Toggle */}
+        {ui.searchEnabled && <SearchComponent className="md:hidden" />}
         <Button
           variant="ghost"
           size="icon"
@@ -78,7 +68,7 @@ export const TopBar = ({
               {link.title}
             </UnderlineLink>
           ))}
-          <ModeToggle />
+          {ui.searchEnabled && <SearchComponent />}
         </div>
       </div>
     </header>

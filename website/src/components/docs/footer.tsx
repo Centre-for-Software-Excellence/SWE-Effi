@@ -1,6 +1,7 @@
 import { UnderlineLink } from '@/components/common/underline-link';
 import { Muted, Small } from '@/components/md';
 import { getFooterUIConfig } from '@/config/ui';
+import { ModeToggle } from '../common/mode-toggle';
 
 export function Footer() {
   const ui = getFooterUIConfig();
@@ -41,6 +42,7 @@ export function Footer() {
                     </UnderlineLink>
                   ),
               )}
+            <ModeToggle />
           </div>
         </div>
       </div>
