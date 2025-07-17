@@ -1,4 +1,4 @@
-import { useCallback, useMemo } from 'react';
+import { useCallback, useEffect, useMemo } from 'react';
 import { DialogTitle } from '@radix-ui/react-dialog';
 import debounce from 'lodash/debounce';
 import { Settings } from 'lucide-react';
@@ -67,6 +67,9 @@ export function ChartSettings({
   field,
   log = false,
 }: ChartSettingsProps) {
+  if (log) {
+    console.log(' all the proprs: ', domain, min, max, step, log);
+  }
   const logToLinear = (value: number) => {
     const index = getPowerOfTenValues.findIndex((v) => v === value);
     return index;
@@ -78,7 +81,7 @@ export function ChartSettings({
 
   const getPowerOfTenValues = useMemo(() => {
     const values: number[] = [];
-    const startPower = Math.ceil(Math.log10(min || 1));
+    const startPower = Math.floor(Math.log10(min || 1));
     const endPower = Math.ceil(Math.log10(max || 1));
 
     for (let power = startPower; power <= endPower; power++) {
@@ -245,6 +248,10 @@ export function ChartSettings({
           onClick={() => {
             if (setDomain) {
               if (log) {
+                console.log('newr domain: ', [
+                  linearToLog(0),
+                  linearToLog(getPowerOfTenValues.length - 1),
+                ]);
                 setDomain([
                   linearToLog(0),
                   linearToLog(getPowerOfTenValues.length - 1),

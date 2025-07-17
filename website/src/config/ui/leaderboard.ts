@@ -121,7 +121,7 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
       description: 'Lead description about the resolve rate line chart...',
       overview: 'Overview of the resolve rate line chart...',
       insight: 'Insight about the resolve rate line chart...',
-      xAxisLabel: 'Total Tokens (input tokens + output tokens) (1e6)',
+      xAxisLabel: 'Total Tokens (input + output, in millions)',
       yAxisLabel: 'Resolve Rate',
       // ignore this
       xAxisDataKey: 'totalTokens',

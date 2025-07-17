@@ -24,6 +24,33 @@ export interface ChartData {
   [seriesName: string]: number;
 }
 
+// Helper function to generate log base-10 ticks
+function generateLogTicks(min: number, max: number): number[] {
+  const ticks: number[] = [];
+
+  // Find the log10 bounds
+  const logMin = Math.floor(Math.log10(min));
+  const logMax = Math.ceil(Math.log10(max));
+
+  // Generate ticks at powers of 10
+  for (let i = logMin; i <= logMax; i++) {
+    const tick = Math.pow(10, i);
+    if (tick >= min * 0.95 && tick <= max * 1.05) {
+      ticks.push(tick);
+    }
+  }
+
+  // Ensure we have at least 2 ticks
+  if (ticks.length === 0) {
+    ticks.push(min, max);
+  } else if (ticks.length === 1) {
+    if (ticks[0] > min) ticks.unshift(Math.pow(10, logMin - 1));
+    if (ticks[0] < max) ticks.push(Math.pow(10, logMax + 1));
+  }
+
+  return ticks.sort((a, b) => a - b);
+}
+
 export function ResolveRateLineChart({
   title,
   description,
@@ -56,6 +83,7 @@ export function ResolveRateLineChart({
     setOpenSettings,
     activeKeys,
     setActiveKeys,
+    min,
     max,
     domain,
     setDomain,
@@ -63,7 +91,7 @@ export function ResolveRateLineChart({
     chartData,
     chartConfig,
     xKeys: ['totalTokens'],
-    defaultDomain: [0, 2.2],
+    expandLogDomain: true,
   });
 
   const settingsButton = (
@@ -83,12 +111,13 @@ export function ResolveRateLineChart({
         <ChartSettings
           domain={domain}
           setDomain={setDomain}
+          min={min}
           max={max}
-          step={0.01}
           setActiveKeys={setActiveKeys}
           keys={Object.keys(chartConfig || {})}
           onClose={() => setOpenSettings(false)}
           title="Settings"
+          step={0.001}
         />
 
         <ChartCard
@@ -140,6 +169,10 @@ function LineChartRenderer({
   xAxisDataKey,
 }: ChartRendererProps) {
   const configKeys = activeKeys || Object.keys(config);
+
+  // Generate dynamic ticks based on the actual domain
+  const dynamicTicks = domain ? generateLogTicks(domain[0], domain[1]) : [];
+
   return (
     <ChartContainer config={config} className="h-[300px] w-full md:h-[400px]">
       <LineChart
@@ -154,12 +187,19 @@ function LineChartRenderer({
         <XAxis
           type="number"
           dataKey={xAxisDataKey}
+          scale="log"
           tickLine={true}
           axisLine={true}
           domain={domain}
           allowDataOverflow={true}
-          tickFormatter={(value) => (value + '').slice(0, 3)}
-          tickCount={10}
+          tickFormatter={(value) => {
+            if (value >= 1) return value.toString();
+            if (value >= 0.1) return value.toFixed(1);
+            if (value >= 0.01) return value.toFixed(2);
+            if (value >= 0.001) return value.toFixed(3);
+            return value.toExponential(1);
+          }}
+          ticks={dynamicTicks}
           height={20}
         >
           {xAxisLabel && (

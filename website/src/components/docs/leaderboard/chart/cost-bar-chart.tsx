@@ -62,14 +62,16 @@ export function CostBarChart({
     setActiveKeys,
     filteredData,
     setFilteredData,
+    min,
     max,
     domain,
     setDomain,
   } = useChartSettings({
     chartData,
     chartConfig,
-    defaultDomain: [10000, 10000000],
     xKeys: ['failure-cost', 'success-cost'],
+    expandLogDomain: true,
+    logSlider: true,
   });
 
   const settingsButton = (
@@ -92,8 +94,8 @@ export function CostBarChart({
         <ChartSettings
           domain={domain}
           setDomain={setDomain}
-          min={10000}
           log={true}
+          min={min}
           max={max}
           setActiveKeys={setActiveKeys}
           keys={Object.keys(chartConfig || {})}
