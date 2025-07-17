@@ -1,13 +1,13 @@
 [
   {
-    "cpu-time": 6.22,
-    "gpu-time": 93.78,
-    "scaffold-model": "agentless-mini/Llama-3.3-70B-Instruct-FP8"
-  },
-  {
     "cpu-time": 12.82,
     "gpu-time": 87.18,
     "scaffold-model": "agentless-mini/gpt-4o-mini-2024-07-18"
+  },
+  {
+    "cpu-time": 6.22,
+    "gpu-time": 93.78,
+    "scaffold-model": "agentless-mini/llama-3.3-70B-Instruct-FP8"
   },
   {
     "cpu-time": 1.51,
@@ -15,14 +15,14 @@
     "scaffold-model": "agentless-mini/qwen3-32B"
   },
   {
-    "cpu-time": 73.24,
-    "gpu-time": 26.76,
-    "scaffold-model": "agentless/Llama-3.3-70B-Instruct-FP8"
-  },
-  {
     "cpu-time": 86.3,
     "gpu-time": 13.7,
     "scaffold-model": "agentless/gpt-4o-mini-2024-07-18"
+  },
+  {
+    "cpu-time": 73.24,
+    "gpu-time": 26.76,
+    "scaffold-model": "agentless/llama-3.3-70B-Instruct-FP8"
   },
   {
     "cpu-time": 77.66,
@@ -30,14 +30,14 @@
     "scaffold-model": "agentless/qwen3-32B"
   },
   {
-    "cpu-time": 9.4,
-    "gpu-time": 90.6,
-    "scaffold-model": "auto-code-rover/Llama-3.3-70B-Instruct-FP8"
-  },
-  {
     "cpu-time": 14.82,
     "gpu-time": 85.18,
     "scaffold-model": "auto-code-rover/gpt-4o-mini-2024-07-18"
+  },
+  {
+    "cpu-time": 9.4,
+    "gpu-time": 90.6,
+    "scaffold-model": "auto-code-rover/llama-3.3-70B-Instruct-FP8"
   },
   {
     "cpu-time": 24.61,
@@ -45,14 +45,14 @@
     "scaffold-model": "auto-code-rover/qwen3-32B"
   },
   {
-    "cpu-time": 69.02,
-    "gpu-time": 30.98,
-    "scaffold-model": "openhands/Llama-3.3-70B-Instruct-FP8"
-  },
-  {
     "cpu-time": 69.58,
     "gpu-time": 30.42,
     "scaffold-model": "openhands/gpt-4o-mini-2024-07-18"
+  },
+  {
+    "cpu-time": 69.02,
+    "gpu-time": 30.98,
+    "scaffold-model": "openhands/llama-3.3-70B-Instruct-FP8"
   },
   {
     "cpu-time": 50.84,
@@ -60,14 +60,14 @@
     "scaffold-model": "openhands/qwen3-32B"
   },
   {
-    "cpu-time": 36.59,
-    "gpu-time": 63.41,
-    "scaffold-model": "swe-agent/Llama-3.3-70B-Instruct-FP8"
-  },
-  {
     "cpu-time": 22.69,
     "gpu-time": 77.31,
     "scaffold-model": "swe-agent/gpt-4o-mini-2024-07-18"
+  },
+  {
+    "cpu-time": 36.59,
+    "gpu-time": 63.41,
+    "scaffold-model": "swe-agent/llama-3.3-70B-Instruct-FP8"
   },
   {
     "cpu-time": 9.05,

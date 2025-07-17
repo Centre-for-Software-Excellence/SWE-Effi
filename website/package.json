@@ -5,14 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prepare": "tsx ./src/lib/data/generate.ts && tsx ./src/lib/docs/build-index.ts",
     "build": "tsc -b && vite build",
     "lint": "eslint ./src",
     "format": "prettier --write ./src",
     "preview": "vite preview --port 5173 --host",
     "build-index": "tsx ./src/lib/docs/build-index.ts",
     "generate-data": "tsx ./src/lib/data/generate.ts",
-    "clean-data": "rm -r ./public/data/benchmark/raw/",
-    "pre-build": "tsx ./src/lib/data/generate.ts && tsx ./src/lib/docs/build-index.ts"
+    "clean-data": "rm -r ./public/data/benchmark/raw/**/*.json"
   },
   "dependencies": {
     "@mdx-js/react": "^3.1.0",

@@ -21,10 +21,9 @@ def main() -> None:
     DEST_SUMMARY.mkdir(parents=True, exist_ok=True)
 
     copied = 0
-    for json_file in SRC.glob("*/*-combined_stats.json"):
-        scaffold = json_file.parent.name
-        # strip the suffix "-combined_stats.json"
-        model = json_file.stem.replace("-combined_stats", "")
+    for json_file in SRC.glob("*/*/combined_stats.json"):
+        scaffold = json_file.parent.parent.name
+        model = json_file.parent.name
         out_name = f"{scaffold}_{model}.json"
         shutil.copyfile(json_file, DEST / out_name)
         print("✔", out_name)
@@ -33,10 +32,9 @@ def main() -> None:
     print(f"\nDone. {copied} files copied to {DEST}")
 
     copied = 0
-    for json_file in SRC.glob("*/*-summary_stats.json"):
-        scaffold = json_file.parent.name
-        # strip the suffix "-summary_stats.json"
-        model = json_file.stem.replace("-summary_stats", "")
+    for json_file in SRC.glob("*/*/summary_stats.json"):
+        scaffold = json_file.parent.parent.name
+        model = json_file.parent.name
         out_name = f"{scaffold}_{model}.json"
         shutil.copyfile(json_file, DEST_SUMMARY / out_name)
         print("✔", out_name)

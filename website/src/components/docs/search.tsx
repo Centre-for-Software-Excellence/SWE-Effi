@@ -24,7 +24,7 @@ export function SearchComponent({
   const [isOverlayOpen, setIsOverlayOpen] = useState(false);
 
   const navigate = useNavigate();
-  const inputRef = useRef<HTMLInputElement>(null);
+  // const inputRef = useRef<HTMLInputElement>(null);
   const overlayInputRef = useRef<HTMLInputElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const itemRefs = useRef<Array<HTMLButtonElement | null>>([]);

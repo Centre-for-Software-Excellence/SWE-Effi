@@ -1,32 +1,32 @@
 [
   {
     "scaffold": "agentless-mini",
-    "Llama-3.3-70B-Instruct-FP8": 100,
     "gpt-4o-mini-2024-07-18": 99,
+    "llama-3.3-70B-Instruct-FP8": 100,
     "qwen3-32B": 99
   },
   {
     "scaffold": "agentless",
-    "Llama-3.3-70B-Instruct-FP8": 4000,
     "gpt-4o-mini-2024-07-18": 4117,
+    "llama-3.3-70B-Instruct-FP8": 4000,
     "qwen3-32B": 4153
   },
   {
     "scaffold": "auto-code-rover",
-    "Llama-3.3-70B-Instruct-FP8": 1913,
     "gpt-4o-mini-2024-07-18": 1975,
+    "llama-3.3-70B-Instruct-FP8": 1913,
     "qwen3-32B": 735
   },
   {
     "scaffold": "openhands",
-    "Llama-3.3-70B-Instruct-FP8": 1540,
     "gpt-4o-mini-2024-07-18": 1442,
+    "llama-3.3-70B-Instruct-FP8": 1540,
     "qwen3-32B": 973
   },
   {
     "scaffold": "swe-agent",
-    "Llama-3.3-70B-Instruct-FP8": 1456,
     "gpt-4o-mini-2024-07-18": 9048,
+    "llama-3.3-70B-Instruct-FP8": 1456,
     "qwen3-32B": 1774
   }
 ]

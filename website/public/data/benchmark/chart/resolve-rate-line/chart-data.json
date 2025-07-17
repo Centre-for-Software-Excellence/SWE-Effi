@@ -1,205 +1,5 @@
 [
   {
-    "totalTokens": 0.00754,
-    "agentless-mini/Llama-3.3-70B-Instruct-FP8": 0
-  },
-  {
-    "totalTokens": 0.00852,
-    "agentless-mini/Llama-3.3-70B-Instruct-FP8": 0
-  },
-  {
-    "totalTokens": 0.011774,
-    "agentless-mini/Llama-3.3-70B-Instruct-FP8": 0
-  },
-  {
-    "totalTokens": 0.011779,
-    "agentless-mini/Llama-3.3-70B-Instruct-FP8": 0
-  },
-  {
-    "totalTokens": 0.014067,
-    "agentless-mini/Llama-3.3-70B-Instruct-FP8": 0
-  },
-  {
-    "totalTokens": 0.014928,
-    "agentless-mini/Llama-3.3-70B-Instruct-FP8": 0
-  },
-  {
-    "totalTokens": 0.016181,
-    "agentless-mini/Llama-3.3-70B-Instruct-FP8": 0
-  },
-  {
-    "totalTokens": 0.018083,
-    "agentless-mini/Llama-3.3-70B-Instruct-FP8": 0
-  },
-  {
-    "totalTokens": 0.018337,
-    "agentless-mini/Llama-3.3-70B-Instruct-FP8": 0
-  },
-  {
-    "totalTokens": 0.019508,
-    "agentless-mini/Llama-3.3-70B-Instruct-FP8": 0
-  },
-  {
-    "totalTokens": 0.020047,
-    "agentless-mini/Llama-3.3-70B-Instruct-FP8": 0
-  },
-  {
-    "totalTokens": 0.020607,
-    "agentless-mini/Llama-3.3-70B-Instruct-FP8": 0
-  },
-  {
-    "totalTokens": 0.021379,
-    "agentless-mini/Llama-3.3-70B-Instruct-FP8": 0
-  },
-  {
-    "totalTokens": 0.022247,
-    "agentless-mini/Llama-3.3-70B-Instruct-FP8": 0
-  },
-  {
-    "totalTokens": 0.02486,
-    "agentless-mini/Llama-3.3-70B-Instruct-FP8": 0
-  },
-  {
-    "totalTokens": 0.025613,
-    "agentless-mini/Llama-3.3-70B-Instruct-FP8": 0
-  },
-  {
-    "totalTokens": 0.027087,
-    "agentless-mini/Llama-3.3-70B-Instruct-FP8": 0.02
-  },
-  {
-    "totalTokens": 0.027647,
-    "agentless-mini/Llama-3.3-70B-Instruct-FP8": 0.02
-  },
-  {
-    "totalTokens": 0.030558,
-    "agentless-mini/Llama-3.3-70B-Instruct-FP8": 0.02
-  },
-  {
-    "totalTokens": 0.031279,
-    "agentless-mini/Llama-3.3-70B-Instruct-FP8": 0.02
-  },
-  {
-    "totalTokens": 0.033112,
-    "agentless-mini/Llama-3.3-70B-Instruct-FP8": 0.02
-  },
-  {
-    "totalTokens": 0.033132,
-    "agentless-mini/Llama-3.3-70B-Instruct-FP8": 0.02
-  },
-  {
-    "totalTokens": 0.035055,
-    "agentless-mini/Llama-3.3-70B-Instruct-FP8": 0.02
-  },
-  {
-    "totalTokens": 0.035656,
-    "agentless-mini/Llama-3.3-70B-Instruct-FP8": 0.04
-  },
-  {
-    "totalTokens": 0.039111,
-    "agentless-mini/Llama-3.3-70B-Instruct-FP8": 0.04
-  },
-  {
-    "totalTokens": 0.039305,
-    "agentless-mini/Llama-3.3-70B-Instruct-FP8": 0.04
-  },
-  {
-    "totalTokens": 0.039783,
-    "agentless-mini/Llama-3.3-70B-Instruct-FP8": 0.04
-  },
-  {
-    "totalTokens": 0.042433,
-    "agentless-mini/Llama-3.3-70B-Instruct-FP8": 0.04
-  },
-  {
-    "totalTokens": 0.043422,
-    "agentless-mini/Llama-3.3-70B-Instruct-FP8": 0.04
-  },
-  {
-    "totalTokens": 0.044431,
-    "agentless-mini/Llama-3.3-70B-Instruct-FP8": 0.04
-  },
-  {
-    "totalTokens": 0.044877,
-    "agentless-mini/Llama-3.3-70B-Instruct-FP8": 0.04
-  },
-  {
-    "totalTokens": 0.045534,
-    "agentless-mini/Llama-3.3-70B-Instruct-FP8": 0.04
-  },
-  {
-    "totalTokens": 0.047728,
-    "agentless-mini/Llama-3.3-70B-Instruct-FP8": 0.04
-  },
-  {
-    "totalTokens": 0.04988,
-    "agentless-mini/Llama-3.3-70B-Instruct-FP8": 0.04
-  },
-  {
-    "totalTokens": 0.051355,
-    "agentless-mini/Llama-3.3-70B-Instruct-FP8": 0.04
-  },
-  {
-    "totalTokens": 0.051399,
-    "agentless-mini/Llama-3.3-70B-Instruct-FP8": 0.04
-  },
-  {
-    "totalTokens": 0.051716,
-    "agentless-mini/Llama-3.3-70B-Instruct-FP8": 0.04
-  },
-  {
-    "totalTokens": 0.052302,
-    "agentless-mini/Llama-3.3-70B-Instruct-FP8": 0.04
-  },
-  {
-    "totalTokens": 0.052664,
-    "agentless-mini/Llama-3.3-70B-Instruct-FP8": 0.04
-  },
-  {
-    "totalTokens": 0.053074,
-    "agentless-mini/Llama-3.3-70B-Instruct-FP8": 0.04
-  },
-  {
-    "totalTokens": 0.05355,
-    "agentless-mini/Llama-3.3-70B-Instruct-FP8": 0.04
-  },
-  {
-    "totalTokens": 0.056503,
-    "agentless-mini/Llama-3.3-70B-Instruct-FP8": 0.04
-  },
-  {
-    "totalTokens": 0.05708,
-    "agentless-mini/Llama-3.3-70B-Instruct-FP8": 0.04
-  },
-  {
-    "totalTokens": 0.058103,
-    "agentless-mini/Llama-3.3-70B-Instruct-FP8": 0.04
-  },
-  {
-    "totalTokens": 0.059221,
-    "agentless-mini/Llama-3.3-70B-Instruct-FP8": 0.04
-  },
-  {
-    "totalTokens": 0.059929,
-    "agentless-mini/Llama-3.3-70B-Instruct-FP8": 0.04
-  },
-  {
-    "totalTokens": 0.060199,
-    "agentless-mini/Llama-3.3-70B-Instruct-FP8": 0.04
-  },
-  {
-    "totalTokens": 0.06044,
-    "agentless-mini/Llama-3.3-70B-Instruct-FP8": 0.04
-  },
-  {
-    "totalTokens": 0.064805,
-    "agentless-mini/Llama-3.3-70B-Instruct-FP8": 0.04
-  },
-  {
-    "totalTokens": 0.065653,
-    "agentless-mini/Llama-3.3-70B-Instruct-FP8": 0.04
-  },
-  {
     "totalTokens": 0.005541,
     "agentless-mini/gpt-4o-mini-2024-07-18": 0
   },
@@ -398,6 +198,206 @@
   {
     "totalTokens": 0.06676,
     "agentless-mini/gpt-4o-mini-2024-07-18": 0.2
+  },
+  {
+    "totalTokens": 0.00754,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8": 0
+  },
+  {
+    "totalTokens": 0.00852,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8": 0
+  },
+  {
+    "totalTokens": 0.011774,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8": 0
+  },
+  {
+    "totalTokens": 0.011779,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8": 0
+  },
+  {
+    "totalTokens": 0.014067,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8": 0
+  },
+  {
+    "totalTokens": 0.014928,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8": 0
+  },
+  {
+    "totalTokens": 0.016181,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8": 0
+  },
+  {
+    "totalTokens": 0.018083,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8": 0
+  },
+  {
+    "totalTokens": 0.018337,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8": 0
+  },
+  {
+    "totalTokens": 0.019508,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8": 0
+  },
+  {
+    "totalTokens": 0.020047,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8": 0
+  },
+  {
+    "totalTokens": 0.020607,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8": 0
+  },
+  {
+    "totalTokens": 0.021379,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8": 0
+  },
+  {
+    "totalTokens": 0.022247,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8": 0
+  },
+  {
+    "totalTokens": 0.02486,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8": 0
+  },
+  {
+    "totalTokens": 0.025613,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8": 0
+  },
+  {
+    "totalTokens": 0.027087,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8": 0.02
+  },
+  {
+    "totalTokens": 0.027647,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8": 0.02
+  },
+  {
+    "totalTokens": 0.030558,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8": 0.02
+  },
+  {
+    "totalTokens": 0.031279,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8": 0.02
+  },
+  {
+    "totalTokens": 0.033112,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8": 0.02
+  },
+  {
+    "totalTokens": 0.033132,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8": 0.02
+  },
+  {
+    "totalTokens": 0.035055,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8": 0.02
+  },
+  {
+    "totalTokens": 0.035656,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8": 0.04
+  },
+  {
+    "totalTokens": 0.039111,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8": 0.04
+  },
+  {
+    "totalTokens": 0.039305,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8": 0.04
+  },
+  {
+    "totalTokens": 0.039783,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8": 0.04
+  },
+  {
+    "totalTokens": 0.042433,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8": 0.04
+  },
+  {
+    "totalTokens": 0.043422,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8": 0.04
+  },
+  {
+    "totalTokens": 0.044431,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8": 0.04
+  },
+  {
+    "totalTokens": 0.044877,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8": 0.04
+  },
+  {
+    "totalTokens": 0.045534,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8": 0.04
+  },
+  {
+    "totalTokens": 0.047728,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8": 0.04
+  },
+  {
+    "totalTokens": 0.04988,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8": 0.04
+  },
+  {
+    "totalTokens": 0.051355,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8": 0.04
+  },
+  {
+    "totalTokens": 0.051399,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8": 0.04
+  },
+  {
+    "totalTokens": 0.051716,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8": 0.04
+  },
+  {
+    "totalTokens": 0.052302,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8": 0.04
+  },
+  {
+    "totalTokens": 0.052664,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8": 0.04
+  },
+  {
+    "totalTokens": 0.053074,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8": 0.04
+  },
+  {
+    "totalTokens": 0.05355,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8": 0.04
+  },
+  {
+    "totalTokens": 0.056503,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8": 0.04
+  },
+  {
+    "totalTokens": 0.05708,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8": 0.04
+  },
+  {
+    "totalTokens": 0.058103,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8": 0.04
+  },
+  {
+    "totalTokens": 0.059221,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8": 0.04
+  },
+  {
+    "totalTokens": 0.059929,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8": 0.04
+  },
+  {
+    "totalTokens": 0.060199,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8": 0.04
+  },
+  {
+    "totalTokens": 0.06044,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8": 0.04
+  },
+  {
+    "totalTokens": 0.064805,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8": 0.04
+  },
+  {
+    "totalTokens": 0.065653,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8": 0.04
   },
   {
     "totalTokens": 0.005614,
@@ -600,206 +600,6 @@
     "agentless-mini/qwen3-32B": 0.28
   },
   {
-    "totalTokens": 0.03251,
-    "agentless/Llama-3.3-70B-Instruct-FP8": 0
-  },
-  {
-    "totalTokens": 0.032807,
-    "agentless/Llama-3.3-70B-Instruct-FP8": 0.02
-  },
-  {
-    "totalTokens": 0.034301,
-    "agentless/Llama-3.3-70B-Instruct-FP8": 0.02
-  },
-  {
-    "totalTokens": 0.038209,
-    "agentless/Llama-3.3-70B-Instruct-FP8": 0.04
-  },
-  {
-    "totalTokens": 0.039168,
-    "agentless/Llama-3.3-70B-Instruct-FP8": 0.06
-  },
-  {
-    "totalTokens": 0.041618,
-    "agentless/Llama-3.3-70B-Instruct-FP8": 0.06
-  },
-  {
-    "totalTokens": 0.042261,
-    "agentless/Llama-3.3-70B-Instruct-FP8": 0.06
-  },
-  {
-    "totalTokens": 0.043784,
-    "agentless/Llama-3.3-70B-Instruct-FP8": 0.08
-  },
-  {
-    "totalTokens": 0.044867,
-    "agentless/Llama-3.3-70B-Instruct-FP8": 0.1
-  },
-  {
-    "totalTokens": 0.045327,
-    "agentless/Llama-3.3-70B-Instruct-FP8": 0.1
-  },
-  {
-    "totalTokens": 0.045745,
-    "agentless/Llama-3.3-70B-Instruct-FP8": 0.1
-  },
-  {
-    "totalTokens": 0.045819,
-    "agentless/Llama-3.3-70B-Instruct-FP8": 0.1
-  },
-  {
-    "totalTokens": 0.046735,
-    "agentless/Llama-3.3-70B-Instruct-FP8": 0.1
-  },
-  {
-    "totalTokens": 0.047918,
-    "agentless/Llama-3.3-70B-Instruct-FP8": 0.12
-  },
-  {
-    "totalTokens": 0.049315,
-    "agentless/Llama-3.3-70B-Instruct-FP8": 0.12
-  },
-  {
-    "totalTokens": 0.051846,
-    "agentless/Llama-3.3-70B-Instruct-FP8": 0.14
-  },
-  {
-    "totalTokens": 0.052643,
-    "agentless/Llama-3.3-70B-Instruct-FP8": 0.14
-  },
-  {
-    "totalTokens": 0.053109,
-    "agentless/Llama-3.3-70B-Instruct-FP8": 0.14
-  },
-  {
-    "totalTokens": 0.053424,
-    "agentless/Llama-3.3-70B-Instruct-FP8": 0.16
-  },
-  {
-    "totalTokens": 0.054348,
-    "agentless/Llama-3.3-70B-Instruct-FP8": 0.16
-  },
-  {
-    "totalTokens": 0.054361,
-    "agentless/Llama-3.3-70B-Instruct-FP8": 0.16
-  },
-  {
-    "totalTokens": 0.055261,
-    "agentless/Llama-3.3-70B-Instruct-FP8": 0.16
-  },
-  {
-    "totalTokens": 0.056706,
-    "agentless/Llama-3.3-70B-Instruct-FP8": 0.16
-  },
-  {
-    "totalTokens": 0.05742,
-    "agentless/Llama-3.3-70B-Instruct-FP8": 0.16
-  },
-  {
-    "totalTokens": 0.058169,
-    "agentless/Llama-3.3-70B-Instruct-FP8": 0.18
-  },
-  {
-    "totalTokens": 0.059638,
-    "agentless/Llama-3.3-70B-Instruct-FP8": 0.18
-  },
-  {
-    "totalTokens": 0.059788,
-    "agentless/Llama-3.3-70B-Instruct-FP8": 0.18
-  },
-  {
-    "totalTokens": 0.060894,
-    "agentless/Llama-3.3-70B-Instruct-FP8": 0.18
-  },
-  {
-    "totalTokens": 0.061012,
-    "agentless/Llama-3.3-70B-Instruct-FP8": 0.2
-  },
-  {
-    "totalTokens": 0.061577,
-    "agentless/Llama-3.3-70B-Instruct-FP8": 0.2
-  },
-  {
-    "totalTokens": 0.062177,
-    "agentless/Llama-3.3-70B-Instruct-FP8": 0.22
-  },
-  {
-    "totalTokens": 0.067289,
-    "agentless/Llama-3.3-70B-Instruct-FP8": 0.22
-  },
-  {
-    "totalTokens": 0.067368,
-    "agentless/Llama-3.3-70B-Instruct-FP8": 0.24
-  },
-  {
-    "totalTokens": 0.067848,
-    "agentless/Llama-3.3-70B-Instruct-FP8": 0.26
-  },
-  {
-    "totalTokens": 0.068254,
-    "agentless/Llama-3.3-70B-Instruct-FP8": 0.26
-  },
-  {
-    "totalTokens": 0.069644,
-    "agentless/Llama-3.3-70B-Instruct-FP8": 0.26
-  },
-  {
-    "totalTokens": 0.069874,
-    "agentless/Llama-3.3-70B-Instruct-FP8": 0.26
-  },
-  {
-    "totalTokens": 0.071946,
-    "agentless/Llama-3.3-70B-Instruct-FP8": 0.26
-  },
-  {
-    "totalTokens": 0.075746,
-    "agentless/Llama-3.3-70B-Instruct-FP8": 0.26
-  },
-  {
-    "totalTokens": 0.076598,
-    "agentless/Llama-3.3-70B-Instruct-FP8": 0.26
-  },
-  {
-    "totalTokens": 0.080829,
-    "agentless/Llama-3.3-70B-Instruct-FP8": 0.26
-  },
-  {
-    "totalTokens": 0.081929,
-    "agentless/Llama-3.3-70B-Instruct-FP8": 0.26
-  },
-  {
-    "totalTokens": 0.083379,
-    "agentless/Llama-3.3-70B-Instruct-FP8": 0.26
-  },
-  {
-    "totalTokens": 0.087246,
-    "agentless/Llama-3.3-70B-Instruct-FP8": 0.26
-  },
-  {
-    "totalTokens": 0.09086,
-    "agentless/Llama-3.3-70B-Instruct-FP8": 0.26
-  },
-  {
-    "totalTokens": 0.099733,
-    "agentless/Llama-3.3-70B-Instruct-FP8": 0.28
-  },
-  {
-    "totalTokens": 0.101268,
-    "agentless/Llama-3.3-70B-Instruct-FP8": 0.28
-  },
-  {
-    "totalTokens": 0.102576,
-    "agentless/Llama-3.3-70B-Instruct-FP8": 0.28
-  },
-  {
-    "totalTokens": 0.132458,
-    "agentless/Llama-3.3-70B-Instruct-FP8": 0.28
-  },
-  {
-    "totalTokens": 0.157937,
-    "agentless/Llama-3.3-70B-Instruct-FP8": 0.28
-  },
-  {
     "totalTokens": 0.014215,
     "agentless/gpt-4o-mini-2024-07-18": 0
   },
@@ -998,6 +798,206 @@
   {
     "totalTokens": 0.073894,
     "agentless/gpt-4o-mini-2024-07-18": 0.26
+  },
+  {
+    "totalTokens": 0.03251,
+    "agentless/llama-3.3-70B-Instruct-FP8": 0
+  },
+  {
+    "totalTokens": 0.032807,
+    "agentless/llama-3.3-70B-Instruct-FP8": 0.02
+  },
+  {
+    "totalTokens": 0.034301,
+    "agentless/llama-3.3-70B-Instruct-FP8": 0.02
+  },
+  {
+    "totalTokens": 0.038209,
+    "agentless/llama-3.3-70B-Instruct-FP8": 0.04
+  },
+  {
+    "totalTokens": 0.039168,
+    "agentless/llama-3.3-70B-Instruct-FP8": 0.06
+  },
+  {
+    "totalTokens": 0.041618,
+    "agentless/llama-3.3-70B-Instruct-FP8": 0.06
+  },
+  {
+    "totalTokens": 0.042261,
+    "agentless/llama-3.3-70B-Instruct-FP8": 0.06
+  },
+  {
+    "totalTokens": 0.043784,
+    "agentless/llama-3.3-70B-Instruct-FP8": 0.08
+  },
+  {
+    "totalTokens": 0.044867,
+    "agentless/llama-3.3-70B-Instruct-FP8": 0.1
+  },
+  {
+    "totalTokens": 0.045327,
+    "agentless/llama-3.3-70B-Instruct-FP8": 0.1
+  },
+  {
+    "totalTokens": 0.045745,
+    "agentless/llama-3.3-70B-Instruct-FP8": 0.1
+  },
+  {
+    "totalTokens": 0.045819,
+    "agentless/llama-3.3-70B-Instruct-FP8": 0.1
+  },
+  {
+    "totalTokens": 0.046735,
+    "agentless/llama-3.3-70B-Instruct-FP8": 0.1
+  },
+  {
+    "totalTokens": 0.047918,
+    "agentless/llama-3.3-70B-Instruct-FP8": 0.12
+  },
+  {
+    "totalTokens": 0.049315,
+    "agentless/llama-3.3-70B-Instruct-FP8": 0.12
+  },
+  {
+    "totalTokens": 0.051846,
+    "agentless/llama-3.3-70B-Instruct-FP8": 0.14
+  },
+  {
+    "totalTokens": 0.052643,
+    "agentless/llama-3.3-70B-Instruct-FP8": 0.14
+  },
+  {
+    "totalTokens": 0.053109,
+    "agentless/llama-3.3-70B-Instruct-FP8": 0.14
+  },
+  {
+    "totalTokens": 0.053424,
+    "agentless/llama-3.3-70B-Instruct-FP8": 0.16
+  },
+  {
+    "totalTokens": 0.054348,
+    "agentless/llama-3.3-70B-Instruct-FP8": 0.16
+  },
+  {
+    "totalTokens": 0.054361,
+    "agentless/llama-3.3-70B-Instruct-FP8": 0.16
+  },
+  {
+    "totalTokens": 0.055261,
+    "agentless/llama-3.3-70B-Instruct-FP8": 0.16
+  },
+  {
+    "totalTokens": 0.056706,
+    "agentless/llama-3.3-70B-Instruct-FP8": 0.16
+  },
+  {
+    "totalTokens": 0.05742,
+    "agentless/llama-3.3-70B-Instruct-FP8": 0.16
+  },
+  {
+    "totalTokens": 0.058169,
+    "agentless/llama-3.3-70B-Instruct-FP8": 0.18
+  },
+  {
+    "totalTokens": 0.059638,
+    "agentless/llama-3.3-70B-Instruct-FP8": 0.18
+  },
+  {
+    "totalTokens": 0.059788,
+    "agentless/llama-3.3-70B-Instruct-FP8": 0.18
+  },
+  {
+    "totalTokens": 0.060894,
+    "agentless/llama-3.3-70B-Instruct-FP8": 0.18
+  },
+  {
+    "totalTokens": 0.061012,
+    "agentless/llama-3.3-70B-Instruct-FP8": 0.2
+  },
+  {
+    "totalTokens": 0.061577,
+    "agentless/llama-3.3-70B-Instruct-FP8": 0.2
+  },
+  {
+    "totalTokens": 0.062177,
+    "agentless/llama-3.3-70B-Instruct-FP8": 0.22
+  },
+  {
+    "totalTokens": 0.067289,
+    "agentless/llama-3.3-70B-Instruct-FP8": 0.22
+  },
+  {
+    "totalTokens": 0.067368,
+    "agentless/llama-3.3-70B-Instruct-FP8": 0.24
+  },
+  {
+    "totalTokens": 0.067848,
+    "agentless/llama-3.3-70B-Instruct-FP8": 0.26
+  },
+  {
+    "totalTokens": 0.068254,
+    "agentless/llama-3.3-70B-Instruct-FP8": 0.26
+  },
+  {
+    "totalTokens": 0.069644,
+    "agentless/llama-3.3-70B-Instruct-FP8": 0.26
+  },
+  {
+    "totalTokens": 0.069874,
+    "agentless/llama-3.3-70B-Instruct-FP8": 0.26
+  },
+  {
+    "totalTokens": 0.071946,
+    "agentless/llama-3.3-70B-Instruct-FP8": 0.26
+  },
+  {
+    "totalTokens": 0.075746,
+    "agentless/llama-3.3-70B-Instruct-FP8": 0.26
+  },
+  {
+    "totalTokens": 0.076598,
+    "agentless/llama-3.3-70B-Instruct-FP8": 0.26
+  },
+  {
+    "totalTokens": 0.080829,
+    "agentless/llama-3.3-70B-Instruct-FP8": 0.26
+  },
+  {
+    "totalTokens": 0.081929,
+    "agentless/llama-3.3-70B-Instruct-FP8": 0.26
+  },
+  {
+    "totalTokens": 0.083379,
+    "agentless/llama-3.3-70B-Instruct-FP8": 0.26
+  },
+  {
+    "totalTokens": 0.087246,
+    "agentless/llama-3.3-70B-Instruct-FP8": 0.26
+  },
+  {
+    "totalTokens": 0.09086,
+    "agentless/llama-3.3-70B-Instruct-FP8": 0.26
+  },
+  {
+    "totalTokens": 0.099733,
+    "agentless/llama-3.3-70B-Instruct-FP8": 0.28
+  },
+  {
+    "totalTokens": 0.101268,
+    "agentless/llama-3.3-70B-Instruct-FP8": 0.28
+  },
+  {
+    "totalTokens": 0.102576,
+    "agentless/llama-3.3-70B-Instruct-FP8": 0.28
+  },
+  {
+    "totalTokens": 0.132458,
+    "agentless/llama-3.3-70B-Instruct-FP8": 0.28
+  },
+  {
+    "totalTokens": 0.157937,
+    "agentless/llama-3.3-70B-Instruct-FP8": 0.28
   },
   {
     "totalTokens": 0.008636,
@@ -1200,206 +1200,6 @@
     "agentless/qwen3-32B": 0.48
   },
   {
-    "totalTokens": 0.013179,
-    "auto-code-rover/Llama-3.3-70B-Instruct-FP8": 0.02
-  },
-  {
-    "totalTokens": 0.015141,
-    "auto-code-rover/Llama-3.3-70B-Instruct-FP8": 0.04
-  },
-  {
-    "totalTokens": 0.019676,
-    "auto-code-rover/Llama-3.3-70B-Instruct-FP8": 0.04
-  },
-  {
-    "totalTokens": 0.020024,
-    "auto-code-rover/Llama-3.3-70B-Instruct-FP8": 0.06
-  },
-  {
-    "totalTokens": 0.021135,
-    "auto-code-rover/Llama-3.3-70B-Instruct-FP8": 0.06
-  },
-  {
-    "totalTokens": 0.023999,
-    "auto-code-rover/Llama-3.3-70B-Instruct-FP8": 0.06
-  },
-  {
-    "totalTokens": 0.025146,
-    "auto-code-rover/Llama-3.3-70B-Instruct-FP8": 0.08
-  },
-  {
-    "totalTokens": 0.025864,
-    "auto-code-rover/Llama-3.3-70B-Instruct-FP8": 0.1
-  },
-  {
-    "totalTokens": 0.026887,
-    "auto-code-rover/Llama-3.3-70B-Instruct-FP8": 0.12
-  },
-  {
-    "totalTokens": 0.032332,
-    "auto-code-rover/Llama-3.3-70B-Instruct-FP8": 0.12
-  },
-  {
-    "totalTokens": 0.034615,
-    "auto-code-rover/Llama-3.3-70B-Instruct-FP8": 0.14
-  },
-  {
-    "totalTokens": 0.039065,
-    "auto-code-rover/Llama-3.3-70B-Instruct-FP8": 0.14
-  },
-  {
-    "totalTokens": 0.039717,
-    "auto-code-rover/Llama-3.3-70B-Instruct-FP8": 0.16
-  },
-  {
-    "totalTokens": 0.044567,
-    "auto-code-rover/Llama-3.3-70B-Instruct-FP8": 0.16
-  },
-  {
-    "totalTokens": 0.048588,
-    "auto-code-rover/Llama-3.3-70B-Instruct-FP8": 0.18
-  },
-  {
-    "totalTokens": 0.051703,
-    "auto-code-rover/Llama-3.3-70B-Instruct-FP8": 0.18
-  },
-  {
-    "totalTokens": 0.052329,
-    "auto-code-rover/Llama-3.3-70B-Instruct-FP8": 0.18
-  },
-  {
-    "totalTokens": 0.052672,
-    "auto-code-rover/Llama-3.3-70B-Instruct-FP8": 0.2
-  },
-  {
-    "totalTokens": 0.054196,
-    "auto-code-rover/Llama-3.3-70B-Instruct-FP8": 0.2
-  },
-  {
-    "totalTokens": 0.055677,
-    "auto-code-rover/Llama-3.3-70B-Instruct-FP8": 0.22
-  },
-  {
-    "totalTokens": 0.059262,
-    "auto-code-rover/Llama-3.3-70B-Instruct-FP8": 0.22
-  },
-  {
-    "totalTokens": 0.064945,
-    "auto-code-rover/Llama-3.3-70B-Instruct-FP8": 0.22
-  },
-  {
-    "totalTokens": 0.066802,
-    "auto-code-rover/Llama-3.3-70B-Instruct-FP8": 0.24
-  },
-  {
-    "totalTokens": 0.077174,
-    "auto-code-rover/Llama-3.3-70B-Instruct-FP8": 0.24
-  },
-  {
-    "totalTokens": 0.0782,
-    "auto-code-rover/Llama-3.3-70B-Instruct-FP8": 0.24
-  },
-  {
-    "totalTokens": 0.079545,
-    "auto-code-rover/Llama-3.3-70B-Instruct-FP8": 0.24
-  },
-  {
-    "totalTokens": 0.0931,
-    "auto-code-rover/Llama-3.3-70B-Instruct-FP8": 0.24
-  },
-  {
-    "totalTokens": 0.1273,
-    "auto-code-rover/Llama-3.3-70B-Instruct-FP8": 0.24
-  },
-  {
-    "totalTokens": 0.166871,
-    "auto-code-rover/Llama-3.3-70B-Instruct-FP8": 0.24
-  },
-  {
-    "totalTokens": 0.213923,
-    "auto-code-rover/Llama-3.3-70B-Instruct-FP8": 0.24
-  },
-  {
-    "totalTokens": 0.215749,
-    "auto-code-rover/Llama-3.3-70B-Instruct-FP8": 0.24
-  },
-  {
-    "totalTokens": 0.224242,
-    "auto-code-rover/Llama-3.3-70B-Instruct-FP8": 0.26
-  },
-  {
-    "totalTokens": 0.255532,
-    "auto-code-rover/Llama-3.3-70B-Instruct-FP8": 0.26
-  },
-  {
-    "totalTokens": 0.256199,
-    "auto-code-rover/Llama-3.3-70B-Instruct-FP8": 0.26
-  },
-  {
-    "totalTokens": 0.356835,
-    "auto-code-rover/Llama-3.3-70B-Instruct-FP8": 0.26
-  },
-  {
-    "totalTokens": 0.379611,
-    "auto-code-rover/Llama-3.3-70B-Instruct-FP8": 0.26
-  },
-  {
-    "totalTokens": 0.427007,
-    "auto-code-rover/Llama-3.3-70B-Instruct-FP8": 0.26
-  },
-  {
-    "totalTokens": 0.491506,
-    "auto-code-rover/Llama-3.3-70B-Instruct-FP8": 0.26
-  },
-  {
-    "totalTokens": 0.656643,
-    "auto-code-rover/Llama-3.3-70B-Instruct-FP8": 0.26
-  },
-  {
-    "totalTokens": 0.674838,
-    "auto-code-rover/Llama-3.3-70B-Instruct-FP8": 0.26
-  },
-  {
-    "totalTokens": 0.721044,
-    "auto-code-rover/Llama-3.3-70B-Instruct-FP8": 0.26
-  },
-  {
-    "totalTokens": 0.721986,
-    "auto-code-rover/Llama-3.3-70B-Instruct-FP8": 0.26
-  },
-  {
-    "totalTokens": 0.780477,
-    "auto-code-rover/Llama-3.3-70B-Instruct-FP8": 0.26
-  },
-  {
-    "totalTokens": 1.072652,
-    "auto-code-rover/Llama-3.3-70B-Instruct-FP8": 0.26
-  },
-  {
-    "totalTokens": 1.244727,
-    "auto-code-rover/Llama-3.3-70B-Instruct-FP8": 0.26
-  },
-  {
-    "totalTokens": 1.328257,
-    "auto-code-rover/Llama-3.3-70B-Instruct-FP8": 0.28
-  },
-  {
-    "totalTokens": 1.328674,
-    "auto-code-rover/Llama-3.3-70B-Instruct-FP8": 0.28
-  },
-  {
-    "totalTokens": 1.341336,
-    "auto-code-rover/Llama-3.3-70B-Instruct-FP8": 0.28
-  },
-  {
-    "totalTokens": 3.013294,
-    "auto-code-rover/Llama-3.3-70B-Instruct-FP8": 0.28
-  },
-  {
-    "totalTokens": 3.589886,
-    "auto-code-rover/Llama-3.3-70B-Instruct-FP8": 0.28
-  },
-  {
     "totalTokens": 0.005891,
     "auto-code-rover/gpt-4o-mini-2024-07-18": 0
   },
@@ -1598,6 +1398,206 @@
   {
     "totalTokens": 1.336881,
     "auto-code-rover/gpt-4o-mini-2024-07-18": 0.12
+  },
+  {
+    "totalTokens": 0.013179,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8": 0.02
+  },
+  {
+    "totalTokens": 0.015141,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8": 0.04
+  },
+  {
+    "totalTokens": 0.019676,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8": 0.04
+  },
+  {
+    "totalTokens": 0.020024,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8": 0.06
+  },
+  {
+    "totalTokens": 0.021135,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8": 0.06
+  },
+  {
+    "totalTokens": 0.023999,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8": 0.06
+  },
+  {
+    "totalTokens": 0.025146,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8": 0.08
+  },
+  {
+    "totalTokens": 0.025864,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8": 0.1
+  },
+  {
+    "totalTokens": 0.026887,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8": 0.12
+  },
+  {
+    "totalTokens": 0.032332,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8": 0.12
+  },
+  {
+    "totalTokens": 0.034615,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8": 0.14
+  },
+  {
+    "totalTokens": 0.039065,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8": 0.14
+  },
+  {
+    "totalTokens": 0.039717,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8": 0.16
+  },
+  {
+    "totalTokens": 0.044567,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8": 0.16
+  },
+  {
+    "totalTokens": 0.048588,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8": 0.18
+  },
+  {
+    "totalTokens": 0.051703,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8": 0.18
+  },
+  {
+    "totalTokens": 0.052329,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8": 0.18
+  },
+  {
+    "totalTokens": 0.052672,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8": 0.2
+  },
+  {
+    "totalTokens": 0.054196,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8": 0.2
+  },
+  {
+    "totalTokens": 0.055677,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8": 0.22
+  },
+  {
+    "totalTokens": 0.059262,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8": 0.22
+  },
+  {
+    "totalTokens": 0.064945,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8": 0.22
+  },
+  {
+    "totalTokens": 0.066802,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8": 0.24
+  },
+  {
+    "totalTokens": 0.077174,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8": 0.24
+  },
+  {
+    "totalTokens": 0.0782,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8": 0.24
+  },
+  {
+    "totalTokens": 0.079545,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8": 0.24
+  },
+  {
+    "totalTokens": 0.0931,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8": 0.24
+  },
+  {
+    "totalTokens": 0.1273,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8": 0.24
+  },
+  {
+    "totalTokens": 0.166871,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8": 0.24
+  },
+  {
+    "totalTokens": 0.213923,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8": 0.24
+  },
+  {
+    "totalTokens": 0.215749,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8": 0.24
+  },
+  {
+    "totalTokens": 0.224242,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8": 0.26
+  },
+  {
+    "totalTokens": 0.255532,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8": 0.26
+  },
+  {
+    "totalTokens": 0.256199,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8": 0.26
+  },
+  {
+    "totalTokens": 0.356835,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8": 0.26
+  },
+  {
+    "totalTokens": 0.379611,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8": 0.26
+  },
+  {
+    "totalTokens": 0.427007,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8": 0.26
+  },
+  {
+    "totalTokens": 0.491506,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8": 0.26
+  },
+  {
+    "totalTokens": 0.656643,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8": 0.26
+  },
+  {
+    "totalTokens": 0.674838,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8": 0.26
+  },
+  {
+    "totalTokens": 0.721044,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8": 0.26
+  },
+  {
+    "totalTokens": 0.721986,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8": 0.26
+  },
+  {
+    "totalTokens": 0.780477,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8": 0.26
+  },
+  {
+    "totalTokens": 1.072652,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8": 0.26
+  },
+  {
+    "totalTokens": 1.244727,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8": 0.26
+  },
+  {
+    "totalTokens": 1.328257,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8": 0.28
+  },
+  {
+    "totalTokens": 1.328674,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8": 0.28
+  },
+  {
+    "totalTokens": 1.341336,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8": 0.28
+  },
+  {
+    "totalTokens": 3.013294,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8": 0.28
+  },
+  {
+    "totalTokens": 3.589886,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8": 0.28
   },
   {
     "totalTokens": 0.005607,
@@ -1800,206 +1800,6 @@
     "auto-code-rover/qwen3-32B": 0.38
   },
   {
-    "totalTokens": 0.057695,
-    "openhands/Llama-3.3-70B-Instruct-FP8": 0
-  },
-  {
-    "totalTokens": 0.058418,
-    "openhands/Llama-3.3-70B-Instruct-FP8": 0
-  },
-  {
-    "totalTokens": 0.084012,
-    "openhands/Llama-3.3-70B-Instruct-FP8": 0
-  },
-  {
-    "totalTokens": 0.091804,
-    "openhands/Llama-3.3-70B-Instruct-FP8": 0
-  },
-  {
-    "totalTokens": 0.092107,
-    "openhands/Llama-3.3-70B-Instruct-FP8": 0.02
-  },
-  {
-    "totalTokens": 0.122686,
-    "openhands/Llama-3.3-70B-Instruct-FP8": 0.02
-  },
-  {
-    "totalTokens": 0.128535,
-    "openhands/Llama-3.3-70B-Instruct-FP8": 0.02
-  },
-  {
-    "totalTokens": 0.133033,
-    "openhands/Llama-3.3-70B-Instruct-FP8": 0.04
-  },
-  {
-    "totalTokens": 0.167042,
-    "openhands/Llama-3.3-70B-Instruct-FP8": 0.06
-  },
-  {
-    "totalTokens": 0.1807,
-    "openhands/Llama-3.3-70B-Instruct-FP8": 0.06
-  },
-  {
-    "totalTokens": 0.184362,
-    "openhands/Llama-3.3-70B-Instruct-FP8": 0.08
-  },
-  {
-    "totalTokens": 0.192901,
-    "openhands/Llama-3.3-70B-Instruct-FP8": 0.1
-  },
-  {
-    "totalTokens": 0.198302,
-    "openhands/Llama-3.3-70B-Instruct-FP8": 0.12
-  },
-  {
-    "totalTokens": 0.204095,
-    "openhands/Llama-3.3-70B-Instruct-FP8": 0.12
-  },
-  {
-    "totalTokens": 0.204499,
-    "openhands/Llama-3.3-70B-Instruct-FP8": 0.12
-  },
-  {
-    "totalTokens": 0.214548,
-    "openhands/Llama-3.3-70B-Instruct-FP8": 0.12
-  },
-  {
-    "totalTokens": 0.236006,
-    "openhands/Llama-3.3-70B-Instruct-FP8": 0.12
-  },
-  {
-    "totalTokens": 0.264675,
-    "openhands/Llama-3.3-70B-Instruct-FP8": 0.12
-  },
-  {
-    "totalTokens": 0.266166,
-    "openhands/Llama-3.3-70B-Instruct-FP8": 0.14
-  },
-  {
-    "totalTokens": 0.288184,
-    "openhands/Llama-3.3-70B-Instruct-FP8": 0.14
-  },
-  {
-    "totalTokens": 0.289582,
-    "openhands/Llama-3.3-70B-Instruct-FP8": 0.14
-  },
-  {
-    "totalTokens": 0.34065,
-    "openhands/Llama-3.3-70B-Instruct-FP8": 0.14
-  },
-  {
-    "totalTokens": 0.343467,
-    "openhands/Llama-3.3-70B-Instruct-FP8": 0.16
-  },
-  {
-    "totalTokens": 0.366707,
-    "openhands/Llama-3.3-70B-Instruct-FP8": 0.18
-  },
-  {
-    "totalTokens": 0.367592,
-    "openhands/Llama-3.3-70B-Instruct-FP8": 0.18
-  },
-  {
-    "totalTokens": 0.378257,
-    "openhands/Llama-3.3-70B-Instruct-FP8": 0.18
-  },
-  {
-    "totalTokens": 0.413436,
-    "openhands/Llama-3.3-70B-Instruct-FP8": 0.2
-  },
-  {
-    "totalTokens": 0.610152,
-    "openhands/Llama-3.3-70B-Instruct-FP8": 0.2
-  },
-  {
-    "totalTokens": 0.746138,
-    "openhands/Llama-3.3-70B-Instruct-FP8": 0.2
-  },
-  {
-    "totalTokens": 0.764218,
-    "openhands/Llama-3.3-70B-Instruct-FP8": 0.2
-  },
-  {
-    "totalTokens": 0.847989,
-    "openhands/Llama-3.3-70B-Instruct-FP8": 0.2
-  },
-  {
-    "totalTokens": 1.02445,
-    "openhands/Llama-3.3-70B-Instruct-FP8": 0.2
-  },
-  {
-    "totalTokens": 1.026609,
-    "openhands/Llama-3.3-70B-Instruct-FP8": 0.2
-  },
-  {
-    "totalTokens": 1.117209,
-    "openhands/Llama-3.3-70B-Instruct-FP8": 0.2
-  },
-  {
-    "totalTokens": 1.131623,
-    "openhands/Llama-3.3-70B-Instruct-FP8": 0.2
-  },
-  {
-    "totalTokens": 1.194558,
-    "openhands/Llama-3.3-70B-Instruct-FP8": 0.2
-  },
-  {
-    "totalTokens": 1.369918,
-    "openhands/Llama-3.3-70B-Instruct-FP8": 0.2
-  },
-  {
-    "totalTokens": 1.444452,
-    "openhands/Llama-3.3-70B-Instruct-FP8": 0.2
-  },
-  {
-    "totalTokens": 1.487986,
-    "openhands/Llama-3.3-70B-Instruct-FP8": 0.2
-  },
-  {
-    "totalTokens": 1.551529,
-    "openhands/Llama-3.3-70B-Instruct-FP8": 0.2
-  },
-  {
-    "totalTokens": 1.667928,
-    "openhands/Llama-3.3-70B-Instruct-FP8": 0.2
-  },
-  {
-    "totalTokens": 1.722317,
-    "openhands/Llama-3.3-70B-Instruct-FP8": 0.2
-  },
-  {
-    "totalTokens": 1.815669,
-    "openhands/Llama-3.3-70B-Instruct-FP8": 0.2
-  },
-  {
-    "totalTokens": 1.927237,
-    "openhands/Llama-3.3-70B-Instruct-FP8": 0.2
-  },
-  {
-    "totalTokens": 2.143293,
-    "openhands/Llama-3.3-70B-Instruct-FP8": 0.2
-  },
-  {
-    "totalTokens": 2.575293,
-    "openhands/Llama-3.3-70B-Instruct-FP8": 0.2
-  },
-  {
-    "totalTokens": 2.889054,
-    "openhands/Llama-3.3-70B-Instruct-FP8": 0.2
-  },
-  {
-    "totalTokens": 2.892124,
-    "openhands/Llama-3.3-70B-Instruct-FP8": 0.2
-  },
-  {
-    "totalTokens": 3.340177,
-    "openhands/Llama-3.3-70B-Instruct-FP8": 0.2
-  },
-  {
-    "totalTokens": 3.695914,
-    "openhands/Llama-3.3-70B-Instruct-FP8": 0.2
-  },
-  {
     "totalTokens": 0.050096,
     "openhands/gpt-4o-mini-2024-07-18": 0.023809523809523808
   },
@@ -2166,6 +1966,206 @@
   {
     "totalTokens": 4.032134,
     "openhands/gpt-4o-mini-2024-07-18": 0.11904761904761904
+  },
+  {
+    "totalTokens": 0.057695,
+    "openhands/llama-3.3-70B-Instruct-FP8": 0
+  },
+  {
+    "totalTokens": 0.058418,
+    "openhands/llama-3.3-70B-Instruct-FP8": 0
+  },
+  {
+    "totalTokens": 0.084012,
+    "openhands/llama-3.3-70B-Instruct-FP8": 0
+  },
+  {
+    "totalTokens": 0.091804,
+    "openhands/llama-3.3-70B-Instruct-FP8": 0
+  },
+  {
+    "totalTokens": 0.092107,
+    "openhands/llama-3.3-70B-Instruct-FP8": 0.02
+  },
+  {
+    "totalTokens": 0.122686,
+    "openhands/llama-3.3-70B-Instruct-FP8": 0.02
+  },
+  {
+    "totalTokens": 0.128535,
+    "openhands/llama-3.3-70B-Instruct-FP8": 0.02
+  },
+  {
+    "totalTokens": 0.133033,
+    "openhands/llama-3.3-70B-Instruct-FP8": 0.04
+  },
+  {
+    "totalTokens": 0.167042,
+    "openhands/llama-3.3-70B-Instruct-FP8": 0.06
+  },
+  {
+    "totalTokens": 0.1807,
+    "openhands/llama-3.3-70B-Instruct-FP8": 0.06
+  },
+  {
+    "totalTokens": 0.184362,
+    "openhands/llama-3.3-70B-Instruct-FP8": 0.08
+  },
+  {
+    "totalTokens": 0.192901,
+    "openhands/llama-3.3-70B-Instruct-FP8": 0.1
+  },
+  {
+    "totalTokens": 0.198302,
+    "openhands/llama-3.3-70B-Instruct-FP8": 0.12
+  },
+  {
+    "totalTokens": 0.204095,
+    "openhands/llama-3.3-70B-Instruct-FP8": 0.12
+  },
+  {
+    "totalTokens": 0.204499,
+    "openhands/llama-3.3-70B-Instruct-FP8": 0.12
+  },
+  {
+    "totalTokens": 0.214548,
+    "openhands/llama-3.3-70B-Instruct-FP8": 0.12
+  },
+  {
+    "totalTokens": 0.236006,
+    "openhands/llama-3.3-70B-Instruct-FP8": 0.12
+  },
+  {
+    "totalTokens": 0.264675,
+    "openhands/llama-3.3-70B-Instruct-FP8": 0.12
+  },
+  {
+    "totalTokens": 0.266166,
+    "openhands/llama-3.3-70B-Instruct-FP8": 0.14
+  },
+  {
+    "totalTokens": 0.288184,
+    "openhands/llama-3.3-70B-Instruct-FP8": 0.14
+  },
+  {
+    "totalTokens": 0.289582,
+    "openhands/llama-3.3-70B-Instruct-FP8": 0.14
+  },
+  {
+    "totalTokens": 0.34065,
+    "openhands/llama-3.3-70B-Instruct-FP8": 0.14
+  },
+  {
+    "totalTokens": 0.343467,
+    "openhands/llama-3.3-70B-Instruct-FP8": 0.16
+  },
+  {
+    "totalTokens": 0.366707,
+    "openhands/llama-3.3-70B-Instruct-FP8": 0.18
+  },
+  {
+    "totalTokens": 0.367592,
+    "openhands/llama-3.3-70B-Instruct-FP8": 0.18
+  },
+  {
+    "totalTokens": 0.378257,
+    "openhands/llama-3.3-70B-Instruct-FP8": 0.18
+  },
+  {
+    "totalTokens": 0.413436,
+    "openhands/llama-3.3-70B-Instruct-FP8": 0.2
+  },
+  {
+    "totalTokens": 0.610152,
+    "openhands/llama-3.3-70B-Instruct-FP8": 0.2
+  },
+  {
+    "totalTokens": 0.746138,
+    "openhands/llama-3.3-70B-Instruct-FP8": 0.2
+  },
+  {
+    "totalTokens": 0.764218,
+    "openhands/llama-3.3-70B-Instruct-FP8": 0.2
+  },
+  {
+    "totalTokens": 0.847989,
+    "openhands/llama-3.3-70B-Instruct-FP8": 0.2
+  },
+  {
+    "totalTokens": 1.02445,
+    "openhands/llama-3.3-70B-Instruct-FP8": 0.2
+  },
+  {
+    "totalTokens": 1.026609,
+    "openhands/llama-3.3-70B-Instruct-FP8": 0.2
+  },
+  {
+    "totalTokens": 1.117209,
+    "openhands/llama-3.3-70B-Instruct-FP8": 0.2
+  },
+  {
+    "totalTokens": 1.131623,
+    "openhands/llama-3.3-70B-Instruct-FP8": 0.2
+  },
+  {
+    "totalTokens": 1.194558,
+    "openhands/llama-3.3-70B-Instruct-FP8": 0.2
+  },
+  {
+    "totalTokens": 1.369918,
+    "openhands/llama-3.3-70B-Instruct-FP8": 0.2
+  },
+  {
+    "totalTokens": 1.444452,
+    "openhands/llama-3.3-70B-Instruct-FP8": 0.2
+  },
+  {
+    "totalTokens": 1.487986,
+    "openhands/llama-3.3-70B-Instruct-FP8": 0.2
+  },
+  {
+    "totalTokens": 1.551529,
+    "openhands/llama-3.3-70B-Instruct-FP8": 0.2
+  },
+  {
+    "totalTokens": 1.667928,
+    "openhands/llama-3.3-70B-Instruct-FP8": 0.2
+  },
+  {
+    "totalTokens": 1.722317,
+    "openhands/llama-3.3-70B-Instruct-FP8": 0.2
+  },
+  {
+    "totalTokens": 1.815669,
+    "openhands/llama-3.3-70B-Instruct-FP8": 0.2
+  },
+  {
+    "totalTokens": 1.927237,
+    "openhands/llama-3.3-70B-Instruct-FP8": 0.2
+  },
+  {
+    "totalTokens": 2.143293,
+    "openhands/llama-3.3-70B-Instruct-FP8": 0.2
+  },
+  {
+    "totalTokens": 2.575293,
+    "openhands/llama-3.3-70B-Instruct-FP8": 0.2
+  },
+  {
+    "totalTokens": 2.889054,
+    "openhands/llama-3.3-70B-Instruct-FP8": 0.2
+  },
+  {
+    "totalTokens": 2.892124,
+    "openhands/llama-3.3-70B-Instruct-FP8": 0.2
+  },
+  {
+    "totalTokens": 3.340177,
+    "openhands/llama-3.3-70B-Instruct-FP8": 0.2
+  },
+  {
+    "totalTokens": 3.695914,
+    "openhands/llama-3.3-70B-Instruct-FP8": 0.2
   },
   {
     "totalTokens": 0.018494,
@@ -2368,206 +2368,6 @@
     "openhands/qwen3-32B": 0.34
   },
   {
-    "totalTokens": 0.003488,
-    "swe-agent/Llama-3.3-70B-Instruct-FP8": 0
-  },
-  {
-    "totalTokens": 0.008166,
-    "swe-agent/Llama-3.3-70B-Instruct-FP8": 0
-  },
-  {
-    "totalTokens": 0.00901,
-    "swe-agent/Llama-3.3-70B-Instruct-FP8": 0
-  },
-  {
-    "totalTokens": 0.01008,
-    "swe-agent/Llama-3.3-70B-Instruct-FP8": 0.02
-  },
-  {
-    "totalTokens": 0.011764,
-    "swe-agent/Llama-3.3-70B-Instruct-FP8": 0.04
-  },
-  {
-    "totalTokens": 0.012593,
-    "swe-agent/Llama-3.3-70B-Instruct-FP8": 0.04
-  },
-  {
-    "totalTokens": 0.012833,
-    "swe-agent/Llama-3.3-70B-Instruct-FP8": 0.04
-  },
-  {
-    "totalTokens": 0.015242,
-    "swe-agent/Llama-3.3-70B-Instruct-FP8": 0.04
-  },
-  {
-    "totalTokens": 0.015375,
-    "swe-agent/Llama-3.3-70B-Instruct-FP8": 0.04
-  },
-  {
-    "totalTokens": 0.016126,
-    "swe-agent/Llama-3.3-70B-Instruct-FP8": 0.04
-  },
-  {
-    "totalTokens": 0.018759,
-    "swe-agent/Llama-3.3-70B-Instruct-FP8": 0.06
-  },
-  {
-    "totalTokens": 0.018956,
-    "swe-agent/Llama-3.3-70B-Instruct-FP8": 0.06
-  },
-  {
-    "totalTokens": 0.019698,
-    "swe-agent/Llama-3.3-70B-Instruct-FP8": 0.06
-  },
-  {
-    "totalTokens": 0.021457,
-    "swe-agent/Llama-3.3-70B-Instruct-FP8": 0.08
-  },
-  {
-    "totalTokens": 0.02278,
-    "swe-agent/Llama-3.3-70B-Instruct-FP8": 0.08
-  },
-  {
-    "totalTokens": 0.023489,
-    "swe-agent/Llama-3.3-70B-Instruct-FP8": 0.08
-  },
-  {
-    "totalTokens": 0.023765,
-    "swe-agent/Llama-3.3-70B-Instruct-FP8": 0.08
-  },
-  {
-    "totalTokens": 0.02404,
-    "swe-agent/Llama-3.3-70B-Instruct-FP8": 0.08
-  },
-  {
-    "totalTokens": 0.025694,
-    "swe-agent/Llama-3.3-70B-Instruct-FP8": 0.08
-  },
-  {
-    "totalTokens": 0.026787,
-    "swe-agent/Llama-3.3-70B-Instruct-FP8": 0.08
-  },
-  {
-    "totalTokens": 0.028552,
-    "swe-agent/Llama-3.3-70B-Instruct-FP8": 0.08
-  },
-  {
-    "totalTokens": 0.032286,
-    "swe-agent/Llama-3.3-70B-Instruct-FP8": 0.08
-  },
-  {
-    "totalTokens": 0.032794,
-    "swe-agent/Llama-3.3-70B-Instruct-FP8": 0.08
-  },
-  {
-    "totalTokens": 0.033217,
-    "swe-agent/Llama-3.3-70B-Instruct-FP8": 0.08
-  },
-  {
-    "totalTokens": 0.034761,
-    "swe-agent/Llama-3.3-70B-Instruct-FP8": 0.1
-  },
-  {
-    "totalTokens": 0.035868,
-    "swe-agent/Llama-3.3-70B-Instruct-FP8": 0.1
-  },
-  {
-    "totalTokens": 0.040823,
-    "swe-agent/Llama-3.3-70B-Instruct-FP8": 0.1
-  },
-  {
-    "totalTokens": 0.043105,
-    "swe-agent/Llama-3.3-70B-Instruct-FP8": 0.1
-  },
-  {
-    "totalTokens": 0.048208,
-    "swe-agent/Llama-3.3-70B-Instruct-FP8": 0.1
-  },
-  {
-    "totalTokens": 0.053017,
-    "swe-agent/Llama-3.3-70B-Instruct-FP8": 0.1
-  },
-  {
-    "totalTokens": 0.061373,
-    "swe-agent/Llama-3.3-70B-Instruct-FP8": 0.1
-  },
-  {
-    "totalTokens": 0.061437,
-    "swe-agent/Llama-3.3-70B-Instruct-FP8": 0.12
-  },
-  {
-    "totalTokens": 0.077958,
-    "swe-agent/Llama-3.3-70B-Instruct-FP8": 0.12
-  },
-  {
-    "totalTokens": 0.080353,
-    "swe-agent/Llama-3.3-70B-Instruct-FP8": 0.12
-  },
-  {
-    "totalTokens": 0.082448,
-    "swe-agent/Llama-3.3-70B-Instruct-FP8": 0.12
-  },
-  {
-    "totalTokens": 0.085893,
-    "swe-agent/Llama-3.3-70B-Instruct-FP8": 0.12
-  },
-  {
-    "totalTokens": 0.090051,
-    "swe-agent/Llama-3.3-70B-Instruct-FP8": 0.12
-  },
-  {
-    "totalTokens": 0.098946,
-    "swe-agent/Llama-3.3-70B-Instruct-FP8": 0.12
-  },
-  {
-    "totalTokens": 0.150767,
-    "swe-agent/Llama-3.3-70B-Instruct-FP8": 0.12
-  },
-  {
-    "totalTokens": 0.16286,
-    "swe-agent/Llama-3.3-70B-Instruct-FP8": 0.12
-  },
-  {
-    "totalTokens": 0.177006,
-    "swe-agent/Llama-3.3-70B-Instruct-FP8": 0.12
-  },
-  {
-    "totalTokens": 0.206522,
-    "swe-agent/Llama-3.3-70B-Instruct-FP8": 0.12
-  },
-  {
-    "totalTokens": 0.294188,
-    "swe-agent/Llama-3.3-70B-Instruct-FP8": 0.12
-  },
-  {
-    "totalTokens": 1.026407,
-    "swe-agent/Llama-3.3-70B-Instruct-FP8": 0.12
-  },
-  {
-    "totalTokens": 1.037825,
-    "swe-agent/Llama-3.3-70B-Instruct-FP8": 0.12
-  },
-  {
-    "totalTokens": 1.038391,
-    "swe-agent/Llama-3.3-70B-Instruct-FP8": 0.12
-  },
-  {
-    "totalTokens": 1.039071,
-    "swe-agent/Llama-3.3-70B-Instruct-FP8": 0.12
-  },
-  {
-    "totalTokens": 1.050283,
-    "swe-agent/Llama-3.3-70B-Instruct-FP8": 0.12
-  },
-  {
-    "totalTokens": 1.063729,
-    "swe-agent/Llama-3.3-70B-Instruct-FP8": 0.12
-  },
-  {
-    "totalTokens": 1.079196,
-    "swe-agent/Llama-3.3-70B-Instruct-FP8": 0.12
-  },
-  {
     "totalTokens": 0.050187,
     "swe-agent/gpt-4o-mini-2024-07-18": 0
   },
@@ -2766,6 +2566,206 @@
   {
     "totalTokens": 13.220374,
     "swe-agent/gpt-4o-mini-2024-07-18": 0.1
+  },
+  {
+    "totalTokens": 0.003488,
+    "swe-agent/llama-3.3-70B-Instruct-FP8": 0
+  },
+  {
+    "totalTokens": 0.008166,
+    "swe-agent/llama-3.3-70B-Instruct-FP8": 0
+  },
+  {
+    "totalTokens": 0.00901,
+    "swe-agent/llama-3.3-70B-Instruct-FP8": 0
+  },
+  {
+    "totalTokens": 0.01008,
+    "swe-agent/llama-3.3-70B-Instruct-FP8": 0.02
+  },
+  {
+    "totalTokens": 0.011764,
+    "swe-agent/llama-3.3-70B-Instruct-FP8": 0.04
+  },
+  {
+    "totalTokens": 0.012593,
+    "swe-agent/llama-3.3-70B-Instruct-FP8": 0.04
+  },
+  {
+    "totalTokens": 0.012833,
+    "swe-agent/llama-3.3-70B-Instruct-FP8": 0.04
+  },
+  {
+    "totalTokens": 0.015242,
+    "swe-agent/llama-3.3-70B-Instruct-FP8": 0.04
+  },
+  {
+    "totalTokens": 0.015375,
+    "swe-agent/llama-3.3-70B-Instruct-FP8": 0.04
+  },
+  {
+    "totalTokens": 0.016126,
+    "swe-agent/llama-3.3-70B-Instruct-FP8": 0.04
+  },
+  {
+    "totalTokens": 0.018759,
+    "swe-agent/llama-3.3-70B-Instruct-FP8": 0.06
+  },
+  {
+    "totalTokens": 0.018956,
+    "swe-agent/llama-3.3-70B-Instruct-FP8": 0.06
+  },
+  {
+    "totalTokens": 0.019698,
+    "swe-agent/llama-3.3-70B-Instruct-FP8": 0.06
+  },
+  {
+    "totalTokens": 0.021457,
+    "swe-agent/llama-3.3-70B-Instruct-FP8": 0.08
+  },
+  {
+    "totalTokens": 0.02278,
+    "swe-agent/llama-3.3-70B-Instruct-FP8": 0.08
+  },
+  {
+    "totalTokens": 0.023489,
+    "swe-agent/llama-3.3-70B-Instruct-FP8": 0.08
+  },
+  {
+    "totalTokens": 0.023765,
+    "swe-agent/llama-3.3-70B-Instruct-FP8": 0.08
+  },
+  {
+    "totalTokens": 0.02404,
+    "swe-agent/llama-3.3-70B-Instruct-FP8": 0.08
+  },
+  {
+    "totalTokens": 0.025694,
+    "swe-agent/llama-3.3-70B-Instruct-FP8": 0.08
+  },
+  {
+    "totalTokens": 0.026787,
+    "swe-agent/llama-3.3-70B-Instruct-FP8": 0.08
+  },
+  {
+    "totalTokens": 0.028552,
+    "swe-agent/llama-3.3-70B-Instruct-FP8": 0.08
+  },
+  {
+    "totalTokens": 0.032286,
+    "swe-agent/llama-3.3-70B-Instruct-FP8": 0.08
+  },
+  {
+    "totalTokens": 0.032794,
+    "swe-agent/llama-3.3-70B-Instruct-FP8": 0.08
+  },
+  {
+    "totalTokens": 0.033217,
+    "swe-agent/llama-3.3-70B-Instruct-FP8": 0.08
+  },
+  {
+    "totalTokens": 0.034761,
+    "swe-agent/llama-3.3-70B-Instruct-FP8": 0.1
+  },
+  {
+    "totalTokens": 0.035868,
+    "swe-agent/llama-3.3-70B-Instruct-FP8": 0.1
+  },
+  {
+    "totalTokens": 0.040823,
+    "swe-agent/llama-3.3-70B-Instruct-FP8": 0.1
+  },
+  {
+    "totalTokens": 0.043105,
+    "swe-agent/llama-3.3-70B-Instruct-FP8": 0.1
+  },
+  {
+    "totalTokens": 0.048208,
+    "swe-agent/llama-3.3-70B-Instruct-FP8": 0.1
+  },
+  {
+    "totalTokens": 0.053017,
+    "swe-agent/llama-3.3-70B-Instruct-FP8": 0.1
+  },
+  {
+    "totalTokens": 0.061373,
+    "swe-agent/llama-3.3-70B-Instruct-FP8": 0.1
+  },
+  {
+    "totalTokens": 0.061437,
+    "swe-agent/llama-3.3-70B-Instruct-FP8": 0.12
+  },
+  {
+    "totalTokens": 0.077958,
+    "swe-agent/llama-3.3-70B-Instruct-FP8": 0.12
+  },
+  {
+    "totalTokens": 0.080353,
+    "swe-agent/llama-3.3-70B-Instruct-FP8": 0.12
+  },
+  {
+    "totalTokens": 0.082448,
+    "swe-agent/llama-3.3-70B-Instruct-FP8": 0.12
+  },
+  {
+    "totalTokens": 0.085893,
+    "swe-agent/llama-3.3-70B-Instruct-FP8": 0.12
+  },
+  {
+    "totalTokens": 0.090051,
+    "swe-agent/llama-3.3-70B-Instruct-FP8": 0.12
+  },
+  {
+    "totalTokens": 0.098946,
+    "swe-agent/llama-3.3-70B-Instruct-FP8": 0.12
+  },
+  {
+    "totalTokens": 0.150767,
+    "swe-agent/llama-3.3-70B-Instruct-FP8": 0.12
+  },
+  {
+    "totalTokens": 0.16286,
+    "swe-agent/llama-3.3-70B-Instruct-FP8": 0.12
+  },
+  {
+    "totalTokens": 0.177006,
+    "swe-agent/llama-3.3-70B-Instruct-FP8": 0.12
+  },
+  {
+    "totalTokens": 0.206522,
+    "swe-agent/llama-3.3-70B-Instruct-FP8": 0.12
+  },
+  {
+    "totalTokens": 0.294188,
+    "swe-agent/llama-3.3-70B-Instruct-FP8": 0.12
+  },
+  {
+    "totalTokens": 1.026407,
+    "swe-agent/llama-3.3-70B-Instruct-FP8": 0.12
+  },
+  {
+    "totalTokens": 1.037825,
+    "swe-agent/llama-3.3-70B-Instruct-FP8": 0.12
+  },
+  {
+    "totalTokens": 1.038391,
+    "swe-agent/llama-3.3-70B-Instruct-FP8": 0.12
+  },
+  {
+    "totalTokens": 1.039071,
+    "swe-agent/llama-3.3-70B-Instruct-FP8": 0.12
+  },
+  {
+    "totalTokens": 1.050283,
+    "swe-agent/llama-3.3-70B-Instruct-FP8": 0.12
+  },
+  {
+    "totalTokens": 1.063729,
+    "swe-agent/llama-3.3-70B-Instruct-FP8": 0.12
+  },
+  {
+    "totalTokens": 1.079196,
+    "swe-agent/llama-3.3-70B-Instruct-FP8": 0.12
   },
   {
     "totalTokens": 0.037437,
