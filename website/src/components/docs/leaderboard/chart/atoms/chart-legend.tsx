@@ -1,4 +1,5 @@
-import { Layers } from 'lucide-react';
+import { useState } from 'react';
+import { Layers, MoreHorizontal } from 'lucide-react';
 
 import { Button } from '@/components/common/ui/button';
 import { ChartConfig } from '@/components/common/ui/chart';
@@ -49,6 +50,11 @@ export function StackedLegend({
   activeKeys?: string[];
   setActiveKeys?: (keys: string[]) => void;
 }) {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const shouldShowEllipsis = keys.length > 3;
+  const visibleKeys =
+    shouldShowEllipsis && !isExpanded ? keys.slice(0, 3) : keys;
+
   const toggleKey = (key: string) => {
     if (activeKeys?.includes(key)) {
       setActiveKeys?.(activeKeys.filter((k) => k !== key));
@@ -56,9 +62,14 @@ export function StackedLegend({
       setActiveKeys?.([...(activeKeys || []), key]);
     }
   };
+
+  const toggleExpanded = () => {
+    setIsExpanded(!isExpanded);
+  };
+
   return (
     <div className="flex w-full flex-wrap items-center justify-center gap-2 p-2">
-      {keys.map((k) => (
+      {visibleKeys.map((k) => (
         <Button
           key={k}
           variant="ghost"
@@ -76,6 +87,16 @@ export function StackedLegend({
           />
         </Button>
       ))}
+      {shouldShowEllipsis && (
+        <Button
+          variant="ghost"
+          size="sm"
+          onClick={toggleExpanded}
+          className="h-8 w-8 p-0"
+        >
+          <MoreHorizontal className="h-4 w-4" />
+        </Button>
+      )}
     </div>
   );
 }
