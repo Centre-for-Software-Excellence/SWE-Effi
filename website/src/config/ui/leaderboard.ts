@@ -69,6 +69,7 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
   // leaderboard tables configuration
   tables: {
     leaderboard: {
+      caption: 'Table 1: Scaffold comparison on SWE-bench tasks',
       tabTitle: 'Table 1',
       tableTitle: 'Scaffold comparison on SWE-bench tasks',
       filterPlaceholder: 'Filter models...',
@@ -89,6 +90,8 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
       },
     },
     leaderboardRVU: {
+      caption:
+        'Table 2: Token and time costs for resolved and unresolved instances',
       tabTitle: 'Table 2',
       tableTitle: 'Token and time costs for resolved and unresolved instances',
       filterPlaceholder: 'Filter models...',

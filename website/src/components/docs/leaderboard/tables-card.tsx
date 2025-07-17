@@ -8,7 +8,7 @@ import {
   TabsList,
   TabsTrigger,
 } from '@/components/common/ui/tabs';
-import { H6 } from '@/components/md';
+import { H6, P } from '@/components/md';
 import { cn } from '@/lib/utils';
 import { columns, RankedLeaderboardData } from './table/columns';
 import {
@@ -21,6 +21,7 @@ export type ColumnTooltips = Partial<
   Record<keyof RankedLeaderboardRVUData | keyof RankedLeaderboardData, string>
 >;
 export type Table = {
+  caption: string;
   tabTitle: string;
   tableTitle: string;
   filterPlaceholder?: string;
@@ -33,9 +34,11 @@ export type TableData = RankedLeaderboardRVUData | RankedLeaderboardData;
 
 export default function TablesCard({
   tablesUi,
+  caption,
   className,
 }: {
   tablesUi: Tables;
+  caption?: boolean;
   className?: string;
 }) {
   const { leaderboard, leaderboardRVU } = tablesUi;
@@ -106,6 +109,9 @@ export default function TablesCard({
               columns={columns(leaderboard.columnTooltips)}
               data={data}
             />
+            {caption && (
+              <P className="w-full text-center">{leaderboard.caption}</P>
+            )}
           </TabsContent>
           <TabsContent value="Leaderboard RVU">
             <H6 className="mb-0!">{leaderboardRVU.tableTitle}</H6>
@@ -113,6 +119,9 @@ export default function TablesCard({
               columns={columnsRVU(leaderboardRVU.columnTooltips)}
               data={dataRVU}
             />
+            {caption && (
+              <P className="w-full text-center">{leaderboardRVU.caption}</P>
+            )}
           </TabsContent>
         </Tabs>
       </TooltipProvider>

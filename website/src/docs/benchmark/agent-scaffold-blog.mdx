@@ -119,7 +119,6 @@ Table 1 presents a quantitative result of the five selected agent scaffolds, eac
 
 - Avg CPU Time (seconds): This metric quantifies the mean computational time consumed by the agent's scaffolding for local operations, exclusive of LLM inference latency. It serves as a proxy for the framework's intrinsic overhead and architectural complexity.
 - Avg Inf. Cost (Average Inference Cost): This section delineates the computational workload delegated to the LLM.
-
   - Token (k): Specifies the mean number of tokens (in thousands) processed per trial, presented as a tuple (Input, Output). This value is a direct correlate of the financial expenditure associated with API utilization.
 
   - \# Calls: Denotes the mean frequency of API requests to the LLM per trial. This metric is a key variable in our efficiency analysis, as a high request frequency is hypothesized to induce super-linear cost scaling effects.
@@ -128,7 +127,11 @@ Table 1 presents a quantitative result of the five selected agent scaffolds, eac
 
 Our initial experiments uncovered several crucial trends and trade-offs that are vital for anyone looking to build, deploy, or research AI software engineering agents. Here are our key findings:
 
-<TablesCard tablesUi={getLeaderboardUIConfig().tables} className="md:px-0" />
+<TablesCard
+  tablesUi={getLeaderboardUIConfig().tables}
+  className="md:px-0"
+  caption={true}
+/>
 
 #### Finding 2
 
