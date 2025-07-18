@@ -17,7 +17,7 @@ import {
 } from './src/lib/docs/mdx-plugins';
 
 export default defineConfig({
-  base: '/',
+  base: '/SWE-Effi/',
   build: {
     rollupOptions: {
       output: {
