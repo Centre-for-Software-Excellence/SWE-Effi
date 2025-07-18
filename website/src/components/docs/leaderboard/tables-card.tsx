@@ -43,11 +43,13 @@ export default function TablesCard({
   caption,
   className,
   show = [true, true], // [showLeaderboard, showLeaderboardRVU]
+  showTabs = true,
 }: {
   tablesUi: Tables;
   caption?: boolean;
   className?: string;
   show: [boolean, boolean]; // [showLeaderboard, showLeaderboardRVU]
+  showTabs?: boolean;
 }) {
   const { leaderboard, leaderboardRVU } = tablesUi;
 
@@ -102,8 +104,11 @@ export default function TablesCard({
       )}
     >
       <TooltipProvider>
-        <Tabs defaultValue="Leaderboard" className="rounded">
-          {show[0] && show[1] && (
+        <Tabs
+          defaultValue={show[0] ? 'Leaderboard' : 'Leaderboard RVU'}
+          className="rounded"
+        >
+          {show[0] && show[1] && showTabs && (
             <TabsList>
               <TabsTrigger value="Leaderboard" className="rounded">
                 {leaderboard.tabTitle}

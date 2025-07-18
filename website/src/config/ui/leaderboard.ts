@@ -116,7 +116,7 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
     title: 'Analytics',
     description:
       'Here are some visualization highlights of our analysis, for more details please read our ',
-    blogLink: '/benchmark/agent-scaffold-blog',
+    blogLink: '/about/introducing-swe-effi',
     resolveRateLineChart: {
       title: 'Resolve rate vs. total tokens used',
       description:

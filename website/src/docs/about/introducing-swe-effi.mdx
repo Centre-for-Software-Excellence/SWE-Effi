@@ -13,15 +13,17 @@ import { TimePercentageBarChart } from '@/components/docs/leaderboard/chart/time
 import TablesCard from '@/components/docs/leaderboard/tables-card';
 import { getLeaderboardUIConfig } from '@/config/ui/leaderboard';
 
-> **Problem**: AI coding assistant leaderboards (e.g., SWE-bench) focus solely on "resolve rate," ignoring the crucial factor of efficiency in a resource-constrained world.
->
-> **Our Solution**: We introduce SWE-Effi, a new leaderboard that re-evaluates agents based on a holistic efficiency score. We define efficiency as the balance between resolve rate (the outcome) and the resources consumed (token cost and execution time). We re-ranked popular agent scaffolds on a subset of SWE-bench benchmark using this new, multi-dimensional metric.
->
-> **Key Finding**:
->
-> - An agent's effectiveness depends not just on the scaffold itself but on how well it integrates with the base model, which is key to achieving strong performance in a resource-efficient manner.
-> - We identified systemic challenges such as the “Token Snowball” effect and, more significantly, a pattern of “expensive failures.” In these cases, agents consume excessive resources while stuck on unsolvable tasks—an issue that not only limits practical deployment but also drives up the cost of failed rollouts during RL training.
-> - We found a clear trade-off between token-based cost-efficiency and latency-based time-efficiency. This balance plays a crucial role in managing project budgets and enabling scalable reinforcement learning, where fast responses are essential.
+## TL;DR
+
+**Problem**: AI coding assistant leaderboards (e.g., SWE-bench) focus solely on "resolve rate," ignoring the crucial factor of efficiency in a resource-constrained world.
+
+**Our Solution**: We introduce SWE-Effi, a new leaderboard that re-evaluates agents based on a holistic efficiency score. We define efficiency as the balance between resolve rate (the outcome) and the resources consumed (token cost and execution time). We re-ranked popular agent scaffolds on a subset of SWE-bench benchmark using this new, multi-dimensional metric.
+
+**Key Finding**:
+
+- An agent's effectiveness depends not just on the scaffold itself but on how well it integrates with the base model, which is key to achieving strong performance in a resource-efficient manner.
+- We identified systemic challenges such as the “Token Snowball” effect and, more significantly, a pattern of “expensive failures.” In these cases, agents consume excessive resources while stuck on unsolvable tasks—an issue that not only limits practical deployment but also drives up the cost of failed rollouts during RL training.
+- We found a clear trade-off between token-based cost-efficiency and latency-based time-efficiency. This balance plays a crucial role in managing project budgets and enabling scalable reinforcement learning, where fast responses are essential.
 
 ## Introduction: Seeing the Full Picture
 
@@ -129,6 +131,7 @@ Our experiments uncovered several crucial trends and trade-offs that are vital f
   className="md:px-0"
   caption={true}
   show={[true, false]}
+  showTabs={false}
 />
 <br />
 
@@ -200,6 +203,7 @@ This not only inflates token cost and latency, but it also poses a cognitive bur
   className="md:px-0"
   caption={true}
   show={[false, true]}
+  showTabs={false}
 />
 <br />
 

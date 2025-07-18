@@ -45,7 +45,7 @@ const getSidebarUIConfig = (): SidebarUIConfig => ({
 
 const getTopbarUIConfig = (): TopbarUIConfig => ({
   title: 'SWE Effi',
-  searchEnabled: true,
+  searchEnabled: false,
   links: mainLinks,
 });
 
@@ -66,6 +66,7 @@ const getFooterUIConfig = (): FooterUIConfig => ({
     {
       href: '#',
       title: 'Contact',
+      disabled: true,
     },
   ],
 });
