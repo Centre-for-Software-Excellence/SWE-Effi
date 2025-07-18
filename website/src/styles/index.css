@@ -304,6 +304,10 @@
   .katex .katex-html {
     @apply hidden;
   }
+
+  math {
+    @apply text-foreground;
+  }
 }
 
 @layer components {

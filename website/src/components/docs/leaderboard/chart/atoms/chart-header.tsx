@@ -28,7 +28,7 @@ export function ChartHeader({
         <div className="flex w-full flex-row items-start justify-between">
           <div>
             <CardTitle className="text-sm md:text-lg">
-              {title.length > 0 &&
+              {title?.length > 0 &&
                 title
                   .split(' ')
                   .map(

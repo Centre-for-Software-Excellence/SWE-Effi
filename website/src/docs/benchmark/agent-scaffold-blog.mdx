@@ -5,6 +5,7 @@ tags: ['Benchmark', 'Leaderboard', 'LLM']
 ---
 
 import { Divider } from '@/components/common/ui/divider';
+import { CallsBarChart } from '@/components/docs/leaderboard/chart/calls-bar-chart';
 import { CostBarChart } from '@/components/docs/leaderboard/chart/cost-bar-chart';
 import { MetricsRadarChart } from '@/components/docs/leaderboard/chart/metrics-radar-chart';
 import { TimePercentageBarChart } from '@/components/docs/leaderboard/chart/time-percentage-bar-chart';
@@ -120,21 +121,36 @@ Table 1 presents a quantitative result of the five selected agent scaffolds, eac
   {...getLeaderboardUIConfig().analytics.metricsRadarChart}
   className="lg:p-0"
 />
-<h6 align="center">Figure 1</h6>
+<h6 align="center" className="text-foreground">
+  Figure 1
+</h6>
 <br />
 
-<CostBarChart
-  {...getLeaderboardUIConfig().analytics.costBarChart}
+<CallsBarChart
+  {...getLeaderboardUIConfig().analytics.numCallsBarChart}
   className="lg:p-0"
 />
-<h6 align="center">Figure 2</h6>
+<h6 align="center" className="text-foreground">
+  Figure 2
+</h6>
 <br />
 
 <TimePercentageBarChart
   {...getLeaderboardUIConfig().analytics.timePercentageBarChart}
   className="lg:p-0"
 />
-<h6 align="center">Figure 3</h6>
+<h6 align="center" className="text-foreground">
+  Figure 3
+</h6>
+<br />
+
+<CostBarChart
+  {...getLeaderboardUIConfig().analytics.costBarChart}
+  className="lg:p-0"
+/>
+<h6 align="center" className="text-foreground">
+  Figure 4
+</h6>
 <br />
 
 <TablesCard
@@ -165,7 +181,9 @@ Counter-intuitively, we observe that the reasoning model that consumes significa
 
 ![Figure 5](/SWE-Effi/imgs/token-snowball-effect.png)
 
-<h6 align="center">Figure 5</h6>
+<h6 align="center" className="text-muted-foreground">
+  Figure 5
+</h6>
 
 The above Figure shows the relationship between the number of API calls per instance and the total number of input tokens consumed by that instance (on a log scale), comparing two scaffolds: acr_qwen3-32b (blue) and swe-agent_gpt-4o-mini (orange). We observe a clear nonlinear upward trend in both cases: as the number of API calls increases, the total input tokens per instance rise disproportionately. This pattern illustrates what we term the Token Snowball Effect—the cumulative input grows faster than the call count, leading to exponential token usage in long trajectories. This reveals a fundamental inefficiency in current agent scaffolds: **the lack of prompt compression or memory abstraction**.
 

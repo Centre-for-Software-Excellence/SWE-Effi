@@ -116,7 +116,9 @@ export default function TablesCard({
               data={data}
             />
             {caption && (
-              <h6 className="w-full text-center">{leaderboard.caption}</h6>
+              <h6 className="w-full text-center text-muted-foreground">
+                {leaderboard.caption}
+              </h6>
             )}
           </TabsContent>
           <TabsContent value="Leaderboard RVU">
@@ -126,7 +128,9 @@ export default function TablesCard({
               data={dataRVU}
             />
             {caption && (
-              <h6 className="w-full text-center">{leaderboardRVU.caption}</h6>
+              <h6 className="w-full text-center text-muted-foreground">
+                {leaderboardRVU.caption}
+              </h6>
             )}
           </TabsContent>
         </Tabs>
