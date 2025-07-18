@@ -44,18 +44,18 @@ const getSidebarUIConfig = (): SidebarUIConfig => ({
 });
 
 const getTopbarUIConfig = (): TopbarUIConfig => ({
-  title: 'SWE Lens',
+  title: 'SWE Effi',
   searchEnabled: true,
   links: mainLinks,
 });
 
 const getFooterUIConfig = (): FooterUIConfig => ({
   title: 'Huawei',
-  subtitle: 'SWE Lens',
+  subtitle: 'SWE Effi',
   rights: '© 2025 All rights reserved.',
   links: [
     {
-      href: 'https://github.com/Center-for-Software-Excellence/SWE-Lens',
+      href: 'https://github.com/Center-for-Software-Excellence/SWE-Effi',
       title: 'Github',
     },
     {

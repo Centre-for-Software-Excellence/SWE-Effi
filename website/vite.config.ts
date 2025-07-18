@@ -17,6 +17,7 @@ import {
 } from './src/lib/docs/mdx-plugins';
 
 export default defineConfig({
+  base: '/',
   build: {
     rollupOptions: {
       output: {

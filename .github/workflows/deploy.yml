@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
     paths:
       - 'website/**'
       - '!website/README.md'
@@ -12,7 +12,7 @@ on:
       - '!**/*.md'
       - '.github/workflows/deploy.yml'
   pull_request:
-    branches: [ main ]
+    branches: [main]
     paths:
       - 'website/**'
       - '!website/README.md'
@@ -28,7 +28,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: 'pages'
   cancel-in-progress: false
 
 jobs:
@@ -42,7 +42,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: 'latest'
           cache: 'npm'
           cache-dependency-path: website/package-lock.json
 
@@ -76,3 +76,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
