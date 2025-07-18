@@ -1,4 +1,4 @@
-import { BookOpen, ExternalLink } from 'lucide-react';
+import { BookOpen } from 'lucide-react';
 
 import { CopyButton } from '@/components/common/copy-button';
 import {
@@ -22,7 +22,7 @@ export default function CitationCard() {
       day: 'numeric',
     })}}
 }`;
-  const apaCitation = `some apa citation here`;
+  // const apaCitation = `some apa citation here`;
   return (
     <section className="space-y-4">
       <H4>Citation</H4>
@@ -48,24 +48,24 @@ export default function CitationCard() {
             </div>
           </CardContent>
         </Card>
-        <Card className="w-auto rounded shadow-none">
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <ExternalLink />
-              APA Citation
-            </CardTitle>
-
-            <CardDescription>For academic papers and reports</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <div className="relative">
-              <pre className="overflow-x-auto rounded-lg bg-muted p-4 text-sm">
-                <p className="leading-relaxed">{apaCitation}</p>
-              </pre>
-              <CopyButton text={apaCitation} />
-            </div>
-          </CardContent>
-        </Card>
+        {/* <Card className="w-auto rounded shadow-none"> */}
+        {/*   <CardHeader> */}
+        {/*     <CardTitle className="flex items-center gap-2"> */}
+        {/*       <ExternalLink /> */}
+        {/*       APA Citation */}
+        {/*     </CardTitle> */}
+        {/**/}
+        {/*     <CardDescription>For academic papers and reports</CardDescription> */}
+        {/*   </CardHeader> */}
+        {/*   <CardContent> */}
+        {/*     <div className="relative"> */}
+        {/*       <pre className="overflow-x-auto rounded-lg bg-muted p-4 text-sm"> */}
+        {/*         <p className="leading-relaxed">{apaCitation}</p> */}
+        {/*       </pre> */}
+        {/*       <CopyButton text={apaCitation} /> */}
+        {/*     </div> */}
+        {/*   </CardContent> */}
+        {/* </Card> */}
       </div>
     </section>
   );

@@ -1,6 +1,6 @@
 {
-  "agentless-mini/gpt-4o-mini-2024-07-18": {
-    "label": "agentless-mini/gpt-4o-mini-2024-07-18",
+  "agentless-mini/GPT-4o-mini-2024-07-18": {
+    "label": "agentless-mini/GPT-4o-mini-2024-07-18",
     "color": "#36a2eb"
   },
   "agentless-mini/llama-3.3-70B-Instruct-FP8": {
@@ -11,8 +11,8 @@
     "label": "agentless-mini/qwen3-32B",
     "color": "#4bc0c0"
   },
-  "agentless/gpt-4o-mini-2024-07-18": {
-    "label": "agentless/gpt-4o-mini-2024-07-18",
+  "agentless/GPT-4o-mini-2024-07-18": {
+    "label": "agentless/GPT-4o-mini-2024-07-18",
     "color": "#ff9f40"
   },
   "agentless/llama-3.3-70B-Instruct-FP8": {
@@ -23,8 +23,8 @@
     "label": "agentless/qwen3-32B",
     "color": "#ffcd56"
   },
-  "auto-code-rover/gpt-4o-mini-2024-07-18": {
-    "label": "auto-code-rover/gpt-4o-mini-2024-07-18",
+  "auto-code-rover/GPT-4o-mini-2024-07-18": {
+    "label": "auto-code-rover/GPT-4o-mini-2024-07-18",
     "color": "#c9cbcf"
   },
   "auto-code-rover/llama-3.3-70B-Instruct-FP8": {
@@ -35,8 +35,8 @@
     "label": "auto-code-rover/qwen3-32B",
     "color": "#63ffde"
   },
-  "openhands/gpt-4o-mini-2024-07-18": {
-    "label": "openhands/gpt-4o-mini-2024-07-18",
+  "openhands/GPT-4o-mini-2024-07-18": {
+    "label": "openhands/GPT-4o-mini-2024-07-18",
     "color": "#c04b4b"
   },
   "openhands/llama-3.3-70B-Instruct-FP8": {
@@ -47,8 +47,8 @@
     "label": "openhands/qwen3-32B",
     "color": "#ccff66"
   },
-  "swe-agent/gpt-4o-mini-2024-07-18": {
-    "label": "swe-agent/gpt-4o-mini-2024-07-18",
+  "swe-agent/GPT-4o-mini-2024-07-18": {
+    "label": "swe-agent/GPT-4o-mini-2024-07-18",
     "color": "#5688ff"
   },
   "swe-agent/llama-3.3-70B-Instruct-FP8": {

@@ -455,16 +455,11 @@ export function buildLeaderboardTables(opts?: {
     const [scaffold, model] = path
       .basename(file, '.json')
       .split('_')
-      .map((name) =>
-        name
-          .split('-')
-          .map((sec) => sec[0].toUpperCase() + sec.slice(1))
-          .join(' '),
-      );
+      .map((name) => name.split('-').join(' '));
 
     const leaderboardDataEntry: LeaderboardData = {
       scaffold,
-      model,
+      model: model.split(' ').join('-'),
       total: record.avg_duration,
       cpuTime: record.avg_cpu_time,
       inputToken: record.avg_input_tokens / 1000,

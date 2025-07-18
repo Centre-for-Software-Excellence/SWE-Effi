@@ -50,7 +50,7 @@ export function MetricsRadarChart({
   const { activeKeys, setActiveKeys } = useChartSettings({
     chartData,
     chartConfig,
-    takeAllKeys: false,
+    takeAllKeys: true,
   });
 
   const legend = (

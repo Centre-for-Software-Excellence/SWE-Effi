@@ -80,7 +80,7 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
         rank: 'Ranked by resolve rate',
         scaffold: 'Name of the agent scaffold',
         model: 'LLM name',
-        total: 'Total mean duration including CPU and inference time',
+        total: 'Total mean duration including CPU time and NIM',
         cpuTime: "Duration of agent scaffold's local operations (seconds)",
         inputToken: 'Mean number of input tokens used for single issue',
         outputToken: 'Mean number of output tokens used for single issue',
@@ -161,7 +161,7 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
     metricsRadarChart: {
       title: 'Efficiency in multiple dimensions',
       description:
-        'How efficient is the agent scaffold in terms of resolving issues, use of tokens, monetary cost, use of local resources, and LLM inference duration. Measured in normalized AUC (Area Under Curve).',
+        'How efficient is the agent scaffold in terms of resolving issues, use of tokens, monetary cost, use of local resources, and LLM inference duration. Measured in normalized AUC (Area Under Curve). Higher is better.',
       overview: 'Overview of the metrics radar chart...',
       insight: 'Insight about the metrics radar chart...',
       // ignore this

@@ -1,6 +1,6 @@
 [
   {
-    "scaffold-model": "agentless-mini/gpt-4o-mini-2024-07-18",
+    "scaffold-model": "agentless-mini/GPT-4o-mini-2024-07-18",
     "success-cost": 44015.3,
     "failure-cost": 33455.774999999994
   },
@@ -15,7 +15,7 @@
     "failure-cost": 45971.88888888889
   },
   {
-    "scaffold-model": "agentless/gpt-4o-mini-2024-07-18",
+    "scaffold-model": "agentless/GPT-4o-mini-2024-07-18",
     "success-cost": 53454.230769230766,
     "failure-cost": 58391.67567567568
   },
@@ -30,7 +30,7 @@
     "failure-cost": 79322.19230769231
   },
   {
-    "scaffold-model": "auto-code-rover/gpt-4o-mini-2024-07-18",
+    "scaffold-model": "auto-code-rover/GPT-4o-mini-2024-07-18",
     "success-cost": 25389.666666666668,
     "failure-cost": 327054.59090909094
   },
@@ -45,7 +45,7 @@
     "failure-cost": 90949.74193548386
   },
   {
-    "scaffold-model": "openhands/gpt-4o-mini-2024-07-18",
+    "scaffold-model": "openhands/GPT-4o-mini-2024-07-18",
     "success-cost": 472327.60000000003,
     "failure-cost": 775097.1621621621
   },
@@ -60,7 +60,7 @@
     "failure-cost": 424595.0606060606
   },
   {
-    "scaffold-model": "swe-agent/gpt-4o-mini-2024-07-18",
+    "scaffold-model": "swe-agent/GPT-4o-mini-2024-07-18",
     "success-cost": 1865276.6,
     "failure-cost": 8867434.822222224
   },

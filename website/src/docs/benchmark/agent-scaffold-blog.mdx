@@ -117,6 +117,8 @@ Table 1 presents a quantitative result of the five selected agent scaffolds, eac
 
 ## Observations
 
+We present our findings in the figures and tables below. Table 1 provides an overall comparison of agent scaffolds and models across a number of metrics. Table 2 compares the scaffold dynamics and performance between resolved and unresolved cases. Figure 1 gives insights about token consumption and resolve rate of different agent scaffolds. Figure 2 compares the quantity of LLM calls per issue instance. Figure 3 shows where the agent scaffold spent time during the issue resolution process. Figure 4 compares token consumption between successfully resolved and failed cases. Figure 5 compares scaffold performance based on the five efficiency metrics presented above (all measured as normalized AUC except for resolve rate): token efficiency, cost efficiency, CPU efficiency, and inference efficiency. Figure 2 presents a comparison between the number of LLM calls. Figure 6 observes the relationship between number of input tokens and number of LLM calls, showcasing the Token Snowball effect.
+
 <MetricsRadarChart
   {...getLeaderboardUIConfig().analytics.metricsRadarChart}
   className="lg:p-0"
@@ -132,15 +134,6 @@ Table 1 presents a quantitative result of the five selected agent scaffolds, eac
 />
 <h6 align="center" className="text-foreground">
   Figure 2
-</h6>
-<br />
-
-<TimePercentageBarChart
-  {...getLeaderboardUIConfig().analytics.timePercentageBarChart}
-  className="lg:p-0"
-/>
-<h6 align="center" className="text-foreground">
-  Figure 3
 </h6>
 <br />
 
@@ -160,11 +153,18 @@ Table 1 presents a quantitative result of the five selected agent scaffolds, eac
 />
 <br />
 
-We present our findings in the figures and tables below. Table 1 provides an overall comparison of agent scaffolds and models across a number of metrics. Table 2 compares the scaffold dynamics and performance between resolved and unresolved cases. Figure 1 gives insights about token consumption and resolve rate of different agent scaffolds. Figure 2 compares the quantity of LLM calls per issue instance. Figure 3 shows where the agent scaffold spent time during the issue resolution process. Figure 4 compares token consumption between successfully resolved and failed cases. Figure 5 compares scaffold performance based on the five efficiency metrics presented above (all measured as normalized AUC except for resolve rate): token efficiency, cost efficiency, CPU efficiency, and inference efficiency. Figure 2 presents a comparison between the number of LLM calls. Figure 6 observes the relationship between number of input tokens and number of LLM calls, showcasing the Token Snowball effect.
-
 Our experiments uncovered several crucial trends and trade-offs that are vital for anyone looking to build, deploy, or research AI software engineering agents. Here are our initial observations:
 
 #### Observation 1: Scaffold Performance Is Highly Model-Dependent
+
+<TimePercentageBarChart
+  {...getLeaderboardUIConfig().analytics.timePercentageBarChart}
+  className="lg:p-0"
+/>
+<h6 align="center" className="text-foreground">
+  Figure 3
+</h6>
+<br />
 
 Table 1 highlights that the choice of base model has a stronger impact on outcome quality than scaffold design alone. While scaffolds such as OpenHands and SWE-Agent were previously among the top performers on SWE-bench, their performance drops significantly when paired with alternative LLMs. For example, SWE-Agent paired with Qwen3-32B achieves a 28% resolution rate with 35.5 API calls and 440K input tokens, but this drops to just 10% when using GPT-4o-mini, despite requiring 181 calls and over 8.1M input tokens—more than 18× the token cost. Similarly, OpenHands achieves 34% resolution with Qwen3-32B, but falls to 12–20% when paired with GPT-4o-mini or Llama-3-70B.
 

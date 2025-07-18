@@ -1,6 +1,206 @@
 [
   {
     "totalTokens": 0.005541,
+    "agentless-mini/GPT-4o-mini-2024-07-18": 0
+  },
+  {
+    "totalTokens": 0.00558,
+    "agentless-mini/GPT-4o-mini-2024-07-18": 0
+  },
+  {
+    "totalTokens": 0.007888,
+    "agentless-mini/GPT-4o-mini-2024-07-18": 0
+  },
+  {
+    "totalTokens": 0.009818,
+    "agentless-mini/GPT-4o-mini-2024-07-18": 0
+  },
+  {
+    "totalTokens": 0.010691,
+    "agentless-mini/GPT-4o-mini-2024-07-18": 0
+  },
+  {
+    "totalTokens": 0.010711,
+    "agentless-mini/GPT-4o-mini-2024-07-18": 0
+  },
+  {
+    "totalTokens": 0.011779,
+    "agentless-mini/GPT-4o-mini-2024-07-18": 0
+  },
+  {
+    "totalTokens": 0.012478,
+    "agentless-mini/GPT-4o-mini-2024-07-18": 0
+  },
+  {
+    "totalTokens": 0.012592,
+    "agentless-mini/GPT-4o-mini-2024-07-18": 0
+  },
+  {
+    "totalTokens": 0.017117,
+    "agentless-mini/GPT-4o-mini-2024-07-18": 0.02
+  },
+  {
+    "totalTokens": 0.017282,
+    "agentless-mini/GPT-4o-mini-2024-07-18": 0.02
+  },
+  {
+    "totalTokens": 0.022001,
+    "agentless-mini/GPT-4o-mini-2024-07-18": 0.02
+  },
+  {
+    "totalTokens": 0.023134,
+    "agentless-mini/GPT-4o-mini-2024-07-18": 0.02
+  },
+  {
+    "totalTokens": 0.023724,
+    "agentless-mini/GPT-4o-mini-2024-07-18": 0.04
+  },
+  {
+    "totalTokens": 0.023988,
+    "agentless-mini/GPT-4o-mini-2024-07-18": 0.06
+  },
+  {
+    "totalTokens": 0.024106,
+    "agentless-mini/GPT-4o-mini-2024-07-18": 0.06
+  },
+  {
+    "totalTokens": 0.024433,
+    "agentless-mini/GPT-4o-mini-2024-07-18": 0.06
+  },
+  {
+    "totalTokens": 0.025311,
+    "agentless-mini/GPT-4o-mini-2024-07-18": 0.06
+  },
+  {
+    "totalTokens": 0.026376,
+    "agentless-mini/GPT-4o-mini-2024-07-18": 0.06
+  },
+  {
+    "totalTokens": 0.027398,
+    "agentless-mini/GPT-4o-mini-2024-07-18": 0.06
+  },
+  {
+    "totalTokens": 0.027889,
+    "agentless-mini/GPT-4o-mini-2024-07-18": 0.06
+  },
+  {
+    "totalTokens": 0.028003,
+    "agentless-mini/GPT-4o-mini-2024-07-18": 0.06
+  },
+  {
+    "totalTokens": 0.031013,
+    "agentless-mini/GPT-4o-mini-2024-07-18": 0.06
+  },
+  {
+    "totalTokens": 0.031288,
+    "agentless-mini/GPT-4o-mini-2024-07-18": 0.06
+  },
+  {
+    "totalTokens": 0.032997,
+    "agentless-mini/GPT-4o-mini-2024-07-18": 0.06
+  },
+  {
+    "totalTokens": 0.033182,
+    "agentless-mini/GPT-4o-mini-2024-07-18": 0.06
+  },
+  {
+    "totalTokens": 0.038394,
+    "agentless-mini/GPT-4o-mini-2024-07-18": 0.06
+  },
+  {
+    "totalTokens": 0.039688,
+    "agentless-mini/GPT-4o-mini-2024-07-18": 0.06
+  },
+  {
+    "totalTokens": 0.042021,
+    "agentless-mini/GPT-4o-mini-2024-07-18": 0.08
+  },
+  {
+    "totalTokens": 0.042504,
+    "agentless-mini/GPT-4o-mini-2024-07-18": 0.1
+  },
+  {
+    "totalTokens": 0.043532,
+    "agentless-mini/GPT-4o-mini-2024-07-18": 0.1
+  },
+  {
+    "totalTokens": 0.04411,
+    "agentless-mini/GPT-4o-mini-2024-07-18": 0.1
+  },
+  {
+    "totalTokens": 0.044661,
+    "agentless-mini/GPT-4o-mini-2024-07-18": 0.1
+  },
+  {
+    "totalTokens": 0.046078,
+    "agentless-mini/GPT-4o-mini-2024-07-18": 0.1
+  },
+  {
+    "totalTokens": 0.047297,
+    "agentless-mini/GPT-4o-mini-2024-07-18": 0.1
+  },
+  {
+    "totalTokens": 0.048244,
+    "agentless-mini/GPT-4o-mini-2024-07-18": 0.1
+  },
+  {
+    "totalTokens": 0.049146,
+    "agentless-mini/GPT-4o-mini-2024-07-18": 0.1
+  },
+  {
+    "totalTokens": 0.050503,
+    "agentless-mini/GPT-4o-mini-2024-07-18": 0.12
+  },
+  {
+    "totalTokens": 0.050639,
+    "agentless-mini/GPT-4o-mini-2024-07-18": 0.14
+  },
+  {
+    "totalTokens": 0.051038,
+    "agentless-mini/GPT-4o-mini-2024-07-18": 0.14
+  },
+  {
+    "totalTokens": 0.054361,
+    "agentless-mini/GPT-4o-mini-2024-07-18": 0.14
+  },
+  {
+    "totalTokens": 0.054823,
+    "agentless-mini/GPT-4o-mini-2024-07-18": 0.16
+  },
+  {
+    "totalTokens": 0.055149,
+    "agentless-mini/GPT-4o-mini-2024-07-18": 0.16
+  },
+  {
+    "totalTokens": 0.058178,
+    "agentless-mini/GPT-4o-mini-2024-07-18": 0.16
+  },
+  {
+    "totalTokens": 0.058429,
+    "agentless-mini/GPT-4o-mini-2024-07-18": 0.16
+  },
+  {
+    "totalTokens": 0.059907,
+    "agentless-mini/GPT-4o-mini-2024-07-18": 0.16
+  },
+  {
+    "totalTokens": 0.060118,
+    "agentless-mini/GPT-4o-mini-2024-07-18": 0.16
+  },
+  {
+    "totalTokens": 0.065052,
+    "agentless-mini/GPT-4o-mini-2024-07-18": 0.16
+  },
+  {
+    "totalTokens": 0.065504,
+    "agentless-mini/GPT-4o-mini-2024-07-18": 0.18
+  },
+  {
+    "totalTokens": 0.06676,
+    "agentless-mini/GPT-4o-mini-2024-07-18": 0.2
+  },
+  {
+    "totalTokens": 0.005541,
     "agentless-mini/gpt-4o-mini-2024-07-18": 0
   },
   {
@@ -598,6 +798,206 @@
   {
     "totalTokens": 0.065647,
     "agentless-mini/qwen3-32B": 0.28
+  },
+  {
+    "totalTokens": 0.014215,
+    "agentless/GPT-4o-mini-2024-07-18": 0
+  },
+  {
+    "totalTokens": 0.015529,
+    "agentless/GPT-4o-mini-2024-07-18": 0
+  },
+  {
+    "totalTokens": 0.016225,
+    "agentless/GPT-4o-mini-2024-07-18": 0
+  },
+  {
+    "totalTokens": 0.01638,
+    "agentless/GPT-4o-mini-2024-07-18": 0
+  },
+  {
+    "totalTokens": 0.016522,
+    "agentless/GPT-4o-mini-2024-07-18": 0
+  },
+  {
+    "totalTokens": 0.017308,
+    "agentless/GPT-4o-mini-2024-07-18": 0.02
+  },
+  {
+    "totalTokens": 0.017576,
+    "agentless/GPT-4o-mini-2024-07-18": 0.02
+  },
+  {
+    "totalTokens": 0.017787,
+    "agentless/GPT-4o-mini-2024-07-18": 0.02
+  },
+  {
+    "totalTokens": 0.01923,
+    "agentless/GPT-4o-mini-2024-07-18": 0.02
+  },
+  {
+    "totalTokens": 0.019231,
+    "agentless/GPT-4o-mini-2024-07-18": 0.02
+  },
+  {
+    "totalTokens": 0.020173,
+    "agentless/GPT-4o-mini-2024-07-18": 0.04
+  },
+  {
+    "totalTokens": 0.020483,
+    "agentless/GPT-4o-mini-2024-07-18": 0.04
+  },
+  {
+    "totalTokens": 0.020702,
+    "agentless/GPT-4o-mini-2024-07-18": 0.06
+  },
+  {
+    "totalTokens": 0.021797,
+    "agentless/GPT-4o-mini-2024-07-18": 0.06
+  },
+  {
+    "totalTokens": 0.021909,
+    "agentless/GPT-4o-mini-2024-07-18": 0.06
+  },
+  {
+    "totalTokens": 0.021914,
+    "agentless/GPT-4o-mini-2024-07-18": 0.06
+  },
+  {
+    "totalTokens": 0.021994,
+    "agentless/GPT-4o-mini-2024-07-18": 0.08
+  },
+  {
+    "totalTokens": 0.022012,
+    "agentless/GPT-4o-mini-2024-07-18": 0.08
+  },
+  {
+    "totalTokens": 0.022124,
+    "agentless/GPT-4o-mini-2024-07-18": 0.1
+  },
+  {
+    "totalTokens": 0.023562,
+    "agentless/GPT-4o-mini-2024-07-18": 0.12
+  },
+  {
+    "totalTokens": 0.023574,
+    "agentless/GPT-4o-mini-2024-07-18": 0.14
+  },
+  {
+    "totalTokens": 0.023832,
+    "agentless/GPT-4o-mini-2024-07-18": 0.14
+  },
+  {
+    "totalTokens": 0.024384,
+    "agentless/GPT-4o-mini-2024-07-18": 0.14
+  },
+  {
+    "totalTokens": 0.024858,
+    "agentless/GPT-4o-mini-2024-07-18": 0.16
+  },
+  {
+    "totalTokens": 0.025298,
+    "agentless/GPT-4o-mini-2024-07-18": 0.16
+  },
+  {
+    "totalTokens": 0.025347,
+    "agentless/GPT-4o-mini-2024-07-18": 0.16
+  },
+  {
+    "totalTokens": 0.025397,
+    "agentless/GPT-4o-mini-2024-07-18": 0.16
+  },
+  {
+    "totalTokens": 0.025493,
+    "agentless/GPT-4o-mini-2024-07-18": 0.16
+  },
+  {
+    "totalTokens": 0.025699,
+    "agentless/GPT-4o-mini-2024-07-18": 0.16
+  },
+  {
+    "totalTokens": 0.025925,
+    "agentless/GPT-4o-mini-2024-07-18": 0.16
+  },
+  {
+    "totalTokens": 0.027005,
+    "agentless/GPT-4o-mini-2024-07-18": 0.18
+  },
+  {
+    "totalTokens": 0.027142,
+    "agentless/GPT-4o-mini-2024-07-18": 0.18
+  },
+  {
+    "totalTokens": 0.027935,
+    "agentless/GPT-4o-mini-2024-07-18": 0.18
+  },
+  {
+    "totalTokens": 0.028965,
+    "agentless/GPT-4o-mini-2024-07-18": 0.18
+  },
+  {
+    "totalTokens": 0.029463,
+    "agentless/GPT-4o-mini-2024-07-18": 0.18
+  },
+  {
+    "totalTokens": 0.029476,
+    "agentless/GPT-4o-mini-2024-07-18": 0.2
+  },
+  {
+    "totalTokens": 0.031657,
+    "agentless/GPT-4o-mini-2024-07-18": 0.2
+  },
+  {
+    "totalTokens": 0.032418,
+    "agentless/GPT-4o-mini-2024-07-18": 0.2
+  },
+  {
+    "totalTokens": 0.035495,
+    "agentless/GPT-4o-mini-2024-07-18": 0.22
+  },
+  {
+    "totalTokens": 0.035585,
+    "agentless/GPT-4o-mini-2024-07-18": 0.22
+  },
+  {
+    "totalTokens": 0.035719,
+    "agentless/GPT-4o-mini-2024-07-18": 0.24
+  },
+  {
+    "totalTokens": 0.036877,
+    "agentless/GPT-4o-mini-2024-07-18": 0.24
+  },
+  {
+    "totalTokens": 0.039235,
+    "agentless/GPT-4o-mini-2024-07-18": 0.24
+  },
+  {
+    "totalTokens": 0.044673,
+    "agentless/GPT-4o-mini-2024-07-18": 0.24
+  },
+  {
+    "totalTokens": 0.045602,
+    "agentless/GPT-4o-mini-2024-07-18": 0.24
+  },
+  {
+    "totalTokens": 0.045887,
+    "agentless/GPT-4o-mini-2024-07-18": 0.24
+  },
+  {
+    "totalTokens": 0.067731,
+    "agentless/GPT-4o-mini-2024-07-18": 0.26
+  },
+  {
+    "totalTokens": 0.068782,
+    "agentless/GPT-4o-mini-2024-07-18": 0.26
+  },
+  {
+    "totalTokens": 0.070699,
+    "agentless/GPT-4o-mini-2024-07-18": 0.26
+  },
+  {
+    "totalTokens": 0.073894,
+    "agentless/GPT-4o-mini-2024-07-18": 0.26
   },
   {
     "totalTokens": 0.014215,
@@ -1201,6 +1601,206 @@
   },
   {
     "totalTokens": 0.005891,
+    "auto-code-rover/GPT-4o-mini-2024-07-18": 0
+  },
+  {
+    "totalTokens": 0.009232,
+    "auto-code-rover/GPT-4o-mini-2024-07-18": 0.02
+  },
+  {
+    "totalTokens": 0.009603,
+    "auto-code-rover/GPT-4o-mini-2024-07-18": 0.02
+  },
+  {
+    "totalTokens": 0.009687,
+    "auto-code-rover/GPT-4o-mini-2024-07-18": 0.04
+  },
+  {
+    "totalTokens": 0.012012,
+    "auto-code-rover/GPT-4o-mini-2024-07-18": 0.04
+  },
+  {
+    "totalTokens": 0.012623,
+    "auto-code-rover/GPT-4o-mini-2024-07-18": 0.06
+  },
+  {
+    "totalTokens": 0.013969,
+    "auto-code-rover/GPT-4o-mini-2024-07-18": 0.06
+  },
+  {
+    "totalTokens": 0.015479,
+    "auto-code-rover/GPT-4o-mini-2024-07-18": 0.08
+  },
+  {
+    "totalTokens": 0.017598,
+    "auto-code-rover/GPT-4o-mini-2024-07-18": 0.08
+  },
+  {
+    "totalTokens": 0.020224,
+    "auto-code-rover/GPT-4o-mini-2024-07-18": 0.08
+  },
+  {
+    "totalTokens": 0.020533,
+    "auto-code-rover/GPT-4o-mini-2024-07-18": 0.08
+  },
+  {
+    "totalTokens": 0.022569,
+    "auto-code-rover/GPT-4o-mini-2024-07-18": 0.08
+  },
+  {
+    "totalTokens": 0.027319,
+    "auto-code-rover/GPT-4o-mini-2024-07-18": 0.08
+  },
+  {
+    "totalTokens": 0.027921,
+    "auto-code-rover/GPT-4o-mini-2024-07-18": 0.1
+  },
+  {
+    "totalTokens": 0.028167,
+    "auto-code-rover/GPT-4o-mini-2024-07-18": 0.1
+  },
+  {
+    "totalTokens": 0.029975,
+    "auto-code-rover/GPT-4o-mini-2024-07-18": 0.1
+  },
+  {
+    "totalTokens": 0.03301,
+    "auto-code-rover/GPT-4o-mini-2024-07-18": 0.1
+  },
+  {
+    "totalTokens": 0.040268,
+    "auto-code-rover/GPT-4o-mini-2024-07-18": 0.1
+  },
+  {
+    "totalTokens": 0.043658,
+    "auto-code-rover/GPT-4o-mini-2024-07-18": 0.1
+  },
+  {
+    "totalTokens": 0.046868,
+    "auto-code-rover/GPT-4o-mini-2024-07-18": 0.1
+  },
+  {
+    "totalTokens": 0.050156,
+    "auto-code-rover/GPT-4o-mini-2024-07-18": 0.1
+  },
+  {
+    "totalTokens": 0.058103,
+    "auto-code-rover/GPT-4o-mini-2024-07-18": 0.12
+  },
+  {
+    "totalTokens": 0.073599,
+    "auto-code-rover/GPT-4o-mini-2024-07-18": 0.12
+  },
+  {
+    "totalTokens": 0.074522,
+    "auto-code-rover/GPT-4o-mini-2024-07-18": 0.12
+  },
+  {
+    "totalTokens": 0.07782,
+    "auto-code-rover/GPT-4o-mini-2024-07-18": 0.12
+  },
+  {
+    "totalTokens": 0.08598,
+    "auto-code-rover/GPT-4o-mini-2024-07-18": 0.12
+  },
+  {
+    "totalTokens": 0.103294,
+    "auto-code-rover/GPT-4o-mini-2024-07-18": 0.12
+  },
+  {
+    "totalTokens": 0.107914,
+    "auto-code-rover/GPT-4o-mini-2024-07-18": 0.12
+  },
+  {
+    "totalTokens": 0.123654,
+    "auto-code-rover/GPT-4o-mini-2024-07-18": 0.12
+  },
+  {
+    "totalTokens": 0.165152,
+    "auto-code-rover/GPT-4o-mini-2024-07-18": 0.12
+  },
+  {
+    "totalTokens": 0.166179,
+    "auto-code-rover/GPT-4o-mini-2024-07-18": 0.12
+  },
+  {
+    "totalTokens": 0.174419,
+    "auto-code-rover/GPT-4o-mini-2024-07-18": 0.12
+  },
+  {
+    "totalTokens": 0.265318,
+    "auto-code-rover/GPT-4o-mini-2024-07-18": 0.12
+  },
+  {
+    "totalTokens": 0.297375,
+    "auto-code-rover/GPT-4o-mini-2024-07-18": 0.12
+  },
+  {
+    "totalTokens": 0.31547,
+    "auto-code-rover/GPT-4o-mini-2024-07-18": 0.12
+  },
+  {
+    "totalTokens": 0.317961,
+    "auto-code-rover/GPT-4o-mini-2024-07-18": 0.12
+  },
+  {
+    "totalTokens": 0.338713,
+    "auto-code-rover/GPT-4o-mini-2024-07-18": 0.12
+  },
+  {
+    "totalTokens": 0.524944,
+    "auto-code-rover/GPT-4o-mini-2024-07-18": 0.12
+  },
+  {
+    "totalTokens": 0.571513,
+    "auto-code-rover/GPT-4o-mini-2024-07-18": 0.12
+  },
+  {
+    "totalTokens": 0.610916,
+    "auto-code-rover/GPT-4o-mini-2024-07-18": 0.12
+  },
+  {
+    "totalTokens": 0.666312,
+    "auto-code-rover/GPT-4o-mini-2024-07-18": 0.12
+  },
+  {
+    "totalTokens": 0.670464,
+    "auto-code-rover/GPT-4o-mini-2024-07-18": 0.12
+  },
+  {
+    "totalTokens": 0.713635,
+    "auto-code-rover/GPT-4o-mini-2024-07-18": 0.12
+  },
+  {
+    "totalTokens": 0.76111,
+    "auto-code-rover/GPT-4o-mini-2024-07-18": 0.12
+  },
+  {
+    "totalTokens": 0.829952,
+    "auto-code-rover/GPT-4o-mini-2024-07-18": 0.12
+  },
+  {
+    "totalTokens": 0.879492,
+    "auto-code-rover/GPT-4o-mini-2024-07-18": 0.12
+  },
+  {
+    "totalTokens": 0.913865,
+    "auto-code-rover/GPT-4o-mini-2024-07-18": 0.12
+  },
+  {
+    "totalTokens": 0.959038,
+    "auto-code-rover/GPT-4o-mini-2024-07-18": 0.12
+  },
+  {
+    "totalTokens": 1.152219,
+    "auto-code-rover/GPT-4o-mini-2024-07-18": 0.12
+  },
+  {
+    "totalTokens": 1.336881,
+    "auto-code-rover/GPT-4o-mini-2024-07-18": 0.12
+  },
+  {
+    "totalTokens": 0.005891,
     "auto-code-rover/gpt-4o-mini-2024-07-18": 0
   },
   {
@@ -1801,6 +2401,174 @@
   },
   {
     "totalTokens": 0.050096,
+    "openhands/GPT-4o-mini-2024-07-18": 0.023809523809523808
+  },
+  {
+    "totalTokens": 0.096224,
+    "openhands/GPT-4o-mini-2024-07-18": 0.023809523809523808
+  },
+  {
+    "totalTokens": 0.101045,
+    "openhands/GPT-4o-mini-2024-07-18": 0.023809523809523808
+  },
+  {
+    "totalTokens": 0.118096,
+    "openhands/GPT-4o-mini-2024-07-18": 0.023809523809523808
+  },
+  {
+    "totalTokens": 0.121552,
+    "openhands/GPT-4o-mini-2024-07-18": 0.023809523809523808
+  },
+  {
+    "totalTokens": 0.126209,
+    "openhands/GPT-4o-mini-2024-07-18": 0.023809523809523808
+  },
+  {
+    "totalTokens": 0.162618,
+    "openhands/GPT-4o-mini-2024-07-18": 0.023809523809523808
+  },
+  {
+    "totalTokens": 0.166673,
+    "openhands/GPT-4o-mini-2024-07-18": 0.023809523809523808
+  },
+  {
+    "totalTokens": 0.168496,
+    "openhands/GPT-4o-mini-2024-07-18": 0.023809523809523808
+  },
+  {
+    "totalTokens": 0.169586,
+    "openhands/GPT-4o-mini-2024-07-18": 0.023809523809523808
+  },
+  {
+    "totalTokens": 0.191508,
+    "openhands/GPT-4o-mini-2024-07-18": 0.023809523809523808
+  },
+  {
+    "totalTokens": 0.194899,
+    "openhands/GPT-4o-mini-2024-07-18": 0.023809523809523808
+  },
+  {
+    "totalTokens": 0.256076,
+    "openhands/GPT-4o-mini-2024-07-18": 0.023809523809523808
+  },
+  {
+    "totalTokens": 0.259679,
+    "openhands/GPT-4o-mini-2024-07-18": 0.023809523809523808
+  },
+  {
+    "totalTokens": 0.268272,
+    "openhands/GPT-4o-mini-2024-07-18": 0.023809523809523808
+  },
+  {
+    "totalTokens": 0.307687,
+    "openhands/GPT-4o-mini-2024-07-18": 0.023809523809523808
+  },
+  {
+    "totalTokens": 0.332197,
+    "openhands/GPT-4o-mini-2024-07-18": 0.023809523809523808
+  },
+  {
+    "totalTokens": 0.383202,
+    "openhands/GPT-4o-mini-2024-07-18": 0.023809523809523808
+  },
+  {
+    "totalTokens": 0.417267,
+    "openhands/GPT-4o-mini-2024-07-18": 0.023809523809523808
+  },
+  {
+    "totalTokens": 0.417373,
+    "openhands/GPT-4o-mini-2024-07-18": 0.023809523809523808
+  },
+  {
+    "totalTokens": 0.419243,
+    "openhands/GPT-4o-mini-2024-07-18": 0.047619047619047616
+  },
+  {
+    "totalTokens": 0.431201,
+    "openhands/GPT-4o-mini-2024-07-18": 0.07142857142857142
+  },
+  {
+    "totalTokens": 0.460498,
+    "openhands/GPT-4o-mini-2024-07-18": 0.07142857142857142
+  },
+  {
+    "totalTokens": 0.492156,
+    "openhands/GPT-4o-mini-2024-07-18": 0.07142857142857142
+  },
+  {
+    "totalTokens": 0.56732,
+    "openhands/GPT-4o-mini-2024-07-18": 0.07142857142857142
+  },
+  {
+    "totalTokens": 0.60417,
+    "openhands/GPT-4o-mini-2024-07-18": 0.07142857142857142
+  },
+  {
+    "totalTokens": 0.630343,
+    "openhands/GPT-4o-mini-2024-07-18": 0.09523809523809523
+  },
+  {
+    "totalTokens": 0.668282,
+    "openhands/GPT-4o-mini-2024-07-18": 0.09523809523809523
+  },
+  {
+    "totalTokens": 0.725488,
+    "openhands/GPT-4o-mini-2024-07-18": 0.09523809523809523
+  },
+  {
+    "totalTokens": 0.803135,
+    "openhands/GPT-4o-mini-2024-07-18": 0.09523809523809523
+  },
+  {
+    "totalTokens": 0.821938,
+    "openhands/GPT-4o-mini-2024-07-18": 0.11904761904761904
+  },
+  {
+    "totalTokens": 0.857991,
+    "openhands/GPT-4o-mini-2024-07-18": 0.11904761904761904
+  },
+  {
+    "totalTokens": 1.260287,
+    "openhands/GPT-4o-mini-2024-07-18": 0.11904761904761904
+  },
+  {
+    "totalTokens": 1.271965,
+    "openhands/GPT-4o-mini-2024-07-18": 0.11904761904761904
+  },
+  {
+    "totalTokens": 1.276413,
+    "openhands/GPT-4o-mini-2024-07-18": 0.11904761904761904
+  },
+  {
+    "totalTokens": 1.397946,
+    "openhands/GPT-4o-mini-2024-07-18": 0.11904761904761904
+  },
+  {
+    "totalTokens": 1.646902,
+    "openhands/GPT-4o-mini-2024-07-18": 0.11904761904761904
+  },
+  {
+    "totalTokens": 1.737336,
+    "openhands/GPT-4o-mini-2024-07-18": 0.11904761904761904
+  },
+  {
+    "totalTokens": 1.796991,
+    "openhands/GPT-4o-mini-2024-07-18": 0.11904761904761904
+  },
+  {
+    "totalTokens": 1.827972,
+    "openhands/GPT-4o-mini-2024-07-18": 0.11904761904761904
+  },
+  {
+    "totalTokens": 2.930488,
+    "openhands/GPT-4o-mini-2024-07-18": 0.11904761904761904
+  },
+  {
+    "totalTokens": 4.032134,
+    "openhands/GPT-4o-mini-2024-07-18": 0.11904761904761904
+  },
+  {
+    "totalTokens": 0.050096,
     "openhands/gpt-4o-mini-2024-07-18": 0.023809523809523808
   },
   {
@@ -2366,6 +3134,206 @@
   {
     "totalTokens": 2.62167,
     "openhands/qwen3-32B": 0.34
+  },
+  {
+    "totalTokens": 0.050187,
+    "swe-agent/GPT-4o-mini-2024-07-18": 0
+  },
+  {
+    "totalTokens": 0.055602,
+    "swe-agent/GPT-4o-mini-2024-07-18": 0.02
+  },
+  {
+    "totalTokens": 0.115563,
+    "swe-agent/GPT-4o-mini-2024-07-18": 0.02
+  },
+  {
+    "totalTokens": 0.162529,
+    "swe-agent/GPT-4o-mini-2024-07-18": 0.02
+  },
+  {
+    "totalTokens": 0.16816,
+    "swe-agent/GPT-4o-mini-2024-07-18": 0.02
+  },
+  {
+    "totalTokens": 0.179961,
+    "swe-agent/GPT-4o-mini-2024-07-18": 0.02
+  },
+  {
+    "totalTokens": 0.196422,
+    "swe-agent/GPT-4o-mini-2024-07-18": 0.02
+  },
+  {
+    "totalTokens": 0.21408,
+    "swe-agent/GPT-4o-mini-2024-07-18": 0.02
+  },
+  {
+    "totalTokens": 0.415883,
+    "swe-agent/GPT-4o-mini-2024-07-18": 0.04
+  },
+  {
+    "totalTokens": 0.442909,
+    "swe-agent/GPT-4o-mini-2024-07-18": 0.04
+  },
+  {
+    "totalTokens": 0.604664,
+    "swe-agent/GPT-4o-mini-2024-07-18": 0.06
+  },
+  {
+    "totalTokens": 0.729896,
+    "swe-agent/GPT-4o-mini-2024-07-18": 0.06
+  },
+  {
+    "totalTokens": 0.844727,
+    "swe-agent/GPT-4o-mini-2024-07-18": 0.08
+  },
+  {
+    "totalTokens": 1.351842,
+    "swe-agent/GPT-4o-mini-2024-07-18": 0.08
+  },
+  {
+    "totalTokens": 1.686157,
+    "swe-agent/GPT-4o-mini-2024-07-18": 0.08
+  },
+  {
+    "totalTokens": 6.430371,
+    "swe-agent/GPT-4o-mini-2024-07-18": 0.08
+  },
+  {
+    "totalTokens": 7.378993,
+    "swe-agent/GPT-4o-mini-2024-07-18": 0.1
+  },
+  {
+    "totalTokens": 7.906999,
+    "swe-agent/GPT-4o-mini-2024-07-18": 0.1
+  },
+  {
+    "totalTokens": 7.993555,
+    "swe-agent/GPT-4o-mini-2024-07-18": 0.1
+  },
+  {
+    "totalTokens": 8.43019,
+    "swe-agent/GPT-4o-mini-2024-07-18": 0.1
+  },
+  {
+    "totalTokens": 8.448488,
+    "swe-agent/GPT-4o-mini-2024-07-18": 0.1
+  },
+  {
+    "totalTokens": 9.475161,
+    "swe-agent/GPT-4o-mini-2024-07-18": 0.1
+  },
+  {
+    "totalTokens": 11.035666,
+    "swe-agent/GPT-4o-mini-2024-07-18": 0.1
+  },
+  {
+    "totalTokens": 11.217855,
+    "swe-agent/GPT-4o-mini-2024-07-18": 0.1
+  },
+  {
+    "totalTokens": 11.36528,
+    "swe-agent/GPT-4o-mini-2024-07-18": 0.1
+  },
+  {
+    "totalTokens": 11.415991,
+    "swe-agent/GPT-4o-mini-2024-07-18": 0.1
+  },
+  {
+    "totalTokens": 11.426776,
+    "swe-agent/GPT-4o-mini-2024-07-18": 0.1
+  },
+  {
+    "totalTokens": 11.504119,
+    "swe-agent/GPT-4o-mini-2024-07-18": 0.1
+  },
+  {
+    "totalTokens": 11.620557,
+    "swe-agent/GPT-4o-mini-2024-07-18": 0.1
+  },
+  {
+    "totalTokens": 11.654862,
+    "swe-agent/GPT-4o-mini-2024-07-18": 0.1
+  },
+  {
+    "totalTokens": 11.788083,
+    "swe-agent/GPT-4o-mini-2024-07-18": 0.1
+  },
+  {
+    "totalTokens": 11.801566,
+    "swe-agent/GPT-4o-mini-2024-07-18": 0.1
+  },
+  {
+    "totalTokens": 11.838479,
+    "swe-agent/GPT-4o-mini-2024-07-18": 0.1
+  },
+  {
+    "totalTokens": 11.881282,
+    "swe-agent/GPT-4o-mini-2024-07-18": 0.1
+  },
+  {
+    "totalTokens": 11.892246,
+    "swe-agent/GPT-4o-mini-2024-07-18": 0.1
+  },
+  {
+    "totalTokens": 12.307343,
+    "swe-agent/GPT-4o-mini-2024-07-18": 0.1
+  },
+  {
+    "totalTokens": 12.629186,
+    "swe-agent/GPT-4o-mini-2024-07-18": 0.1
+  },
+  {
+    "totalTokens": 12.738905,
+    "swe-agent/GPT-4o-mini-2024-07-18": 0.1
+  },
+  {
+    "totalTokens": 12.807066,
+    "swe-agent/GPT-4o-mini-2024-07-18": 0.1
+  },
+  {
+    "totalTokens": 12.810323,
+    "swe-agent/GPT-4o-mini-2024-07-18": 0.1
+  },
+  {
+    "totalTokens": 12.824854,
+    "swe-agent/GPT-4o-mini-2024-07-18": 0.1
+  },
+  {
+    "totalTokens": 12.843123,
+    "swe-agent/GPT-4o-mini-2024-07-18": 0.1
+  },
+  {
+    "totalTokens": 12.87638,
+    "swe-agent/GPT-4o-mini-2024-07-18": 0.1
+  },
+  {
+    "totalTokens": 12.917773,
+    "swe-agent/GPT-4o-mini-2024-07-18": 0.1
+  },
+  {
+    "totalTokens": 12.933968,
+    "swe-agent/GPT-4o-mini-2024-07-18": 0.1
+  },
+  {
+    "totalTokens": 13.073916,
+    "swe-agent/GPT-4o-mini-2024-07-18": 0.1
+  },
+  {
+    "totalTokens": 13.106895,
+    "swe-agent/GPT-4o-mini-2024-07-18": 0.1
+  },
+  {
+    "totalTokens": 13.151091,
+    "swe-agent/GPT-4o-mini-2024-07-18": 0.1
+  },
+  {
+    "totalTokens": 13.175055,
+    "swe-agent/GPT-4o-mini-2024-07-18": 0.1
+  },
+  {
+    "totalTokens": 13.220374,
+    "swe-agent/GPT-4o-mini-2024-07-18": 0.1
   },
   {
     "totalTokens": 0.050187,

@@ -2,7 +2,7 @@
   {
     "cpu-time": 12.82,
     "gpu-time": 87.18,
-    "scaffold-model": "agentless-mini/gpt-4o-mini-2024-07-18"
+    "scaffold-model": "agentless-mini/GPT-4o-mini-2024-07-18"
   },
   {
     "cpu-time": 6.22,
@@ -17,7 +17,7 @@
   {
     "cpu-time": 86.3,
     "gpu-time": 13.7,
-    "scaffold-model": "agentless/gpt-4o-mini-2024-07-18"
+    "scaffold-model": "agentless/GPT-4o-mini-2024-07-18"
   },
   {
     "cpu-time": 73.24,
@@ -32,7 +32,7 @@
   {
     "cpu-time": 14.82,
     "gpu-time": 85.18,
-    "scaffold-model": "auto-code-rover/gpt-4o-mini-2024-07-18"
+    "scaffold-model": "auto-code-rover/GPT-4o-mini-2024-07-18"
   },
   {
     "cpu-time": 9.4,
@@ -47,7 +47,7 @@
   {
     "cpu-time": 69.58,
     "gpu-time": 30.42,
-    "scaffold-model": "openhands/gpt-4o-mini-2024-07-18"
+    "scaffold-model": "openhands/GPT-4o-mini-2024-07-18"
   },
   {
     "cpu-time": 69.02,
@@ -62,7 +62,7 @@
   {
     "cpu-time": 22.69,
     "gpu-time": 77.31,
-    "scaffold-model": "swe-agent/gpt-4o-mini-2024-07-18"
+    "scaffold-model": "swe-agent/GPT-4o-mini-2024-07-18"
   },
   {
     "cpu-time": 36.59,

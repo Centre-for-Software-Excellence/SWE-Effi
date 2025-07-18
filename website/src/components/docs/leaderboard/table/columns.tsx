@@ -181,8 +181,7 @@ export const columns = (
             onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
             className="flex items-center justify-start"
           >
-            <ArrowUpDown className="mr-2 h-4 w-4" />
-            Calls
+            <ArrowUpDown className="mr-2 h-4 w-4" /># of LLM calls
           </button>
         </TooltipWrapper>
       );
@@ -203,7 +202,10 @@ export const columns = (
             className="flex items-center justify-start"
           >
             <ArrowUpDown className="mr-2 h-4 w-4" />
-            Inference Time (seconds)
+            <div className="text-center">
+              <div>Normalised Inference</div>
+              <div>Time (seconds)</div>
+            </div>
           </button>
         </TooltipWrapper>
       );

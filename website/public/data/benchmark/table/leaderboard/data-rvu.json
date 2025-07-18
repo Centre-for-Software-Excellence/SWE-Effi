@@ -1,7 +1,7 @@
 [
   {
-    "scaffold": "Agentless Mini",
-    "model": "Llama 3.3 70B Instruct FP8",
+    "scaffold": "agentless mini",
+    "model": "llama 3.3 70B Instruct FP8",
     "avgTotalTimeU": 12.388703986799266,
     "avgTotalTimeR": 4.320362367349859,
     "avgCPUTimeU": 0.7593128035465874,
@@ -15,8 +15,8 @@
     "rank": 1
   },
   {
-    "scaffold": "Agentless Mini",
-    "model": "Gpt 4o Mini 2024 07 18",
+    "scaffold": "agentless mini",
+    "model": "GPT 4o mini 2024 07 18",
     "avgTotalTimeU": 5.181590774103479,
     "avgTotalTimeR": 5.389713827087487,
     "avgCPUTimeU": 0.6419903218746181,
@@ -30,8 +30,8 @@
     "rank": 2
   },
   {
-    "scaffold": "Agentless Mini",
-    "model": "Qwen3 32B",
+    "scaffold": "agentless mini",
+    "model": "qwen3 32B",
     "avgTotalTimeU": 62.60430425275402,
     "avgTotalTimeR": 18.314180096186856,
     "avgCPUTimeU": 0.7552516990237762,
@@ -45,8 +45,8 @@
     "rank": 3
   },
   {
-    "scaffold": "Swe Agent",
-    "model": "Llama 3.3 70B Instruct FP8",
+    "scaffold": "swe agent",
+    "model": "llama 3.3 70B Instruct FP8",
     "avgTotalTimeU": 43.859272807349605,
     "avgTotalTimeR": 19.029628141653536,
     "avgCPUTimeU": 15.849227272727273,
@@ -60,8 +60,8 @@
     "rank": 4
   },
   {
-    "scaffold": "Auto Code Rover",
-    "model": "Gpt 4o Mini 2024 07 18",
+    "scaffold": "auto code rover",
+    "model": "GPT 4o mini 2024 07 18",
     "avgTotalTimeU": 109.48754674932079,
     "avgTotalTimeR": 21.40962284205699,
     "avgCPUTimeU": 16.260545454545458,
@@ -75,8 +75,8 @@
     "rank": 5
   },
   {
-    "scaffold": "Auto Code Rover",
-    "model": "Llama 3.3 70B Instruct FP8",
+    "scaffold": "auto code rover",
+    "model": "llama 3.3 70B Instruct FP8",
     "avgTotalTimeU": 122.68662166801612,
     "avgTotalTimeR": 45.906142910861114,
     "avgCPUTimeU": 10.819388888888888,
@@ -90,8 +90,8 @@
     "rank": 6
   },
   {
-    "scaffold": "Openhands",
-    "model": "Llama 3.3 70B Instruct FP8",
+    "scaffold": "openhands",
+    "model": "llama 3.3 70B Instruct FP8",
     "avgTotalTimeU": 238.90250735147941,
     "avgTotalTimeR": 79.04394473580423,
     "avgCPUTimeU": 164.52529809279446,
@@ -105,8 +105,8 @@
     "rank": 7
   },
   {
-    "scaffold": "Auto Code Rover",
-    "model": "Qwen3 32B",
+    "scaffold": "auto code rover",
+    "model": "qwen3 32B",
     "avgTotalTimeU": 173.54972146036835,
     "avgTotalTimeR": 85.4214734836778,
     "avgCPUTimeU": 52.19590322580644,
@@ -120,8 +120,8 @@
     "rank": 8
   },
   {
-    "scaffold": "Openhands",
-    "model": "Gpt 4o Mini 2024 07 18",
+    "scaffold": "openhands",
+    "model": "GPT 4o mini 2024 07 18",
     "avgTotalTimeU": 142.85386407635957,
     "avgTotalTimeR": 85.95154734953239,
     "avgCPUTimeU": 99.9654492793212,
@@ -135,8 +135,8 @@
     "rank": 9
   },
   {
-    "scaffold": "Openhands",
-    "model": "Qwen3 32B",
+    "scaffold": "openhands",
+    "model": "qwen3 32B",
     "avgTotalTimeU": 237.44657393539407,
     "avgTotalTimeR": 131.81524390155286,
     "avgCPUTimeU": 118.0446557121855,
@@ -150,8 +150,8 @@
     "rank": 10
   },
   {
-    "scaffold": "Swe Agent",
-    "model": "Gpt 4o Mini 2024 07 18",
+    "scaffold": "swe agent",
+    "model": "GPT 4o mini 2024 07 18",
     "avgTotalTimeU": 657.9540074138745,
     "avgTotalTimeR": 167.23370675390407,
     "avgCPUTimeU": 146.82608888888888,
@@ -165,8 +165,8 @@
     "rank": 11
   },
   {
-    "scaffold": "Swe Agent",
-    "model": "Qwen3 32B",
+    "scaffold": "swe agent",
+    "model": "qwen3 32B",
     "avgTotalTimeU": 274.763635698506,
     "avgTotalTimeR": 177.8042839458573,
     "avgCPUTimeU": 22.82236111111112,
@@ -180,8 +180,8 @@
     "rank": 12
   },
   {
-    "scaffold": "Agentless",
-    "model": "Llama 3.3 70B Instruct FP8",
+    "scaffold": "agentless",
+    "model": "llama 3.3 70B Instruct FP8",
     "avgTotalTimeU": 653.0442430592534,
     "avgTotalTimeR": 538.4624873242259,
     "avgCPUTimeU": 479.77893216746634,
@@ -195,8 +195,8 @@
     "rank": 13
   },
   {
-    "scaffold": "Agentless",
-    "model": "Qwen3 32B",
+    "scaffold": "agentless",
+    "model": "qwen3 32B",
     "avgTotalTimeU": 1037.3107122765996,
     "avgTotalTimeR": 829.0210842415912,
     "avgCPUTimeU": 774.2890511924888,
@@ -210,8 +210,8 @@
     "rank": 14
   },
   {
-    "scaffold": "Agentless",
-    "model": "Gpt 4o Mini 2024 07 18",
+    "scaffold": "agentless",
+    "model": "GPT 4o mini 2024 07 18",
     "avgTotalTimeU": 998.3659546844428,
     "avgTotalTimeR": 1120.6704068686367,
     "avgCPUTimeU": 852.5014356342039,

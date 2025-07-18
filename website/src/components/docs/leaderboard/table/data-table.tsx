@@ -5,13 +5,14 @@ import {
   flexRender,
   getCoreRowModel,
   getFilteredRowModel,
-  getPaginationRowModel,
+  // getPaginationRowModel,
   getSortedRowModel,
   SortingState,
   useReactTable,
   VisibilityState,
 } from '@tanstack/react-table';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+
+// import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 import { Button } from '@/components/common/ui/button';
 import {
@@ -50,15 +51,15 @@ export function DataTable<TData, TValue>({
     getCoreRowModel: getCoreRowModel(),
     onSortingChange: setSorting,
     getSortedRowModel: getSortedRowModel(),
-    getPaginationRowModel: getPaginationRowModel(),
+    // getPaginationRowModel: getPaginationRowModel(),
     onColumnFiltersChange: setColumnFilters,
     getFilteredRowModel: getFilteredRowModel(),
     onColumnVisibilityChange: setColumnVisibility,
-    initialState: {
-      pagination: {
-        pageSize: 10,
-      },
-    },
+    // initialState: {
+    //   pagination: {
+    //     pageSize: 10,
+    //   },
+    // },
     state: {
       sorting,
       columnFilters,
@@ -79,22 +80,22 @@ export function DataTable<TData, TValue>({
         />
         <div>
           <div className="flex items-center justify-end py-2 md:space-x-2 md:py-4">
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={() => table.previousPage()}
-              disabled={!table.getCanPreviousPage()}
-            >
-              <ChevronLeft />
-            </Button>
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={() => table.nextPage()}
-              disabled={!table.getCanNextPage()}
-            >
-              <ChevronRight />
-            </Button>
+            {/* <Button */}
+            {/*   variant="outline" */}
+            {/*   size="icon" */}
+            {/*   onClick={() => table.previousPage()} */}
+            {/*   disabled={!table.getCanPreviousPage()} */}
+            {/* > */}
+            {/*   <ChevronLeft /> */}
+            {/* </Button> */}
+            {/* <Button */}
+            {/*   variant="outline" */}
+            {/*   size="icon" */}
+            {/*   onClick={() => table.nextPage()} */}
+            {/*   disabled={!table.getCanNextPage()} */}
+            {/* > */}
+            {/*   <ChevronRight /> */}
+            {/* </Button> */}
 
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
@@ -127,7 +128,7 @@ export function DataTable<TData, TValue>({
           </div>
         </div>
       </div>
-      <ScrollArea className="rounded-md border">
+      <ScrollArea className="h-[38rem] rounded-md border">
         <Table>
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (
