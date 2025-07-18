@@ -71,13 +71,13 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
   tables: {
     leaderboard: {
       caption:
-        'Table 1: Beyond just the resolve rate, we quantitatively measure a number of additional metrics such token consumption, local and inference duration, and LLM usage counts to understand the efficiency of agent scaffolds.',
+        'Table 1 -  An overall comparison of agent scaffolds and models across the token usage, duration, and LLM API call metrics',
       tabTitle: 'Table 1',
       tableTitle: 'Scaffold comparison on SWE-bench tasks',
       filterPlaceholder: 'Filter models...',
       // if the tooltips is "" or not defined, the tooltip will not be shown
       columnTooltips: {
-        rank: 'Ranked by resolve rate',
+        rank: 'Ranked by inference efficiency',
         scaffold: 'Name of the agent scaffold',
         model: 'LLM name',
         total: 'Total mean duration including CPU time and NIM',
@@ -94,7 +94,7 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
     },
     leaderboardRVU: {
       caption:
-        'Table 2: To understand the differences between how agent scaffolds handle successful and failed issue resolution attempts, we compare agent scaffold dynamics between resolved and unresolved cases across token consumption, local/inference duration, and number of LLM requests metrics.',
+        'Table 2 - Comparison of scaffold dynamics and performance between resolved and unresolved cases',
       tabTitle: 'Table 2',
       tableTitle: 'Token and time costs for resolved and unresolved instances',
       filterPlaceholder: 'Filter models...',

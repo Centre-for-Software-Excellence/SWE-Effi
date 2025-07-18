@@ -9,12 +9,16 @@ import { ColumnTooltips } from '../tables-card';
 export type LeaderboardData = {
   scaffold: string;
   model: string;
+  gpuEfficiency: number;
+  cpuEfficiency: number;
+  costEfficiency: number;
+  tokenEfficiency: number;
   total: number;
   cpuTime: number;
+  infTime: number;
   inputToken: number;
   outputToken: number;
   calls: number;
-  infTime: number;
   resolveRate: number;
   precision?: number;
 };
@@ -89,6 +93,133 @@ export const columns = (
     },
   },
   {
+    accessorKey: 'gpuEfficiency',
+    header: ({ column }) => {
+      return (
+        <TooltipWrapper title={tooltips?.gpuEfficiency}>
+          <button
+            onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
+            className="flex items-center justify-start"
+          >
+            <ArrowUpDown className="mr-2 h-4 w-4" />
+            Inference Efficiency
+          </button>
+        </TooltipWrapper>
+      );
+    },
+    cell: ({ row }) => (
+      <div className="text-right font-medium">
+        {formatScore(row.getValue('gpuEfficiency'))}
+        <Progress
+          value={row.getValue('gpuEfficiency')}
+          className="ml-auto h-2 w-16"
+        />
+      </div>
+    ),
+  },
+  {
+    accessorKey: 'cpuEfficiency',
+    header: ({ column }) => {
+      return (
+        <TooltipWrapper title={tooltips?.cpuEfficiency}>
+          <button
+            onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
+            className="flex items-center justify-start"
+          >
+            <ArrowUpDown className="mr-2 h-4 w-4" />
+            CPU Efficiency
+          </button>
+        </TooltipWrapper>
+      );
+    },
+    cell: ({ row }) => (
+      <div className="text-right font-medium">
+        {formatScore(row.getValue('cpuEfficiency'))}
+        <Progress
+          value={row.getValue('cpuEfficiency')}
+          className="ml-auto h-2 w-16"
+        />
+      </div>
+    ),
+  },
+  {
+    accessorKey: 'costEfficiency',
+    header: ({ column }) => {
+      return (
+        <TooltipWrapper title={tooltips?.costEfficiency}>
+          <button
+            onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
+            className="flex items-center justify-start"
+          >
+            <ArrowUpDown className="mr-2 h-4 w-4" />
+            Cost Efficiency
+          </button>
+        </TooltipWrapper>
+      );
+    },
+    cell: ({ row }) => (
+      <div className="text-right font-medium">
+        {formatScore(row.getValue('costEfficiency'))}
+        <Progress
+          value={row.getValue('costEfficiency')}
+          className="ml-auto h-2 w-16"
+        />
+      </div>
+    ),
+  },
+  {
+    accessorKey: 'tokenEfficiency',
+    header: ({ column }) => {
+      return (
+        <TooltipWrapper title={tooltips?.tokenEfficiency}>
+          <button
+            onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
+            className="flex items-center justify-start"
+          >
+            <ArrowUpDown className="h- 4 mr-2 w-4" />
+            Token Efficiency
+          </button>
+        </TooltipWrapper>
+      );
+    },
+    cell: ({ row }) => (
+      <div className="text-right font-medium">
+        {formatScore(row.getValue('tokenEfficiency'))}
+        <Progress
+          value={row.getValue('tokenEfficiency')}
+          className="ml-auto h-2 w-16"
+        />
+      </div>
+    ),
+  },
+  {
+    accessorKey: 'resolveRate',
+    header: ({ column }) => {
+      return (
+        <TooltipWrapper title={tooltips?.resolveRate}>
+          <button
+            onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
+            className="flex items-center justify-start"
+          >
+            <ArrowUpDown className="mr-2 h-4 w-4" />
+            Resolve Rate (%)
+          </button>
+        </TooltipWrapper>
+      );
+    },
+    cell: ({ row }) => (
+      <div className="text-right font-medium">
+        <span className="font-bold">
+          {formatScore(row.getValue('resolveRate'))}
+        </span>
+        <Progress
+          value={row.getValue('resolveRate')}
+          className="ml-auto h-2 w-16"
+        />
+      </div>
+    ),
+  },
+  {
     accessorKey: 'total',
     header: ({ column }) => {
       return (
@@ -98,7 +229,11 @@ export const columns = (
             className="flex items-center justify-start"
           >
             <ArrowUpDown className="mr-2 h-4 w-4" />
-            Total Time (seconds)
+
+            <div className="text-center">
+              <div>Mean Normalized</div>
+              <div>Time (seconds)</div>
+            </div>
           </button>
         </TooltipWrapper>
       );
@@ -127,6 +262,30 @@ export const columns = (
     cell: ({ row }) => (
       <div className="text-right font-medium">
         {formatScore(row.getValue('cpuTime'))}
+      </div>
+    ),
+  },
+  {
+    accessorKey: 'infTime',
+    header: ({ column }) => {
+      return (
+        <TooltipWrapper title={tooltips?.infTime}>
+          <button
+            onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
+            className="flex items-center justify-start"
+          >
+            <ArrowUpDown className="mr-2 h-4 w-4" />
+            <div className="text-center">
+              <div>Mean Normalized </div>
+              <div>Inference Time (seconds)</div>
+            </div>
+          </button>
+        </TooltipWrapper>
+      );
+    },
+    cell: ({ row }) => (
+      <div className="text-right font-medium">
+        {formatScore(row.getValue('infTime'))}
       </div>
     ),
   },
@@ -189,57 +348,6 @@ export const columns = (
     cell: ({ row }) => (
       <div className="text-right font-medium">
         {formatScore(row.getValue('calls'))}
-      </div>
-    ),
-  },
-  {
-    accessorKey: 'infTime',
-    header: ({ column }) => {
-      return (
-        <TooltipWrapper title={tooltips?.infTime}>
-          <button
-            onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
-            className="flex items-center justify-start"
-          >
-            <ArrowUpDown className="mr-2 h-4 w-4" />
-            <div className="text-center">
-              <div>Normalised Inference</div>
-              <div>Time (seconds)</div>
-            </div>
-          </button>
-        </TooltipWrapper>
-      );
-    },
-    cell: ({ row }) => (
-      <div className="text-right font-medium">
-        {formatScore(row.getValue('infTime'))}
-      </div>
-    ),
-  },
-  {
-    accessorKey: 'resolveRate',
-    header: ({ column }) => {
-      return (
-        <TooltipWrapper title={tooltips?.resolveRate}>
-          <button
-            onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
-            className="flex items-center justify-start"
-          >
-            <ArrowUpDown className="mr-2 h-4 w-4" />
-            Resolve Rate (%)
-          </button>
-        </TooltipWrapper>
-      );
-    },
-    cell: ({ row }) => (
-      <div className="text-right font-medium">
-        <span className="font-bold">
-          {formatScore(row.getValue('resolveRate'))}
-        </span>
-        <Progress
-          value={row.getValue('resolveRate')}
-          className="ml-auto h-2 w-16"
-        />
       </div>
     ),
   },

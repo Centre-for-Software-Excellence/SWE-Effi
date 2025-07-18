@@ -8,7 +8,7 @@ import {
   TabsList,
   TabsTrigger,
 } from '@/components/common/ui/tabs';
-import { H6, P } from '@/components/md';
+import { H6 } from '@/components/md';
 import { cn } from '@/lib/utils';
 import { getBasePath } from '@/lib/utils/path';
 import { columns, RankedLeaderboardData } from './table/columns';
@@ -42,10 +42,12 @@ export default function TablesCard({
   tablesUi,
   caption,
   className,
+  show = [true, true], // [showLeaderboard, showLeaderboardRVU]
 }: {
   tablesUi: Tables;
   caption?: boolean;
   className?: string;
+  show: [boolean, boolean]; // [showLeaderboard, showLeaderboardRVU]
 }) {
   const { leaderboard, leaderboardRVU } = tablesUi;
 
@@ -101,38 +103,44 @@ export default function TablesCard({
     >
       <TooltipProvider>
         <Tabs defaultValue="Leaderboard" className="rounded">
-          <TabsList>
-            <TabsTrigger value="Leaderboard" className="rounded">
-              {leaderboard.tabTitle}
-            </TabsTrigger>
-            <TabsTrigger value="Leaderboard RVU" className="rounded">
-              {leaderboardRVU.tabTitle}
-            </TabsTrigger>
-          </TabsList>
-          <TabsContent value="Leaderboard">
-            <H6 className="mb-0!">{leaderboard.tableTitle}</H6>
-            <DataTable
-              columns={columns(leaderboard.columnTooltips)}
-              data={data}
-            />
-            {caption && (
-              <h6 className="w-full text-center text-muted-foreground">
-                {leaderboard.caption}
-              </h6>
-            )}
-          </TabsContent>
-          <TabsContent value="Leaderboard RVU">
-            <H6 className="mb-0!">{leaderboardRVU.tableTitle}</H6>
-            <DataTable
-              columns={columnsRVU(leaderboardRVU.columnTooltips)}
-              data={dataRVU}
-            />
-            {caption && (
-              <h6 className="w-full text-center text-muted-foreground">
-                {leaderboardRVU.caption}
-              </h6>
-            )}
-          </TabsContent>
+          {show[0] && show[1] && (
+            <TabsList>
+              <TabsTrigger value="Leaderboard" className="rounded">
+                {leaderboard.tabTitle}
+              </TabsTrigger>
+              <TabsTrigger value="Leaderboard RVU" className="rounded">
+                {leaderboardRVU.tabTitle}
+              </TabsTrigger>
+            </TabsList>
+          )}
+          {show[0] && (
+            <TabsContent value="Leaderboard">
+              <H6 className="mb-0!">{leaderboard.tableTitle}</H6>
+              <DataTable
+                columns={columns(leaderboard.columnTooltips)}
+                data={data}
+              />
+              {caption && (
+                <h6 className="w-full text-center text-muted-foreground">
+                  {leaderboard.caption}
+                </h6>
+              )}
+            </TabsContent>
+          )}
+          {show[1] && (
+            <TabsContent value="Leaderboard RVU">
+              <H6 className="mb-0!">{leaderboardRVU.tableTitle}</H6>
+              <DataTable
+                columns={columnsRVU(leaderboardRVU.columnTooltips)}
+                data={dataRVU}
+              />
+              {caption && (
+                <h6 className="w-full text-center text-muted-foreground">
+                  {leaderboardRVU.caption}
+                </h6>
+              )}
+            </TabsContent>
+          )}
         </Tabs>
       </TooltipProvider>
     </div>

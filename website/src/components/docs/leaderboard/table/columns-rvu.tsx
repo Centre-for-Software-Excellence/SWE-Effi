@@ -111,8 +111,10 @@ export const columns = (
       {
         accessorKey: 'avgTotalTimeU',
         header: () => (
-          <TooltipWrapper title={'Unresolved'}>
-            <div className="flex w-full items-center justify-end">U</div>
+          <TooltipWrapper title={''}>
+            <div className="flex w-full items-center justify-end">
+              Unresolved
+            </div>
           </TooltipWrapper>
         ),
         cell: ({ row }) => {
@@ -125,8 +127,8 @@ export const columns = (
       {
         accessorKey: 'avgTotalTimeR',
         header: () => (
-          <TooltipWrapper title={'Unresolved'}>
-            <div className="flex w-full items-center justify-end">R</div>
+          <TooltipWrapper title={''}>
+            <div className="flex w-full items-center justify-end">Resolved</div>
           </TooltipWrapper>
         ),
         cell: ({ row }) => {
@@ -150,8 +152,10 @@ export const columns = (
       {
         accessorKey: 'avgCPUTimeU',
         header: () => (
-          <TooltipWrapper title={'Unresolved'}>
-            <div className="flex w-full items-center justify-end">U</div>
+          <TooltipWrapper title={''}>
+            <div className="flex w-full items-center justify-end">
+              Unresolved
+            </div>
           </TooltipWrapper>
         ),
         cell: ({ row }) => {
@@ -164,8 +168,8 @@ export const columns = (
       {
         accessorKey: 'avgCPUTimeR',
         header: () => (
-          <TooltipWrapper title={'Unresolved'}>
-            <div className="flex w-full items-center justify-end">R</div>
+          <TooltipWrapper title={''}>
+            <div className="flex w-full items-center justify-end">Resolved</div>
           </TooltipWrapper>
         ),
         cell: ({ row }) => {
@@ -189,8 +193,10 @@ export const columns = (
       {
         accessorKey: 'avgInfTimeU',
         header: () => (
-          <TooltipWrapper title={'Unresolved'}>
-            <div className="flex w-full items-center justify-end">U</div>
+          <TooltipWrapper title={''}>
+            <div className="flex w-full items-center justify-end">
+              Unresolved
+            </div>
           </TooltipWrapper>
         ),
         cell: ({ row }) => {
@@ -203,8 +209,8 @@ export const columns = (
       {
         accessorKey: 'avgInfTimeR',
         header: () => (
-          <TooltipWrapper title={'Unresolved'}>
-            <div className="flex w-full items-center justify-end">R</div>
+          <TooltipWrapper title={''}>
+            <div className="flex w-full items-center justify-end">Resolved</div>
           </TooltipWrapper>
         ),
         cell: ({ row }) => {
@@ -228,8 +234,10 @@ export const columns = (
       {
         accessorKey: 'avgTotalTokensU',
         header: () => (
-          <TooltipWrapper title={'Unresolved'}>
-            <div className="flex w-full items-center justify-end">U</div>
+          <TooltipWrapper title={''}>
+            <div className="flex w-full items-center justify-end">
+              Unresolved
+            </div>
           </TooltipWrapper>
         ),
         cell: ({ row }) => {
@@ -242,8 +250,8 @@ export const columns = (
       {
         accessorKey: 'avgTotalTokensR',
         header: () => (
-          <TooltipWrapper title={'Resolved'}>
-            <div className="flex w-full items-center justify-end">R</div>
+          <TooltipWrapper title={''}>
+            <div className="flex w-full items-center justify-end">Resolved</div>
           </TooltipWrapper>
         ),
         cell: ({ row }) => {
@@ -267,8 +275,10 @@ export const columns = (
       {
         accessorKey: 'avgLLMRequestsU',
         header: () => (
-          <TooltipWrapper title={'Unresolved'}>
-            <div className="flex w-full items-center justify-end">U</div>
+          <TooltipWrapper title={''}>
+            <div className="flex w-full items-center justify-end">
+              Unresolved
+            </div>
           </TooltipWrapper>
         ),
         cell: ({ row }) => {
@@ -281,8 +291,8 @@ export const columns = (
       {
         accessorKey: 'avgLLMRequestsR',
         header: () => (
-          <TooltipWrapper title={'Resolved'}>
-            <div className="flex w-full items-center justify-end">R</div>
+          <TooltipWrapper title={''}>
+            <div className="flex w-full items-center justify-end">Resolved</div>
           </TooltipWrapper>
         ),
         cell: ({ row }) => {

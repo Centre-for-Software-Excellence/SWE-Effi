@@ -460,6 +460,10 @@ export function buildLeaderboardTables(opts?: {
     const leaderboardDataEntry: LeaderboardData = {
       scaffold,
       model: model.split(' ').join('-'),
+      gpuEfficiency: record.gpu_efficiency_auc * 100,
+      cpuEfficiency: record.cpu_efficiency_auc * 100,
+      costEfficiency: record.cost_efficiency_auc * 100,
+      tokenEfficiency: record.token_efficiency_auc * 100,
       total: record.avg_duration,
       cpuTime: record.avg_cpu_time,
       inputToken: record.avg_input_tokens / 1000,

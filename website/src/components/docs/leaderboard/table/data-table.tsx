@@ -128,7 +128,7 @@ export function DataTable<TData, TValue>({
           </div>
         </div>
       </div>
-      <ScrollArea className="h-[38rem] rounded-md border">
+      <ScrollArea className="rounded-md border">
         <Table>
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (

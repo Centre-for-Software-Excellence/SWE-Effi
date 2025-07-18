@@ -12,7 +12,11 @@ type Column =
   | 'outputToken'
   | 'calls'
   | 'resolveRate'
-  | 'precision';
+  | 'precision'
+  | 'gpuEfficiency'
+  | 'cpuEfficiency'
+  | 'costEfficiency'
+  | 'tokenEfficiency';
 
 export function rankLeaderboardData(
   data: LeaderboardData[],
@@ -20,7 +24,7 @@ export function rankLeaderboardData(
   const comparator = (
     dataA: LeaderboardData,
     dataB: LeaderboardData,
-    columns: Column[] = ['resolveRate'],
+    columns: Column[] = ['gpuEfficiency'],
   ) => {
     let diff = 0;
     for (const c of columns) {
