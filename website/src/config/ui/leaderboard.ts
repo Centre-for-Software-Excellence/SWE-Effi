@@ -70,7 +70,7 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
   tables: {
     leaderboard: {
       caption:
-        'Beyond just the resolve rate, we quantitatively measure a number of additional metrics such token consumption, local and inference duration, and LLM usage counts to understand the efficiency of agent scaffolds.',
+        'Table 1: Beyond just the resolve rate, we quantitatively measure a number of additional metrics such token consumption, local and inference duration, and LLM usage counts to understand the efficiency of agent scaffolds.',
       tabTitle: 'Table 1',
       tableTitle: 'Scaffold comparison on SWE-bench tasks',
       filterPlaceholder: 'Filter models...',
@@ -93,7 +93,7 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
     },
     leaderboardRVU: {
       caption:
-        'To understand the differences between how agent scaffolds handle successful and failed issue resolution attempts, we compare agent scaffold dynamics between resolved and unresolved cases across token consumption, local/inference duration, and number of LLM requests metrics.',
+        'Table 2: To understand the differences between how agent scaffolds handle successful and failed issue resolution attempts, we compare agent scaffold dynamics between resolved and unresolved cases across token consumption, local/inference duration, and number of LLM requests metrics.',
       tabTitle: 'Table 2',
       tableTitle: 'Token and time costs for resolved and unresolved instances',
       filterPlaceholder: 'Filter models...',
@@ -138,7 +138,7 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
     },
     timePercentageBarChart: {
       title: 'Agent Architecture Fingerprint: Where Does the Time Go? ',
-      description: '(on average non-resolved runs)',
+      description: '(on average)',
       overview: 'Overview of the time percentage bar chart...',
       insight: 'Insight about the time percentage bar chart...',
       xAxisLabel: 'Percentage of Total Runtime (Model Time %)',
