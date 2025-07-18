@@ -39,8 +39,9 @@ interface LeaderboardUIConfig {
 }
 
 export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
-  title: 'Holistic Evaluation of LLM-Based SWE Scaffolds', // main title
-  description: 'Lead description of the leaderboard...', // main description
+  title: 'SWE-Effi: Holistic Evaluation of LLM-Based SWE Scaffolds', // main title
+  description:
+    'We introduce SWE-Effi, a new leaderboard that re-evaluates agents based on holistic efficiency scores beyond simple resolve rate, offering a deeper insights into the balance between resolve rate (the outcome) and the resources consumed (token cost and execution time). ', // main description
   // links for the buttons in the header
   buttonLinks: [
     {
