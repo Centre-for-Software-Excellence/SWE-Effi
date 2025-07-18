@@ -102,7 +102,7 @@ export const columns = (
             className="flex items-center justify-start"
           >
             <ArrowUpDown className="mr-2 h-4 w-4" />
-            Inference Efficiency
+            Inference Efficiency (%)
           </button>
         </TooltipWrapper>
       );
@@ -127,7 +127,7 @@ export const columns = (
             className="flex items-center justify-start"
           >
             <ArrowUpDown className="mr-2 h-4 w-4" />
-            CPU Efficiency
+            CPU Efficiency (%)
           </button>
         </TooltipWrapper>
       );
@@ -152,7 +152,7 @@ export const columns = (
             className="flex items-center justify-start"
           >
             <ArrowUpDown className="mr-2 h-4 w-4" />
-            Cost Efficiency
+            Cost Efficiency (%)
           </button>
         </TooltipWrapper>
       );
@@ -177,7 +177,7 @@ export const columns = (
             className="flex items-center justify-start"
           >
             <ArrowUpDown className="h- 4 mr-2 w-4" />
-            Token Efficiency
+            Token Efficiency (%)
           </button>
         </TooltipWrapper>
       );
@@ -254,7 +254,7 @@ export const columns = (
             className="flex items-center justify-start"
           >
             <ArrowUpDown className="mr-2 h-4 w-4" />
-            CPU Time (seconds)
+            Mean CPU Time (seconds)
           </button>
         </TooltipWrapper>
       );
@@ -299,7 +299,7 @@ export const columns = (
             className="flex items-center justify-start"
           >
             <ArrowUpDown className="mr-2 h-4 w-4" />
-            Input tokens (K)
+            Mean Input tokens (K)
           </button>
         </TooltipWrapper>
       );
@@ -320,7 +320,7 @@ export const columns = (
             className="flex items-center justify-start"
           >
             <ArrowUpDown className="mr-2 h-4 w-4" />
-            Output tokens (K)
+            Mean Output tokens (K)
           </button>
         </TooltipWrapper>
       );
@@ -340,7 +340,8 @@ export const columns = (
             onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
             className="flex items-center justify-start"
           >
-            <ArrowUpDown className="mr-2 h-4 w-4" /># of LLM calls
+            <ArrowUpDown className="mr-2 h-4 w-4" />
+            Mean number of LLM calls
           </button>
         </TooltipWrapper>
       );

@@ -1,5 +1,6 @@
 import { Suspense } from 'react';
 
+import { UnderlineLink } from '@/components/common/underline-link';
 import { H4, Lead } from '@/components/md';
 import { getLeaderboardUIConfig } from '@/config/ui/leaderboard';
 import { CallsBarChart } from './chart/calls-bar-chart';
@@ -20,7 +21,20 @@ export default function AnalyticsCard() {
       {ui.title && (
         <H4 className="my-8 flex w-full items-center gap-2">{ui.title}</H4>
       )}
-      {ui.description && <Lead>{ui.description}</Lead>}
+      {ui.description && (
+        <Lead>
+          {ui.description + ' '}
+          <UnderlineLink
+            href={ui?.blogLink || '#'}
+            className="text-base font-bold text-active"
+          >
+            blog post
+          </UnderlineLink>
+        </Lead>
+      )}
+      <Suspense fallback={<div className="h-96 w-full" />}>
+        <MetricsRadarChart {...metricRadarChartUI} />
+      </Suspense>
       <Suspense fallback={<div className="h-96 w-full" />}>
         <ResolveRateLineChart {...resolveRateChartUI} />
       </Suspense>
@@ -32,9 +46,6 @@ export default function AnalyticsCard() {
       </Suspense>
       <Suspense fallback={<div className="h-96 w-full" />}>
         <CostBarChart {...costBarChartUI} />
-      </Suspense>
-      <Suspense fallback={<div className="h-96 w-full" />}>
-        <MetricsRadarChart {...metricRadarChartUI} />
       </Suspense>
     </section>
   );

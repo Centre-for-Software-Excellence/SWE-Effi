@@ -67,9 +67,6 @@ export function ChartSettings({
   field,
   log = false,
 }: ChartSettingsProps) {
-  if (log) {
-    console.log(' all the proprs: ', domain, min, max, step, log);
-  }
   const logToLinear = (value: number) => {
     const index = getPowerOfTenValues.findIndex((v) => v === value);
     return index;

@@ -27,7 +27,7 @@ export default function Page() {
           className="mx-auto h-16 w-auto sm:h-20 md:h-24 lg:h-28"
         />
 
-        <H1 className="bg-gradient-to-r from-zinc-900 via-zinc-700 to-zinc-600/85 bg-clip-text text-center leading-tight font-extrabold! tracking-tight text-transparent md:text-5xl! dark:from-zinc-500/80 dark:via-zinc-200 dark:to-zinc-300">
+        <H1 className="bg-gradient-to-r from-zinc-900 via-zinc-700 to-zinc-600/85 bg-clip-text text-center leading-tight font-extrabold! tracking-tight text-transparent md:text-4xl! dark:from-zinc-500/80 dark:via-zinc-200 dark:to-zinc-300">
           {ui.title}
         </H1>
         <P className="text-center">{ui.description}</P>

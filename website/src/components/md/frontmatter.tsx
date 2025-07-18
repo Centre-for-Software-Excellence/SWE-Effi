@@ -23,14 +23,10 @@ export function Frontmatter({ className }: { className?: string }) {
         {/*   ))} */}
         {/* </div> */}
         {frontmatter?.date && (
-          <div className="flex w-full flex-row items-center">
-            {/* <div className="flex flex-row gap-2"> */}
-            {/*   {frontmatter?.author?.map((author, index) => ( */}
-            {/*     <A href="" key={index} className="text-muted-foreground"> */}
-            {/*       {author} */}
-            {/*     </A> */}
-            {/*   ))} */}
-            {/* </div> */}
+          <div className="flex w-full flex-row items-center justify-between">
+            <div className="flex flex-row gap-2 text-muted-foreground">
+              {(frontmatter?.author && frontmatter.author) || ' '}
+            </div>
             <Muted>{frontmatter?.date}</Muted>
           </div>
         )}

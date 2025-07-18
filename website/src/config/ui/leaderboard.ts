@@ -24,6 +24,7 @@ interface LeaderboardUIConfig {
   analytics: {
     title?: string;
     description?: string;
+    blogLink?: string;
     resolveRateLineChart: ChartProps;
     numCallsBarChart: ChartProps;
     timePercentageBarChart: ChartProps;
@@ -39,7 +40,7 @@ interface LeaderboardUIConfig {
 }
 
 export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
-  title: 'SWE-Effi: Holistic Evaluation of LLM-Based SWE Scaffolds', // main title
+  title: 'SWE-Effi: Holistic Efficiency Evaluation of LLM-Based SWE Scaffolds', // main title
   description:
     'We introduce SWE-Effi, a new leaderboard that re-evaluates agents based on holistic efficiency scores beyond simple resolve rate, offering a deeper insights into the balance between resolve rate (the outcome) and the resources consumed (token cost and execution time). ', // main description
   // links for the buttons in the header
@@ -114,7 +115,8 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
   analytics: {
     title: 'Analytics',
     description:
-      'Here we provide an in-depth analysis on the operational dynamics of agent scaffolds beyond just the resolve rate, with quantitative measurements and comparison between different metrics',
+      'Here are some visualization highlights of our analysis, for more details please read our ',
+    blogLink: '/benchmark/agent-scaffold-blog',
     resolveRateLineChart: {
       title: 'Resolve rate vs. total tokens used',
       description:
