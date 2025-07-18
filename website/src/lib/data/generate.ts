@@ -215,7 +215,7 @@ export function buildCallsBarChart(opts?: {
     ) || {
       scaffold,
     };
-    entry[model] = record.llm_calls || 0;
+    entry[model] = record.avg_llm_calls || 0;
     callsData = [...callsData.filter((e) => e.scaffold !== scaffold), entry];
 
     if (!callsCfg[model]) {
