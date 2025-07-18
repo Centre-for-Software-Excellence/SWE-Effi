@@ -79,15 +79,13 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
         rank: 'Ranked by resolve rate',
         scaffold: 'Name of the agent scaffold',
         model: 'LLM name',
-        total: 'Total mean duration including CPU and inference time (seconds)',
+        total: 'Total mean duration including CPU and inference time',
         cpuTime: "Duration of agent scaffold's local operations (seconds)",
-        inputToken:
-          'Mean number of input tokens used for single issue, measured in thousands',
-        outputToken:
-          'Mean number of output tokens used for single issue, measured in thousands',
+        inputToken: 'Mean number of input tokens used for single issue',
+        outputToken: 'Mean number of output tokens used for single issue',
         calls: 'Number of inference calls to the LLM',
         infTime:
-          'Normalized Inference Time (NIM): mean normalized LLM inference time per single issue (seconds)',
+          'Normalized Inference Time (NIM): mean normalized LLM inference time per single issue',
         resolveRate:
           'Number of generated patches that correctly resolved the issue',
         precision: 'Precision of the generated patches',
@@ -130,7 +128,7 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
     numCallsBarChart: {
       title: 'Mean Num. of LLM calls per instance',
       description:
-        'How many times did the agent scaffold use an LLM to attempt issue resolution',
+        'How many LLM requests did the agent scaffold use to attempt to issue resolution.',
       overview: 'Overview of the number of calls bar chart...',
       insight: 'Insight about the number of calls bar chart...',
       xAxisLabel: 'Scaffold',

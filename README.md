@@ -1,3 +1,3 @@
 <h1 align="center">
-  SWE Lens
+  SWE Effi
 </h1>

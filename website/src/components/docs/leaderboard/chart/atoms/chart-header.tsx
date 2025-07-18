@@ -27,7 +27,15 @@ export function ChartHeader({
       >
         <div className="flex w-full flex-row items-start justify-between">
           <div>
-            <CardTitle className="text-sm md:text-lg">{title}</CardTitle>
+            <CardTitle className="text-sm md:text-lg">
+              {title.length > 0 &&
+                title
+                  .split(' ')
+                  .map(
+                    (word) => word && word?.[0].toUpperCase() + word.slice(1),
+                  )
+                  .join(' ')}
+            </CardTitle>
             <CardDescription className="text-sm md:text-base">
               {description}
             </CardDescription>

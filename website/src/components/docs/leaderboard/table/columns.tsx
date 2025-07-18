@@ -98,7 +98,7 @@ export const columns = (
             className="flex items-center justify-start"
           >
             <ArrowUpDown className="mr-2 h-4 w-4" />
-            Total Time
+            Total Time (seconds)
           </button>
         </TooltipWrapper>
       );
@@ -119,7 +119,7 @@ export const columns = (
             className="flex items-center justify-start"
           >
             <ArrowUpDown className="mr-2 h-4 w-4" />
-            CPU Time
+            CPU Time (seconds)
           </button>
         </TooltipWrapper>
       );
@@ -140,7 +140,7 @@ export const columns = (
             className="flex items-center justify-start"
           >
             <ArrowUpDown className="mr-2 h-4 w-4" />
-            Input tokens
+            Input tokens (K)
           </button>
         </TooltipWrapper>
       );
@@ -161,7 +161,7 @@ export const columns = (
             className="flex items-center justify-start"
           >
             <ArrowUpDown className="mr-2 h-4 w-4" />
-            Output tokens
+            Output tokens (K)
           </button>
         </TooltipWrapper>
       );
@@ -203,7 +203,7 @@ export const columns = (
             className="flex items-center justify-start"
           >
             <ArrowUpDown className="mr-2 h-4 w-4" />
-            Inference Time
+            Inference Time (seconds)
           </button>
         </TooltipWrapper>
       );
@@ -224,7 +224,7 @@ export const columns = (
             className="flex items-center justify-start"
           >
             <ArrowUpDown className="mr-2 h-4 w-4" />
-            Resolve Rate
+            Resolve Rate (%)
           </button>
         </TooltipWrapper>
       );

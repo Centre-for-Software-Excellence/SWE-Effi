@@ -104,7 +104,7 @@ export const columns = (
     id: 'avgTotalTime',
     header: () => (
       <TooltipWrapper title={tooltips?.avgTotalTime}>
-        <span>Avg Total Time</span>
+        <span>Avg Total Time (seconds)</span>
       </TooltipWrapper>
     ),
     columns: [
@@ -143,7 +143,7 @@ export const columns = (
     id: 'avgCPUTime',
     header: () => (
       <TooltipWrapper title={tooltips?.avgCPUTime}>
-        <span>Avg CPU Time</span>
+        <span>Avg CPU Time (seconds)</span>
       </TooltipWrapper>
     ),
     columns: [
@@ -182,7 +182,7 @@ export const columns = (
     id: 'avgInfTime',
     header: () => (
       <TooltipWrapper title={tooltips?.avgInfTime}>
-        <span>Avg Inference Time</span>
+        <span>Avg Inference Time (seconds)</span>
       </TooltipWrapper>
     ),
     columns: [
@@ -221,7 +221,7 @@ export const columns = (
     id: 'avgTotalTokens',
     header: () => (
       <TooltipWrapper title={tooltips?.avgTotalTokens}>
-        <span>Avg Total Tokens</span>
+        <span>Avg Total Tokens (K)</span>
       </TooltipWrapper>
     ),
     columns: [
