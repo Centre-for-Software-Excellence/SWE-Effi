@@ -3,6 +3,7 @@ import MiniSearch, {
   SearchResult,
   Suggestion,
 } from 'minisearch';
+import { getBasePath } from '@/lib/utils/path';
 
 type Options = SearchOptions & {
   limit?: number;
@@ -25,7 +26,7 @@ class SearchService {
   async initialize() {
     if (this.initialized) return;
 
-    const index = await fetch('/search/index.json')
+    const index = await fetch(getBasePath('search/index.json'))
       .then((res) => res.text())
       .catch((err) => {
         console.error('Failed to load search index:', err);

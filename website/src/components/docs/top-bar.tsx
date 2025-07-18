@@ -38,7 +38,7 @@ export const TopBar = ({
       <div className="flex h-12 w-full items-center justify-between text-sm md:text-lg">
         <div className="md:justify-none relative flex flex-1 items-center justify-between gap-2 px-2 md:flex-none">
           <Link
-            to="/"
+            to="/SWE-Effi/"
             className="group relative block transition-all duration-300"
           >
             <div className="h-full bg-gradient-to-r from-zinc-900 via-zinc-700 to-zinc-600 bg-clip-text py-2 text-xl font-bold tracking-tight text-transparent md:w-70 md:text-2xl dark:from-zinc-100 dark:via-zinc-300 dark:to-zinc-400">

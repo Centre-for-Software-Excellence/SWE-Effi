@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 
 import { ChartConfig } from '@/components/common/ui/chart';
+import { getBasePath } from '@/lib/utils/path';
 
 interface UseChartDataResult<T> {
   data: T[];
@@ -22,8 +23,8 @@ export function useChartData<T>(
 
   useEffect(() => {
     Promise.all([
-      fetch(dataEndpoint).then((res) => res.json()),
-      fetch(configEndpoint).then((res) => res.json()),
+      fetch(getBasePath(dataEndpoint)).then((res) => res.json()),
+      fetch(getBasePath(configEndpoint)).then((res) => res.json()),
     ])
       .then(([chartData, chartConfig]) => {
         setData(chartData);

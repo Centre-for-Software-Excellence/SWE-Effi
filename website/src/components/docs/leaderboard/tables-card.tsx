@@ -10,6 +10,7 @@ import {
 } from '@/components/common/ui/tabs';
 import { H6, P } from '@/components/md';
 import { cn } from '@/lib/utils';
+import { getBasePath } from '@/lib/utils/path';
 import { columns, RankedLeaderboardData } from './table/columns';
 import {
   columns as columnsRVU,
@@ -54,10 +55,10 @@ export default function TablesCard({
   const [error, setError] = useState('');
   useEffect(() => {
     Promise.all([
-      fetch('/data/benchmark/table/leaderboard/data.json').then((res) =>
+      fetch(getBasePath('data/benchmark/table/leaderboard/data.json')).then((res) =>
         res.json(),
       ),
-      fetch('/data/benchmark/table/leaderboard/data-rvu.json').then((res) =>
+      fetch(getBasePath('data/benchmark/table/leaderboard/data-rvu.json')).then((res) =>
         res.json(),
       ),
     ])

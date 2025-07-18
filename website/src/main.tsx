@@ -9,7 +9,7 @@ import '@/styles/index.css';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/SWE-Effi">
       <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
         <Routes>
           <Route path="/*" element={<Docs />} />
