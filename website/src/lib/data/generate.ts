@@ -470,7 +470,7 @@ export function buildLeaderboardTables(opts?: {
       inputToken: record.avg_input_tokens / 1000,
       outputToken: record.avg_output_tokens / 1000,
       calls: record.avg_llm_calls,
-      infTime: record.avg_measured_gpu_time,
+      infTime: record.avg_gpu_time,
       resolveRate: (record.resolved / record.total_projects) * 100,
       precision: record.precision * 100,
     };
@@ -482,8 +482,8 @@ export function buildLeaderboardTables(opts?: {
       avgTotalTimeR: record.resolved_avg_duration,
       avgCPUTimeU: record.unresolved_avg_cpu_time,
       avgCPUTimeR: record.resolved_avg_cpu_time,
-      avgInfTimeU: record.unresolved_avg_measured_gpu_time,
-      avgInfTimeR: record.resolved_avg_measured_gpu_time,
+      avgInfTimeU: record.unresolved_avg_gpu_time,
+      avgInfTimeR: record.resolved_avg_gpu_time,
       avgTotalTokensU:
         (record.unresolved_avg_input_tokens +
           record.unresolved_avg_output_tokens) /

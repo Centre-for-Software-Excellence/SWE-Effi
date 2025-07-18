@@ -7,7 +7,7 @@
     "inputToken": 25.96546,
     "outputToken": 41.381,
     "calls": 83.06,
-    "infTime": 7136.432957143784,
+    "infTime": 209.41661583371916,
     "resolveRate": 48,
     "precision": 48.97959183673469,
     "rank": 1
@@ -20,7 +20,7 @@
     "inputToken": 55.463300000000004,
     "outputToken": 20.36002,
     "calls": 14.7,
-    "infTime": 641.50054,
+    "infTime": 105.59716722922596,
     "resolveRate": 38,
     "precision": 38,
     "rank": 2
@@ -33,7 +33,7 @@
     "inputToken": 335.384,
     "outputToken": 16.664240000000003,
     "calls": 19.46,
-    "infTime": 579.5773376131058,
+    "infTime": 99.06401730890998,
     "resolveRate": 34,
     "precision": 36.95652173913043,
     "rank": 3
@@ -46,7 +46,7 @@
     "inputToken": 34.107279999999996,
     "outputToken": 9.308879999999998,
     "calls": 1.98,
-    "infTime": 7437.616426944733,
+    "infTime": 49.44470978489757,
     "resolveRate": 28.000000000000004,
     "precision": 48.275862068965516,
     "rank": 4
@@ -59,7 +59,7 @@
     "inputToken": 63.910779999999995,
     "outputToken": 32.40224,
     "calls": 80,
-    "infTime": 295.88197777271273,
+    "infTime": 166.15308781246978,
     "resolveRate": 28.000000000000004,
     "precision": 32.55813953488372,
     "rank": 5
@@ -72,7 +72,7 @@
     "inputToken": 416.08258,
     "outputToken": 14.49832,
     "calls": 38.26,
-    "infTime": 114.31098,
+    "infTime": 91.67968761601273,
     "resolveRate": 28.000000000000004,
     "precision": 28.000000000000004,
     "rank": 6
@@ -85,7 +85,7 @@
     "inputToken": 440.18386,
     "outputToken": 41.0027,
     "calls": 35.48,
-    "infTime": 1215.9016800000002,
+    "infTime": 225.19551720776434,
     "resolveRate": 28.000000000000004,
     "precision": 28.000000000000004,
     "rank": 7
@@ -98,7 +98,7 @@
     "inputToken": 29.4144,
     "outputToken": 27.693540000000002,
     "calls": 82.34,
-    "infTime": 177.15144491672515,
+    "infTime": 141.1441005833258,
     "resolveRate": 26,
     "precision": 27.659574468085108,
     "rank": 8
@@ -111,7 +111,7 @@
     "inputToken": 35.249120000000005,
     "outputToken": 0.31856,
     "calls": 1.98,
-    "infTime": 73.86181306838989,
+    "infTime": 4.553417406299095,
     "resolveRate": 20,
     "precision": 25.64102564102564,
     "rank": 9
@@ -124,7 +124,7 @@
     "inputToken": 897.10596,
     "outputToken": 4.87824,
     "calls": 30.8,
-    "infTime": 126.47541371822358,
+    "infTime": 64.11140854656797,
     "resolveRate": 20,
     "precision": 20.833333333333336,
     "rank": 10
@@ -137,7 +137,7 @@
     "inputToken": 276.65152,
     "outputToken": 14.203280000000001,
     "calls": 39.5,
-    "infTime": 265.47246,
+    "infTime": 84.25695588044911,
     "resolveRate": 12,
     "precision": 12,
     "rank": 11
@@ -150,7 +150,7 @@
     "inputToken": 193.74874,
     "outputToken": 3.24038,
     "calls": 29.12,
-    "infTime": 48.44774000000001,
+    "infTime": 25.920095447466082,
     "resolveRate": 12,
     "precision": 14.285714285714285,
     "rank": 12
@@ -163,7 +163,7 @@
     "inputToken": 737.3560476190476,
     "outputToken": 1.6971190476190476,
     "calls": 34.333333333333336,
-    "infTime": 60.51394598824637,
+    "infTime": 41.39522473998367,
     "resolveRate": 11.904761904761903,
     "precision": 26.31578947368421,
     "rank": 13
@@ -176,7 +176,7 @@
     "inputToken": 8142.82706,
     "outputToken": 24.391939999999998,
     "calls": 180.96,
-    "infTime": 660.34554,
+    "infTime": 470.74593734787743,
     "resolveRate": 10,
     "precision": 10.204081632653061,
     "rank": 14
@@ -189,7 +189,7 @@
     "inputToken": 37.46986,
     "outputToken": 1.65234,
     "calls": 2,
-    "infTime": 311.0391438007355,
+    "infTime": 11.3153300012434,
     "resolveRate": 4,
     "precision": 66.66666666666666,
     "rank": 15

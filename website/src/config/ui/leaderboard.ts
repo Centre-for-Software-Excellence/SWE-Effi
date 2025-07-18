@@ -69,66 +69,68 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
   // leaderboard tables configuration
   tables: {
     leaderboard: {
-      caption: 'Table 1: Scaffold comparison on SWE-bench tasks',
+      caption:
+        'Beyond just the resolve rate, we quantitatively measure a number of additional metrics such token consumption, local and inference duration, and LLM usage counts to understand the efficiency of agent scaffolds.',
       tabTitle: 'Table 1',
       tableTitle: 'Scaffold comparison on SWE-bench tasks',
       filterPlaceholder: 'Filter models...',
       // if the tooltips is "" or not defined, the tooltip will not be shown
       columnTooltips: {
         rank: 'Ranked by resolve rate',
-        scaffold: '',
-        model: '',
-        total: '',
-        cpuTime: '',
-        inputToken: 'Number of Input tokens in thousands',
-        outputToken: 'Number of Output tokens in thousands',
+        scaffold: 'Name of the agent scaffold',
+        model: 'LLM name',
+        total: 'Total mean duration including CPU and inference time (seconds)',
+        cpuTime: "Duration of agent scaffold's local operations (seconds)",
+        inputToken:
+          'Mean number of input tokens used for single issue, measured in thousands',
+        outputToken:
+          'Mean number of output tokens used for single issue, measured in thousands',
         calls: 'Number of inference calls to the LLM',
-        infTime: '',
+        infTime:
+          'Normalized Inference Time (NIM): mean normalized LLM inference time per single issue (seconds)',
         resolveRate:
-          'Number of generated patches that correct resolved the issue',
+          'Number of generated patches that correctly resolved the issue',
         precision: 'Precision of the generated patches',
       },
     },
     leaderboardRVU: {
       caption:
-        'Table 2: Token and time costs for resolved and unresolved instances',
+        'To understand the differences between how agent scaffolds handle successful and failed issue resolution attempts, we compare agent scaffold dynamics between resolved and unresolved cases across token consumption, local/inference duration, and number of LLM requests metrics.',
       tabTitle: 'Table 2',
       tableTitle: 'Token and time costs for resolved and unresolved instances',
       filterPlaceholder: 'Filter models...',
       // if the tooltips is "" or not defined, the tooltip will not be shown
       columnTooltips: {
         rank: 'Ranked by total time resolved',
-        scaffold: '',
-        model: '',
-        avgTotalTimeU: '',
-        avgTotalTimeR: '',
-        avgCPUTimeU: '',
-        avgCPUTimeR: '',
-        avgInfTimeU: '',
-        avgInfTimeR: '',
-        avgTotalTokensU: '',
-        avgTotalTokensR: '',
-        avgLLMRequestsU: '',
-        avgLLMRequestsR: '',
+        scaffold: 'Name of the agent scaffold',
+        model: 'LLM name',
+        avgTotalTime: 'Mean total duration per instance',
+        avgCPUTime: 'Mean CPU task duration per instance',
+        avgInfTime: 'Mean Normalized Inference Time (NIM) per instance',
+        avgTotalTokens: 'Mean number of total tokens used per instance',
+        avgLLMRequests: 'Mean number of LLM API calls per instance',
       },
     },
   },
   analytics: {
     title: 'Analytics',
-    description: 'Lead description about the analytics...',
+    description:
+      'Here we provide an in-depth analysis on the operational dynamics of agent scaffolds beyond just the resolve rate, with quantitative measurements and comparison between different metrics',
     resolveRateLineChart: {
-      title: 'Resolve Rate Line Chart',
-      description: 'Lead description about the resolve rate line chart...',
-      overview: 'Overview of the resolve rate line chart...',
+      title: 'Resolve rate vs. total tokens used',
+      description:
+        'Issue resolve rate across the number of total tokens used per issue (in millions of tokens).',
+      overview: '',
       insight: 'Insight about the resolve rate line chart...',
-      xAxisLabel: 'Total Tokens (input + output, in millions)',
+      xAxisLabel: 'Total Tokens (input tokens + output tokens) (Millions)',
       yAxisLabel: 'Resolve Rate',
       // ignore this
       xAxisDataKey: 'totalTokens',
     },
     numCallsBarChart: {
-      title: 'Number of Calls Bar Chart',
-      description: 'Lead description about the number of calls bar chart...',
+      title: 'Mean Num. of LLM calls per instance',
+      description:
+        'How many times did the agent scaffold use an LLM to attempt issue resolution',
       overview: 'Overview of the number of calls bar chart...',
       insight: 'Insight about the number of calls bar chart...',
       xAxisLabel: 'Scaffold',
@@ -148,7 +150,8 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
     },
     costBarChart: {
       title: 'The Cost of Success vs. The Cost of Failure',
-      description: 'Lead description about the cost bar chart...',
+      description:
+        'How many tokens did the agent scaffold use on successfully resolved instances compared to failed attempts.',
       overview: 'Overview of the cost bar chart...',
       insight: 'Insight about the cost bar chart...',
       xAxisLabel: 'Average Token Cost (Log Scale)',
@@ -157,8 +160,9 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
       yAxisDataKey: 'scaffold-model',
     },
     metricsRadarChart: {
-      title: 'Metrics Radar Chart',
-      description: 'Lead description about the metrics radar chart...',
+      title: 'Efficiency in multiple dimensions',
+      description:
+        'How efficient is the agent scaffold in terms of resolving issues, use of tokens, monetary cost, use of local resources, and LLM inference duration. Measured in normalized AUC (Area Under Curve).',
       overview: 'Overview of the metrics radar chart...',
       insight: 'Insight about the metrics radar chart...',
       // ignore this

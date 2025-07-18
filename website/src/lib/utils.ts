@@ -106,7 +106,7 @@ export function formatScore(score: string | undefined): string {
   const res = !score
     ? 'N/A'
     : parseFloat(score).toLocaleString('en-US', {
-        minimumFractionDigits: 0,
+        minimumFractionDigits: 1,
         maximumFractionDigits: 1,
       });
   return res;

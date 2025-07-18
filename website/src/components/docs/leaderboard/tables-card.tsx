@@ -13,12 +13,17 @@ import { cn } from '@/lib/utils';
 import { columns, RankedLeaderboardData } from './table/columns';
 import {
   columns as columnsRVU,
+  LeaderboardRVUTooltips,
   RankedLeaderboardRVUData,
 } from './table/columns-rvu';
 import { DataTable } from './table/data-table';
 
 export type ColumnTooltips = Partial<
-  Record<keyof RankedLeaderboardRVUData | keyof RankedLeaderboardData, string>
+  Record<
+    | (keyof RankedLeaderboardRVUData | keyof LeaderboardRVUTooltips)
+    | keyof RankedLeaderboardData,
+    string
+  >
 >;
 export type Table = {
   caption: string;
@@ -89,7 +94,7 @@ export default function TablesCard({
   return (
     <div
       className={cn(
-        'overflow-x-auto font-sans text-foreground md:px-2',
+        'overflow-x-auto bg-background font-sans text-foreground md:px-2',
         className,
       )}
     >

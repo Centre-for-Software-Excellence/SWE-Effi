@@ -9,6 +9,7 @@ import PartnersCard from '@/components/docs/leaderboard/partners-card';
 import TablesCard from '@/components/docs/leaderboard/tables-card';
 import { H1, P } from '@/components/md';
 import { getLeaderboardUIConfig } from '@/config/ui/leaderboard';
+import { cn } from '@/lib/utils';
 
 const AnalyticsCard = lazy(
   () => import('@/components/docs/leaderboard/analytics-card'),
@@ -26,12 +27,17 @@ export default function Page() {
         <P className="text-center">{ui.description}</P>
         <div className="mb-0 flex w-full flex-wrap justify-center gap-4 px-4 py-2 sm:px-2 md:gap-8">
           {ui.buttonLinks?.map(
-            ({ title, href: link, external, icon: Icon }, idx) => (
+            ({ title, href: link, external, icon: Icon, disabled }, idx) => (
               <Button
+                disabled={disabled}
                 key={title + idx}
                 variant="default"
                 size="lg"
-                className="h-12 w-full rounded-full bg-foreground text-xl text-background transition-all duration-300 hover:scale-110 hover:border hover:border-foreground hover:bg-background hover:text-foreground xs:w-36"
+                className={cn(
+                  'h-12 w-full rounded-full bg-foreground text-xl text-background transition-all duration-300 xs:w-36',
+                  !disabled &&
+                    'hover:scale-110 hover:border hover:border-foreground hover:bg-background hover:text-foreground',
+                )}
                 onClick={() => {
                   if (external) {
                     window.open(link, '_blank', 'noopener,noreferrer');
@@ -47,7 +53,7 @@ export default function Page() {
           )}
         </div>
         <Divider className="my-16" />
-        <TablesCard tablesUi={ui.tables} />
+        <TablesCard tablesUi={ui.tables} caption={true} />
         <Divider className="my-18" />
         <Suspense fallback={<div className="h-96 w-full" />}>
           <AnalyticsCard />

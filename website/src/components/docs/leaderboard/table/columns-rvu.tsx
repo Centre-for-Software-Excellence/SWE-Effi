@@ -20,6 +20,14 @@ export type LeaderboardRVUData = {
   avgLLMRequestsR: number;
 };
 
+export type LeaderboardRVUTooltips = {
+  avgTotalTime: string;
+  avgCPUTime: string;
+  avgInfTime: string;
+  avgTotalTokens: string;
+  avgLLMRequests: string;
+};
+
 export type RankedLeaderboardRVUData = LeaderboardRVUData & {
   rank: number;
 };
@@ -36,8 +44,8 @@ export const columns = (
             onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
             className="flex items-center justify-start"
           >
+            <ArrowUpDown className="mr-2 h-4 w-4" />
             Rank
-            <ArrowUpDown className="ml-2 h-4 w-4" />
           </button>
         </TooltipWrapper>
       );
@@ -94,30 +102,38 @@ export const columns = (
   // Grouped column for Avg Total Time
   {
     id: 'avgTotalTime',
-    header: () => <span>Avg Total Time</span>,
+    header: () => (
+      <TooltipWrapper title={tooltips?.avgTotalTime}>
+        <span>Avg Total Time</span>
+      </TooltipWrapper>
+    ),
     columns: [
       {
         accessorKey: 'avgTotalTimeU',
         header: () => (
-          <TooltipWrapper title={tooltips?.avgTotalTimeU}>
-            <span>U</span>
+          <TooltipWrapper title={'Unresolved'}>
+            <div className="flex w-full items-center justify-end">U</div>
           </TooltipWrapper>
         ),
         cell: ({ row }) => {
           const value: string = row.getValue('avgTotalTimeU');
-          return <div className="font-medium">{formatScore(value)}</div>;
+          return (
+            <div className="text-right font-medium">{formatScore(value)}</div>
+          );
         },
       },
       {
         accessorKey: 'avgTotalTimeR',
         header: () => (
-          <TooltipWrapper title={tooltips?.avgTotalTimeR}>
-            <span>R</span>
+          <TooltipWrapper title={'Unresolved'}>
+            <div className="flex w-full items-center justify-end">R</div>
           </TooltipWrapper>
         ),
         cell: ({ row }) => {
           const value: string = row.getValue('avgTotalTimeR');
-          return <div className="font-medium">{formatScore(value)}</div>;
+          return (
+            <div className="text-right font-medium">{formatScore(value)}</div>
+          );
         },
       },
     ],
@@ -125,30 +141,38 @@ export const columns = (
   // Grouped column for Avg CPU Time
   {
     id: 'avgCPUTime',
-    header: () => <span>Avg CPU Time</span>,
+    header: () => (
+      <TooltipWrapper title={tooltips?.avgCPUTime}>
+        <span>Avg CPU Time</span>
+      </TooltipWrapper>
+    ),
     columns: [
       {
         accessorKey: 'avgCPUTimeU',
         header: () => (
-          <TooltipWrapper title={tooltips?.avgCPUTimeU}>
-            <span>U</span>
+          <TooltipWrapper title={'Unresolved'}>
+            <div className="flex w-full items-center justify-end">U</div>
           </TooltipWrapper>
         ),
         cell: ({ row }) => {
           const value: string = row.getValue('avgCPUTimeU');
-          return <div className="font-medium">{formatScore(value)}</div>;
+          return (
+            <div className="text-right font-medium">{formatScore(value)}</div>
+          );
         },
       },
       {
         accessorKey: 'avgCPUTimeR',
         header: () => (
-          <TooltipWrapper title={tooltips?.avgCPUTimeR}>
-            <span>R</span>
+          <TooltipWrapper title={'Unresolved'}>
+            <div className="flex w-full items-center justify-end">R</div>
           </TooltipWrapper>
         ),
         cell: ({ row }) => {
           const value: string = row.getValue('avgCPUTimeR');
-          return <div className="font-medium">{formatScore(value)}</div>;
+          return (
+            <div className="text-right font-medium">{formatScore(value)}</div>
+          );
         },
       },
     ],
@@ -156,30 +180,38 @@ export const columns = (
   // Grouped column for Avg Inference Time
   {
     id: 'avgInfTime',
-    header: () => <span>Avg Inference Time</span>,
+    header: () => (
+      <TooltipWrapper title={tooltips?.avgInfTime}>
+        <span>Avg Inference Time</span>
+      </TooltipWrapper>
+    ),
     columns: [
       {
         accessorKey: 'avgInfTimeU',
         header: () => (
-          <TooltipWrapper title={tooltips?.avgInfTimeU}>
-            <span>U</span>
+          <TooltipWrapper title={'Unresolved'}>
+            <div className="flex w-full items-center justify-end">U</div>
           </TooltipWrapper>
         ),
         cell: ({ row }) => {
           const value: string = row.getValue('avgInfTimeU');
-          return <div className="font-medium">{formatScore(value)}</div>;
+          return (
+            <div className="text-right font-medium">{formatScore(value)}</div>
+          );
         },
       },
       {
         accessorKey: 'avgInfTimeR',
         header: () => (
-          <TooltipWrapper title={tooltips?.avgInfTimeR}>
-            <span>R</span>
+          <TooltipWrapper title={'Unresolved'}>
+            <div className="flex w-full items-center justify-end">R</div>
           </TooltipWrapper>
         ),
         cell: ({ row }) => {
           const value: string = row.getValue('avgInfTimeR');
-          return <div className="font-medium">{formatScore(value)}</div>;
+          return (
+            <div className="text-right font-medium">{formatScore(value)}</div>
+          );
         },
       },
     ],
@@ -187,30 +219,38 @@ export const columns = (
   // Grouped column for Avg Total Tokens
   {
     id: 'avgTotalTokens',
-    header: () => <span>Avg Total Tokens</span>,
+    header: () => (
+      <TooltipWrapper title={tooltips?.avgTotalTokens}>
+        <span>Avg Total Tokens</span>
+      </TooltipWrapper>
+    ),
     columns: [
       {
         accessorKey: 'avgTotalTokensU',
         header: () => (
-          <TooltipWrapper title={tooltips?.avgTotalTokensU}>
-            <span>U</span>
+          <TooltipWrapper title={'Unresolved'}>
+            <div className="flex w-full items-center justify-end">U</div>
           </TooltipWrapper>
         ),
         cell: ({ row }) => {
           const value: string = row.getValue('avgTotalTokensU');
-          return <div className="font-medium">{formatScore(value) + 'k'}</div>;
+          return (
+            <div className="text-right font-medium">{formatScore(value)}</div>
+          );
         },
       },
       {
         accessorKey: 'avgTotalTokensR',
         header: () => (
-          <TooltipWrapper title={tooltips?.avgTotalTokensR}>
-            <span>R</span>
+          <TooltipWrapper title={'Resolved'}>
+            <div className="flex w-full items-center justify-end">R</div>
           </TooltipWrapper>
         ),
         cell: ({ row }) => {
           const value: string = row.getValue('avgTotalTokensR');
-          return <div className="font-medium">{formatScore(value) + 'k'}</div>;
+          return (
+            <div className="text-right font-medium">{formatScore(value)}</div>
+          );
         },
       },
     ],
@@ -218,30 +258,38 @@ export const columns = (
   // Grouped column for Avg LLM Requests
   {
     id: 'avgLLMRequests',
-    header: () => <span>Avg LLM Requests</span>,
+    header: () => (
+      <TooltipWrapper title={tooltips?.avgLLMRequests}>
+        <span>Avg LLM Requests</span>
+      </TooltipWrapper>
+    ),
     columns: [
       {
         accessorKey: 'avgLLMRequestsU',
         header: () => (
-          <TooltipWrapper title={tooltips?.avgLLMRequestsU}>
-            <span>U</span>
+          <TooltipWrapper title={'Unresolved'}>
+            <div className="flex w-full items-center justify-end">U</div>
           </TooltipWrapper>
         ),
         cell: ({ row }) => {
           const value: string = row.getValue('avgLLMRequestsU');
-          return <div className="font-medium">{formatScore(value)}</div>;
+          return (
+            <div className="text-right font-medium">{formatScore(value)}</div>
+          );
         },
       },
       {
         accessorKey: 'avgLLMRequestsR',
         header: () => (
-          <TooltipWrapper title={tooltips?.avgLLMRequestsR}>
-            <span>R</span>
+          <TooltipWrapper title={'Resolved'}>
+            <div className="flex w-full items-center justify-end">R</div>
           </TooltipWrapper>
         ),
         cell: ({ row }) => {
           const value: string = row.getValue('avgLLMRequestsR');
-          return <div className="font-medium">{formatScore(value)}</div>;
+          return (
+            <div className="text-right font-medium">{formatScore(value)}</div>
+          );
         },
       },
     ],

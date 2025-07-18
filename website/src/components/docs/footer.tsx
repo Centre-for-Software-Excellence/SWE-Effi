@@ -14,11 +14,11 @@ export function Footer() {
       <div className="flex h-full w-full flex-col gap-4 p-6 py-8 lg:px-8">
         <div className="flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0">
           <div className="relative flex items-center gap-2">
-            <img
-              src="/logos/Huawei-logo.svg"
-              alt="Huawei"
-              className="h-6 object-contain"
-            />
+            {/* <img */}
+            {/*   src="/logos/Huawei-logo.svg" */}
+            {/*   alt="Huawei" */}
+            {/*   className="h-6 object-contain" */}
+            {/* /> */}
             <Small className="text-foreground/85">{ui.title}</Small>
             <span className="h-6 w-px bg-border" />
             <Small className="text-foreground/85">{ui.subtitle}</Small>

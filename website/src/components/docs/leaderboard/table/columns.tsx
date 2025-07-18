@@ -33,8 +33,8 @@ export const columns = (
             onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
             className="flex items-center justify-start"
           >
+            <ArrowUpDown className="mr-2 h-4 w-4" />
             Rank
-            <ArrowUpDown className="ml-2 h-4 w-4" />
           </button>
         </TooltipWrapper>
       );
@@ -66,7 +66,7 @@ export const columns = (
     cell: ({ row }) => {
       const scaffold: string = row.getValue('scaffold');
       return (
-        <div className="font-medium">
+        <div className="text-left font-medium">
           {scaffold.length > 30 ? `${scaffold.slice(0, 30)}...` : scaffold}
         </div>
       );
@@ -82,7 +82,7 @@ export const columns = (
     cell: ({ row }) => {
       const model: string = row.getValue('model');
       return (
-        <div className="font-medium">
+        <div className="text-left font-medium">
           {model.length > 30 ? `${model.slice(0, 30)}...` : model}
         </div>
       );
@@ -97,14 +97,14 @@ export const columns = (
             onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
             className="flex items-center justify-start"
           >
+            <ArrowUpDown className="mr-2 h-4 w-4" />
             Total Time
-            <ArrowUpDown className="ml-2 h-4 w-4" />
           </button>
         </TooltipWrapper>
       );
     },
     cell: ({ row }) => (
-      <div className="text-left font-medium">
+      <div className="text-right font-medium">
         {formatScore(row.getValue('total'))}
       </div>
     ),
@@ -118,14 +118,14 @@ export const columns = (
             onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
             className="flex items-center justify-start"
           >
+            <ArrowUpDown className="mr-2 h-4 w-4" />
             CPU Time
-            <ArrowUpDown className="ml-2 h-4 w-4" />
           </button>
         </TooltipWrapper>
       );
     },
     cell: ({ row }) => (
-      <div className="text-left font-medium">
+      <div className="text-right font-medium">
         {formatScore(row.getValue('cpuTime'))}
       </div>
     ),
@@ -139,14 +139,14 @@ export const columns = (
             onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
             className="flex items-center justify-start"
           >
+            <ArrowUpDown className="mr-2 h-4 w-4" />
             Input tokens
-            <ArrowUpDown className="ml-2 h-4 w-4" />
           </button>
         </TooltipWrapper>
       );
     },
     cell: ({ row }) => (
-      <div className="text-left font-medium">
+      <div className="text-right font-medium">
         {formatScore(row.getValue('inputToken'))}
       </div>
     ),
@@ -160,14 +160,14 @@ export const columns = (
             onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
             className="flex items-center justify-start"
           >
+            <ArrowUpDown className="mr-2 h-4 w-4" />
             Output tokens
-            <ArrowUpDown className="ml-2 h-4 w-4" />
           </button>
         </TooltipWrapper>
       );
     },
     cell: ({ row }) => (
-      <div className="text-left font-medium">
+      <div className="text-right font-medium">
         {formatScore(row.getValue('outputToken'))}
       </div>
     ),
@@ -181,14 +181,14 @@ export const columns = (
             onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
             className="flex items-center justify-start"
           >
+            <ArrowUpDown className="mr-2 h-4 w-4" />
             Calls
-            <ArrowUpDown className="ml-2 h-4 w-4" />
           </button>
         </TooltipWrapper>
       );
     },
     cell: ({ row }) => (
-      <div className="text-left font-medium">
+      <div className="text-right font-medium">
         {formatScore(row.getValue('calls'))}
       </div>
     ),
@@ -202,14 +202,14 @@ export const columns = (
             onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
             className="flex items-center justify-start"
           >
+            <ArrowUpDown className="mr-2 h-4 w-4" />
             Inference Time
-            <ArrowUpDown className="ml-2 h-4 w-4" />
           </button>
         </TooltipWrapper>
       );
     },
     cell: ({ row }) => (
-      <div className="text-left font-medium">
+      <div className="text-right font-medium">
         {formatScore(row.getValue('infTime'))}
       </div>
     ),
@@ -223,45 +223,48 @@ export const columns = (
             onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
             className="flex items-center justify-start"
           >
+            <ArrowUpDown className="mr-2 h-4 w-4" />
             Resolve Rate
-            <ArrowUpDown className="ml-2 h-4 w-4" />
           </button>
         </TooltipWrapper>
       );
     },
     cell: ({ row }) => (
-      <div className="text-left font-medium">
+      <div className="text-right font-medium">
         <span className="font-bold">
           {formatScore(row.getValue('resolveRate'))}
         </span>
-        <Progress value={row.getValue('resolveRate')} className="h-2 w-16" />
+        <Progress
+          value={row.getValue('resolveRate')}
+          className="ml-auto h-2 w-16"
+        />
       </div>
     ),
   },
-  {
-    accessorKey: 'precision',
-    header: ({ column }) => {
-      return (
-        <TooltipWrapper title={tooltips?.precision}>
-          <button
-            onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
-            className="flex items-center justify-start"
-          >
-            Precision
-            <ArrowUpDown className="ml-2 h-4 w-4" />
-          </button>
-        </TooltipWrapper>
-      );
-    },
-    cell: ({ row }) => (
-      <div className="text-left font-medium">
-        <span className="font-bold">
-          {formatScore(row.getValue('precision'))}
-        </span>
-        <Progress value={row.getValue('precision')} className="h-2 w-16" />
-      </div>
-    ),
-  },
+  // {
+  //   accessorKey: 'precision',
+  //   header: ({ column }) => {
+  //     return (
+  //       <TooltipWrapper title={tooltips?.precision}>
+  //         <button
+  //           onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
+  //           className="flex items-center justify-start"
+  //         >
+  //           Precision
+  //           <ArrowUpDown className="ml-2 h-4 w-4" />
+  //         </button>
+  //       </TooltipWrapper>
+  //     );
+  //   },
+  //   cell: ({ row }) => (
+  //     <div className="text-left font-medium">
+  //       <span className="font-bold">
+  //         {formatScore(row.getValue('precision'))}
+  //       </span>
+  //       <Progress value={row.getValue('precision')} className="h-2 w-16" />
+  //     </div>
+  //   ),
+  // },
   // {
   //   accessorKey: 'action',
   //   header: 'Actions',

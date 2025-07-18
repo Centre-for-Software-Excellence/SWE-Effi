@@ -137,7 +137,7 @@ export function DataTable<TData, TValue>({
                     <TableHead
                       key={header.id}
                       colSpan={header.colSpan}
-                      className="pr-4"
+                      className={`border-r border-border`}
                     >
                       {header.isPlaceholder
                         ? null
@@ -159,7 +159,7 @@ export function DataTable<TData, TValue>({
                   data-state={row.getIsSelected() && 'selected'}
                 >
                   {row.getVisibleCells().map((cell) => (
-                    <TableCell key={cell.id}>
+                    <TableCell key={cell.id} className="border-r border-border">
                       {flexRender(
                         cell.column.columnDef.cell,
                         cell.getContext(),
