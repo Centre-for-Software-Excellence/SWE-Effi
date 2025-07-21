@@ -308,6 +308,10 @@
   math {
     @apply text-foreground;
   }
+
+  table {
+    @apply my-0!;
+  }
 }
 
 @layer components {
