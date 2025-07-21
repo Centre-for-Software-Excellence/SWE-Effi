@@ -1,20 +1,30 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter, Route, Routes } from 'react-router';
+import { createBrowserRouter, RouterProvider } from 'react-router';
 
 import Docs from '@/app/docs';
 import { ThemeProvider } from '@/components/common/theme-provider';
 
 import '@/styles/index.css';
 
+const router = createBrowserRouter(
+  [
+    {
+      path: '/*',
+      element: <Docs />,
+    },
+  ],
+  {
+    basename: '/SWE-Effi',
+  },
+);
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter basename="/SWE-Effi">
-      <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
-        <Routes>
-          <Route path="/*" element={<Docs />} />
-        </Routes>
-      </ThemeProvider>
-    </BrowserRouter>
+    <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
+      <RouterProvider router={router} />
+    </ThemeProvider>
   </StrictMode>,
 );
+
+router.navigate(window.location.href.split('?')[1]?.split('=')[1]);
