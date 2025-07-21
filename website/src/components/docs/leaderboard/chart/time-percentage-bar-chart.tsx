@@ -103,7 +103,7 @@ export function TimePercentageBarChart({
           <TooltipProvider>
             <ChartHeader title={title} description={description}>
               <ChartControls
-                explanation={explanation}
+                // explanation={explanation}
                 expandButton={{ isExpanded, onToggle: toggleExpanded }}
                 settingsButton={settingsButton}
               />

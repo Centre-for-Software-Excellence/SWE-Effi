@@ -134,7 +134,7 @@ export function ResolveRateLineChart({
           <ChartHeader title={title} description={description}>
             <TooltipProvider>
               <ChartControls
-                explanation={explanation}
+                // explanation={explanation}
                 expandButton={{ isExpanded, onToggle: toggleExpanded }}
                 settingsButton={settingsButton}
               />
@@ -150,6 +150,7 @@ export function ResolveRateLineChart({
               xAxisLabel={xAxisLabel}
               yAxisLabel={yAxisLabel}
               xAxisDataKey={xAxisDataKey}
+              scale="log"
             />
             {legend}
           </div>
@@ -159,7 +160,7 @@ export function ResolveRateLineChart({
   );
 }
 
-function LineChartRenderer({
+export function LineChartRenderer({
   data,
   config,
   activeKeys,
@@ -167,6 +168,7 @@ function LineChartRenderer({
   xAxisLabel,
   yAxisLabel,
   xAxisDataKey,
+  scale = 'linear',
 }: ChartRendererProps) {
   const configKeys = activeKeys || Object.keys(config);
 
@@ -187,7 +189,7 @@ function LineChartRenderer({
         <XAxis
           type="number"
           dataKey={xAxisDataKey}
-          scale="log"
+          scale={scale}
           tickLine={true}
           axisLine={true}
           domain={domain}

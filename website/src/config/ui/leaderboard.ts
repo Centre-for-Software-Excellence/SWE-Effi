@@ -26,6 +26,7 @@ interface LeaderboardUIConfig {
     description?: string;
     blogLink?: string;
     resolveRateLineChart: ChartProps;
+    normalizedTimeLineChart: ChartProps;
     numCallsBarChart: ChartProps;
     timePercentageBarChart: ChartProps;
     costBarChart: ChartProps;
@@ -174,6 +175,16 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
       xAxisLabel: 'Total Tokens (input tokens + output tokens) (Millions)',
       yAxisLabel: 'Resolve Rate',
       // ignore this
+      xAxisDataKey: 'totalTokens',
+    },
+    normalizedTimeLineChart: {
+      title: 'Mean Normalized Time vs. Total Tokens Used',
+      description:
+        'How long did it take across the number of total tokens used per issue (in millions of tokens).',
+      overview: 'Overview of the normalized time line chart...',
+      insight: 'Insight about the normalized time line chart...',
+      xAxisLabel: 'Total Tokens (input tokens + output tokens) (Millions)',
+      yAxisLabel: 'Mean Normalized Time (seconds)',
       xAxisDataKey: 'totalTokens',
     },
     numCallsBarChart: {

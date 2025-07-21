@@ -1,0 +1,4454 @@
+[
+  {
+    "totalTokens": 0.005541,
+    "agentless-mini/GPT-4o-mini-2024-07-18-total-time": 4.110483696566718,
+    "agentless-mini/GPT-4o-mini-2024-07-18-cpu-time": 0.8621587753295898,
+    "agentless-mini/GPT-4o-mini-2024-07-18-gpu-time": 3.2483249212371286
+  },
+  {
+    "totalTokens": 0.00558,
+    "agentless-mini/GPT-4o-mini-2024-07-18-total-time": 2.422746577094398,
+    "agentless-mini/GPT-4o-mini-2024-07-18-cpu-time": 0.4824199676513672,
+    "agentless-mini/GPT-4o-mini-2024-07-18-gpu-time": 1.9403266094430307
+  },
+  {
+    "totalTokens": 0.007888,
+    "agentless-mini/GPT-4o-mini-2024-07-18-total-time": 3.9079819737406387,
+    "agentless-mini/GPT-4o-mini-2024-07-18-cpu-time": 0.09465765953063965,
+    "agentless-mini/GPT-4o-mini-2024-07-18-gpu-time": 3.813324314209999
+  },
+  {
+    "totalTokens": 0.009818,
+    "agentless-mini/GPT-4o-mini-2024-07-18-total-time": 5.46966565130654,
+    "agentless-mini/GPT-4o-mini-2024-07-18-cpu-time": 2.368805408477783,
+    "agentless-mini/GPT-4o-mini-2024-07-18-gpu-time": 3.1008602428287575
+  },
+  {
+    "totalTokens": 0.010691,
+    "agentless-mini/GPT-4o-mini-2024-07-18-total-time": 3.3926924794238285,
+    "agentless-mini/GPT-4o-mini-2024-07-18-cpu-time": 0.2645888328552246,
+    "agentless-mini/GPT-4o-mini-2024-07-18-gpu-time": 3.128103646568604
+  },
+  {
+    "totalTokens": 0.010711,
+    "agentless-mini/GPT-4o-mini-2024-07-18-total-time": 4.11249868609832,
+    "agentless-mini/GPT-4o-mini-2024-07-18-cpu-time": 0.5886437892913818,
+    "agentless-mini/GPT-4o-mini-2024-07-18-gpu-time": 3.5238548968069376
+  },
+  {
+    "totalTokens": 0.011779,
+    "agentless-mini/GPT-4o-mini-2024-07-18-total-time": 3.9587569944156438,
+    "agentless-mini/GPT-4o-mini-2024-07-18-cpu-time": 0.5093119144439697,
+    "agentless-mini/GPT-4o-mini-2024-07-18-gpu-time": 3.449445079971674
+  },
+  {
+    "totalTokens": 0.012478,
+    "agentless-mini/GPT-4o-mini-2024-07-18-total-time": 3.7237563531567557,
+    "agentless-mini/GPT-4o-mini-2024-07-18-cpu-time": 0.10452914237976074,
+    "agentless-mini/GPT-4o-mini-2024-07-18-gpu-time": 3.619227210776995
+  },
+  {
+    "totalTokens": 0.012592,
+    "agentless-mini/GPT-4o-mini-2024-07-18-total-time": 4.779147395059738,
+    "agentless-mini/GPT-4o-mini-2024-07-18-cpu-time": 1.4899706840515137,
+    "agentless-mini/GPT-4o-mini-2024-07-18-gpu-time": 3.2891767110082237
+  },
+  {
+    "totalTokens": 0.017117,
+    "agentless-mini/GPT-4o-mini-2024-07-18-total-time": 3.7765443146973494,
+    "agentless-mini/GPT-4o-mini-2024-07-18-cpu-time": 0.6792387962341309,
+    "agentless-mini/GPT-4o-mini-2024-07-18-gpu-time": 3.0973055184632186
+  },
+  {
+    "totalTokens": 0.017282,
+    "agentless-mini/GPT-4o-mini-2024-07-18-total-time": 5.240094651276715,
+    "agentless-mini/GPT-4o-mini-2024-07-18-cpu-time": 1.7308549880981445,
+    "agentless-mini/GPT-4o-mini-2024-07-18-gpu-time": 3.5092396631785707
+  },
+  {
+    "totalTokens": 0.022001,
+    "agentless-mini/GPT-4o-mini-2024-07-18-total-time": 4.136886506136012,
+    "agentless-mini/GPT-4o-mini-2024-07-18-cpu-time": 0.6362874507904053,
+    "agentless-mini/GPT-4o-mini-2024-07-18-gpu-time": 3.500599055345606
+  },
+  {
+    "totalTokens": 0.023134,
+    "agentless-mini/GPT-4o-mini-2024-07-18-total-time": 4.606338934469921,
+    "agentless-mini/GPT-4o-mini-2024-07-18-cpu-time": 0.09265685081481934,
+    "agentless-mini/GPT-4o-mini-2024-07-18-gpu-time": 4.513682083655102
+  },
+  {
+    "totalTokens": 0.023724,
+    "agentless-mini/GPT-4o-mini-2024-07-18-total-time": 4.156844954422564,
+    "agentless-mini/GPT-4o-mini-2024-07-18-cpu-time": 0.6127376556396484,
+    "agentless-mini/GPT-4o-mini-2024-07-18-gpu-time": 3.544107298782915
+  },
+  {
+    "totalTokens": 0.023988,
+    "agentless-mini/GPT-4o-mini-2024-07-18-total-time": 4.473363330574182,
+    "agentless-mini/GPT-4o-mini-2024-07-18-cpu-time": 1.1129438877105713,
+    "agentless-mini/GPT-4o-mini-2024-07-18-gpu-time": 3.360419442863611
+  },
+  {
+    "totalTokens": 0.024106,
+    "agentless-mini/GPT-4o-mini-2024-07-18-total-time": 5.194732178568254,
+    "agentless-mini/GPT-4o-mini-2024-07-18-cpu-time": 0.7095680236816406,
+    "agentless-mini/GPT-4o-mini-2024-07-18-gpu-time": 4.485164154886613
+  },
+  {
+    "totalTokens": 0.024433,
+    "agentless-mini/GPT-4o-mini-2024-07-18-total-time": 4.110100467306054,
+    "agentless-mini/GPT-4o-mini-2024-07-18-cpu-time": 0.10585927963256836,
+    "agentless-mini/GPT-4o-mini-2024-07-18-gpu-time": 4.004241187673486
+  },
+  {
+    "totalTokens": 0.025311,
+    "agentless-mini/GPT-4o-mini-2024-07-18-total-time": 5.59052742426371,
+    "agentless-mini/GPT-4o-mini-2024-07-18-cpu-time": 1.0089714527130127,
+    "agentless-mini/GPT-4o-mini-2024-07-18-gpu-time": 4.5815559715506975
+  },
+  {
+    "totalTokens": 0.026376,
+    "agentless-mini/GPT-4o-mini-2024-07-18-total-time": 5.010216477769832,
+    "agentless-mini/GPT-4o-mini-2024-07-18-cpu-time": 0.9330873489379883,
+    "agentless-mini/GPT-4o-mini-2024-07-18-gpu-time": 4.077129128831844
+  },
+  {
+    "totalTokens": 0.027398,
+    "agentless-mini/GPT-4o-mini-2024-07-18-total-time": 4.2122354809089,
+    "agentless-mini/GPT-4o-mini-2024-07-18-cpu-time": 0.07651329040527344,
+    "agentless-mini/GPT-4o-mini-2024-07-18-gpu-time": 4.1357221905036265
+  },
+  {
+    "totalTokens": 0.027889,
+    "agentless-mini/GPT-4o-mini-2024-07-18-total-time": 5.050813514041968,
+    "agentless-mini/GPT-4o-mini-2024-07-18-cpu-time": 0.4692556858062744,
+    "agentless-mini/GPT-4o-mini-2024-07-18-gpu-time": 4.5815578282356935
+  },
+  {
+    "totalTokens": 0.028003,
+    "agentless-mini/GPT-4o-mini-2024-07-18-total-time": 4.027606363983432,
+    "agentless-mini/GPT-4o-mini-2024-07-18-cpu-time": 0.1759958267211914,
+    "agentless-mini/GPT-4o-mini-2024-07-18-gpu-time": 3.8516105372622405
+  },
+  {
+    "totalTokens": 0.031013,
+    "agentless-mini/GPT-4o-mini-2024-07-18-total-time": 4.440989483165931,
+    "agentless-mini/GPT-4o-mini-2024-07-18-cpu-time": 0.1960453987121582,
+    "agentless-mini/GPT-4o-mini-2024-07-18-gpu-time": 4.244944084453773
+  },
+  {
+    "totalTokens": 0.031288,
+    "agentless-mini/GPT-4o-mini-2024-07-18-total-time": 3.9703819530960134,
+    "agentless-mini/GPT-4o-mini-2024-07-18-cpu-time": 0.06861519813537598,
+    "agentless-mini/GPT-4o-mini-2024-07-18-gpu-time": 3.9017667549606374
+  },
+  {
+    "totalTokens": 0.032997,
+    "agentless-mini/GPT-4o-mini-2024-07-18-total-time": 4.9157183002698375,
+    "agentless-mini/GPT-4o-mini-2024-07-18-cpu-time": 0.7810895442962646,
+    "agentless-mini/GPT-4o-mini-2024-07-18-gpu-time": 4.134628755973573
+  },
+  {
+    "totalTokens": 0.033182,
+    "agentless-mini/GPT-4o-mini-2024-07-18-total-time": 4.820864227435294,
+    "agentless-mini/GPT-4o-mini-2024-07-18-cpu-time": 0.10349202156066895,
+    "agentless-mini/GPT-4o-mini-2024-07-18-gpu-time": 4.717372205874625
+  },
+  {
+    "totalTokens": 0.038394,
+    "agentless-mini/GPT-4o-mini-2024-07-18-total-time": 5.740967064035297,
+    "agentless-mini/GPT-4o-mini-2024-07-18-cpu-time": 1.2611403465270996,
+    "agentless-mini/GPT-4o-mini-2024-07-18-gpu-time": 4.479826717508198
+  },
+  {
+    "totalTokens": 0.039688,
+    "agentless-mini/GPT-4o-mini-2024-07-18-total-time": 6.910978622804231,
+    "agentless-mini/GPT-4o-mini-2024-07-18-cpu-time": 0.656395673751831,
+    "agentless-mini/GPT-4o-mini-2024-07-18-gpu-time": 6.2545829490524
+  },
+  {
+    "totalTokens": 0.042021,
+    "agentless-mini/GPT-4o-mini-2024-07-18-total-time": 5.746460498553475,
+    "agentless-mini/GPT-4o-mini-2024-07-18-cpu-time": 1.1918909549713135,
+    "agentless-mini/GPT-4o-mini-2024-07-18-gpu-time": 4.554569543582161
+  },
+  {
+    "totalTokens": 0.042504,
+    "agentless-mini/GPT-4o-mini-2024-07-18-total-time": 4.835424266509696,
+    "agentless-mini/GPT-4o-mini-2024-07-18-cpu-time": 0.19026875495910645,
+    "agentless-mini/GPT-4o-mini-2024-07-18-gpu-time": 4.645155511550589
+  },
+  {
+    "totalTokens": 0.043532,
+    "agentless-mini/GPT-4o-mini-2024-07-18-total-time": 4.994698968339778,
+    "agentless-mini/GPT-4o-mini-2024-07-18-cpu-time": 0.2507047653198242,
+    "agentless-mini/GPT-4o-mini-2024-07-18-gpu-time": 4.743994203019954
+  },
+  {
+    "totalTokens": 0.04411,
+    "agentless-mini/GPT-4o-mini-2024-07-18-total-time": 5.246506984405135,
+    "agentless-mini/GPT-4o-mini-2024-07-18-cpu-time": 0.6078226566314697,
+    "agentless-mini/GPT-4o-mini-2024-07-18-gpu-time": 4.638684327773666
+  },
+  {
+    "totalTokens": 0.044661,
+    "agentless-mini/GPT-4o-mini-2024-07-18-total-time": 5.01655546275038,
+    "agentless-mini/GPT-4o-mini-2024-07-18-cpu-time": 0.6242966651916504,
+    "agentless-mini/GPT-4o-mini-2024-07-18-gpu-time": 4.392258797558729
+  },
+  {
+    "totalTokens": 0.046078,
+    "agentless-mini/GPT-4o-mini-2024-07-18-total-time": 5.439713765886774,
+    "agentless-mini/GPT-4o-mini-2024-07-18-cpu-time": 0.37216663360595703,
+    "agentless-mini/GPT-4o-mini-2024-07-18-gpu-time": 5.067547132280817
+  },
+  {
+    "totalTokens": 0.047297,
+    "agentless-mini/GPT-4o-mini-2024-07-18-total-time": 5.6974325163981945,
+    "agentless-mini/GPT-4o-mini-2024-07-18-cpu-time": 0.932793140411377,
+    "agentless-mini/GPT-4o-mini-2024-07-18-gpu-time": 4.7646393759868175
+  },
+  {
+    "totalTokens": 0.048244,
+    "agentless-mini/GPT-4o-mini-2024-07-18-total-time": 7.872209377564462,
+    "agentless-mini/GPT-4o-mini-2024-07-18-cpu-time": 2.117417573928833,
+    "agentless-mini/GPT-4o-mini-2024-07-18-gpu-time": 5.754791803635629
+  },
+  {
+    "totalTokens": 0.049146,
+    "agentless-mini/GPT-4o-mini-2024-07-18-total-time": 5.004890365597378,
+    "agentless-mini/GPT-4o-mini-2024-07-18-cpu-time": 0.1613755226135254,
+    "agentless-mini/GPT-4o-mini-2024-07-18-gpu-time": 4.843514842983852
+  },
+  {
+    "totalTokens": 0.050503,
+    "agentless-mini/GPT-4o-mini-2024-07-18-total-time": 5.161303849991682,
+    "agentless-mini/GPT-4o-mini-2024-07-18-cpu-time": 0.4948408603668213,
+    "agentless-mini/GPT-4o-mini-2024-07-18-gpu-time": 4.66646298962486
+  },
+  {
+    "totalTokens": 0.050639,
+    "agentless-mini/GPT-4o-mini-2024-07-18-total-time": 5.290231333762561,
+    "agentless-mini/GPT-4o-mini-2024-07-18-cpu-time": 0.2230687141418457,
+    "agentless-mini/GPT-4o-mini-2024-07-18-gpu-time": 5.067162619620715
+  },
+  {
+    "totalTokens": 0.051038,
+    "agentless-mini/GPT-4o-mini-2024-07-18-total-time": 6.646649124370461,
+    "agentless-mini/GPT-4o-mini-2024-07-18-cpu-time": 0.6676967144012451,
+    "agentless-mini/GPT-4o-mini-2024-07-18-gpu-time": 5.9789524099692155
+  },
+  {
+    "totalTokens": 0.054361,
+    "agentless-mini/GPT-4o-mini-2024-07-18-total-time": 6.351457606850412,
+    "agentless-mini/GPT-4o-mini-2024-07-18-cpu-time": 1.075533151626587,
+    "agentless-mini/GPT-4o-mini-2024-07-18-gpu-time": 5.275924455223825
+  },
+  {
+    "totalTokens": 0.054823,
+    "agentless-mini/GPT-4o-mini-2024-07-18-total-time": 6.899692275677202,
+    "agentless-mini/GPT-4o-mini-2024-07-18-cpu-time": 1.6190557479858398,
+    "agentless-mini/GPT-4o-mini-2024-07-18-gpu-time": 5.280636527691362
+  },
+  {
+    "totalTokens": 0.055149,
+    "agentless-mini/GPT-4o-mini-2024-07-18-total-time": 5.9547033449145275,
+    "agentless-mini/GPT-4o-mini-2024-07-18-cpu-time": 0.5951769351959229,
+    "agentless-mini/GPT-4o-mini-2024-07-18-gpu-time": 5.359526409718605
+  },
+  {
+    "totalTokens": 0.058178,
+    "agentless-mini/GPT-4o-mini-2024-07-18-total-time": 5.7987423219930445,
+    "agentless-mini/GPT-4o-mini-2024-07-18-cpu-time": 0.1800370216369629,
+    "agentless-mini/GPT-4o-mini-2024-07-18-gpu-time": 5.618705300356082
+  },
+  {
+    "totalTokens": 0.058429,
+    "agentless-mini/GPT-4o-mini-2024-07-18-total-time": 6.030052831242455,
+    "agentless-mini/GPT-4o-mini-2024-07-18-cpu-time": 0.26067638397216797,
+    "agentless-mini/GPT-4o-mini-2024-07-18-gpu-time": 5.769376447270287
+  },
+  {
+    "totalTokens": 0.059907,
+    "agentless-mini/GPT-4o-mini-2024-07-18-total-time": 6.0397921757187945,
+    "agentless-mini/GPT-4o-mini-2024-07-18-cpu-time": 0.6972401142120361,
+    "agentless-mini/GPT-4o-mini-2024-07-18-gpu-time": 5.342552061506758
+  },
+  {
+    "totalTokens": 0.060118,
+    "agentless-mini/GPT-4o-mini-2024-07-18-total-time": 7.65142156126526,
+    "agentless-mini/GPT-4o-mini-2024-07-18-cpu-time": 0.650294303894043,
+    "agentless-mini/GPT-4o-mini-2024-07-18-gpu-time": 7.001127257371217
+  },
+  {
+    "totalTokens": 0.065052,
+    "agentless-mini/GPT-4o-mini-2024-07-18-total-time": 9.6616231004481,
+    "agentless-mini/GPT-4o-mini-2024-07-18-cpu-time": 0.7154667377471924,
+    "agentless-mini/GPT-4o-mini-2024-07-18-gpu-time": 8.946156362700908
+  },
+  {
+    "totalTokens": 0.065504,
+    "agentless-mini/GPT-4o-mini-2024-07-18-total-time": 6.730826829219893,
+    "agentless-mini/GPT-4o-mini-2024-07-18-cpu-time": 0.9095773696899414,
+    "agentless-mini/GPT-4o-mini-2024-07-18-gpu-time": 5.821249459529952
+  },
+  {
+    "totalTokens": 0.06676,
+    "agentless-mini/GPT-4o-mini-2024-07-18-total-time": 6.826446617466264,
+    "agentless-mini/GPT-4o-mini-2024-07-18-cpu-time": 0.7766633033752441,
+    "agentless-mini/GPT-4o-mini-2024-07-18-gpu-time": 6.0497833140910195
+  },
+  {
+    "totalTokens": 0.00754,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-total-time": 6.421294038275,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-cpu-time": 0.8382754325866699,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-gpu-time": 5.58301860568833
+  },
+  {
+    "totalTokens": 0.00852,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-total-time": 5.632636917063814,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-cpu-time": 0.5476737022399902,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-gpu-time": 5.084963214823824
+  },
+  {
+    "totalTokens": 0.011774,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-total-time": 15.92486567787197,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-cpu-time": 0.028846263885498047,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-gpu-time": 15.896019413986473
+  },
+  {
+    "totalTokens": 0.011779,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-total-time": 4.953331378015235,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-cpu-time": 1.213961124420166,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-gpu-time": 3.7393702535950686
+  },
+  {
+    "totalTokens": 0.014067,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-total-time": 4.263195941029256,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-cpu-time": 0.5861818790435791,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-gpu-time": 3.6770140619856773
+  },
+  {
+    "totalTokens": 0.014928,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-total-time": 13.741410327531888,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-cpu-time": 0.10022950172424316,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-gpu-time": 13.641180825807645
+  },
+  {
+    "totalTokens": 0.016181,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-total-time": 7.911546731752322,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-cpu-time": 2.02489972114563,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-gpu-time": 5.886647010606692
+  },
+  {
+    "totalTokens": 0.018083,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-total-time": 3.4394419386101864,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-cpu-time": 0.11597609519958496,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-gpu-time": 3.3234658434106015
+  },
+  {
+    "totalTokens": 0.018337,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-total-time": 3.893883386315636,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-cpu-time": 0.9144906997680664,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-gpu-time": 2.9793926865475697
+  },
+  {
+    "totalTokens": 0.019508,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-total-time": 5.043026712111341,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-cpu-time": 0.4890744686126709,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-gpu-time": 4.55395224349867
+  },
+  {
+    "totalTokens": 0.020047,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-total-time": 7.271857761689929,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-cpu-time": 0.9153718948364258,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-gpu-time": 6.356485866853503
+  },
+  {
+    "totalTokens": 0.020607,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-total-time": 4.9186766270161435,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-cpu-time": 1.0926427841186523,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-gpu-time": 3.8260338428974907
+  },
+  {
+    "totalTokens": 0.021379,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-total-time": 5.952913290813534,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-cpu-time": 0.17444252967834473,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-gpu-time": 5.778470761135189
+  },
+  {
+    "totalTokens": 0.022247,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-total-time": 5.689451874445025,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-cpu-time": 0.8836929798126221,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-gpu-time": 4.805758894632403
+  },
+  {
+    "totalTokens": 0.02486,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-total-time": 12.331334799037483,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-cpu-time": 0.13098907470703125,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-gpu-time": 12.200345724330452
+  },
+  {
+    "totalTokens": 0.025613,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-total-time": 15.440123976378679,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-cpu-time": 0.7632873058319092,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-gpu-time": 14.67683667054677
+  },
+  {
+    "totalTokens": 0.027087,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-total-time": 4.903282282229338,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-cpu-time": 0.8608062267303467,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-gpu-time": 4.042476055498991
+  },
+  {
+    "totalTokens": 0.027647,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-total-time": 23.485271732721735,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-cpu-time": 0.13388419151306152,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-gpu-time": 23.351387541208673
+  },
+  {
+    "totalTokens": 0.030558,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-total-time": 5.813333850784915,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-cpu-time": 0.7980031967163086,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-gpu-time": 5.015330654068606
+  },
+  {
+    "totalTokens": 0.031279,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-total-time": 4.582575968232609,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-cpu-time": 0.676194429397583,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-gpu-time": 3.906381538835026
+  },
+  {
+    "totalTokens": 0.033112,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-total-time": 17.156796967165242,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-cpu-time": 1.0753445625305176,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-gpu-time": 16.081452404634724
+  },
+  {
+    "totalTokens": 0.033132,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-total-time": 8.328560943651016,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-cpu-time": 0.9740028381347656,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-gpu-time": 7.35455810551625
+  },
+  {
+    "totalTokens": 0.035055,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-total-time": 6.2266084450877255,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-cpu-time": 0.6595356464385986,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-gpu-time": 5.567072798649127
+  },
+  {
+    "totalTokens": 0.035656,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-total-time": 3.7374424524703818,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-cpu-time": 0.22419524192810059,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-gpu-time": 3.513247210542281
+  },
+  {
+    "totalTokens": 0.039111,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-total-time": 24.947419524899487,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-cpu-time": 1.1119942665100098,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-gpu-time": 23.835425258389478
+  },
+  {
+    "totalTokens": 0.039305,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-total-time": 7.296710543689206,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-cpu-time": 0.12870573997497559,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-gpu-time": 7.16800480371423
+  },
+  {
+    "totalTokens": 0.039783,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-total-time": 10.961882083389014,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-cpu-time": 0.8492412567138672,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-gpu-time": 10.112640826675147
+  },
+  {
+    "totalTokens": 0.042433,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-total-time": 24.254901786823183,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-cpu-time": 0.297760009765625,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-gpu-time": 23.957141777057558
+  },
+  {
+    "totalTokens": 0.043422,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-total-time": 15.925584127877649,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-cpu-time": 1.048898696899414,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-gpu-time": 14.876685430978235
+  },
+  {
+    "totalTokens": 0.044431,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-total-time": 5.383893662921966,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-cpu-time": 0.5765559673309326,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-gpu-time": 4.807337695591033
+  },
+  {
+    "totalTokens": 0.044877,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-total-time": 11.423456691886974,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-cpu-time": 0.21873950958251953,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-gpu-time": 11.204717182304455
+  },
+  {
+    "totalTokens": 0.045534,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-total-time": 10.197525089879385,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-cpu-time": 1.4391427040100098,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-gpu-time": 8.758382385869375
+  },
+  {
+    "totalTokens": 0.047728,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-total-time": 4.725268112419375,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-cpu-time": 0.24716424942016602,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-gpu-time": 4.478103862999209
+  },
+  {
+    "totalTokens": 0.04988,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-total-time": 16.58833065085139,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-cpu-time": 1.8060615062713623,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-gpu-time": 14.782269144580026
+  },
+  {
+    "totalTokens": 0.051355,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-total-time": 23.15319352695886,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-cpu-time": 1.1948390007019043,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-gpu-time": 21.958354526256954
+  },
+  {
+    "totalTokens": 0.051399,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-total-time": 25.079037078311572,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-cpu-time": 0.7444183826446533,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-gpu-time": 24.33461869566692
+  },
+  {
+    "totalTokens": 0.051716,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-total-time": 24.54579967158628,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-cpu-time": 0.207655668258667,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-gpu-time": 24.338144003327614
+  },
+  {
+    "totalTokens": 0.052302,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-total-time": 6.400745155657034,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-cpu-time": 0.5528247356414795,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-gpu-time": 5.847920420015554
+  },
+  {
+    "totalTokens": 0.052664,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-total-time": 14.537856801083374,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-cpu-time": 0.6415672302246094,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-gpu-time": 13.896289570858764
+  },
+  {
+    "totalTokens": 0.053074,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-total-time": 25.574863736957425,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-cpu-time": 1.1887869834899902,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-gpu-time": 24.386076753467435
+  },
+  {
+    "totalTokens": 0.05355,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-total-time": 13.490430323264075,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-cpu-time": 0.1711866855621338,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-gpu-time": 13.319243637701941
+  },
+  {
+    "totalTokens": 0.056503,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-total-time": 17.066598021310703,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-cpu-time": 0.9420754909515381,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-gpu-time": 16.124522530359165
+  },
+  {
+    "totalTokens": 0.05708,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-total-time": 25.54536664829031,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-cpu-time": 0.9084208011627197,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-gpu-time": 24.636945847127592
+  },
+  {
+    "totalTokens": 0.058103,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-total-time": 13.589005010793098,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-cpu-time": 0.8053491115570068,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-gpu-time": 12.783655899236091
+  },
+  {
+    "totalTokens": 0.059221,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-total-time": 8.343248571920586,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-cpu-time": 0.49561429023742676,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-gpu-time": 7.84763428168316
+  },
+  {
+    "totalTokens": 0.059929,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-total-time": 9.084416241672308,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-cpu-time": 1.601477861404419,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-gpu-time": 7.482938380267888
+  },
+  {
+    "totalTokens": 0.060199,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-total-time": 11.276219931937058,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-cpu-time": 2.0872011184692383,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-gpu-time": 9.18901881346782
+  },
+  {
+    "totalTokens": 0.06044,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-total-time": 25.310859549624503,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-cpu-time": 0.6055619716644287,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-gpu-time": 24.705297577960074
+  },
+  {
+    "totalTokens": 0.064805,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-total-time": 26.004343903567218,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-cpu-time": 1.0428602695465088,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-gpu-time": 24.96148363402071
+  },
+  {
+    "totalTokens": 0.065653,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-total-time": 5.528695633192141,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-cpu-time": 0.39591073989868164,
+    "agentless-mini/llama-3.3-70B-Instruct-FP8-gpu-time": 5.13278489329346
+  },
+  {
+    "totalTokens": 0.005614,
+    "agentless-mini/qwen3-32B-total-time": 4.3761024174923495,
+    "agentless-mini/qwen3-32B-cpu-time": 0.09992790222167969,
+    "agentless-mini/qwen3-32B-gpu-time": 4.27617451527067
+  },
+  {
+    "totalTokens": 0.007573,
+    "agentless-mini/qwen3-32B-total-time": 14.657162675799714,
+    "agentless-mini/qwen3-32B-cpu-time": 1.0698018074035645,
+    "agentless-mini/qwen3-32B-gpu-time": 13.58736086839615
+  },
+  {
+    "totalTokens": 0.009146,
+    "agentless-mini/qwen3-32B-total-time": 49.37229128546139,
+    "agentless-mini/qwen3-32B-cpu-time": 0.10701942443847656,
+    "agentless-mini/qwen3-32B-gpu-time": 49.26527186102291
+  },
+  {
+    "totalTokens": 0.010624,
+    "agentless-mini/qwen3-32B-total-time": 16.47343018969967,
+    "agentless-mini/qwen3-32B-cpu-time": 1.3062925338745117,
+    "agentless-mini/qwen3-32B-gpu-time": 15.16713765582516
+  },
+  {
+    "totalTokens": 0.010921,
+    "agentless-mini/qwen3-32B-total-time": 24.77996624172006,
+    "agentless-mini/qwen3-32B-cpu-time": 0.03262829780578613,
+    "agentless-mini/qwen3-32B-gpu-time": 24.747337943914275
+  },
+  {
+    "totalTokens": 0.01263,
+    "agentless-mini/qwen3-32B-total-time": 13.3150733925916,
+    "agentless-mini/qwen3-32B-cpu-time": 0.9116275310516357,
+    "agentless-mini/qwen3-32B-gpu-time": 12.403445861539964
+  },
+  {
+    "totalTokens": 0.014029,
+    "agentless-mini/qwen3-32B-total-time": 14.430032923505173,
+    "agentless-mini/qwen3-32B-cpu-time": 0.1923658847808838,
+    "agentless-mini/qwen3-32B-gpu-time": 14.23766703872429
+  },
+  {
+    "totalTokens": 0.015533,
+    "agentless-mini/qwen3-32B-total-time": 15.052982823126877,
+    "agentless-mini/qwen3-32B-cpu-time": 0.11632132530212402,
+    "agentless-mini/qwen3-32B-gpu-time": 14.936661497824753
+  },
+  {
+    "totalTokens": 0.016044,
+    "agentless-mini/qwen3-32B-total-time": 26.16673746533734,
+    "agentless-mini/qwen3-32B-cpu-time": 0.8259570598602295,
+    "agentless-mini/qwen3-32B-gpu-time": 25.340780405477112
+  },
+  {
+    "totalTokens": 0.016369,
+    "agentless-mini/qwen3-32B-total-time": 41.22561842093293,
+    "agentless-mini/qwen3-32B-cpu-time": 0.729881763458252,
+    "agentless-mini/qwen3-32B-gpu-time": 40.49573665747468
+  },
+  {
+    "totalTokens": 0.016767,
+    "agentless-mini/qwen3-32B-total-time": 41.03066295653698,
+    "agentless-mini/qwen3-32B-cpu-time": 0.0880591869354248,
+    "agentless-mini/qwen3-32B-gpu-time": 40.942603769601554
+  },
+  {
+    "totalTokens": 0.017119,
+    "agentless-mini/qwen3-32B-total-time": 48.18849334056151,
+    "agentless-mini/qwen3-32B-cpu-time": 3.7467730045318604,
+    "agentless-mini/qwen3-32B-gpu-time": 44.44172033602965
+  },
+  {
+    "totalTokens": 0.017755,
+    "agentless-mini/qwen3-32B-total-time": 19.403587092702843,
+    "agentless-mini/qwen3-32B-cpu-time": 1.3829100131988525,
+    "agentless-mini/qwen3-32B-gpu-time": 18.02067707950399
+  },
+  {
+    "totalTokens": 0.017811,
+    "agentless-mini/qwen3-32B-total-time": 49.68383598829492,
+    "agentless-mini/qwen3-32B-cpu-time": 0.6087841987609863,
+    "agentless-mini/qwen3-32B-gpu-time": 49.07505178953394
+  },
+  {
+    "totalTokens": 0.017927,
+    "agentless-mini/qwen3-32B-total-time": 24.724660677559456,
+    "agentless-mini/qwen3-32B-cpu-time": 0.19832348823547363,
+    "agentless-mini/qwen3-32B-gpu-time": 24.526337189323982
+  },
+  {
+    "totalTokens": 0.018796,
+    "agentless-mini/qwen3-32B-total-time": 8.95924933368957,
+    "agentless-mini/qwen3-32B-cpu-time": 0.48668909072875977,
+    "agentless-mini/qwen3-32B-gpu-time": 8.47256024296081
+  },
+  {
+    "totalTokens": 0.020148,
+    "agentless-mini/qwen3-32B-total-time": 15.456534328606805,
+    "agentless-mini/qwen3-32B-cpu-time": 0.21303248405456543,
+    "agentless-mini/qwen3-32B-gpu-time": 15.24350184455224
+  },
+  {
+    "totalTokens": 0.02089,
+    "agentless-mini/qwen3-32B-total-time": 15.68009764055432,
+    "agentless-mini/qwen3-32B-cpu-time": 1.4146826267242432,
+    "agentless-mini/qwen3-32B-gpu-time": 14.265415013830077
+  },
+  {
+    "totalTokens": 0.022431,
+    "agentless-mini/qwen3-32B-total-time": 12.232503228483319,
+    "agentless-mini/qwen3-32B-cpu-time": 0.31572842597961426,
+    "agentless-mini/qwen3-32B-gpu-time": 11.916774802503705
+  },
+  {
+    "totalTokens": 0.023566,
+    "agentless-mini/qwen3-32B-total-time": 16.232841458062666,
+    "agentless-mini/qwen3-32B-cpu-time": 1.3933911323547363,
+    "agentless-mini/qwen3-32B-gpu-time": 14.839450325707928
+  },
+  {
+    "totalTokens": 0.02595,
+    "agentless-mini/qwen3-32B-total-time": 51.74713187709407,
+    "agentless-mini/qwen3-32B-cpu-time": 0.6703100204467773,
+    "agentless-mini/qwen3-32B-gpu-time": 51.07682185664729
+  },
+  {
+    "totalTokens": 0.02841,
+    "agentless-mini/qwen3-32B-total-time": 14.012123992522575,
+    "agentless-mini/qwen3-32B-cpu-time": 0.14573168754577637,
+    "agentless-mini/qwen3-32B-gpu-time": 13.866392304976799
+  },
+  {
+    "totalTokens": 0.030584,
+    "agentless-mini/qwen3-32B-total-time": 27.567422669435203,
+    "agentless-mini/qwen3-32B-cpu-time": 0.2967264652252197,
+    "agentless-mini/qwen3-32B-gpu-time": 27.270696204209983
+  },
+  {
+    "totalTokens": 0.031149,
+    "agentless-mini/qwen3-32B-total-time": 13.050132481711614,
+    "agentless-mini/qwen3-32B-cpu-time": 0.8364419937133789,
+    "agentless-mini/qwen3-32B-gpu-time": 12.213690487998235
+  },
+  {
+    "totalTokens": 0.032181,
+    "agentless-mini/qwen3-32B-total-time": 25.578763882481958,
+    "agentless-mini/qwen3-32B-cpu-time": 0.10945963859558105,
+    "agentless-mini/qwen3-32B-gpu-time": 25.469304243886377
+  },
+  {
+    "totalTokens": 0.032966,
+    "agentless-mini/qwen3-32B-total-time": 19.5793744079809,
+    "agentless-mini/qwen3-32B-cpu-time": 0.11002612113952637,
+    "agentless-mini/qwen3-32B-gpu-time": 19.469348286841374
+  },
+  {
+    "totalTokens": 0.033264,
+    "agentless-mini/qwen3-32B-total-time": 24.194695383666264,
+    "agentless-mini/qwen3-32B-cpu-time": 0.703669548034668,
+    "agentless-mini/qwen3-32B-gpu-time": 23.491025835631596
+  },
+  {
+    "totalTokens": 0.034,
+    "agentless-mini/qwen3-32B-total-time": 22.923135930938265,
+    "agentless-mini/qwen3-32B-cpu-time": 1.230241298675537,
+    "agentless-mini/qwen3-32B-gpu-time": 21.69289463226273
+  },
+  {
+    "totalTokens": 0.035002,
+    "agentless-mini/qwen3-32B-total-time": 13.551495886682984,
+    "agentless-mini/qwen3-32B-cpu-time": 0.5685985088348389,
+    "agentless-mini/qwen3-32B-gpu-time": 12.982897377848145
+  },
+  {
+    "totalTokens": 0.036674,
+    "agentless-mini/qwen3-32B-total-time": 12.212164724981433,
+    "agentless-mini/qwen3-32B-cpu-time": 1.3823683261871338,
+    "agentless-mini/qwen3-32B-gpu-time": 10.829796398794299
+  },
+  {
+    "totalTokens": 0.041386,
+    "agentless-mini/qwen3-32B-total-time": 220.7015008462809,
+    "agentless-mini/qwen3-32B-cpu-time": 0.4396979808807373,
+    "agentless-mini/qwen3-32B-gpu-time": 220.26180286540017
+  },
+  {
+    "totalTokens": 0.042027,
+    "agentless-mini/qwen3-32B-total-time": 9.494613288628306,
+    "agentless-mini/qwen3-32B-cpu-time": 1.2807321548461914,
+    "agentless-mini/qwen3-32B-gpu-time": 8.213881133782115
+  },
+  {
+    "totalTokens": 0.044443,
+    "agentless-mini/qwen3-32B-total-time": 23.429117077016805,
+    "agentless-mini/qwen3-32B-cpu-time": 0.9158370494842529,
+    "agentless-mini/qwen3-32B-gpu-time": 22.513280027532552
+  },
+  {
+    "totalTokens": 0.044677,
+    "agentless-mini/qwen3-32B-total-time": 10.792857585748594,
+    "agentless-mini/qwen3-32B-cpu-time": 0.9213302135467529,
+    "agentless-mini/qwen3-32B-gpu-time": 9.871527372201841
+  },
+  {
+    "totalTokens": 0.045195,
+    "agentless-mini/qwen3-32B-total-time": 39.73128309546299,
+    "agentless-mini/qwen3-32B-cpu-time": 0.9151232242584229,
+    "agentless-mini/qwen3-32B-gpu-time": 38.81615987120457
+  },
+  {
+    "totalTokens": 0.0465,
+    "agentless-mini/qwen3-32B-total-time": 30.61402517078546,
+    "agentless-mini/qwen3-32B-cpu-time": 0.7048828601837158,
+    "agentless-mini/qwen3-32B-gpu-time": 29.909142310601744
+  },
+  {
+    "totalTokens": 0.051477,
+    "agentless-mini/qwen3-32B-total-time": 12.508092824084434,
+    "agentless-mini/qwen3-32B-cpu-time": 0.277022123336792,
+    "agentless-mini/qwen3-32B-gpu-time": 12.231070700747642
+  },
+  {
+    "totalTokens": 0.051505,
+    "agentless-mini/qwen3-32B-total-time": 205.00298121226623,
+    "agentless-mini/qwen3-32B-cpu-time": 0.670295000076294,
+    "agentless-mini/qwen3-32B-gpu-time": 204.33268621218994
+  },
+  {
+    "totalTokens": 0.052565,
+    "agentless-mini/qwen3-32B-total-time": 206.43646565285198,
+    "agentless-mini/qwen3-32B-cpu-time": 1.8436169624328613,
+    "agentless-mini/qwen3-32B-gpu-time": 204.59284869041912
+  },
+  {
+    "totalTokens": 0.052612,
+    "agentless-mini/qwen3-32B-total-time": 17.069922100579245,
+    "agentless-mini/qwen3-32B-cpu-time": 0.9914145469665527,
+    "agentless-mini/qwen3-32B-gpu-time": 16.078507553612692
+  },
+  {
+    "totalTokens": 0.054038,
+    "agentless-mini/qwen3-32B-total-time": 28.292939023562504,
+    "agentless-mini/qwen3-32B-cpu-time": 0.34164905548095703,
+    "agentless-mini/qwen3-32B-gpu-time": 27.951289968081547
+  },
+  {
+    "totalTokens": 0.054809,
+    "agentless-mini/qwen3-32B-total-time": 17.619696604819826,
+    "agentless-mini/qwen3-32B-cpu-time": 0.497713565826416,
+    "agentless-mini/qwen3-32B-gpu-time": 17.12198303899341
+  },
+  {
+    "totalTokens": 0.055936,
+    "agentless-mini/qwen3-32B-total-time": 14.938669683081812,
+    "agentless-mini/qwen3-32B-cpu-time": 0.6878571510314941,
+    "agentless-mini/qwen3-32B-gpu-time": 14.250812532050318
+  },
+  {
+    "totalTokens": 0.057439,
+    "agentless-mini/qwen3-32B-total-time": 223.0159277991831,
+    "agentless-mini/qwen3-32B-cpu-time": 1.1295714378356934,
+    "agentless-mini/qwen3-32B-gpu-time": 221.8863563613474
+  },
+  {
+    "totalTokens": 0.061241,
+    "agentless-mini/qwen3-32B-total-time": 38.32211069329937,
+    "agentless-mini/qwen3-32B-cpu-time": 1.1508522033691406,
+    "agentless-mini/qwen3-32B-gpu-time": 37.17125848993023
+  },
+  {
+    "totalTokens": 0.062352,
+    "agentless-mini/qwen3-32B-total-time": 203.80793981196348,
+    "agentless-mini/qwen3-32B-cpu-time": 0.5821323394775391,
+    "agentless-mini/qwen3-32B-gpu-time": 203.22580747248594
+  },
+  {
+    "totalTokens": 0.062837,
+    "agentless-mini/qwen3-32B-total-time": 15.083088596687425,
+    "agentless-mini/qwen3-32B-cpu-time": 0.6428630352020264,
+    "agentless-mini/qwen3-32B-gpu-time": 14.440225561485398
+  },
+  {
+    "totalTokens": 0.06326,
+    "agentless-mini/qwen3-32B-total-time": 223.71292454637148,
+    "agentless-mini/qwen3-32B-cpu-time": 0.7784597873687744,
+    "agentless-mini/qwen3-32B-gpu-time": 222.9344647590027
+  },
+  {
+    "totalTokens": 0.063545,
+    "agentless-mini/qwen3-32B-total-time": 46.50867109602219,
+    "agentless-mini/qwen3-32B-cpu-time": 0.9012794494628906,
+    "agentless-mini/qwen3-32B-gpu-time": 45.6073916465593
+  },
+  {
+    "totalTokens": 0.065647,
+    "agentless-mini/qwen3-32B-total-time": 227.21234261884965,
+    "agentless-mini/qwen3-32B-cpu-time": 0.9518842697143555,
+    "agentless-mini/qwen3-32B-gpu-time": 226.2604583491353
+  },
+  {
+    "totalTokens": 0.014215,
+    "agentless/GPT-4o-mini-2024-07-18-total-time": 651.2009215152203,
+    "agentless/GPT-4o-mini-2024-07-18-cpu-time": 549.4579020899212,
+    "agentless/GPT-4o-mini-2024-07-18-gpu-time": 101.74301942529921
+  },
+  {
+    "totalTokens": 0.015529,
+    "agentless/GPT-4o-mini-2024-07-18-total-time": 1464.7599387313003,
+    "agentless/GPT-4o-mini-2024-07-18-cpu-time": 1348.9594797056593,
+    "agentless/GPT-4o-mini-2024-07-18-gpu-time": 115.80045902564092
+  },
+  {
+    "totalTokens": 0.016225,
+    "agentless/GPT-4o-mini-2024-07-18-total-time": 1506.8735895393593,
+    "agentless/GPT-4o-mini-2024-07-18-cpu-time": 1330.5840441149153,
+    "agentless/GPT-4o-mini-2024-07-18-gpu-time": 176.2895454244439
+  },
+  {
+    "totalTokens": 0.01638,
+    "agentless/GPT-4o-mini-2024-07-18-total-time": 1317.6170194110853,
+    "agentless/GPT-4o-mini-2024-07-18-cpu-time": 1204.2646168630995,
+    "agentless/GPT-4o-mini-2024-07-18-gpu-time": 113.35240254798572
+  },
+  {
+    "totalTokens": 0.016522,
+    "agentless/GPT-4o-mini-2024-07-18-total-time": 1189.3379645312089,
+    "agentless/GPT-4o-mini-2024-07-18-cpu-time": 1077.4941135805525,
+    "agentless/GPT-4o-mini-2024-07-18-gpu-time": 111.84385095065632
+  },
+  {
+    "totalTokens": 0.017308,
+    "agentless/GPT-4o-mini-2024-07-18-total-time": 1483.402119125229,
+    "agentless/GPT-4o-mini-2024-07-18-cpu-time": 1394.0289305609144,
+    "agentless/GPT-4o-mini-2024-07-18-gpu-time": 89.37318856431467
+  },
+  {
+    "totalTokens": 0.017576,
+    "agentless/GPT-4o-mini-2024-07-18-total-time": 828.4638078201217,
+    "agentless/GPT-4o-mini-2024-07-18-cpu-time": 679.9544462126171,
+    "agentless/GPT-4o-mini-2024-07-18-gpu-time": 148.50936160750462
+  },
+  {
+    "totalTokens": 0.017787,
+    "agentless/GPT-4o-mini-2024-07-18-total-time": 1454.1551119044357,
+    "agentless/GPT-4o-mini-2024-07-18-cpu-time": 1321.7575887602247,
+    "agentless/GPT-4o-mini-2024-07-18-gpu-time": 132.39752314421102
+  },
+  {
+    "totalTokens": 0.01923,
+    "agentless/GPT-4o-mini-2024-07-18-total-time": 575.7808118561965,
+    "agentless/GPT-4o-mini-2024-07-18-cpu-time": 447.790579215852,
+    "agentless/GPT-4o-mini-2024-07-18-gpu-time": 127.99023264034442
+  },
+  {
+    "totalTokens": 0.019231,
+    "agentless/GPT-4o-mini-2024-07-18-total-time": 1218.5291447798475,
+    "agentless/GPT-4o-mini-2024-07-18-cpu-time": 1068.2346259516157,
+    "agentless/GPT-4o-mini-2024-07-18-gpu-time": 150.29451882823173
+  },
+  {
+    "totalTokens": 0.020173,
+    "agentless/GPT-4o-mini-2024-07-18-total-time": 607.990324321423,
+    "agentless/GPT-4o-mini-2024-07-18-cpu-time": 457.8755644720471,
+    "agentless/GPT-4o-mini-2024-07-18-gpu-time": 150.11475984937593
+  },
+  {
+    "totalTokens": 0.020483,
+    "agentless/GPT-4o-mini-2024-07-18-total-time": 1443.8272542495083,
+    "agentless/GPT-4o-mini-2024-07-18-cpu-time": 1277.0085779589094,
+    "agentless/GPT-4o-mini-2024-07-18-gpu-time": 166.81867629059886
+  },
+  {
+    "totalTokens": 0.020702,
+    "agentless/GPT-4o-mini-2024-07-18-total-time": 1428.7326346145412,
+    "agentless/GPT-4o-mini-2024-07-18-cpu-time": 1269.182737724153,
+    "agentless/GPT-4o-mini-2024-07-18-gpu-time": 159.54989689038828
+  },
+  {
+    "totalTokens": 0.021797,
+    "agentless/GPT-4o-mini-2024-07-18-total-time": 457.027221720464,
+    "agentless/GPT-4o-mini-2024-07-18-cpu-time": 317.09053982910274,
+    "agentless/GPT-4o-mini-2024-07-18-gpu-time": 139.93668189136125
+  },
+  {
+    "totalTokens": 0.021909,
+    "agentless/GPT-4o-mini-2024-07-18-total-time": 743.5062746354048,
+    "agentless/GPT-4o-mini-2024-07-18-cpu-time": 620.0805524748241,
+    "agentless/GPT-4o-mini-2024-07-18-gpu-time": 123.42572216058066
+  },
+  {
+    "totalTokens": 0.021914,
+    "agentless/GPT-4o-mini-2024-07-18-total-time": 1392.8906782832921,
+    "agentless/GPT-4o-mini-2024-07-18-cpu-time": 1256.5580738943495,
+    "agentless/GPT-4o-mini-2024-07-18-gpu-time": 136.33260438894268
+  },
+  {
+    "totalTokens": 0.021994,
+    "agentless/GPT-4o-mini-2024-07-18-total-time": 530.0292185412223,
+    "agentless/GPT-4o-mini-2024-07-18-cpu-time": 385.56030048545955,
+    "agentless/GPT-4o-mini-2024-07-18-gpu-time": 144.46891805576277
+  },
+  {
+    "totalTokens": 0.022012,
+    "agentless/GPT-4o-mini-2024-07-18-total-time": 885.9886134635506,
+    "agentless/GPT-4o-mini-2024-07-18-cpu-time": 731.0816213053142,
+    "agentless/GPT-4o-mini-2024-07-18-gpu-time": 154.9069921582363
+  },
+  {
+    "totalTokens": 0.022124,
+    "agentless/GPT-4o-mini-2024-07-18-total-time": 539.1082750901232,
+    "agentless/GPT-4o-mini-2024-07-18-cpu-time": 394.25390948471187,
+    "agentless/GPT-4o-mini-2024-07-18-gpu-time": 144.85436560541132
+  },
+  {
+    "totalTokens": 0.023562,
+    "agentless/GPT-4o-mini-2024-07-18-total-time": 1700.4114795695932,
+    "agentless/GPT-4o-mini-2024-07-18-cpu-time": 1602.6785937708296,
+    "agentless/GPT-4o-mini-2024-07-18-gpu-time": 97.73288579876369
+  },
+  {
+    "totalTokens": 0.023574,
+    "agentless/GPT-4o-mini-2024-07-18-total-time": 1353.2004838699702,
+    "agentless/GPT-4o-mini-2024-07-18-cpu-time": 1216.8670483988203,
+    "agentless/GPT-4o-mini-2024-07-18-gpu-time": 136.33343547114984
+  },
+  {
+    "totalTokens": 0.023832,
+    "agentless/GPT-4o-mini-2024-07-18-total-time": 1519.7536045274003,
+    "agentless/GPT-4o-mini-2024-07-18-cpu-time": 1411.037032739488,
+    "agentless/GPT-4o-mini-2024-07-18-gpu-time": 108.71657178791224
+  },
+  {
+    "totalTokens": 0.024384,
+    "agentless/GPT-4o-mini-2024-07-18-total-time": 515.1337921396312,
+    "agentless/GPT-4o-mini-2024-07-18-cpu-time": 346.9340187471783,
+    "agentless/GPT-4o-mini-2024-07-18-gpu-time": 168.1997733924528
+  },
+  {
+    "totalTokens": 0.024858,
+    "agentless/GPT-4o-mini-2024-07-18-total-time": 1336.5452893960721,
+    "agentless/GPT-4o-mini-2024-07-18-cpu-time": 1231.9838663500227,
+    "agentless/GPT-4o-mini-2024-07-18-gpu-time": 104.56142304604944
+  },
+  {
+    "totalTokens": 0.025298,
+    "agentless/GPT-4o-mini-2024-07-18-total-time": 771.0696860994568,
+    "agentless/GPT-4o-mini-2024-07-18-cpu-time": 602.4810131948864,
+    "agentless/GPT-4o-mini-2024-07-18-gpu-time": 168.58867290457047
+  },
+  {
+    "totalTokens": 0.025347,
+    "agentless/GPT-4o-mini-2024-07-18-total-time": 1369.5638736565807,
+    "agentless/GPT-4o-mini-2024-07-18-cpu-time": 1203.4224783342756,
+    "agentless/GPT-4o-mini-2024-07-18-gpu-time": 166.1413953223049
+  },
+  {
+    "totalTokens": 0.025397,
+    "agentless/GPT-4o-mini-2024-07-18-total-time": 803.7458043812408,
+    "agentless/GPT-4o-mini-2024-07-18-cpu-time": 631.0539661806499,
+    "agentless/GPT-4o-mini-2024-07-18-gpu-time": 172.69183820059084
+  },
+  {
+    "totalTokens": 0.025493,
+    "agentless/GPT-4o-mini-2024-07-18-total-time": 974.5544142340652,
+    "agentless/GPT-4o-mini-2024-07-18-cpu-time": 804.0629118841564,
+    "agentless/GPT-4o-mini-2024-07-18-gpu-time": 170.49150234990884
+  },
+  {
+    "totalTokens": 0.025699,
+    "agentless/GPT-4o-mini-2024-07-18-total-time": 1297.5915016730642,
+    "agentless/GPT-4o-mini-2024-07-18-cpu-time": 1163.9566971224226,
+    "agentless/GPT-4o-mini-2024-07-18-gpu-time": 133.63480455064143
+  },
+  {
+    "totalTokens": 0.025925,
+    "agentless/GPT-4o-mini-2024-07-18-total-time": 985.502443589738,
+    "agentless/GPT-4o-mini-2024-07-18-cpu-time": 855.9969300192272,
+    "agentless/GPT-4o-mini-2024-07-18-gpu-time": 129.5055135705109
+  },
+  {
+    "totalTokens": 0.027005,
+    "agentless/GPT-4o-mini-2024-07-18-total-time": 1589.4522474882672,
+    "agentless/GPT-4o-mini-2024-07-18-cpu-time": 1480.3753785055555,
+    "agentless/GPT-4o-mini-2024-07-18-gpu-time": 109.07686898271156
+  },
+  {
+    "totalTokens": 0.027142,
+    "agentless/GPT-4o-mini-2024-07-18-total-time": 478.16473375720386,
+    "agentless/GPT-4o-mini-2024-07-18-cpu-time": 332.78638805565,
+    "agentless/GPT-4o-mini-2024-07-18-gpu-time": 145.3783457015539
+  },
+  {
+    "totalTokens": 0.027935,
+    "agentless/GPT-4o-mini-2024-07-18-total-time": 912.510319275392,
+    "agentless/GPT-4o-mini-2024-07-18-cpu-time": 764.5188111227428,
+    "agentless/GPT-4o-mini-2024-07-18-gpu-time": 147.99150815264923
+  },
+  {
+    "totalTokens": 0.028965,
+    "agentless/GPT-4o-mini-2024-07-18-total-time": 490.7082112274501,
+    "agentless/GPT-4o-mini-2024-07-18-cpu-time": 362.7875734728253,
+    "agentless/GPT-4o-mini-2024-07-18-gpu-time": 127.92063775462482
+  },
+  {
+    "totalTokens": 0.029463,
+    "agentless/GPT-4o-mini-2024-07-18-total-time": 651.56963460051,
+    "agentless/GPT-4o-mini-2024-07-18-cpu-time": 474.41045536216853,
+    "agentless/GPT-4o-mini-2024-07-18-gpu-time": 177.15917923834147
+  },
+  {
+    "totalTokens": 0.029476,
+    "agentless/GPT-4o-mini-2024-07-18-total-time": 632.206999972257,
+    "agentless/GPT-4o-mini-2024-07-18-cpu-time": 491.3079077165997,
+    "agentless/GPT-4o-mini-2024-07-18-gpu-time": 140.89909225565734
+  },
+  {
+    "totalTokens": 0.031657,
+    "agentless/GPT-4o-mini-2024-07-18-total-time": 1723.6000029459624,
+    "agentless/GPT-4o-mini-2024-07-18-cpu-time": 1586.831782476274,
+    "agentless/GPT-4o-mini-2024-07-18-gpu-time": 136.76822046968852
+  },
+  {
+    "totalTokens": 0.032418,
+    "agentless/GPT-4o-mini-2024-07-18-total-time": 740.6559970669282,
+    "agentless/GPT-4o-mini-2024-07-18-cpu-time": 549.2094170015728,
+    "agentless/GPT-4o-mini-2024-07-18-gpu-time": 191.44658006535548
+  },
+  {
+    "totalTokens": 0.035495,
+    "agentless/GPT-4o-mini-2024-07-18-total-time": 575.1655421207447,
+    "agentless/GPT-4o-mini-2024-07-18-cpu-time": 439.80819214996455,
+    "agentless/GPT-4o-mini-2024-07-18-gpu-time": 135.35734997078012
+  },
+  {
+    "totalTokens": 0.035585,
+    "agentless/GPT-4o-mini-2024-07-18-total-time": 548.697221128497,
+    "agentless/GPT-4o-mini-2024-07-18-cpu-time": 378.2001000803387,
+    "agentless/GPT-4o-mini-2024-07-18-gpu-time": 170.4971210481582
+  },
+  {
+    "totalTokens": 0.035719,
+    "agentless/GPT-4o-mini-2024-07-18-total-time": 1613.68191833576,
+    "agentless/GPT-4o-mini-2024-07-18-cpu-time": 1492.216425077287,
+    "agentless/GPT-4o-mini-2024-07-18-gpu-time": 121.46549325847292
+  },
+  {
+    "totalTokens": 0.036877,
+    "agentless/GPT-4o-mini-2024-07-18-total-time": 705.7513642291467,
+    "agentless/GPT-4o-mini-2024-07-18-cpu-time": 535.6690071981823,
+    "agentless/GPT-4o-mini-2024-07-18-gpu-time": 170.08235703096437
+  },
+  {
+    "totalTokens": 0.039235,
+    "agentless/GPT-4o-mini-2024-07-18-total-time": 1683.251312660093,
+    "agentless/GPT-4o-mini-2024-07-18-cpu-time": 1569.0539177816786,
+    "agentless/GPT-4o-mini-2024-07-18-gpu-time": 114.19739487841437
+  },
+  {
+    "totalTokens": 0.044673,
+    "agentless/GPT-4o-mini-2024-07-18-total-time": 1053.954289868698,
+    "agentless/GPT-4o-mini-2024-07-18-cpu-time": 920.16991366562,
+    "agentless/GPT-4o-mini-2024-07-18-gpu-time": 133.78437620307787
+  },
+  {
+    "totalTokens": 0.045602,
+    "agentless/GPT-4o-mini-2024-07-18-total-time": 433.92145307090834,
+    "agentless/GPT-4o-mini-2024-07-18-cpu-time": 258.7581163805401,
+    "agentless/GPT-4o-mini-2024-07-18-gpu-time": 175.16333669036823
+  },
+  {
+    "totalTokens": 0.045887,
+    "agentless/GPT-4o-mini-2024-07-18-total-time": 704.3358215132871,
+    "agentless/GPT-4o-mini-2024-07-18-cpu-time": 602.5063973825847,
+    "agentless/GPT-4o-mini-2024-07-18-gpu-time": 101.82942413070236
+  },
+  {
+    "totalTokens": 0.067731,
+    "agentless/GPT-4o-mini-2024-07-18-total-time": 1178.7887568470749,
+    "agentless/GPT-4o-mini-2024-07-18-cpu-time": 1052.3586102884688,
+    "agentless/GPT-4o-mini-2024-07-18-gpu-time": 126.43014655860608
+  },
+  {
+    "totalTokens": 0.068782,
+    "agentless/GPT-4o-mini-2024-07-18-total-time": 1312.2517329126254,
+    "agentless/GPT-4o-mini-2024-07-18-cpu-time": 1120.9634798925795,
+    "agentless/GPT-4o-mini-2024-07-18-gpu-time": 191.28825302004591
+  },
+  {
+    "totalTokens": 0.070699,
+    "agentless/GPT-4o-mini-2024-07-18-total-time": 1281.4654100693958,
+    "agentless/GPT-4o-mini-2024-07-18-cpu-time": 1160.2172831457533,
+    "agentless/GPT-4o-mini-2024-07-18-gpu-time": 121.24812692364257
+  },
+  {
+    "totalTokens": 0.073894,
+    "agentless/GPT-4o-mini-2024-07-18-total-time": 851.8293462561214,
+    "agentless/GPT-4o-mini-2024-07-18-cpu-time": 677.2086652677929,
+    "agentless/GPT-4o-mini-2024-07-18-gpu-time": 174.62068098832862
+  },
+  {
+    "totalTokens": 0.03251,
+    "agentless/llama-3.3-70B-Instruct-FP8-total-time": 628.0233528443073,
+    "agentless/llama-3.3-70B-Instruct-FP8-cpu-time": 441.70152454910277,
+    "agentless/llama-3.3-70B-Instruct-FP8-gpu-time": 186.3218282952045
+  },
+  {
+    "totalTokens": 0.032807,
+    "agentless/llama-3.3-70B-Instruct-FP8-total-time": 853.8587874074215,
+    "agentless/llama-3.3-70B-Instruct-FP8-cpu-time": 695.2271397644042,
+    "agentless/llama-3.3-70B-Instruct-FP8-gpu-time": 158.63164764301726
+  },
+  {
+    "totalTokens": 0.034301,
+    "agentless/llama-3.3-70B-Instruct-FP8-total-time": 802.164986676672,
+    "agentless/llama-3.3-70B-Instruct-FP8-cpu-time": 556.217126184082,
+    "agentless/llama-3.3-70B-Instruct-FP8-gpu-time": 245.94786049259
+  },
+  {
+    "totalTokens": 0.038209,
+    "agentless/llama-3.3-70B-Instruct-FP8-total-time": 851.9572157427328,
+    "agentless/llama-3.3-70B-Instruct-FP8-cpu-time": 742.6723318630218,
+    "agentless/llama-3.3-70B-Instruct-FP8-gpu-time": 109.28488387971102
+  },
+  {
+    "totalTokens": 0.039168,
+    "agentless/llama-3.3-70B-Instruct-FP8-total-time": 459.60639957306535,
+    "agentless/llama-3.3-70B-Instruct-FP8-cpu-time": 340.79305487213134,
+    "agentless/llama-3.3-70B-Instruct-FP8-gpu-time": 118.81334470093401
+  },
+  {
+    "totalTokens": 0.041618,
+    "agentless/llama-3.3-70B-Instruct-FP8-total-time": 894.7457299562371,
+    "agentless/llama-3.3-70B-Instruct-FP8-cpu-time": 748.8398373657226,
+    "agentless/llama-3.3-70B-Instruct-FP8-gpu-time": 145.90589259051453
+  },
+  {
+    "totalTokens": 0.042261,
+    "agentless/llama-3.3-70B-Instruct-FP8-total-time": 309.13188041049193,
+    "agentless/llama-3.3-70B-Instruct-FP8-cpu-time": 131.51173644599913,
+    "agentless/llama-3.3-70B-Instruct-FP8-gpu-time": 177.6201439644928
+  },
+  {
+    "totalTokens": 0.043784,
+    "agentless/llama-3.3-70B-Instruct-FP8-total-time": 967.4438875673245,
+    "agentless/llama-3.3-70B-Instruct-FP8-cpu-time": 642.4917827182769,
+    "agentless/llama-3.3-70B-Instruct-FP8-gpu-time": 324.95210484904754
+  },
+  {
+    "totalTokens": 0.044867,
+    "agentless/llama-3.3-70B-Instruct-FP8-total-time": 424.5340951155291,
+    "agentless/llama-3.3-70B-Instruct-FP8-cpu-time": 267.4274602466583,
+    "agentless/llama-3.3-70B-Instruct-FP8-gpu-time": 157.10663486887083
+  },
+  {
+    "totalTokens": 0.045327,
+    "agentless/llama-3.3-70B-Instruct-FP8-total-time": 160.07431087704907,
+    "agentless/llama-3.3-70B-Instruct-FP8-cpu-time": 97.3436906867981,
+    "agentless/llama-3.3-70B-Instruct-FP8-gpu-time": 62.73062019025098
+  },
+  {
+    "totalTokens": 0.045745,
+    "agentless/llama-3.3-70B-Instruct-FP8-total-time": 156.15258895257415,
+    "agentless/llama-3.3-70B-Instruct-FP8-cpu-time": 97.14817123947144,
+    "agentless/llama-3.3-70B-Instruct-FP8-gpu-time": 59.0044177131027
+  },
+  {
+    "totalTokens": 0.045819,
+    "agentless/llama-3.3-70B-Instruct-FP8-total-time": 617.193171360306,
+    "agentless/llama-3.3-70B-Instruct-FP8-cpu-time": 404.18034391937255,
+    "agentless/llama-3.3-70B-Instruct-FP8-gpu-time": 213.0128274409335
+  },
+  {
+    "totalTokens": 0.046735,
+    "agentless/llama-3.3-70B-Instruct-FP8-total-time": 653.5605674558042,
+    "agentless/llama-3.3-70B-Instruct-FP8-cpu-time": 516.2141261631011,
+    "agentless/llama-3.3-70B-Instruct-FP8-gpu-time": 137.3464412927031
+  },
+  {
+    "totalTokens": 0.047918,
+    "agentless/llama-3.3-70B-Instruct-FP8-total-time": 274.85023242076306,
+    "agentless/llama-3.3-70B-Instruct-FP8-cpu-time": 143.57674580154418,
+    "agentless/llama-3.3-70B-Instruct-FP8-gpu-time": 131.2734866192189
+  },
+  {
+    "totalTokens": 0.049315,
+    "agentless/llama-3.3-70B-Instruct-FP8-total-time": 1086.3801077123385,
+    "agentless/llama-3.3-70B-Instruct-FP8-cpu-time": 880.8911660247802,
+    "agentless/llama-3.3-70B-Instruct-FP8-gpu-time": 205.48894168755828
+  },
+  {
+    "totalTokens": 0.051846,
+    "agentless/llama-3.3-70B-Instruct-FP8-total-time": 765.3300605066372,
+    "agentless/llama-3.3-70B-Instruct-FP8-cpu-time": 577.9134581619262,
+    "agentless/llama-3.3-70B-Instruct-FP8-gpu-time": 187.41660234471098
+  },
+  {
+    "totalTokens": 0.052643,
+    "agentless/llama-3.3-70B-Instruct-FP8-total-time": 952.0498204563916,
+    "agentless/llama-3.3-70B-Instruct-FP8-cpu-time": 799.130307250595,
+    "agentless/llama-3.3-70B-Instruct-FP8-gpu-time": 152.91951320579656
+  },
+  {
+    "totalTokens": 0.053109,
+    "agentless/llama-3.3-70B-Instruct-FP8-total-time": 370.3088332613705,
+    "agentless/llama-3.3-70B-Instruct-FP8-cpu-time": 188.42191224632262,
+    "agentless/llama-3.3-70B-Instruct-FP8-gpu-time": 181.88692101504793
+  },
+  {
+    "totalTokens": 0.053424,
+    "agentless/llama-3.3-70B-Instruct-FP8-total-time": 426.5550351871442,
+    "agentless/llama-3.3-70B-Instruct-FP8-cpu-time": 289.4081264072418,
+    "agentless/llama-3.3-70B-Instruct-FP8-gpu-time": 137.1469087799024
+  },
+  {
+    "totalTokens": 0.054348,
+    "agentless/llama-3.3-70B-Instruct-FP8-total-time": 677.5355080801041,
+    "agentless/llama-3.3-70B-Instruct-FP8-cpu-time": 604.7575598293304,
+    "agentless/llama-3.3-70B-Instruct-FP8-gpu-time": 72.77794825077373
+  },
+  {
+    "totalTokens": 0.054361,
+    "agentless/llama-3.3-70B-Instruct-FP8-total-time": 443.7887110402512,
+    "agentless/llama-3.3-70B-Instruct-FP8-cpu-time": 280.5635514789581,
+    "agentless/llama-3.3-70B-Instruct-FP8-gpu-time": 163.22515956129308
+  },
+  {
+    "totalTokens": 0.055261,
+    "agentless/llama-3.3-70B-Instruct-FP8-total-time": 659.1046268004882,
+    "agentless/llama-3.3-70B-Instruct-FP8-cpu-time": 401.5704048210144,
+    "agentless/llama-3.3-70B-Instruct-FP8-gpu-time": 257.5342219794738
+  },
+  {
+    "totalTokens": 0.056706,
+    "agentless/llama-3.3-70B-Instruct-FP8-total-time": 785.0727402092324,
+    "agentless/llama-3.3-70B-Instruct-FP8-cpu-time": 671.1697912746429,
+    "agentless/llama-3.3-70B-Instruct-FP8-gpu-time": 113.9029489345895
+  },
+  {
+    "totalTokens": 0.05742,
+    "agentless/llama-3.3-70B-Instruct-FP8-total-time": 655.3599872525065,
+    "agentless/llama-3.3-70B-Instruct-FP8-cpu-time": 549.8843973213195,
+    "agentless/llama-3.3-70B-Instruct-FP8-gpu-time": 105.47558993118695
+  },
+  {
+    "totalTokens": 0.058169,
+    "agentless/llama-3.3-70B-Instruct-FP8-total-time": 380.8868716932313,
+    "agentless/llama-3.3-70B-Instruct-FP8-cpu-time": 178.53432517585753,
+    "agentless/llama-3.3-70B-Instruct-FP8-gpu-time": 202.35254651737375
+  },
+  {
+    "totalTokens": 0.059638,
+    "agentless/llama-3.3-70B-Instruct-FP8-total-time": 754.0408595432815,
+    "agentless/llama-3.3-70B-Instruct-FP8-cpu-time": 638.128322415924,
+    "agentless/llama-3.3-70B-Instruct-FP8-gpu-time": 115.91253712735754
+  },
+  {
+    "totalTokens": 0.059788,
+    "agentless/llama-3.3-70B-Instruct-FP8-total-time": 689.3060139471708,
+    "agentless/llama-3.3-70B-Instruct-FP8-cpu-time": 504.02997832832335,
+    "agentless/llama-3.3-70B-Instruct-FP8-gpu-time": 185.2760356188474
+  },
+  {
+    "totalTokens": 0.060894,
+    "agentless/llama-3.3-70B-Instruct-FP8-total-time": 1030.556691365123,
+    "agentless/llama-3.3-70B-Instruct-FP8-cpu-time": 679.7361884647369,
+    "agentless/llama-3.3-70B-Instruct-FP8-gpu-time": 350.8205029003862
+  },
+  {
+    "totalTokens": 0.061012,
+    "agentless/llama-3.3-70B-Instruct-FP8-total-time": 310.58333057246375,
+    "agentless/llama-3.3-70B-Instruct-FP8-cpu-time": 199.39094739494323,
+    "agentless/llama-3.3-70B-Instruct-FP8-gpu-time": 111.1923831775205
+  },
+  {
+    "totalTokens": 0.061577,
+    "agentless/llama-3.3-70B-Instruct-FP8-total-time": 998.5963001482097,
+    "agentless/llama-3.3-70B-Instruct-FP8-cpu-time": 892.9283829265594,
+    "agentless/llama-3.3-70B-Instruct-FP8-gpu-time": 105.66791722165036
+  },
+  {
+    "totalTokens": 0.062177,
+    "agentless/llama-3.3-70B-Instruct-FP8-total-time": 466.4239184353196,
+    "agentless/llama-3.3-70B-Instruct-FP8-cpu-time": 323.7199581199646,
+    "agentless/llama-3.3-70B-Instruct-FP8-gpu-time": 142.70396031535498
+  },
+  {
+    "totalTokens": 0.067289,
+    "agentless/llama-3.3-70B-Instruct-FP8-total-time": 877.6642016407045,
+    "agentless/llama-3.3-70B-Instruct-FP8-cpu-time": 647.4247069889068,
+    "agentless/llama-3.3-70B-Instruct-FP8-gpu-time": 230.2394946517977
+  },
+  {
+    "totalTokens": 0.067368,
+    "agentless/llama-3.3-70B-Instruct-FP8-total-time": 701.8959899146231,
+    "agentless/llama-3.3-70B-Instruct-FP8-cpu-time": 621.834365182495,
+    "agentless/llama-3.3-70B-Instruct-FP8-gpu-time": 80.06162473212804
+  },
+  {
+    "totalTokens": 0.067848,
+    "agentless/llama-3.3-70B-Instruct-FP8-total-time": 298.9901703934498,
+    "agentless/llama-3.3-70B-Instruct-FP8-cpu-time": 200.6477823787689,
+    "agentless/llama-3.3-70B-Instruct-FP8-gpu-time": 98.34238801468088
+  },
+  {
+    "totalTokens": 0.068254,
+    "agentless/llama-3.3-70B-Instruct-FP8-total-time": 462.5708607234965,
+    "agentless/llama-3.3-70B-Instruct-FP8-cpu-time": 262.88230519828795,
+    "agentless/llama-3.3-70B-Instruct-FP8-gpu-time": 199.68855552520856
+  },
+  {
+    "totalTokens": 0.069644,
+    "agentless/llama-3.3-70B-Instruct-FP8-total-time": 765.9174507523126,
+    "agentless/llama-3.3-70B-Instruct-FP8-cpu-time": 512.518446736908,
+    "agentless/llama-3.3-70B-Instruct-FP8-gpu-time": 253.39900401540459
+  },
+  {
+    "totalTokens": 0.069874,
+    "agentless/llama-3.3-70B-Instruct-FP8-total-time": 309.297910931695,
+    "agentless/llama-3.3-70B-Instruct-FP8-cpu-time": 191.79901867446898,
+    "agentless/llama-3.3-70B-Instruct-FP8-gpu-time": 117.49889225722603
+  },
+  {
+    "totalTokens": 0.071946,
+    "agentless/llama-3.3-70B-Instruct-FP8-total-time": 546.1932793445178,
+    "agentless/llama-3.3-70B-Instruct-FP8-cpu-time": 402.442751222229,
+    "agentless/llama-3.3-70B-Instruct-FP8-gpu-time": 143.75052812228876
+  },
+  {
+    "totalTokens": 0.075746,
+    "agentless/llama-3.3-70B-Instruct-FP8-total-time": 673.8664391795733,
+    "agentless/llama-3.3-70B-Instruct-FP8-cpu-time": 338.8631272846222,
+    "agentless/llama-3.3-70B-Instruct-FP8-gpu-time": 335.003311894951
+  },
+  {
+    "totalTokens": 0.076598,
+    "agentless/llama-3.3-70B-Instruct-FP8-total-time": 814.0514204599298,
+    "agentless/llama-3.3-70B-Instruct-FP8-cpu-time": 599.5756474071502,
+    "agentless/llama-3.3-70B-Instruct-FP8-gpu-time": 214.47577305277954
+  },
+  {
+    "totalTokens": 0.080829,
+    "agentless/llama-3.3-70B-Instruct-FP8-total-time": 658.4036032081638,
+    "agentless/llama-3.3-70B-Instruct-FP8-cpu-time": 442.2577267223358,
+    "agentless/llama-3.3-70B-Instruct-FP8-gpu-time": 216.14587648582796
+  },
+  {
+    "totalTokens": 0.081929,
+    "agentless/llama-3.3-70B-Instruct-FP8-total-time": 598.8570094882848,
+    "agentless/llama-3.3-70B-Instruct-FP8-cpu-time": 403.9637115531921,
+    "agentless/llama-3.3-70B-Instruct-FP8-gpu-time": 194.89329793509265
+  },
+  {
+    "totalTokens": 0.083379,
+    "agentless/llama-3.3-70B-Instruct-FP8-total-time": 358.49732817693354,
+    "agentless/llama-3.3-70B-Instruct-FP8-cpu-time": 112.5103462272644,
+    "agentless/llama-3.3-70B-Instruct-FP8-gpu-time": 245.98698194966914
+  },
+  {
+    "totalTokens": 0.087246,
+    "agentless/llama-3.3-70B-Instruct-FP8-total-time": 655.8824529006605,
+    "agentless/llama-3.3-70B-Instruct-FP8-cpu-time": 545.5754507118224,
+    "agentless/llama-3.3-70B-Instruct-FP8-gpu-time": 110.3070021888381
+  },
+  {
+    "totalTokens": 0.09086,
+    "agentless/llama-3.3-70B-Instruct-FP8-total-time": 131.4986779875112,
+    "agentless/llama-3.3-70B-Instruct-FP8-cpu-time": 98.2325850063324,
+    "agentless/llama-3.3-70B-Instruct-FP8-gpu-time": 33.26609298117879
+  },
+  {
+    "totalTokens": 0.099733,
+    "agentless/llama-3.3-70B-Instruct-FP8-total-time": 355.5588280094563,
+    "agentless/llama-3.3-70B-Instruct-FP8-cpu-time": 244.73414593276976,
+    "agentless/llama-3.3-70B-Instruct-FP8-gpu-time": 110.82468207668657
+  },
+  {
+    "totalTokens": 0.101268,
+    "agentless/llama-3.3-70B-Instruct-FP8-total-time": 762.8110158711509,
+    "agentless/llama-3.3-70B-Instruct-FP8-cpu-time": 604.4281104141235,
+    "agentless/llama-3.3-70B-Instruct-FP8-gpu-time": 158.3829054570274
+  },
+  {
+    "totalTokens": 0.102576,
+    "agentless/llama-3.3-70B-Instruct-FP8-total-time": 1066.6222169929592,
+    "agentless/llama-3.3-70B-Instruct-FP8-cpu-time": 872.5827024513244,
+    "agentless/llama-3.3-70B-Instruct-FP8-gpu-time": 194.03951454163487
+  },
+  {
+    "totalTokens": 0.132458,
+    "agentless/llama-3.3-70B-Instruct-FP8-total-time": 762.7350428618365,
+    "agentless/llama-3.3-70B-Instruct-FP8-cpu-time": 574.3940089279174,
+    "agentless/llama-3.3-70B-Instruct-FP8-gpu-time": 188.3410339339191
+  },
+  {
+    "totalTokens": 0.157937,
+    "agentless/llama-3.3-70B-Instruct-FP8-total-time": 741.5770512634849,
+    "agentless/llama-3.3-70B-Instruct-FP8-cpu-time": 578.22239356575,
+    "agentless/llama-3.3-70B-Instruct-FP8-gpu-time": 163.35465769773484
+  },
+  {
+    "totalTokens": 0.008636,
+    "agentless/qwen3-32B-total-time": 698.8160695432027,
+    "agentless/qwen3-32B-cpu-time": 573.0972908817291,
+    "agentless/qwen3-32B-gpu-time": 125.71877866147366
+  },
+  {
+    "totalTokens": 0.015708,
+    "agentless/qwen3-32B-total-time": 673.0363033790254,
+    "agentless/qwen3-32B-cpu-time": 564.7912565551758,
+    "agentless/qwen3-32B-gpu-time": 108.24504682384958
+  },
+  {
+    "totalTokens": 0.015834,
+    "agentless/qwen3-32B-total-time": 403.4123142009409,
+    "agentless/qwen3-32B-cpu-time": 316.67134106979375,
+    "agentless/qwen3-32B-gpu-time": 86.74097313114713
+  },
+  {
+    "totalTokens": 0.015871,
+    "agentless/qwen3-32B-total-time": 1235.6087331656474,
+    "agentless/qwen3-32B-cpu-time": 1055.5952538333895,
+    "agentless/qwen3-32B-gpu-time": 180.01347933225802
+  },
+  {
+    "totalTokens": 0.016437,
+    "agentless/qwen3-32B-total-time": 724.6821489347208,
+    "agentless/qwen3-32B-cpu-time": 461.3260284744263,
+    "agentless/qwen3-32B-gpu-time": 263.3561204602945
+  },
+  {
+    "totalTokens": 0.016513,
+    "agentless/qwen3-32B-total-time": 886.8586880378067,
+    "agentless/qwen3-32B-cpu-time": 800.0337640129089,
+    "agentless/qwen3-32B-gpu-time": 86.82492402489774
+  },
+  {
+    "totalTokens": 0.016722,
+    "agentless/qwen3-32B-total-time": 1445.1249821368608,
+    "agentless/qwen3-32B-cpu-time": 1081.9924520336153,
+    "agentless/qwen3-32B-gpu-time": 363.1325301032454
+  },
+  {
+    "totalTokens": 0.017349,
+    "agentless/qwen3-32B-total-time": 408.97701857204993,
+    "agentless/qwen3-32B-cpu-time": 289.4748565040589,
+    "agentless/qwen3-32B-gpu-time": 119.50216206799101
+  },
+  {
+    "totalTokens": 0.017675,
+    "agentless/qwen3-32B-total-time": 529.3957051817156,
+    "agentless/qwen3-32B-cpu-time": 406.06062210426336,
+    "agentless/qwen3-32B-gpu-time": 123.3350830774522
+  },
+  {
+    "totalTokens": 0.018903,
+    "agentless/qwen3-32B-total-time": 924.8965057435057,
+    "agentless/qwen3-32B-cpu-time": 811.701407559967,
+    "agentless/qwen3-32B-gpu-time": 113.19509818353869
+  },
+  {
+    "totalTokens": 0.019174,
+    "agentless/qwen3-32B-total-time": 1451.346745801831,
+    "agentless/qwen3-32B-cpu-time": 1180.370805629349,
+    "agentless/qwen3-32B-gpu-time": 270.9759401724821
+  },
+  {
+    "totalTokens": 0.020068,
+    "agentless/qwen3-32B-total-time": 967.9697634718681,
+    "agentless/qwen3-32B-cpu-time": 906.9914788089752,
+    "agentless/qwen3-32B-gpu-time": 60.978284662892904
+  },
+  {
+    "totalTokens": 0.020172,
+    "agentless/qwen3-32B-total-time": 1047.080029111074,
+    "agentless/qwen3-32B-cpu-time": 703.4602533660889,
+    "agentless/qwen3-32B-gpu-time": 343.6197757449853
+  },
+  {
+    "totalTokens": 0.020636,
+    "agentless/qwen3-32B-total-time": 1497.3551537764217,
+    "agentless/qwen3-32B-cpu-time": 1213.650116094208,
+    "agentless/qwen3-32B-gpu-time": 283.7050376822137
+  },
+  {
+    "totalTokens": 0.020751,
+    "agentless/qwen3-32B-total-time": 2185.7069316652774,
+    "agentless/qwen3-32B-cpu-time": 1171.870425590134,
+    "agentless/qwen3-32B-gpu-time": 1013.8365060751433
+  },
+  {
+    "totalTokens": 0.020967,
+    "agentless/qwen3-32B-total-time": 169.9014700607026,
+    "agentless/qwen3-32B-cpu-time": 112.17398656234742,
+    "agentless/qwen3-32B-gpu-time": 57.72748349835518
+  },
+  {
+    "totalTokens": 0.021182,
+    "agentless/qwen3-32B-total-time": 1463.6905979556527,
+    "agentless/qwen3-32B-cpu-time": 1006.8369504295349,
+    "agentless/qwen3-32B-gpu-time": 456.8536475261179
+  },
+  {
+    "totalTokens": 0.021353,
+    "agentless/qwen3-32B-total-time": 654.6629958916644,
+    "agentless/qwen3-32B-cpu-time": 503.73809517250066,
+    "agentless/qwen3-32B-gpu-time": 150.92490071916373
+  },
+  {
+    "totalTokens": 0.021756,
+    "agentless/qwen3-32B-total-time": 1265.7137928135883,
+    "agentless/qwen3-32B-cpu-time": 1114.451783307648,
+    "agentless/qwen3-32B-gpu-time": 151.26200950594026
+  },
+  {
+    "totalTokens": 0.022,
+    "agentless/qwen3-32B-total-time": 991.0231849122553,
+    "agentless/qwen3-32B-cpu-time": 758.5667194210052,
+    "agentless/qwen3-32B-gpu-time": 232.45646549125001
+  },
+  {
+    "totalTokens": 0.022195,
+    "agentless/qwen3-32B-total-time": 887.9181714351375,
+    "agentless/qwen3-32B-cpu-time": 686.9152675949097,
+    "agentless/qwen3-32B-gpu-time": 201.00290384022784
+  },
+  {
+    "totalTokens": 0.022223,
+    "agentless/qwen3-32B-total-time": 818.6011104314206,
+    "agentless/qwen3-32B-cpu-time": 634.6776038490295,
+    "agentless/qwen3-32B-gpu-time": 183.92350658239107
+  },
+  {
+    "totalTokens": 0.022393,
+    "agentless/qwen3-32B-total-time": 1099.3243606757596,
+    "agentless/qwen3-32B-cpu-time": 875.4739049755096,
+    "agentless/qwen3-32B-gpu-time": 223.85045570025
+  },
+  {
+    "totalTokens": 0.022499,
+    "agentless/qwen3-32B-total-time": 999.8038589924039,
+    "agentless/qwen3-32B-cpu-time": 819.4726485095978,
+    "agentless/qwen3-32B-gpu-time": 180.33121048280609
+  },
+  {
+    "totalTokens": 0.022503,
+    "agentless/qwen3-32B-total-time": 1094.295559633866,
+    "agentless/qwen3-32B-cpu-time": 897.6083997570038,
+    "agentless/qwen3-32B-gpu-time": 196.6871598768623
+  },
+  {
+    "totalTokens": 0.023108,
+    "agentless/qwen3-32B-total-time": 490.1513901831432,
+    "agentless/qwen3-32B-cpu-time": 400.4308084331513,
+    "agentless/qwen3-32B-gpu-time": 89.72058174999188
+  },
+  {
+    "totalTokens": 0.02315,
+    "agentless/qwen3-32B-total-time": 979.360226864792,
+    "agentless/qwen3-32B-cpu-time": 798.0164998851776,
+    "agentless/qwen3-32B-gpu-time": 181.3437269796144
+  },
+  {
+    "totalTokens": 0.023549,
+    "agentless/qwen3-32B-total-time": 1758.179826540611,
+    "agentless/qwen3-32B-cpu-time": 1270.9780129276278,
+    "agentless/qwen3-32B-gpu-time": 487.2018136129832
+  },
+  {
+    "totalTokens": 0.023577,
+    "agentless/qwen3-32B-total-time": 877.9869206306632,
+    "agentless/qwen3-32B-cpu-time": 677.7448512397766,
+    "agentless/qwen3-32B-gpu-time": 200.24206939088666
+  },
+  {
+    "totalTokens": 0.024275,
+    "agentless/qwen3-32B-total-time": 736.1524923372227,
+    "agentless/qwen3-32B-cpu-time": 675.8445242725372,
+    "agentless/qwen3-32B-gpu-time": 60.307968064685454
+  },
+  {
+    "totalTokens": 0.024858,
+    "agentless/qwen3-32B-total-time": 794.026700689731,
+    "agentless/qwen3-32B-cpu-time": 650.7952579341888,
+    "agentless/qwen3-32B-gpu-time": 143.2314427555422
+  },
+  {
+    "totalTokens": 0.025051,
+    "agentless/qwen3-32B-total-time": 1186.004270891295,
+    "agentless/qwen3-32B-cpu-time": 989.8532508693695,
+    "agentless/qwen3-32B-gpu-time": 196.1510200219255
+  },
+  {
+    "totalTokens": 0.026325,
+    "agentless/qwen3-32B-total-time": 647.6628637306295,
+    "agentless/qwen3-32B-cpu-time": 516.8606170497894,
+    "agentless/qwen3-32B-gpu-time": 130.80224668084008
+  },
+  {
+    "totalTokens": 0.026621,
+    "agentless/qwen3-32B-total-time": 484.09695000668603,
+    "agentless/qwen3-32B-cpu-time": 317.2563742481232,
+    "agentless/qwen3-32B-gpu-time": 166.8405757585628
+  },
+  {
+    "totalTokens": 0.027007,
+    "agentless/qwen3-32B-total-time": 961.1784854544696,
+    "agentless/qwen3-32B-cpu-time": 814.1363295398712,
+    "agentless/qwen3-32B-gpu-time": 147.04215591459842
+  },
+  {
+    "totalTokens": 0.027243,
+    "agentless/qwen3-32B-total-time": 837.3874032515548,
+    "agentless/qwen3-32B-cpu-time": 730.1349080883026,
+    "agentless/qwen3-32B-gpu-time": 107.25249516325223
+  },
+  {
+    "totalTokens": 0.027918,
+    "agentless/qwen3-32B-total-time": 1672.2933332652333,
+    "agentless/qwen3-32B-cpu-time": 1280.5604573570254,
+    "agentless/qwen3-32B-gpu-time": 391.7328759082078
+  },
+  {
+    "totalTokens": 0.028667,
+    "agentless/qwen3-32B-total-time": 873.3174450644751,
+    "agentless/qwen3-32B-cpu-time": 754.322219260788,
+    "agentless/qwen3-32B-gpu-time": 118.99522580368719
+  },
+  {
+    "totalTokens": 0.029766,
+    "agentless/qwen3-32B-total-time": 1230.8994648561497,
+    "agentless/qwen3-32B-cpu-time": 825.9861375175476,
+    "agentless/qwen3-32B-gpu-time": 404.9133273386021
+  },
+  {
+    "totalTokens": 0.029811,
+    "agentless/qwen3-32B-total-time": 547.7123207985969,
+    "agentless/qwen3-32B-cpu-time": 333.75279034004217,
+    "agentless/qwen3-32B-gpu-time": 213.9595304585547
+  },
+  {
+    "totalTokens": 0.029928,
+    "agentless/qwen3-32B-total-time": 717.3077011376511,
+    "agentless/qwen3-32B-cpu-time": 548.0016537986755,
+    "agentless/qwen3-32B-gpu-time": 169.30604733897556
+  },
+  {
+    "totalTokens": 0.034936,
+    "agentless/qwen3-32B-total-time": 1620.2261509265618,
+    "agentless/qwen3-32B-cpu-time": 1097.4126511894228,
+    "agentless/qwen3-32B-gpu-time": 522.8134997371391
+  },
+  {
+    "totalTokens": 0.035389,
+    "agentless/qwen3-32B-total-time": 242.25675592574345,
+    "agentless/qwen3-32B-cpu-time": 167.62825549468994,
+    "agentless/qwen3-32B-gpu-time": 74.6285004310535
+  },
+  {
+    "totalTokens": 0.037229,
+    "agentless/qwen3-32B-total-time": 1380.4359933845687,
+    "agentless/qwen3-32B-cpu-time": 1192.3832546554568,
+    "agentless/qwen3-32B-gpu-time": 188.0527387291119
+  },
+  {
+    "totalTokens": 0.038562,
+    "agentless/qwen3-32B-total-time": 524.8187583839998,
+    "agentless/qwen3-32B-cpu-time": 434.5339084945679,
+    "agentless/qwen3-32B-gpu-time": 90.28484988943188
+  },
+  {
+    "totalTokens": 0.040988,
+    "agentless/qwen3-32B-total-time": 1061.8134664370996,
+    "agentless/qwen3-32B-cpu-time": 740.4647353969574,
+    "agentless/qwen3-32B-gpu-time": 321.34873104014207
+  },
+  {
+    "totalTokens": 0.046749,
+    "agentless/qwen3-32B-total-time": 651.8354873174501,
+    "agentless/qwen3-32B-cpu-time": 488.0802644573212,
+    "agentless/qwen3-32B-gpu-time": 163.75522286012887
+  },
+  {
+    "totalTokens": 0.047305,
+    "agentless/qwen3-32B-total-time": 739.8254811116994,
+    "agentless/qwen3-32B-cpu-time": 620.3001188121796,
+    "agentless/qwen3-32B-gpu-time": 119.52536229951991
+  },
+  {
+    "totalTokens": 0.048833,
+    "agentless/qwen3-32B-total-time": 662.2428342676227,
+    "agentless/qwen3-32B-cpu-time": 542.4023543678284,
+    "agentless/qwen3-32B-gpu-time": 119.84047989979432
+  },
+  {
+    "totalTokens": 0.067908,
+    "agentless/qwen3-32B-total-time": 664.2096220077292,
+    "agentless/qwen3-32B-cpu-time": 580.8708015762329,
+    "agentless/qwen3-32B-gpu-time": 83.33882043149632
+  },
+  {
+    "totalTokens": 0.005891,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-total-time": 10.309965267460587,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-cpu-time": 2.048,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-gpu-time": 8.261965267460587
+  },
+  {
+    "totalTokens": 0.009232,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-total-time": 10.715336193303273,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-cpu-time": 1.726,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-gpu-time": 8.989336193303274
+  },
+  {
+    "totalTokens": 0.009603,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-total-time": 22.185245538260432,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-cpu-time": 1.878,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-gpu-time": 20.30724553826043
+  },
+  {
+    "totalTokens": 0.009687,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-total-time": 13.003340691796065,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-cpu-time": 2.425,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-gpu-time": 10.578340691796065
+  },
+  {
+    "totalTokens": 0.012012,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-total-time": 11.41855512203589,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-cpu-time": 0.871,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-gpu-time": 10.54755512203589
+  },
+  {
+    "totalTokens": 0.012623,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-total-time": 12.864588470016649,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-cpu-time": 2.171,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-gpu-time": 10.69358847001665
+  },
+  {
+    "totalTokens": 0.013969,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-total-time": 26.53466905936841,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-cpu-time": 6.726,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-gpu-time": 19.808669059368412
+  },
+  {
+    "totalTokens": 0.015479,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-total-time": 14.189085563737727,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-cpu-time": 2.074,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-gpu-time": 12.115085563737727
+  },
+  {
+    "totalTokens": 0.017598,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-total-time": 27.6693836726599,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-cpu-time": 7.346,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-gpu-time": 20.3233836726599
+  },
+  {
+    "totalTokens": 0.020224,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-total-time": 25.64210657215125,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-cpu-time": 7.926,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-gpu-time": 17.716106572151247
+  },
+  {
+    "totalTokens": 0.020533,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-total-time": 25.816782473720874,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-cpu-time": 2.254,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-gpu-time": 23.562782473720873
+  },
+  {
+    "totalTokens": 0.022569,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-total-time": 28.597818265766293,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-cpu-time": 5.658,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-gpu-time": 22.93981826576629
+  },
+  {
+    "totalTokens": 0.027319,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-total-time": 74.21839669617441,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-cpu-time": 54.76,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-gpu-time": 19.458396696174404
+  },
+  {
+    "totalTokens": 0.027921,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-total-time": 33.0324347708226,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-cpu-time": 7.185,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-gpu-time": 25.847434770822595
+  },
+  {
+    "totalTokens": 0.028167,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-total-time": 30.52718627618646,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-cpu-time": 17.291,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-gpu-time": 13.236186276186459
+  },
+  {
+    "totalTokens": 0.029975,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-total-time": 27.252096338010432,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-cpu-time": 5.351,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-gpu-time": 21.901096338010433
+  },
+  {
+    "totalTokens": 0.03301,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-total-time": 47.50776405829592,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-cpu-time": 10.751,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-gpu-time": 36.75676405829592
+  },
+  {
+    "totalTokens": 0.040268,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-total-time": 34.74585220146827,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-cpu-time": 7.262,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-gpu-time": 27.483852201468267
+  },
+  {
+    "totalTokens": 0.043658,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-total-time": 46.19970462407703,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-cpu-time": 11.753,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-gpu-time": 34.44670462407703
+  },
+  {
+    "totalTokens": 0.046868,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-total-time": 30.12924425841434,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-cpu-time": 5.643,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-gpu-time": 24.486244258414338
+  },
+  {
+    "totalTokens": 0.050156,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-total-time": 28.48673470424658,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-cpu-time": 8.624,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-gpu-time": 19.862734704246577
+  },
+  {
+    "totalTokens": 0.058103,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-total-time": 44.652951362665604,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-cpu-time": 2.017,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-gpu-time": 42.6359513626656
+  },
+  {
+    "totalTokens": 0.073599,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-total-time": 45.553231600850026,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-cpu-time": 7.08,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-gpu-time": 38.47323160085003
+  },
+  {
+    "totalTokens": 0.074522,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-total-time": 55.21546650919166,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-cpu-time": 4.541,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-gpu-time": 50.67446650919165
+  },
+  {
+    "totalTokens": 0.07782,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-total-time": 110.09281657854584,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-cpu-time": 15.349,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-gpu-time": 94.74381657854583
+  },
+  {
+    "totalTokens": 0.08598,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-total-time": 22.79212036176287,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-cpu-time": 6.01,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-gpu-time": 16.78212036176287
+  },
+  {
+    "totalTokens": 0.103294,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-total-time": 50.68477065254916,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-cpu-time": 2.407,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-gpu-time": 48.27777065254916
+  },
+  {
+    "totalTokens": 0.107914,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-total-time": 71.96182237046911,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-cpu-time": 7.871,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-gpu-time": 64.09082237046911
+  },
+  {
+    "totalTokens": 0.123654,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-total-time": 30.829075979833544,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-cpu-time": 11.825,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-gpu-time": 19.004075979833544
+  },
+  {
+    "totalTokens": 0.165152,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-total-time": 156.01059641130476,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-cpu-time": 8.459,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-gpu-time": 147.55159641130476
+  },
+  {
+    "totalTokens": 0.166179,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-total-time": 105.03893601849354,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-cpu-time": 9.865,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-gpu-time": 95.17393601849355
+  },
+  {
+    "totalTokens": 0.174419,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-total-time": 100.76559365498711,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-cpu-time": 40.701,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-gpu-time": 60.064593654987114
+  },
+  {
+    "totalTokens": 0.265318,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-total-time": 140.34738055637297,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-cpu-time": 15.096,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-gpu-time": 125.25138055637296
+  },
+  {
+    "totalTokens": 0.297375,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-total-time": 185.04970647291006,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-cpu-time": 7.379,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-gpu-time": 177.67070647291007
+  },
+  {
+    "totalTokens": 0.31547,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-total-time": 85.66309347299652,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-cpu-time": 2.081,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-gpu-time": 83.58209347299652
+  },
+  {
+    "totalTokens": 0.317961,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-total-time": 127.99175079393036,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-cpu-time": 7.088,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-gpu-time": 120.90375079393037
+  },
+  {
+    "totalTokens": 0.338713,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-total-time": 116.467123680246,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-cpu-time": 2.911,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-gpu-time": 113.556123680246
+  },
+  {
+    "totalTokens": 0.524944,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-total-time": 157.20763457590704,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-cpu-time": 5.43,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-gpu-time": 151.77763457590703
+  },
+  {
+    "totalTokens": 0.571513,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-total-time": 306.58778481864715,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-cpu-time": 15.619,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-gpu-time": 290.9687848186471
+  },
+  {
+    "totalTokens": 0.610916,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-total-time": 168.9221590696941,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-cpu-time": 21.585,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-gpu-time": 147.33715906969408
+  },
+  {
+    "totalTokens": 0.666312,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-total-time": 169.11890254358394,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-cpu-time": 18.009,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-gpu-time": 151.10990254358393
+  },
+  {
+    "totalTokens": 0.670464,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-total-time": 238.84374696534445,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-cpu-time": 24.503,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-gpu-time": 214.34074696534447
+  },
+  {
+    "totalTokens": 0.713635,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-total-time": 204.76281978787432,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-cpu-time": 36.878,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-gpu-time": 167.8848197878743
+  },
+  {
+    "totalTokens": 0.76111,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-total-time": 208.66859895340238,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-cpu-time": 29.341,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-gpu-time": 179.32759895340237
+  },
+  {
+    "totalTokens": 0.829952,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-total-time": 167.14466097848737,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-cpu-time": 9.559,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-gpu-time": 157.58566097848737
+  },
+  {
+    "totalTokens": 0.879492,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-total-time": 327.3062801614576,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-cpu-time": 21.61,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-gpu-time": 305.6962801614576
+  },
+  {
+    "totalTokens": 0.913865,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-total-time": 297.7530284083692,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-cpu-time": 131.819,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-gpu-time": 165.9340284083692
+  },
+  {
+    "totalTokens": 0.959038,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-total-time": 157.781625204883,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-cpu-time": 27.066,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-gpu-time": 130.715625204883
+  },
+  {
+    "totalTokens": 1.152219,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-total-time": 178.61707608193095,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-cpu-time": 26.679,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-gpu-time": 151.93807608193094
+  },
+  {
+    "totalTokens": 1.336881,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-total-time": 333.0327491777921,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-cpu-time": 42.561,
+    "auto-code-rover/GPT-4o-mini-2024-07-18-gpu-time": 290.4717491777921
+  },
+  {
+    "totalTokens": 0.013179,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-total-time": 16.66433511330987,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-cpu-time": 2.183,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-gpu-time": 14.481335113309871
+  },
+  {
+    "totalTokens": 0.015141,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-total-time": 18.488543323167995,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-cpu-time": 2.034,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-gpu-time": 16.454543323167997
+  },
+  {
+    "totalTokens": 0.019676,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-total-time": 30.030083398560905,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-cpu-time": 9.833,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-gpu-time": 20.197083398560906
+  },
+  {
+    "totalTokens": 0.020024,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-total-time": 30.876786790535263,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-cpu-time": 6.241,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-gpu-time": 24.635786790535263
+  },
+  {
+    "totalTokens": 0.021135,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-total-time": 40.484811682394835,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-cpu-time": 6.624,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-gpu-time": 33.86081168239483
+  },
+  {
+    "totalTokens": 0.023999,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-total-time": 31.593976111909868,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-cpu-time": 5.324,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-gpu-time": 26.26997611190987
+  },
+  {
+    "totalTokens": 0.025146,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-total-time": 35.362835518952465,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-cpu-time": 12.648,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-gpu-time": 22.71483551895247
+  },
+  {
+    "totalTokens": 0.025864,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-total-time": 22.408069344876235,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-cpu-time": 2.007,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-gpu-time": 20.401069344876234
+  },
+  {
+    "totalTokens": 0.026887,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-total-time": 20.64641333535207,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-cpu-time": 2.931,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-gpu-time": 17.715413335352068
+  },
+  {
+    "totalTokens": 0.032332,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-total-time": 40.08830187144053,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-cpu-time": 12.893,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-gpu-time": 27.195301871440527
+  },
+  {
+    "totalTokens": 0.034615,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-total-time": 29.928718196390847,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-cpu-time": 2.741,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-gpu-time": 27.187718196390847
+  },
+  {
+    "totalTokens": 0.039065,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-total-time": 35.17270180499947,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-cpu-time": 8.39,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-gpu-time": 26.78270180499947
+  },
+  {
+    "totalTokens": 0.039717,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-total-time": 34.98428160201303,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-cpu-time": 7.269,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-gpu-time": 27.71528160201303
+  },
+  {
+    "totalTokens": 0.044567,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-total-time": 30.79802412314967,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-cpu-time": 2.291,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-gpu-time": 28.50702412314967
+  },
+  {
+    "totalTokens": 0.048588,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-total-time": 28.008414238592636,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-cpu-time": 2.664,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-gpu-time": 25.344414238592634
+  },
+  {
+    "totalTokens": 0.051703,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-total-time": 38.61840899293075,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-cpu-time": 9.707,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-gpu-time": 28.911408992930753
+  },
+  {
+    "totalTokens": 0.052329,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-total-time": 31.085768391297805,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-cpu-time": 8.561,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-gpu-time": 22.524768391297805
+  },
+  {
+    "totalTokens": 0.052672,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-total-time": 26.645882904252904,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-cpu-time": 2.102,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-gpu-time": 24.543882904252904
+  },
+  {
+    "totalTokens": 0.054196,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-total-time": 36.56743929702102,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-cpu-time": 2.446,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-gpu-time": 34.12143929702102
+  },
+  {
+    "totalTokens": 0.055677,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-total-time": 42.60037778548261,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-cpu-time": 7.491,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-gpu-time": 35.10937778548261
+  },
+  {
+    "totalTokens": 0.059262,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-total-time": 38.74565035898756,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-cpu-time": 0.934,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-gpu-time": 37.81165035898756
+  },
+  {
+    "totalTokens": 0.064945,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-total-time": 42.35719441855464,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-cpu-time": 4.753,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-gpu-time": 37.60419441855464
+  },
+  {
+    "totalTokens": 0.066802,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-total-time": 39.86175415757023,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-cpu-time": 7.382,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-gpu-time": 32.479754157570234
+  },
+  {
+    "totalTokens": 0.077174,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-total-time": 44.00749671082875,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-cpu-time": 8.331,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-gpu-time": 35.67649671082875
+  },
+  {
+    "totalTokens": 0.0782,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-total-time": 40.97065776014725,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-cpu-time": 6.775,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-gpu-time": 34.19565776014725
+  },
+  {
+    "totalTokens": 0.079545,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-total-time": 64.4081438535886,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-cpu-time": 11.21,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-gpu-time": 53.19814385358859
+  },
+  {
+    "totalTokens": 0.0931,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-total-time": 51.87272934235603,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-cpu-time": 14.952,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-gpu-time": 36.92072934235603
+  },
+  {
+    "totalTokens": 0.1273,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-total-time": 62.339664177606366,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-cpu-time": 12.398,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-gpu-time": 49.94166417760636
+  },
+  {
+    "totalTokens": 0.166871,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-total-time": 78.94395265691921,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-cpu-time": 8.914,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-gpu-time": 70.0299526569192
+  },
+  {
+    "totalTokens": 0.213923,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-total-time": 89.28758925135524,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-cpu-time": 7.453,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-gpu-time": 81.83458925135524
+  },
+  {
+    "totalTokens": 0.215749,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-total-time": 98.38183368827022,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-cpu-time": 6.202,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-gpu-time": 92.17983368827022
+  },
+  {
+    "totalTokens": 0.224242,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-total-time": 87.30355840372845,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-cpu-time": 8.038,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-gpu-time": 79.26555840372845
+  },
+  {
+    "totalTokens": 0.255532,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-total-time": 124.59706254937909,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-cpu-time": 11.92,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-gpu-time": 112.67706254937909
+  },
+  {
+    "totalTokens": 0.256199,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-total-time": 106.99056876403488,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-cpu-time": 21.613,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-gpu-time": 85.37756876403488
+  },
+  {
+    "totalTokens": 0.356835,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-total-time": 133.62390058254886,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-cpu-time": 6.588,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-gpu-time": 127.03590058254886
+  },
+  {
+    "totalTokens": 0.379611,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-total-time": 100.85358737297302,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-cpu-time": 4.223,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-gpu-time": 96.63058737297303
+  },
+  {
+    "totalTokens": 0.427007,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-total-time": 120.35025841357056,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-cpu-time": 13.295,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-gpu-time": 107.05525841357056
+  },
+  {
+    "totalTokens": 0.491506,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-total-time": 96.88455037388468,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-cpu-time": 9.802,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-gpu-time": 87.08255037388469
+  },
+  {
+    "totalTokens": 0.656643,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-total-time": 150.41036786709319,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-cpu-time": 11.065,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-gpu-time": 139.3453678670932
+  },
+  {
+    "totalTokens": 0.674838,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-total-time": 149.9952994603043,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-cpu-time": 12.823,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-gpu-time": 137.1722994603043
+  },
+  {
+    "totalTokens": 0.721044,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-total-time": 242.16246439750665,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-cpu-time": 18.121,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-gpu-time": 224.04146439750664
+  },
+  {
+    "totalTokens": 0.721986,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-total-time": 220.8055226891723,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-cpu-time": 15.609,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-gpu-time": 205.1965226891723
+  },
+  {
+    "totalTokens": 0.780477,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-total-time": 208.57042548042503,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-cpu-time": 3.853,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-gpu-time": 204.71742548042502
+  },
+  {
+    "totalTokens": 1.072652,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-total-time": 159.33312323052118,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-cpu-time": 7.89,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-gpu-time": 151.4431232305212
+  },
+  {
+    "totalTokens": 1.244727,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-total-time": 243.453208227454,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-cpu-time": 9.629,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-gpu-time": 233.82420822745402
+  },
+  {
+    "totalTokens": 1.328257,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-total-time": 208.9060300378311,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-cpu-time": 20.191,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-gpu-time": 188.7150300378311
+  },
+  {
+    "totalTokens": 1.328674,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-total-time": 281.9774703367121,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-cpu-time": 29.901,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-gpu-time": 252.07647033671208
+  },
+  {
+    "totalTokens": 1.341336,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-total-time": 276.98922084379626,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-cpu-time": 18.984,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-gpu-time": 258.0052208437963
+  },
+  {
+    "totalTokens": 3.013294,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-total-time": 475.42331004074816,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-cpu-time": 21.947,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-gpu-time": 453.47631004074816
+  },
+  {
+    "totalTokens": 3.589886,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-total-time": 398.5436115261375,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-cpu-time": 24.244,
+    "auto-code-rover/llama-3.3-70B-Instruct-FP8-gpu-time": 374.2996115261375
+  },
+  {
+    "totalTokens": 0.005607,
+    "auto-code-rover/qwen3-32B-total-time": 1383.2268582024517,
+    "auto-code-rover/qwen3-32B-cpu-time": 1340.136,
+    "auto-code-rover/qwen3-32B-gpu-time": 43.09085820245182
+  },
+  {
+    "totalTokens": 0.00717,
+    "auto-code-rover/qwen3-32B-total-time": 60.798492729503096,
+    "auto-code-rover/qwen3-32B-cpu-time": 1.985,
+    "auto-code-rover/qwen3-32B-gpu-time": 58.813492729503096
+  },
+  {
+    "totalTokens": 0.008577,
+    "auto-code-rover/qwen3-32B-total-time": 30.585350581180585,
+    "auto-code-rover/qwen3-32B-cpu-time": 2.079,
+    "auto-code-rover/qwen3-32B-gpu-time": 28.506350581180584
+  },
+  {
+    "totalTokens": 0.009023,
+    "auto-code-rover/qwen3-32B-total-time": 45.298305456927906,
+    "auto-code-rover/qwen3-32B-cpu-time": 12.624,
+    "auto-code-rover/qwen3-32B-gpu-time": 32.674305456927904
+  },
+  {
+    "totalTokens": 0.009363,
+    "auto-code-rover/qwen3-32B-total-time": 30.093967847358428,
+    "auto-code-rover/qwen3-32B-cpu-time": 1.894,
+    "auto-code-rover/qwen3-32B-gpu-time": 28.19996784735843
+  },
+  {
+    "totalTokens": 0.010358,
+    "auto-code-rover/qwen3-32B-total-time": 31.20733817493642,
+    "auto-code-rover/qwen3-32B-cpu-time": 2.675,
+    "auto-code-rover/qwen3-32B-gpu-time": 28.53233817493642
+  },
+  {
+    "totalTokens": 0.011543,
+    "auto-code-rover/qwen3-32B-total-time": 76.50397797389121,
+    "auto-code-rover/qwen3-32B-cpu-time": 5.647,
+    "auto-code-rover/qwen3-32B-gpu-time": 70.8569779738912
+  },
+  {
+    "totalTokens": 0.013848,
+    "auto-code-rover/qwen3-32B-total-time": 81.9310787977945,
+    "auto-code-rover/qwen3-32B-cpu-time": 6.222,
+    "auto-code-rover/qwen3-32B-gpu-time": 75.7090787977945
+  },
+  {
+    "totalTokens": 0.014149,
+    "auto-code-rover/qwen3-32B-total-time": 124.29521236769205,
+    "auto-code-rover/qwen3-32B-cpu-time": 7.089,
+    "auto-code-rover/qwen3-32B-gpu-time": 117.20621236769205
+  },
+  {
+    "totalTokens": 0.014154,
+    "auto-code-rover/qwen3-32B-total-time": 91.02935322071798,
+    "auto-code-rover/qwen3-32B-cpu-time": 8.414,
+    "auto-code-rover/qwen3-32B-gpu-time": 82.61535322071798
+  },
+  {
+    "totalTokens": 0.014517,
+    "auto-code-rover/qwen3-32B-total-time": 24.914227958175186,
+    "auto-code-rover/qwen3-32B-cpu-time": 1.913,
+    "auto-code-rover/qwen3-32B-gpu-time": 23.001227958175186
+  },
+  {
+    "totalTokens": 0.016024,
+    "auto-code-rover/qwen3-32B-total-time": 40.24068131994065,
+    "auto-code-rover/qwen3-32B-cpu-time": 2.324,
+    "auto-code-rover/qwen3-32B-gpu-time": 37.91668131994065
+  },
+  {
+    "totalTokens": 0.017701,
+    "auto-code-rover/qwen3-32B-total-time": 82.92856693161166,
+    "auto-code-rover/qwen3-32B-cpu-time": 7.54,
+    "auto-code-rover/qwen3-32B-gpu-time": 75.38856693161165
+  },
+  {
+    "totalTokens": 0.018607,
+    "auto-code-rover/qwen3-32B-total-time": 32.42601611949042,
+    "auto-code-rover/qwen3-32B-cpu-time": 2.722,
+    "auto-code-rover/qwen3-32B-gpu-time": 29.70401611949042
+  },
+  {
+    "totalTokens": 0.01907,
+    "auto-code-rover/qwen3-32B-total-time": 33.14356701303339,
+    "auto-code-rover/qwen3-32B-cpu-time": 2.645,
+    "auto-code-rover/qwen3-32B-gpu-time": 30.498567013033387
+  },
+  {
+    "totalTokens": 0.019864,
+    "auto-code-rover/qwen3-32B-total-time": 95.43450625163742,
+    "auto-code-rover/qwen3-32B-cpu-time": 3.173,
+    "auto-code-rover/qwen3-32B-gpu-time": 92.26150625163741
+  },
+  {
+    "totalTokens": 0.020326,
+    "auto-code-rover/qwen3-32B-total-time": 135.39835010836725,
+    "auto-code-rover/qwen3-32B-cpu-time": 8.771,
+    "auto-code-rover/qwen3-32B-gpu-time": 126.62735010836725
+  },
+  {
+    "totalTokens": 0.021791,
+    "auto-code-rover/qwen3-32B-total-time": 87.05256521605199,
+    "auto-code-rover/qwen3-32B-cpu-time": 9.65,
+    "auto-code-rover/qwen3-32B-gpu-time": 77.40256521605198
+  },
+  {
+    "totalTokens": 0.021818,
+    "auto-code-rover/qwen3-32B-total-time": 100.36856154997751,
+    "auto-code-rover/qwen3-32B-cpu-time": 6.864,
+    "auto-code-rover/qwen3-32B-gpu-time": 93.50456154997751
+  },
+  {
+    "totalTokens": 0.022527,
+    "auto-code-rover/qwen3-32B-total-time": 71.75997423915788,
+    "auto-code-rover/qwen3-32B-cpu-time": 5.998,
+    "auto-code-rover/qwen3-32B-gpu-time": 65.76197423915788
+  },
+  {
+    "totalTokens": 0.024887,
+    "auto-code-rover/qwen3-32B-total-time": 78.60436080722948,
+    "auto-code-rover/qwen3-32B-cpu-time": 3.879,
+    "auto-code-rover/qwen3-32B-gpu-time": 74.72536080722948
+  },
+  {
+    "totalTokens": 0.026199,
+    "auto-code-rover/qwen3-32B-total-time": 107.96397764217836,
+    "auto-code-rover/qwen3-32B-cpu-time": 4.7,
+    "auto-code-rover/qwen3-32B-gpu-time": 103.26397764217836
+  },
+  {
+    "totalTokens": 0.026205,
+    "auto-code-rover/qwen3-32B-total-time": 108.17044130055605,
+    "auto-code-rover/qwen3-32B-cpu-time": 5.711,
+    "auto-code-rover/qwen3-32B-gpu-time": 102.45944130055605
+  },
+  {
+    "totalTokens": 0.029159,
+    "auto-code-rover/qwen3-32B-total-time": 73.34554463003109,
+    "auto-code-rover/qwen3-32B-cpu-time": 2.107,
+    "auto-code-rover/qwen3-32B-gpu-time": 71.23854463003109
+  },
+  {
+    "totalTokens": 0.0317,
+    "auto-code-rover/qwen3-32B-total-time": 110.66663222948928,
+    "auto-code-rover/qwen3-32B-cpu-time": 18.755,
+    "auto-code-rover/qwen3-32B-gpu-time": 91.91163222948929
+  },
+  {
+    "totalTokens": 0.031791,
+    "auto-code-rover/qwen3-32B-total-time": 119.34024017865141,
+    "auto-code-rover/qwen3-32B-cpu-time": 6.99,
+    "auto-code-rover/qwen3-32B-gpu-time": 112.35024017865142
+  },
+  {
+    "totalTokens": 0.032351,
+    "auto-code-rover/qwen3-32B-total-time": 96.84086232189058,
+    "auto-code-rover/qwen3-32B-cpu-time": 2.807,
+    "auto-code-rover/qwen3-32B-gpu-time": 94.03386232189058
+  },
+  {
+    "totalTokens": 0.033289,
+    "auto-code-rover/qwen3-32B-total-time": 112.57389381290352,
+    "auto-code-rover/qwen3-32B-cpu-time": 53.441,
+    "auto-code-rover/qwen3-32B-gpu-time": 59.13289381290352
+  },
+  {
+    "totalTokens": 0.034408,
+    "auto-code-rover/qwen3-32B-total-time": 121.42646337182308,
+    "auto-code-rover/qwen3-32B-cpu-time": 3.486,
+    "auto-code-rover/qwen3-32B-gpu-time": 117.94046337182307
+  },
+  {
+    "totalTokens": 0.037087,
+    "auto-code-rover/qwen3-32B-total-time": 41.75805296974286,
+    "auto-code-rover/qwen3-32B-cpu-time": 2.388,
+    "auto-code-rover/qwen3-32B-gpu-time": 39.370052969742865
+  },
+  {
+    "totalTokens": 0.040228,
+    "auto-code-rover/qwen3-32B-total-time": 95.23338055534066,
+    "auto-code-rover/qwen3-32B-cpu-time": 10.541,
+    "auto-code-rover/qwen3-32B-gpu-time": 84.69238055534066
+  },
+  {
+    "totalTokens": 0.043917,
+    "auto-code-rover/qwen3-32B-total-time": 87.15976804028276,
+    "auto-code-rover/qwen3-32B-cpu-time": 6.264,
+    "auto-code-rover/qwen3-32B-gpu-time": 80.89576804028276
+  },
+  {
+    "totalTokens": 0.051912,
+    "auto-code-rover/qwen3-32B-total-time": 195.24029008127502,
+    "auto-code-rover/qwen3-32B-cpu-time": 7.326,
+    "auto-code-rover/qwen3-32B-gpu-time": 187.91429008127503
+  },
+  {
+    "totalTokens": 0.054434,
+    "auto-code-rover/qwen3-32B-total-time": 90.30835514962293,
+    "auto-code-rover/qwen3-32B-cpu-time": 12.638,
+    "auto-code-rover/qwen3-32B-gpu-time": 77.67035514962292
+  },
+  {
+    "totalTokens": 0.055381,
+    "auto-code-rover/qwen3-32B-total-time": 109.37009444075267,
+    "auto-code-rover/qwen3-32B-cpu-time": 5.861,
+    "auto-code-rover/qwen3-32B-gpu-time": 103.50909444075266
+  },
+  {
+    "totalTokens": 0.05743,
+    "auto-code-rover/qwen3-32B-total-time": 198.40266149058291,
+    "auto-code-rover/qwen3-32B-cpu-time": 6.309,
+    "auto-code-rover/qwen3-32B-gpu-time": 192.09366149058292
+  },
+  {
+    "totalTokens": 0.062207,
+    "auto-code-rover/qwen3-32B-total-time": 116.10094831084551,
+    "auto-code-rover/qwen3-32B-cpu-time": 7.137,
+    "auto-code-rover/qwen3-32B-gpu-time": 108.96394831084551
+  },
+  {
+    "totalTokens": 0.065709,
+    "auto-code-rover/qwen3-32B-total-time": 113.20039091909946,
+    "auto-code-rover/qwen3-32B-cpu-time": 8.166,
+    "auto-code-rover/qwen3-32B-gpu-time": 105.03439091909947
+  },
+  {
+    "totalTokens": 0.073288,
+    "auto-code-rover/qwen3-32B-total-time": 79.49756217324214,
+    "auto-code-rover/qwen3-32B-cpu-time": 12.355,
+    "auto-code-rover/qwen3-32B-gpu-time": 67.14256217324214
+  },
+  {
+    "totalTokens": 0.078002,
+    "auto-code-rover/qwen3-32B-total-time": 161.75374349224322,
+    "auto-code-rover/qwen3-32B-cpu-time": 25.013,
+    "auto-code-rover/qwen3-32B-gpu-time": 136.7407434922432
+  },
+  {
+    "totalTokens": 0.082352,
+    "auto-code-rover/qwen3-32B-total-time": 71.95017446572973,
+    "auto-code-rover/qwen3-32B-cpu-time": 4.251,
+    "auto-code-rover/qwen3-32B-gpu-time": 67.69917446572973
+  },
+  {
+    "totalTokens": 0.089938,
+    "auto-code-rover/qwen3-32B-total-time": 316.4587634381819,
+    "auto-code-rover/qwen3-32B-cpu-time": 4.264,
+    "auto-code-rover/qwen3-32B-gpu-time": 312.1947634381819
+  },
+  {
+    "totalTokens": 0.093922,
+    "auto-code-rover/qwen3-32B-total-time": 95.16309507244736,
+    "auto-code-rover/qwen3-32B-cpu-time": 1.252,
+    "auto-code-rover/qwen3-32B-gpu-time": 93.91109507244737
+  },
+  {
+    "totalTokens": 0.099804,
+    "auto-code-rover/qwen3-32B-total-time": 173.81085600611354,
+    "auto-code-rover/qwen3-32B-cpu-time": 17.05,
+    "auto-code-rover/qwen3-32B-gpu-time": 156.76085600611353
+  },
+  {
+    "totalTokens": 0.129283,
+    "auto-code-rover/qwen3-32B-total-time": 150.32597471718375,
+    "auto-code-rover/qwen3-32B-cpu-time": 6.219,
+    "auto-code-rover/qwen3-32B-gpu-time": 144.10697471718376
+  },
+  {
+    "totalTokens": 0.136424,
+    "auto-code-rover/qwen3-32B-total-time": 144.2348267012635,
+    "auto-code-rover/qwen3-32B-cpu-time": 8.456,
+    "auto-code-rover/qwen3-32B-gpu-time": 135.7788267012635
+  },
+  {
+    "totalTokens": 0.16257,
+    "auto-code-rover/qwen3-32B-total-time": 273.99599409764545,
+    "auto-code-rover/qwen3-32B-cpu-time": 8.54,
+    "auto-code-rover/qwen3-32B-gpu-time": 265.45599409764543
+  },
+  {
+    "totalTokens": 0.192978,
+    "auto-code-rover/qwen3-32B-total-time": 441.7287692726622,
+    "auto-code-rover/qwen3-32B-cpu-time": 14.632,
+    "auto-code-rover/qwen3-32B-gpu-time": 427.0967692726622
+  },
+  {
+    "totalTokens": 0.274544,
+    "auto-code-rover/qwen3-32B-total-time": 295.54732069350894,
+    "auto-code-rover/qwen3-32B-cpu-time": 8.614,
+    "auto-code-rover/qwen3-32B-gpu-time": 286.93332069350896
+  },
+  {
+    "totalTokens": 0.325729,
+    "auto-code-rover/qwen3-32B-total-time": 164.23897101888002,
+    "auto-code-rover/qwen3-32B-cpu-time": 3.674,
+    "auto-code-rover/qwen3-32B-gpu-time": 160.56497101888002
+  },
+  {
+    "totalTokens": 0.050096,
+    "openhands/GPT-4o-mini-2024-07-18-total-time": 61.65312469809169,
+    "openhands/GPT-4o-mini-2024-07-18-cpu-time": 55.08451909828186,
+    "openhands/GPT-4o-mini-2024-07-18-gpu-time": 6.568605599809825
+  },
+  {
+    "totalTokens": 0.096224,
+    "openhands/GPT-4o-mini-2024-07-18-total-time": 60.38668815290663,
+    "openhands/GPT-4o-mini-2024-07-18-cpu-time": 50.935569837570185,
+    "openhands/GPT-4o-mini-2024-07-18-gpu-time": 9.45111831533644
+  },
+  {
+    "totalTokens": 0.101045,
+    "openhands/GPT-4o-mini-2024-07-18-total-time": 54.51845847490332,
+    "openhands/GPT-4o-mini-2024-07-18-cpu-time": 46.72620257949829,
+    "openhands/GPT-4o-mini-2024-07-18-gpu-time": 7.792255895405028
+  },
+  {
+    "totalTokens": 0.118096,
+    "openhands/GPT-4o-mini-2024-07-18-total-time": 66.15331106706273,
+    "openhands/GPT-4o-mini-2024-07-18-cpu-time": 56.074088520050054,
+    "openhands/GPT-4o-mini-2024-07-18-gpu-time": 10.079222547012678
+  },
+  {
+    "totalTokens": 0.121552,
+    "openhands/GPT-4o-mini-2024-07-18-total-time": 66.92586434605558,
+    "openhands/GPT-4o-mini-2024-07-18-cpu-time": 56.689216789245606,
+    "openhands/GPT-4o-mini-2024-07-18-gpu-time": 10.23664755680997
+  },
+  {
+    "totalTokens": 0.126209,
+    "openhands/GPT-4o-mini-2024-07-18-total-time": 58.66457325716507,
+    "openhands/GPT-4o-mini-2024-07-18-cpu-time": 49.593913116455084,
+    "openhands/GPT-4o-mini-2024-07-18-gpu-time": 9.070660140709984
+  },
+  {
+    "totalTokens": 0.162618,
+    "openhands/GPT-4o-mini-2024-07-18-total-time": 67.82449212035309,
+    "openhands/GPT-4o-mini-2024-07-18-cpu-time": 50.21248418617249,
+    "openhands/GPT-4o-mini-2024-07-18-gpu-time": 17.61200793418059
+  },
+  {
+    "totalTokens": 0.166673,
+    "openhands/GPT-4o-mini-2024-07-18-total-time": 56.60714327481965,
+    "openhands/GPT-4o-mini-2024-07-18-cpu-time": 43.890847169876096,
+    "openhands/GPT-4o-mini-2024-07-18-gpu-time": 12.716296104943549
+  },
+  {
+    "totalTokens": 0.168496,
+    "openhands/GPT-4o-mini-2024-07-18-total-time": 49.55111935163004,
+    "openhands/GPT-4o-mini-2024-07-18-cpu-time": 38.871511182785035,
+    "openhands/GPT-4o-mini-2024-07-18-gpu-time": 10.679608168845006
+  },
+  {
+    "totalTokens": 0.169586,
+    "openhands/GPT-4o-mini-2024-07-18-total-time": 71.48940797080839,
+    "openhands/GPT-4o-mini-2024-07-18-cpu-time": 58.68383878135681,
+    "openhands/GPT-4o-mini-2024-07-18-gpu-time": 12.805569189451575
+  },
+  {
+    "totalTokens": 0.191508,
+    "openhands/GPT-4o-mini-2024-07-18-total-time": 64.4463972460097,
+    "openhands/GPT-4o-mini-2024-07-18-cpu-time": 51.32051091575623,
+    "openhands/GPT-4o-mini-2024-07-18-gpu-time": 13.12588633025346
+  },
+  {
+    "totalTokens": 0.194899,
+    "openhands/GPT-4o-mini-2024-07-18-total-time": 60.45993707322118,
+    "openhands/GPT-4o-mini-2024-07-18-cpu-time": 46.609545604705815,
+    "openhands/GPT-4o-mini-2024-07-18-gpu-time": 13.850391468515364
+  },
+  {
+    "totalTokens": 0.256076,
+    "openhands/GPT-4o-mini-2024-07-18-total-time": 64.90372366328799,
+    "openhands/GPT-4o-mini-2024-07-18-cpu-time": 49.20342033576965,
+    "openhands/GPT-4o-mini-2024-07-18-gpu-time": 15.700303327518343
+  },
+  {
+    "totalTokens": 0.259679,
+    "openhands/GPT-4o-mini-2024-07-18-total-time": 69.8226106339631,
+    "openhands/GPT-4o-mini-2024-07-18-cpu-time": 52.68394048309327,
+    "openhands/GPT-4o-mini-2024-07-18-gpu-time": 17.138670150869828
+  },
+  {
+    "totalTokens": 0.268272,
+    "openhands/GPT-4o-mini-2024-07-18-total-time": 65.57308951414902,
+    "openhands/GPT-4o-mini-2024-07-18-cpu-time": 48.81266310882569,
+    "openhands/GPT-4o-mini-2024-07-18-gpu-time": 16.76042640532333
+  },
+  {
+    "totalTokens": 0.307687,
+    "openhands/GPT-4o-mini-2024-07-18-total-time": 260.64124645168124,
+    "openhands/GPT-4o-mini-2024-07-18-cpu-time": 243.71904519653322,
+    "openhands/GPT-4o-mini-2024-07-18-gpu-time": 16.922201255148014
+  },
+  {
+    "totalTokens": 0.332197,
+    "openhands/GPT-4o-mini-2024-07-18-total-time": 82.39882379227589,
+    "openhands/GPT-4o-mini-2024-07-18-cpu-time": 55.343409440994265,
+    "openhands/GPT-4o-mini-2024-07-18-gpu-time": 27.055414351281634
+  },
+  {
+    "totalTokens": 0.383202,
+    "openhands/GPT-4o-mini-2024-07-18-total-time": 160.2646225272403,
+    "openhands/GPT-4o-mini-2024-07-18-cpu-time": 138.83640026664733,
+    "openhands/GPT-4o-mini-2024-07-18-gpu-time": 21.42822226059299
+  },
+  {
+    "totalTokens": 0.417267,
+    "openhands/GPT-4o-mini-2024-07-18-total-time": 180.26393557448813,
+    "openhands/GPT-4o-mini-2024-07-18-cpu-time": 158.06237788963318,
+    "openhands/GPT-4o-mini-2024-07-18-gpu-time": 22.201557684854947
+  },
+  {
+    "totalTokens": 0.417373,
+    "openhands/GPT-4o-mini-2024-07-18-total-time": 60.04255135000942,
+    "openhands/GPT-4o-mini-2024-07-18-cpu-time": 37.511555727005,
+    "openhands/GPT-4o-mini-2024-07-18-gpu-time": 22.530995623004415
+  },
+  {
+    "totalTokens": 0.419243,
+    "openhands/GPT-4o-mini-2024-07-18-total-time": 86.79380924895783,
+    "openhands/GPT-4o-mini-2024-07-18-cpu-time": 58.02963045692444,
+    "openhands/GPT-4o-mini-2024-07-18-gpu-time": 28.76417879203339
+  },
+  {
+    "totalTokens": 0.431201,
+    "openhands/GPT-4o-mini-2024-07-18-total-time": 93.37169184384507,
+    "openhands/GPT-4o-mini-2024-07-18-cpu-time": 62.167901334762576,
+    "openhands/GPT-4o-mini-2024-07-18-gpu-time": 31.203790509082495
+  },
+  {
+    "totalTokens": 0.460498,
+    "openhands/GPT-4o-mini-2024-07-18-total-time": 81.98874047384021,
+    "openhands/GPT-4o-mini-2024-07-18-cpu-time": 49.42021513938904,
+    "openhands/GPT-4o-mini-2024-07-18-gpu-time": 32.568525334451174
+  },
+  {
+    "totalTokens": 0.492156,
+    "openhands/GPT-4o-mini-2024-07-18-total-time": 408.6235944861033,
+    "openhands/GPT-4o-mini-2024-07-18-cpu-time": 381.0629470424652,
+    "openhands/GPT-4o-mini-2024-07-18-gpu-time": 27.560647443638082
+  },
+  {
+    "totalTokens": 0.56732,
+    "openhands/GPT-4o-mini-2024-07-18-total-time": 292.8922332861558,
+    "openhands/GPT-4o-mini-2024-07-18-cpu-time": 255.76184870338437,
+    "openhands/GPT-4o-mini-2024-07-18-gpu-time": 37.130384582771406
+  },
+  {
+    "totalTokens": 0.60417,
+    "openhands/GPT-4o-mini-2024-07-18-total-time": 111.08938927010166,
+    "openhands/GPT-4o-mini-2024-07-18-cpu-time": 68.52303820037841,
+    "openhands/GPT-4o-mini-2024-07-18-gpu-time": 42.56635106972325
+  },
+  {
+    "totalTokens": 0.630343,
+    "openhands/GPT-4o-mini-2024-07-18-total-time": 81.08596118805363,
+    "openhands/GPT-4o-mini-2024-07-18-cpu-time": 43.69148764801025,
+    "openhands/GPT-4o-mini-2024-07-18-gpu-time": 37.39447354004337
+  },
+  {
+    "totalTokens": 0.668282,
+    "openhands/GPT-4o-mini-2024-07-18-total-time": 219.18907736370045,
+    "openhands/GPT-4o-mini-2024-07-18-cpu-time": 183.49032969093324,
+    "openhands/GPT-4o-mini-2024-07-18-gpu-time": 35.69874767276721
+  },
+  {
+    "totalTokens": 0.725488,
+    "openhands/GPT-4o-mini-2024-07-18-total-time": 94.3125906193292,
+    "openhands/GPT-4o-mini-2024-07-18-cpu-time": 45.98615311813356,
+    "openhands/GPT-4o-mini-2024-07-18-gpu-time": 48.32643750119564
+  },
+  {
+    "totalTokens": 0.803135,
+    "openhands/GPT-4o-mini-2024-07-18-total-time": 110.25789961481664,
+    "openhands/GPT-4o-mini-2024-07-18-cpu-time": 63.907796806335455,
+    "openhands/GPT-4o-mini-2024-07-18-gpu-time": 46.35010280848119
+  },
+  {
+    "totalTokens": 0.821938,
+    "openhands/GPT-4o-mini-2024-07-18-total-time": 106.85314976871373,
+    "openhands/GPT-4o-mini-2024-07-18-cpu-time": 59.05610662078857,
+    "openhands/GPT-4o-mini-2024-07-18-gpu-time": 47.79704314792517
+  },
+  {
+    "totalTokens": 0.857991,
+    "openhands/GPT-4o-mini-2024-07-18-total-time": 190.3026623695928,
+    "openhands/GPT-4o-mini-2024-07-18-cpu-time": 139.59800775146485,
+    "openhands/GPT-4o-mini-2024-07-18-gpu-time": 50.704654618127954
+  },
+  {
+    "totalTokens": 1.260287,
+    "openhands/GPT-4o-mini-2024-07-18-total-time": 134.76120038473326,
+    "openhands/GPT-4o-mini-2024-07-18-cpu-time": 71.16412174606324,
+    "openhands/GPT-4o-mini-2024-07-18-gpu-time": 63.59707863867001
+  },
+  {
+    "totalTokens": 1.271965,
+    "openhands/GPT-4o-mini-2024-07-18-total-time": 117.98450711037901,
+    "openhands/GPT-4o-mini-2024-07-18-cpu-time": 31.175125396728504,
+    "openhands/GPT-4o-mini-2024-07-18-gpu-time": 86.80938171365051
+  },
+  {
+    "totalTokens": 1.276413,
+    "openhands/GPT-4o-mini-2024-07-18-total-time": 283.54158448237246,
+    "openhands/GPT-4o-mini-2024-07-18-cpu-time": 212.9832148284912,
+    "openhands/GPT-4o-mini-2024-07-18-gpu-time": 70.55836965388124
+  },
+  {
+    "totalTokens": 1.397946,
+    "openhands/GPT-4o-mini-2024-07-18-total-time": 286.8288170977637,
+    "openhands/GPT-4o-mini-2024-07-18-cpu-time": 213.8603224925995,
+    "openhands/GPT-4o-mini-2024-07-18-gpu-time": 72.9684946051642
+  },
+  {
+    "totalTokens": 1.646902,
+    "openhands/GPT-4o-mini-2024-07-18-total-time": 158.296352879663,
+    "openhands/GPT-4o-mini-2024-07-18-cpu-time": 77.8769642162323,
+    "openhands/GPT-4o-mini-2024-07-18-gpu-time": 80.4193886634307
+  },
+  {
+    "totalTokens": 1.737336,
+    "openhands/GPT-4o-mini-2024-07-18-total-time": 360.9451305722408,
+    "openhands/GPT-4o-mini-2024-07-18-cpu-time": 277.0878596172333,
+    "openhands/GPT-4o-mini-2024-07-18-gpu-time": 83.85727095500756
+  },
+  {
+    "totalTokens": 1.796991,
+    "openhands/GPT-4o-mini-2024-07-18-total-time": 165.27228436657617,
+    "openhands/GPT-4o-mini-2024-07-18-cpu-time": 77.88047924613952,
+    "openhands/GPT-4o-mini-2024-07-18-gpu-time": 87.39180512043666
+  },
+  {
+    "totalTokens": 1.827972,
+    "openhands/GPT-4o-mini-2024-07-18-total-time": 152.5505512145503,
+    "openhands/GPT-4o-mini-2024-07-18-cpu-time": 55.59927087402343,
+    "openhands/GPT-4o-mini-2024-07-18-gpu-time": 96.95128034052686
+  },
+  {
+    "totalTokens": 2.930488,
+    "openhands/GPT-4o-mini-2024-07-18-total-time": 232.19887202929172,
+    "openhands/GPT-4o-mini-2024-07-18-cpu-time": 76.93388401222228,
+    "openhands/GPT-4o-mini-2024-07-18-gpu-time": 155.26498801706944
+  },
+  {
+    "totalTokens": 4.032134,
+    "openhands/GPT-4o-mini-2024-07-18-total-time": 263.6194873620635,
+    "openhands/GPT-4o-mini-2024-07-18-cpu-time": 82.62950332069397,
+    "openhands/GPT-4o-mini-2024-07-18-gpu-time": 180.98998404136952
+  },
+  {
+    "totalTokens": 0.057695,
+    "openhands/llama-3.3-70B-Instruct-FP8-total-time": 51.02087024682829,
+    "openhands/llama-3.3-70B-Instruct-FP8-cpu-time": 40.12913520240784,
+    "openhands/llama-3.3-70B-Instruct-FP8-gpu-time": 10.89173504442045
+  },
+  {
+    "totalTokens": 0.058418,
+    "openhands/llama-3.3-70B-Instruct-FP8-total-time": 54.800509240629395,
+    "openhands/llama-3.3-70B-Instruct-FP8-cpu-time": 44.97764831542969,
+    "openhands/llama-3.3-70B-Instruct-FP8-gpu-time": 9.82286092519971
+  },
+  {
+    "totalTokens": 0.084012,
+    "openhands/llama-3.3-70B-Instruct-FP8-total-time": 56.52331089594892,
+    "openhands/llama-3.3-70B-Instruct-FP8-cpu-time": 42.27451020240784,
+    "openhands/llama-3.3-70B-Instruct-FP8-gpu-time": 14.248800693541078
+  },
+  {
+    "totalTokens": 0.091804,
+    "openhands/llama-3.3-70B-Instruct-FP8-total-time": 59.692888585597764,
+    "openhands/llama-3.3-70B-Instruct-FP8-cpu-time": 45.176676507949836,
+    "openhands/llama-3.3-70B-Instruct-FP8-gpu-time": 14.51621207764793
+  },
+  {
+    "totalTokens": 0.092107,
+    "openhands/llama-3.3-70B-Instruct-FP8-total-time": 51.6323070032586,
+    "openhands/llama-3.3-70B-Instruct-FP8-cpu-time": 40.057406961441046,
+    "openhands/llama-3.3-70B-Instruct-FP8-gpu-time": 11.574900041817555
+  },
+  {
+    "totalTokens": 0.122686,
+    "openhands/llama-3.3-70B-Instruct-FP8-total-time": 59.85575467231779,
+    "openhands/llama-3.3-70B-Instruct-FP8-cpu-time": 41.17289982223511,
+    "openhands/llama-3.3-70B-Instruct-FP8-gpu-time": 18.682854850082677
+  },
+  {
+    "totalTokens": 0.128535,
+    "openhands/llama-3.3-70B-Instruct-FP8-total-time": 65.30447571559827,
+    "openhands/llama-3.3-70B-Instruct-FP8-cpu-time": 46.11217869949341,
+    "openhands/llama-3.3-70B-Instruct-FP8-gpu-time": 19.19229701610486
+  },
+  {
+    "totalTokens": 0.133033,
+    "openhands/llama-3.3-70B-Instruct-FP8-total-time": 63.13603574917039,
+    "openhands/llama-3.3-70B-Instruct-FP8-cpu-time": 48.80055803108215,
+    "openhands/llama-3.3-70B-Instruct-FP8-gpu-time": 14.33547771808824
+  },
+  {
+    "totalTokens": 0.167042,
+    "openhands/llama-3.3-70B-Instruct-FP8-total-time": 150.6311158302983,
+    "openhands/llama-3.3-70B-Instruct-FP8-cpu-time": 133.26527469062805,
+    "openhands/llama-3.3-70B-Instruct-FP8-gpu-time": 17.36584113967026
+  },
+  {
+    "totalTokens": 0.1807,
+    "openhands/llama-3.3-70B-Instruct-FP8-total-time": 98.85729316011017,
+    "openhands/llama-3.3-70B-Instruct-FP8-cpu-time": 78.81936222839354,
+    "openhands/llama-3.3-70B-Instruct-FP8-gpu-time": 20.037930931716623
+  },
+  {
+    "totalTokens": 0.184362,
+    "openhands/llama-3.3-70B-Instruct-FP8-total-time": 73.73639265730431,
+    "openhands/llama-3.3-70B-Instruct-FP8-cpu-time": 52.382545801162706,
+    "openhands/llama-3.3-70B-Instruct-FP8-gpu-time": 21.3538468561416
+  },
+  {
+    "totalTokens": 0.192901,
+    "openhands/llama-3.3-70B-Instruct-FP8-total-time": 70.25561185089485,
+    "openhands/llama-3.3-70B-Instruct-FP8-cpu-time": 47.782699329376214,
+    "openhands/llama-3.3-70B-Instruct-FP8-gpu-time": 22.472912521518637
+  },
+  {
+    "totalTokens": 0.198302,
+    "openhands/llama-3.3-70B-Instruct-FP8-total-time": 60.28222023225529,
+    "openhands/llama-3.3-70B-Instruct-FP8-cpu-time": 43.577361310958864,
+    "openhands/llama-3.3-70B-Instruct-FP8-gpu-time": 16.704858921296427
+  },
+  {
+    "totalTokens": 0.204095,
+    "openhands/llama-3.3-70B-Instruct-FP8-total-time": 61.52243501945047,
+    "openhands/llama-3.3-70B-Instruct-FP8-cpu-time": 39.30681420516967,
+    "openhands/llama-3.3-70B-Instruct-FP8-gpu-time": 22.215620814280797
+  },
+  {
+    "totalTokens": 0.204499,
+    "openhands/llama-3.3-70B-Instruct-FP8-total-time": 69.78721463122241,
+    "openhands/llama-3.3-70B-Instruct-FP8-cpu-time": 42.445678297042846,
+    "openhands/llama-3.3-70B-Instruct-FP8-gpu-time": 27.341536334179565
+  },
+  {
+    "totalTokens": 0.214548,
+    "openhands/llama-3.3-70B-Instruct-FP8-total-time": 103.52527515308702,
+    "openhands/llama-3.3-70B-Instruct-FP8-cpu-time": 78.01947967338563,
+    "openhands/llama-3.3-70B-Instruct-FP8-gpu-time": 25.505795479701398
+  },
+  {
+    "totalTokens": 0.236006,
+    "openhands/llama-3.3-70B-Instruct-FP8-total-time": 70.4761214361699,
+    "openhands/llama-3.3-70B-Instruct-FP8-cpu-time": 43.8150229434967,
+    "openhands/llama-3.3-70B-Instruct-FP8-gpu-time": 26.661098492673204
+  },
+  {
+    "totalTokens": 0.264675,
+    "openhands/llama-3.3-70B-Instruct-FP8-total-time": 68.65954773391769,
+    "openhands/llama-3.3-70B-Instruct-FP8-cpu-time": 41.19036716842652,
+    "openhands/llama-3.3-70B-Instruct-FP8-gpu-time": 27.469180565491172
+  },
+  {
+    "totalTokens": 0.266166,
+    "openhands/llama-3.3-70B-Instruct-FP8-total-time": 75.03173284080103,
+    "openhands/llama-3.3-70B-Instruct-FP8-cpu-time": 48.98856407928467,
+    "openhands/llama-3.3-70B-Instruct-FP8-gpu-time": 26.04316876151635
+  },
+  {
+    "totalTokens": 0.288184,
+    "openhands/llama-3.3-70B-Instruct-FP8-total-time": 617.6232823478219,
+    "openhands/llama-3.3-70B-Instruct-FP8-cpu-time": 586.7718584632873,
+    "openhands/llama-3.3-70B-Instruct-FP8-gpu-time": 30.85142388453454
+  },
+  {
+    "totalTokens": 0.289582,
+    "openhands/llama-3.3-70B-Instruct-FP8-total-time": 68.80378824058721,
+    "openhands/llama-3.3-70B-Instruct-FP8-cpu-time": 42.17162351417541,
+    "openhands/llama-3.3-70B-Instruct-FP8-gpu-time": 26.63216472641181
+  },
+  {
+    "totalTokens": 0.34065,
+    "openhands/llama-3.3-70B-Instruct-FP8-total-time": 84.63209033592602,
+    "openhands/llama-3.3-70B-Instruct-FP8-cpu-time": 43.524617750167835,
+    "openhands/llama-3.3-70B-Instruct-FP8-gpu-time": 41.10747258575818
+  },
+  {
+    "totalTokens": 0.343467,
+    "openhands/llama-3.3-70B-Instruct-FP8-total-time": 76.07947649665107,
+    "openhands/llama-3.3-70B-Instruct-FP8-cpu-time": 43.27965994262695,
+    "openhands/llama-3.3-70B-Instruct-FP8-gpu-time": 32.799816554024126
+  },
+  {
+    "totalTokens": 0.366707,
+    "openhands/llama-3.3-70B-Instruct-FP8-total-time": 70.52548658893662,
+    "openhands/llama-3.3-70B-Instruct-FP8-cpu-time": 43.677495782852176,
+    "openhands/llama-3.3-70B-Instruct-FP8-gpu-time": 26.847990806084447
+  },
+  {
+    "totalTokens": 0.367592,
+    "openhands/llama-3.3-70B-Instruct-FP8-total-time": 78.0777407857415,
+    "openhands/llama-3.3-70B-Instruct-FP8-cpu-time": 46.988082237243646,
+    "openhands/llama-3.3-70B-Instruct-FP8-gpu-time": 31.08965854849785
+  },
+  {
+    "totalTokens": 0.378257,
+    "openhands/llama-3.3-70B-Instruct-FP8-total-time": 60.3631920458257,
+    "openhands/llama-3.3-70B-Instruct-FP8-cpu-time": 33.42739168739318,
+    "openhands/llama-3.3-70B-Instruct-FP8-gpu-time": 26.935800358432516
+  },
+  {
+    "totalTokens": 0.413436,
+    "openhands/llama-3.3-70B-Instruct-FP8-total-time": 99.12906810847184,
+    "openhands/llama-3.3-70B-Instruct-FP8-cpu-time": 58.14582444763184,
+    "openhands/llama-3.3-70B-Instruct-FP8-gpu-time": 40.98324366084001
+  },
+  {
+    "totalTokens": 0.610152,
+    "openhands/llama-3.3-70B-Instruct-FP8-total-time": 97.15590672120459,
+    "openhands/llama-3.3-70B-Instruct-FP8-cpu-time": 43.447182685852056,
+    "openhands/llama-3.3-70B-Instruct-FP8-gpu-time": 53.708724035352525
+  },
+  {
+    "totalTokens": 0.746138,
+    "openhands/llama-3.3-70B-Instruct-FP8-total-time": 116.46135846059128,
+    "openhands/llama-3.3-70B-Instruct-FP8-cpu-time": 63.53998259735107,
+    "openhands/llama-3.3-70B-Instruct-FP8-gpu-time": 52.921375863240215
+  },
+  {
+    "totalTokens": 0.764218,
+    "openhands/llama-3.3-70B-Instruct-FP8-total-time": 175.20019120050645,
+    "openhands/llama-3.3-70B-Instruct-FP8-cpu-time": 120.29786283683777,
+    "openhands/llama-3.3-70B-Instruct-FP8-gpu-time": 54.90232836366868
+  },
+  {
+    "totalTokens": 0.847989,
+    "openhands/llama-3.3-70B-Instruct-FP8-total-time": 115.07740676087613,
+    "openhands/llama-3.3-70B-Instruct-FP8-cpu-time": 40.090798934936515,
+    "openhands/llama-3.3-70B-Instruct-FP8-gpu-time": 74.98660782593961
+  },
+  {
+    "totalTokens": 1.02445,
+    "openhands/llama-3.3-70B-Instruct-FP8-total-time": 124.48582980395382,
+    "openhands/llama-3.3-70B-Instruct-FP8-cpu-time": 36.94296775627137,
+    "openhands/llama-3.3-70B-Instruct-FP8-gpu-time": 87.54286204768245
+  },
+  {
+    "totalTokens": 1.026609,
+    "openhands/llama-3.3-70B-Instruct-FP8-total-time": 144.40674410250787,
+    "openhands/llama-3.3-70B-Instruct-FP8-cpu-time": 70.80316113090515,
+    "openhands/llama-3.3-70B-Instruct-FP8-gpu-time": 73.60358297160272
+  },
+  {
+    "totalTokens": 1.117209,
+    "openhands/llama-3.3-70B-Instruct-FP8-total-time": 135.01421239665967,
+    "openhands/llama-3.3-70B-Instruct-FP8-cpu-time": 38.125786277771,
+    "openhands/llama-3.3-70B-Instruct-FP8-gpu-time": 96.88842611888867
+  },
+  {
+    "totalTokens": 1.131623,
+    "openhands/llama-3.3-70B-Instruct-FP8-total-time": 117.5215360191564,
+    "openhands/llama-3.3-70B-Instruct-FP8-cpu-time": 30.170610843658437,
+    "openhands/llama-3.3-70B-Instruct-FP8-gpu-time": 87.35092517549796
+  },
+  {
+    "totalTokens": 1.194558,
+    "openhands/llama-3.3-70B-Instruct-FP8-total-time": 196.43805149698665,
+    "openhands/llama-3.3-70B-Instruct-FP8-cpu-time": 103.0082929954529,
+    "openhands/llama-3.3-70B-Instruct-FP8-gpu-time": 93.42975850153374
+  },
+  {
+    "totalTokens": 1.369918,
+    "openhands/llama-3.3-70B-Instruct-FP8-total-time": 556.6983515549719,
+    "openhands/llama-3.3-70B-Instruct-FP8-cpu-time": 483.46586459159846,
+    "openhands/llama-3.3-70B-Instruct-FP8-gpu-time": 73.23248696337338
+  },
+  {
+    "totalTokens": 1.444452,
+    "openhands/llama-3.3-70B-Instruct-FP8-total-time": 142.1231664788829,
+    "openhands/llama-3.3-70B-Instruct-FP8-cpu-time": 39.87284346580506,
+    "openhands/llama-3.3-70B-Instruct-FP8-gpu-time": 102.25032301307783
+  },
+  {
+    "totalTokens": 1.487986,
+    "openhands/llama-3.3-70B-Instruct-FP8-total-time": 185.6229710365883,
+    "openhands/llama-3.3-70B-Instruct-FP8-cpu-time": 50.803481662750244,
+    "openhands/llama-3.3-70B-Instruct-FP8-gpu-time": 134.81948937383805
+  },
+  {
+    "totalTokens": 1.551529,
+    "openhands/llama-3.3-70B-Instruct-FP8-total-time": 304.2650530188792,
+    "openhands/llama-3.3-70B-Instruct-FP8-cpu-time": 191.40855001640318,
+    "openhands/llama-3.3-70B-Instruct-FP8-gpu-time": 112.856503002476
+  },
+  {
+    "totalTokens": 1.667928,
+    "openhands/llama-3.3-70B-Instruct-FP8-total-time": 382.4372961215616,
+    "openhands/llama-3.3-70B-Instruct-FP8-cpu-time": 281.38106561279295,
+    "openhands/llama-3.3-70B-Instruct-FP8-gpu-time": 101.05623050876865
+  },
+  {
+    "totalTokens": 1.722317,
+    "openhands/llama-3.3-70B-Instruct-FP8-total-time": 769.4445402205919,
+    "openhands/llama-3.3-70B-Instruct-FP8-cpu-time": 671.4067816448212,
+    "openhands/llama-3.3-70B-Instruct-FP8-gpu-time": 98.0377585757707
+  },
+  {
+    "totalTokens": 1.815669,
+    "openhands/llama-3.3-70B-Instruct-FP8-total-time": 270.1411201478109,
+    "openhands/llama-3.3-70B-Instruct-FP8-cpu-time": 151.37043346214296,
+    "openhands/llama-3.3-70B-Instruct-FP8-gpu-time": 118.77068668566795
+  },
+  {
+    "totalTokens": 1.927237,
+    "openhands/llama-3.3-70B-Instruct-FP8-total-time": 172.4785736902712,
+    "openhands/llama-3.3-70B-Instruct-FP8-cpu-time": 48.933573350906386,
+    "openhands/llama-3.3-70B-Instruct-FP8-gpu-time": 123.5450003393648
+  },
+  {
+    "totalTokens": 2.143293,
+    "openhands/llama-3.3-70B-Instruct-FP8-total-time": 1595.5031182659384,
+    "openhands/llama-3.3-70B-Instruct-FP8-cpu-time": 1463.3113576049805,
+    "openhands/llama-3.3-70B-Instruct-FP8-gpu-time": 132.19176066095795
+  },
+  {
+    "totalTokens": 2.575293,
+    "openhands/llama-3.3-70B-Instruct-FP8-total-time": 833.4965894778985,
+    "openhands/llama-3.3-70B-Instruct-FP8-cpu-time": 661.8418088474274,
+    "openhands/llama-3.3-70B-Instruct-FP8-gpu-time": 171.65478063047112
+  },
+  {
+    "totalTokens": 2.889054,
+    "openhands/llama-3.3-70B-Instruct-FP8-total-time": 250.15909834685903,
+    "openhands/llama-3.3-70B-Instruct-FP8-cpu-time": 73.72753941345212,
+    "openhands/llama-3.3-70B-Instruct-FP8-gpu-time": 176.4315589334069
+  },
+  {
+    "totalTokens": 2.892124,
+    "openhands/llama-3.3-70B-Instruct-FP8-total-time": 240.80248272037326,
+    "openhands/llama-3.3-70B-Instruct-FP8-cpu-time": 50.718452104568485,
+    "openhands/llama-3.3-70B-Instruct-FP8-gpu-time": 190.08403061580478
+  },
+  {
+    "totalTokens": 3.340177,
+    "openhands/llama-3.3-70B-Instruct-FP8-total-time": 602.8027300737886,
+    "openhands/llama-3.3-70B-Instruct-FP8-cpu-time": 423.29779141616825,
+    "openhands/llama-3.3-70B-Instruct-FP8-gpu-time": 179.50493865762027
+  },
+  {
+    "totalTokens": 3.695914,
+    "openhands/llama-3.3-70B-Instruct-FP8-total-time": 298.83817569553764,
+    "openhands/llama-3.3-70B-Instruct-FP8-cpu-time": 106.72238754081724,
+    "openhands/llama-3.3-70B-Instruct-FP8-gpu-time": 192.11578815472043
+  },
+  {
+    "totalTokens": 0.018494,
+    "openhands/qwen3-32B-total-time": 54.782629259736325,
+    "openhands/qwen3-32B-cpu-time": 43.22375173568726,
+    "openhands/qwen3-32B-gpu-time": 11.558877524049066
+  },
+  {
+    "totalTokens": 0.023639,
+    "openhands/qwen3-32B-total-time": 56.43041913235569,
+    "openhands/qwen3-32B-cpu-time": 42.987493509292605,
+    "openhands/qwen3-32B-gpu-time": 13.442925623063083
+  },
+  {
+    "totalTokens": 0.024353,
+    "openhands/qwen3-32B-total-time": 56.65089883337199,
+    "openhands/qwen3-32B-cpu-time": 44.4121964225769,
+    "openhands/qwen3-32B-gpu-time": 12.238702410795092
+  },
+  {
+    "totalTokens": 0.028123,
+    "openhands/qwen3-32B-total-time": 56.801389990558135,
+    "openhands/qwen3-32B-cpu-time": 46.286378866195676,
+    "openhands/qwen3-32B-gpu-time": 10.51501112436246
+  },
+  {
+    "totalTokens": 0.034647,
+    "openhands/qwen3-32B-total-time": 68.48976159173537,
+    "openhands/qwen3-32B-cpu-time": 47.898975379943835,
+    "openhands/qwen3-32B-gpu-time": 20.59078621179153
+  },
+  {
+    "totalTokens": 0.034974,
+    "openhands/qwen3-32B-total-time": 79.17733985118281,
+    "openhands/qwen3-32B-cpu-time": 58.2726817340851,
+    "openhands/qwen3-32B-gpu-time": 20.90465811709771
+  },
+  {
+    "totalTokens": 0.035429,
+    "openhands/qwen3-32B-total-time": 67.21836466424313,
+    "openhands/qwen3-32B-cpu-time": 47.08409311676024,
+    "openhands/qwen3-32B-gpu-time": 20.134271547482882
+  },
+  {
+    "totalTokens": 0.038067,
+    "openhands/qwen3-32B-total-time": 62.43887731406249,
+    "openhands/qwen3-32B-cpu-time": 41.737190185546865,
+    "openhands/qwen3-32B-gpu-time": 20.701687128515623
+  },
+  {
+    "totalTokens": 0.040645,
+    "openhands/qwen3-32B-total-time": 68.36726998635098,
+    "openhands/qwen3-32B-cpu-time": 47.42064421653748,
+    "openhands/qwen3-32B-gpu-time": 20.946625769813487
+  },
+  {
+    "totalTokens": 0.042705,
+    "openhands/qwen3-32B-total-time": 76.15535873340289,
+    "openhands/qwen3-32B-cpu-time": 46.23814908981322,
+    "openhands/qwen3-32B-gpu-time": 29.917209643589665
+  },
+  {
+    "totalTokens": 0.043005,
+    "openhands/qwen3-32B-total-time": 66.32880418065383,
+    "openhands/qwen3-32B-cpu-time": 47.55091876792909,
+    "openhands/qwen3-32B-gpu-time": 18.77788541272475
+  },
+  {
+    "totalTokens": 0.050878,
+    "openhands/qwen3-32B-total-time": 91.81838838538498,
+    "openhands/qwen3-32B-cpu-time": 67.62596377754213,
+    "openhands/qwen3-32B-gpu-time": 24.192424607842852
+  },
+  {
+    "totalTokens": 0.055246,
+    "openhands/qwen3-32B-total-time": 82.30074721892568,
+    "openhands/qwen3-32B-cpu-time": 46.679891975402825,
+    "openhands/qwen3-32B-gpu-time": 35.620855243522854
+  },
+  {
+    "totalTokens": 0.057361,
+    "openhands/qwen3-32B-total-time": 82.90085420692583,
+    "openhands/qwen3-32B-cpu-time": 47.35473377609253,
+    "openhands/qwen3-32B-gpu-time": 35.546120430833305
+  },
+  {
+    "totalTokens": 0.064125,
+    "openhands/qwen3-32B-total-time": 79.21386426278542,
+    "openhands/qwen3-32B-cpu-time": 48.807801042556775,
+    "openhands/qwen3-32B-gpu-time": 30.40606322022864
+  },
+  {
+    "totalTokens": 0.065752,
+    "openhands/qwen3-32B-total-time": 79.9292666346382,
+    "openhands/qwen3-32B-cpu-time": 43.905230144500734,
+    "openhands/qwen3-32B-gpu-time": 36.024036490137455
+  },
+  {
+    "totalTokens": 0.066292,
+    "openhands/qwen3-32B-total-time": 81.35224890693338,
+    "openhands/qwen3-32B-cpu-time": 48.62432022285461,
+    "openhands/qwen3-32B-gpu-time": 32.727928684078776
+  },
+  {
+    "totalTokens": 0.079493,
+    "openhands/qwen3-32B-total-time": 114.07562336259154,
+    "openhands/qwen3-32B-cpu-time": 89.65227187538147,
+    "openhands/qwen3-32B-gpu-time": 24.42335148721007
+  },
+  {
+    "totalTokens": 0.08977,
+    "openhands/qwen3-32B-total-time": 107.65363227630735,
+    "openhands/qwen3-32B-cpu-time": 47.580967472076395,
+    "openhands/qwen3-32B-gpu-time": 60.07266480423096
+  },
+  {
+    "totalTokens": 0.096,
+    "openhands/qwen3-32B-total-time": 98.28948661119256,
+    "openhands/qwen3-32B-cpu-time": 51.55754800796507,
+    "openhands/qwen3-32B-gpu-time": 46.73193860322748
+  },
+  {
+    "totalTokens": 0.104129,
+    "openhands/qwen3-32B-total-time": 80.61723818578463,
+    "openhands/qwen3-32B-cpu-time": 54.06323188209532,
+    "openhands/qwen3-32B-gpu-time": 26.554006303689313
+  },
+  {
+    "totalTokens": 0.147349,
+    "openhands/qwen3-32B-total-time": 175.7297558175677,
+    "openhands/qwen3-32B-cpu-time": 111.00642669868472,
+    "openhands/qwen3-32B-gpu-time": 64.723329118883
+  },
+  {
+    "totalTokens": 0.148634,
+    "openhands/qwen3-32B-total-time": 162.25012211233022,
+    "openhands/qwen3-32B-cpu-time": 58.29208877182009,
+    "openhands/qwen3-32B-gpu-time": 103.95803334051013
+  },
+  {
+    "totalTokens": 0.150924,
+    "openhands/qwen3-32B-total-time": 137.67298275641508,
+    "openhands/qwen3-32B-cpu-time": 63.50954671669007,
+    "openhands/qwen3-32B-gpu-time": 74.163436039725
+  },
+  {
+    "totalTokens": 0.15659,
+    "openhands/qwen3-32B-total-time": 266.63968345976474,
+    "openhands/qwen3-32B-cpu-time": 189.11035098266598,
+    "openhands/qwen3-32B-gpu-time": 77.52933247709876
+  },
+  {
+    "totalTokens": 0.182658,
+    "openhands/qwen3-32B-total-time": 129.95700998273722,
+    "openhands/qwen3-32B-cpu-time": 62.74270793914798,
+    "openhands/qwen3-32B-gpu-time": 67.21430204358924
+  },
+  {
+    "totalTokens": 0.197041,
+    "openhands/qwen3-32B-total-time": 144.18849415679213,
+    "openhands/qwen3-32B-cpu-time": 75.6708137168884,
+    "openhands/qwen3-32B-gpu-time": 68.51768043990373
+  },
+  {
+    "totalTokens": 0.205756,
+    "openhands/qwen3-32B-total-time": 153.65549161570323,
+    "openhands/qwen3-32B-cpu-time": 64.01639806365972,
+    "openhands/qwen3-32B-gpu-time": 89.63909355204352
+  },
+  {
+    "totalTokens": 0.231475,
+    "openhands/qwen3-32B-total-time": 210.98154758197785,
+    "openhands/qwen3-32B-cpu-time": 96.04156816482543,
+    "openhands/qwen3-32B-gpu-time": 114.93997941715241
+  },
+  {
+    "totalTokens": 0.250687,
+    "openhands/qwen3-32B-total-time": 135.83813179140185,
+    "openhands/qwen3-32B-cpu-time": 77.29883041763304,
+    "openhands/qwen3-32B-gpu-time": 58.5393013737688
+  },
+  {
+    "totalTokens": 0.252446,
+    "openhands/qwen3-32B-total-time": 198.43065062343027,
+    "openhands/qwen3-32B-cpu-time": 112.97823964309691,
+    "openhands/qwen3-32B-gpu-time": 85.45241098033335
+  },
+  {
+    "totalTokens": 0.275948,
+    "openhands/qwen3-32B-total-time": 178.8775442556209,
+    "openhands/qwen3-32B-cpu-time": 65.61949204254154,
+    "openhands/qwen3-32B-gpu-time": 113.25805221307937
+  },
+  {
+    "totalTokens": 0.303684,
+    "openhands/qwen3-32B-total-time": 435.28872885543365,
+    "openhands/qwen3-32B-cpu-time": 292.0049459133148,
+    "openhands/qwen3-32B-gpu-time": 143.2837829421188
+  },
+  {
+    "totalTokens": 0.317452,
+    "openhands/qwen3-32B-total-time": 221.83805100981812,
+    "openhands/qwen3-32B-cpu-time": 104.9649786968231,
+    "openhands/qwen3-32B-gpu-time": 116.873072312995
+  },
+  {
+    "totalTokens": 0.323715,
+    "openhands/qwen3-32B-total-time": 175.9986257137141,
+    "openhands/qwen3-32B-cpu-time": 91.76489075851441,
+    "openhands/qwen3-32B-gpu-time": 84.23373495519968
+  },
+  {
+    "totalTokens": 0.338243,
+    "openhands/qwen3-32B-total-time": 279.5595491745739,
+    "openhands/qwen3-32B-cpu-time": 187.4479455528259,
+    "openhands/qwen3-32B-gpu-time": 92.11160362174797
+  },
+  {
+    "totalTokens": 0.360896,
+    "openhands/qwen3-32B-total-time": 206.46341311097228,
+    "openhands/qwen3-32B-cpu-time": 106.66220290565491,
+    "openhands/qwen3-32B-gpu-time": 99.80121020531739
+  },
+  {
+    "totalTokens": 0.361081,
+    "openhands/qwen3-32B-total-time": 454.9909104687185,
+    "openhands/qwen3-32B-cpu-time": 295.46722010421763,
+    "openhands/qwen3-32B-gpu-time": 159.52369036450085
+  },
+  {
+    "totalTokens": 0.440209,
+    "openhands/qwen3-32B-total-time": 208.85186327751478,
+    "openhands/qwen3-32B-cpu-time": 85.38751770591739,
+    "openhands/qwen3-32B-gpu-time": 123.46434557159738
+  },
+  {
+    "totalTokens": 0.445749,
+    "openhands/qwen3-32B-total-time": 352.91990497542423,
+    "openhands/qwen3-32B-cpu-time": 177.85748749160769,
+    "openhands/qwen3-32B-gpu-time": 175.06241748381655
+  },
+  {
+    "totalTokens": 0.486005,
+    "openhands/qwen3-32B-total-time": 333.0194523681512,
+    "openhands/qwen3-32B-cpu-time": 147.58700965499884,
+    "openhands/qwen3-32B-gpu-time": 185.43244271315234
+  },
+  {
+    "totalTokens": 0.519187,
+    "openhands/qwen3-32B-total-time": 223.03859487850417,
+    "openhands/qwen3-32B-cpu-time": 0,
+    "openhands/qwen3-32B-gpu-time": 223.03859487850417
+  },
+  {
+    "totalTokens": 0.572167,
+    "openhands/qwen3-32B-total-time": 242.82211193861409,
+    "openhands/qwen3-32B-cpu-time": 88.7051014156342,
+    "openhands/qwen3-32B-gpu-time": 154.11701052297988
+  },
+  {
+    "totalTokens": 0.660922,
+    "openhands/qwen3-32B-total-time": 229.41333898290978,
+    "openhands/qwen3-32B-cpu-time": 88.2508574905396,
+    "openhands/qwen3-32B-gpu-time": 141.16248149237018
+  },
+  {
+    "totalTokens": 0.845187,
+    "openhands/qwen3-32B-total-time": 356.71385024649,
+    "openhands/qwen3-32B-cpu-time": 171.4302686252595,
+    "openhands/qwen3-32B-gpu-time": 185.28358162123052
+  },
+  {
+    "totalTokens": 1.051319,
+    "openhands/qwen3-32B-total-time": 563.9610624004382,
+    "openhands/qwen3-32B-cpu-time": 168.48118976974501,
+    "openhands/qwen3-32B-gpu-time": 395.4798726306932
+  },
+  {
+    "totalTokens": 1.118878,
+    "openhands/qwen3-32B-total-time": 391.65757145167095,
+    "openhands/qwen3-32B-cpu-time": 144.79163749313352,
+    "openhands/qwen3-32B-gpu-time": 246.8659339585374
+  },
+  {
+    "totalTokens": 1.222442,
+    "openhands/qwen3-32B-total-time": 456.56921574860405,
+    "openhands/qwen3-32B-cpu-time": 216.43252552413946,
+    "openhands/qwen3-32B-gpu-time": 240.13669022446462
+  },
+  {
+    "totalTokens": 1.487759,
+    "openhands/qwen3-32B-total-time": 523.8954906800545,
+    "openhands/qwen3-32B-cpu-time": 225.30795393562312,
+    "openhands/qwen3-32B-gpu-time": 298.5875367444315
+  },
+  {
+    "totalTokens": 2.62167,
+    "openhands/qwen3-32B-total-time": 914.3804731699306,
+    "openhands/qwen3-32B-cpu-time": 495.6005913524632,
+    "openhands/qwen3-32B-gpu-time": 418.7798818174674
+  },
+  {
+    "totalTokens": 0.050187,
+    "swe-agent/GPT-4o-mini-2024-07-18-total-time": 11.343722318422056,
+    "swe-agent/GPT-4o-mini-2024-07-18-cpu-time": 5.680999999999999,
+    "swe-agent/GPT-4o-mini-2024-07-18-gpu-time": 5.662722318422056
+  },
+  {
+    "totalTokens": 0.055602,
+    "swe-agent/GPT-4o-mini-2024-07-18-total-time": 21.321667655024314,
+    "swe-agent/GPT-4o-mini-2024-07-18-cpu-time": 11.358999999999998,
+    "swe-agent/GPT-4o-mini-2024-07-18-gpu-time": 9.962667655024314
+  },
+  {
+    "totalTokens": 0.115563,
+    "swe-agent/GPT-4o-mini-2024-07-18-total-time": 41.07272427407636,
+    "swe-agent/GPT-4o-mini-2024-07-18-cpu-time": 13.881,
+    "swe-agent/GPT-4o-mini-2024-07-18-gpu-time": 27.191724274076357
+  },
+  {
+    "totalTokens": 0.162529,
+    "swe-agent/GPT-4o-mini-2024-07-18-total-time": 38.57015360711342,
+    "swe-agent/GPT-4o-mini-2024-07-18-cpu-time": 12.988999999999997,
+    "swe-agent/GPT-4o-mini-2024-07-18-gpu-time": 25.58115360711342
+  },
+  {
+    "totalTokens": 0.16816,
+    "swe-agent/GPT-4o-mini-2024-07-18-total-time": 22.661037550697436,
+    "swe-agent/GPT-4o-mini-2024-07-18-cpu-time": 11.075999999999997,
+    "swe-agent/GPT-4o-mini-2024-07-18-gpu-time": 11.585037550697438
+  },
+  {
+    "totalTokens": 0.179961,
+    "swe-agent/GPT-4o-mini-2024-07-18-total-time": 193.49469581899848,
+    "swe-agent/GPT-4o-mini-2024-07-18-cpu-time": 162.986,
+    "swe-agent/GPT-4o-mini-2024-07-18-gpu-time": 30.508695818998483
+  },
+  {
+    "totalTokens": 0.196422,
+    "swe-agent/GPT-4o-mini-2024-07-18-total-time": 29.95565088638346,
+    "swe-agent/GPT-4o-mini-2024-07-18-cpu-time": 9.416999999999994,
+    "swe-agent/GPT-4o-mini-2024-07-18-gpu-time": 20.538650886383465
+  },
+  {
+    "totalTokens": 0.21408,
+    "swe-agent/GPT-4o-mini-2024-07-18-total-time": 26.002518625894666,
+    "swe-agent/GPT-4o-mini-2024-07-18-cpu-time": 10.929000000000002,
+    "swe-agent/GPT-4o-mini-2024-07-18-gpu-time": 15.073518625894664
+  },
+  {
+    "totalTokens": 0.415883,
+    "swe-agent/GPT-4o-mini-2024-07-18-total-time": 37.10489930735763,
+    "swe-agent/GPT-4o-mini-2024-07-18-cpu-time": 8.689,
+    "swe-agent/GPT-4o-mini-2024-07-18-gpu-time": 28.415899307357627
+  },
+  {
+    "totalTokens": 0.442909,
+    "swe-agent/GPT-4o-mini-2024-07-18-total-time": 70.95933979459008,
+    "swe-agent/GPT-4o-mini-2024-07-18-cpu-time": 16.412000000000006,
+    "swe-agent/GPT-4o-mini-2024-07-18-gpu-time": 54.54733979459008
+  },
+  {
+    "totalTokens": 0.604664,
+    "swe-agent/GPT-4o-mini-2024-07-18-total-time": 79.12456496412253,
+    "swe-agent/GPT-4o-mini-2024-07-18-cpu-time": 37.08200000000001,
+    "swe-agent/GPT-4o-mini-2024-07-18-gpu-time": 42.04256496412252
+  },
+  {
+    "totalTokens": 0.729896,
+    "swe-agent/GPT-4o-mini-2024-07-18-total-time": 92.87984718230676,
+    "swe-agent/GPT-4o-mini-2024-07-18-cpu-time": 22.555999999999983,
+    "swe-agent/GPT-4o-mini-2024-07-18-gpu-time": 70.32384718230678
+  },
+  {
+    "totalTokens": 0.844727,
+    "swe-agent/GPT-4o-mini-2024-07-18-total-time": 70.86935806266932,
+    "swe-agent/GPT-4o-mini-2024-07-18-cpu-time": 22.765,
+    "swe-agent/GPT-4o-mini-2024-07-18-gpu-time": 48.10435806266932
+  },
+  {
+    "totalTokens": 1.351842,
+    "swe-agent/GPT-4o-mini-2024-07-18-total-time": 100.07720340875778,
+    "swe-agent/GPT-4o-mini-2024-07-18-cpu-time": 23.007000000000005,
+    "swe-agent/GPT-4o-mini-2024-07-18-gpu-time": 77.07020340875778
+  },
+  {
+    "totalTokens": 1.686157,
+    "swe-agent/GPT-4o-mini-2024-07-18-total-time": 130.0869211550168,
+    "swe-agent/GPT-4o-mini-2024-07-18-cpu-time": 24.649,
+    "swe-agent/GPT-4o-mini-2024-07-18-gpu-time": 105.4379211550168
+  },
+  {
+    "totalTokens": 6.430371,
+    "swe-agent/GPT-4o-mini-2024-07-18-total-time": 588.0407480012805,
+    "swe-agent/GPT-4o-mini-2024-07-18-cpu-time": 229.96500000000003,
+    "swe-agent/GPT-4o-mini-2024-07-18-gpu-time": 358.07574800128043
+  },
+  {
+    "totalTokens": 7.378993,
+    "swe-agent/GPT-4o-mini-2024-07-18-total-time": 627.7480437803466,
+    "swe-agent/GPT-4o-mini-2024-07-18-cpu-time": 219.73299999999995,
+    "swe-agent/GPT-4o-mini-2024-07-18-gpu-time": 408.0150437803467
+  },
+  {
+    "totalTokens": 7.906999,
+    "swe-agent/GPT-4o-mini-2024-07-18-total-time": 702.6492965583147,
+    "swe-agent/GPT-4o-mini-2024-07-18-cpu-time": 230.79600000000005,
+    "swe-agent/GPT-4o-mini-2024-07-18-gpu-time": 471.85329655831475
+  },
+  {
+    "totalTokens": 7.993555,
+    "swe-agent/GPT-4o-mini-2024-07-18-total-time": 667.9771507563185,
+    "swe-agent/GPT-4o-mini-2024-07-18-cpu-time": 221.529,
+    "swe-agent/GPT-4o-mini-2024-07-18-gpu-time": 446.4481507563184
+  },
+  {
+    "totalTokens": 8.43019,
+    "swe-agent/GPT-4o-mini-2024-07-18-total-time": 741.1761163073074,
+    "swe-agent/GPT-4o-mini-2024-07-18-cpu-time": 244.31000000000006,
+    "swe-agent/GPT-4o-mini-2024-07-18-gpu-time": 496.8661163073074
+  },
+  {
+    "totalTokens": 8.448488,
+    "swe-agent/GPT-4o-mini-2024-07-18-total-time": 769.5171260061057,
+    "swe-agent/GPT-4o-mini-2024-07-18-cpu-time": 52.74199999999996,
+    "swe-agent/GPT-4o-mini-2024-07-18-gpu-time": 716.7751260061058
+  },
+  {
+    "totalTokens": 9.475161,
+    "swe-agent/GPT-4o-mini-2024-07-18-total-time": 813.4163457533476,
+    "swe-agent/GPT-4o-mini-2024-07-18-cpu-time": 75.8789999999999,
+    "swe-agent/GPT-4o-mini-2024-07-18-gpu-time": 737.5373457533477
+  },
+  {
+    "totalTokens": 11.035666,
+    "swe-agent/GPT-4o-mini-2024-07-18-total-time": 838.0838259443674,
+    "swe-agent/GPT-4o-mini-2024-07-18-cpu-time": 238.41000000000008,
+    "swe-agent/GPT-4o-mini-2024-07-18-gpu-time": 599.6738259443673
+  },
+  {
+    "totalTokens": 11.217855,
+    "swe-agent/GPT-4o-mini-2024-07-18-total-time": 979.1417655380865,
+    "swe-agent/GPT-4o-mini-2024-07-18-cpu-time": 251.73700000000008,
+    "swe-agent/GPT-4o-mini-2024-07-18-gpu-time": 727.4047655380864
+  },
+  {
+    "totalTokens": 11.36528,
+    "swe-agent/GPT-4o-mini-2024-07-18-total-time": 998.0824164865022,
+    "swe-agent/GPT-4o-mini-2024-07-18-cpu-time": 131.60300000000007,
+    "swe-agent/GPT-4o-mini-2024-07-18-gpu-time": 866.4794164865021
+  },
+  {
+    "totalTokens": 11.415991,
+    "swe-agent/GPT-4o-mini-2024-07-18-total-time": 847.7510093940541,
+    "swe-agent/GPT-4o-mini-2024-07-18-cpu-time": 317.521,
+    "swe-agent/GPT-4o-mini-2024-07-18-gpu-time": 530.2300093940542
+  },
+  {
+    "totalTokens": 11.426776,
+    "swe-agent/GPT-4o-mini-2024-07-18-total-time": 805.0974237453364,
+    "swe-agent/GPT-4o-mini-2024-07-18-cpu-time": 97.50300000000016,
+    "swe-agent/GPT-4o-mini-2024-07-18-gpu-time": 707.5944237453363
+  },
+  {
+    "totalTokens": 11.504119,
+    "swe-agent/GPT-4o-mini-2024-07-18-total-time": 797.0298057920958,
+    "swe-agent/GPT-4o-mini-2024-07-18-cpu-time": 249.06399999999996,
+    "swe-agent/GPT-4o-mini-2024-07-18-gpu-time": 547.9658057920958
+  },
+  {
+    "totalTokens": 11.620557,
+    "swe-agent/GPT-4o-mini-2024-07-18-total-time": 865.3841354150783,
+    "swe-agent/GPT-4o-mini-2024-07-18-cpu-time": 108.12400000000002,
+    "swe-agent/GPT-4o-mini-2024-07-18-gpu-time": 757.2601354150783
+  },
+  {
+    "totalTokens": 11.654862,
+    "swe-agent/GPT-4o-mini-2024-07-18-total-time": 754.4694668719254,
+    "swe-agent/GPT-4o-mini-2024-07-18-cpu-time": 103.97799999999995,
+    "swe-agent/GPT-4o-mini-2024-07-18-gpu-time": 650.4914668719255
+  },
+  {
+    "totalTokens": 11.788083,
+    "swe-agent/GPT-4o-mini-2024-07-18-total-time": 694.5475378350244,
+    "swe-agent/GPT-4o-mini-2024-07-18-cpu-time": 89.01499999999999,
+    "swe-agent/GPT-4o-mini-2024-07-18-gpu-time": 605.5325378350244
+  },
+  {
+    "totalTokens": 11.801566,
+    "swe-agent/GPT-4o-mini-2024-07-18-total-time": 727.205450451349,
+    "swe-agent/GPT-4o-mini-2024-07-18-cpu-time": 81.37800000000004,
+    "swe-agent/GPT-4o-mini-2024-07-18-gpu-time": 645.8274504513489
+  },
+  {
+    "totalTokens": 11.838479,
+    "swe-agent/GPT-4o-mini-2024-07-18-total-time": 858.9631795481248,
+    "swe-agent/GPT-4o-mini-2024-07-18-cpu-time": 231.236,
+    "swe-agent/GPT-4o-mini-2024-07-18-gpu-time": 627.7271795481248
+  },
+  {
+    "totalTokens": 11.881282,
+    "swe-agent/GPT-4o-mini-2024-07-18-total-time": 755.7140769148284,
+    "swe-agent/GPT-4o-mini-2024-07-18-cpu-time": 137.73800000000006,
+    "swe-agent/GPT-4o-mini-2024-07-18-gpu-time": 617.9760769148284
+  },
+  {
+    "totalTokens": 11.892246,
+    "swe-agent/GPT-4o-mini-2024-07-18-total-time": 784.2626082259742,
+    "swe-agent/GPT-4o-mini-2024-07-18-cpu-time": 114.76700000000005,
+    "swe-agent/GPT-4o-mini-2024-07-18-gpu-time": 669.4956082259741
+  },
+  {
+    "totalTokens": 12.307343,
+    "swe-agent/GPT-4o-mini-2024-07-18-total-time": 883.4558444715097,
+    "swe-agent/GPT-4o-mini-2024-07-18-cpu-time": 242.14099999999996,
+    "swe-agent/GPT-4o-mini-2024-07-18-gpu-time": 641.3148444715098
+  },
+  {
+    "totalTokens": 12.629186,
+    "swe-agent/GPT-4o-mini-2024-07-18-total-time": 872.0692660774104,
+    "swe-agent/GPT-4o-mini-2024-07-18-cpu-time": 248.40699999999993,
+    "swe-agent/GPT-4o-mini-2024-07-18-gpu-time": 623.6622660774104
+  },
+  {
+    "totalTokens": 12.738905,
+    "swe-agent/GPT-4o-mini-2024-07-18-total-time": 874.6425544465617,
+    "swe-agent/GPT-4o-mini-2024-07-18-cpu-time": 249.57900000000006,
+    "swe-agent/GPT-4o-mini-2024-07-18-gpu-time": 625.0635544465616
+  },
+  {
+    "totalTokens": 12.807066,
+    "swe-agent/GPT-4o-mini-2024-07-18-total-time": 1007.9897676612579,
+    "swe-agent/GPT-4o-mini-2024-07-18-cpu-time": 215.62099999999987,
+    "swe-agent/GPT-4o-mini-2024-07-18-gpu-time": 792.3687676612581
+  },
+  {
+    "totalTokens": 12.810323,
+    "swe-agent/GPT-4o-mini-2024-07-18-total-time": 1088.8308028986933,
+    "swe-agent/GPT-4o-mini-2024-07-18-cpu-time": 207.58100000000013,
+    "swe-agent/GPT-4o-mini-2024-07-18-gpu-time": 881.2498028986931
+  },
+  {
+    "totalTokens": 12.824854,
+    "swe-agent/GPT-4o-mini-2024-07-18-total-time": 968.934147126324,
+    "swe-agent/GPT-4o-mini-2024-07-18-cpu-time": 189.6429999999998,
+    "swe-agent/GPT-4o-mini-2024-07-18-gpu-time": 779.2911471263242
+  },
+  {
+    "totalTokens": 12.843123,
+    "swe-agent/GPT-4o-mini-2024-07-18-total-time": 1093.3102998982663,
+    "swe-agent/GPT-4o-mini-2024-07-18-cpu-time": 196.32500000000005,
+    "swe-agent/GPT-4o-mini-2024-07-18-gpu-time": 896.9852998982664
+  },
+  {
+    "totalTokens": 12.87638,
+    "swe-agent/GPT-4o-mini-2024-07-18-total-time": 962.9880849193001,
+    "swe-agent/GPT-4o-mini-2024-07-18-cpu-time": 212.18099999999993,
+    "swe-agent/GPT-4o-mini-2024-07-18-gpu-time": 750.8070849193002
+  },
+  {
+    "totalTokens": 12.917773,
+    "swe-agent/GPT-4o-mini-2024-07-18-total-time": 955.0956969886861,
+    "swe-agent/GPT-4o-mini-2024-07-18-cpu-time": 186.44700000000012,
+    "swe-agent/GPT-4o-mini-2024-07-18-gpu-time": 768.648696988686
+  },
+  {
+    "totalTokens": 12.933968,
+    "swe-agent/GPT-4o-mini-2024-07-18-total-time": 896.9787497760142,
+    "swe-agent/GPT-4o-mini-2024-07-18-cpu-time": 205.904,
+    "swe-agent/GPT-4o-mini-2024-07-18-gpu-time": 691.0747497760142
+  },
+  {
+    "totalTokens": 13.073916,
+    "swe-agent/GPT-4o-mini-2024-07-18-total-time": 890.2685012994411,
+    "swe-agent/GPT-4o-mini-2024-07-18-cpu-time": 188.5250000000001,
+    "swe-agent/GPT-4o-mini-2024-07-18-gpu-time": 701.743501299441
+  },
+  {
+    "totalTokens": 13.106895,
+    "swe-agent/GPT-4o-mini-2024-07-18-total-time": 807.6702514078562,
+    "swe-agent/GPT-4o-mini-2024-07-18-cpu-time": 170.0680000000001,
+    "swe-agent/GPT-4o-mini-2024-07-18-gpu-time": 637.6022514078561
+  },
+  {
+    "totalTokens": 13.151091,
+    "swe-agent/GPT-4o-mini-2024-07-18-total-time": 876.1304354597434,
+    "swe-agent/GPT-4o-mini-2024-07-18-cpu-time": 181.822,
+    "swe-agent/GPT-4o-mini-2024-07-18-gpu-time": 694.3084354597434
+  },
+  {
+    "totalTokens": 13.175055,
+    "swe-agent/GPT-4o-mini-2024-07-18-total-time": 856.1590581766336,
+    "swe-agent/GPT-4o-mini-2024-07-18-cpu-time": 200.9530000000001,
+    "swe-agent/GPT-4o-mini-2024-07-18-gpu-time": 655.2060581766335
+  },
+  {
+    "totalTokens": 13.220374,
+    "swe-agent/GPT-4o-mini-2024-07-18-total-time": 827.793572848976,
+    "swe-agent/GPT-4o-mini-2024-07-18-cpu-time": 191.09900000000005,
+    "swe-agent/GPT-4o-mini-2024-07-18-gpu-time": 636.694572848976
+  },
+  {
+    "totalTokens": 0.003488,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-total-time": 10.980354937796037,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-cpu-time": 6.299999999999999,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-gpu-time": 4.680354937796038
+  },
+  {
+    "totalTokens": 0.008166,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-total-time": 17.18657846548238,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-cpu-time": 7.143000000000001,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-gpu-time": 10.04357846548238
+  },
+  {
+    "totalTokens": 0.00901,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-total-time": 17.46840415889104,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-cpu-time": 6.698999999999998,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-gpu-time": 10.76940415889104
+  },
+  {
+    "totalTokens": 0.01008,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-total-time": 15.311510555668601,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-cpu-time": 6.286000000000001,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-gpu-time": 9.0255105556686
+  },
+  {
+    "totalTokens": 0.011764,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-total-time": 18.78167523176552,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-cpu-time": 7.080000000000002,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-gpu-time": 11.701675231765515
+  },
+  {
+    "totalTokens": 0.012593,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-total-time": 21.67641080011182,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-cpu-time": 7.505000000000003,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-gpu-time": 14.171410800111818
+  },
+  {
+    "totalTokens": 0.012833,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-total-time": 17.04659705800333,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-cpu-time": 6.5390000000000015,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-gpu-time": 10.507597058003327
+  },
+  {
+    "totalTokens": 0.015242,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-total-time": 29.712457217385996,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-cpu-time": 7.850000000000001,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-gpu-time": 21.862457217385995
+  },
+  {
+    "totalTokens": 0.015375,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-total-time": 22.48576277980464,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-cpu-time": 6.9410000000000025,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-gpu-time": 15.544762779804639
+  },
+  {
+    "totalTokens": 0.016126,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-total-time": 20.043504963027956,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-cpu-time": 7.2010000000000005,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-gpu-time": 12.842504963027954
+  },
+  {
+    "totalTokens": 0.018759,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-total-time": 21.161444069401707,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-cpu-time": 6.731999999999999,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-gpu-time": 14.429444069401708
+  },
+  {
+    "totalTokens": 0.018956,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-total-time": 18.365482517391463,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-cpu-time": 6.3870000000000005,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-gpu-time": 11.97848251739146
+  },
+  {
+    "totalTokens": 0.019698,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-total-time": 21.12323958336638,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-cpu-time": 9.518,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-gpu-time": 11.60523958336638
+  },
+  {
+    "totalTokens": 0.021457,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-total-time": 15.71365878806398,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-cpu-time": 9.392,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-gpu-time": 6.321658788063981
+  },
+  {
+    "totalTokens": 0.02278,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-total-time": 18.49239280244933,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-cpu-time": 9.390000000000004,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-gpu-time": 9.102392802449327
+  },
+  {
+    "totalTokens": 0.023489,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-total-time": 21.17232930451885,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-cpu-time": 10.844999999999999,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-gpu-time": 10.327329304518852
+  },
+  {
+    "totalTokens": 0.023765,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-total-time": 23.091442499376022,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-cpu-time": 10.193000000000001,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-gpu-time": 12.89844249937602
+  },
+  {
+    "totalTokens": 0.02404,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-total-time": 19.093840558916785,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-cpu-time": 8.768,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-gpu-time": 10.325840558916784
+  },
+  {
+    "totalTokens": 0.025694,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-total-time": 19.28523249483513,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-cpu-time": 8.248999999999999,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-gpu-time": 11.036232494835133
+  },
+  {
+    "totalTokens": 0.026787,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-total-time": 21.375036376483187,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-cpu-time": 7.107999999999997,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-gpu-time": 14.267036376483192
+  },
+  {
+    "totalTokens": 0.028552,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-total-time": 27.138927474604202,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-cpu-time": 7.368000000000002,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-gpu-time": 19.7709274746042
+  },
+  {
+    "totalTokens": 0.032286,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-total-time": 18.35209621827021,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-cpu-time": 9.588999999999999,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-gpu-time": 8.76309621827021
+  },
+  {
+    "totalTokens": 0.032794,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-total-time": 37.32707715929519,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-cpu-time": 10.372,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-gpu-time": 26.955077159295193
+  },
+  {
+    "totalTokens": 0.033217,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-total-time": 18.170400976707548,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-cpu-time": 7.778000000000002,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-gpu-time": 10.392400976707544
+  },
+  {
+    "totalTokens": 0.034761,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-total-time": 20.893948250572393,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-cpu-time": 9.206,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-gpu-time": 11.687948250572392
+  },
+  {
+    "totalTokens": 0.035868,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-total-time": 19.388350475781632,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-cpu-time": 8.347999999999999,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-gpu-time": 11.040350475781633
+  },
+  {
+    "totalTokens": 0.040823,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-total-time": 21.103772100808683,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-cpu-time": 10.041999999999998,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-gpu-time": 11.061772100808687
+  },
+  {
+    "totalTokens": 0.043105,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-total-time": 19.13676760030462,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-cpu-time": 10.492,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-gpu-time": 8.644767600304618
+  },
+  {
+    "totalTokens": 0.048208,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-total-time": 57.72420240934148,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-cpu-time": 40.139,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-gpu-time": 17.585202409341477
+  },
+  {
+    "totalTokens": 0.053017,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-total-time": 22.14423834301723,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-cpu-time": 7.808,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-gpu-time": 14.336238343017229
+  },
+  {
+    "totalTokens": 0.061373,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-total-time": 24.676716831432362,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-cpu-time": 10.078999999999997,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-gpu-time": 14.597716831432365
+  },
+  {
+    "totalTokens": 0.061437,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-total-time": 22.31553195444902,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-cpu-time": 11.919,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-gpu-time": 10.396531954449019
+  },
+  {
+    "totalTokens": 0.077958,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-total-time": 27.359542754799442,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-cpu-time": 9.480000000000004,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-gpu-time": 17.879542754799438
+  },
+  {
+    "totalTokens": 0.080353,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-total-time": 22.83966183455058,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-cpu-time": 8.546999999999997,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-gpu-time": 14.292661834550582
+  },
+  {
+    "totalTokens": 0.082448,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-total-time": 22.986380899103395,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-cpu-time": 9.959,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-gpu-time": 13.027380899103397
+  },
+  {
+    "totalTokens": 0.085893,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-total-time": 38.3514984241214,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-cpu-time": 14.170000000000002,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-gpu-time": 24.1814984241214
+  },
+  {
+    "totalTokens": 0.090051,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-total-time": 22.42938005229169,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-cpu-time": 11.662000000000003,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-gpu-time": 10.767380052291688
+  },
+  {
+    "totalTokens": 0.098946,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-total-time": 24.703069636576288,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-cpu-time": 10.622,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-gpu-time": 14.081069636576288
+  },
+  {
+    "totalTokens": 0.150767,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-total-time": 30.361236919196173,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-cpu-time": 12.380000000000003,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-gpu-time": 17.98123691919617
+  },
+  {
+    "totalTokens": 0.16286,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-total-time": 49.644484170312005,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-cpu-time": 17.116,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-gpu-time": 32.528484170312005
+  },
+  {
+    "totalTokens": 0.177006,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-total-time": 60.55877428195418,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-cpu-time": 30.696000000000005,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-gpu-time": 29.862774281954174
+  },
+  {
+    "totalTokens": 0.206522,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-total-time": 32.762725671987084,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-cpu-time": 12.662999999999997,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-gpu-time": 20.099725671987088
+  },
+  {
+    "totalTokens": 0.294188,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-total-time": 77.33093159748637,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-cpu-time": 32.22200000000001,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-gpu-time": 45.10893159748636
+  },
+  {
+    "totalTokens": 1.026407,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-total-time": 154.05623546190856,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-cpu-time": 54.38300000000001,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-gpu-time": 99.67323546190856
+  },
+  {
+    "totalTokens": 1.037825,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-total-time": 121.32861727754947,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-cpu-time": 37.858999999999995,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-gpu-time": 83.46961727754947
+  },
+  {
+    "totalTokens": 1.038391,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-total-time": 203.48020068022933,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-cpu-time": 28.694999999999993,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-gpu-time": 174.78520068022934
+  },
+  {
+    "totalTokens": 1.039071,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-total-time": 88.33995078302162,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-cpu-time": 24.89200000000001,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-gpu-time": 63.44795078302161
+  },
+  {
+    "totalTokens": 1.050283,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-total-time": 94.02387089043033,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-cpu-time": 28.677999999999997,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-gpu-time": 65.34587089043033
+  },
+  {
+    "totalTokens": 1.063729,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-total-time": 128.9411577115159,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-cpu-time": 46.365999999999985,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-gpu-time": 82.57515771151591
+  },
+  {
+    "totalTokens": 1.079196,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-total-time": 146.54866836894587,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-cpu-time": 58.32500000000002,
+    "swe-agent/llama-3.3-70B-Instruct-FP8-gpu-time": 88.22366836894584
+  },
+  {
+    "totalTokens": 0.037437,
+    "swe-agent/qwen3-32B-total-time": 49.270486733580285,
+    "swe-agent/qwen3-32B-cpu-time": 7.960999999999956,
+    "swe-agent/qwen3-32B-gpu-time": 41.30948673358033
+  },
+  {
+    "totalTokens": 0.038194,
+    "swe-agent/qwen3-32B-total-time": 56.68054599703409,
+    "swe-agent/qwen3-32B-cpu-time": 6.686000000000007,
+    "swe-agent/qwen3-32B-gpu-time": 49.99454599703408
+  },
+  {
+    "totalTokens": 0.047391,
+    "swe-agent/qwen3-32B-total-time": 36.5683548235238,
+    "swe-agent/qwen3-32B-cpu-time": 7.411000000000001,
+    "swe-agent/qwen3-32B-gpu-time": 29.157354823523796
+  },
+  {
+    "totalTokens": 0.049273,
+    "swe-agent/qwen3-32B-total-time": 51.19458819934333,
+    "swe-agent/qwen3-32B-cpu-time": 10.140000000000015,
+    "swe-agent/qwen3-32B-gpu-time": 41.054588199343314
+  },
+  {
+    "totalTokens": 0.061504,
+    "swe-agent/qwen3-32B-total-time": 49.18636300628759,
+    "swe-agent/qwen3-32B-cpu-time": 7.685000000000002,
+    "swe-agent/qwen3-32B-gpu-time": 41.50136300628759
+  },
+  {
+    "totalTokens": 0.06709,
+    "swe-agent/qwen3-32B-total-time": 39.02342424283421,
+    "swe-agent/qwen3-32B-cpu-time": 8.020999999999987,
+    "swe-agent/qwen3-32B-gpu-time": 31.002424242834223
+  },
+  {
+    "totalTokens": 0.08352,
+    "swe-agent/qwen3-32B-total-time": 87.93173151759729,
+    "swe-agent/qwen3-32B-cpu-time": 11.394999999999982,
+    "swe-agent/qwen3-32B-gpu-time": 76.5367315175973
+  },
+  {
+    "totalTokens": 0.086245,
+    "swe-agent/qwen3-32B-total-time": 122.61696049518184,
+    "swe-agent/qwen3-32B-cpu-time": 11.033000000000015,
+    "swe-agent/qwen3-32B-gpu-time": 111.58396049518183
+  },
+  {
+    "totalTokens": 0.087792,
+    "swe-agent/qwen3-32B-total-time": 196.88152518102675,
+    "swe-agent/qwen3-32B-cpu-time": 13.829999999999927,
+    "swe-agent/qwen3-32B-gpu-time": 183.05152518102682
+  },
+  {
+    "totalTokens": 0.094114,
+    "swe-agent/qwen3-32B-total-time": 224.0540478973066,
+    "swe-agent/qwen3-32B-cpu-time": 12.974999999999909,
+    "swe-agent/qwen3-32B-gpu-time": 211.07904789730668
+  },
+  {
+    "totalTokens": 0.112689,
+    "swe-agent/qwen3-32B-total-time": 72.48752015653946,
+    "swe-agent/qwen3-32B-cpu-time": 12.081999999999994,
+    "swe-agent/qwen3-32B-gpu-time": 60.40552015653947
+  },
+  {
+    "totalTokens": 0.116191,
+    "swe-agent/qwen3-32B-total-time": 66.71923884832088,
+    "swe-agent/qwen3-32B-cpu-time": 11.312999999999988,
+    "swe-agent/qwen3-32B-gpu-time": 55.406238848320896
+  },
+  {
+    "totalTokens": 0.119121,
+    "swe-agent/qwen3-32B-total-time": 82.11635002516043,
+    "swe-agent/qwen3-32B-cpu-time": 11.559000000000026,
+    "swe-agent/qwen3-32B-gpu-time": 70.5573500251604
+  },
+  {
+    "totalTokens": 0.125604,
+    "swe-agent/qwen3-32B-total-time": 112.50145171014341,
+    "swe-agent/qwen3-32B-cpu-time": 74.78399999999996,
+    "swe-agent/qwen3-32B-gpu-time": 37.71745171014344
+  },
+  {
+    "totalTokens": 0.127295,
+    "swe-agent/qwen3-32B-total-time": 75.95714836872064,
+    "swe-agent/qwen3-32B-cpu-time": 9.345000000000027,
+    "swe-agent/qwen3-32B-gpu-time": 66.61214836872061
+  },
+  {
+    "totalTokens": 0.129686,
+    "swe-agent/qwen3-32B-total-time": 163.94621026432526,
+    "swe-agent/qwen3-32B-cpu-time": 12.244000000000028,
+    "swe-agent/qwen3-32B-gpu-time": 151.70221026432523
+  },
+  {
+    "totalTokens": 0.140149,
+    "swe-agent/qwen3-32B-total-time": 118.29916623793584,
+    "swe-agent/qwen3-32B-cpu-time": 26.675000000000068,
+    "swe-agent/qwen3-32B-gpu-time": 91.62416623793577
+  },
+  {
+    "totalTokens": 0.156005,
+    "swe-agent/qwen3-32B-total-time": 252.84235049983138,
+    "swe-agent/qwen3-32B-cpu-time": 16.374000000000024,
+    "swe-agent/qwen3-32B-gpu-time": 236.46835049983136
+  },
+  {
+    "totalTokens": 0.23096,
+    "swe-agent/qwen3-32B-total-time": 110.66726509995375,
+    "swe-agent/qwen3-32B-cpu-time": 12.2349999999999,
+    "swe-agent/qwen3-32B-gpu-time": 98.43226509995385
+  },
+  {
+    "totalTokens": 0.232473,
+    "swe-agent/qwen3-32B-total-time": 191.2972907106331,
+    "swe-agent/qwen3-32B-cpu-time": 13.305999999999813,
+    "swe-agent/qwen3-32B-gpu-time": 177.99129071063328
+  },
+  {
+    "totalTokens": 0.237913,
+    "swe-agent/qwen3-32B-total-time": 180.16470565362042,
+    "swe-agent/qwen3-32B-cpu-time": 14.932999999999993,
+    "swe-agent/qwen3-32B-gpu-time": 165.23170565362042
+  },
+  {
+    "totalTokens": 0.244809,
+    "swe-agent/qwen3-32B-total-time": 176.137834105187,
+    "swe-agent/qwen3-32B-cpu-time": 18.18999999999994,
+    "swe-agent/qwen3-32B-gpu-time": 157.94783410518707
+  },
+  {
+    "totalTokens": 0.246666,
+    "swe-agent/qwen3-32B-total-time": 268.74409152059604,
+    "swe-agent/qwen3-32B-cpu-time": 64.3789999999999,
+    "swe-agent/qwen3-32B-gpu-time": 204.36509152059614
+  },
+  {
+    "totalTokens": 0.265254,
+    "swe-agent/qwen3-32B-total-time": 116.7888495588813,
+    "swe-agent/qwen3-32B-cpu-time": 11.68500000000006,
+    "swe-agent/qwen3-32B-gpu-time": 105.10384955888124
+  },
+  {
+    "totalTokens": 0.276526,
+    "swe-agent/qwen3-32B-total-time": 179.06555483401135,
+    "swe-agent/qwen3-32B-cpu-time": 14.816000000000031,
+    "swe-agent/qwen3-32B-gpu-time": 164.24955483401132
+  },
+  {
+    "totalTokens": 0.296526,
+    "swe-agent/qwen3-32B-total-time": 177.0143162195228,
+    "swe-agent/qwen3-32B-cpu-time": 37.45500000000004,
+    "swe-agent/qwen3-32B-gpu-time": 139.55931621952277
+  },
+  {
+    "totalTokens": 0.316626,
+    "swe-agent/qwen3-32B-total-time": 97.0093706785039,
+    "swe-agent/qwen3-32B-cpu-time": 9.363999999999919,
+    "swe-agent/qwen3-32B-gpu-time": 87.64537067850398
+  },
+  {
+    "totalTokens": 0.323259,
+    "swe-agent/qwen3-32B-total-time": 346.60066334739975,
+    "swe-agent/qwen3-32B-cpu-time": 19.759000000000015,
+    "swe-agent/qwen3-32B-gpu-time": 326.84166334739973
+  },
+  {
+    "totalTokens": 0.335588,
+    "swe-agent/qwen3-32B-total-time": 197.3799712352058,
+    "swe-agent/qwen3-32B-cpu-time": 14.815000000000055,
+    "swe-agent/qwen3-32B-gpu-time": 182.56497123520575
+  },
+  {
+    "totalTokens": 0.352821,
+    "swe-agent/qwen3-32B-total-time": 215.70080430188597,
+    "swe-agent/qwen3-32B-cpu-time": 15.740000000000009,
+    "swe-agent/qwen3-32B-gpu-time": 199.96080430188596
+  },
+  {
+    "totalTokens": 0.365022,
+    "swe-agent/qwen3-32B-total-time": 249.6523546936297,
+    "swe-agent/qwen3-32B-cpu-time": 22.337999999999965,
+    "swe-agent/qwen3-32B-gpu-time": 227.31435469362972
+  },
+  {
+    "totalTokens": 0.378533,
+    "swe-agent/qwen3-32B-total-time": 429.34520707687204,
+    "swe-agent/qwen3-32B-cpu-time": 21.260999999999967,
+    "swe-agent/qwen3-32B-gpu-time": 408.0842070768721
+  },
+  {
+    "totalTokens": 0.396654,
+    "swe-agent/qwen3-32B-total-time": 185.34460404641993,
+    "swe-agent/qwen3-32B-cpu-time": 18.199999999999932,
+    "swe-agent/qwen3-32B-gpu-time": 167.14460404642
+  },
+  {
+    "totalTokens": 0.417008,
+    "swe-agent/qwen3-32B-total-time": 455.67353693648016,
+    "swe-agent/qwen3-32B-cpu-time": 22.878999999999905,
+    "swe-agent/qwen3-32B-gpu-time": 432.79453693648026
+  },
+  {
+    "totalTokens": 0.452134,
+    "swe-agent/qwen3-32B-total-time": 237.32801666447995,
+    "swe-agent/qwen3-32B-cpu-time": 20.244000000000028,
+    "swe-agent/qwen3-32B-gpu-time": 217.08401666447992
+  },
+  {
+    "totalTokens": 0.496323,
+    "swe-agent/qwen3-32B-total-time": 593.5241781437097,
+    "swe-agent/qwen3-32B-cpu-time": 18.58199999999988,
+    "swe-agent/qwen3-32B-gpu-time": 574.9421781437098
+  },
+  {
+    "totalTokens": 0.553519,
+    "swe-agent/qwen3-32B-total-time": 405.0763939502243,
+    "swe-agent/qwen3-32B-cpu-time": 22.679000000000087,
+    "swe-agent/qwen3-32B-gpu-time": 382.3973939502242
+  },
+  {
+    "totalTokens": 0.561446,
+    "swe-agent/qwen3-32B-total-time": 382.79442906436026,
+    "swe-agent/qwen3-32B-cpu-time": 22.848000000000184,
+    "swe-agent/qwen3-32B-gpu-time": 359.9464290643601
+  },
+  {
+    "totalTokens": 0.585976,
+    "swe-agent/qwen3-32B-total-time": 427.15018589607996,
+    "swe-agent/qwen3-32B-cpu-time": 20.99900000000025,
+    "swe-agent/qwen3-32B-gpu-time": 406.1511858960797
+  },
+  {
+    "totalTokens": 0.598646,
+    "swe-agent/qwen3-32B-total-time": 296.59833769850303,
+    "swe-agent/qwen3-32B-cpu-time": 20.363000000000056,
+    "swe-agent/qwen3-32B-gpu-time": 276.235337698503
+  },
+  {
+    "totalTokens": 0.665969,
+    "swe-agent/qwen3-32B-total-time": 327.25097669274015,
+    "swe-agent/qwen3-32B-cpu-time": 20.03099999999995,
+    "swe-agent/qwen3-32B-gpu-time": 307.2199766927402
+  },
+  {
+    "totalTokens": 0.675369,
+    "swe-agent/qwen3-32B-total-time": 247.43019243054644,
+    "swe-agent/qwen3-32B-cpu-time": 18.17899999999986,
+    "swe-agent/qwen3-32B-gpu-time": 229.25119243054658
+  },
+  {
+    "totalTokens": 0.676503,
+    "swe-agent/qwen3-32B-total-time": 440.3857297753853,
+    "swe-agent/qwen3-32B-cpu-time": 87.72800000000007,
+    "swe-agent/qwen3-32B-gpu-time": 352.65772977538523
+  },
+  {
+    "totalTokens": 0.8826,
+    "swe-agent/qwen3-32B-total-time": 428.9962126463462,
+    "swe-agent/qwen3-32B-cpu-time": 23.783000000000357,
+    "swe-agent/qwen3-32B-gpu-time": 405.2132126463458
+  },
+  {
+    "totalTokens": 1.003068,
+    "swe-agent/qwen3-32B-total-time": 524.7963979690877,
+    "swe-agent/qwen3-32B-cpu-time": 26.132000000000062,
+    "swe-agent/qwen3-32B-gpu-time": 498.66439796908764
+  },
+  {
+    "totalTokens": 1.321673,
+    "swe-agent/qwen3-32B-total-time": 539.9846989655616,
+    "swe-agent/qwen3-32B-cpu-time": 35.89200000000028,
+    "swe-agent/qwen3-32B-gpu-time": 504.0926989655613
+  },
+  {
+    "totalTokens": 1.438713,
+    "swe-agent/qwen3-32B-total-time": 344.13077341269457,
+    "swe-agent/qwen3-32B-cpu-time": 57.17800000000011,
+    "swe-agent/qwen3-32B-gpu-time": 286.95277341269446
+  },
+  {
+    "totalTokens": 1.549243,
+    "swe-agent/qwen3-32B-total-time": 458.8258698023351,
+    "swe-agent/qwen3-32B-cpu-time": 39.521000000000186,
+    "swe-agent/qwen3-32B-gpu-time": 419.3048698023349
+  },
+  {
+    "totalTokens": 1.777092,
+    "swe-agent/qwen3-32B-total-time": 768.6083176404888,
+    "swe-agent/qwen3-32B-cpu-time": 44.19499999999971,
+    "swe-agent/qwen3-32B-gpu-time": 724.4133176404891
+  },
+  {
+    "totalTokens": 2.174981,
+    "swe-agent/qwen3-32B-total-time": 523.0062654121793,
+    "swe-agent/qwen3-32B-cpu-time": 39.753000000000156,
+    "swe-agent/qwen3-32B-gpu-time": 483.25326541217925
+  }
+]

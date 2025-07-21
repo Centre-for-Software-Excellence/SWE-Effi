@@ -21,4 +21,5 @@ export type ChartRendererProps = Partial<ChartProps> & {
   isExpanded?: boolean;
   domain?: [number, number];
   activeKeys?: string[];
+  scale?: 'linear' | 'log';
 };

@@ -6,6 +6,7 @@ import { ChartConfig } from '@/components/common/ui/chart';
 import { ChartData as CallsEntry } from '@/components/docs/leaderboard/chart/calls-bar-chart';
 import { ChartData as CostEntry } from '@/components/docs/leaderboard/chart/cost-bar-chart';
 import { ChartData as MetricEntry } from '@/components/docs/leaderboard/chart/metrics-radar-chart';
+import { ChartData as NormalizedTimeEntry } from '@/components/docs/leaderboard/chart/normalized-time-line-chart';
 import { ChartData as ResolveRateEntry } from '@/components/docs/leaderboard/chart/resolve-rate-line-chart';
 import { ChartData as TimePercentageEntry } from '@/components/docs/leaderboard/chart/time-percentage-bar-chart';
 import { LeaderboardData } from '@/components/docs/leaderboard/table/columns';
@@ -96,7 +97,8 @@ export type ChartName =
   | 'calls-bar'
   | 'time-percentage-bar'
   | 'cost-bar'
-  | 'metrics-radar';
+  | 'metrics-radar'
+  | 'normalized-time-line';
 
 // color generator helper
 
@@ -104,6 +106,88 @@ export type ChartName =
 function writeJSON(filePath: string, data: unknown) {
   fs.mkdirSync(path.dirname(filePath), { recursive: true });
   fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+}
+export function buildNormalizedTimeChart(opts?: {
+  rawDir?: string;
+  outDir?: string;
+}) {
+  const nextColor = createColorGenerator(tokens.d3);
+  const rawDir =
+    opts?.rawDir ?? path.join(__dirname, '../../../public/data/benchmark/raw');
+  const outDir =
+    opts?.outDir ??
+    path.join(__dirname, '../../../public/data/benchmark/chart');
+
+  const timeCfg: ChartConfig = {};
+  const timeData: NormalizedTimeEntry[] = [];
+
+  const jsonFiles = fs.readdirSync(rawDir).filter((f) => f.endsWith('.json'));
+
+  for (const file of jsonFiles) {
+    const filePath = path.join(rawDir, file);
+
+    let records: InputData[];
+    try {
+      records = Object.values(JSON.parse(fs.readFileSync(filePath, 'utf8')));
+    } catch (e) {
+      console.error(`Could not parse ${file}:`, e);
+      continue;
+    }
+
+    const [scaffold, model] = path.basename(file, '.json').split('_');
+    const seriesName = `${scaffold}/${model}`;
+
+    // normalize time data
+    records
+      .map((r) => ({
+        totalTokens: r.input_tokens || 0 + (r.output_tokens || 0),
+        duration: r.duration || 0,
+        cpu_time: r.cpu_time || 0,
+        gpu_time: r.gpu_time || 0,
+      }))
+      .sort((a, b) => a.totalTokens - b.totalTokens)
+      .forEach(({ totalTokens, duration, cpu_time, gpu_time }) => {
+        timeData.push({
+          totalTokens: totalTokens / 1e6,
+          [seriesName + '-total-time']: duration,
+          [seriesName + '-cpu-time']: cpu_time,
+          [seriesName + '-gpu-time']: gpu_time,
+        });
+      });
+
+    if (!timeCfg[seriesName]) {
+      const currentColor = nextColor();
+      timeCfg[seriesName + '-total-time'] = {
+        label: seriesName + '-total-time',
+        color: currentColor,
+      };
+      timeCfg[seriesName + '-cpu-time'] = {
+        label: seriesName + '-cpu-time',
+        color: currentColor,
+      };
+      timeCfg[seriesName + '-gpu-time'] = {
+        label: seriesName + '-gpu-time',
+        color: currentColor,
+      };
+    }
+  }
+
+  if (DRYRUN) {
+    console.log(`Dry run: would write ${timeData.length} time entries`);
+    writeJSON(
+      path.join(outDir, 'tmp/normalized-time/chart-data.json'),
+      timeData,
+    );
+    writeJSON(
+      path.join(outDir, 'tmp/normalized-time/chart-config.json'),
+      timeCfg,
+    );
+  } else {
+    console.log(`Writing ${timeData.length} time entries`);
+    const ntDirName: ChartName = 'normalized-time-line';
+    writeJSON(path.join(outDir, `${ntDirName}/chart-data.json`), timeData);
+    writeJSON(path.join(outDir, `${ntDirName}/chart-config.json`), timeCfg);
+  }
 }
 
 export function buildResolveRateLineChart(opts?: {
@@ -524,6 +608,7 @@ export function buildLeaderboardTables(opts?: {
 
 if (import.meta.url === `file://${process.argv[1]}`) {
   console.log('Generating data for charts and leaderboard...');
+  buildNormalizedTimeChart();
   buildResolveRateLineChart();
   buildCallsBarChart();
   buildSummaryCharts();

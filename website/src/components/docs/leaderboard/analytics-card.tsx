@@ -6,16 +6,20 @@ import { getLeaderboardUIConfig } from '@/config/ui/leaderboard';
 import { CallsBarChart } from './chart/calls-bar-chart';
 import { CostBarChart } from './chart/cost-bar-chart';
 import { MetricsRadarChart } from './chart/metrics-radar-chart';
+import { NormalizedTimeLineChart } from './chart/normalized-time-line-chart';
 import { ResolveRateLineChart } from './chart/resolve-rate-line-chart';
 import { TimePercentageBarChart } from './chart/time-percentage-bar-chart';
 
 export default function AnalyticsCard() {
   const ui = getLeaderboardUIConfig().analytics;
-  const resolveRateChartUI = ui.resolveRateLineChart;
-  const callsBarChartUI = ui.numCallsBarChart;
-  const timePercentageBarChartUI = ui.timePercentageBarChart;
-  const costBarChartUI = ui.costBarChart;
-  const metricRadarChartUI = ui.metricsRadarChart;
+  const {
+    resolveRateLineChart,
+    normalizedTimeLineChart,
+    numCallsBarChart,
+    timePercentageBarChart,
+    costBarChart,
+    metricsRadarChart,
+  } = ui;
   return (
     <section className="flex flex-col space-y-4">
       {ui.title && (
@@ -33,19 +37,22 @@ export default function AnalyticsCard() {
         </Lead>
       )}
       <Suspense fallback={<div className="h-96 w-full" />}>
-        <MetricsRadarChart {...metricRadarChartUI} />
+        <MetricsRadarChart {...metricsRadarChart} />
       </Suspense>
       <Suspense fallback={<div className="h-96 w-full" />}>
-        <ResolveRateLineChart {...resolveRateChartUI} />
+        <ResolveRateLineChart {...resolveRateLineChart} />
       </Suspense>
       <Suspense fallback={<div className="h-96 w-full" />}>
-        <CallsBarChart {...callsBarChartUI} />
+        <NormalizedTimeLineChart {...normalizedTimeLineChart} />
       </Suspense>
       <Suspense fallback={<div className="h-96 w-full" />}>
-        <TimePercentageBarChart {...timePercentageBarChartUI} />
+        <CallsBarChart {...numCallsBarChart} />
       </Suspense>
       <Suspense fallback={<div className="h-96 w-full" />}>
-        <CostBarChart {...costBarChartUI} />
+        <TimePercentageBarChart {...timePercentageBarChart} />
+      </Suspense>
+      <Suspense fallback={<div className="h-96 w-full" />}>
+        <CostBarChart {...costBarChart} />
       </Suspense>
     </section>
   );

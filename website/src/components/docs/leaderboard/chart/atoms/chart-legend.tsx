@@ -114,9 +114,9 @@ export function HoverableLegend({
         <div className="hidden flex-col gap-2 group-hover:flex">
           {keys.map((k) => (
             <LegendItem
-              key={config[k].label as string}
-              color={config[k].color as string}
-              label={config[k].label as string}
+              key={k}
+              color={config[k]?.color as string}
+              label={config[k]?.label as string}
             />
           ))}
         </div>

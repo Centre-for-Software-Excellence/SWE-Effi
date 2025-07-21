@@ -101,7 +101,7 @@ export function CallsBarChart({
           <ChartHeader title={title} description={description}>
             <TooltipProvider>
               <ChartControls
-                explanation={explanation}
+                // explanation={explanation}
                 expandButton={{ isExpanded, onToggle: toggleExpanded }}
                 settingsButton={settingsButton}
               />
