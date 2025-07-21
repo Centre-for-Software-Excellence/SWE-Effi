@@ -34,7 +34,7 @@ export function rankLeaderboardData(
   };
 
   data.sort((a, b) => {
-    return comparator(a, b, ['resolveRate']);
+    return comparator(a, b, ['tokenEfficiency']);
   });
 
   return data.map((e, index) => ({

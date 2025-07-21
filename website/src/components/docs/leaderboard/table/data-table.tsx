@@ -40,10 +40,14 @@ interface DataTableProps<TData, TValue> {
 export function DataTable<TData, TValue>({
   columns,
   data,
-}: DataTableProps<TData, TValue>) {
+  filter = ['Base Model'],
+}: DataTableProps<TData, TValue> & {
+  filter?: string[];
+}) {
   const [sorting, setSorting] = useState<SortingState>([]);
   const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
   const [columnVisibility, setColumnVisibility] = useState<VisibilityState>({});
+  const [globalFilter, setGlobalFilter] = useState<string>('');
 
   const table = useReactTable({
     data,
@@ -55,6 +59,30 @@ export function DataTable<TData, TValue>({
     onColumnFiltersChange: setColumnFilters,
     getFilteredRowModel: getFilteredRowModel(),
     onColumnVisibilityChange: setColumnVisibility,
+    onGlobalFilterChange: setGlobalFilter,
+    // Custom global filter function to filter specific columns
+    globalFilterFn: (row, _columnId, filterValue) => {
+      const searchColumns = filter.length > 0 ? filter : ['Base Model'];
+
+      if (!filterValue) return true;
+      const searchValue = filterValue.toLowerCase();
+
+      // Debug: log the values
+      console.log('Searching in columns:', searchColumns);
+      searchColumns.forEach((col) => {
+        console.log(`${col}:`, row.getValue(col));
+      });
+
+      return searchColumns.some((searchColumnId) => {
+        const cellValue = row.getValue(searchColumnId);
+        if (cellValue == null) return false;
+        const matches = String(cellValue).toLowerCase().includes(searchValue);
+        console.log(
+          `${searchColumnId}: "${cellValue}" includes "${searchValue}"? ${matches}`,
+        );
+        return matches;
+      });
+    },
     // initialState: {
     //   pagination: {
     //     pageSize: 10,
@@ -64,6 +92,7 @@ export function DataTable<TData, TValue>({
       sorting,
       columnFilters,
       columnVisibility,
+      globalFilter,
     },
   });
 
@@ -71,11 +100,9 @@ export function DataTable<TData, TValue>({
     <div className="relative overflow-x-auto">
       <div className="flex items-center justify-between pt-2">
         <Input
-          placeholder="Filter models..."
-          value={(table.getColumn('model')?.getFilterValue() as string) ?? ''}
-          onChange={(event) =>
-            table.getColumn('model')?.setFilterValue(event.target.value)
-          }
+          placeholder={`Filter ${filter.join(' or ')}...`}
+          value={globalFilter ?? ''}
+          onChange={(event) => setGlobalFilter(event.target.value)}
           className="max-w-sm focus:ring-0 focus-visible:ring-0 dark:focus:ring-0 dark:focus-visible:ring-0"
         />
         <div>

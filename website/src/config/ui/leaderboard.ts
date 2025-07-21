@@ -47,7 +47,7 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
   buttonLinks: [
     {
       title: 'About',
-      href: '/benchmark/agent-scaffold-blog',
+      href: '/about/introducing-swe-effi',
       icon: Newspaper,
     },
     {
@@ -58,7 +58,7 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
     },
     {
       title: 'Submit',
-      href: '/guide/update-site-data',
+      href: '/about/submit-your-entry',
       icon: ExternalLink,
     },
     {
@@ -73,14 +73,33 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
     leaderboard: {
       caption:
         'Table 1 -  An overall comparison of agent scaffolds and models across the token usage, duration, and LLM API call metrics',
-      tabTitle: 'Table 1',
+      tabTitle: 'Table 1: Efficiency Evaluation',
       tableTitle: 'Scaffold comparison on SWE-bench tasks',
       filterPlaceholder: 'Filter models...',
       // if the tooltips is "" or not defined, the tooltip will not be shown
+      columnHeaders: {
+        rank: 'Rank',
+        scaffold: 'Scaffold',
+        model: 'Base Model',
+        tokenEfficiency: 'Token Efficiency',
+        costEfficiency: 'Cost Efficiency',
+        gpuEfficiency: 'Inference Efficiency',
+        cpuEfficiency: 'CPU Efficiency',
+        resolveRate: 'Resolve Rate',
+        total: 'Total Time',
+        cpuTime: 'Mean CPU Time',
+        infTime: 'Mean Normalized Inference Time',
+        inputToken: 'Mean Input Tokens',
+        outputToken: 'Mean Output Tokens',
+        calls: 'Mean LLM Calls',
+        precision: 'Precision',
+      },
       columnTooltips: {
-        rank: 'Ranked by inference efficiency',
+        rank: '',
         scaffold: 'Name of the agent scaffold',
         model: 'LLM name',
+        resolveRate:
+          'Number of generated patches that correctly resolved the issue',
         total: 'Total mean duration including CPU time and NIM',
         cpuTime: "Duration of agent scaffold's local operations (seconds)",
         inputToken: 'Mean number of input tokens used for single issue',
@@ -88,20 +107,48 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
         calls: 'Number of inference calls to the LLM',
         infTime:
           'Normalized Inference Time (NIM): mean normalized LLM inference time per single issue',
-        resolveRate:
-          'Number of generated patches that correctly resolved the issue',
         precision: 'Precision of the generated patches',
       },
+      footerTitle: 'Ranked by highest token efficiency AUC',
+      footerDescription:
+        'Used a subset of 50 issues randomly drawn from the well-respected SWE-bench-Verified dataset. To ensure this subset was a fair representation of the whole, we used stratified sampling, preserving the original distribution of issues across different software projects.',
+      footers: [
+        "Inference Efficiency (AUC) - Measures the agent's LLM-related latency, standardized across different hardware backends",
+        "CPU Efficiency (AUC) - Measures the performance of the agent's local logic, independent of the LLM. This reveals the framework's own overhead.",
+        "Cost Efficiency (AUC) - Assesses the agent's real-world financial viability. While closely related to token usage, this metric translates tokens into a standardized dollar value, making the cost tangible and directly comparable to development budgets.",
+
+        'Token Efficiency (AUC) - Measures how effectively an agent uses LLM tokens. This reflects the core computational work required by the LLM, independent of fluctuating API prices.',
+      ],
     },
     leaderboardRVU: {
       caption:
         'Table 2 - Comparison of scaffold dynamics and performance between resolved and unresolved cases',
-      tabTitle: 'Table 2',
+      tabTitle: 'Table 2: Success vs. Failure Disparities',
       tableTitle: 'Token and time costs for resolved and unresolved instances',
       filterPlaceholder: 'Filter models...',
       // if the tooltips is "" or not defined, the tooltip will not be shown
+      columnHeaders: {
+        rank: 'Rank',
+        scaffold: 'Scaffold',
+        model: 'Base Model',
+        avgTotalTimeU: 'Mean Total Time (Unresolved)',
+        avgTotalTimeR: 'Mean Total Time (Resolved)',
+        avgCPUTimeU: 'Mean CPU Time (Unresolved)',
+        avgCPUTimeR: 'Mean CPU Time (Resolved)',
+        avgInfTimeU: 'Mean Normalized Inference Time (Unresolved)',
+        avgInfTimeR: 'Mean Normalized Inference Time (Resolved)',
+        avgTotalTokensU: 'Mean Total Tokens (Unresolved)',
+        avgTotalTokensR: 'Mean Total Tokens (Resolved)',
+        avgLLMRequestsU: 'Mean LLM Requests (Unresolved)',
+        avgLLMRequestsR: 'Mean LLM Requests (Resolved)',
+        avgTotalTime: 'Mean Total Time',
+        avgCPUTime: 'Mean CPU Time',
+        avgInfTime: 'Mean Normalized Inference Time',
+        avgTotalTokens: 'Mean Total Tokens',
+        avgLLMRequests: 'Mean LLM Requests',
+      },
       columnTooltips: {
-        rank: 'Ranked by total time resolved',
+        rank: '',
         scaffold: 'Name of the agent scaffold',
         model: 'LLM name',
         avgTotalTime: 'Mean total duration per instance',
@@ -110,6 +157,7 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
         avgTotalTokens: 'Mean number of total tokens used per instance',
         avgLLMRequests: 'Mean number of LLM API calls per instance',
       },
+      footerTitle: 'Ranked by lowest total time resolved',
     },
   },
   analytics: {

@@ -9,6 +9,7 @@ import {
   TabsTrigger,
 } from '@/components/common/ui/tabs';
 import { H6 } from '@/components/md';
+import { Note } from '@/components/md/alerts';
 import { cn } from '@/lib/utils';
 import { getBasePath } from '@/lib/utils/path';
 import { columns, RankedLeaderboardData } from './table/columns';
@@ -19,7 +20,7 @@ import {
 } from './table/columns-rvu';
 import { DataTable } from './table/data-table';
 
-export type ColumnTooltips = Partial<
+export type ColumnConfig = Partial<
   Record<
     | (keyof RankedLeaderboardRVUData | keyof LeaderboardRVUTooltips)
     | keyof RankedLeaderboardData,
@@ -31,7 +32,11 @@ export type Table = {
   tabTitle: string;
   tableTitle: string;
   filterPlaceholder?: string;
-  columnTooltips: ColumnTooltips;
+  columnTooltips: ColumnConfig;
+  columnHeaders?: ColumnConfig;
+  footerTitle?: string;
+  footerDescription?: string;
+  footers?: string[];
 };
 
 export type Tables = Record<string, Table>;
@@ -122,28 +127,58 @@ export default function TablesCard({
             <TabsContent value="Leaderboard">
               <H6 className="mb-0!">{leaderboard.tableTitle}</H6>
               <DataTable
-                columns={columns(leaderboard.columnTooltips)}
                 data={data}
+                columns={columns({
+                  tooltips: leaderboard.columnTooltips,
+                  headers: leaderboard.columnHeaders,
+                })}
+                filter={['Base Model', 'Scaffold']}
               />
               {caption && (
                 <h6 className="w-full text-center text-muted-foreground">
                   {leaderboard.caption}
                 </h6>
               )}
+              <Note title="Note" className="mt-8">
+                <h5 className="mb-2 text-base">{leaderboard.footerTitle}</h5>
+                <p className="mb-2 pl-4 text-sm opacity-85">
+                  {leaderboard.footerDescription}
+                </p>
+                <ul className="flex list-disc flex-col gap-2 pl-2">
+                  {leaderboard.footers?.map((footer, index) => (
+                    <li key={index}>{footer}</li>
+                  ))}
+                </ul>
+              </Note>
             </TabsContent>
           )}
           {show[1] && (
             <TabsContent value="Leaderboard RVU">
               <H6 className="mb-0!">{leaderboardRVU.tableTitle}</H6>
               <DataTable
-                columns={columnsRVU(leaderboardRVU.columnTooltips)}
+                columns={columnsRVU({
+                  tooltips: leaderboardRVU.columnTooltips,
+                  headers: leaderboardRVU.columnHeaders,
+                })}
                 data={dataRVU}
+                filter={['Base Model', 'Scaffold']}
               />
               {caption && (
                 <h6 className="w-full text-center text-muted-foreground">
                   {leaderboardRVU.caption}
                 </h6>
               )}
+              <Note title="Note" className="mt-8">
+                <h5 className="mb-2 text-base">{leaderboardRVU.footerTitle}</h5>
+                <p className="mb-2 pl-4 text-sm opacity-85">
+                  {leaderboardRVU.footerDescription}
+                </p>
+                <ul className="flex list-disc flex-col gap-2 pl-2">
+                  {leaderboardRVU.footers?.map((footer, index) => (
+                    <li key={index}>{footer}</li>
+                  ))}
+                </ul>
+              </Note>
             </TabsContent>
           )}
         </Tabs>

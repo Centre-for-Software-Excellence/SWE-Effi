@@ -68,7 +68,7 @@ function Alert({
   return (
     <div
       className={cn(
-        'my-4 rounded-lg border px-4 pt-2',
+        'my-4 rounded-lg border px-4 py-2',
         config.className,
         className,
       )}
