@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { TooltipProvider } from '@radix-ui/react-tooltip';
+import { Link } from 'react-router';
 
 import { Card, CardContent } from '@/components/common/ui/card';
 import {
@@ -148,6 +149,12 @@ export default function TablesCard({
                   {leaderboard.footers?.map((footer, index) => (
                     <li key={index}>{footer}</li>
                   ))}
+                  <Link
+                    to="/about/introducing-swe-effi#experimental-settings"
+                    className="text-sm text-muted-foreground underline transition-all duration-300 hover:text-foreground"
+                  >
+                    How we calculated the metrics ?
+                  </Link>
                 </ul>
               </Note>
             </TabsContent>

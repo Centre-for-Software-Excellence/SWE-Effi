@@ -43,6 +43,29 @@ export default function DocsPage() {
     loadDoc();
   }, [location.pathname]);
 
+  // Handle hash fragment scrolling
+  useEffect(() => {
+    if (!loading && location.hash) {
+      const scrollToElement = () => {
+        const element = document.querySelector(location.hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+          return true;
+        }
+        return false;
+      };
+
+      // Try immediately
+      if (!scrollToElement()) {
+        // If not found, retry after a short delay
+        const timer = setTimeout(() => {
+          scrollToElement();
+        }, 100);
+        return () => clearTimeout(timer);
+      }
+    }
+  }, [location.hash, loading]);
+
   return (
     <Layout isArticle={isArticle} loading={loading}>
       {/* Main Content */}

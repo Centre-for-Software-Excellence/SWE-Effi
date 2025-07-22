@@ -53,7 +53,7 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
     },
     {
       title: 'Github',
-      href: 'https://github.com/Center-for-Software-Excellence/SWE-Lens',
+      href: 'https://github.com/Center-for-Software-Excellence/SWE-Effi',
       external: true,
       icon: Github,
     },
@@ -182,7 +182,7 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
       description: '',
       overview: '',
       insight: '',
-      xAxisLabel: 'Normalized Time',
+      xAxisLabel: 'Normalized Time (seconds)',
       yAxisLabel: 'Resolve Rate',
       xAxisDataKey: 'duration',
     },
@@ -202,7 +202,7 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
       description: '(on average)',
       overview: 'Overview of the time percentage bar chart...',
       insight: 'Insight about the time percentage bar chart...',
-      xAxisLabel: 'Percentage of Total Runtime (Model Time %)',
+      xAxisLabel: 'Percentage of Total Runtime (%)',
       yAxisLabel: '',
       // ignore this
       yAxisDataKey: 'scaffold-model',

@@ -11,7 +11,7 @@ import {
 import { H4, Muted } from '../../md';
 
 export default function CitationCard() {
-  const bibtexCitation = `@misc{xxxx2025, 
+  const bibtexCitation = `@misc{swe_effi_2025, 
     title={SWE-Effi: Re-Evaluating SWE Agent Solutions for their Efficiency},
     author={SWE-Effi Team}, 
     year={2025},
