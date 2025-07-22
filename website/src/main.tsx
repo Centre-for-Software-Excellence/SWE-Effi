@@ -27,4 +27,4 @@ createRoot(document.getElementById('root')!).render(
   </StrictMode>,
 );
 
-router.navigate(window.location.href.split('?')[1]?.split('=')[1]);
+router.navigate(window.location.href.split('?currentRoute=')[1]);

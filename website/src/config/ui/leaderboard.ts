@@ -179,7 +179,8 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
     },
     normalizedTimeLineChart: {
       title: 'Resolve rate vs. Normalized Time',
-      description: '',
+      description:
+        'Issue resolve rate across the normalized time taken to resolve the issue.',
       overview: '',
       insight: '',
       xAxisLabel: 'Normalized Time (seconds)',
