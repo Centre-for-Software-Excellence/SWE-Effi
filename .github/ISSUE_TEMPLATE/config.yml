@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Submission Guide
+    url: https://center-for-software-excellence.github.io/SWE-Effi/about/submit-your-entry
+    about: Complete guide for submitting benchmark results
+  - name: Submit via Pull Request
+    url: https://github.com/Center-for-Software-Excellence/SWE-Effi/compare
+    about: For technical users - submit results via PR (preferred method)
+  - name: SWE-Effi Platform
+    url: https://center-for-software-excellence.github.io/SWE-Effi
+    about: View current benchmark results and leaderboard

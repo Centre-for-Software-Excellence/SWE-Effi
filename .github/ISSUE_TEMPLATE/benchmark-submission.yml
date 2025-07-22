@@ -1,0 +1,126 @@
+name: 🎯 Benchmark Results Submission
+description: Submit your scaffold benchmark results to the SWE-Effi platform
+title: '[SUBMISSION] Add benchmark results: [scaffold-name] + [model-name]'
+labels: ['benchmark-submission', 'needs-review']
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for submitting your benchmark results to SWE-Effi! 
+
+        This form will help us integrate your results into the platform. For technical users comfortable with Git, you can also submit via [Pull Request](../../../compare) following our [submission guide](../../docs/about/submit-your-entry).
+
+  - type: input
+    id: scaffold-name
+    attributes:
+      label: Scaffold Name
+      description: Name of your AI scaffold/tool (e.g., "my-awesome-agent", "code-generator-v2")
+      placeholder: my-scaffold-name
+    validations:
+      required: true
+
+  - type: input
+    id: model-name
+    attributes:
+      label: Model Name
+      description: Language model used (e.g., "GPT-4o-mini-2024-07-18", "llama-3.3-70B-Instruct-FP8", "qwen3-32B")
+      placeholder: qwen3-32B
+    validations:
+      required: true
+
+  - type: input
+    id: total-projects
+    attributes:
+      label: Total Test Instances
+      description: How many test instances were evaluated?
+      placeholder: '50'
+    validations:
+      required: true
+
+  - type: textarea
+    id: combined-stats-json
+    attributes:
+      label: combined_stats.json Content
+      description: |
+        Paste the complete contents of your combined_stats.json file here.
+        This should contain individual results for each test instance.
+      placeholder: |
+        {
+          "astropy__astropy-14369": {
+            "input_tokens": 40988,
+            "output_tokens": 63645,
+            "cpu_time": 740.46,
+            "gpu_time": 321.35,
+            "resolved": false,
+            "duration": 1061.81,
+            "llm_calls": 85,
+            "measured_gpu_time": 13634.84,
+            "measured_duration": 14375.31
+          },
+          ...
+        }
+      render: json
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary-stats-json
+    attributes:
+      label: summary_stats.json Content
+      description: |
+        Paste the complete contents of your summary_stats.json file here.
+        This should contain aggregate statistics and metrics.
+      placeholder: |
+        {
+          "total_projects": 50,
+          "resolved": 24,
+          "avg_resolved": 0.48,
+          "total_tokens": 3367323.0,
+          "avg_total_tokens": 67346.46,
+          "precision": 0.4897959183673469,
+          ...
+        }
+      render: json
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-notes
+    attributes:
+      label: Additional Notes
+      description: Any other information, special considerations, or context you'd like to share
+      placeholder: |
+        Example:
+        - Used custom fine-tuned model
+        - Results may vary due to API changes
+
+  - type: checkboxes
+    id: submission-checklist
+    attributes:
+      label: Submission Checklist
+      description: Please confirm the following before submitting
+      options:
+        - label: My results are from a complete benchmark evaluation
+          required: true
+        - label: The JSON data follows the required format structure
+          required: true
+        - label: I have permission to share these results publicly
+          required: true
+        - label: The scaffold and model names are descriptive and appropriate
+          required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+
+        **What happens next?**
+        1. Our team will review your submission for completeness and format compliance
+        2. We'll validate your JSON data and test the integration
+        3. If everything looks good, we'll add your results to the platform
+
+        **Questions?** Feel free to comment on this issue or check our [submission guide](https://center-for-software-excellence.github.io/SWE-Effi/about/submit-your-entry) for more details.
+
+        Thank you for contributing to the SWE-Effi platform!
