@@ -232,7 +232,9 @@ export function ChartSettings({
                 step={log ? 1 : step}
               />
               <div className="mt-2 flex justify-between text-xs">
-                <span>{log ? formatValue(domain[0]) : domain[0]}</span>
+                <span>
+                  {log ? formatValue(domain[0]) : domain[0].toPrecision(4)}
+                </span>
                 <span>
                   {log ? formatValue(domain[1]) : domain[1].toPrecision(4)}
                 </span>

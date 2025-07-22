@@ -178,14 +178,13 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
       xAxisDataKey: 'totalTokens',
     },
     normalizedTimeLineChart: {
-      title: 'Mean Normalized Time vs. Total Tokens Used',
-      description:
-        'How long did it take across the number of total tokens used per issue (in millions of tokens).',
-      overview: 'Overview of the normalized time line chart...',
-      insight: 'Insight about the normalized time line chart...',
-      xAxisLabel: 'Total Tokens (input tokens + output tokens) (Millions)',
-      yAxisLabel: 'Mean Normalized Time (seconds)',
-      xAxisDataKey: 'totalTokens',
+      title: 'Resolve rate vs. Normalized Time',
+      description: '',
+      overview: '',
+      insight: '',
+      xAxisLabel: 'Normalized Time',
+      yAxisLabel: 'Resolve Rate',
+      xAxisDataKey: 'duration',
     },
     numCallsBarChart: {
       title: 'Mean Num. of LLM calls per instance',

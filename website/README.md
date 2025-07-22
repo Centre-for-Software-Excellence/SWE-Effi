@@ -5,7 +5,3 @@
 - run `npm run prepare` to prepare for the chart data, table data, and search index
 - run `npm run dev` to start the development server
 - open your browser and go to `http://localhost:5173` to view the website
-
-## If modified/added docs
-
-- run `npm run build-index` to enable the doc search feature

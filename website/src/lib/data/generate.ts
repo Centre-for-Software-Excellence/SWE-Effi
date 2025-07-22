@@ -138,36 +138,25 @@ export function buildNormalizedTimeChart(opts?: {
     const seriesName = `${scaffold}/${model}`;
 
     // normalize time data
+    let resolvedSoFar = 0;
     records
       .map((r) => ({
-        totalTokens: r.input_tokens || 0 + (r.output_tokens || 0),
+        resolved: r.resolved,
         duration: r.duration || 0,
-        cpu_time: r.cpu_time || 0,
-        gpu_time: r.gpu_time || 0,
       }))
-      .sort((a, b) => a.totalTokens - b.totalTokens)
-      .forEach(({ totalTokens, duration, cpu_time, gpu_time }) => {
+      .sort((a, b) => a.duration - b.duration)
+      .forEach(({ duration, resolved }) => {
+        if (resolved) resolvedSoFar++;
         timeData.push({
-          totalTokens: totalTokens / 1e6,
-          [seriesName + '-total-time']: duration,
-          [seriesName + '-cpu-time']: cpu_time,
-          [seriesName + '-gpu-time']: gpu_time,
+          duration: duration,
+          [seriesName]: resolvedSoFar / records.length,
         });
       });
 
     if (!timeCfg[seriesName]) {
-      const currentColor = nextColor();
-      timeCfg[seriesName + '-total-time'] = {
-        label: seriesName + '-total-time',
-        color: currentColor,
-      };
-      timeCfg[seriesName + '-cpu-time'] = {
-        label: seriesName + '-cpu-time',
-        color: currentColor,
-      };
-      timeCfg[seriesName + '-gpu-time'] = {
-        label: seriesName + '-gpu-time',
-        color: currentColor,
+      timeCfg[seriesName] = {
+        label: seriesName,
+        color: nextColor(),
       };
     }
   }

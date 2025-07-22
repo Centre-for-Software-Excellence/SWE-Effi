@@ -1,182 +1,62 @@
 {
-  "agentless-mini/GPT-4o-mini-2024-07-18-total-time": {
-    "label": "agentless-mini/GPT-4o-mini-2024-07-18-total-time",
+  "agentless-mini/GPT-4o-mini-2024-07-18": {
+    "label": "agentless-mini/GPT-4o-mini-2024-07-18",
     "color": "#1f77b4"
   },
-  "agentless-mini/GPT-4o-mini-2024-07-18-cpu-time": {
-    "label": "agentless-mini/GPT-4o-mini-2024-07-18-cpu-time",
-    "color": "#1f77b4"
-  },
-  "agentless-mini/GPT-4o-mini-2024-07-18-gpu-time": {
-    "label": "agentless-mini/GPT-4o-mini-2024-07-18-gpu-time",
-    "color": "#1f77b4"
-  },
-  "agentless-mini/llama-3.3-70B-Instruct-FP8-total-time": {
-    "label": "agentless-mini/llama-3.3-70B-Instruct-FP8-total-time",
+  "agentless-mini/llama-3.3-70B-Instruct-FP8": {
+    "label": "agentless-mini/llama-3.3-70B-Instruct-FP8",
     "color": "#ff7f0e"
   },
-  "agentless-mini/llama-3.3-70B-Instruct-FP8-cpu-time": {
-    "label": "agentless-mini/llama-3.3-70B-Instruct-FP8-cpu-time",
-    "color": "#ff7f0e"
-  },
-  "agentless-mini/llama-3.3-70B-Instruct-FP8-gpu-time": {
-    "label": "agentless-mini/llama-3.3-70B-Instruct-FP8-gpu-time",
-    "color": "#ff7f0e"
-  },
-  "agentless-mini/qwen3-32B-total-time": {
-    "label": "agentless-mini/qwen3-32B-total-time",
+  "agentless-mini/qwen3-32B": {
+    "label": "agentless-mini/qwen3-32B",
     "color": "#2ca02c"
   },
-  "agentless-mini/qwen3-32B-cpu-time": {
-    "label": "agentless-mini/qwen3-32B-cpu-time",
-    "color": "#2ca02c"
-  },
-  "agentless-mini/qwen3-32B-gpu-time": {
-    "label": "agentless-mini/qwen3-32B-gpu-time",
-    "color": "#2ca02c"
-  },
-  "agentless/GPT-4o-mini-2024-07-18-total-time": {
-    "label": "agentless/GPT-4o-mini-2024-07-18-total-time",
+  "agentless/GPT-4o-mini-2024-07-18": {
+    "label": "agentless/GPT-4o-mini-2024-07-18",
     "color": "#d62728"
   },
-  "agentless/GPT-4o-mini-2024-07-18-cpu-time": {
-    "label": "agentless/GPT-4o-mini-2024-07-18-cpu-time",
-    "color": "#d62728"
-  },
-  "agentless/GPT-4o-mini-2024-07-18-gpu-time": {
-    "label": "agentless/GPT-4o-mini-2024-07-18-gpu-time",
-    "color": "#d62728"
-  },
-  "agentless/llama-3.3-70B-Instruct-FP8-total-time": {
-    "label": "agentless/llama-3.3-70B-Instruct-FP8-total-time",
+  "agentless/llama-3.3-70B-Instruct-FP8": {
+    "label": "agentless/llama-3.3-70B-Instruct-FP8",
     "color": "#9467bd"
   },
-  "agentless/llama-3.3-70B-Instruct-FP8-cpu-time": {
-    "label": "agentless/llama-3.3-70B-Instruct-FP8-cpu-time",
-    "color": "#9467bd"
-  },
-  "agentless/llama-3.3-70B-Instruct-FP8-gpu-time": {
-    "label": "agentless/llama-3.3-70B-Instruct-FP8-gpu-time",
-    "color": "#9467bd"
-  },
-  "agentless/qwen3-32B-total-time": {
-    "label": "agentless/qwen3-32B-total-time",
+  "agentless/qwen3-32B": {
+    "label": "agentless/qwen3-32B",
     "color": "#8c564b"
   },
-  "agentless/qwen3-32B-cpu-time": {
-    "label": "agentless/qwen3-32B-cpu-time",
-    "color": "#8c564b"
-  },
-  "agentless/qwen3-32B-gpu-time": {
-    "label": "agentless/qwen3-32B-gpu-time",
-    "color": "#8c564b"
-  },
-  "auto-code-rover/GPT-4o-mini-2024-07-18-total-time": {
-    "label": "auto-code-rover/GPT-4o-mini-2024-07-18-total-time",
+  "auto-code-rover/GPT-4o-mini-2024-07-18": {
+    "label": "auto-code-rover/GPT-4o-mini-2024-07-18",
     "color": "#e377c2"
   },
-  "auto-code-rover/GPT-4o-mini-2024-07-18-cpu-time": {
-    "label": "auto-code-rover/GPT-4o-mini-2024-07-18-cpu-time",
-    "color": "#e377c2"
-  },
-  "auto-code-rover/GPT-4o-mini-2024-07-18-gpu-time": {
-    "label": "auto-code-rover/GPT-4o-mini-2024-07-18-gpu-time",
-    "color": "#e377c2"
-  },
-  "auto-code-rover/llama-3.3-70B-Instruct-FP8-total-time": {
-    "label": "auto-code-rover/llama-3.3-70B-Instruct-FP8-total-time",
+  "auto-code-rover/llama-3.3-70B-Instruct-FP8": {
+    "label": "auto-code-rover/llama-3.3-70B-Instruct-FP8",
     "color": "#7f7f7f"
   },
-  "auto-code-rover/llama-3.3-70B-Instruct-FP8-cpu-time": {
-    "label": "auto-code-rover/llama-3.3-70B-Instruct-FP8-cpu-time",
-    "color": "#7f7f7f"
-  },
-  "auto-code-rover/llama-3.3-70B-Instruct-FP8-gpu-time": {
-    "label": "auto-code-rover/llama-3.3-70B-Instruct-FP8-gpu-time",
-    "color": "#7f7f7f"
-  },
-  "auto-code-rover/qwen3-32B-total-time": {
-    "label": "auto-code-rover/qwen3-32B-total-time",
+  "auto-code-rover/qwen3-32B": {
+    "label": "auto-code-rover/qwen3-32B",
     "color": "#bcbd22"
   },
-  "auto-code-rover/qwen3-32B-cpu-time": {
-    "label": "auto-code-rover/qwen3-32B-cpu-time",
-    "color": "#bcbd22"
-  },
-  "auto-code-rover/qwen3-32B-gpu-time": {
-    "label": "auto-code-rover/qwen3-32B-gpu-time",
-    "color": "#bcbd22"
-  },
-  "openhands/GPT-4o-mini-2024-07-18-total-time": {
-    "label": "openhands/GPT-4o-mini-2024-07-18-total-time",
+  "openhands/GPT-4o-mini-2024-07-18": {
+    "label": "openhands/GPT-4o-mini-2024-07-18",
     "color": "#17becf"
   },
-  "openhands/GPT-4o-mini-2024-07-18-cpu-time": {
-    "label": "openhands/GPT-4o-mini-2024-07-18-cpu-time",
-    "color": "#17becf"
-  },
-  "openhands/GPT-4o-mini-2024-07-18-gpu-time": {
-    "label": "openhands/GPT-4o-mini-2024-07-18-gpu-time",
-    "color": "#17becf"
-  },
-  "openhands/llama-3.3-70B-Instruct-FP8-total-time": {
-    "label": "openhands/llama-3.3-70B-Instruct-FP8-total-time",
+  "openhands/llama-3.3-70B-Instruct-FP8": {
+    "label": "openhands/llama-3.3-70B-Instruct-FP8",
     "color": "#aec7e8"
   },
-  "openhands/llama-3.3-70B-Instruct-FP8-cpu-time": {
-    "label": "openhands/llama-3.3-70B-Instruct-FP8-cpu-time",
-    "color": "#aec7e8"
-  },
-  "openhands/llama-3.3-70B-Instruct-FP8-gpu-time": {
-    "label": "openhands/llama-3.3-70B-Instruct-FP8-gpu-time",
-    "color": "#aec7e8"
-  },
-  "openhands/qwen3-32B-total-time": {
-    "label": "openhands/qwen3-32B-total-time",
+  "openhands/qwen3-32B": {
+    "label": "openhands/qwen3-32B",
     "color": "#ffbb78"
   },
-  "openhands/qwen3-32B-cpu-time": {
-    "label": "openhands/qwen3-32B-cpu-time",
-    "color": "#ffbb78"
-  },
-  "openhands/qwen3-32B-gpu-time": {
-    "label": "openhands/qwen3-32B-gpu-time",
-    "color": "#ffbb78"
-  },
-  "swe-agent/GPT-4o-mini-2024-07-18-total-time": {
-    "label": "swe-agent/GPT-4o-mini-2024-07-18-total-time",
+  "swe-agent/GPT-4o-mini-2024-07-18": {
+    "label": "swe-agent/GPT-4o-mini-2024-07-18",
     "color": "#98df8a"
   },
-  "swe-agent/GPT-4o-mini-2024-07-18-cpu-time": {
-    "label": "swe-agent/GPT-4o-mini-2024-07-18-cpu-time",
-    "color": "#98df8a"
-  },
-  "swe-agent/GPT-4o-mini-2024-07-18-gpu-time": {
-    "label": "swe-agent/GPT-4o-mini-2024-07-18-gpu-time",
-    "color": "#98df8a"
-  },
-  "swe-agent/llama-3.3-70B-Instruct-FP8-total-time": {
-    "label": "swe-agent/llama-3.3-70B-Instruct-FP8-total-time",
+  "swe-agent/llama-3.3-70B-Instruct-FP8": {
+    "label": "swe-agent/llama-3.3-70B-Instruct-FP8",
     "color": "#ff9896"
   },
-  "swe-agent/llama-3.3-70B-Instruct-FP8-cpu-time": {
-    "label": "swe-agent/llama-3.3-70B-Instruct-FP8-cpu-time",
-    "color": "#ff9896"
-  },
-  "swe-agent/llama-3.3-70B-Instruct-FP8-gpu-time": {
-    "label": "swe-agent/llama-3.3-70B-Instruct-FP8-gpu-time",
-    "color": "#ff9896"
-  },
-  "swe-agent/qwen3-32B-total-time": {
-    "label": "swe-agent/qwen3-32B-total-time",
-    "color": "#c5b0d5"
-  },
-  "swe-agent/qwen3-32B-cpu-time": {
-    "label": "swe-agent/qwen3-32B-cpu-time",
-    "color": "#c5b0d5"
-  },
-  "swe-agent/qwen3-32B-gpu-time": {
-    "label": "swe-agent/qwen3-32B-gpu-time",
+  "swe-agent/qwen3-32B": {
+    "label": "swe-agent/qwen3-32B",
     "color": "#c5b0d5"
   }
 }

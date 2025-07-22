@@ -1,10 +1,9 @@
 import { TooltipProvider } from '@/components/common/tooltip-wrapper';
 import { Dialog } from '@/components/common/ui/dialog';
-import { ChartDataSelector } from '@/components/docs/leaderboard/chart/atoms/chart-data-selector';
 import { HoverableLegend } from '@/components/docs/leaderboard/chart/atoms/chart-legend';
+import { useChartData } from '@/hooks/chart/use-chart-data';
 import { useChartPopover } from '@/hooks/chart/use-chart-popover';
 import { useChartSettings } from '@/hooks/chart/use-chart-settings';
-import { useFilteredChartData } from '@/hooks/chart/use-filtered-chart-data';
 import { cn } from '@/lib/utils';
 import { ChartCard } from './atoms/chart-card';
 import { ChartControls } from './atoms/chart-controls';
@@ -15,7 +14,7 @@ import { LineChartRenderer } from './resolve-rate-line-chart';
 import { ChartProps } from './types';
 
 export interface ChartData {
-  totalTokens: number;
+  duration: number;
   [seriesName: string]: number;
 }
 
@@ -39,13 +38,9 @@ export function NormalizedTimeLineChart({
     config: chartConfig,
     loading,
     error,
-    keys,
-    activeDataTypes,
-    toggleDataType,
-  } = useFilteredChartData<ChartData>(
+  } = useChartData<ChartData>(
     '/data/benchmark/chart/normalized-time-line/chart-data.json',
     '/data/benchmark/chart/normalized-time-line/chart-config.json',
-    ['total-time'],
   );
 
   const { isExpanded, toggleExpanded } = useChartPopover();
@@ -62,7 +57,8 @@ export function NormalizedTimeLineChart({
   } = useChartSettings({
     chartData,
     chartConfig,
-    xKeys: ['totalTokens'],
+    xKeys: ['duration'],
+    // expandLogDomain: true,
   });
 
   const settingsButton = (
@@ -74,6 +70,7 @@ export function NormalizedTimeLineChart({
   );
 
   const explanation = <ChartExplanation content={explanationContent} />;
+
   return (
     <>
       <Dialog open={openSettings} onOpenChange={setOpenSettings}>
@@ -84,7 +81,7 @@ export function NormalizedTimeLineChart({
           min={min}
           max={max}
           setActiveKeys={setActiveKeys}
-          keys={keys}
+          keys={Object.keys(chartConfig || {})}
           onClose={() => setOpenSettings(false)}
           title="Settings"
           step={0.001}
@@ -101,10 +98,6 @@ export function NormalizedTimeLineChart({
             className,
           )}
         >
-          <ChartDataSelector
-            activeDataTypes={activeDataTypes}
-            onToggleDataType={toggleDataType}
-          />
           <ChartHeader title={title} description={description}>
             <TooltipProvider>
               <ChartControls
