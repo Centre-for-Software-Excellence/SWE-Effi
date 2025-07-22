@@ -1,10 +1,11 @@
 import { Menu, X } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import { Button } from '@/components/common/ui/button';
 import { UnderlineLink } from '@/components/common/underline-link';
 import { getTopbarUIConfig } from '@/config/ui';
 import { cn } from '@/lib/utils';
+import { UnderlineText } from '../common/ui/underline-text';
 import { SearchComponent } from './search';
 
 export const TopBar = ({
@@ -16,6 +17,7 @@ export const TopBar = ({
 }) => {
   const ui = getTopbarUIConfig();
   const topbarLinks = ui.links.filter((link) => !link.disabled);
+  const navigate = useNavigate();
 
   return (
     <header
@@ -59,14 +61,24 @@ export const TopBar = ({
         </Button>
         <div className="hidden items-center space-x-1 md:flex md:space-x-4">
           {topbarLinks?.map((link, idx) => (
-            <UnderlineLink
+            <div
               key={link.title + idx}
-              href={link.href}
-              gradient
-              position="middle"
+              onClick={() => {
+                setTimeout(() => {
+                  menuOnClickAction(false);
+                }, 0);
+                navigate(link.href);
+              }}
             >
-              {link.title}
-            </UnderlineLink>
+              <UnderlineText
+                gradient={true}
+                position={'middle'}
+                lineStyle="thin"
+                className="cursor-pointer text-sm font-normal text-muted-foreground no-underline"
+              >
+                {link.title}
+              </UnderlineText>
+            </div>
           ))}
           {ui.searchEnabled && <SearchComponent />}
         </div>

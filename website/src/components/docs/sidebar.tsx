@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { ChevronDown, ChevronRight } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 import { UnderlineLink } from '@/components/common/underline-link';
 import { getSidebarUIConfig } from '@/config/ui';
 import { getDocsStructure, type DocSection } from '@/lib/docs/structure';
 import { cn } from '@/lib/utils';
+import { UnderlineText } from '../common/ui/underline-text';
 
 interface CollapsibleSectionProps {
   section: DocSection;
@@ -88,6 +89,7 @@ export function DocsSidebar({
     new Set(docsStructure.map((section) => section.slug)),
   );
   const ui = getSidebarUIConfig();
+  const navigate = useNavigate();
 
   const bottomLinks = ui.mobileBottomLinks.filter((link) => !link.disabled);
   const toggleSection = (sectionSlug: string) => {
@@ -161,14 +163,24 @@ export function DocsSidebar({
 
       <div className="mt-8 flex w-full flex-col items-center space-y-2 self-end md:hidden">
         {bottomLinks?.map((link, idx) => (
-          <UnderlineLink
-            href={link.href}
+          <div
             key={link.title + idx}
-            gradient={true}
-            position="middle"
+            onClick={() => {
+              setTimeout(() => {
+                onClickAction(false);
+              }, 0);
+              navigate(link.href);
+            }}
           >
-            {link.title}
-          </UnderlineLink>
+            <UnderlineText
+              gradient={true}
+              position={'middle'}
+              lineStyle="thin"
+              className="cursor-pointer text-sm font-normal text-muted-foreground no-underline"
+            >
+              {link.title}
+            </UnderlineText>
+          </div>
         ))}
       </div>
     </aside>
