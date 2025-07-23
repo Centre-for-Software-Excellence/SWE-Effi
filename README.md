@@ -126,11 +126,7 @@ cd website && npm install
 
 ## 🤝 Contributing
 
-### 🎯 **Submit Benchmark Results**
-
-Have results from a new scaffold or model? [check this guide →](https://center-for-software-excellence.github.io/SWE-Effi/about/submit-your-entry)
-
-### Data Flow
+### Submit Benchmark Results Data Flow
 
 ```
 Contributor Results → PR Submission → Validation → Processing → Website Integration

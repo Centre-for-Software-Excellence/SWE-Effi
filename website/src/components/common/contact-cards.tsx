@@ -7,7 +7,7 @@ const contacts = [
   {
     icon: Github,
     title: 'Github',
-    link: 'https://github.com/Center-for-Software-Excellence/SWE-Effi',
+    link: 'https://github.com/Centre-for-Software-Excellence/SWE-Effi',
     description: 'Follow us on GitHub for updates and contributions.',
   },
   {

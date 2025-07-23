@@ -55,7 +55,7 @@ const getFooterUIConfig = (): FooterUIConfig => ({
   rights: '© 2025 All rights reserved.',
   links: [
     {
-      href: 'https://github.com/Center-for-Software-Excellence/SWE-Effi',
+      href: 'https://github.com/Centre-for-Software-Excellence/SWE-Effi',
       title: 'Github',
     },
     {

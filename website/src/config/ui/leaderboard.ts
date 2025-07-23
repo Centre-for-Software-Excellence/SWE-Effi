@@ -54,7 +54,7 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
     },
     {
       title: 'Github',
-      href: 'https://github.com/Center-for-Software-Excellence/SWE-Effi',
+      href: 'https://github.com/Centre-for-Software-Excellence/SWE-Effi',
       external: true,
       icon: Github,
     },
