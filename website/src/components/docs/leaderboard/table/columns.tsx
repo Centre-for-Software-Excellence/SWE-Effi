@@ -94,6 +94,10 @@ export const columns = ({
     avgLLMRequests,
     avgLLMRequestsR,
     avgLLMRequestsU,
+
+    total,
+    resolved,
+    unresolved,
   } = headers || {};
   const createSortableHeader = (
     columnId: string,
@@ -297,7 +301,7 @@ export const columns = ({
           accessorKey: 'avgDuration',
           header: createSortableHeader(
             'avgDuration',
-            `${avgDuration || 'Mean Normalized Time'} (seconds)`,
+            total || 'Total',
             tooltips?.avgDuration,
           ),
           cell: createSimpleCell(
@@ -310,7 +314,7 @@ export const columns = ({
           accessorKey: 'avgDurationR',
           header: createSortableHeader(
             'avgDurationR',
-            `${avgDurationR || 'Mean Normalized Time (Resolved)'} (seconds)`,
+            resolved || 'Resolved',
             tooltips?.avgDurationR,
           ),
           cell: createSimpleCell(
@@ -323,7 +327,7 @@ export const columns = ({
           accessorKey: 'avgDurationU',
           header: createSortableHeader(
             'avgDurationU',
-            `${avgDurationU || 'Mean Normalized Time (Unresolved)'} (seconds)`,
+            unresolved || 'Unresolved',
             tooltips?.avgDurationU,
           ),
           cell: createSimpleCell(
@@ -346,7 +350,7 @@ export const columns = ({
           accessorKey: 'avgCPUTime',
           header: createSortableHeader(
             'avgCPUTime',
-            `${avgCPUTime || 'Mean CPU Time'} (seconds)`,
+            total || 'Total',
             tooltips?.avgCPUTime,
           ),
           cell: createSimpleCell(
@@ -359,7 +363,7 @@ export const columns = ({
           accessorKey: 'avgCPUTimeR',
           header: createSortableHeader(
             'avgCPUTimeR',
-            `${avgCPUTimeR || 'Mean CPU Time (Resolved)'} (seconds)`,
+            resolved || 'Resolved',
             tooltips?.avgCPUTimeR,
           ),
           cell: createSimpleCell(
@@ -372,7 +376,7 @@ export const columns = ({
           accessorKey: 'avgCPUTimeU',
           header: createSortableHeader(
             'avgCPUTimeU',
-            `${avgCPUTimeU || 'Mean CPU Time (Unresolved)'} (seconds)`,
+            unresolved || 'Unresolved',
             tooltips?.avgCPUTimeU,
           ),
           cell: createSimpleCell(
@@ -395,7 +399,7 @@ export const columns = ({
           accessorKey: 'avgInfTime',
           header: createSortableHeader(
             'avgInfTime',
-            `${avgInfTime || 'Mean Normalized Inference Time'} (seconds)`,
+            total || 'Total',
             tooltips?.avgInfTime,
           ),
           cell: createSimpleCell(
@@ -408,7 +412,7 @@ export const columns = ({
           accessorKey: 'avgInfTimeR',
           header: createSortableHeader(
             'avgInfTimeR',
-            `${avgInfTimeR || 'Mean Normalized Inference Time (Resolved)'} (seconds)`,
+            resolved || 'Resolved',
             tooltips?.avgInfTimeR,
           ),
           cell: createSimpleCell(
@@ -421,7 +425,7 @@ export const columns = ({
           accessorKey: 'avgInfTimeU',
           header: createSortableHeader(
             'avgInfTimeU',
-            `${avgInfTimeU || 'Mean Normalized Inference Time (Unresolved)'} (seconds)`,
+            unresolved || 'Unresolved',
             tooltips?.avgInfTimeU,
           ),
           cell: createSimpleCell(
@@ -444,7 +448,7 @@ export const columns = ({
           accessorKey: 'avgInputTokens',
           header: createSortableHeader(
             'avgInputTokens',
-            `${avgInputTokens || 'Mean Input Tokens'} (K)`,
+            total || 'Total',
             tooltips?.avgInputTokens,
           ),
           cell: createSimpleCell(
@@ -457,7 +461,7 @@ export const columns = ({
           accessorKey: 'avgInputTokensR',
           header: createSortableHeader(
             'avgInputTokensR',
-            `${avgInputTokensR || 'Mean Input Tokens (Resolved)'} (K)`,
+            resolved || 'Resolved',
             tooltips?.avgInputTokensR,
           ),
           cell: createSimpleCell(
@@ -470,7 +474,7 @@ export const columns = ({
           accessorKey: 'avgInputTokensU',
           header: createSortableHeader(
             'avgInputTokensU',
-            `${avgInputTokensU || 'Mean Input Tokens (Unresolved)'} (K)`,
+            unresolved || 'Unresolved',
             tooltips?.avgInputTokensU,
           ),
           cell: createSimpleCell(
@@ -493,7 +497,7 @@ export const columns = ({
           accessorKey: 'avgOutputTokens',
           header: createSortableHeader(
             'avgOutputTokens',
-            `${avgOutputTokens || 'Mean Output Tokens'} (K)`,
+            total || 'Total',
             tooltips?.avgOutputTokens,
           ),
           cell: createSimpleCell(
@@ -506,7 +510,7 @@ export const columns = ({
           accessorKey: 'avgOutputTokensR',
           header: createSortableHeader(
             'avgOutputTokensR',
-            `${avgOutputTokensR || 'Mean Output Tokens (Resolved)'} (K)`,
+            resolved || 'Resolved',
             tooltips?.avgOutputTokensR,
           ),
           cell: createSimpleCell(
@@ -519,7 +523,7 @@ export const columns = ({
           accessorKey: 'avgOutputTokensU',
           header: createSortableHeader(
             'avgOutputTokensU',
-            `${avgOutputTokensU || 'Mean Output Tokens (Unresolved)'} (K)`,
+            unresolved || 'Unresolved',
             tooltips?.avgOutputTokensU,
           ),
           cell: createSimpleCell(
@@ -542,7 +546,7 @@ export const columns = ({
           accessorKey: 'avgLLMRequests',
           header: createSortableHeader(
             'avgLLMRequests',
-            `${avgLLMRequests || 'Mean LLM Calls'} (K)`,
+            total || 'Total',
             tooltips?.avgLLMRequests,
           ),
           cell: createSimpleCell(
@@ -555,7 +559,7 @@ export const columns = ({
           accessorKey: 'avgLLMRequestsR',
           header: createSortableHeader(
             'avgLLMRequestsR',
-            `${avgLLMRequestsR || 'Mean LLM Calls (Resolved)'} (K)`,
+            resolved || 'Resolved',
             tooltips?.avgLLMRequestsR,
           ),
           cell: createSimpleCell(
@@ -568,7 +572,7 @@ export const columns = ({
           accessorKey: 'avgLLMRequestsU',
           header: createSortableHeader(
             'avgLLMRequestsU',
-            `${avgLLMRequestsU || 'Mean LLM Calls (Unresolved)'} (K)`,
+            unresolved || 'Unresolved',
             tooltips?.avgLLMRequestsU,
           ),
           cell: createSimpleCell(

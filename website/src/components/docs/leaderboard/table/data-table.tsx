@@ -246,17 +246,19 @@ export function DataTable<TData, TValue>({
                   .filter((column) => column.getCanHide())
                   .map((column) => {
                     return (
-                      <DropdownMenuCheckboxItem
-                        key={column.id}
-                        className="capitalize"
-                        checked={column.getIsVisible()}
-                        disabled={!column.getCanHide()}
-                        onCheckedChange={(value) =>
-                          column.toggleVisibility(!!value)
-                        }
-                      >
-                        {headers ? headers[column.id] : column.id}
-                      </DropdownMenuCheckboxItem>
+                      column.id && (
+                        <DropdownMenuCheckboxItem
+                          key={column.id}
+                          className="capitalize"
+                          checked={column.getIsVisible()}
+                          disabled={!column.getCanHide()}
+                          onCheckedChange={(value) =>
+                            column.toggleVisibility(!!value)
+                          }
+                        >
+                          {column.id}
+                        </DropdownMenuCheckboxItem>
+                      )
                     );
                   })}
               </DropdownMenuContent>
