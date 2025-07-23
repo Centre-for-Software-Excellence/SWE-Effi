@@ -15,7 +15,7 @@ export default function CitationCard() {
     title={SWE-Effi: Re-Evaluating SWE Agent Solutions for their Efficiency},
     author={SWE-Effi Team}, 
     year={2025},
-    url={https://center-for-software-excellence.github.io/SWE-Effi/benchmark/introducing-swe-effi},
+    url={https://center-for-software-excellence.github.io/SWE-Effi/about/introducing-SWE-effi},
     note={Accessed: ${new Date().toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',

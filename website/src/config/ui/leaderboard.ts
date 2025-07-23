@@ -48,7 +48,7 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
   buttonLinks: [
     {
       title: 'About',
-      href: '/about/introducing-swe-effi',
+      href: '/about/introducing-SWE-effi',
       icon: Newspaper,
     },
     {
@@ -120,6 +120,7 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
 
         'Token Efficiency (AUC) - Measures how effectively an agent uses LLM tokens. This reflects the core computational work required by the LLM, independent of fluctuating API prices.',
       ],
+      footerLink: '/about/introducing-SWE-effi#experimental-settings',
     },
     leaderboardRVU: {
       caption:
@@ -165,7 +166,7 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
     title: 'Analytics',
     description:
       'Here are some visualization highlights of our analysis, for more details please read our ',
-    blogLink: '/about/introducing-swe-effi',
+    blogLink: '/about/introducing-SWE-effi',
     resolveRateLineChart: {
       title: 'Resolve rate vs. total tokens used',
       description:

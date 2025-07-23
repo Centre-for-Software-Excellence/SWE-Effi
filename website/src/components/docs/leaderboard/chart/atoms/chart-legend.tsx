@@ -75,7 +75,8 @@ export function StackedLegend({
           variant="ghost"
           className={cn(
             'cursor-default',
-            activeKeys?.includes(k) && 'bg-muted',
+            'hover:bg-background',
+            activeKeys?.includes(k) && 'bg-muted hover:bg-muted',
           )}
           onClick={() => toggleKey(k)}
         >

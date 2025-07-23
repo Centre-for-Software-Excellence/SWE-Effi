@@ -132,7 +132,7 @@ export const columns = ({
               onClick={() =>
                 column.toggleSorting(column.getIsSorted() === 'asc')
               }
-              className="flex items-center justify-start"
+              className="flex items-center justify-start text-active"
             >
               <ArrowUpDown className="h- 4 mr-2 w-4" />
               {tokenEfficiency} (%)
@@ -141,11 +141,12 @@ export const columns = ({
         );
       },
       cell: ({ row }) => (
-        <div className="text-right font-medium">
+        <div className="text-right font-medium text-active">
           {formatScore(row.getValue(tokenEfficiency || 'tokenEfficiency'))}
           <Progress
             value={row.getValue(tokenEfficiency || 'tokenEfficiency')}
-            className="ml-auto h-2 w-16"
+            className="ml-auto h-2 w-16 bg-active/20"
+            indicatorClassName="bg-active"
           />
         </div>
       ),

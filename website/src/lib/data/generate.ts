@@ -360,7 +360,7 @@ export function buildSummaryCharts(opts?: {
       metric: 'Cost Efficiency',
     },
     {
-      metric: 'Cpu Efficiency',
+      metric: 'CPU Efficiency',
     },
     {
       metric: 'Inference Efficiency',
@@ -427,7 +427,7 @@ export function buildSummaryCharts(opts?: {
             2,
           );
           break;
-        case 'Cpu Efficiency':
+        case 'CPU Efficiency':
           metric[seriesName] = (record.cpu_efficiency_auc * 100).toPrecision(2);
           break;
         case 'Inference Efficiency':

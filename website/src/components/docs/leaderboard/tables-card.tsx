@@ -38,6 +38,7 @@ export type Table = {
   footerTitle?: string;
   footerDescription?: string;
   footers?: string[];
+  footerLink?: string;
 };
 
 export type Tables = Record<string, Table>;
@@ -48,8 +49,7 @@ export default function TablesCard({
   tablesUi,
   caption,
   className,
-  show = [true, true], // [showLeaderboard, showLeaderboardRVU]
-  showTabs = true,
+  showTabs = false,
 }: {
   tablesUi: Tables;
   caption?: boolean;
@@ -124,70 +124,36 @@ export default function TablesCard({
               </TabsTrigger>
             </TabsList>
           )}
-          {show[0] && (
-            <TabsContent value="Leaderboard">
-              <H6 className="mb-0!">{leaderboard.tableTitle}</H6>
-              <DataTable
-                data={data}
-                columns={columns({
-                  tooltips: leaderboard.columnTooltips,
-                  headers: leaderboard.columnHeaders,
-                })}
-                filter={['Base Model', 'Scaffold']}
-              />
-              {caption && (
-                <h6 className="w-full text-center text-muted-foreground">
-                  {leaderboard.caption}
-                </h6>
-              )}
-              <Note title="Note" className="mt-8">
-                <h5 className="mb-2 text-base">{leaderboard.footerTitle}</h5>
-                <p className="mb-2 pl-4 text-sm opacity-85">
-                  {leaderboard.footerDescription}
-                </p>
-                <ul className="flex list-disc flex-col gap-2 pl-2">
-                  {leaderboard.footers?.map((footer, index) => (
-                    <li key={index}>{footer}</li>
-                  ))}
-                  <Link
-                    to="/about/introducing-swe-effi#experimental-settings"
-                    className="text-sm text-muted-foreground underline transition-all duration-300 hover:text-foreground"
-                  >
-                    How we calculated the metrics ?
-                  </Link>
-                </ul>
-              </Note>
-            </TabsContent>
-          )}
-          {show[1] && (
-            <TabsContent value="Leaderboard RVU">
-              <H6 className="mb-0!">{leaderboardRVU.tableTitle}</H6>
-              <DataTable
-                columns={columnsRVU({
-                  tooltips: leaderboardRVU.columnTooltips,
-                  headers: leaderboardRVU.columnHeaders,
-                })}
-                data={dataRVU}
-                filter={['Base Model', 'Scaffold']}
-              />
-              {caption && (
-                <h6 className="w-full text-center text-muted-foreground">
-                  {leaderboardRVU.caption}
-                </h6>
-              )}
-              <Note title="Note" className="mt-8">
-                <h5 className="mb-2 text-base">{leaderboardRVU.footerTitle}</h5>
-                <p className="mb-2 pl-4 text-sm opacity-85">
-                  {leaderboardRVU.footerDescription}
-                </p>
-                <ul className="flex list-disc flex-col gap-2 pl-2">
-                  {leaderboardRVU.footers?.map((footer, index) => (
-                    <li key={index}>{footer}</li>
-                  ))}
-                </ul>
-              </Note>
-            </TabsContent>
-          )}
+          <TabsContent value="Leaderboard">
+            <H6 className="mb-0!">{leaderboard.tableTitle}</H6>
+            <LeaderboardTable
+              rawData={data}
+              tooltips={leaderboard.columnTooltips}
+              headers={leaderboard.columnHeaders}
+            />
+            {caption && (
+              <h6 className="w-full text-center text-muted-foreground">
+                {leaderboard.caption}
+              </h6>
+            )}
+            <Note title="Note" className="mt-8">
+              <h5 className="mb-2 text-base">{leaderboard.footerTitle}</h5>
+              <p className="mb-2 pl-4 text-sm opacity-85">
+                {leaderboard.footerDescription}
+              </p>
+              <ul className="flex list-disc flex-col gap-2 pl-2">
+                {leaderboard.footers?.map((footer, index) => (
+                  <li key={index}>{footer}</li>
+                ))}
+                <Link
+                  to={leaderboard.footerLink || '/about/introducing-SWE-effi'}
+                  className="text-sm text-muted-foreground underline transition-all duration-300 hover:text-foreground"
+                >
+                  How we calculated the metrics ?
+                </Link>
+              </ul>
+            </Note>
+          </TabsContent>
         </Tabs>
       </TooltipProvider>
     </div>
