@@ -23,11 +23,11 @@ export function Frontmatter({ className }: { className?: string }) {
         {/*   ))} */}
         {/* </div> */}
         {frontmatter?.date && (
-          <div className="flex w-full flex-row items-center justify-between">
-            <div className="flex flex-row gap-2 text-muted-foreground">
-              {(frontmatter?.author && frontmatter.author) || ' '}
+          <div className="flex w-full flex-col items-start">
+            <div className="flex flex-row gap-2 text-sm text-muted-foreground">
+              {(frontmatter?.author && frontmatter.author.join(', ')) || ' '}
             </div>
-            <Muted>{frontmatter?.date}</Muted>
+            <Muted className="w-full text-end">{frontmatter?.date}</Muted>
           </div>
         )}
         {Object.entries(frontmatter).length !== 0 && <Divider hasToc={true} />}

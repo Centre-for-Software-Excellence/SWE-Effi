@@ -101,13 +101,12 @@ export type ChartName =
   | 'normalized-time-line'
   | 'calls-input-scatter';
 
-// color generator helper
-
-// write files helper
+// Utility functions
 function writeJSON(filePath: string, data: unknown) {
   fs.mkdirSync(path.dirname(filePath), { recursive: true });
   fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
 }
+
 export function buildNormalizedTimeChart(opts?: {
   rawDir?: string;
   outDir?: string;
@@ -436,16 +435,16 @@ export function buildSummaryCharts(opts?: {
       metric: 'Resolve Rate',
     },
     {
-      metric: 'Token Efficiency',
+      metric: 'EuTB',
     },
     {
-      metric: 'Cost Efficiency',
+      metric: 'EuCB',
     },
     {
-      metric: 'CPU Efficiency',
+      metric: 'EuCTB',
     },
     {
-      metric: 'Inference Efficiency',
+      metric: 'EuITB',
     },
   ];
 
@@ -499,20 +498,20 @@ export function buildSummaryCharts(opts?: {
             100
           ).toPrecision(2);
           break;
-        case 'Token Efficiency':
+        case 'EuTB':
           metric[seriesName] = (record.token_efficiency_auc * 100).toPrecision(
             2,
           );
           break;
-        case 'Cost Efficiency':
+        case 'EuCB':
           metric[seriesName] = (record.cost_efficiency_auc * 100).toPrecision(
             2,
           );
           break;
-        case 'CPU Efficiency':
+        case 'EuCTB':
           metric[seriesName] = (record.cpu_efficiency_auc * 100).toPrecision(2);
           break;
-        case 'Inference Efficiency':
+        case 'EuITB':
           metric[seriesName] = (record.gpu_efficiency_auc * 100).toPrecision(2);
           break;
       }

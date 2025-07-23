@@ -44,7 +44,7 @@ interface LeaderboardUIConfig {
 export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
   title: 'SWE-Effi: Holistic Efficiency Evaluation of LLM-Based SWE Scaffolds', // main title
   description:
-    'We introduce SWE-Effi, a new leaderboard that re-evaluates agents based on holistic efficiency scores beyond simple resolve rate, offering a deeper insights into the balance between resolve rate (the outcome) and the resources consumed (token cost and execution time). ', // main description
+    'We introduce SWE-Effi, a new leaderboard and metrics to re-evaluate AI agent systems in terms of holistic effectiveness scores beyond simple resolve rate. Focusing on software engineering, our proposed evaluation offers deeper insights into the balance between the resolve rate (the outcome) and the resources consumed (token cost and execution time).', // main description
   // links for the buttons in the header
   buttonLinks: [
     {
@@ -74,7 +74,7 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
   tables: {
     leaderboard: {
       caption:
-        'Table -  An overall comparison of agent scaffolds and models across the token usage, duration, and LLM API call metrics',
+        'Table 1 - An overall comparison of agent scaffolds and models across the token usage, duration, and LLM API call metrics. Note that scaffolds can consume a lot of resources, but still have high effectiveness under the resource-specific budget due to a higher number of issues being resolved within a smaller resource budget.',
       tabTitle: 'Efficiency Evaluation',
       tableTitle: 'Scaffold comparison on SWE-bench tasks',
       filterPlaceholder: 'Filter models...',
@@ -83,10 +83,10 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
         rank: 'Rank',
         scaffold: 'Scaffold',
         model: 'Base Model',
-        tokenEfficiency: 'Token Efficiency',
-        costEfficiency: 'Cost Efficiency',
-        gpuEfficiency: 'Inference Efficiency',
-        cpuEfficiency: 'CPU Efficiency',
+        tokenEfficiency: 'EuTB',
+        costEfficiency: 'EuCB',
+        gpuEfficiency: 'EuITB',
+        cpuEfficiency: 'EuCTB',
         resolveRate: 'Resolve Rate',
         precision: 'Precision',
 
@@ -126,52 +126,58 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
       },
       columnTooltips: {
         rank: '',
-        scaffold: 'Name of the agent scaffold',
-        model: 'LLM name',
-        gpuEfficiency: '',
-        cpuEfficiency: '',
-        costEfficiency: '',
-        tokenEfficiency: '',
+        scaffold: '',
+        model: '',
+        gpuEfficiency: 'Effectiveness under Inference Time Budget',
+        cpuEfficiency: 'Effectiveness under CPU Time Budget',
+        costEfficiency: 'Effectiveness under Cost Budget',
+        tokenEfficiency: 'Effectiveness under Token Budget',
         resolveRate:
           'Number of generated patches that correctly resolved the issue',
         precision: 'Precision of the generated patches',
 
-        avgDuration: 'Mean normalized duration per instance',
+        duration: 'Mean normalized duration per instance',
+        avgDuration: '',
         avgDurationR: '',
         avgDurationU: '',
 
-        avgCPUTime: 'Mean CPU task duration per instance',
+        CPUTime: 'Mean CPU task duration per instance',
+        avgCPUTime: '',
         avgCPUTimeR: '',
         avgCPUTimeU: '',
 
-        avgInfTime:
+        infTime:
           'Normalized Inference Time (NIM): Mean Normalized Inference Time (NIM) per instance',
+        avgInfTime: '',
         avgInfTimeR: '',
         avgInfTimeU: '',
 
-        avgInputTokens: 'Mean number of input tokens used for single issue',
+        inputTokens: 'Mean number of input tokens used for single issue',
+        avgInputTokens: '',
         avgInputTokensR: '',
         avgInputTokensU: '',
 
-        avgOutputTokens: 'Mean number of output tokens used for single issue',
+        outputTokens: 'Mean number of output tokens used for single issue',
+        avgOutputTokens: '',
         avgOutputTokensR: '',
         avgOutputTokensU: '',
 
-        avgLLMRequests: 'Mean number of LLM API calls per instance',
+        llmRequests: 'Mean number of LLM API calls per instance',
+        avgLLMRequests: '',
         avgLLMRequestsR: '',
         avgLLMRequestsU: '',
       },
-      footerTitle: 'Ranked by highest token efficiency AUC by default',
+      footerTitle:
+        'Ranked by the Effectiveness under Token Budget (EuTB) by default',
       footerDescription:
         'Used a subset of 50 issues randomly drawn from the well-respected SWE-bench-Verified dataset. To ensure this subset was a fair representation of the whole, we used stratified sampling, preserving the original distribution of issues across different software projects.',
       footers: [
-        "Inference Efficiency (AUC) - Measures the agent's LLM-related latency, standardized across different hardware backends",
-        "CPU Efficiency (AUC) - Measures the performance of the agent's local logic, independent of the LLM. This reveals the framework's own overhead.",
-        "Cost Efficiency (AUC) - Assesses the agent's real-world financial viability. While closely related to token usage, this metric translates tokens into a standardized dollar value, making the cost tangible and directly comparable to development budgets.",
-
-        'Token Efficiency (AUC) - Measures how effectively an agent uses LLM tokens. This reflects the core computational work required by the LLM, independent of fluctuating API prices.',
+        "Effectiveness Under Token Budget (EuTB) - Measures the agent's LLM-related latency, standardized across different hardware backends.",
+        "Effectiveness under Cost Budget (EuCB) - Measures the performance of the agent's local logic, independent of the LLM. This reveals the framework's own overhead; calculated as the AUC of the resolve rate - monetary cost per issue plot (up to $1 USD  financial budget cap).",
+        "Effectiveness under CPU Time Budget (EuCTB) - Assesses the agent's real-world financial viability. While closely related to token usage, this metric translates tokens into a standardized dollar value, making the cost tangible and directly comparable to development budgets; calculated as the AUC of the resolve rate - CPU time per issue plot (up to a 30-minute time cap).",
+        'Effectiveness under Inference Time Budget (EuITB) - Measures how effectively an agent uses LLM tokens. This reflects the core computational work required by the LLM, independent of fluctuating API prices; calculated as the AUC of the resolve rate - Normalized Inference Time per issue (up to a 30-minute time cap).',
       ],
-      footerLink: '/about/introducing-SWE-effi#experimental-settings',
+      footerLink: '/about/introducing-SWE-effi#accuracy-metrics',
     },
   },
   analytics: {
@@ -191,7 +197,7 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
       xAxisDataKey: 'totalTokens',
     },
     normalizedTimeLineChart: {
-      title: 'Resolve rate vs. Normalized Time',
+      title: 'Resolve rate vs. Normalized total time',
       description:
         'Issue resolve rate across the normalized time taken to resolve the issue.',
       overview: '',

@@ -20,7 +20,7 @@
     "Max": 100
   },
   {
-    "metric": "Token Efficiency",
+    "metric": "EuTB",
     "agentless-mini/GPT-4o-mini-2024-07-18": "20",
     "agentless-mini/llama-3.3-70B-Instruct-FP8": "3.9",
     "agentless-mini/qwen3-32B": "28",
@@ -40,7 +40,7 @@
     "Max": 100
   },
   {
-    "metric": "Cost Efficiency",
+    "metric": "EuCB",
     "agentless-mini/GPT-4o-mini-2024-07-18": "19",
     "agentless-mini/llama-3.3-70B-Instruct-FP8": "4.0",
     "agentless-mini/qwen3-32B": "27",
@@ -60,7 +60,7 @@
     "Max": 100
   },
   {
-    "metric": "CPU Efficiency",
+    "metric": "EuCTB",
     "agentless-mini/GPT-4o-mini-2024-07-18": "20",
     "agentless-mini/llama-3.3-70B-Instruct-FP8": "4.0",
     "agentless-mini/qwen3-32B": "28",
@@ -80,7 +80,7 @@
     "Max": 100
   },
   {
-    "metric": "Inference Efficiency",
+    "metric": "EuITB",
     "agentless-mini/GPT-4o-mini-2024-07-18": "20",
     "agentless-mini/llama-3.3-70B-Instruct-FP8": "4.0",
     "agentless-mini/qwen3-32B": "27",

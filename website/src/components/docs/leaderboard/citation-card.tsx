@@ -13,7 +13,7 @@ import { H4, Muted } from '../../md';
 export default function CitationCard() {
   const bibtexCitation = `@misc{swe_effi_2025, 
     title={SWE-Effi: Re-Evaluating SWE Agent Solutions for their Efficiency},
-    author={SWE-Effi Team}, 
+    author={Zhiyu Fan, Kirill Vasilevski, Dayi Lin, Boyuan Chen, Yihao Chen, Zhiqing Zhong, Jie Zhang, Pinjia He, Ahmed E Hassan}, 
     year={2025},
     url={https://center-for-software-excellence.github.io/SWE-Effi/about/introducing-SWE-effi},
     note={Accessed: ${new Date().toLocaleDateString('en-US', {
