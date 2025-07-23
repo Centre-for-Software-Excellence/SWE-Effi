@@ -131,6 +131,7 @@ function RadarChartRenderer({
             key={key}
             dataKey={key}
             stroke={config[key]?.color}
+            strokeWidth={2}
             fill={config[key]?.color}
             fillOpacity={0.6}
           />
