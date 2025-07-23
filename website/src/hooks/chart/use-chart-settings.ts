@@ -40,10 +40,12 @@ interface UseChartSettingsProps {
   chartData: any[];
   chartConfig: ChartConfig | null;
   xKeys?: string[];
+  yKeys?: string[];
   defaultDomain?: [number, number];
   takeAllKeys?: boolean;
   expandLogDomain?: boolean;
   logSlider?: boolean;
+  getRange?: boolean;
 }
 
 export function useChartSettings({
@@ -54,6 +56,7 @@ export function useChartSettings({
   takeAllKeys = true,
   expandLogDomain = false,
   logSlider = false,
+  yKeys,
 }: UseChartSettingsProps) {
   const [openSettings, setOpenSettings] = useState(false);
   const [activeKeys, setActiveKeys] = useState<string[]>([]);
@@ -79,6 +82,15 @@ export function useChartSettings({
       ),
     [chartData, xKeys],
   );
+
+  const range = useMemo(() => {
+    const yValues = yKeys
+      ? yKeys.map((key) => chartData.map((d) => d[key])).flat()
+      : [];
+    const newMin = Math.min(...yValues);
+    const newMax = Math.max(...yValues);
+    return [newMin, newMax];
+  }, [chartData, yKeys]);
 
   const [domain, setDomain] = useState<[number, number]>(
     defaultDomain || [0, max],
@@ -122,5 +134,6 @@ export function useChartSettings({
     max,
     domain,
     setDomain,
+    range,
   };
 }

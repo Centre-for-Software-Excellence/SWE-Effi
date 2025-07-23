@@ -4,6 +4,7 @@ import { UnderlineLink } from '@/components/common/underline-link';
 import { H4, Lead } from '@/components/md';
 import { getLeaderboardUIConfig } from '@/config/ui/leaderboard';
 import { CallsBarChart } from './chart/calls-bar-chart';
+// import { CallsInputScatterChart } from './chart/calls-input-scatter-chart';
 import { CostBarChart } from './chart/cost-bar-chart';
 import { MetricsRadarChart } from './chart/metrics-radar-chart';
 import { NormalizedTimeLineChart } from './chart/normalized-time-line-chart';
@@ -19,6 +20,7 @@ export default function AnalyticsCard() {
     timePercentageBarChart,
     costBarChart,
     metricsRadarChart,
+    // callsInputScatterChart,
   } = ui;
   return (
     <section className="flex flex-col space-y-4">
@@ -45,6 +47,9 @@ export default function AnalyticsCard() {
       <Suspense fallback={<div className="h-96 w-full" />}>
         <NormalizedTimeLineChart {...normalizedTimeLineChart} />
       </Suspense>
+      {/* <Suspense fallback={<div className="h-96 w-full" />}> */}
+      {/*   <CallsInputScatterChart {...callsInputScatterChart} /> */}
+      {/* </Suspense> */}
       <Suspense fallback={<div className="h-96 w-full" />}>
         <CallsBarChart {...numCallsBarChart} />
       </Suspense>

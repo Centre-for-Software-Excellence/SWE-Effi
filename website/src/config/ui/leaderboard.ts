@@ -31,6 +31,7 @@ interface LeaderboardUIConfig {
     timePercentageBarChart: ChartProps;
     costBarChart: ChartProps;
     metricsRadarChart: ChartProps;
+    callsInputScatterChart: ChartProps;
   };
   citation: {
     citationTitle?: string;
@@ -239,6 +240,17 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
       insight: 'Insight about the metrics radar chart...',
       // ignore this
       polarAngleAxisDataKey: 'metric',
+    },
+    callsInputScatterChart: {
+      title: 'Input Tokens vs. LLM Calls',
+      description:
+        'How many input tokens did the agent scaffold use to attempt to issue resolution across the number of LLM calls made.',
+      overview: '',
+      insight: 'Insight about the calls input scatter chart...',
+      xAxisLabel: '# of LLM Calls per instance',
+      yAxisLabel: 'Total Input Tokens',
+      // ignore this
+      xAxisDataKey: 'llmCalls',
     },
   },
   citation: {

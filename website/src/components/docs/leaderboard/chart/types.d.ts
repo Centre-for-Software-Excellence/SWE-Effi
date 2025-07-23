@@ -20,6 +20,7 @@ export type ChartRendererProps = Partial<ChartProps> & {
   config: ChartConfig;
   isExpanded?: boolean;
   domain?: [number, number];
+  range?: [number, number];
   activeKeys?: string[];
   scale?: 'linear' | 'log';
 };

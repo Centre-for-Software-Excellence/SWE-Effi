@@ -4,6 +4,7 @@ import { fileURLToPath } from 'url';
 
 import { ChartConfig } from '@/components/common/ui/chart';
 import { ChartData as CallsEntry } from '@/components/docs/leaderboard/chart/calls-bar-chart';
+import { ChartData as CallsInputScatterEntry } from '@/components/docs/leaderboard/chart/calls-input-scatter-chart';
 import { ChartData as CostEntry } from '@/components/docs/leaderboard/chart/cost-bar-chart';
 import { ChartData as MetricEntry } from '@/components/docs/leaderboard/chart/metrics-radar-chart';
 import { ChartData as NormalizedTimeEntry } from '@/components/docs/leaderboard/chart/normalized-time-line-chart';
@@ -97,7 +98,8 @@ export type ChartName =
   | 'time-percentage-bar'
   | 'cost-bar'
   | 'metrics-radar'
-  | 'normalized-time-line';
+  | 'normalized-time-line'
+  | 'calls-input-scatter';
 
 // color generator helper
 
@@ -249,6 +251,87 @@ export function buildResolveRateLineChart(opts?: {
     const rrDirName: ChartName = 'resolve-rate-line';
     writeJSON(path.join(outDir, `${rrDirName}/chart-data.json`), resolveData);
     writeJSON(path.join(outDir, `${rrDirName}/chart-config.json`), resolveCfg);
+  }
+}
+
+export function buildCallsInputScatterChart(opts?: {
+  rawDir?: string;
+  outDir?: string;
+}) {
+  const nextColor = createColorGenerator(tokens.d3);
+  const rawDir =
+    opts?.rawDir ?? path.join(__dirname, '../../../public/data/benchmark/raw');
+  const outDir =
+    opts?.outDir ??
+    path.join(__dirname, '../../../public/data/benchmark/chart');
+
+  const callsInputCfg: ChartConfig = {};
+  const callsInputData: CallsInputScatterEntry[] = [];
+
+  const jsonFiles = fs.readdirSync(rawDir).filter((f) => f.endsWith('.json'));
+
+  for (const file of jsonFiles) {
+    const filePath = path.join(rawDir, file);
+
+    let records: InputData[];
+    try {
+      records = Object.values(JSON.parse(fs.readFileSync(filePath, 'utf8')));
+    } catch (e) {
+      console.error(`Could not parse ${file}:`, e);
+      continue;
+    }
+
+    const [scaffold, model] = path.basename(file, '.json').split('_');
+    const seriesName = `${scaffold}/${model}`;
+
+    // resolve rate data
+    let llm_calls_sum = 0;
+    let input_tokens_sum = 0;
+    records
+      .map((r) => ({
+        llm_calls: r.llm_calls || 0,
+        input_tokens: r.input_tokens || 0,
+      }))
+      .forEach(({ llm_calls, input_tokens }) => {
+        llm_calls_sum = llm_calls;
+        input_tokens_sum = input_tokens;
+        callsInputData.push({
+          llmCalls: llm_calls_sum,
+          [seriesName]: input_tokens_sum,
+        });
+      });
+
+    if (!callsInputCfg[seriesName]) {
+      callsInputCfg[seriesName] = {
+        label: seriesName,
+        color: nextColor(),
+      };
+    }
+  }
+
+  if (DRYRUN) {
+    console.log(
+      `Dry run: would write ${callsInputData.length} calls input entries`,
+    );
+    writeJSON(
+      path.join(outDir, 'tmp/calls-input-scatter/chart-data.json'),
+      callsInputData,
+    );
+    writeJSON(
+      path.join(outDir, 'tmp/calls-input-scatter/chart-config.json'),
+      callsInputCfg,
+    );
+  } else {
+    console.log(`Writing ${callsInputData.length} calls input entries`);
+    const rrDirName: ChartName = 'calls-input-scatter';
+    writeJSON(
+      path.join(outDir, `${rrDirName}/chart-data.json`),
+      callsInputData,
+    );
+    writeJSON(
+      path.join(outDir, `${rrDirName}/chart-config.json`),
+      callsInputCfg,
+    );
   }
 }
 
@@ -582,6 +665,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   console.log('Generating data for charts and leaderboard...');
   buildNormalizedTimeChart();
   buildResolveRateLineChart();
+  buildCallsInputScatterChart();
   buildCallsBarChart();
   buildSummaryCharts();
   buildLeaderboardTables();
