@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import {
   ColumnDef,
   ColumnFiltersState,
@@ -10,16 +10,36 @@ import {
   useReactTable,
   VisibilityState,
 } from '@tanstack/react-table';
+import { Check, ChevronsUpDown } from 'lucide-react';
 
 import { Button } from '@/components/common/ui/button';
+import {
+  Command,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+} from '@/components/common/ui/command';
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
   DropdownMenuContent,
   DropdownMenuTrigger,
 } from '@/components/common/ui/dropdown-menu';
-import { Input } from '@/components/common/ui/input';
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from '@/components/common/ui/popover';
 import { ScrollArea, ScrollBar } from '@/components/common/ui/scroll-area';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/common/ui/select';
 import {
   Table,
   TableBody,
@@ -28,6 +48,7 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/common/ui/table';
+import { cn } from '@/lib/utils';
 import { ColumnConfig } from '../tables-card';
 
 interface DataTableProps<TData, TValue> {
@@ -41,11 +62,17 @@ export function DataTable<TData, TValue>({
   headers,
   columns,
   data,
-  filter = ['Base Model'],
+  filterOptions = [
+    { value: 'model', label: 'Model' },
+    { value: 'scaffold', label: headers?.scaffold || 'Scaffold' },
+  ],
   onSortingChange,
   activeSortColumn = 'tokenEfficiency',
 }: DataTableProps<TData, TValue> & {
-  filter?: string[];
+  filterOptions?: {
+    value: string;
+    label: string;
+  }[];
   onSortingChange?: (sortColumn: string) => void;
   activeSortColumn?: string;
   headers?: ColumnConfig;
@@ -54,6 +81,28 @@ export function DataTable<TData, TValue>({
   const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
   const [columnVisibility, setColumnVisibility] = useState<VisibilityState>({});
   const [globalFilter, setGlobalFilter] = useState<string>('');
+  const [selectedFilterColumn, setSelectedFilterColumn] =
+    useState<string>('model'); // Set default value
+  const [comboboxOpen, setComboboxOpen] = useState(false);
+
+  const comboboxOptions = useMemo(() => {
+    if (!data || data.length === 0) return [];
+
+    const uniqueValues = new Set<string>();
+    data.forEach((row: any) => {
+      const value = row[selectedFilterColumn];
+      if (value && typeof value === 'string') {
+        uniqueValues.add(value);
+      }
+    });
+
+    return Array.from(uniqueValues)
+      .sort()
+      .map((value) => ({
+        value: value,
+        label: value,
+      }));
+  }, [data, selectedFilterColumn]);
 
   const table = useReactTable({
     data,
@@ -77,15 +126,12 @@ export function DataTable<TData, TValue>({
     onColumnVisibilityChange: setColumnVisibility,
     onGlobalFilterChange: setGlobalFilter,
     globalFilterFn: (row, _columnId, filterValue) => {
-      const searchColumns = filter.length > 0 ? filter : ['Base Model'];
       if (!filterValue) return true;
       const searchValue = filterValue.toLowerCase();
 
-      return searchColumns.some((searchColumnId) => {
-        const cellValue = row.getValue(searchColumnId);
-        if (cellValue == null) return false;
-        return String(cellValue).toLowerCase().includes(searchValue);
-      });
+      const cellValue = row.getValue(selectedFilterColumn);
+      if (cellValue == null) return false;
+      return String(cellValue).toLowerCase().includes(searchValue);
     },
     state: {
       sorting,
@@ -95,15 +141,97 @@ export function DataTable<TData, TValue>({
     },
   });
 
+  const getSelectedFilterLabel = () => {
+    const selectedOption = filterOptions.find(
+      (option) => option.value === selectedFilterColumn,
+    );
+    return selectedOption?.label || selectedFilterColumn;
+  };
+
   return (
     <div className="relative overflow-x-auto">
       <div className="flex items-center justify-between pt-2">
-        <Input
-          placeholder={`Filter ${filter.join(' or ')}...`}
-          value={globalFilter ?? ''}
-          onChange={(event) => setGlobalFilter(event.target.value)}
-          className="max-w-sm focus:ring-0 focus-visible:ring-0 dark:focus:ring-0 dark:focus-visible:ring-0"
-        />
+        <div className="flex items-center space-x-2">
+          {/* Filter Column Selector */}
+          <Select
+            value={selectedFilterColumn}
+            onValueChange={(value) => {
+              setSelectedFilterColumn(value);
+              // Clear the search when changing filter column
+              setGlobalFilter('');
+            }}
+          >
+            <SelectTrigger className="w-24">
+              <SelectValue />
+            </SelectTrigger>
+            <SelectContent>
+              {filterOptions.map((option) => (
+                <SelectItem key={option.value} value={option.value}>
+                  {option.label}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+
+          {/* Search Combobox */}
+          <Popover open={comboboxOpen} onOpenChange={setComboboxOpen}>
+            <PopoverTrigger asChild>
+              <Button
+                variant="outline"
+                role="combobox"
+                aria-expanded={comboboxOpen}
+                className="w-[300px] justify-between"
+              >
+                {globalFilter
+                  ? comboboxOptions.find(
+                      (option) => option.value === globalFilter,
+                    )?.label || globalFilter
+                  : `Search ${getSelectedFilterLabel()}...`}
+                <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+              </Button>
+            </PopoverTrigger>
+            <PopoverContent className="w-[300px] p-0">
+              <Command>
+                <CommandInput
+                  placeholder={`Search ${getSelectedFilterLabel()}...`}
+                  className="h-9"
+                  value={globalFilter}
+                  onValueChange={setGlobalFilter}
+                />
+                <CommandList>
+                  <CommandEmpty>
+                    No {getSelectedFilterLabel().toLowerCase()} found.
+                  </CommandEmpty>
+                  <CommandGroup>
+                    {comboboxOptions.map((option) => (
+                      <CommandItem
+                        key={option.value}
+                        value={option.value}
+                        onSelect={(currentValue) => {
+                          setGlobalFilter(
+                            currentValue === globalFilter ? '' : currentValue,
+                          );
+                          setComboboxOpen(false);
+                        }}
+                      >
+                        {option.label}
+                        <Check
+                          className={cn(
+                            'ml-auto h-4 w-4',
+                            globalFilter === option.value
+                              ? 'opacity-100'
+                              : 'opacity-0',
+                          )}
+                        />
+                      </CommandItem>
+                    ))}
+                  </CommandGroup>
+                </CommandList>
+              </Command>
+            </PopoverContent>
+          </Popover>
+        </div>
+
         <div>
           <div className="flex items-center justify-end py-2 md:space-x-2 md:py-4">
             <DropdownMenu>

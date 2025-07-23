@@ -39,7 +39,6 @@ export function LeaderboardTable({
       columns={tableColumns}
       onSortingChange={handleSortingChange}
       activeSortColumn={activeSortColumn}
-      filter={['Base Model', 'Scaffold']}
     />
   );
 }
