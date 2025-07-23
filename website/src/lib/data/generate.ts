@@ -10,10 +10,9 @@ import { ChartData as NormalizedTimeEntry } from '@/components/docs/leaderboard/
 import { ChartData as ResolveRateEntry } from '@/components/docs/leaderboard/chart/resolve-rate-line-chart';
 import { ChartData as TimePercentageEntry } from '@/components/docs/leaderboard/chart/time-percentage-bar-chart';
 import { LeaderboardData } from '@/components/docs/leaderboard/table/columns';
-import { LeaderboardRVUData } from '@/components/docs/leaderboard/table/columns-rvu';
 import { tokens } from '@/styles/tokens';
 import { createColorGenerator } from '../utils';
-import { rankLeaderboardData, rankLeaderboardRVUData } from './get';
+import { rankLeaderboardData } from './get';
 
 const DRYRUN = false;
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -510,7 +509,6 @@ export function buildLeaderboardTables(opts?: {
     path.join(__dirname, '../../../public/data/benchmark/table');
 
   const tableData: LeaderboardData[] = [];
-  const tableRVUData: LeaderboardRVUData[] = [];
 
   const jsonFiles = fs.readdirSync(rawDir).filter((f) => f.endsWith('.json'));
   for (const file of jsonFiles) {
@@ -537,61 +535,46 @@ export function buildLeaderboardTables(opts?: {
       cpuEfficiency: record.cpu_efficiency_auc * 100,
       costEfficiency: record.cost_efficiency_auc * 100,
       tokenEfficiency: record.token_efficiency_auc * 100,
-      total: record.avg_duration,
-      cpuTime: record.avg_cpu_time,
-      inputToken: record.avg_input_tokens / 1000,
-      outputToken: record.avg_output_tokens / 1000,
-      calls: record.avg_llm_calls,
-      infTime: record.avg_gpu_time,
       resolveRate: (record.resolved / record.total_projects) * 100,
       precision: record.precision * 100,
-    };
+      avgDuration: record.avg_duration,
+      avgDurationR: record.resolved_avg_duration,
+      avgDurationU: record.unresolved_avg_duration,
 
-    const leaderboardRVUDataEntry: LeaderboardRVUData = {
-      scaffold,
-      model,
-      avgTotalTimeU: record.unresolved_avg_duration,
-      avgTotalTimeR: record.resolved_avg_duration,
-      avgCPUTimeU: record.unresolved_avg_cpu_time,
+      avgCPUTime: record.avg_cpu_time,
       avgCPUTimeR: record.resolved_avg_cpu_time,
-      avgInfTimeU: record.unresolved_avg_gpu_time,
+      avgCPUTimeU: record.unresolved_avg_cpu_time,
+
+      avgInfTime: record.avg_gpu_time,
       avgInfTimeR: record.resolved_avg_gpu_time,
-      avgTotalTokensU:
-        (record.unresolved_avg_input_tokens +
-          record.unresolved_avg_output_tokens) /
-        1000,
-      avgTotalTokensR:
-        (record.resolved_avg_input_tokens + record.resolved_avg_output_tokens) /
-        1000,
+      avgInfTimeU: record.unresolved_avg_gpu_time,
+
+      avgInputTokens: record.avg_input_tokens / 1000,
+      avgInputTokensR: record.resolved_avg_input_tokens / 1000,
+      avgInputTokensU: record.unresolved_avg_input_tokens / 1000,
+
+      avgOutputTokens: record.avg_output_tokens / 1000,
+      avgOutputTokensR: record.resolved_avg_output_tokens / 1000,
+      avgOutputTokensU: record.unresolved_avg_output_tokens / 1000,
+
+      avgLLMRequests: record.avg_llm_calls,
       avgLLMRequestsU: record.unresolved_avg_llm_calls,
       avgLLMRequestsR: record.resolved_avg_llm_calls,
     };
 
     tableData.push(leaderboardDataEntry);
-    tableRVUData.push(leaderboardRVUDataEntry);
   }
 
   const rankedTableData = rankLeaderboardData(tableData);
-  const rankedTableRVUData = rankLeaderboardRVUData(tableRVUData);
 
   if (DRYRUN) {
     console.log(
-      `Dry run: would write ${tableData.length} leaderboard data entries and ${tableRVUData.length} leaderboard RVU data entries.`,
+      `Dry run: would write ${tableData.length} leaderboard data entries.`,
     );
     writeJSON(path.join(outDir, 'tmp/leaderboard/data.json'), rankedTableData);
-    writeJSON(
-      path.join(outDir, 'tmp/leaderboard/data-rvu.json'),
-      rankedTableRVUData,
-    );
   } else {
-    console.log(
-      `Writing ${tableData.length} leaderboard data entries and ${tableRVUData.length} leaderboard RVU data entries.`,
-    );
+    console.log(`Writing ${tableData.length} leaderboard data entries.`);
     writeJSON(path.join(outDir, `leaderboard/data.json`), rankedTableData);
-    writeJSON(
-      path.join(outDir, `leaderboard/data-rvu.json`),
-      rankedTableRVUData,
-    );
   }
 }
 

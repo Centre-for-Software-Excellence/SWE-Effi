@@ -73,8 +73,8 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
   tables: {
     leaderboard: {
       caption:
-        'Table 1 -  An overall comparison of agent scaffolds and models across the token usage, duration, and LLM API call metrics',
-      tabTitle: 'Table 1: Efficiency Evaluation',
+        'Table -  An overall comparison of agent scaffolds and models across the token usage, duration, and LLM API call metrics',
+      tabTitle: 'Efficiency Evaluation',
       tableTitle: 'Scaffold comparison on SWE-bench tasks',
       filterPlaceholder: 'Filter models...',
       // if the tooltips is "" or not defined, the tooltip will not be shown
@@ -87,30 +87,76 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
         gpuEfficiency: 'Inference Efficiency',
         cpuEfficiency: 'CPU Efficiency',
         resolveRate: 'Resolve Rate',
-        total: 'Total Time',
-        cpuTime: 'Mean CPU Time',
-        infTime: 'Mean Normalized Inference Time',
-        inputToken: 'Mean Input Tokens',
-        outputToken: 'Mean Output Tokens',
-        calls: 'Mean LLM Calls',
         precision: 'Precision',
+
+        duration: 'Mean Normalized Time',
+        avgDuration: 'Total',
+        avgDurationR: 'Resolved',
+        avgDurationU: 'Unresolved',
+
+        CPUTime: 'Mean CPU Time',
+        avgCPUTime: 'Total',
+        avgCPUTimeR: 'Resolved',
+        avgCPUTimeU: 'Unresolved',
+
+        infTime: 'Mean Normalized Inference Time',
+        avgInfTime: 'Total',
+        avgInfTimeR: 'Resolved',
+        avgInfTimeU: 'Unresolved',
+
+        inputTokens: 'Mean Input Tokens',
+        avgInputTokens: 'Total',
+        avgInputTokensR: 'Resolved',
+        avgInputTokensU: 'Unresolved',
+
+        outputTokens: 'Mean Output Tokens',
+        avgOutputTokens: 'Total',
+        avgOutputTokensR: 'Resolved',
+        avgOutputTokensU: 'Unresolved',
+
+        llmRequests: 'Mean LLM Calls',
+        avgLLMRequests: 'Total',
+        avgLLMRequestsR: 'Resolved',
+        avgLLMRequestsU: 'Unresolved',
       },
       columnTooltips: {
         rank: '',
         scaffold: 'Name of the agent scaffold',
         model: 'LLM name',
+        gpuEfficiency: '',
+        cpuEfficiency: '',
+        costEfficiency: '',
+        tokenEfficiency: '',
         resolveRate:
           'Number of generated patches that correctly resolved the issue',
-        total: 'Total mean duration including CPU time and NIM',
-        cpuTime: "Duration of agent scaffold's local operations (seconds)",
-        inputToken: 'Mean number of input tokens used for single issue',
-        outputToken: 'Mean number of output tokens used for single issue',
-        calls: 'Number of inference calls to the LLM',
-        infTime:
-          'Normalized Inference Time (NIM): mean normalized LLM inference time per single issue',
         precision: 'Precision of the generated patches',
+
+        avgDuration: 'Mean normalized duration per instance',
+        avgDurationR: '',
+        avgDurationU: '',
+
+        avgCPUTime: 'Mean CPU task duration per instance',
+        avgCPUTimeR: '',
+        avgCPUTimeU: '',
+
+        avgInfTime:
+          'Normalized Inference Time (NIM): Mean Normalized Inference Time (NIM) per instance',
+        avgInfTimeR: '',
+        avgInfTimeU: '',
+
+        avgInputTokens: 'Mean number of input tokens used for single issue',
+        avgInputTokensR: '',
+        avgInputTokensU: '',
+
+        avgOutputTokens: 'Mean number of output tokens used for single issue',
+        avgOutputTokensR: '',
+        avgOutputTokensU: '',
+
+        avgLLMRequests: 'Mean number of LLM API calls per instance',
+        avgLLMRequestsR: '',
+        avgLLMRequestsU: '',
       },
-      footerTitle: 'Ranked by highest token efficiency AUC',
+      footerTitle: 'Ranked by highest token efficiency AUC by default',
       footerDescription:
         'Used a subset of 50 issues randomly drawn from the well-respected SWE-bench-Verified dataset. To ensure this subset was a fair representation of the whole, we used stratified sampling, preserving the original distribution of issues across different software projects.',
       footers: [
@@ -121,45 +167,6 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
         'Token Efficiency (AUC) - Measures how effectively an agent uses LLM tokens. This reflects the core computational work required by the LLM, independent of fluctuating API prices.',
       ],
       footerLink: '/about/introducing-SWE-effi#experimental-settings',
-    },
-    leaderboardRVU: {
-      caption:
-        'Table 2 - Comparison of scaffold dynamics and performance between resolved and unresolved cases',
-      tabTitle: 'Table 2: Success vs. Failure Disparities',
-      tableTitle: 'Token and time costs for resolved and unresolved instances',
-      filterPlaceholder: 'Filter models...',
-      // if the tooltips is "" or not defined, the tooltip will not be shown
-      columnHeaders: {
-        rank: 'Rank',
-        scaffold: 'Scaffold',
-        model: 'Base Model',
-        avgTotalTimeU: 'Mean Total Time (Unresolved)',
-        avgTotalTimeR: 'Mean Total Time (Resolved)',
-        avgCPUTimeU: 'Mean CPU Time (Unresolved)',
-        avgCPUTimeR: 'Mean CPU Time (Resolved)',
-        avgInfTimeU: 'Mean Normalized Inference Time (Unresolved)',
-        avgInfTimeR: 'Mean Normalized Inference Time (Resolved)',
-        avgTotalTokensU: 'Mean Total Tokens (Unresolved)',
-        avgTotalTokensR: 'Mean Total Tokens (Resolved)',
-        avgLLMRequestsU: 'Mean LLM Requests (Unresolved)',
-        avgLLMRequestsR: 'Mean LLM Requests (Resolved)',
-        avgTotalTime: 'Mean Total Time',
-        avgCPUTime: 'Mean CPU Time',
-        avgInfTime: 'Mean Normalized Inference Time',
-        avgTotalTokens: 'Mean Total Tokens',
-        avgLLMRequests: 'Mean LLM Requests',
-      },
-      columnTooltips: {
-        rank: '',
-        scaffold: 'Name of the agent scaffold',
-        model: 'LLM name',
-        avgTotalTime: 'Mean total duration per instance',
-        avgCPUTime: 'Mean CPU task duration per instance',
-        avgInfTime: 'Mean Normalized Inference Time (NIM) per instance',
-        avgTotalTokens: 'Mean number of total tokens used per instance',
-        avgLLMRequests: 'Mean number of LLM API calls per instance',
-      },
-      footerTitle: 'Ranked by lowest total time resolved',
     },
   },
   analytics: {

@@ -5,14 +5,11 @@ import {
   flexRender,
   getCoreRowModel,
   getFilteredRowModel,
-  // getPaginationRowModel,
   getSortedRowModel,
   SortingState,
   useReactTable,
   VisibilityState,
 } from '@tanstack/react-table';
-
-// import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 import { Button } from '@/components/common/ui/button';
 import {
@@ -31,18 +28,27 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/common/ui/table';
+import { ColumnConfig } from '../tables-card';
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
   data: TData[];
+  onSortingChange?: (sortColumn: string) => void;
+  activeSortColumn?: string;
 }
 
 export function DataTable<TData, TValue>({
+  headers,
   columns,
   data,
   filter = ['Base Model'],
+  onSortingChange,
+  activeSortColumn = 'tokenEfficiency',
 }: DataTableProps<TData, TValue> & {
   filter?: string[];
+  onSortingChange?: (sortColumn: string) => void;
+  activeSortColumn?: string;
+  headers?: ColumnConfig;
 }) {
   const [sorting, setSorting] = useState<SortingState>([]);
   const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
@@ -51,43 +57,36 @@ export function DataTable<TData, TValue>({
 
   const table = useReactTable({
     data,
-    columns,
+    columns: columns.map((col) => ({
+      ...col,
+      meta: {
+        ...col.meta,
+        isActiveSortColumn: col.id === activeSortColumn,
+        onColumnSort: (columnId: string) => {
+          if (onSortingChange) {
+            onSortingChange(columnId);
+          }
+        },
+      },
+    })),
     getCoreRowModel: getCoreRowModel(),
     onSortingChange: setSorting,
     getSortedRowModel: getSortedRowModel(),
-    // getPaginationRowModel: getPaginationRowModel(),
     onColumnFiltersChange: setColumnFilters,
     getFilteredRowModel: getFilteredRowModel(),
     onColumnVisibilityChange: setColumnVisibility,
     onGlobalFilterChange: setGlobalFilter,
-    // Custom global filter function to filter specific columns
     globalFilterFn: (row, _columnId, filterValue) => {
       const searchColumns = filter.length > 0 ? filter : ['Base Model'];
-
       if (!filterValue) return true;
       const searchValue = filterValue.toLowerCase();
-
-      // Debug: log the values
-      console.log('Searching in columns:', searchColumns);
-      searchColumns.forEach((col) => {
-        console.log(`${col}:`, row.getValue(col));
-      });
 
       return searchColumns.some((searchColumnId) => {
         const cellValue = row.getValue(searchColumnId);
         if (cellValue == null) return false;
-        const matches = String(cellValue).toLowerCase().includes(searchValue);
-        console.log(
-          `${searchColumnId}: "${cellValue}" includes "${searchValue}"? ${matches}`,
-        );
-        return matches;
+        return String(cellValue).toLowerCase().includes(searchValue);
       });
     },
-    // initialState: {
-    //   pagination: {
-    //     pageSize: 10,
-    //   },
-    // },
     state: {
       sorting,
       columnFilters,
@@ -107,30 +106,12 @@ export function DataTable<TData, TValue>({
         />
         <div>
           <div className="flex items-center justify-end py-2 md:space-x-2 md:py-4">
-            {/* <Button */}
-            {/*   variant="outline" */}
-            {/*   size="icon" */}
-            {/*   onClick={() => table.previousPage()} */}
-            {/*   disabled={!table.getCanPreviousPage()} */}
-            {/* > */}
-            {/*   <ChevronLeft /> */}
-            {/* </Button> */}
-            {/* <Button */}
-            {/*   variant="outline" */}
-            {/*   size="icon" */}
-            {/*   onClick={() => table.nextPage()} */}
-            {/*   disabled={!table.getCanNextPage()} */}
-            {/* > */}
-            {/*   <ChevronRight /> */}
-            {/* </Button> */}
-
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="outline" className="ml-auto">
                   Metrics
                 </Button>
               </DropdownMenuTrigger>
-
               <DropdownMenuContent align="end">
                 {table
                   .getVisibleLeafColumns()
@@ -146,7 +127,7 @@ export function DataTable<TData, TValue>({
                           column.toggleVisibility(!!value)
                         }
                       >
-                        {column.id}
+                        {headers ? headers[column.id] : column.id}
                       </DropdownMenuCheckboxItem>
                     );
                   })}

@@ -13,14 +13,32 @@ export type LeaderboardData = {
   cpuEfficiency: number;
   costEfficiency: number;
   tokenEfficiency: number;
-  total: number;
-  cpuTime: number;
-  infTime: number;
-  inputToken: number;
-  outputToken: number;
-  calls: number;
   resolveRate: number;
   precision?: number;
+
+  avgDuration: number;
+  avgDurationR: number;
+  avgDurationU: number;
+
+  avgCPUTime: number;
+  avgCPUTimeR: number;
+  avgCPUTimeU: number;
+
+  avgInfTime: number;
+  avgInfTimeR: number;
+  avgInfTimeU: number;
+
+  avgInputTokens: number;
+  avgInputTokensR: number;
+  avgInputTokensU: number;
+
+  avgOutputTokens: number;
+  avgOutputTokensR: number;
+  avgOutputTokensU: number;
+
+  avgLLMRequests: number;
+  avgLLMRequestsR: number;
+  avgLLMRequestsU: number;
 };
 
 export type RankedLeaderboardData = LeaderboardData & { rank: number };
@@ -28,9 +46,13 @@ export type RankedLeaderboardData = LeaderboardData & { rank: number };
 export const columns = ({
   tooltips,
   headers,
+  activeSortColumn = 'tokenEfficiency',
+  onSortColumnChange,
 }: {
   tooltips?: ColumnConfig;
   headers?: ColumnConfig;
+  activeSortColumn?: string;
+  onSortColumnChange?: (columnId: string) => void;
 }): ColumnDef<RankedLeaderboardData>[] => {
   const {
     rank,
@@ -41,34 +63,94 @@ export const columns = ({
     cpuEfficiency,
     costEfficiency,
     resolveRate,
-    total,
-    cpuTime,
+    // precision,
+
+    duration,
+    avgDuration,
+    avgDurationR,
+    avgDurationU,
+
+    CPUTime,
+    avgCPUTime,
+    avgCPUTimeR,
+    avgCPUTimeU,
+
     infTime,
-    inputToken,
-    outputToken,
-    calls,
+    avgInfTime,
+    avgInfTimeR,
+    avgInfTimeU,
+
+    inputTokens,
+    avgInputTokens,
+    avgInputTokensR,
+    avgInputTokensU,
+
+    outputTokens,
+    avgOutputTokens,
+    avgOutputTokensR,
+    avgOutputTokensU,
+
+    llmRequests,
+    avgLLMRequests,
+    avgLLMRequestsR,
+    avgLLMRequestsU,
   } = headers || {};
+  const createSortableHeader = (
+    columnId: string,
+    displayText: string,
+    tooltipText?: string,
+  ) => {
+    const isActive = activeSortColumn === columnId;
+    return ({ column }: any) => (
+      <TooltipWrapper title={tooltipText}>
+        <button
+          onClick={() => {
+            column.toggleSorting(column.getIsSorted() === 'asc');
+            if (onSortColumnChange) {
+              onSortColumnChange(columnId);
+            }
+          }}
+          className={`flex items-center justify-start ${isActive ? 'text-active' : ''}`}
+        >
+          <ArrowUpDown className="mr-2 h-4 w-4" />
+          {displayText}
+        </button>
+      </TooltipWrapper>
+    );
+  };
+
+  const createProgressCell = (columnId: string, isActive: boolean = false) => {
+    return ({ row }: any) => (
+      <div
+        className={`text-right font-medium ${isActive ? 'text-active' : ''}`}
+      >
+        {formatScore(row.getValue(columnId))}
+        <Progress
+          value={row.getValue(columnId)}
+          className={`ml-auto h-2 w-16 ${isActive ? 'bg-active/20' : ''}`}
+          indicatorClassName={isActive ? 'bg-active' : ''}
+        />
+      </div>
+    );
+  };
+
+  const createSimpleCell = (columnId: string, isActive: boolean = false) => {
+    return ({ row }: any) => (
+      <div
+        className={`text-right font-medium ${isActive ? 'text-active' : ''}`}
+      >
+        {formatScore(row.getValue(columnId))}
+      </div>
+    );
+  };
+
   return [
     {
-      id: rank,
+      id: 'rank',
       accessorKey: 'rank',
-      header: ({ column }) => {
-        return (
-          <TooltipWrapper title={tooltips?.rank}>
-            <button
-              onClick={() =>
-                column.toggleSorting(column.getIsSorted() === 'asc')
-              }
-              className="flex items-center justify-start"
-            >
-              <ArrowUpDown className="mr-2 h-4 w-4" />
-              {rank || 'Rank'}
-            </button>
-          </TooltipWrapper>
-        );
-      },
+      header: createSortableHeader('rank', rank || 'Rank', tooltips?.rank),
       cell: ({ row }) => {
-        const rankNumber: number = row.getValue(rank || 'rank');
+        const rankNumber: number = row.getValue('rank');
         return (
           <div className="flex items-center justify-start">
             {rankNumber === 1 ? (
@@ -87,35 +169,37 @@ export const columns = ({
       },
     },
     {
-      id: scaffold,
+      id: 'scaffold',
       accessorKey: 'scaffold',
       header: () => (
         <TooltipWrapper title={tooltips?.scaffold}>
-          <span>{scaffold}</span>
+          <span>{scaffold || 'Scaffold'}</span>
         </TooltipWrapper>
       ),
       cell: ({ row }) => {
-        const scaffold: string = row.getValue(headers?.scaffold || 'scaffold');
+        const scaffoldValue: string = row.getValue('scaffold');
         return (
           <div className="text-left font-medium">
-            {scaffold.length > 30 ? `${scaffold.slice(0, 30)}...` : scaffold}
+            {scaffoldValue && scaffoldValue.length > 30
+              ? `${scaffoldValue.slice(0, 30)}...`
+              : scaffoldValue}
           </div>
         );
       },
     },
     {
-      id: model,
+      id: 'model',
       accessorKey: 'model',
       header: () => (
         <TooltipWrapper title={tooltips?.model}>
-          <span>{model}</span>
+          <span>{model || 'Model'}</span>
         </TooltipWrapper>
       ),
       cell: ({ row }) => {
-        const modelValue: string = row.getValue(model || 'model');
+        const modelValue: string = row.getValue('model');
         return (
           <div className="text-left font-medium">
-            {modelValue.length > 30
+            {modelValue && modelValue.length > 30
               ? `${modelValue.slice(0, 30)}...`
               : modelValue}
           </div>
@@ -123,364 +207,376 @@ export const columns = ({
       },
     },
     {
-      id: tokenEfficiency,
+      id: 'tokenEfficiency',
       accessorKey: 'tokenEfficiency',
-      header: ({ column }) => {
-        return (
-          <TooltipWrapper title={tooltips?.tokenEfficiency}>
-            <button
-              onClick={() =>
-                column.toggleSorting(column.getIsSorted() === 'asc')
-              }
-              className="flex items-center justify-start text-active"
-            >
-              <ArrowUpDown className="h- 4 mr-2 w-4" />
-              {tokenEfficiency} (%)
-            </button>
-          </TooltipWrapper>
-        );
-      },
-      cell: ({ row }) => (
-        <div className="text-right font-medium text-active">
-          {formatScore(row.getValue(tokenEfficiency || 'tokenEfficiency'))}
-          <Progress
-            value={row.getValue(tokenEfficiency || 'tokenEfficiency')}
-            className="ml-auto h-2 w-16 bg-active/20"
-            indicatorClassName="bg-active"
-          />
-        </div>
+      header: createSortableHeader(
+        'tokenEfficiency',
+        `${tokenEfficiency || 'Token Efficiency'} (%)`,
+        tooltips?.tokenEfficiency,
+      ),
+      cell: createProgressCell(
+        'tokenEfficiency',
+        activeSortColumn === 'tokenEfficiency',
       ),
     },
     {
-      id: gpuEfficiency,
+      id: 'gpuEfficiency',
       accessorKey: 'gpuEfficiency',
-      header: ({ column }) => {
-        return (
-          <TooltipWrapper title={tooltips?.gpuEfficiency}>
-            <button
-              onClick={() =>
-                column.toggleSorting(column.getIsSorted() === 'asc')
-              }
-              className="flex items-center justify-start"
-            >
-              <ArrowUpDown className="mr-2 h-4 w-4" />
-              {gpuEfficiency} (%)
-            </button>
-          </TooltipWrapper>
-        );
-      },
-      cell: ({ row }) => (
-        <div className="text-right font-medium">
-          {formatScore(row.getValue(gpuEfficiency || 'gpuEfficiency'))}
-          <Progress
-            value={row.getValue(gpuEfficiency || 'gpuEfficiency')}
-            className="ml-auto h-2 w-16"
-          />
-        </div>
+      header: createSortableHeader(
+        'gpuEfficiency',
+        `${gpuEfficiency || 'GPU Efficiency'} (%)`,
+        tooltips?.gpuEfficiency,
+      ),
+      cell: createProgressCell(
+        'gpuEfficiency',
+        activeSortColumn === 'gpuEfficiency',
       ),
     },
     {
-      id: cpuEfficiency,
+      id: 'cpuEfficiency',
       accessorKey: 'cpuEfficiency',
-      header: ({ column }) => {
-        return (
-          <TooltipWrapper title={tooltips?.cpuEfficiency}>
-            <button
-              onClick={() =>
-                column.toggleSorting(column.getIsSorted() === 'asc')
-              }
-              className="flex items-center justify-start"
-            >
-              <ArrowUpDown className="mr-2 h-4 w-4" />
-              {cpuEfficiency} (%)
-            </button>
-          </TooltipWrapper>
-        );
-      },
-      cell: ({ row }) => (
-        <div className="text-right font-medium">
-          {formatScore(row.getValue(cpuEfficiency || 'cpuEfficiency'))}
-          <Progress
-            value={row.getValue(cpuEfficiency || 'cpuEfficiency')}
-            className="ml-auto h-2 w-16"
-          />
-        </div>
+      header: createSortableHeader(
+        'cpuEfficiency',
+        `${cpuEfficiency || 'CPU Efficiency'} (%)`,
+        tooltips?.cpuEfficiency,
+      ),
+      cell: createProgressCell(
+        'cpuEfficiency',
+        activeSortColumn === 'cpuEfficiency',
       ),
     },
     {
-      id: costEfficiency,
+      id: 'costEfficiency',
       accessorKey: 'costEfficiency',
-      header: ({ column }) => {
-        return (
-          <TooltipWrapper title={tooltips?.costEfficiency}>
-            <button
-              onClick={() =>
-                column.toggleSorting(column.getIsSorted() === 'asc')
-              }
-              className="flex items-center justify-start"
-            >
-              <ArrowUpDown className="mr-2 h-4 w-4" />
-              {costEfficiency} (%)
-            </button>
-          </TooltipWrapper>
-        );
-      },
-      cell: ({ row }) => (
-        <div className="text-right font-medium">
-          {formatScore(row.getValue(costEfficiency || 'costEfficiency'))}
-          <Progress
-            value={row.getValue(costEfficiency || 'costEfficiency')}
-            className="ml-auto h-2 w-16"
-          />
-        </div>
+      header: createSortableHeader(
+        'costEfficiency',
+        `${costEfficiency || 'Cost Efficiency'} (%)`,
+        tooltips?.costEfficiency,
+      ),
+      cell: createProgressCell(
+        'costEfficiency',
+        activeSortColumn === 'costEfficiency',
       ),
     },
     {
-      id: resolveRate,
+      id: 'resolveRate',
       accessorKey: 'resolveRate',
-      header: ({ column }) => {
+      header: createSortableHeader(
+        'resolveRate',
+        `${resolveRate || 'Resolve Rate'} (%)`,
+        tooltips?.resolveRate,
+      ),
+      cell: ({ row }) => {
+        const isActive = activeSortColumn === 'resolveRate';
         return (
-          <TooltipWrapper title={tooltips?.resolveRate}>
-            <button
-              onClick={() =>
-                column.toggleSorting(column.getIsSorted() === 'asc')
-              }
-              className="flex items-center justify-start"
-            >
-              <ArrowUpDown className="mr-2 h-4 w-4" />
-              {resolveRate} (%)
-            </button>
-          </TooltipWrapper>
+          <div
+            className={`text-right font-medium ${isActive ? 'text-active' : ''}`}
+          >
+            <span className="font-bold">
+              {formatScore(row.getValue('resolveRate'))}
+            </span>
+            <Progress
+              value={row.getValue('resolveRate')}
+              className={`ml-auto h-2 w-16 ${isActive ? 'bg-active/20' : ''}`}
+              indicatorClassName={isActive ? 'bg-active' : ''}
+            />
+          </div>
         );
       },
-      cell: ({ row }) => (
-        <div className="text-right font-medium">
-          <span className="font-bold">
-            {formatScore(row.getValue(resolveRate || 'resolveRate'))}
-          </span>
-          <Progress
-            value={row.getValue(resolveRate || 'resolveRate')}
-            className="ml-auto h-2 w-16"
-          />
-        </div>
-      ),
     },
     {
-      id: total,
-      accessorKey: 'total',
-      header: ({ column }) => {
-        return (
-          <TooltipWrapper title={tooltips?.total}>
-            <button
-              onClick={() =>
-                column.toggleSorting(column.getIsSorted() === 'asc')
-              }
-              className="flex items-center justify-start"
-            >
-              <ArrowUpDown className="mr-2 h-4 w-4" />
-
-              <div className="text-center">
-                <div>Mean Normalized</div>
-                <div>Time (seconds)</div>
-              </div>
-            </button>
-          </TooltipWrapper>
-        );
-      },
-      cell: ({ row }) => (
-        <div className="text-right font-medium">
-          {formatScore(row.getValue(total || 'total'))}
-        </div>
+      id: duration || 'duration',
+      header: () => (
+        <TooltipWrapper title={tooltips?.duration}>
+          <span>{duration || 'Mean Normalized Time'} (seconds)</span>
+        </TooltipWrapper>
       ),
+      columns: [
+        {
+          id: avgDuration,
+          accessorKey: 'avgDuration',
+          header: createSortableHeader(
+            'avgDuration',
+            `${avgDuration || 'Mean Normalized Time'} (seconds)`,
+            tooltips?.avgDuration,
+          ),
+          cell: createSimpleCell(
+            avgDuration || 'avgDuration',
+            activeSortColumn === 'avgDuration',
+          ),
+        },
+        {
+          id: avgDurationR,
+          accessorKey: 'avgDurationR',
+          header: createSortableHeader(
+            'avgDurationR',
+            `${avgDurationR || 'Mean Normalized Time (Resolved)'} (seconds)`,
+            tooltips?.avgDurationR,
+          ),
+          cell: createSimpleCell(
+            avgDurationR || 'avgDurationR',
+            activeSortColumn === 'avgDurationR',
+          ),
+        },
+        {
+          id: avgDurationU,
+          accessorKey: 'avgDurationU',
+          header: createSortableHeader(
+            'avgDurationU',
+            `${avgDurationU || 'Mean Normalized Time (Unresolved)'} (seconds)`,
+            tooltips?.avgDurationU,
+          ),
+          cell: createSimpleCell(
+            avgDurationU || 'avgDurationU',
+            activeSortColumn === 'avgDurationU',
+          ),
+        },
+      ],
     },
     {
-      id: cpuTime,
-      accessorKey: 'cpuTime',
-      header: ({ column }) => {
-        return (
-          <TooltipWrapper title={tooltips?.cpuTime}>
-            <button
-              onClick={() =>
-                column.toggleSorting(column.getIsSorted() === 'asc')
-              }
-              className="flex items-center justify-start"
-            >
-              <ArrowUpDown className="mr-2 h-4 w-4" />
-              {cpuTime} (seconds)
-            </button>
-          </TooltipWrapper>
-        );
-      },
-      cell: ({ row }) => (
-        <div className="text-right font-medium">
-          {formatScore(row.getValue(cpuTime || 'cpuTime'))}
-        </div>
+      id: CPUTime || 'CPU Time',
+      header: () => (
+        <TooltipWrapper title={tooltips?.CPUTime}>
+          <span>{CPUTime || 'Mean CPU Time'} (seconds)</span>
+        </TooltipWrapper>
       ),
+      columns: [
+        {
+          id: avgCPUTime,
+          accessorKey: 'avgCPUTime',
+          header: createSortableHeader(
+            'avgCPUTime',
+            `${avgCPUTime || 'Mean CPU Time'} (seconds)`,
+            tooltips?.avgCPUTime,
+          ),
+          cell: createSimpleCell(
+            avgCPUTime || 'avgCPUTime',
+            activeSortColumn === 'avgCPUTime',
+          ),
+        },
+        {
+          id: avgCPUTimeR,
+          accessorKey: 'avgCPUTimeR',
+          header: createSortableHeader(
+            'avgCPUTimeR',
+            `${avgCPUTimeR || 'Mean CPU Time (Resolved)'} (seconds)`,
+            tooltips?.avgCPUTimeR,
+          ),
+          cell: createSimpleCell(
+            avgCPUTimeR || 'avgCPUTimeR',
+            activeSortColumn === 'avgCPUTimeR',
+          ),
+        },
+        {
+          id: avgCPUTimeU,
+          accessorKey: 'avgCPUTimeU',
+          header: createSortableHeader(
+            'avgCPUTimeU',
+            `${avgCPUTimeU || 'Mean CPU Time (Unresolved)'} (seconds)`,
+            tooltips?.avgCPUTimeU,
+          ),
+          cell: createSimpleCell(
+            avgCPUTimeU || 'avgCPUTimeU',
+            activeSortColumn === 'avgCPUTimeU',
+          ),
+        },
+      ],
     },
     {
-      id: infTime,
-      accessorKey: 'infTime',
-      header: ({ column }) => {
-        return (
-          <TooltipWrapper title={tooltips?.infTime}>
-            <button
-              onClick={() =>
-                column.toggleSorting(column.getIsSorted() === 'asc')
-              }
-              className="flex items-center justify-start"
-            >
-              <ArrowUpDown className="mr-2 h-4 w-4" />
-              <div className="text-center">
-                <div>Mean Normalized </div>
-                <div>Inference Time (seconds)</div>
-              </div>
-            </button>
-          </TooltipWrapper>
-        );
-      },
-      cell: ({ row }) => (
-        <div className="text-right font-medium">
-          {formatScore(row.getValue(infTime || 'infTime'))}
-        </div>
+      id: infTime || 'Mean Normalized Inference Time',
+      header: () => (
+        <TooltipWrapper title={tooltips?.infTime}>
+          <span>{infTime || 'Mean Normalized Inference Time'} (seconds)</span>
+        </TooltipWrapper>
       ),
+      columns: [
+        {
+          id: avgInfTime,
+          accessorKey: 'avgInfTime',
+          header: createSortableHeader(
+            'avgInfTime',
+            `${avgInfTime || 'Mean Normalized Inference Time'} (seconds)`,
+            tooltips?.avgInfTime,
+          ),
+          cell: createSimpleCell(
+            avgInfTime || 'avgInfTime',
+            activeSortColumn === 'avgInfTime',
+          ),
+        },
+        {
+          id: avgInfTimeR,
+          accessorKey: 'avgInfTimeR',
+          header: createSortableHeader(
+            'avgInfTimeR',
+            `${avgInfTimeR || 'Mean Normalized Inference Time (Resolved)'} (seconds)`,
+            tooltips?.avgInfTimeR,
+          ),
+          cell: createSimpleCell(
+            avgInfTimeR || 'avgInfTimeR',
+            activeSortColumn === 'avgInfTimeR',
+          ),
+        },
+        {
+          id: avgInfTimeU,
+          accessorKey: 'avgInfTimeU',
+          header: createSortableHeader(
+            'avgInfTimeU',
+            `${avgInfTimeU || 'Mean Normalized Inference Time (Unresolved)'} (seconds)`,
+            tooltips?.avgInfTimeU,
+          ),
+          cell: createSimpleCell(
+            avgInfTimeU || 'avgInfTimeU',
+            activeSortColumn === 'avgInfTimeU',
+          ),
+        },
+      ],
     },
     {
-      id: inputToken,
-      accessorKey: 'inputToken',
-      header: ({ column }) => {
-        return (
-          <TooltipWrapper title={tooltips?.inputToken}>
-            <button
-              onClick={() =>
-                column.toggleSorting(column.getIsSorted() === 'asc')
-              }
-              className="flex items-center justify-start"
-            >
-              <ArrowUpDown className="mr-2 h-4 w-4" />
-              {inputToken} (K)
-            </button>
-          </TooltipWrapper>
-        );
-      },
-      cell: ({ row }) => (
-        <div className="text-right font-medium">
-          {formatScore(row.getValue(inputToken || 'inputToken'))}
-        </div>
+      id: inputTokens || 'Mean Input Tokens',
+      header: () => (
+        <TooltipWrapper title={tooltips?.inputTokens}>
+          <span>{inputTokens || 'Mean Input Tokens'} (K)</span>
+        </TooltipWrapper>
       ),
+      columns: [
+        {
+          id: avgInputTokens,
+          accessorKey: 'avgInputTokens',
+          header: createSortableHeader(
+            'avgInputTokens',
+            `${avgInputTokens || 'Mean Input Tokens'} (K)`,
+            tooltips?.avgInputTokens,
+          ),
+          cell: createSimpleCell(
+            avgInputTokens || 'avgInputTokens',
+            activeSortColumn === 'avgInputTokens',
+          ),
+        },
+        {
+          id: avgInputTokensR,
+          accessorKey: 'avgInputTokensR',
+          header: createSortableHeader(
+            'avgInputTokensR',
+            `${avgInputTokensR || 'Mean Input Tokens (Resolved)'} (K)`,
+            tooltips?.avgInputTokensR,
+          ),
+          cell: createSimpleCell(
+            avgInputTokensR || 'avgInputTokensR',
+            activeSortColumn === 'avgInputTokensR',
+          ),
+        },
+        {
+          id: avgInputTokensU,
+          accessorKey: 'avgInputTokensU',
+          header: createSortableHeader(
+            'avgInputTokensU',
+            `${avgInputTokensU || 'Mean Input Tokens (Unresolved)'} (K)`,
+            tooltips?.avgInputTokensU,
+          ),
+          cell: createSimpleCell(
+            avgInputTokensU || 'avgInputTokensU',
+            activeSortColumn === 'avgInputTokensU',
+          ),
+        },
+      ],
     },
     {
-      id: outputToken,
-      accessorKey: 'outputToken',
-      header: ({ column }) => {
-        return (
-          <TooltipWrapper title={tooltips?.outputToken}>
-            <button
-              onClick={() =>
-                column.toggleSorting(column.getIsSorted() === 'asc')
-              }
-              className="flex items-center justify-start"
-            >
-              <ArrowUpDown className="mr-2 h-4 w-4" />
-              {outputToken} (K)
-            </button>
-          </TooltipWrapper>
-        );
-      },
-      cell: ({ row }) => (
-        <div className="text-right font-medium">
-          {formatScore(row.getValue(outputToken || 'outputToken'))}
-        </div>
+      id: outputTokens || 'Mean Output Tokens',
+      header: () => (
+        <TooltipWrapper title={tooltips?.outputTokens}>
+          <span>{outputTokens || 'Mean Output Tokens'} (K)</span>
+        </TooltipWrapper>
       ),
+      columns: [
+        {
+          id: avgOutputTokens,
+          accessorKey: 'avgOutputTokens',
+          header: createSortableHeader(
+            'avgOutputTokens',
+            `${avgOutputTokens || 'Mean Output Tokens'} (K)`,
+            tooltips?.avgOutputTokens,
+          ),
+          cell: createSimpleCell(
+            avgOutputTokens || 'avgOutputTokens',
+            activeSortColumn === 'avgOutputTokens',
+          ),
+        },
+        {
+          id: avgOutputTokensR,
+          accessorKey: 'avgOutputTokensR',
+          header: createSortableHeader(
+            'avgOutputTokensR',
+            `${avgOutputTokensR || 'Mean Output Tokens (Resolved)'} (K)`,
+            tooltips?.avgOutputTokensR,
+          ),
+          cell: createSimpleCell(
+            avgOutputTokensR || 'avgOutputTokensR',
+            activeSortColumn === 'avgOutputTokensR',
+          ),
+        },
+        {
+          id: avgOutputTokensU,
+          accessorKey: 'avgOutputTokensU',
+          header: createSortableHeader(
+            'avgOutputTokensU',
+            `${avgOutputTokensU || 'Mean Output Tokens (Unresolved)'} (K)`,
+            tooltips?.avgOutputTokensU,
+          ),
+          cell: createSimpleCell(
+            avgOutputTokensU || 'avgOutputTokensU',
+            activeSortColumn === 'avgOutputTokensU',
+          ),
+        },
+      ],
     },
     {
-      id: calls,
-      accessorKey: 'calls',
-      header: ({ column }) => {
-        return (
-          <TooltipWrapper title={tooltips?.calls}>
-            <button
-              onClick={() =>
-                column.toggleSorting(column.getIsSorted() === 'asc')
-              }
-              className="flex items-center justify-start"
-            >
-              <ArrowUpDown className="mr-2 h-4 w-4" />
-              {calls}{' '}
-            </button>
-          </TooltipWrapper>
-        );
-      },
-      cell: ({ row }) => (
-        <div className="text-right font-medium">
-          {formatScore(row.getValue(calls || 'calls'))}
-        </div>
+      id: llmRequests || 'Mean LLM Calls',
+      header: () => (
+        <TooltipWrapper title={tooltips?.llmRequests}>
+          <span>{llmRequests || 'Mean LLM Calls'} (K)</span>
+        </TooltipWrapper>
       ),
+      columns: [
+        {
+          id: avgLLMRequests,
+          accessorKey: 'avgLLMRequests',
+          header: createSortableHeader(
+            'avgLLMRequests',
+            `${avgLLMRequests || 'Mean LLM Calls'} (K)`,
+            tooltips?.avgLLMRequests,
+          ),
+          cell: createSimpleCell(
+            avgLLMRequests || 'avgLLMRequests',
+            activeSortColumn === 'avgLLMRequests',
+          ),
+        },
+        {
+          id: avgLLMRequestsR,
+          accessorKey: 'avgLLMRequestsR',
+          header: createSortableHeader(
+            'avgLLMRequestsR',
+            `${avgLLMRequestsR || 'Mean LLM Calls (Resolved)'} (K)`,
+            tooltips?.avgLLMRequestsR,
+          ),
+          cell: createSimpleCell(
+            avgLLMRequestsR || 'avgLLMRequestsR',
+            activeSortColumn === 'avgLLMRequestsR',
+          ),
+        },
+        {
+          id: avgLLMRequestsU,
+          accessorKey: 'avgLLMRequestsU',
+          header: createSortableHeader(
+            'avgLLMRequestsU',
+            `${avgLLMRequestsU || 'Mean LLM Calls (Unresolved)'} (K)`,
+            tooltips?.avgLLMRequestsU,
+          ),
+          cell: createSimpleCell(
+            avgLLMRequestsU || 'avgLLMRequestsU',
+            activeSortColumn === 'avgLLMRequestsU',
+          ),
+        },
+      ],
     },
-    // {
-    //   accessorKey: 'precision',
-    //   header: ({ column }) => {
-    //     return (
-    //       <TooltipWrapper title={tooltips?.precision}>
-    //         <button
-    //           onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
-    //           className="flex items-center justify-start"
-    //         >
-    //           Precision
-    //           <ArrowUpDown className="ml-2 h-4 w-4" />
-    //         </button>
-    //       </TooltipWrapper>
-    //     );
-    //   },
-    //   cell: ({ row }) => (
-    //     <div className="text-left font-medium">
-    //       <span className="font-bold">
-    //         {formatScore(row.getValue('precision'))}
-    //       </span>
-    //       <Progress value={row.getValue('precision')} className="h-2 w-16" />
-    //     </div>
-    //   ),
-    // },
-    // {
-    //   accessorKey: 'action',
-    //   header: 'Actions',
-    //   cell: ({ row }) => {
-    //     const leaderboardData = row.original;
-    //
-    //     return (
-    //       <DropdownMenu>
-    //         {/* <DropdownMenuLabel></DropdownMenuLabel> */}
-    //         <DropdownMenuTrigger asChild>
-    //           <Button variant="ghost" className="h-8 w-8 p-0">
-    //             <span className="sr-only">Open menu</span>
-    //             <MoreHorizontal className="h-4 w-4" />
-    //           </Button>
-    //         </DropdownMenuTrigger>
-    //         <DropdownMenuContent align="end">
-    //           <DropdownMenuItem
-    //             onClick={() => navigator.clipboard.writeText(leaderboardData.id)}
-    //           >
-    //             Copy LeaderboardData ID
-    //           </DropdownMenuItem>
-    //           <DropdownMenuSeparator />
-    //           {/* <DropdownMenuItem */}
-    //           {/*   onClick={() => { */}
-    //           {/*     // TODO: add download dataset functionality */}
-    //           {/*   }} */}
-    //           {/* > */}
-    //           {/*   Download Dataset */}
-    //           {/* </DropdownMenuItem> */}
-    //           <DropdownMenuItem
-    //             onClick={() => {
-    //               // navigate to the link
-    //               // window.open(leaderboardData.siteLink, '_blank');
-    //             }}
-    //           >
-    //             Visit Site
-    //           </DropdownMenuItem>
-    //         </DropdownMenuContent>
-    //       </DropdownMenu>
-    //     );
-    //   },
-    // },
   ];
 };

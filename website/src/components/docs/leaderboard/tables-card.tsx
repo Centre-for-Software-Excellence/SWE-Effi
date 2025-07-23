@@ -13,21 +13,12 @@ import { H6 } from '@/components/md';
 import { Note } from '@/components/md/alerts';
 import { cn } from '@/lib/utils';
 import { getBasePath } from '@/lib/utils/path';
-import { columns, RankedLeaderboardData } from './table/columns';
-import {
-  columns as columnsRVU,
-  LeaderboardRVUTooltips,
-  RankedLeaderboardRVUData,
-} from './table/columns-rvu';
-import { DataTable } from './table/data-table';
+import { LeaderboardTable } from './leaderboard-table';
+import { RankedLeaderboardData } from './table/columns';
 
 export type ColumnConfig = Partial<
-  Record<
-    | (keyof RankedLeaderboardRVUData | keyof LeaderboardRVUTooltips)
-    | keyof RankedLeaderboardData,
-    string
-  >
->;
+  Record<keyof RankedLeaderboardData, string>
+> & { [key: string]: string | undefined };
 export type Table = {
   caption: string;
   tabTitle: string;
@@ -43,7 +34,7 @@ export type Table = {
 
 export type Tables = Record<string, Table>;
 
-export type TableData = RankedLeaderboardRVUData | RankedLeaderboardData;
+export type TableData = RankedLeaderboardData;
 
 export default function TablesCard({
   tablesUi,
@@ -57,10 +48,9 @@ export default function TablesCard({
   show: [boolean, boolean]; // [showLeaderboard, showLeaderboardRVU]
   showTabs?: boolean;
 }) {
-  const { leaderboard, leaderboardRVU } = tablesUi;
+  const { leaderboard } = tablesUi;
 
   const [data, setData] = useState<RankedLeaderboardData[]>([]);
-  const [dataRVU, setDataRVU] = useState<RankedLeaderboardRVUData[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   useEffect(() => {
@@ -68,13 +58,9 @@ export default function TablesCard({
       fetch(getBasePath('data/benchmark/table/leaderboard/data.json')).then(
         (res) => res.json(),
       ),
-      fetch(getBasePath('data/benchmark/table/leaderboard/data-rvu.json')).then(
-        (res) => res.json(),
-      ),
     ])
-      .then(([data1, data2]) => {
+      .then(([data1]) => {
         setData(data1);
-        setDataRVU(data2);
         setLoading(false);
       })
       .catch((err) => {
@@ -110,17 +96,11 @@ export default function TablesCard({
       )}
     >
       <TooltipProvider>
-        <Tabs
-          defaultValue={show[0] ? 'Leaderboard' : 'Leaderboard RVU'}
-          className="rounded"
-        >
-          {show[0] && show[1] && showTabs && (
+        <Tabs defaultValue={'Leaderboard'} className="rounded">
+          {showTabs && (
             <TabsList>
               <TabsTrigger value="Leaderboard" className="rounded">
                 {leaderboard.tabTitle}
-              </TabsTrigger>
-              <TabsTrigger value="Leaderboard RVU" className="rounded">
-                {leaderboardRVU.tabTitle}
               </TabsTrigger>
             </TabsList>
           )}
