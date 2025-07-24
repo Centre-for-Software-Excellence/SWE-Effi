@@ -74,7 +74,7 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
   tables: {
     leaderboard: {
       caption:
-        'Table 1 - An overall comparison of agent scaffolds and models across the token usage, duration, and LLM API call metrics. Note that scaffolds can consume a lot of resources, but still have high effectiveness under the resource-specific budget due to a higher number of issues being resolved within a smaller resource budget.',
+        'Table 1 - An overall comparison of AI systems (combinations of agent scaffolds and models) across the token usage, duration, and LLM API call metrics. Note that AI systems can consume a lot of resources, but still have high effectiveness under the resource-specific budget due to a higher number of issues being resolved within a smaller resource budget.',
       tabTitle: 'Efficiency Evaluation',
       tableTitle: 'Scaffold comparison on SWE-bench tasks',
       filterPlaceholder: 'Filter models...',
@@ -168,14 +168,14 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
         avgLLMRequestsU: '',
       },
       footerTitle:
-        'Ranked by the Effectiveness under Token Budget (EuTB) by default',
+        'Ranked by the Effectiveness under Inference Time Budget (EuITB) by default',
       footerDescription:
         'Used a subset of 50 issues randomly drawn from the well-respected SWE-bench-Verified dataset. To ensure this subset was a fair representation of the whole, we used stratified sampling, preserving the original distribution of issues across different software projects.',
       footers: [
-        "Effectiveness Under Token Budget (EuTB) - Measures how well an agent performs under a capped number of LLM input/output tokens. This reflects LLM-side efficiency, normalized across hardware and model variants.",
-        "Effectiveness under Cost Budget (EuCB) - Evaluates how efficiently the agent uses monetary cost, combining both local compute and LLM usage. Highlights differences in scaffold overhead and cost scaling. Defined as the AUC of the resolve rate vs. dollar cost per issue, capped at $1.00 USD.",
-        "Effectiveness under CPU Time Budget (EuCTB) - Measures real-world time efficiency by assessing how much resolution progress an agent makes per CPU time spent. This captures the impact of auxiliary logic like patch validation or test execution. AUC of resolve rate vs. CPU time per issue, capped at 30 minutes.",
-        'Effectiveness under Inference Time Budget (EuITB) - Focuses on LLM-side latency efficiency, measuring how well the agent uses its LLM inference time to make progress. Computed as AUC of resolve rate vs. normalized inference time per issue, also capped at 30 minutes. Unlike EuCB, this isolates LLM latency from pricing volatility.',
+        'Effectiveness Under Token Budget (EuTB) - Measures how well the AI system performs under a capped number of LLM input/output tokens. This reflects the effectiveness of AI system at using the LLM-generated tokens, independent of fluctuating API prices. Calculated as the AUC of the resolve rate vs. total tokens per issue curve (up to 2M total tokens cap).',
+        'Effectiveness under Cost Budget (EuCB) - Evaluates how efficiently the AI system uses monetary cost due to LLM usage costs, with regards to the issue resolution performance. Calculated as the AUC of the resolve rate vs. dollar cost per issue curve, capped at $1.00 USD.',
+        'Effectiveness under CPU Time Budget (EuCTB) - Measures real-world time efficiency by assessing how much issue resolution progress an AI system makes per CPU time spent. This captures the impact of auxiliary logic like patch validation or test execution. AUC of resolve rate vs. CPU time per issue, capped at 30 minutes.',
+        'Effectiveness under Inference Time Budget (EuITB) - Focuses on LLM-side latency efficiency, measuring how well the AI system uses its LLM inference time to make progress. Computed as AUC of resolve rate vs. normalized inference time per issue, also capped at 30 minutes. Unlike EuCB, this isolates LLM latency from pricing volatility.',
       ],
       footerLink: '/about/introducing-SWE-effi#accuracy-metrics',
     },
