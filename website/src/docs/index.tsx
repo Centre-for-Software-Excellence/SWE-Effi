@@ -5,9 +5,7 @@ import { StaggeredContent } from '@/components/common/staggered-content';
 import { Button } from '@/components/common/ui/button';
 import { Divider } from '@/components/common/ui/divider';
 import CitationCard from '@/components/docs/leaderboard/citation-card';
-import PartnersCard, {
-  CollaboratorsSection,
-} from '@/components/docs/leaderboard/partners-card';
+import { CollaboratorsSection } from '@/components/docs/leaderboard/partners-card';
 import TablesCard from '@/components/docs/leaderboard/tables-card';
 import { H1, P } from '@/components/md';
 import { getLeaderboardUIConfig } from '@/config/ui/leaderboard';

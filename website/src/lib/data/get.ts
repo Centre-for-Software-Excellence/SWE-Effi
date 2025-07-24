@@ -7,12 +7,12 @@ type Column = Exclude<keyof LeaderboardData, 'rank' | 'scaffold' | 'model'>;
 
 export function rankLeaderboardData(
   data: LeaderboardData[],
-  sortColumn: Column = 'tokenEfficiency',
+  sortColumn: Column = 'gpuEfficiency',
 ): RankedLeaderboardData[] {
   const comparator = (
     dataA: LeaderboardData,
     dataB: LeaderboardData,
-    column: Column = 'tokenEfficiency',
+    column: Column = 'gpuEfficiency',
   ) => {
     // For most metrics, higher is better (descending sort)
     // For time-based & cost-based metrics, lower is better (ascending sort)

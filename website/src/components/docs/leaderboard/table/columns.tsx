@@ -46,7 +46,7 @@ export type RankedLeaderboardData = LeaderboardData & { rank: number };
 export const columns = ({
   tooltips,
   headers,
-  activeSortColumn = 'tokenEfficiency',
+  activeSortColumn = 'gpuEfficiency',
   onSortColumnChange,
 }: {
   tooltips?: ColumnConfig;

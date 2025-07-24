@@ -14,7 +14,7 @@ export function LeaderboardTable({
   tooltips?: ColumnConfig;
   headers?: ColumnConfig;
 }) {
-  const [activeSortColumn, setActiveSortColumn] = useState('tokenEfficiency');
+  const [activeSortColumn, setActiveSortColumn] = useState('gpuEfficiency');
 
   const rankedData = useMemo(() => {
     return rankLeaderboardData(rawData, activeSortColumn as any);

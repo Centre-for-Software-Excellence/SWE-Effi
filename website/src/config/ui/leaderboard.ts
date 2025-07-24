@@ -42,7 +42,8 @@ interface LeaderboardUIConfig {
 }
 
 export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
-  title: 'SWE-Effi: Holistic Efficiency Evaluation of LLM-Based SWE Scaffolds', // main title
+  title:
+    'SWE-Effi: Holistic Effectiveness Evaluation of AI Systems Under Resource Constraints', // main title
   description:
     'We introduce SWE-Effi, a new leaderboard and metrics to re-evaluate AI agent systems in terms of holistic effectiveness scores beyond simple resolve rate. Focusing on software engineering, our proposed evaluation offers deeper insights into the balance between the resolve rate (the outcome) and the resources consumed (token cost and execution time).', // main description
   // links for the buttons in the header
@@ -75,8 +76,8 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
     leaderboard: {
       caption:
         'Table 1 - An overall comparison of AI systems (combinations of agent scaffolds and models) across the token usage, duration, and LLM API call metrics. Note that AI systems can consume a lot of resources, but still have high effectiveness under the resource-specific budget due to a higher number of issues being resolved within a smaller resource budget.',
-      tabTitle: 'Efficiency Evaluation',
-      tableTitle: 'Scaffold comparison on SWE-bench tasks',
+      tabTitle: 'Effectiveness Evaluation',
+      tableTitle: 'AI system comparison on SWE-bench tasks',
       filterPlaceholder: 'Filter models...',
       // if the tooltips is "" or not defined, the tooltip will not be shown
       columnHeaders: {
@@ -209,7 +210,7 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
     numCallsBarChart: {
       title: 'Mean Num. of LLM calls per instance',
       description:
-        'How many LLM requests did the agent scaffold use to attempt to issue resolution.',
+        'How many LLM requests did the scaffold use to attempt to issue resolution.',
       overview: 'Overview of the number of calls bar chart...',
       insight: 'Insight about the number of calls bar chart...',
       xAxisLabel: 'Scaffold',
@@ -218,7 +219,7 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
       xAxisDataKey: 'scaffold',
     },
     timePercentageBarChart: {
-      title: 'Agent Architecture Fingerprint: Where Does the Time Go? ',
+      title: 'AI System Architecture Fingerprint: Where Does the Time Go? ',
       description: '(on average)',
       overview: 'Overview of the time percentage bar chart...',
       insight: 'Insight about the time percentage bar chart...',
@@ -230,7 +231,7 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
     costBarChart: {
       title: 'The Cost of Success vs. The Cost of Failure',
       description:
-        'How many tokens did the agent scaffold use on successfully resolved instances compared to failed attempts.',
+        'How many tokens did the AI system use on successfully resolved instances compared to failed attempts.',
       overview: 'Overview of the cost bar chart...',
       insight: 'Insight about the cost bar chart...',
       xAxisLabel: 'Average Token Cost (Log Scale)',
@@ -239,9 +240,9 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
       yAxisDataKey: 'scaffold-model',
     },
     metricsRadarChart: {
-      title: 'Efficiency in multiple dimensions',
+      title: 'Effectiveness in multiple dimensions',
       description:
-        'How efficient is the agent scaffold in terms of resolving issues, use of tokens, monetary cost, use of local resources, and LLM inference duration. Measured in normalized AUC (Area Under Curve). Higher is better.',
+        'How efficient is the AI system in terms of resolving issues (resolve rate), use of tokens (EuTB), monetary cost (EuCB), use of local resources (EuCTB), and LLM inference duration (EuITB). Measured in normalized AUC (Area Under Curve). Higher is better.',
       overview: 'Overview of the metrics radar chart...',
       insight: 'Insight about the metrics radar chart...',
       // ignore this
