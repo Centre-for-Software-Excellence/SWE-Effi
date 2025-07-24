@@ -26,9 +26,9 @@ import { getLeaderboardUIConfig } from '@/config/ui/leaderboard';
 
 ## TL;DR
 
-Existing AI for software engineering leaderboards (e.g., SWE-bench [1]) focus solely on "resolve rate", ignoring the crucial factor of effectiveness in a resource-constrained world. This is a universal problem that also exists beyond software engineering: any AI system should be more than correct—it must also be cost-effective.
+Existing AI for software engineering leaderboards (e.g., SWE-bench [^1]) focus solely on "resolve rate", ignoring the crucial factor of effectiveness in a resource-constrained world. This is a universal problem that also exists beyond software engineering: any AI system should be more than correct—it must also be cost-effective.
 
-We introduce SWE-Effi, a set of new metrics to re-evaluate AI systems in terms of holistic effectiveness scores. We define effectiveness as the balance between the resolve rate (the outcome) and the resources consumed (e.g., token and time). In this blog, we specifically focus on the software engineering scenario by re-ranking popular AI systems for issue resolution on a subset of the SWE-bench [1] benchmark using these new, multi-dimensional metrics. Note that by “AI system”, we refer to a single software system that includes an AI model (LLM) with a software scaffold (e.g., agent) working together to solve a given task.
+We introduce SWE-Effi, a set of new metrics to re-evaluate AI systems in terms of holistic effectiveness scores. We define effectiveness as the balance between the resolve rate (the outcome) and the resources consumed (e.g., token and time). In this blog, we specifically focus on the software engineering scenario by re-ranking popular AI systems for issue resolution on a subset of the SWE-bench [^1] benchmark using these new, multi-dimensional metrics. Note that by “AI system”, we refer to a single software system that includes an AI model (LLM) with a software scaffold (e.g., agent) working together to solve a given task.
 
 **Key Finding**:
 
@@ -38,7 +38,7 @@ We introduce SWE-Effi, a set of new metrics to re-evaluate AI systems in terms o
 
 ## Introduction: Seeing the Full Picture
 
-Leaderboards for benchmarks like SWE-bench [1] provide a foundation for measuring the progress of AI coding assistants in repository-level SWE (software engineering) tasks, such as resolving issues submitted by developers. Yet, the spotlight on these leaderboards shines almost exclusively on a single metric: the resolve rate.
+Leaderboards for benchmarks like SWE-bench [^1] provide a foundation for measuring the progress of AI coding assistants in repository-level SWE (software engineering) tasks, such as resolving issues submitted by developers. Yet, the spotlight on these leaderboards shines almost exclusively on a single metric: the resolve rate.
 
 Current evaluation paradigms often operate on the implicit assumption of unlimited resources, but companies and developers live in a resource-constrained reality. Was the solution found in minutes, or did it burn through hours of expensive GPU time? Can a team even afford to run this agent on a daily basis? By ignoring such questions, current benchmarks create a disconnect from the realities of practical AI deployment. While our focus is on software engineering, this is a universal problem: a solution from any AI agent should be more than correct—it must also be cost-effective.
 
@@ -46,15 +46,15 @@ This perspective shift is critical for two key frontiers in AI-driven software d
 
 First, a trend emerges where agents consume massive LLM tokens (e.g., by test-time compute) to resolve one particular SWE task and earn marginal gains on leaderboards. This raises a critical question about the law of diminishing returns: Is a 1% improvement in resolve rate worth a 5x increase in cost? We argue that this path may not be the most promising direction for building truly scalable and accessible tools.
 
-Second, agent scaffolds are increasingly being used as foundations by research teams to train smarter, self-improving models that specialize in SWE tasks through Reinforcement Learning (RL). In long-horizon RLs (like DeepResearch Agent [2] and SkyRL [3] training), they usually have effectiveness requirements so that the RL process won't run forever. In the SWE task scenario, each RL training step, or "rollout," involves setting up the project environment, LLM reasoning, code execution, and test validation. If an agent scaffold is slow or expensive, it hinders the entire RL process. High latency per rollout becomes a significant barrier to effective RL training, limiting progress across the community.
+Second, agent scaffolds are increasingly being used as foundations by research teams to train smarter, self-improving models that specialize in SWE tasks through Reinforcement Learning (RL). In long-horizon RLs (like DeepResearch Agent [^2] and SkyRL [^3] training), they usually have effectiveness requirements so that the RL process won't run forever. In the SWE task scenario, each RL training step, or "rollout," involves setting up the project environment, LLM reasoning, code execution, and test validation. If an agent scaffold is slow or expensive, it hinders the entire RL process. High latency per rollout becomes a significant barrier to effective RL training, limiting progress across the community.
 
-For instance, DeepSWE [4] developed a custom scaffold to ensure low-latency performance for RL. The Sky-RL [3] project uses OpenHands [5] but requires extensive optimizations to make training feasible. Similarly, SWE-RL [6] employs the lightweight Agentless-Mini yet avoids direct execution feedback in RL, likely due to high execution costs. These challenges arise because RL relies on massive-scale trial and error, directly affected by the scaffold's performance.
+For instance, DeepSWE [^4] developed a custom scaffold to ensure low-latency performance for RL. The Sky-RL [^3] project uses OpenHands [^5] but requires extensive optimizations to make training feasible. Similarly, SWE-RL [^6] employs the lightweight Agentless-Mini yet avoids direct execution feedback in RL, likely due to high execution costs. These challenges arise because RL relies on massive-scale trial and error, directly affected by the scaffold's performance.
 
-To bridge this gap, we introduce the SWE-Effi leaderboard. While not a new benchmark, we re-evaluate and analyze AI systems on top of the well-established SWE-bench [1]. SWE-Effi offers a holistic perspective on AI system evaluation and highlights performance under resource constraints, emphasizing effectiveness under the cost budget. Moreover, SWE-Effi serves as a valuable indicator for identifying promising foundations in Reinforcement Learning for SWE tasks.
+To bridge this gap, we introduce the SWE-Effi leaderboard. While not a new benchmark, we re-evaluate and analyze AI systems on top of the well-established SWE-bench [^1]. SWE-Effi offers a holistic perspective on AI system evaluation and highlights performance under resource constraints, emphasizing effectiveness under the cost budget. Moreover, SWE-Effi serves as a valuable indicator for identifying promising foundations in Reinforcement Learning for SWE tasks.
 
 ## Our Contribution
 
-To be clear, SWE-Effi is designed to complement existing benchmarks like SWE-bench [1]. Our primary contribution is a new evaluation perspective, metrics, and a public leaderboard. We conducted an exploratory study, which analyzed five well-known scaffoldings (AutoCodeRover [7], SWE-agent [8], OpenHands [5], Agentless [9], Agentless-Mini [6]) paired with three different LLMs (GPT-4o-mini [10], Llama-3.3-70b [11], Qwen3-32b [12]) on a representative subset of SWE-bench issues. While we tracked the final resolve rate, our main focus was on evaluating the overall AI system’s time and resource effectiveness in resolving issues and analyzing the characteristics behind it.
+To be clear, SWE-Effi is designed to complement existing benchmarks like SWE-bench [^1]. Our primary contribution is a new evaluation perspective, metrics, and a public leaderboard. We conducted an exploratory study, which analyzed five well-known scaffoldings (AutoCodeRover [^7], SWE-agent [^8], OpenHands [^5], Agentless [^9], Agentless-Mini [^6]) paired with three different LLMs (GPT-4o-mini [^10], Llama-3.3-70b [^11], Qwen3-32b [^12]) on a representative subset of SWE-bench issues. While we tracked the final resolve rate, our main focus was on evaluating the overall AI system’s time and resource effectiveness in resolving issues and analyzing the characteristics behind it.
 
 The findings we present are not intended to be a final, definitive verdict on these five scaffolds. Rather, they serve as an example of the deeper understanding we can unlock by looking at the same problems from a different perspective.
 
@@ -62,15 +62,15 @@ The findings we present are not intended to be a final, definitive verdict on th
 
 To ensure our leaderboard provides meaningful and fair comparisons, we meticulously selected the baseline scaffolds and LLMs and controlled the experiment environment as described below.
 
-Scaffold Selection and Configuration: We selected five popular, actively maintained open-source scaffolds from the top of the SWE-bench [1] leaderboard: AutoCodeRover [7], OpenHands [5], SWE-agent [8], Agentless [9], and Agentless-mini [6]. AutoCodeRover, Agentless and Agentless-Mini are pipeline-based scaffolds that use LLMs to solve software engineering problems in a structured workflow, whereas OpenHands and SWE-Agent are representative agentic-style scaffolds designed for software engineering tasks. They enable large language models (LLMs) to autonomously plan, edit code, and execute commands by interacting with external tools (e.g., bash), thereby facilitating end-to-end task completion. We configured those scaffolds based on their official guidelines and adhered to their default iteration or generation limits to provide a baseline for "out-of-the-box" performance, except for the termination criteria for SWE-Agent. For SWE-Agent, we adjusted its API budget to a strict $1 per issue. This forces the agent to operate under the same kind of financial pressure a real team would face.
+Scaffold Selection and Configuration: We selected five popular, actively maintained open-source scaffolds from the top of the SWE-bench [^1] leaderboard: AutoCodeRover [^7], OpenHands [^5], SWE-agent [^8], Agentless [^9], and Agentless-mini [^6]. AutoCodeRover, Agentless and Agentless-Mini are pipeline-based scaffolds that use LLMs to solve software engineering problems in a structured workflow, whereas OpenHands and SWE-Agent are representative agentic-style scaffolds designed for software engineering tasks. They enable large language models (LLMs) to autonomously plan, edit code, and execute commands by interacting with external tools (e.g., bash), thereby facilitating end-to-end task completion. We configured those scaffolds based on their official guidelines and adhered to their default iteration or generation limits to provide a baseline for "out-of-the-box" performance, except for the termination criteria for SWE-Agent. For SWE-Agent, we adjusted its API budget to a strict $1 per issue. This forces the agent to operate under the same kind of financial pressure a real team would face.
 
 To ensure our time duration measurements were accurate and unbiased, we explicitly disabled any parallel processing capabilities for the five scaffolds. This allowed us to measure the true, sequential processing time of each scaffold's core logic, making our time-based comparisons direct and fair.
 
 LLM Selection: We selected models that represent a practical balance of performance and cost, making them suitable for production environments where budgets are a key consideration. To analyze performance across different resource conditions, our selection covers a range of types and sizes:
 
-- GPT-4o-mini [10]: A proprietary model from OpenAI, designed for high efficiency and speed. It serves as a baseline for performance in cost-sensitive scenarios.
-- Llama-3.3-70b-Instruct [11]: A large, open-source model from Meta. Its 70B parameter size provides strong, general-purpose capabilities and represents a high-performance option within the open-source ecosystem. Note that this model was already quantized to FP8 format.
-- Qwen3-32b [12]: A mid-sized, 32B parameter open-source model from Alibaba, noted for its reasoning abilities. We selected it specifically for its strong reasoning abilities relative to its size. This allows us to evaluate the performance of a more lightweight but capable alternative, which is an attractive profile for resource-constrained environments.
+- GPT-4o-mini [^10]: A proprietary model from OpenAI, designed for high efficiency and speed. It serves as a baseline for performance in cost-sensitive scenarios.
+- Llama-3.3-70b-Instruct [^11]: A large, open-source model from Meta. Its 70B parameter size provides strong, general-purpose capabilities and represents a high-performance option within the open-source ecosystem. Note that this model was already quantized to FP8 format.
+- Qwen3-32b [^12]: A mid-sized, 32B parameter open-source model from Alibaba, noted for its reasoning abilities. We selected it specifically for its strong reasoning abilities relative to its size. This allows us to evaluate the performance of a more lightweight but capable alternative, which is an attractive profile for resource-constrained environments.
 
 To use these models, we accessed GPT-4o-mini via the OpenAI API, Llama-3.3-70b via Together.AI's inference service, and Qwen3-32b via Alibaba Cloud's API. We modified the agent scaffoldings where necessary to handle specific API behaviors, such as the streaming-only output of Qwen3-32b, to ensure consistent operation.
 
@@ -121,7 +121,7 @@ In summary, we re-evaluate AI system performance using SWE-Effi, a suite of metr
 
 By combining this setup with our detailed measurement, we have created a leaderboard that reflects not just success, but the true cost of that success. The following sections present the data from our experiments and our initial observations.
 
-Table 1 below presents a quantitative result of the five selected agent scaffolds, each paired with three distinct Large Language Models (LLMs), evaluated on a curated subset of the SWE-bench-Verified [13] benchmark. The metrics reported are aggregated across all issue instances, including both resolved and unresolved issues. The columns are defined as follows:
+Table 1 below presents a quantitative result of the five selected agent scaffolds, each paired with three distinct Large Language Models (LLMs), evaluated on a curated subset of the SWE-bench-Verified [^13] benchmark. The metrics reported are aggregated across all issue instances, including both resolved and unresolved issues. The columns are defined as follows:
 
 - Total time (seconds): This metric measures the total average duration taken per one instance; calculated as the sum of the CPU and normalised inference time.
 - CPU Time (seconds): This metric measures the average computational duration consumed by the AI system's scaffolding for local operations, exclusive of LLM inference latency. It serves as a proxy for the framework's intrinsic overhead and architectural complexity.
@@ -235,27 +235,28 @@ In this work, we explored an evaluation paradigm for AI software engineering sys
 
 ## References
 
-1. SWE-Bench: [https://www.swebench.com](https://www.swebench.com)
+[^1]: SWE-Bench: [https://www.swebench.com](https://www.swebench.com)
 
-2. DeepResearch Agent: [https://github.com/SkyworkAI/DeepResearchAgent](https://github.com/SkyworkAI/DeepResearchAgent)
+[^2]: DeepResearch Agent: [https://github.com/SkyworkAI/DeepResearchAgent](https://github.com/SkyworkAI/DeepResearchAgent)
 
-3. SkyRL: [https://github.com/NovaSky-AI/SkyRL](https://github.com/NovaSky-AI/SkyRL)
+[^3]: SkyRL: [https://github.com/NovaSky-AI/SkyRL](https://github.com/NovaSky-AI/SkyRL)
 
-4. DeepSWE: [https://www.together.ai/blog/deepswe](https://www.together.ai/blog/deepswe)
+[^4]: DeepSWE: [https://www.together.ai/blog/deepswe](https://www.together.ai/blog/deepswe)
 
-5. OpenHands: [https://github.com/All-Hands-AI/OpenHands](https://github.com/All-Hands-AI/OpenHands)
+[^5]: OpenHands: [https://github.com/All-Hands-AI/OpenHands](https://github.com/All-Hands-AI/OpenHands)
 
-6. SWE-RL: [https://arxiv.org/abs/2502.18449](https://arxiv.org/abs/2502.18449)
-7. AutoCodeRover: [https://arxiv.org/abs/2404.05427](https://arxiv.org/abs/2404.05427)
+[^6]: SWE-RL: [https://arxiv.org/abs/2502.18449](https://arxiv.org/abs/2502.18449)
 
-8. SWE-Agent: [https://arxiv.org/abs/2405.15793](https://arxiv.org/abs/2405.15793)
+[^7]: AutoCodeRover: [https://arxiv.org/abs/2404.05427](https://arxiv.org/abs/2404.05427)
 
-9. Agentless: [https://arxiv.org/abs/2407.01489](https://arxiv.org/abs/2407.01489)
+[^8]: SWE-Agent: [https://arxiv.org/abs/2405.15793](https://arxiv.org/abs/2405.15793)
 
-10. GPT-4o-mini: [https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/](https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/)
+[^9]: Agentless: [https://arxiv.org/abs/2407.01489](https://arxiv.org/abs/2407.01489)
 
-11. Llama-3.3-70b: [https://www.llama.com/docs/model-cards-and-prompt-formats/llama3_3/](https://www.llama.com/docs/model-cards-and-prompt-formats/llama3_3/)
+[^10]: GPT-4o-mini: [https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence](https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/)
 
-12. Qwen3-32b: [https://qwenlm.github.io/blog/qwen3/](https://qwenlm.github.io/blog/qwen3/)
+[^11]: Llama-3.3-70b: [https://www.llama.com/docs/model-cards-and-prompt-formats/llama3_3](https://www.llama.com/docs/model-cards-and-prompt-formats/llama3_3/)
 
-13. SWE-bench Verified: [https://openai.com/index/introducing-swe-bench-verified/](https://openai.com/index/introducing-swe-bench-verified/)
+[^12]: Qwen3-32b: [https://qwenlm.github.io/blog/qwen3](https://qwenlm.github.io/blog/qwen3/)
+
+[^13]: SWE-bench Verified: [https://openai.com/index/introducing-swe-bench-verified](https://openai.com/index/introducing-swe-bench-verified/)

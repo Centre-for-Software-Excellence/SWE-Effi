@@ -312,6 +312,10 @@
   table {
     @apply my-0!;
   }
+
+  .footnotes h2 {
+    @apply hidden;
+  }
 }
 
 @layer components {

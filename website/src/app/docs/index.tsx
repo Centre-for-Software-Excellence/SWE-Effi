@@ -49,7 +49,7 @@ export default function DocsPage() {
       const scrollToElement = () => {
         const element = document.querySelector(location.hash);
         if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
+          element.scrollIntoView({ behavior: 'instant' });
           return true;
         }
         return false;
