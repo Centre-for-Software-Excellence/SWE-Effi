@@ -2,7 +2,6 @@ import { Menu, X } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 
 import { Button } from '@/components/common/ui/button';
-import { UnderlineLink } from '@/components/common/underline-link';
 import { getTopbarUIConfig } from '@/config/ui';
 import { cn } from '@/lib/utils';
 import { UnderlineText } from '../common/ui/underline-text';

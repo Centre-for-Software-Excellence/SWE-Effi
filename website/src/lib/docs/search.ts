@@ -3,6 +3,7 @@ import MiniSearch, {
   SearchResult,
   Suggestion,
 } from 'minisearch';
+
 import { getBasePath } from '@/lib/utils/path';
 
 type Options = SearchOptions & {

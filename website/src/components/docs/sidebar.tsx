@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { ChevronDown, ChevronRight } from 'lucide-react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
-import { UnderlineLink } from '@/components/common/underline-link';
 import { getSidebarUIConfig } from '@/config/ui';
 import { getDocsStructure, type DocSection } from '@/lib/docs/structure';
 import { cn } from '@/lib/utils';

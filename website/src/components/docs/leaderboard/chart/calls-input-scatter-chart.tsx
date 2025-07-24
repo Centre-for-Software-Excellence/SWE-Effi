@@ -21,7 +21,7 @@ import { useChartSettings } from '@/hooks/chart/use-chart-settings';
 import { cn } from '@/lib/utils';
 import { ChartCard } from './atoms/chart-card';
 import { ChartControls } from './atoms/chart-controls';
-import { ChartExplanation } from './atoms/chart-explanation';
+// import { ChartExplanation } from './atoms/chart-explanation';
 import { ChartHeader } from './atoms/chart-header';
 import { ChartSettings, ChartSettingsButton } from './atoms/chart-settings';
 import { ChartProps, ChartRendererProps } from './types';
@@ -60,17 +60,17 @@ function generateLogTicks(min: number, max: number): number[] {
 export function CallsInputScatterChart({
   title,
   description,
-  overview,
-  insight,
+  // overview,
+  // insight,
   xAxisLabel,
   yAxisLabel,
   xAxisDataKey,
   className,
 }: ChartProps) {
-  const explanationContent = {
-    overview,
-    insight,
-  };
+  // const explanationContent = {
+  //   overview,
+  //   insight,
+  // };
 
   const {
     data: chartData,
@@ -108,7 +108,7 @@ export function CallsInputScatterChart({
     <HoverableLegend keys={activeKeys || []} config={chartConfig || {}} />
   );
 
-  const explanation = <ChartExplanation content={explanationContent} />;
+  // const explanation = <ChartExplanation content={explanationContent} />;
 
   return (
     <>
