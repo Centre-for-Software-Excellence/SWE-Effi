@@ -2,18 +2,7 @@
 title: 'SWE-Effi: Re-Evaluating SWE Agent Solutions for their Efficiency'
 date: 2025-07-18
 tags: ['Benchmark', 'Leaderboard', 'LLM']
-author:
-  [
-    Zhiyu Fan,
-    Kirill Vasilevski,
-    Dayi Lin,
-    Boyuan Chen,
-    Yihao Chen,
-    Zhiqing Zhong,
-    Jie Zhang,
-    Pinjia He,
-    Ahmed E Hassan,
-  ]
+author: 'SWE-Effi Team'
 ---
 
 import { Divider } from '@/components/common/ui/divider';
@@ -30,13 +19,11 @@ Existing AI for software engineering leaderboards (e.g., SWE-bench) focus solely
 
 We introduce SWE-Effi, a set of new metrics to re-evaluate AI systems in terms of holistic effectiveness scores. We define effectiveness as the balance between the resolve rate (the outcome) and the resources consumed (e.g., token and time). In this blog, we specifically focus on the software engineering scenario by re-ranking popular AI systems for issue resolution on a subset of the SWE-bench benchmark using these new, multi-dimensional metrics. Note that by “AI system”,  we refer to a single software system that includes an AI model (LLM) with a software scaffold (e.g., agent) working together to solve a given task.
 
-**Key Finding**:
+  **Key Finding**:
 
 - An agent's effectiveness depends not just on the scaffold itself but on how well it integrates with the base model, which is key to achieving strong performance in a resource-efficient manner.
-
 - We identified systemic challenges such as the “Token Snowball” effect and, more significantly, a pattern of “expensive failures.” In these cases, agents consume excessive resources while stuck on unsolvable tasks—an issue that not only limits practical deployment but also drives up the cost of failed rollouts during RL training.
-
-- We observed a clear trade-off between effectiveness under the token budget and effectiveness under the time budget. This balance plays a crucial role in managing project budgets and enabling scalable reinforcement learning, where fast responses are essential.
+- We found a clear trade-off between token-based cost-efficiency and latency-based time-efficiency. This balance plays a crucial role in managing project budgets and enabling scalable reinforcement learning, where fast responses are essential.
 
 ## Introduction: Seeing the Full Picture
 
@@ -53,7 +40,6 @@ Second, agent scaffolds are increasingly being used as foundations by research t
 For instance, DeepSWE [1] developed a custom scaffold to ensure low-latency performance for RL. The Sky-RL [2] project uses OpenHands but requires extensive optimizations to make training feasible. Similarly, SWE-RL employs the lightweight Agentless-Mini yet avoids direct execution feedback in RL, likely due to high execution costs. These challenges arise because RL relies on massive-scale trial and error, directly affected by the scaffold's performance.
 
 To bridge this gap, we introduce the SWE-Effi leaderboard. While not a new benchmark, we re-evaluate and analyze AI systems on top of the well-established SWE-bench. SWE-Effi offers a holistic perspective on AI system evaluation and highlights performance under resource constraints, emphasizing effectiveness under the cost budget. Moreover, SWE-Effi serves as a valuable indicator for identifying promising foundations in Reinforcement Learning for SWE tasks.
-
 ## Our Contribution
 
 To be clear, SWE-Effi is designed to complement existing benchmarks like SWE-bench. Our primary contribution is a new evaluation perspective, metrics, and a public leaderboard. We conducted an exploratory study, which analyzed five well-known scaffoldings (AutoCodeRover, SWE-agent, OpenHands, Agentless, Agentless-Mini) paired with three different LLMs (GPT-4o-mini, Llama-3.3-70b, Qwen3-32b) on a representative subset of SWE-bench issues. While we tracked the final resolve rate, our main focus was on evaluating overall AI system’s time and resource effectiveness in resolving issues and analyzing the characteristics behind it.
@@ -62,27 +48,27 @@ The findings we present are not intended to be a final, definitive verdict on th
 
 ## Experimental Settings
 
-To ensure our leaderboard provides meaningful and fair comparisons, we meticulously selected the baseline scaffolds and LLMs and controlled the experiment environment as described below.
+To ensure our leaderboard provides meaningful and fair comparisons, we meticulously selected the baseline agent scaffolds and LLMs and controlled the experiment environment as described below.
 
-Scaffold Selection and Configuration: We selected five popular, actively maintained open-source  scaffolds from the top of the SWE-bench leaderboard: AutoCodeRover, OpenHands, SWE-agent, Agentless, and Agentless-mini. AutoCodeRover [3], Agentless [4] and Agentless-Mini [5] are pipeline-based scaffolds that use LLMs to solve software engineering problems in a structured workflow, whereas OpenHands [6] and SWE-Agent [7] are representative agentic-style scaffolds designed for software engineering tasks. They enable large language models (LLMs) to autonomously plan, edit code, and execute commands by interacting with external tools (e.g., bash), thereby facilitating end-to-end task completion. We configured those scaffolds based on their official guidelines and adhered to their default iteration or generation limits to provide a baseline for "out-of-the-box" performance, except for the termination criteria for SWE-Agent. For SWE-Agent, we adjusted its API budget to a strict $1 per issue. This forces the agent to operate under the same kind of financial pressure a real team would face.
+Scaffold Selection and Configuration: We selected five popular, actively maintained open-source agents from the top of the SWE-bench leaderboard: AutoCodeRover, OpenHands, SWE-agent, Agentless, and Agentless-mini. AutoCodeRover [3], Agentless [4] and Agentless-Mini [5] are pipeline-based scaffolds that use LLMs to solve software engineering problems in a structured workflow, whereas OpenHands [6] and SWE-Agent [7] are representative agentic-style scaffolds designed for software engineering tasks. They enable large language models (LLMs) to autonomously plan, edit code, and execute commands by interacting with external tools (e.g., bash), thereby facilitating end-to-end task completion. We configured those agents based on their official guidelines and adhered to their default iteration or generation limits to provide a baseline for "out-of-the-box" performance, except for the termination criteria for SWE-Agent. For SWE-Agent, we adjusted its API budget to a strict $1 per issue. This forces the agent to operate under the same kind of financial pressure a real team would face.
 
-To ensure our time duration measurements were accurate and unbiased, we explicitly disabled any parallel processing capabilities for the five scaffolds. This allowed us to measure the true, sequential processing time of each scaffold's core logic, making our time-based comparisons direct and fair.
+To ensure our time duration measurements were accurate and unbiased, we explicitly disabled any parallel processing capabilities for the five agent scaffolds. This allowed us to measure the true, sequential processing time of each agent's core logic, making our time-based comparisons direct and fair.
 
 LLM Selection: We selected models that represent a practical balance of performance and cost, making them suitable for production environments where budgets are a key consideration. To analyze performance across different resource conditions, our selection covers a range of types and sizes:
 
 - GPT-4o-mini: A proprietary model from OpenAI, designed for high efficiency and speed. It serves as a baseline for performance in cost-sensitive scenarios.
 
-- Llama-3.3-70b-Instruct: A large, open-source model from Meta. Its 70B parameter size provides strong, general-purpose capabilities and represents a high-performance option within the open-source ecosystem. Note that this model was already quantized to FP8 format.
+- To use these models, we accessed GPT-4o-mini via the OpenAI API, Llama-3.3-70b via Together.AI's inference service, and Qwen3-32b via Alibaba Cloud's API. We modified the agent scaffoldings where necessary to handle specific API behaviors, such as the streaming-only output of Qwen3-32b, to ensure consistent operation.
 
-- Qwen3-32b: A mid-sized, 32B parameter open-source model from Alibaba, noted for its reasoning abilities. We selected it specifically for its strong reasoning abilities relative to its size. This allows us to evaluate the performance of a more lightweight but capable alternative, which is an attractive profile for resource-constrained environments.
+- Benchmark: We evaluated all agent-model combinations on a focused subset of 50 issues randomly drawn from the well-respected SWE-bench-Verified dataset. To ensure this subset was a fair representation of the whole, we used stratified sampling, preserving the original distribution of issues across different software projects. This approach ensures our findings are representative while keeping the experiment manageable.
 
 To use these models, we accessed GPT-4o-mini via the OpenAI API, Llama-3.3-70b via Together.AI's inference service, and Qwen3-32b via Alibaba Cloud's API. We modified the agent scaffoldings where necessary to handle specific API behaviors, such as the streaming-only output of Qwen3-32b, to ensure consistent operation.
 
-Benchmark: We evaluated all scaffold-model combinations (each combination is a single AI system) on a focused subset of 50 issues randomly drawn from the well-respected SWE-bench-Verified dataset. To ensure this subset was a fair representation of the whole, we used stratified sampling, preserving the original distribution of issues across different software projects. This approach ensures our findings are representative while keeping the experiment manageable. We make our subset publicly available on HuggingFace.
+Benchmark: We evaluated all agent-model combinations on a focused subset of 50 issues randomly drawn from the well-respected SWE-bench-Verified dataset. To ensure this subset was a fair representation of the whole, we used stratified sampling, preserving the original distribution of issues across different software projects. This approach ensures our findings are representative while keeping the experiment manageable. We make our subset publicly available on HuggingFace.
 
-To capture the fine-grained data for our analysis, we augmented each agent's logging and added our own profiling code (more details in the GitHub repository) to collect the precise time cost regarding local CPU computation and the backend LLM inference for each AI system.
+To capture the fine-grained data for our analysis, we augmented each agent's logging and added our own profiling code to collect the precise time cost regarding local CPU computation and the backend LLM inference for each agent scaffold.
 
-A major obstacle in evaluating AI systemsis that the absolute raw inference time depends heavily on the service provider's hardware (e.g., OpenAI vs. Together.AI), and also on the transient server load. To mitigate this, we introduce a standardized metric called **Normalized Inference Time**. The goal is to estimate how long an LLM call would have taken if it were run on a single, consistent hardware and network baseline, thereby isolating the AI system’s intrinsic workload from different backend LLM providers.
+A major obstacle in evaluating scaffolds is that the absolute raw inference time depends heavily on the service provider's hardware (e.g., OpenAI vs. Together.AI), and also on the transient server load. To mitigate this, we introduce a standardized metric called **Normalized Inference Time**. The goal is to estimate how long an LLM call would have taken if it were run on a single, consistent hardware and network baseline, thereby isolating the agent's intrinsic workload from different backend LLM providers.
 
 We chose OpenAI's GPT-4o-mini API as our performance baseline due to its stable and widely representative performance, and we trained a regression predictive model based on 515,041 individual API call logs from our experiments running five scaffolds with GPT-4o-mini. For each call, we extracted the number of input tokens, the number of output tokens, and the total wall-clock duration from sending the request to receiving the complete response.
 
@@ -103,37 +89,38 @@ The components of this model are:
 - $4.266e^-5$ (Per-Input-Token Latency $\beta_1$): The time cost to process each input token, corresponding to the model's "prefill" phase.
 - $4.999e^-3$ (Per-Output-Token Latency $\beta_2$): The time cost to generate each output token, corresponding to the "decoding" phase.
 
-This validated regression model serves as our universal yardstick for standardizing time. For every LLM call made by any scaffold—no matter the model or API provider—we calculated its Normalized Inference Time by applying our formula to its input and output token counts. This process translates raw latency from different services into a single, hardware-agnostic value, representing the workload's duration on a consistent baseline. This allows for a fair and direct comparison of computational cost across all experiments.
+This validated regression model serves as our universal yardstick for standardizing time. For every LLM call made by any agent—no matter the model or API provider—we calculated its Normalized Inference Time by applying our formula to its input and output token counts. This process translates raw latency from different services into a single, hardware-agnostic value, representing the workload's duration on a consistent baseline. This allows for a fair and direct comparison of computational cost across all experiments.
 
-In summary, we re-evaluate AI system performance using SWE-Effi, a suite of metrics designed to provide a holistic view. To create a standardized "score" for each dimension of effectiveness, we first calculate the Area Under the Curve (AUC) for each metric. The X-axis of each curve (e.g., tokens, cost, time) is capped at a pre-defined upper bound to ensure a consistent calculation area for all AI systems. Then, each raw AUC value is normalized into a score between 0 and 1, where 1 represents the maximum possible effectiveness within that budget. Our leaderboard is built on the following core metrics:
+In summary, we re-evaluate agent performance using SWE-Effi, a suite of metrics designed to provide a holistic view. To create a standardized "score" for each dimension of efficiency, we first calculate the Area Under the Curve (AUC) for each metric. The X-axis of each curve (e.g., tokens, cost, time) is capped at a pre-defined upper bound to ensure a consistent calculation area for all agents. Then, each raw AUC value is normalized into a score between 0 and 1, where 1 represents the maximum possible efficiency within that budget. Our leaderboard is built on the following core metrics:
 
-### Accuracy Metrics:
+Effectiveness Metrics:
 
-- Resolve Rate: The fundamental bottom line—what percentage of problems can the AI system solve?
+- Resolve Rate: The fundamental bottom line—what percentage of problems can the agent solve?
 
-### Effectiveness Metrics (calculated as the AUC under the respective curve):
-- Effectiveness Under Token Budget (EuTB): Measures how effectively an AI system uses LLM tokens. This reflects the core computational work required by the LLM, independent of fluctuating API prices. 
+Efficiency Metrics (AUC-based):
+
+- Token Efficiency: Measures how effectively an agent uses LLM tokens. This reflects the core computational work required by the LLM, independent of fluctuating API prices.
   - Curve: Cumulative Solved Cases vs. Cumulative Total Tokens (up to a 2 million token budget cap).
-- Effectiveness under Cost Budget (EuCB): Assesses the AI system's real-world financial viability. While closely related to token usage, this metric translates tokens into a standardized dollar value, making the cost tangible and directly comparable to development budgets.
+- Cost Efficiency: Assesses the agent's real-world financial viability. While closely related to token usage, this metric translates tokens into a standardized dollar value, making the cost tangible and directly comparable to development budgets.
   - Curve: Cumulative Solved Cases vs. Cumulative Monetary Cost (up to 1 USD financial budget cap).
   - Note: Costs are calculated using the standardized pricing from OpenRouter as a consistent reference for our experiments, and are provided along with the source code.
-- Effectiveness under CPU Time Budget (EuCTB): Measures the performance of the AI system's local logic, independent of the LLM. This reveals the framework’s own overhead.
+- CPU Efficiency: Measures the performance of the agent's local logic, independent of the LLM. This reveals the framework's own overhead.
   - Curve: Cumulative Solved Cases vs. Cumulative CPU Time (up to a 30-minute time cap).
-- Effectiveness under Inference Time Budget (EuITB): Measures the AI system's LLM-related latency, standardized across different hardware backends
+- Inference Time Efficiency: Measures the agent's LLM-related latency, standardized across different hardware backends
   - Curve: Cumulative Solved Cases vs. Cumulative Normalized Inference Time (up to a 30-minute time cap)
 
 By combining this setup with our detailed measurement, we have created a leaderboard that reflects not just success, but the true cost of that success. The following sections present the data from our experiments and our initial observations.
 
-Table 1 below presents a quantitative result of the five selected agent scaffolds, each paired with three distinct Large Language Models (LLMs), evaluated on a curated subset of the SWE-bench-Verified benchmark. The metrics reported are aggregated across all issue instances, including both resolved and unresolved issues. The columns are defined as follows:
+Table 1 presents a quantitative result of the five selected agent scaffolds, each paired with three distinct Large Language Models (LLMs), evaluated on a curated subset of the SWE-bench-Verified benchmark. The metrics reported are aggregated across all issue instances, including both resolved and unresolved issues. The columns are defined as follows:
 
 - Total time (seconds): This metric measures the total average duration taken per one instance; calculated as the sum of the CPU and normalised inference time.
-- CPU Time (seconds): This metric measures the average computational duration consumed by the AI system's scaffolding for local operations, exclusive of LLM inference latency. It serves as a proxy for the framework's intrinsic overhead and architectural complexity.
+- CPU Time (seconds): This metric measures the average computational duration consumed by the agent's scaffolding for local operations, exclusive of LLM inference latency. It serves as a proxy for the framework's intrinsic overhead and architectural complexity.
 - Inference Cost (Average Inference Cost): This section delineates the computational workload delegated to the LLM. Note that the number of input tokens and output tokens are directly correlated with the financial expenditure associated with API utilization.
   - Input Tokens (k): Specifies the mean number of tokens (in thousands) provided as part of the model input.
   - Output Tokens (k): Specifies the mean number of tokens (in thousands) generated by the LLM across all issue instances..
   - Calls: Denotes the mean frequency of API requests to the LLM per trial. This metric is a key variable in our efficiency analysis, as a high request frequency is hypothesized to induce super-linear cost scaling effects.
   - (Normalized) Inference Time (seconds): This metric quantifies the mean LLM inference time per issue instance. It serves as a proxy for the framework's intrinsic overhead and architectural complexity. It provides a single hardware-agnostic value that represents the inference workload's duration for a consistent comparison between model serving backends.
-- Resolve rate (%): This metric measures the resolution rate of the issue fixes generated by the AI system. This is the main evaluation metric of the existing SWE evaluations and benchmarks today. 
+- Resolve rate (%): This metric measures the resolution rate of the issue fixes generated by the scaffold. This is the main evaluation metric of the existing SWE evaluations and benchmarks today.
 
 ## Observations
 
@@ -153,11 +140,10 @@ Our experiments uncovered several crucial trends and trade-offs that are vital f
   className="lg:p-0"
 />
 <h6 align="center" className="text-foreground">
-  Figure 1 - Scaffold performance comparison based on the five effectiveness
+  Figure 1 - Scaffold performance comparison based on the five efficiency
   metrics presented above (all measured as normalized AUC except for resolve
-  rate): effectiveness under token budget (EuTB), effectiveness under cost
-  budget (EuCB), effectiveness under CPU time budget (EuCTB), and effectiveness
-  under inference time budget (EuITB). Higher is better.
+  rate): token efficiency, cost efficiency, CPU efficiency, and inference
+  efficiency. Higher is better.
 </h6>
 <br />
 
@@ -165,25 +151,25 @@ Our experiments uncovered several crucial trends and trade-offs that are vital f
 
 Table 1 highlights that the choice of base model has a stronger impact on outcome quality than scaffold design alone. While scaffolds such as OpenHands and SWE-Agent were previously among the top performers on SWE-bench, their performance drops significantly when paired with alternative LLMs. For example, SWE-Agent paired with Qwen3-32B achieves a 28% resolution rate with 35.5 API calls and 440K input tokens, but this drops to just 10% when using GPT-4o-mini, despite requiring 181 calls and over 8.1M input tokens—more than 18× the token cost. Similarly, OpenHands achieves 34% resolution with Qwen3-32B, but falls to 12–20% when paired with GPT-4o-mini or Llama-3-70B.
 
-In contrast, AutoCodeRover, a simpler scaffold, consistently delivers a competitive or superior performance. With Qwen3-32B, it achieves a 38% resolution rate using only 14.7 API calls and 55.5K input tokens—far more efficient than its peers. Even with GPT-4o-mini, it maintains 12% resolution, outperforming OpenHands and SWE-Agent at the same model setting. These results underscore the importance of AI system’s LLM–scaffold synergy, where the effectiveness of a scaffold is tightly coupled with the reasoning capabilities and effectiveness under token budget (EuTB) of its underlying LLM.
+In contrast, AutoCodeRover, a simpler scaffold, consistently delivers competitive or superior performance. With Qwen3-32B, it achieves a 38% resolution rate using only 14.7 API calls and 55.5K input tokens—far more efficient than its peers. Even with GPT-4o-mini, it maintains 12% resolution, outperforming OpenHands and SWE-Agent at the same model setting. These results underscore the importance of LLM–scaffold synergy, where the effectiveness of a scaffold is tightly coupled with the reasoning capabilities and token efficiency of its underlying LLM.
 
 <TimePercentageBarChart
   {...getLeaderboardUIConfig().analytics.timePercentageBarChart}
   className="lg:p-0"
 />
 <h6 align="center" className="text-foreground">
-  Figure 2 - Where the AI system spent time during the issue resolution process
+  Figure 2 - Where the agent scaffold spent time during the issue resolution
   process
 </h6>
 <br />
 
 Another key pattern is the performance of Agentless, which leads all scaffolds in resolution rate (48% with Qwen3-32B) but at the cost of significant computation: it consumes an average of 83.1 API calls, 209.1s inference time, and 727.9s CPU time—among the highest in the table. This is due to its default design of generating multiple repair patches and executing regression tests for each trial, trading off efficiency for robustness.
 
-These observations underscore the necessity of incorporating effectiveness-aware metrics—such as token usage, inference time, and call count—into AI system evaluation, as resolution rate alone may obscure the real cost of success.
+These observations underscore the necessity of incorporating efficiency-aware metrics—such as token usage, inference time, and call count—into scaffold evaluation, as resolution rate alone may obscure the real cost of success.
 
 #### Observation 2: High-Quality Reasoning Minimizes Iterations and Saves Tokens
 
-Counter-intuitively, we observe that the reasoning model that consumes significantly more tokens per call can resolve issue instances with fewer total tokens. Table 1 shows that using a smaller, specialized "reasoning" model like Qwen3-32b was significantly more token-efficient than using a larger, general-purpose model like Llama-3.3-70b. While a reasoning model may be more intensive per call, it enables the AI system to solve problems with fewer API calls (e.g., 15 calls for Qwen vs. 38 for Llama with AutoCodeRover). This reveals a critical insight: the primary driver of an AI system's total cost is the number of interactions, not the intensity of each one. A smarter model that can formulate a more concise strategy saves vast amounts of tokens and time by avoiding unnecessary back-and-forth communication. 
+Counter-intuitively, we observe that the reasoning model that consumes significantly more tokens per call can resolve issue instances with fewer total tokens. Table 1 shows that using a smaller, specialized "reasoning" model like Qwen3-32b was significantly more token-efficient than using a larger, general-purpose model like Llama-3.3-70b. While a reasoning model may be more intensive per call, it enables the agent to solve problems with fewer API calls (e.g., 15 calls for Qwen vs. 38 for Llama with AutoCodeRover). This reveals a critical insight: the primary driver of an agent's total cost is the number of interactions, not the intensity of each one. A smarter model that can formulate a more concise strategy saves vast amounts of tokens and time by avoiding unnecessary back-and-forth communication.
 
 <CallsBarChart
   {...getLeaderboardUIConfig().analytics.numCallsBarChart}
@@ -204,13 +190,22 @@ Counter-intuitively, we observe that the reasoning model that consumes significa
   Qwen3-32B and SWE-Agent + GPT-4o-mini experiments.
 </h6>
 
-The above Figure shows the relationship between the number of API calls per instance and the total number of input tokens consumed by that instance (on a log scale), comparing two scaffolds: acr_qwen3-32b (blue) and swe-agent_gpt-4o-mini (orange). We observe a clear nonlinear upward trend in both cases: as the number of API calls increases, the total input tokens per instance rise disproportionately. This pattern illustrates what we term the Token Snowball Effect—the cumulative input grows faster than the call count, leading to exponential token usage in long trajectories. This reveals a fundamental inefficiency in current scaffolds: **the lack of prompt compression or memory abstraction**.
+The above Figure shows the relationship between the number of API calls per instance and the total number of input tokens consumed by that instance (on a log scale), comparing two scaffolds: acr_qwen3-32b (blue) and swe-agent_gpt-4o-mini (orange). We observe a clear nonlinear upward trend in both cases: as the number of API calls increases, the total input tokens per instance rise disproportionately. This pattern illustrates what we term the Token Snowball Effect—the cumulative input grows faster than the call count, leading to exponential token usage in long trajectories. This reveals a fundamental inefficiency in current agent scaffolds: **the lack of prompt compression or memory abstraction**.
 
-Most existing frameworks adopt a naive memory accumulation strategy, where the scaffold simply appends each new model response back into the prompt for the next turn. While straightforward to implement, this approach causes the prompt to grow unchecked as the LLM interaction progresses. As a result, input tokens begin to accumulate rapidly,  often outpacing the rate of API calls. This leads to what we call the **Token Snowball Effect**.
+Most existing frameworks adopt a naive memory accumulation strategy, where the agent simply appends each new model response back into the prompt for the next turn. While straightforward to implement, this approach causes the prompt to grow unchecked as the LLM interaction progresses. As a result, input tokens begin to accumulate rapidly, often outpacing the rate of API calls. This leads to what we call the **Token Snowball Effect**.
 
 This not only inflates token cost and latency, but it also poses a cognitive burden on the model. As the input context becomes increasingly bloated with redundant or stale information, the LLM may struggle to focus on the relevant cues, leading to degraded reasoning quality or failure to converge on a solution at all. This is particularly visible in the behavior of swe-agent_gpt-4o-mini, where high-token trajectories emerge frequently as the number of calls crosses ~100.
 
 #### Observation 4: Failing is Far More Expensive Than Succeeding
+
+<TablesCard
+  tablesUi={getLeaderboardUIConfig().tables}
+  className="md:px-0"
+  caption={true}
+  show={[false, true]}
+  showTabs={false}
+/>
+<br />
 
 <CostBarChart
   {...getLeaderboardUIConfig().analytics.costBarChart}
@@ -225,30 +220,24 @@ This not only inflates token cost and latency, but it also poses a cognitive bur
 Table 2 compares the resource usage between resolved (R) and unresolved (U) issues. We can observe a trend that unresolved issues tend to consume more resources on average, including longer inference time, higher token usage, and more execution steps, indicating inefficiencies in failure cases.
 Take SWE-Agent with GPT-4o-mini as an example: a failed attempt consumes over 8.8 million tokens and 658 seconds, while a successful one requires just 1.8 million tokens and 167.2 seconds. That’s more than a 4x increase in both inference time and token cost when the agent is off track. The same pattern holds elsewhere—OpenHands with LLaMA-3.3-70B takes 238.9 seconds on average when it fails, compared to 79 seconds when it succeeds. Even efficient scaffolds like AutoCodeRover aren’t immune: a failure often takes nearly three times as long as a success.
 
-This “fail expensively” behavior highlights a critical capability gap: the lack of futility detection. When AI systems are on a productive path, they often reach a solution efficiently. But when they’re stuck, they enter expensive, repetitive loops, consuming massive amounts of compute until an external budget limit is reached. These hidden costs pose a serious challenge for real-world deployment. Future research may explore how scaffolds can become **progress-aware**, identifying signals of stagnation—analogous to **code smells in software engineering**—and learning to **abort or redirect unproductive trajectories** before problem-solving spiral out of control.
+This “fail expensively” behavior highlights a critical capability gap: the lack of futility detection. When agents are on a productive path, they often reach a solution efficiently. But when they’re stuck, they enter expensive, repetitive loops, consuming massive amounts of compute until an external budget limit is reached. These hidden costs pose a serious challenge for real-world deployment. Future research may explore how scaffolds can become **progress-aware**, identifying signals of stagnation—analogous to **code smells in software engineering**—and learning to abort or redirect unproductive trajectories before problem-solving spiral out of control.
 
 ## Conclusion
 
-In this work, we explored an evaluation paradigm for AI software engineering systems that extends beyond the primary metric of resolve rate. It is crucial to highlight that while our experiments were conducted on the SWE-bench benchmark, the insights gained are not confined to software engineering. The systemic issues we identified—such as the "Token Snowball" effect and the pattern of "expensive failures"—are likely fundamental challenges for any autonomous AI system designed to solve complex, multi-step problems in any domain. Our analysis of five popular scaffolds in combination with three popular LLMs surfaced several key observations with direct implications for future research:
+In this work, we explored an evaluation paradigm for AI software engineering agents that extends beyond the primary metric of resolve rate. It is crucial to highlight that while our experiments were conducted on the SWE-bench benchmark, the insights gained are not confined to software engineering. The systemic issues we identified—such as the "Token Snowball" effect and the pattern of "expensive failures"—are likely fundamental challenges for any autonomous agent designed to solve complex, multi-step problems in any domain. Our analysis of five popular agent scaffolds surfaced several key observations with direct implications for future research:
 
-- We observe that an AI system's success is not determined by the scaffold alone but by its synergy with the base model. This interplay is crucial for achieving high performance efficiently.
-- We identified a clear trade-off between effectiveness under cost budget (tokens) and effectiveness under time budget (latency). This choice directly impacts both a project's budget and the feasibility of large-scale Reinforcement Learning, where low latency is critical for training.
-- We observed systemic issues like the "Token Snowball" effect and, most critically, a tendency for AI systems to "fail expensively." This behavior—where AI systems get stuck in resource-intensive loops on unsolvable problems—not only hinders their real-world use but also poses a significant barrier to effective RL training by making each failed "rollout" prohibitively costly.
+- We observe that an agent's success is not determined by the scaffold alone but by its synergy with the base model. This interplay is crucial for achieving high performance efficiently.
+- We identified a clear trade-off between cost-efficiency (tokens) and time-efficiency (latency). This choice directly impacts both a project's budget and the feasibility of large-scale Reinforcement Learning, where low latency is critical for training.
+- We observed systemic issues like the "Token Snowball" effect and, most critically, a tendency for agents to "fail expensively." This behavior—where agents get stuck in resource-intensive loops on unsolvable problems—not only hinders their real-world use but also poses a significant barrier to effective RL training by making each failed "rollout" prohibitively costly.
 
 Our findings demonstrate that an agent's underlying architecture and efficiency profile are strong predictors of its long-term potential. A lightweight framework that avoids expensive failure modes is not only a more practical tool today but also a more "evolvable" foundation for the Reinforcement Learning approaches that will shape the future of AI in software engineering. We hope the SWE-Effi framework provides a valuable contribution to the community, guiding us toward building agents that are both powerful and practical.
 
 ## References
 
-- SWE-Bench: [https://www.swebench.com](https://www.swebench.com)
-- DeepResearch Agent: [https://github.com/SkyworkAI/DeepResearchAgent](https://github.com/SkyworkAI/DeepResearchAgent)
-- SkyRL: [https://github.com/NovaSky-AI/SkyRL](https://github.com/NovaSky-AI/SkyRL)
-- DeepSWE: [https://www.together.ai/blog/deepswe](https://www.together.ai/blog/deepswe)
-- OpenHands: [https://github.com/All-Hands-AI/OpenHands](https://github.com/All-Hands-AI/OpenHands)
-- SWE-RL: [https://arxiv.org/abs/2502.18449](https://arxiv.org/abs/2502.18449)
-- AutoCodeRover: [https://arxiv.org/abs/2404.05427](https://arxiv.org/abs/2404.05427)
-- SWE-Agent: [https://arxiv.org/abs/2405.15793](https://arxiv.org/abs/2405.15793)
-- Agentless: [https://arxiv.org/abs/2407.01489](https://arxiv.org/abs/2407.01489)
-- Gpt-4o-mini: [https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/](https://openai.com/index/gpt-4o-mini-advancing-cost-efficient-intelligence/)
-- Llama-3.3-70b: [https://www.llama.com/docs/model-cards-and-prompt-formats/llama3_3/](https://www.llama.com/docs/model-cards-and-prompt-formats/llama3_3/)
-- Qwen3-32b: [https://qwenlm.github.io/blog/qwen3/](https://qwenlm.github.io/blog/qwen3/)
-- SWE-bench Verified: [https://openai.com/index/introducing-swe-bench-verified/](https://openai.com/index/introducing-swe-bench-verified/)
+[1]: https://www.together.ai/blog/deepswe "DeepSWE: Training a Fully Open-sourced, State-of-the-Art Coding Agent by Scaling RL"
+[2]: https://github.com/NovaSky-AI/SkyRL "SkyRL: A Modular Full-stack RL Library for LLMs"
+[3]: https://github.com/AutoCodeRoverSG/auto-code-rover "Autocoderover: Autonomous program improvement"
+[4]: https://github.com/OpenAutoCoder/Agentless "Agentless: Demystifying LLM-based Software Engineering Agents"
+[5]: https://github.com/facebookresearch/swe-rl "SWE-RL: Advancing LLM Reasoning via Reinforcement Learning on Open Software Evolution"
+[6]: https://github.com/All-Hands-AI/OpenHands "OpenHands: Code Less, Make More"
+[7]: https://github.com/SWE-agent/SWE-agent "SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering"

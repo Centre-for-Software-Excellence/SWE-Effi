@@ -173,9 +173,9 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
         'Used a subset of 50 issues randomly drawn from the well-respected SWE-bench-Verified dataset. To ensure this subset was a fair representation of the whole, we used stratified sampling, preserving the original distribution of issues across different software projects.',
       footers: [
         "Effectiveness Under Token Budget (EuTB) - Measures how well an agent performs under a capped number of LLM input/output tokens. This reflects LLM-side efficiency, normalized across hardware and model variants.",
-        "Effectiveness under Cost Budget (EuCB) - Evaluates how efficiently the agent uses monetary cost, combining both local compute and LLM usage. Highlights differences in scaffold overhead and cost scaling. Defined as the AUC of the resolve rate vs. dollar cost per issue, capped at $1.00 USD.",
+        "Effectiveness under Cost Budget (EuCB) -Evaluates how efficiently the agent uses monetary cost, combining both local compute and LLM usage. Highlights differences in scaffold overhead and cost scaling. Defined as the AUC of the resolve rate vs. dollar cost per issue, capped at $1.00 USD.",
         "Effectiveness under CPU Time Budget (EuCTB) - Measures real-world time efficiency by assessing how much resolution progress an agent makes per CPU time spent. This captures the impact of auxiliary logic like patch validation or test execution. AUC of resolve rate vs. CPU time per issue, capped at 30 minutes.",
-        'Effectiveness under Inference Time Budget (EuITB) - Focuses on LLM-side latency efficiency, measuring how well the agent uses its LLM inference time to make progress. Computed as AUC of resolve rate vs. normalized inference time per issue, also capped at 30 minutes. Unlike EuCB, this isolates LLM latency from pricing volatility.',
+        'Effectiveness under Inference Time Budget (EuITB) - Measures how effectively an agent uses LLM tokens. This reflects the core computational work required by the LLM, independent of fluctuating API prices; calculated as the AUC of the resolve rate - Normalized Inference Time per issue (up to a 30-minute time cap).',
       ],
       footerLink: '/about/introducing-SWE-effi#accuracy-metrics',
     },
