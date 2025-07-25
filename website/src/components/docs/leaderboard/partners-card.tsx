@@ -21,7 +21,7 @@ export function CollaboratorsSection({
       logo: 'logos/KCL-logo.svg',
     },
     {
-      org: 'The Chinese University of Hong Kong',
+      org: 'The Chinese University of Hong Kong, Shenzhen',
       logo: 'logos/CUHK-logo.svg',
     },
   ],
