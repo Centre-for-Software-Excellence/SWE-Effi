@@ -2,7 +2,7 @@
 @import 'tw-animate-css';
 @plugin "@tailwindcss/typography";
 
-/* latin */
+/* Geist Sans - Normal */
 @font-face {
   font-family: 'Geist';
   font-style: normal;
@@ -15,10 +15,36 @@
     U+2215, U+FEFF, U+FFFD;
 }
 
-/* latin */
+/* Geist Sans - Italic */
+@font-face {
+  font-family: 'Geist';
+  font-style: italic;
+  font-weight: 100 900;
+  src: url(https://fonts.gstatic.com/s/geist/v3/gyB0hwUxId8gMEwcGFU--i3wRw.woff2)
+    format('woff2');
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212,
+    U+2215, U+FEFF, U+FFFD;
+}
+
+/* Geist Mono - Normal */
 @font-face {
   font-family: 'Geist Mono';
   font-style: normal;
+  font-weight: 100 900;
+  src: url(https://fonts.gstatic.com/s/geistmono/v3/or3nQ6H-1_WfwkMZI_qYFrcdmg.woff2)
+    format('woff2');
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212,
+    U+2215, U+FEFF, U+FFFD;
+}
+
+/* Geist Mono - Oblique */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: oblique 0deg 15deg;
   font-weight: 100 900;
   src: url(https://fonts.gstatic.com/s/geistmono/v3/or3nQ6H-1_WfwkMZI_qYFrcdmg.woff2)
     format('woff2');

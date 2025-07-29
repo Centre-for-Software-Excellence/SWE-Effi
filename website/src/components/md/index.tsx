@@ -117,7 +117,7 @@ export function P({ children, className, ...rest }: Props) {
   return (
     <p
       className={cn(
-        'leading-7 text-muted-foreground [&:not(:first-child)]:mt-6',
+        'leading-7 text-accent-foreground [&:not(:first-child)]:mt-6',
         className,
       )}
       {...rest}
@@ -225,7 +225,7 @@ export function Li({ children, className, ...rest }: Props) {
   return (
     <li
       className={cn(
-        'text-foreground [&>p]:my-0 [&>p]:mt-2 [&>p]:leading-7',
+        'text-accent-foreground [&>p]:my-0 [&>p]:mt-2 [&>p]:leading-7',
         className,
       )}
       {...rest}
