@@ -90,6 +90,7 @@ export function StackedLegend({
       ))}
       {shouldShowEllipsis && (
         <Button
+          aria-label="Toggle more/less legend items"
           variant="ghost"
           size="sm"
           onClick={toggleExpanded}

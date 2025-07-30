@@ -130,6 +130,7 @@ export const columns = ({
       >
         {formatScore(row.getValue(columnId))}
         <Progress
+          aria-label={`${columnId} progress bar`}
           value={row.getValue(columnId)}
           className={`ml-auto h-2 w-16 ${isActive ? 'bg-active/20' : ''}`}
           indicatorClassName={isActive ? 'bg-active' : ''}
@@ -280,6 +281,7 @@ export const columns = ({
               {formatScore(row.getValue('resolveRate'))}
             </span>
             <Progress
+              aria-label="Resolve Rate progress bar"
               value={row.getValue('resolveRate')}
               className={`ml-auto h-2 w-16 ${isActive ? 'bg-active/20' : ''}`}
               indicatorClassName={isActive ? 'bg-active' : ''}

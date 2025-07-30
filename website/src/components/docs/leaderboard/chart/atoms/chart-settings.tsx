@@ -41,6 +41,7 @@ export function ChartSettingsButton({
     <TooltipWrapper title="Settings">
       <DialogTrigger asChild>
         <Button
+          aria-label="Chart Settings"
           variant="ghost"
           size="sm"
           className="flex items-center text-foreground hover:bg-accent"
@@ -247,10 +248,6 @@ export function ChartSettings({
           onClick={() => {
             if (setDomain) {
               if (log) {
-                console.log('newr domain: ', [
-                  linearToLog(0),
-                  linearToLog(getPowerOfTenValues.length - 1),
-                ]);
                 setDomain([
                   linearToLog(0),
                   linearToLog(getPowerOfTenValues.length - 1),

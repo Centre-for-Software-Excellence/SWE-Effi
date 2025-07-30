@@ -161,12 +161,16 @@ export function DataTable<TData, TValue>({
               setGlobalFilter('');
             }}
           >
-            <SelectTrigger className="w-24">
+            <SelectTrigger className="w-24" aria-label="Filter Type Options">
               <SelectValue />
             </SelectTrigger>
             <SelectContent>
               {filterOptions.map((option) => (
-                <SelectItem key={option.value} value={option.value}>
+                <SelectItem
+                  key={option.value}
+                  value={option.value}
+                  aria-label={option.label}
+                >
                   {option.label}
                 </SelectItem>
               ))}
@@ -177,6 +181,7 @@ export function DataTable<TData, TValue>({
           <Popover open={comboboxOpen} onOpenChange={setComboboxOpen}>
             <PopoverTrigger asChild>
               <Button
+                aria-label={`Search ${getSelectedFilterLabel()}`}
                 variant="outline"
                 role="combobox"
                 aria-expanded={comboboxOpen}

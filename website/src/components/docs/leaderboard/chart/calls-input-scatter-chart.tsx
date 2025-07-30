@@ -197,7 +197,6 @@ export function ScatterChartRenderer({
           tickFormatter={(value) => {
             const log = Math.log10(value);
             const isPowerOf10 = Math.abs(log - Math.round(log)) < 0.0001;
-            console.log('isPowerOf10', isPowerOf10, log);
 
             if (isPowerOf10) {
               const exponent = Math.round(log);

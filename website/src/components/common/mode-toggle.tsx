@@ -21,6 +21,7 @@ export function ModeToggle({
 
   return simple ? (
     <Button
+      aria-label="Toggle theme"
       variant="ghost"
       size="icon"
       className={cn(
@@ -39,6 +40,7 @@ export function ModeToggle({
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button
+          aria-label="Toggle theme"
           variant="ghost"
           size="icon"
           className={cn('dark:bg-transparent', className)}

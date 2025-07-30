@@ -35,6 +35,7 @@ export default function Page() {
           {ui.buttonLinks?.map(
             ({ title, href: link, external, icon: Icon, disabled }, idx) => (
               <Button
+                aria-label={title}
                 disabled={disabled}
                 key={title + idx}
                 variant="default"

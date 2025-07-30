@@ -15,7 +15,7 @@ const router = createBrowserRouter(
     },
   ],
   {
-    basename: '/SWE-Effi',
+    basename: '/SWE-Effi/',
   },
 );
 

@@ -37,7 +37,6 @@ export function useFilteredChartData<T>(
         setLoading(false);
       })
       .catch((err) => {
-        console.error(err.message);
         setError(err.message);
         setLoading(false);
       });

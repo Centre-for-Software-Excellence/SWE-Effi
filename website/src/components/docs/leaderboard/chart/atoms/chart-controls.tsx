@@ -23,6 +23,7 @@ export function ChartControls({
       {settingsButton}
       {expandButton && (
         <Button
+          aria-label="Expand chart"
           variant="outline"
           size="icon"
           onClick={expandButton.onToggle}

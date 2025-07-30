@@ -64,7 +64,6 @@ export default function TablesCard({
         setLoading(false);
       })
       .catch((err) => {
-        console.error(err.message);
         setError(err.message);
         setLoading(false);
       });
@@ -125,13 +124,13 @@ export default function TablesCard({
                 {leaderboard.footers?.map((footer, index) => (
                   <li key={index}>{footer}</li>
                 ))}
-                <Link
-                  to={leaderboard.footerLink || '/about/introducing-SWE-effi'}
-                  className="text-sm text-muted-foreground underline transition-all duration-300 hover:text-foreground"
-                >
-                  How we calculated the metrics ?
-                </Link>
               </ul>
+              <Link
+                to={leaderboard.footerLink || '/about/introducing-SWE-effi'}
+                className="pl-2 text-sm text-muted-foreground underline transition-all duration-300 hover:text-foreground"
+              >
+                How we calculated the metrics ?
+              </Link>
             </Note>
           </TabsContent>
         </Tabs>

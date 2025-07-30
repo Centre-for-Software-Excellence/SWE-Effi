@@ -32,8 +32,7 @@ export default function DocsPage() {
         setDoc(resolvedDoc);
         setShowToc(resolvedDoc.type === 'mdx' && headings.length > 0);
       } catch (err) {
-        setError('Failed to load document');
-        console.error('Error loading doc:', err);
+        setError('Failed to load document, error: ' + err);
       } finally {
         setLoading(false);
       }
