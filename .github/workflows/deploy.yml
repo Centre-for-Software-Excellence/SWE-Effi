@@ -6,8 +6,6 @@ on:
     paths:
       - 'website/**'
       - '!website/README.md'
-      - '!website/localtodo.md'
-      - '!website/local-tasks.md'
       - '!**/README.md'
       - '!**/*.md'
       - '.github/workflows/deploy.yml'
@@ -16,8 +14,6 @@ on:
     paths:
       - 'website/**'
       - '!website/README.md'
-      - '!website/localtodo.md'
-      - '!website/local-tasks.md'
       - '!**/README.md'
       - '!**/*.md'
       - '.github/workflows/deploy.yml'
@@ -76,4 +72,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
