@@ -1,4 +1,4 @@
-import { useEffect, useMemo } from 'react';
+import { useEffect } from 'react';
 import { CartesianGrid, Label, Line, LineChart, XAxis, YAxis } from 'recharts';
 
 import { TooltipProvider } from '@/components/common/tooltip-wrapper';

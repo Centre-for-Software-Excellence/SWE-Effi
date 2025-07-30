@@ -5,7 +5,7 @@ import { StaggeredContent } from '@/components/common/staggered-content';
 import { Button } from '@/components/common/ui/button';
 import { Divider } from '@/components/common/ui/divider';
 import CitationCard from '@/components/docs/leaderboard/citation-card';
-import { CollaboratorsSection } from '@/components/docs/leaderboard/partners-card';
+import { CollaboratorsSection } from '@/components/docs/leaderboard/collaborators-card';
 import TablesCard from '@/components/docs/leaderboard/tables-card';
 import { H1, P } from '@/components/md';
 import { getLeaderboardUIConfig } from '@/config/ui/leaderboard';
@@ -67,7 +67,6 @@ export default function Page() {
         <Divider className="mb-16" />
         <CitationCard />
         <Divider className="mt-16" />
-        {/* <PartnersCard /> */}
         <CollaboratorsSection collaboratorsTitle="Collaborators" />
       </div>
     </StaggeredContent>

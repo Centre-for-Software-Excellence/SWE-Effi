@@ -16,6 +16,8 @@ author:
   ]
 ---
 
+import { Suspense } from 'react';
+
 import { Divider } from '@/components/common/ui/divider';
 import { CallsBarChart } from '@/components/docs/leaderboard/chart/calls-bar-chart';
 import { CostBarChart } from '@/components/docs/leaderboard/chart/cost-bar-chart';
@@ -147,10 +149,12 @@ Our experiments uncovered several crucial trends and trade-offs that are vital f
 />
 <br />
 
-<MetricsRadarChart
-  {...getLeaderboardUIConfig().analytics.metricsRadarChart}
-  className="lg:p-0"
-/>
+<Suspense fallback={<div className="h-96 w-full" />}>
+  <MetricsRadarChart
+    {...getLeaderboardUIConfig().analytics.metricsRadarChart}
+    className="lg:p-0"
+  />
+</Suspense>
 <h6 align="center" className="text-foreground">
   Figure 1 - AI system performance comparison based on the five effectiveness
   metrics presented above (all measured as normalized AUC except for resolve
@@ -166,10 +170,12 @@ Table 1 highlights that the choice of base model has a stronger impact on outcom
 
 In contrast, AutoCodeRover, a simpler scaffold, consistently delivers a competitive or superior performance. With Qwen3-32B, it achieves a 38% resolution rate using only 14.7 API calls and 55.5K input tokens—far more efficient than its peers. Even with GPT-4o-mini, it maintains 12% resolution, outperforming OpenHands and SWE-Agent at the same model setting. These results underscore the importance of AI system’s LLM–scaffold synergy, where the effectiveness of a scaffold is tightly coupled with the reasoning capabilities and effectiveness under token budget (EuTB) of its underlying LLM.
 
-<TimePercentageBarChart
-  {...getLeaderboardUIConfig().analytics.timePercentageBarChart}
-  className="lg:p-0"
-/>
+<Suspense fallback={<div className="h-96 w-full" />}>
+  <TimePercentageBarChart
+    {...getLeaderboardUIConfig().analytics.timePercentageBarChart}
+    className="lg:p-0"
+  />
+</Suspense>
 <h6 align="center" className="text-foreground">
   Figure 2 - Where the AI system spent time during the issue resolution process
   process
@@ -184,10 +190,12 @@ These observations underscore the necessity of incorporating effectiveness-aware
 
 Counter-intuitively, we observe that the reasoning model that consumes significantly more tokens per call can resolve issue instances with fewer total tokens. Table 1 shows that using a smaller, specialized "reasoning" model like Qwen3-32b was significantly more token-efficient than using a larger, general-purpose model like Llama-3.3-70b. While a reasoning model may be more intensive per call, it enables the AI system to solve problems with fewer API calls (e.g., 15 calls for Qwen vs. 38 for Llama with AutoCodeRover). This reveals a critical insight: the primary driver of an AI system's total cost is the number of interactions, not the intensity of each one. A smarter model that can formulate a more concise strategy saves vast amounts of tokens and time by avoiding unnecessary back-and-forth communication.
 
-<CallsBarChart
-  {...getLeaderboardUIConfig().analytics.numCallsBarChart}
-  className="lg:p-0"
-/>
+<Suspense fallback={<div className="h-96 w-full" />}>
+  <CallsBarChart
+    {...getLeaderboardUIConfig().analytics.numCallsBarChart}
+    className="lg:p-0"
+  />
+</Suspense>
 <h6 align="center" className="text-foreground">
   Figure 3 - Quantity of LLM calls utilized per issue instance for each scaffold
 </h6>
@@ -224,10 +232,12 @@ Counter-intuitively, we observe that the reasoning model that consumes significa
 
 The above Figure 4 shows the relationship between the number of API calls per instance and the number of input tokens for each API call by that instance. As the number of calls increases, input token consumption of each API call grows steadily in both cases—but crucially, this growth is roughly linear per call. This is because most agent frameworks today adopt a naïve memory accumulation strategy, where each new LLM response is appended to the next input prompt. While simple to implement, this leads to monotonic prompt growth, with each API call adding hundreds of tokens even when the agent fails to make meaningful progress. We refer to this persistent design inefficiency as the Token Snowball Effect: even small additions to the prompt in each API call can accumulate over time, resulting into a large and often unnecessary context over long interaction trajectories. Snowball Effect not only creates excessive LLM cost and latency, but also places a cognitive burden on the model. As the context window becomes cluttered with stale information, the LLM may lose focus on relevant cues, leading to lower reasoning quality and success rate. This, in turn, causes more iterations—and further leads to continuous Token Snowball Effect.
 
-<ResolveRateLineChart
-  {...getLeaderboardUIConfig().analytics.resolveRateLineChart}
-  className="lg:p-0"
-/>
+<Suspense fallback={<div className="h-96 w-full" />}>
+  <ResolveRateLineChart
+    {...getLeaderboardUIConfig().analytics.resolveRateLineChart}
+    className="lg:p-0"
+  />
+</Suspense>
 
 <h6 align="center" className="text-foreground">
   Figure 5 - The relationship between the resolve rate and total token used,
@@ -239,10 +249,12 @@ Figure 5 shows that the Token Snowball Effect is particularly evident in SWE-Age
 
 #### Observation 4: Failing is Far More Expensive Than Succeeding
 
-<CostBarChart
-  {...getLeaderboardUIConfig().analytics.costBarChart}
-  className="lg:p-0"
-/>
+<Suspense fallback={<div className="h-96 w-full" />}>
+  <CostBarChart
+    {...getLeaderboardUIConfig().analytics.costBarChart}
+    className="lg:p-0"
+  />
+</Suspense>
 <h6 align="center" className="text-foreground">
   Figure 6 - Token consumption differences between successfully resolved and
   unresolved issues

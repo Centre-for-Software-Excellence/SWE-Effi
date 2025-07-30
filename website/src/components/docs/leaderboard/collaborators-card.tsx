@@ -1,4 +1,3 @@
-import { cn } from '@/lib/utils';
 import { getBasePath } from '@/lib/utils/path';
 
 export interface Collaborator {
@@ -79,19 +78,8 @@ export function CollaboratorCard({
       </div>
 
       <div className="w-full text-center">
-        <span>
-          <span
-            className={cn(
-              `bg-gradient-to-r from-transparent via-foreground to-transparent bg-no-repeat pb-0.5 transition-[background-size,color] duration-500 group-hover:text-foreground`,
-              'bg-[length:0%_1px] group-hover:bg-[length:100%_1px]',
-              'bg-right-bottom group-hover:bg-left-bottom',
-              'from-transparent via-foreground to-transparent',
-            )}
-          >
-            <span className="text-sm font-medium text-muted-foreground">
-              {collaborator.org}
-            </span>
-          </span>
+        <span className="text-sm font-medium text-muted-foreground">
+          {collaborator.org}
         </span>
       </div>
     </div>
