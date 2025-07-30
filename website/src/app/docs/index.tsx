@@ -1,23 +1,22 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useLocation } from 'react-router';
 
 import { MDXViewer } from '@/components/md/mdx-viewer';
-import {
-  getSlugFromPath,
-  resolveDocFromSlug,
-  type ResolvedDoc,
-} from '@/lib/docs/resolver';
+import { getSlugFromPath, resolveDocFromSlug } from '@/lib/docs/resolver';
 import { cn } from '@/lib/utils';
+import { useTocStore } from '@/stores/toc';
+import { useUIStore } from '@/stores/ui';
 import Layout from './layout';
 
 export default function DocsPage() {
   const location = useLocation();
-  const [doc, setDoc] = useState<ResolvedDoc | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-  const isArticle = doc?.type === 'mdx';
-
+  const headings = useTocStore((state) => state.headings);
+  const error = useUIStore((state) => state.error);
+  const doc = useUIStore((state) => state.doc);
+  const loading = useUIStore((state) => state.loading);
   useEffect(() => {
+    const { setDoc, setShowToc, setLoading, setError, setShowFooter } =
+      useUIStore.getState();
     async function loadDoc() {
       setLoading(true);
       setError(null);
@@ -30,8 +29,8 @@ export default function DocsPage() {
           setError('Document not found');
           return;
         }
-
         setDoc(resolvedDoc);
+        setShowToc(resolvedDoc.type === 'mdx' && headings.length > 0);
       } catch (err) {
         setError('Failed to load document');
         console.error('Error loading doc:', err);
@@ -39,9 +38,9 @@ export default function DocsPage() {
         setLoading(false);
       }
     }
-
     loadDoc();
-  }, [location.pathname]);
+    setShowFooter(true);
+  }, [location.pathname, headings.length]);
 
   // Handle hash fragment scrolling
   useEffect(() => {
@@ -67,7 +66,7 @@ export default function DocsPage() {
   }, [location.hash, loading]);
 
   return (
-    <Layout isArticle={isArticle} loading={loading}>
+    <Layout>
       {/* Main Content */}
       <main
         className={cn(

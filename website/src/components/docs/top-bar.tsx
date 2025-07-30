@@ -4,19 +4,16 @@ import { Link, useNavigate } from 'react-router-dom';
 import { Button } from '@/components/common/ui/button';
 import { getTopbarUIConfig } from '@/config/ui';
 import { cn } from '@/lib/utils';
+import { useUIStore } from '@/stores/ui';
 import { UnderlineText } from '../common/ui/underline-text';
 import { SearchComponent } from './search';
 
-export const TopBar = ({
-  menuOpen,
-  menuOnClickAction,
-}: {
-  menuOpen: boolean;
-  menuOnClickAction: (open: boolean) => void;
-}) => {
+export const TopBar = () => {
   const ui = getTopbarUIConfig();
   const topbarLinks = ui.links.filter((link) => !link.disabled);
   const navigate = useNavigate();
+  const menuOpen = useUIStore((state) => state.menuOpen);
+  const setMenuOpen = useUIStore((state) => state.setMenuOpen);
 
   return (
     <header
@@ -53,7 +50,7 @@ export const TopBar = ({
           variant="ghost"
           size="icon"
           className="md:hidden"
-          onClick={() => menuOnClickAction(!menuOpen)}
+          onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle Menu"
         >
           {menuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -64,7 +61,7 @@ export const TopBar = ({
               key={link.title + idx}
               onClick={() => {
                 setTimeout(() => {
-                  menuOnClickAction(false);
+                  setMenuOpen(false);
                 }, 0);
                 navigate(link.href);
               }}

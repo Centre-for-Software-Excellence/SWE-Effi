@@ -1,40 +1,30 @@
-import { useState } from 'react';
-
 import { Footer } from '@/components/docs/footer';
 import { DocsSidebar } from '@/components/docs/sidebar';
 import { TopBar } from '@/components/docs/top-bar';
 import { TableOfContent } from '@/components/md/table-of-content';
+import { useUIStore } from '@/stores/ui';
 
 interface LayoutProps {
   children: React.ReactNode;
-  isArticle?: boolean;
-  loading?: boolean;
 }
 
-export default function Layout({
-  children,
-  isArticle = true,
-  loading = false,
-}: LayoutProps) {
-  const [menuOpen, setMenuOpen] = useState(false);
+export default function Layout({ children }: LayoutProps) {
+  const showFooter = useUIStore((state) => state.showFooter);
+  const showToc = useUIStore((state) => state.showToc);
   return (
     <div className="relative w-full bg-background">
       {/* Top Bar */}
-      <TopBar menuOpen={menuOpen} menuOnClickAction={setMenuOpen} />
+      <TopBar />
       {/* Main docs content */}
       <div className="relative mx-auto min-h-screen max-w-screen md:flex md:flex-row">
         {/* Left Sidebar - Sections Navigation */}
-        <DocsSidebar
-          loading={loading}
-          menuOpen={menuOpen}
-          onClickAction={setMenuOpen}
-        />
+        <DocsSidebar />
         {/* article */}
         {children}
         {/* Right Sidebar - Table of Contents of current markdown doc*/}
-        {isArticle && <TableOfContent className="w-full" />}
+        {showToc && <TableOfContent className="w-full" />}
       </div>
-      <Footer />
+      {showFooter && <Footer />}
     </div>
   );
 }

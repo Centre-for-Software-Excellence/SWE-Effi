@@ -5,6 +5,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { getSidebarUIConfig } from '@/config/ui';
 import { getDocsStructure, type DocSection } from '@/lib/docs/structure';
 import { cn } from '@/lib/utils';
+import { useUIStore } from '@/stores/ui';
 import { UnderlineText } from '../common/ui/underline-text';
 
 interface CollapsibleSectionProps {
@@ -74,15 +75,7 @@ function CollapsibleSection({
   );
 }
 
-export function DocsSidebar({
-  loading = false,
-  menuOpen,
-  onClickAction,
-}: {
-  loading?: boolean;
-  menuOpen: boolean;
-  onClickAction: (open: boolean) => void;
-}) {
+export function DocsSidebar() {
   const docsStructure = getDocsStructure();
   const [openSections, setOpenSections] = useState<Set<string>>(
     new Set(docsStructure.map((section) => section.slug)),
@@ -103,8 +96,12 @@ export function DocsSidebar({
     });
   };
   const location = useLocation();
+  const showSidebar = useUIStore((state) => state.showSidebar);
+  const loading = useUIStore((state) => state.loading);
+  const menuOpen = useUIStore((state) => state.menuOpen);
+  const setMenuOpen = useUIStore((state) => state.setMenuOpen);
 
-  return (
+  return showSidebar ? (
     <aside
       className={cn(
         'sticky top-12 hidden h-[calc(100vh-theme(spacing.12))] overflow-x-hidden overflow-y-auto border-border px-2 py-4 md:flex md:w-70 md:shrink-0 md:flex-col',
@@ -117,7 +114,7 @@ export function DocsSidebar({
         <Link
           onClick={() => {
             if (loading) return;
-            onClickAction(false);
+            setMenuOpen(false);
           }}
           key={'index'}
           to={'/'}
@@ -153,7 +150,7 @@ export function DocsSidebar({
             }}
             onSectionClick={() => {
               if (loading) return;
-              onClickAction(false);
+              setMenuOpen(false);
             }}
             loading={loading}
           />
@@ -166,7 +163,38 @@ export function DocsSidebar({
             key={link.title + idx}
             onClick={() => {
               setTimeout(() => {
-                onClickAction(false);
+                setMenuOpen(false);
+              }, 0);
+              navigate(link.href);
+            }}
+          >
+            <UnderlineText
+              gradient={true}
+              position={'middle'}
+              lineStyle="thin"
+              className="cursor-pointer text-sm font-normal text-muted-foreground no-underline"
+            >
+              {link.title}
+            </UnderlineText>
+          </div>
+        ))}
+      </div>
+    </aside>
+  ) : (
+    <aside
+      className={cn(
+        menuOpen
+          ? 'fixed top-12 left-0 z-99 flex h-[calc(100vh-theme(spacing.12))] w-full flex-col justify-between overflow-x-hidden overflow-y-auto bg-background px-2 py-4'
+          : 'hidden',
+      )}
+    >
+      <div className="mt-8 flex w-full flex-col items-center space-y-2 self-end md:hidden">
+        {bottomLinks?.map((link, idx) => (
+          <div
+            key={link.title + idx}
+            onClick={() => {
+              setTimeout(() => {
+                setMenuOpen(false);
               }, 0);
               navigate(link.href);
             }}

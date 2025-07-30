@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { MDXProvider } from '@mdx-js/react';
 
-import { mdComponents } from '@/components/md';
+import { mdComponents, Muted } from '@/components/md';
 import { useCurrentHeadings } from '@/hooks/use-current-headings';
 import { useContentStore } from '@/stores/content';
 import { StaggeredContent } from '../common/staggered-content';
@@ -18,7 +18,13 @@ export function MDXViewer({ path }: { path: string }) {
       <StaggeredContent>
         <Frontmatter />
         <MDXProvider components={mdComponents}>
-          {Component ? <Component /> : <div>Loading…</div>}
+          {Component ? (
+            <Component />
+          ) : (
+            <div className="relative before:fixed before:inset-0 before:-translate-x-full before:animate-loading before:bg-gradient-to-r before:from-transparent before:via-foreground/10 before:to-transparent md:before:-translate-x-full">
+              <Muted className="animate-pulse">Loading…</Muted>
+            </div>
+          )}
         </MDXProvider>
       </StaggeredContent>
     </article>
