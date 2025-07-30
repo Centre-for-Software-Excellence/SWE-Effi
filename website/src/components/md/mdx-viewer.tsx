@@ -18,13 +18,7 @@ export function MDXViewer({ path }: { path: string }) {
       <StaggeredContent>
         <Frontmatter />
         <MDXProvider components={mdComponents}>
-          {Component ? (
-            <Component />
-          ) : (
-            <div className="relative before:fixed before:inset-0 before:-translate-x-full before:animate-loading before:bg-gradient-to-r before:from-transparent before:via-foreground/10 before:to-transparent md:before:-translate-x-full">
-              <Muted className="animate-pulse">Loading…</Muted>
-            </div>
-          )}
+          {Component && <Component />}
         </MDXProvider>
       </StaggeredContent>
     </article>

@@ -2,6 +2,7 @@ import { create } from 'zustand';
 
 import { logger } from './logger';
 import { useTocStore } from './toc';
+import { useUIStore } from './ui';
 
 interface Frontmatter {
   title?: string;
@@ -28,7 +29,10 @@ export const useContentStore = create<ContentState>(
       frontmatter: null,
       lastError: null,
       render: async (path: string) => {
+        const setLoading = useUIStore.getState().setLoading;
+        const setError = useUIStore.getState().setError;
         try {
+          setLoading(true);
           const mdxModules = import.meta.glob('/src/docs/**/*.mdx');
           const importer = mdxModules[path];
           if (!importer) {
@@ -48,13 +52,12 @@ export const useContentStore = create<ContentState>(
             frontmatter: null,
             lastError: new Error('Failed to render Markdown'),
           });
+          setError('Failed to render Markdown');
+        } finally {
+          setLoading(false);
         }
       },
     }),
-    {
-      name: 'Markdown Content Sotre',
-      showDiff: false,
-      enabled: import.meta.env.DEV,
-    },
+    { name: 'Markdown Content Sotre', showDiff: false },
   ),
 );
