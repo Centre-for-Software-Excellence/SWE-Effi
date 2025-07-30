@@ -1,3 +1,4 @@
+import { useEffect, useMemo } from 'react';
 import { CartesianGrid, Label, Line, LineChart, XAxis, YAxis } from 'recharts';
 
 import { TooltipProvider } from '@/components/common/tooltip-wrapper';
@@ -7,11 +8,15 @@ import {
   ChartTooltipContent,
 } from '@/components/common/ui/chart';
 import { Dialog } from '@/components/common/ui/dialog';
-import { HoverableLegend } from '@/components/docs/leaderboard/chart/atoms/chart-legend';
+import {
+  HoverableLegend,
+  StackedLegend,
+} from '@/components/docs/leaderboard/chart/atoms/chart-legend';
 import { useChartData } from '@/hooks/chart/use-chart-data';
 import { useChartPopover } from '@/hooks/chart/use-chart-popover';
 import { useChartSettings } from '@/hooks/chart/use-chart-settings';
-import { cn } from '@/lib/utils';
+import { cn, createColorGenerator } from '@/lib/utils';
+import { tokens } from '@/styles/tokens';
 import { ChartCard } from './atoms/chart-card';
 import { ChartControls } from './atoms/chart-controls';
 // import { ChartExplanation } from './atoms/chart-explanation';
@@ -59,8 +64,11 @@ export function ResolveRateLineChart({
   xAxisLabel,
   yAxisLabel,
   xAxisDataKey,
+  highlightedLines = [],
   className,
-}: ChartProps) {
+}: ChartProps & {
+  highlightedLines?: string[];
+}) {
   // const explanationContent = {
   //   overview,
   //   insight,
@@ -96,6 +104,21 @@ export function ResolveRateLineChart({
 
   const settingsButton = (
     <ChartSettingsButton onClickAction={() => setOpenSettings(!openSettings)} />
+  );
+
+  useEffect(() => {
+    const nextColor = createColorGenerator(tokens.chartjs);
+    if (highlightedLines.length > 0) {
+      for (const key of highlightedLines) {
+        if (chartConfig && chartConfig[key]) {
+          chartConfig[key].color = nextColor();
+        }
+      }
+    }
+  }, [chartConfig, highlightedLines]);
+
+  const dummyLegend = (
+    <StackedLegend keys={highlightedLines} config={chartConfig || {}} />
   );
 
   const legend = (
@@ -151,8 +174,10 @@ export function ResolveRateLineChart({
               yAxisLabel={yAxisLabel}
               xAxisDataKey={xAxisDataKey}
               scale="log"
+              highlightedLines={highlightedLines}
             />
             {legend}
+            {dummyLegend}
           </div>
         </ChartCard>
       </Dialog>
@@ -169,7 +194,10 @@ export function LineChartRenderer({
   yAxisLabel,
   xAxisDataKey,
   scale = 'linear',
-}: ChartRendererProps) {
+  highlightedLines = [],
+}: ChartRendererProps & {
+  highlightedLines?: string[];
+}) {
   const configKeys = activeKeys || Object.keys(config);
 
   // Generate dynamic ticks based on the actual domain
@@ -220,7 +248,7 @@ export function LineChartRenderer({
             dataKey={key}
             type="linear"
             stroke={config?.[key]?.color}
-            strokeWidth={1}
+            strokeWidth={highlightedLines.includes(key) ? 3 : 1}
             dot={false}
             isAnimationActive={true}
           />
