@@ -20,8 +20,10 @@ import { Divider } from '@/components/common/ui/divider';
 import { CallsBarChart } from '@/components/docs/leaderboard/chart/calls-bar-chart';
 import { CostBarChart } from '@/components/docs/leaderboard/chart/cost-bar-chart';
 import { MetricsRadarChart } from '@/components/docs/leaderboard/chart/metrics-radar-chart';
+import { ResolveRateLineChart } from '@/components/docs/leaderboard/chart/resolve-rate-line-chart';
 import { TimePercentageBarChart } from '@/components/docs/leaderboard/chart/time-percentage-bar-chart';
 import TablesCard from '@/components/docs/leaderboard/tables-card';
+import { Muted } from '@/components/md';
 import { getLeaderboardUIConfig } from '@/config/ui/leaderboard';
 
 ## TL;DR
@@ -195,21 +197,45 @@ Counter-intuitively, we observe that the reasoning model that consumes significa
 
 ![Figure 4 (a)](/SWE-Effi/imgs/token-snowball-effect-1.png)
 
+<Muted align="center" className="text-muted-foreground">
+  Figure 4 (a) - The relationship between the number of input tokens and the
+  number of LLM calls for <strong>Auto Code Rover</strong>.
+</Muted>
+
 ![Figure 4 (b)](/SWE-Effi/imgs/token-snowball-effect-2.png)
+
+<Muted align="center" className="text-muted-foreground">
+  Figure 4 (b) - The relationship between the number of input tokens and the
+  number of LLM calls for <strong>Openhands</strong>.
+</Muted>
 
 ![Figure 4 (c)](/SWE-Effi/imgs/token-snowball-effect-3.png)
 
+<Muted align="center" className="text-muted-foreground">
+  Figure 4 (c) - The relationship between the number of input tokens and the
+  number of LLM calls for <strong>SWE Agent</strong>.
+</Muted>
+
 <h6 align="center" className="text-muted-foreground">
-Figure 4 - The relationship between the number of input tokens and the number of LLM calls. 
-One SWE-Bench task instance is selected from each of AutoCodeRover, OpenHands, and SWE-agent as a showcase. 
+  Figure 4 - The relationship between the number of input tokens and the number
+  of LLM calls. One SWE-Bench task instance is selected from each of
+  AutoCodeRover, OpenHands, and SWE-agent as a showcase.
 </h6>
 
-The above Figure 4 shows the relationship between the number of API calls per instance and the number of input tokens for each API call by that instance. As the number of calls increases, input token consumption of each API call grows steadily in both cases—but crucially, this growth is roughly linear per call. This is because most agent frameworks today adopt a naïve memory accumulation strategy, where each new LLM response is appended to the next input prompt. While simple to implement, this leads to monotonic prompt growth, with each API call adding hundreds of tokens even when the agent fails to make meaningful progress. We refer to this persistent design inefficiency as the Token Snowball Effect: even small additions to the prompt in each API call can accumulate over time, resulting into a large and often unnecessary context over long interaction trajectories. Snowball Effect not only creates excessive LLM cost and latency, but also places a cognitive burden on the model. As the context window becomes cluttered with stale information, the LLM may lose focus on relevant cues, leading to lower reasoning quality and success rate. This, in turn, causes more iterations—and further leads to continuous Token Snowball Effect. 
+The above Figure 4 shows the relationship between the number of API calls per instance and the number of input tokens for each API call by that instance. As the number of calls increases, input token consumption of each API call grows steadily in both cases—but crucially, this growth is roughly linear per call. This is because most agent frameworks today adopt a naïve memory accumulation strategy, where each new LLM response is appended to the next input prompt. While simple to implement, this leads to monotonic prompt growth, with each API call adding hundreds of tokens even when the agent fails to make meaningful progress. We refer to this persistent design inefficiency as the Token Snowball Effect: even small additions to the prompt in each API call can accumulate over time, resulting into a large and often unnecessary context over long interaction trajectories. Snowball Effect not only creates excessive LLM cost and latency, but also places a cognitive burden on the model. As the context window becomes cluttered with stale information, the LLM may lose focus on relevant cues, leading to lower reasoning quality and success rate. This, in turn, causes more iterations—and further leads to continuous Token Snowball Effect.
 
-Figure 5 shows that the Token Snowball Effect is particularly evident in SWE-Agent with GPT-4o-mini, which frequently enters long, high-token trajectories without converging on a fix. By contrast, ACR with Qwen3-32B tends to terminate earlier, often solving issues with fewer API calls and lower token usage overall. This highlights the necessity for developing better budget management strategies and more advanced memory abstraction techniques. Better budget management strategies can help balance the effectiveness of scaffolding in solving problems with budget constraints—by halting the task if the token usage snowballs to an unacceptable level, especially since continuing would likely not resolve the issue anyway. Meanwhile, better memory abstraction techniques can help reduce the rapid growth of token snowball.    
+<ResolveRateLineChart
+  {...getLeaderboardUIConfig().analytics.resolveRateLineChart}
+  className="lg:p-0"
+/>
 
-Most existing frameworks adopt a naive memory accumulation strategy, where the scaffold simply appends each new model response back into the prompt for the next turn. While straightforward to implement, this approach causes the prompt to grow unchecked as the LLM interaction progresses. As a result, input tokens begin to accumulate rapidly, often outpacing the rate of API calls. This leads to what we call the **Token Snowball Effect**.
-This not only inflates token cost and latency, but it also poses a cognitive burden on the model. As the input context becomes increasingly bloated with redundant or stale information, the LLM may struggle to focus on the relevant cues, leading to degraded reasoning quality or failure to converge on a solution at all. This is particularly visible in the behavior of swe-agent_gpt-4o-mini, where high-token trajectories emerge frequently as the number of calls crosses ~100.
+<h6 align="center" className="text-foreground">
+  Figure 5 - The relationship between the resolve rate and total token used,
+  showcasing the Token Snowball effect in
+  <strong>SWE-Agent_GPT-4o-mini and ACR_Qwen3-32B.</strong>
+</h6>
+
+Figure 5 shows that the Token Snowball Effect is particularly evident in SWE-Agent with GPT-4o-mini, which frequently enters long, high-token trajectories without converging on a fix. By contrast, ACR with Qwen3-32B tends to terminate earlier, often solving issues with fewer API calls and lower token usage overall. This highlights the necessity for developing better budget management strategies and more advanced memory abstraction techniques. Better budget management strategies can help balance the effectiveness of scaffolding in solving problems with budget constraints—by halting the task if the token usage snowballs to an unacceptable level, especially since continuing would likely not resolve the issue anyway. Meanwhile, better memory abstraction techniques can help reduce the rapid growth of token snowball.
 
 #### Observation 4: Failing is Far More Expensive Than Succeeding
 
@@ -218,12 +244,12 @@ This not only inflates token cost and latency, but it also poses a cognitive bur
   className="lg:p-0"
 />
 <h6 align="center" className="text-foreground">
-  Figure 5 - Token consumption differences between successfully resolved and
+  Figure 6 - Token consumption differences between successfully resolved and
   unresolved issues
 </h6>
 <br />
 
-Table 1 also compares resource usage between resolved (R) and unresolved (U) issues. We can observe a trend that unresolved issues tend to consume more resources on average (Figure 5), including longer inference time, higher token usage, and more execution steps, indicating inefficiencies in failure cases.
+Table 1 also compares resource usage between resolved (R) and unresolved (U) issues. We can observe a trend that unresolved issues tend to consume more resources on average (Figure 6), including longer inference time, higher token usage, and more execution steps, indicating inefficiencies in failure cases.
 Take SWE-Agent with GPT-4o-mini as an example: a failed attempt consumes over 8.8 million tokens and 658 seconds, while a successful one requires just 1.8 million tokens and 167.2 seconds. That’s more than a 4x increase in both inference time and token cost when the agent is off track. The same pattern holds elsewhere—OpenHands with LLaMA-3.3-70B takes 238.9 seconds on average when it fails, compared to 79 seconds when it succeeds. Even efficient scaffolds like AutoCodeRover aren’t immune: a failure often takes nearly three times as long as a success.
 
 This “fail expensively” behavior highlights a critical capability gap: the lack of futility detection. When AI systems are on a productive path, they often reach a solution efficiently. But when they’re stuck, they enter expensive, repetitive loops, consuming massive amounts of compute until an external budget limit is reached. These hidden costs pose a serious challenge for real-world deployment. Future research may explore how scaffolds can become **progress-aware**, identifying signals of stagnation—analogous to **code smells in software engineering**—and learning to **abort or redirect unproductive trajectories** before problem-solving spirals out of control.

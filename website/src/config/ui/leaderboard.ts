@@ -25,7 +25,9 @@ interface LeaderboardUIConfig {
     title?: string;
     description?: string;
     blogLink?: string;
-    resolveRateLineChart: ChartProps;
+    resolveRateLineChart: ChartProps & {
+      highlightedLines?: string[];
+    };
     normalizedTimeLineChart: ChartProps;
     numCallsBarChart: ChartProps;
     timePercentageBarChart: ChartProps;
@@ -196,6 +198,10 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
       yAxisLabel: 'Resolve Rate',
       // ignore this
       xAxisDataKey: 'totalTokens',
+      highlightedLines: [
+        'auto-code-rover/qwen3-32B',
+        'swe-agent/GPT-4o-mini-2024-07-18',
+      ],
     },
     normalizedTimeLineChart: {
       title: 'Resolve rate vs. Normalized total time',
