@@ -1,3 +1,6 @@
+> [!NOTE]
+> Our evaluation script will be released soon!
+
 # SWE-Effi
 
 A comprehensive benchmark evaluation platform for Software Engineering Efficiency across different AI scaffolds and models.
