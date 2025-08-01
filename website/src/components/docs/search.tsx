@@ -156,6 +156,11 @@ export function SearchComponent({
   };
 
   const handleResultClick = (result: EnhancedSearchResult) => {
+    if (result.slug.startsWith('http')) {
+      window.open(result.slug, '_blank');
+      closeSearchOverlay();
+      return;
+    }
     navigate(result.slug);
     closeSearchOverlay();
   };

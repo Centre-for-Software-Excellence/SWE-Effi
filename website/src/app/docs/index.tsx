@@ -79,8 +79,10 @@ export default function DocsPage() {
             <div className="text-destructive">{error}</div>
           </div>
         )}
-        {doc && doc.type === 'mdx' && doc.path && <MDXViewer path={doc.path} />}
-        {doc && doc.type === 'tsx' && doc.module && (
+        {!loading && !error && doc && doc.type === 'mdx' && doc.path && (
+          <MDXViewer path={doc.path} />
+        )}
+        {!loading && !error && doc && doc.type === 'tsx' && doc.module && (
           <div className="mx-auto max-w-[65ch] bg-background p-4 md:max-w-[calc(65ch+theme(spacing.56))] md:shrink-1 lg:max-w-[calc(85ch] prose-headings:mt-4">
             {(() => {
               const Component = doc.module.default || doc.module;
