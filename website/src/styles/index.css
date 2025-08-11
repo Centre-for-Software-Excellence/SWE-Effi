@@ -330,6 +330,9 @@
   .katex .katex-html {
     @apply hidden;
   }
+  .katex-display math {
+    @apply overflow-x-scroll overflow-y-hidden;
+  }
 
   math {
     @apply text-foreground;

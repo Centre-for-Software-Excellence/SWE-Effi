@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import {
   ColumnDef,
   ColumnFiltersState,
@@ -48,6 +48,7 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/common/ui/table';
+import { useMobile } from '@/hooks/use-mobile';
 import { cn } from '@/lib/utils';
 import { ColumnConfig } from '../tables-card';
 
@@ -147,6 +148,7 @@ export function DataTable<TData, TValue>({
     );
     return selectedOption?.label || selectedFilterColumn;
   };
+  const isMobile = useMobile();
 
   return (
     <div className="relative overflow-x-auto">
@@ -161,8 +163,8 @@ export function DataTable<TData, TValue>({
               setGlobalFilter('');
             }}
           >
-            <SelectTrigger className="w-24" aria-label="Filter Type Options">
-              <SelectValue />
+            <SelectTrigger aria-label="Filter Type Options">
+              {!isMobile && <SelectValue />}
             </SelectTrigger>
             <SelectContent>
               {filterOptions.map((option) => (
@@ -185,17 +187,17 @@ export function DataTable<TData, TValue>({
                 variant="outline"
                 role="combobox"
                 aria-expanded={comboboxOpen}
-                className="w-[300px] justify-between"
+                className="flex justify-between md:w-[300px]"
               >
                 {globalFilter
                   ? comboboxOptions.find(
                       (option) => option.value === globalFilter,
                     )?.label || globalFilter
                   : `Search ${getSelectedFilterLabel()}...`}
-                <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+                <ChevronsUpDown className="h-4 w-4 shrink-0 opacity-50 md:ml-2" />
               </Button>
             </PopoverTrigger>
-            <PopoverContent className="w-[300px] p-0">
+            <PopoverContent className="p-0 md:w-[300px]">
               <Command>
                 <CommandInput
                   placeholder={`Search ${getSelectedFilterLabel()}...`}

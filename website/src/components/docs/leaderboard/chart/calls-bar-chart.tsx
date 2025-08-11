@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { Dialog } from '@radix-ui/react-dialog';
 import { Bar, BarChart, CartesianGrid, Label, XAxis, YAxis } from 'recharts';
 
@@ -11,6 +12,7 @@ import { ScrollArea, ScrollBar } from '@/components/common/ui/scroll-area';
 import { useChartData } from '@/hooks/chart/use-chart-data';
 import { useChartPopover } from '@/hooks/chart/use-chart-popover';
 import { useChartSettings } from '@/hooks/chart/use-chart-settings';
+import { useMobile } from '@/hooks/use-mobile';
 import { cn } from '@/lib/utils';
 import { ChartCard } from './atoms/chart-card';
 import { ChartControls } from './atoms/chart-controls';
@@ -142,6 +144,8 @@ function BarChartRenderer({
   const categoryWidth = data.length * categoryGap;
   const calculatedWidth = data.length * numBars * barWidth + categoryWidth;
   const configKeys = activeKeys || Object.keys(config);
+  const isMobile = useMobile();
+
   return (
     <ScrollArea className="w-full" type="always">
       <ChartContainer
@@ -163,6 +167,8 @@ function BarChartRenderer({
             tickLine={true}
             axisLine={false}
             tickFormatter={(value) => value}
+            interval={0}
+            angle={isMobile ? 15 : 0}
           >
             <Label value={xAxisLabel} position="insideBottom" offset={-15} />
           </XAxis>

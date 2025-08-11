@@ -118,6 +118,7 @@ function RadarChartRenderer({
         margin={{
           top: -40,
           bottom: -10,
+          left: 10,
         }}
       >
         <ChartTooltip
