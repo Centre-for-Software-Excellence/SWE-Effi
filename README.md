@@ -9,8 +9,8 @@ A comprehensive benchmark evaluation platform for Software Engineering Efficienc
 
 SWE-Effi provides a standardized platform for evaluating and comparing AI-powered software engineering tools across different scaffolds and language models. Our platform aggregates benchmark results and presents them through an interactive web interface.
 
-**🌐 [Visit the Live Platform](https://center-for-software-excellence.github.io/SWE-Effi)**  
-**📝 [Submit Your Results](https://center-for-software-excellence.github.io/SWE-Effi/about/submit-your-entry)**
+**🌐 [Visit the Live Platform](https://centre-for-software-excellence.github.io/SWE-Effi)**  
+**📝 [Submit Your Results](https://centre-for-software-excellence.github.io/SWE-Effi/about/submit-your-entry)**
 
 ## 📁 Repository Structure
 
@@ -49,7 +49,7 @@ SWE-Effi
 
 ### For Contributors
 
-Want to submit your benchmark results? **[Follow our submission guide →](https://center-for-software-excellence.github.io/SWE-Effi/about/submit-your-entry)**
+Want to submit your benchmark results? **[Follow our submission guide →](https://centre-for-software-excellence.github.io/SWE-Effi/about/submit-your-entry)**
 
 ### For Developers & Maintainers
 
