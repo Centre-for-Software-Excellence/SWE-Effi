@@ -68,9 +68,9 @@ export const getLeaderboardUIConfig = (): LeaderboardUIConfig => ({
     },
     {
       title: 'Paper',
-      href: '#',
+      href: 'https://arxiv.org/abs/2509.09853',
+      external: true,
       icon: BookOpenText,
-      disabled: true,
     },
   ],
   // leaderboard tables configuration

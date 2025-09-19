@@ -59,9 +59,8 @@ const getFooterUIConfig = (): FooterUIConfig => ({
       title: 'Github',
     },
     {
-      href: '#',
+      href: 'https://arxiv.org/abs/2509.09853',
       title: 'Paper',
-      disabled: true,
     },
     {
       href: '#',
